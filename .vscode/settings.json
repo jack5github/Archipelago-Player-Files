@@ -1,0 +1,6 @@
+{
+	"yaml.extension.recommendations": false,
+	"yaml.format.printWidth": 88,
+	"yaml.format.singleQuote": true,
+	"yaml.maxItemsComputed": 10000
+}
