@@ -103,7 +103,7 @@ sni_options:
   snes_rom_start: true
 bizhawkclient_options:
   # The location of the EmuHawk you want to auto launch patched ROMs with
-  emuhawk_path: 'None'
+  emuhawk_path: '/home/zero/Documents/BizHawk-2.11-linux-x64/EmuHawkMono.sh'
   # Set this to true to autostart a patched ROM in BizHawk with the connector script,
   # to false to never open the patched rom automatically,
   # or to a path to an external program to open the ROM file with that instead.
@@ -217,6 +217,17 @@ oot_options:
   # true  for operating system default program
   # Alternatively, a path to a program to open the .z64 file with
   rom_start: true
+pokemon_bw_settings:
+  # File name of your Pokémon Black Version ROM
+  black_rom: 'PokemonBlack.nds'
+  # File name of your Pokémon White Version ROM
+  white_rom: 'PokemonWhite.nds'
+  # Toggles whether Encounter Plando is enabled for players in generation.
+  # If disabled, yamls that use Encounter Plando do not raise OptionErrors, but display a warning.
+  enable_encounter_plando: true
+  # If enabled, files inside the rom that are changed as part of the patching process (except for base patches)
+  # will be dumped into a zip file next to the patched rom (for debug purposes).
+  dump_patched_files: false
 pokemon_emerald_settings:
   # File name of your English Pokemon Emerald ROM
   rom_file: 'Pokemon - Emerald Version (USA, Europe).gba'
@@ -294,6 +305,24 @@ tunic_options:
   limit_grass_rando: true
   # Path to the user's TUNIC Poptracker Pack.
   ut_poptracker_path: ''
+universal_tracker:
+  # Players folder for UT look for YAMLs
+  player_files_path: 'Players'
+  # Show Region names in the UT tab
+  include_region_name: false
+  # Show Location names in the UT tab
+  include_location_name: true
+  # Have the UT tab ignore excluded locations
+  hide_excluded_locations: false
+  # Use split icons rather then mixed for the UT map tab
+  use_split_map_icons: true
+  # Determines how worlds should be allowed to use deferred entrances
+  # on: Force worlds to disconnect entrances
+  # default: Allow worlds to decide if entrances should be deferred
+  # off: Force worlds to connect all entrances
+  enforce_deferred_entrances: 'default'
+  # Enable showing Glitched/yellow logic in tracker tab
+  display_glitched_logic: true
 wargroove_options:
   # Locates the Wargroove root directory on your system.
   # This is used by the Wargroove client, so it knows where to send communication files to.
