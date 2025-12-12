@@ -1,0 +1,391 @@
+﻿name: Jack5Balatro{NUMBER}
+description: |-
+  Jack5's Balatro player file
+
+  This configuration for Balatro intends to turn a game that is typically very grindy and difficult to beat into a more fun experience. All gameplay is limited to White Stake, with more of an emphasis being placed on finding Archipelago items in the shop, and beating decks as they are unlocked. Because of the easy difficulty, more decks need to be beaten for this game to be considered complete.
+game: Balatro
+requires:
+  version: 0.6.4
+Balatro:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Balatro should be stuck more than any other game, as it is so difficult that I want to avoid playing it.
+    40: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0
+    normal: 0
+    extreme: 0
+  accessibility:
+    # In a game like Balatro, it is necessary to have access to every single item in order to be able to stumble upon a good build.
+    full: 50
+    minimal: 0
+  goal:
+    # Goal for this playthrough
+    # Beat Decks: Win with the specified amount of Decks
+    # Unlock Jokers: Unlock the specified amount of Jokers
+    # Beat Ante: Beat the specified Ante (can be higher than 8)
+    # Beat Decks on Stake: Win with the specified amount of Decks on the specified Stake (or harder)
+    # Win with Jokers on Stake: Win with the specified amount of Jokers on the specified Stake (or harder)
+    # Unique Wins: Win with the specified amount of unique combinations of Decks and Stakes
+    # Use the default win condition in Balatro. IMPORTANT: If a deck has already been won, another point will not be added if it is won again.
+    beat_decks: 50
+    unlock_jokers: 0
+    beat_ante: 0
+    beat_decks_on_stake: 0
+    win_with_jokers_on_stake: 0
+    beat_unique_decks: 0
+  ante_win_goal:
+    # If your goal is 'beat ante,' specify the ante you need to beat.
+    # If your goal isn't 'beat ante', you can ignore this setting.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 38.
+    # Irrelevant as my goal is 'Beat Decks'.
+    12: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  decks_win_goal:
+    # If your goal is 'beat Decks' or 'beat decks on stake', specify the number of wins you need to beat.
+    # If your goal isn't "beat decks" or "beat decks on stake", you can ignore this setting.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 15.
+    # The default goal of 4 always seemed quite daunting and sluggish, but now that I have actually tested it with my new config, it is fine. Even though I only have access to a single stake, DO NOT CHANGE THIS FROM 4.
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  unique_deck_win_goal:
+    # If your goal is 'beat unique decks', specify the number of unique decks you need to beat
+    # This setting can be ignored if your goal isn't "beat unique decks".
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 120.
+    # Irrelevant as my goal is 'Beat Decks'.
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  jokers_unlock_goal:
+    # Number of jokers you need to collect to win.
+    # If your goal isn't 'unlock jokers' or 'Win with jokers on stake', this setting can be ignored.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 150.
+    # Irrelevant as my goal is 'Beat Decks'.
+    75: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  required_stake_for_goal:
+    # The required stake for your goal.
+    # If no stake is specified or the stake specified is not in the playable stakes it will default to the highest playable one.
+    # If your goal isn't 'Win with jokers on stake' or 'beat decks on stake', this setting can be ignored.
+    # Irrelevant as my goal is 'Beat Decks'.
+    ['White Stake']
+  include_decksMode:
+    # Choose how the playable decks are determined:
+    # all: All decks will be playable.
+    # choose: Select specific decks to be playable from the options below.
+    # number: Specify how many randomly selected decks will be playable.
+    # Having access to every single deck makes Balatro too easy to beat, but Archipelago automatically limits you to just 1 at the start and requires me to unlock the rest. I didn't want to limit my options any more than they already are, but if I don't reduce the count, there will be way too many checks, as each deck adds checks for each ante on each stake.
+    all: 0
+    choose: 50
+    number: 0
+
+  include_deckChoice:
+    # Select which decks will be playable in the game.
+    # This option is only considered if Playable Decks is set to choose.
+    # I have chosen 8 specific decks from the pool, specifically those that don't have easy ways to break them like the Checkered Deck or the Zodiac Deck.
+    [
+      'Red Deck',
+      'Blue Deck',
+      'Yellow Deck',
+      'Green Deck',
+      'Black Deck',
+      # 'Magic Deck',
+      'Nebula Deck',
+      # 'Ghost Deck',
+      'Abandoned Deck',
+      # 'Checkered Deck',
+      # 'Zodiac Deck',
+      'Painted Deck',
+      # 'Anaglyph Deck',
+      # 'Plasma Deck',
+      # 'Erratic Deck',
+    ]
+  include_deckNumber:
+    # Specify how many randomly selected decks will be playable.
+    # This option is only considered if playable Decks is set to number.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 15.
+    # Irrelevant as I am choosing specific decks.
+    8: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  stake_unlock_mode:
+    # Decide how stakes are handled by the Randomizer.
+    # unlocked: all stakes are unlocked from the start
+    # vanilla: stakes are progressively unlocked (by beating the previous stake) and in the same order as in the base game
+    # linear: stakes are progressively unlocked (by beating the previous stake) but in a random order
+    # stake_as_item: stakes can be found as items and unlock the stake for every deck
+    # stake_as_item_per_deck: stakes can be found as items but only unlock it for a specific deck
+    # If I ever play with multiple stakes again, allow stakes to be randomised, or otherwise forced to a single stake.
+    unlocked: 0
+    vanilla: 0
+    linear: 0
+    stake_as_item: 50
+    stake_as_item_per_deck: 0
+  include_stakesMode:
+    # Choose how the playable stakes are determined.
+    # all: All stakes will be playable.
+    # choose: Select specific stakes to be playable from the options below.
+    # number: Specify how many randomly selected stakes will be playable.
+    # I wanted every stake to be randomised, meaning it could be a while before I gain access to White Stake and start cheesing runs, but if I don't reduce the count, there will be way too many checks, as each stake adds checks for each deck on each ante and vouchers purchased.
+    all: 0
+    choose: 50
+    number: 0
+  include_stakesList:
+    # Select specific stakes to be playable.
+    # Example: ['White Stake','Red Stake','Gold Stake']
+    # This will make those stakes playable and remove the other ones from the game.
+    # (Also make sure to capitalize the first letters, it's case sensitive.)
+    # This option is only considered if playable Stakes is set to choose.
+    # Every single run I have played, I have always begged to be able to use the White Stake over all other stakes. This forces the White stake to be the only one that I'm ever able to use.
+    [
+      'White Stake',
+      # 'Red Stake'
+    ]
+  include_stakesNumber:
+    # Specify how many randomly selected stakes will be playable.
+    # This option is only considered if playable Stakes is set to number.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 8.
+    # Irrelevant as I am choosing specific stakes.
+    2: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  joker_bundles:
+    # Rather than handling each joker as an individual item, you can group them into bundles for quicker progress
+    # and fewer items to manage in the world. When enabled, all 150 jokers will be placed into randomly generated bundles.
+    # You can also specify the size of these joker bundles.
+    # The Jokers make up the majority of Balatro's items, to the point where they pollute everything else. In order to reduce the number of items, jokers are now bundled together.
+    'false': 0
+    'true': 50
+  joker_bundle_size:
+    # Specify the size of Joker Bundles.
+    # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 30.
+    # Use the smallest possible bundle size.
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  remove_or_debuff_jokers:
+    # Choose whether locked jokers should be completely removed or appear in a debuffed state.
+    # Set this to true to remove them entirely, or set it to false to have them appear debuffed.
+    # Remove disallowed jokers entirely. This is better than the alternative which has too many unuseable items in the shop.
+    'false': 0
+    'true': 50
+  tarot_bundle:
+    # Instead of making every tarot card an individual item, you have the option to put them all in one bundle, that gets placed in the world.
+    # There is also the possibility to make custom bundles (not recommended).
+    # Unchanged from the standard configuration.
+    individual: 50
+    one_bundle: 0
+    custom_bundles: 0
+  custom_tarot_bundles:
+    # Only fuck with this if you really want to. You can define up to 5 custom bundles. You have to include every tarot, otherwise it won't work (there is no proper check for this so PLEASE double or triple check yourself).
+    # If you have Number of AP consumable items set to greater than 1 you also must include the "Archipelago Tarot". Here is a list of all Tarot cards https://balatrogame.fandom.com/wiki/Tarot_Cards.
+    # The Syntax of this is the following: ['The Fool;The Magician;The High Priestess;The Empress;The Emperor', ...] where the bundles are separated by the commas.
+    # Make sure to use the right symbols.
+    # Unchanged from the standard configuration.
+    [
+      'The Fool;The Magician;The High Priestess;The Empress;The Emperor',
+      'The Hierophant;The Lovers',
+      'The Chariot;Justice;The Hermit;The Wheel of Fortune;Strength;Death',
+      'The Hanged Man;Temperance;The Devil;The Tower;The Star',
+      'The Moon;The Sun;Judgement;The World',
+    ]
+  planet_bundle:
+    # Instead of making every planet card an individual item, you have the option to put them all in one bundle, that gets placed in the world.
+    # There is also the possibility to make custom bundles (not recommended).
+    # Unchanged from the standard configuration.
+    individual: 50
+    one_bundle: 0
+    custom_bundles: 0
+  custom_planet_bundles:
+    # Only fuck with this if you really want to. You can define up to 5 custom bundles. You have to include every planet, otherwise it won't work. If you have Number of AP consumable items set to greater than 1 you also must include the "Archipelago Belt". Here is a list of all Planet cards https://balatrogame.fandom.com/wiki/Planet_Cards.
+    # For the Syntax refer to Custom Tarot Bundles, it's the same here.
+    # Unchanged from the standard configuration.
+    []
+  spectral_bundle:
+    # Instead of making every spectral card an individual item, you have the option to put them all in one bundle, that gets placed in the world.
+    # There is also the possibility to make custom bundles (not recommended).
+    # Unchanged from the standard configuration.
+    individual: 50
+    one_bundle: 0
+    custom_bundles: 0
+  custom_spectral_bundles:
+    # Only fuck with this if you really want to. You can define up to 5 custom bundles. You have to include every spectral, otherwise it won't work. If you have Number of AP consumable items set to greater than 1 you also must include the "Archipelago Spectral". Here is a list of all Planet cards https://balatrogame.fandom.com/wiki/Spectral_Cards.
+    # For the Syntax refer to Custom Tarot Bundles, it's the same here.
+    # Unchanged from the standard configuration.
+    []
+  remove_or_debuff_consumables:
+    # Choose whether locked consumables should be completely removed or appear in a debuffed state.
+    # Set this to true to remove them entirely, or set it to false to have them appear debuffed.
+    # Remove disallowed consumeables entirely. This is better than the alternative which has too many unuseable items in the shop.
+    'false': 0
+    'true': 50
+  decks_unlocked_from_start:
+    # Number of random decks you want to start with.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 15.
+    # Unchanged from the standard configuration.
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  filler_jokers:
+    # Which Jokers are supposed to be filler (every Joker not in this list will be considered a progressive item)
+    # Be careful with this option if your goal is "Unlock Jokers"
+    # Valid Jokers:
+    #     "Abstract Joker"
+    #     "Acrobat"
+    #     "Ancient Joker"
+    #     "....."
+    #     for a full list go to https://balatrogame.fandom.com/wiki/Category:Jokers
+    # Example: ['Abstract Joker', 'Acrobat', 'Ancient Joker']
+    # Unchanged from the standard configuration.
+    []
+  ap_consumable_items:
+    # Number of items that can be received by redeeming
+    # an AP planet, tarot or spectral card.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 300.
+    # The default of 100 is ridiculously high, creating lots of checks. After trying 50 and seeing how hard the consumeables are to obtain, this has been reduced even lower, but not too low as not only is only one stake in use, but a small difference needs to be made up for in items vs. checks.
+    35: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  permanent_filler:
+    # The amount of permanent filler items (like "+1 Hand Size") that is going to be generated.
+    # If you set this option to 3 for example it's going to fill the world with 3 "+1 Hand Size", 3 "+1 Joker Slot", etc.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
+    # Unchanged from the standard configuration.
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  shop_items:
+    # Number of AP Items that will be buyable as vouchers in the shop at each included Stake.
+    # So for example if you include 3 Stakes and set this option to 11, then there will be 33 findable Shop Items in your game.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 150.
+    # The default of 15 was ridiculously high, creating lots of checks as they apply to each stake. Now that there is only the White Stake, it needs to be even higher, so it has been set as the same as AP Consumable Items.
+    35: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  minimum_price:
+    # The minimum price for an AP Item Voucher in the shop.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
+    # With the total number of Archipelago items reduced in the shop, it makes more sense for them to be harder to obtain, so their base price has been increased heavily. Increased from 5 to 6 to incentivise finishing runs as opposed to getting vouchers immediately.
+    6: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  maximum_price:
+    # The maximum price for an AP Item in the shop.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # It was a bit too punishing for the Archipelago items in Balatro to reach a price of $10 when they often don't give me anything at all, but a maximum price of $8 made them too easy to obtain, so this change has been reverted.
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  trap_amount:
+    # How often traps will appear as filler items
+    # No traps: No traps will appear
+    # Low traps: 1 in 15 filler items will be traps
+    # Medium traps: 1 in 7 filler items will be traps
+    # High traps: 1 in 2 filler items will be traps
+    # Mayhem: Every filler item will be a trap
+    # Unchanged from the standard configuration.
+    no_traps: 0
+    low_amount: 0
+    medium_amount: 50
+    high_amount: 0
+    mayhem: 0
+  deathlink:
+    # When your run ends, everybody will die. When somebody else dies, your run will end.
+    # Unchanged from the standard configuration.
+    'false': 50
+    'true': 0
+  forceyaml:
+    # Some settings (like death link or remove_or_debuff_jokers etc) can be changed in-game after the fact.
+    # If you want to disallow this (for a race for example) set this option to true.
+    # Unchanged from the standard configuration.
+    'false': 50
+    'true': 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: [
+      # Ensure that the first 5 out of 20 Joker Bundles can be found in Balatro, in order to reduce the annoyance of being unable to do anything in it.
+      'Joker Bundle 1',
+      'Joker Bundle 2',
+      'Joker Bundle 3',
+      'Joker Bundle 4',
+      'Joker Bundle 5',
+    ]
+  # Most of the rest of these options are left unchanged from the standard configuration.
+  non_local_items: []
+  start_inventory: {
+      # Allow Archipelago items to be unlocked as soon as possible.
+      Archipelago Belt: 1,
+      Archipelago Tarot: 1,
+      Archipelago Spectral: 1,
+    }
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
+  ################
+  # Enabled Mods #
+  ################
+  # All Balatro mods not listed here should be disabled:
+  # - Archipelago Randomizer - Enables Archipelago support.
+  # - Bakery - The charms in this mod provide a much needed buff to gameplay in certain situations.
+  # - Bloonlatro - Hidden amidst all the references are some really powerful jokers.
+  # - Blueprint - Makes the effects of blueprint jokers easier to understand.
+  # - Celestial Funk - Easier to distinguish planet cards.
+  # - Luna's Enhancements - Easier to distinguish enhancements.
+  # - Malverk - Texture pack support.
+  # - Moonspell Cards - Easier to distinguish tarot cards.
+  # - Pingo - Allows Archipelago to interact with mods, though they are treated as vanilla items. IMPORTANT: Before starting a new run, go into this mod's files and delete 'logic.lua'.
+  # - SDM_0's Stuff - Provides some really powerful incremental jokers that made many impossible runs possible.
+  # - SystemClock - Show the current time in-game.
+  # - Talisman - Support extremely high numbers if I ever get to that point.
+  # - Trance - Balatro theming that makes the game more pleasant to look at.
+  # Below is the rationale for why other mods are disabled:
+  # - 3x Credits - Card crediting is not necessary for me to see during a run.
+  # - AbsentDealer - Only a few of this mod's jokers are good, the rest are trash. The enhancements don't add much to the game when they aren't likely to be accessed.
+  # - Battle for Jimbo - Only a few of this mod's jokers are good, the rest are trash.
+  # - Buffoonery - The special jokers are likely to conflict with the other mods.
+  # - Card Sleeves - Adding card sleeves would make the game too easy to beat, as these effects stack on decks.
+  # - DebugPlus - Enables a whole bunch of cheats that should not be allowed.
+  # - Galdur - Normally makes it easier to see what decks are unlocked, but the display breaks down when browsing stakes.
+  # - Glue for Modpacks - Do not accidentally interfere with the balance of the game.
+  # - Paperback - This mod is mostly useful for its enhancements and paperclips. All things considered, with how few of its jokers are beneficial in runs and with paperclips requiring complete commitment to the Clippy Joker, as well as with the Dichrome enhancement causing crashes, it is best not to play with this.
+  # - Phanta - Includes far too many jokers that won't be that helpful.
+  # - re:Unlock All - This isn't strictly necessary in order for the game to be randomised, and may lead to things being accessed earlier than intended.
+  # - Reverie - The tickets in this mod can only be obtained from Cine Packs, which don't appear in the shop for most of the run, making their entire inclusion pointless.
+  ##################################
+  # Archipelago Randomizer Options #
+  ##################################
+  # Hide the Archipelago Randomiser overlay unless in the associated profile on the main menu.
+  # 'Connection Status Info': 'Connected Only'
+  # Do not override prior settings.
+  # 'Deathlink': 'Follow YAML'
+  # While I would like to see the name of every item I am about to unlock so I can make a conscious decision of whether I want to buy it or not, this setting always changes back to this, so there's no point changing it.
+  # 'AP Item Names': 'Voucher Only'
+  # Do not override prior settings.
+  # 'Locked Jokers': 'Follow YAML'
+  # 'Locked Consumables': 'Follow YAML'
+  # Disincentivises modded items being used. Setting this to 'Remove' causes the game to crash all the time.
+  # 'Modded Items': 'Lock'

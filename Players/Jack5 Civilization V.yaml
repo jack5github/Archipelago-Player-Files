@@ -1,0 +1,139 @@
+﻿name: Jack5CivV{NUMBER}
+description: |-
+  Jack5's Civilization V player file
+
+  This configuration for Sid Meier's Civilization V attempts to remedy the issues faced by locking away most of the game's features by keeping them stored locally, particularly eras and the ability to generate gold, which are the most troublesome things not to have. All traps are enabled for maximum carnage, but the chance is kept low due to their extreme consequences.
+game: Civilization V
+requires:
+  version: 0.6.4
+Civilization V:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # It is a bit too easy to get stuck in Civilization V, so its progression has been increased to 60.
+    60: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0
+    normal: 0
+    extreme: 0
+  accessibility:
+    # Keep the run focused on reaching the goal, don't indulge too much in other content.
+    full: 0
+    minimal: 50
+  victory_goal_logic:
+    # Which victory should be achievable before the game is considered beatable?
+    # Note that this solely affects progression logic. You can still beat the game earlier than expected or pursue a different victory if you so choose.
+    # Domination and Time victories are not included here as Domination can be achieved at any moment and Time has no requirements.
+    # Do not force a particular kind of victory to be achievable before allowing completion, as it is too hard to figure out when a victory is at all possible in the first place.
+    none: 50
+    science: 0
+    culture: 0
+    diplomatic: 0
+  era_goal_logic:
+    # Which era must be unlocked before the game is considered beatable? This is in addition to the value given for "Victory Goal Logic". Similarly, this solely affects progression logic.
+    # Require that the Information Era be available in order to ensure the game has been successfully randomised and that several games have been played beforehand.
+    ancient: 0
+    classical: 0
+    medieval: 0
+    renaissance: 0
+    industrial: 0
+    modern: 0
+    atomic: 0
+    information: 50
+  embarking_goal_logic:
+    # Add Optics and Astronomy as requirements before the game is considered beatable. Similarly to other goal logic options, this solely affects progression logic.
+    # Do not require ocean travel to win.
+    'false': 50
+    'true': 0
+  progressive_techs:
+    # Use progressive technologies. Progressive technologies divides all 79 technologies (excl. Agriculture) into 11 categories. This makes the unlocking of technologies feel less chaotic and more streamlined compared to true random technologies. It also makes it far less likely to not have important early-era buildings in the mid to late game.
+    # Allow research endeavours to be unlocked and be immediately useable, rather than being blocked by other locked research.
+    'false': 0
+    'true': 50
+  national_wonder_sanity:
+    # Add all national wonders to the location pool. This adds the 11 national wonders and the 3 guilds to the location pool.
+    # Enabled in order to make runs more interesting.
+    'false': 0
+    'true': 50
+  world_wonder_sanity:
+    # Add all world wonders to the location pool. This adds the 47 world wonders to the location pool, including the 3 ideology world wonders.
+    # WARNING: This option is NOT suitable for syncs.
+    # Unchanged from the standard configuration.
+    'false': 50
+    'true': 0
+  enable_traps:
+    # Add traps to the filler item pool.
+    # There have to be some negative consequences, as every other game that is randomised has them.
+    'false': 0
+    'true': 50
+  trap_blacklist:
+    # Blacklist the given traps from being included in the filler item pool. Has no effect if traps are not enabled.
+    # Valid keys are:
+    # Trap - All City Population -1
+    # Trap - All City Population -2
+    # Trap - Culture
+    # Trap - Denounce
+    # Trap - Faith
+    # Trap - Gold
+    # Trap - Major Culture
+    # Trap - Major Faith
+    # Trap - Major Gold
+    # Trap - Minor Culture
+    # Trap - Minor Faith
+    # Trap - Minor Gold
+    # Trap - War
+    # I used to remove excessively damaging traps from the filler pool, but as they are so few and far between, they have been restored. I have to experience some punishment from other games, otherwise it feels like Civ V isn't impacted at all.
+    []
+  trap_filler_chance:
+    # The percent chance for a filler item to be a trap instead. Has no effect if traps are not enabled.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the standard configuration.
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: [
+      # Without eras being available in the game, it is impossible to proceed with unlocking all the policies. Additionally, early game has me struggling to keep afloat in terms of gold, so getting access to Currency earlier will make things easier.
+      'Era - Progressive',
+      'Tech - Progressive Gold',
+    ]
+  # All of the below are unchanged from the standard configuration.
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
+  ###############################
+  # Civilization V Game Options #
+  ###############################
+  # Generate a completely random world.
+  # 'Map Type': 'Shuffle'
+  # Limit game to 6 players with a decently sized map.
+  # 'Map Size': 'Small'
+  # A slightly easier than normal difficulty.
+  # 'Difficulty Level': 'Warlord'
+  # Go as fast as possible, which is pretty slow for someone like me.
+  # 'Game Speed': 'Quick'
+  # Must start on the Ancient Era in order for Archipelago to work.
+  # 'Start Era': 'Ancient Ara'
+  # Convenience features that wouldn't make sense not to have.
+  # 'Allow Policy Saving': true
+  # 'Allow Promotion Saving': true
+  # Disable matching civilisations to certain map conditions. Their starts will now be totally random.
+  # 'Disable Start Bias': true
+  # I do not want the stress of fighting off Barbarians in addition to Archipelago. IMPORTANT: Make sure this is set every time you start a new match.
+  # 'No Barbarians': true
+  # Don't play animations to make the game faster.
+  # 'Quick Combat': true
+  # 'Quick Movement': true
+  # Disable civilisations having true-to-life personalities. They will now be totally random.
+  # 'Random Personalities': true

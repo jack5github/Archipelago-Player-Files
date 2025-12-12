@@ -1,0 +1,2322 @@
+﻿name: ZeroJackKeep{NUMBER}
+description: |-
+  Jack5 and Zeroman95's Keymaster's Keep player file
+
+  This Keymaster's Keep configuration combines our non-Archipelago-supported games and interests into a single player file, which is more condensed compared to the Keymaster's Keep default for both simplicity and an added challenge. The main difference is the goal being changed from 'Keymaster's Challenge' to 'Magic Key Heist', as we would prefer this config's completion not to hinge on a single challenge. We would at some point in the future like to have the goal be related to area completion in order to prevent our runs from arbitrarily ending.
+game: Keymaster's Keep
+requires:
+  version: 0.6.4
+Keymaster's Keep:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # We haven't seen any reason to change this value so far.
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0
+    normal: 50
+    extreme: 0
+  accessibility:
+    # It is not sensible to restrict any of the options in Keymaster's Keep, as it may remove certain games from rotation, so we'll keep this at Full.
+    full: 50
+    minimal: 0
+  ################
+  # Goal Options #
+  ################
+  goal:
+    # Determines the victory condition.
+    # Keymasters Challenge: Retrieve X artifacts of resolve to unlock the Keymaster's challenge chamber and beat the ultimate challenge
+    # Magic Key Heist: Acquire X magic keys and escape the Keymaster's Keep
+    # Rather than having the entire run hinge on a final challenge, simply require a certain number of keys.
+    keymasters_challenge: 0
+    magic_key_heist: 50
+  artifacts_of_resolve_total:
+    # Determines how many Artifacts of Resolve are in the item pool.
+    # Only relevant if the selected goal is Keymaster's Challenge.
+    # You can define additional values between the minimum and maximum values. Minimum value is 3, maximum value is 25.
+    # Irrelevant as our goal is Magic Key Heist.
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  artifacts_of_resolve_required:
+    # Determines how many Artifacts of Resolve are required to unlock the Keymaster's challenge room.
+    # Only relevant if the selected goal is Keymaster's Challenge.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
+    # Irrelevant as our goal is Magic Key Heist.
+    3: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  magic_keys_required:
+    # Determines how many Magic Keys are required before escaping the Keymaster's Keep.
+    # Only relevant if the selected goal is Magic Key Heist.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 50.
+    # This has been reduced to roughly half of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has gone from 66% of the total magic keys to roughly 90%. It cannot be any lower than 10.
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  ###########################
+  # Keep Generation Options #
+  ###########################
+  keep_areas:
+    # Determines how many areas are in the Keymaster's Keep.
+    # Each area will contain a new set of trials and most will be locked by one or more keys.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 100.
+    # This has been reduced to roughly half all of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has been increased from 10 to 12 to bring the number of checks closer to 150.
+    12: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  magic_keys_total:
+    # Determines how many Magic Keys are in the item pool.
+    # The keys in that pool will be used to generate the lock combinations for areas in the Keymaster's Keep. They will also act as the amount of available keys to the player in the Magic Key Heist goal.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 50.
+    # This has been reduced to roughly half all of the default keep generation options in order to align with the chosen .py files and to be more manageable. As there are 2 unlocked areas by default, the remaining keeps are locked with a single key.
+    11: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  unlocked_areas:
+    # Determines how many areas are unlocked at the start of the game.
+    # The remaining areas will be locked by one or more keys.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Changing this from 1 to 2 increases the chance of games playable by both Jack5 and Zeroman95 to be present.
+    2: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  lock_magic_keys_minimum:
+    # Determines the minimum amount of Magic Keys that could be required to unlock an area.
+    # The amount of keys required to unlock an area will be a random number between this value and the maximum. Note that this option will be ignored for the first few areas to ensure the game is completable.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Unchanged from the standard configuration.
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  lock_magic_keys_maximum:
+    # Determines the maximum amount of Magic Keys that could be required to unlock an area.
+    # The amount of keys required to unlock an area will be a random number between the minimum and this value. Note that this option will be ignored for the first few areas to ensure the game is completable.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # As there are very few keeps, it would not make sense to have one be locked by 3 keys at once.
+    2: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  area_trials_minimum:
+    # Determines the minimum amount of trials that could be in an area.
+    # The amount of trials in an area will be a random number between this value and the maximum, but might get adjusted upwards to hold the item pool size.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
+    # The default of these has the trial count hovering around 5. This has been changed to hover around 10 in order to increase the number of checks to approximately 150.
+    8: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  area_trials_maximum:
+    # Determines the maximum amount of trials that could be in an area.
+    # The amount of trials in an area will be a random number between the minimum and this value, but might get adjusted upwards to hold the item pool size.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
+    # The default of these has the trial count hovering around 5. This has been changed to hover around 10 in order to increase the number of checks to approximately 150.
+    12: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  shops_:
+    # If true, keep areas will have a chance to be replaced by a shop that will sell a handful of items.
+    # The presence of shops will add Unique Relics to the item pool, which will need to be found to purchase items.
+    # Yes, the option is named "shops_". Thank you, ALTTP!
+    # Shops would distract from the point of Keymaster's Keep, which is to be able to play games that are outside of Archipelago's support.
+    'false': 50
+    'true': 0
+  shops_percentage_chance:
+    # Determines the percentage chance of a shop overriding a keep area when shops are enabled.
+    # A maximum of 10 shops can exist in the keep at once.
+    # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 50.
+    # Irrelevant because we are not playing with shops.
+    20: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  shop_items_minimum:
+    # Determines the minimum amount of items that could be sold in a shop.
+    # The amount of items sold in a shop will be a random number between this value and the maximum.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Irrelevant because we are not playing with shops.
+    2: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  shop_items_maximum:
+    # Determines the maximum amount of items that could be sold in a shop.
+    # The amount of items sold in a shop will be a random number between the minimum and this value.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Irrelevant because we are not playing with shops.
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  shop_items_progression_percentage_chance:
+    # Determines the percentage chance of each item in a shop being a guaranteed progression item.
+    # Since items are purchased with unique relics, it is recommended to set this value on the higher side. Each unique relic will only be able to unlock a single item in the keep, so ideally, they are worth the trouble.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Irrelevant because we are not playing with shops.
+    100: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  shop_hints:
+    # If true, upon discovering a shop, hints will be generated for the items sold in that shop.
+    # Irrelevant because we are not playing with shops.
+    'false': 50
+    'true': 0
+  ######################################
+  # Game / Objective Selection Options #
+  ######################################
+  include_adult_only_or_unrated_games:
+    # Determines if adult only or unrated games should be considered for the game pool.
+    # Can be a useful filter to adhere to the rules of certain communities.
+    # Unchanged from the standard configuration.
+    'false': 50
+    'true': 0
+  include_modern_console_games:
+    # Determines if modern console games should be considered for the game pool.
+    # Can be a useful filter to adhere to the rules of certain communities.
+    # Unchanged from the standard configuration.
+    'false': 0
+    'true': 50
+  include_difficult_objectives:
+    # Determines if difficult objectives should be considered.
+    # Enabling this option might yield objectives that some players will struggle or not be able to complete.
+    # If enabled, you can still exclude specific games with the 'excluded_games_difficult_objectives' option.
+    # We want to allow certain objectives that are difficult but are acceptable for us to appear.
+    'false': 0
+    'true': 50
+  excluded_games_difficult_objectives:
+    # When 'include_difficult_objectives' is enabled, this option allows you to still exclude specific games.
+    # Only game names originally listed in 'game_selection' are accepted.
+    # If a game specified here only offers difficult objectives, this option will have no effect for it.
+    # At the moment, the only games where difficult objectives are allowed are Portal and Trivia Tricks.
+    [
+      'Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX)',
+      'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
+      'Custom (META)',
+      'Embr (PC + PS4, SW, XONE)',
+      'Game Backlog (META)',
+      "Garry's Mod (PC + MOD)",
+      'Goofy Gorillas (PC)',
+      'Gran Turismo 3: A-Spec (PS2)',
+      'Left 4 Dead 2 (PC + X360)',
+      'Mario Kart 8 (SW + WIIU)',
+      'Paperball (PC + SW)',
+      'PEAK (PC)',
+      'Peggle Deluxe (PC)',
+      'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
+      'PlatinumQuest (MOD)',
+      'Sanctum (PC)',
+      'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
+      'Tower Unite (PC)',
+      'Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)',
+      'Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)',
+    ]
+  include_time_consuming_objectives:
+    # Determines if time-consuming objectives should be considered.
+    # Enabling this option might yield objectives that take much longer to complete (i.e. more than 1 hour).
+    # If enabled, you can still exclude specific games with the 'excluded_games_time_consuming_objectives' option.
+    # We want to allow certain objectives that are time consuming but are acceptable for us to appear.
+    'false': 0
+    'true': 50
+  excluded_games_time_consuming_objectives:
+    # When 'include_time_consuming_objectives' is enabled, this option allows you to still exclude specific games.
+    # Only game names originally listed in 'game_selection' are accepted.
+    # If a game specified here only offers time-consuming objectives, this option will have no effect for it.
+    # At the moment, the only game where time consuming objectives are allowed is Game Backlog, as all its objectives are classified as time consuming even though changes have been made to reduce the time it takes to complete them.
+    [
+      'Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX)',
+      'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
+      'Custom (META)',
+      'Embr (PC + PS4, SW, XONE)',
+      "Garry's Mod (PC + MOD)",
+      'Goofy Gorillas (PC)',
+      'Gran Turismo 3: A-Spec (PS2)',
+      'Left 4 Dead 2 (PC + X360)',
+      'Mario Kart 8 (SW + WIIU)',
+      'Paperball (PC + SW)',
+      'PEAK (PC)',
+      'Peggle Deluxe (PC)',
+      'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
+      'PlatinumQuest (MOD)',
+      'Portal (PC + PS3, SW, X360)',
+      'Sanctum (PC)',
+      'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
+      'Tower Unite (PC)',
+      'Trivia Tricks (PC)',
+      'Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)',
+      'Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)',
+    ]
+  hints_reveal_objectives:
+    # Determines if Archipelago hints will provide information about a location's objective.
+    # Enabling this option will potentially spoil the game for an area and the objective that needs to be completed.
+    # Unchanged from the standard configuration.
+    'false': 50
+    'true': 0
+  game_medley_mode:
+    # If true, a percentage of keep areas will feature Game Medley as their game, with each trial sourced randomly from a separate, dedicated pool of games.
+    # Activating Game Medley Mode will disable optional game conditions for keep areas assigned to Game Medley.
+    # We currently don't have any desire to play Game Medley, but this may change in the future.
+    'false': 50
+    'true': 0
+  game_medley_percentage_chance:
+    # Determines the percentage chance of a game medley being selected when Game Medley Mode is enabled.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Unchanged from the standard configuration.
+    100: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  game_medley_game_selection:
+    # Defines the game pool that will be used to generate Game Medley trials.
+    # Only game names originally listed in 'game_selection' are accepted.
+    # You are allowed to place games that already appear in other selection options here.
+    # You are allowed to add the same game multiple times here. This will act as a weighted pool.
+    # If this is left empty, all games from other selection options will be used as a default.
+    # Unchanged from the standard configuration.
+    []
+  game_selection:
+    # Defines the game pool to select from.
+    # All supported games are listed. Remove the ones you don't own or want to play.
+    # You are allowed to add the same game multiple times here. This will act as a weighted pool.
+    [
+      # Game owned by Jack5. Implementation created by Jack5.
+      'Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX)',
+      # Game owned by Jack5 and Zeroman95. Included due to Major Hawk10's play games with us.
+      'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
+      # Things both of us can experience. Implementation comes with Keymaster's Keep. Included twice to increase the chance it appears.
+      'Custom (META)',
+      'Custom (META)',
+      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+      'Dominion (BOARD + AND, IOS, PC)',
+      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+      'Embr (PC + PS4, SW, XONE)',
+      # Games on Jack5 and Zeroman95's Backloggery. Implementation comes with Keymaster's Keep. Included twice to increase the chance it appears.
+      'Game Backlog (META)',
+      'Game Backlog (META)',
+      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+      "Garry's Mod (PC + MOD)",
+      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+      'Goofy Gorillas (PC)',
+      # Game owned by Jack5.
+      'Gran Turismo 3: A-Spec (PS2)',
+      # Game owned by Jack5 and Zeroman95.
+      'Left 4 Dead 2 (PC + X360)',
+      # Game owned by Jack5 and Zeroman95.
+      'Mario Kart 8 (SW + WIIU)',
+      # Game owned by Jack5.
+      'Paperball (PC + SW)',
+      # Game owned by Jack5 and Zeroman95.
+      'PEAK (PC)',
+      # Game owned by Zeroman95.
+      'Peggle Deluxe (PC)',
+      # Game owned by Zeroman95.
+      'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
+      # Game owned by Jack5.
+      # 'PlatinumQuest (MOD)' has been removed from this list, as it has 'Beat the Platinum Score' objectives, which are difficult but are not considered as such. An update to the implementation is required to remedy this. The game is also similar to Paperball.
+      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+      'Portal (PC + PS3, SW, X360)',
+      # Game owned by Zeroman95. Implementation created by Jack5.
+      'Sanctum (PC)',
+      # Game owned by Zeroman95.
+      'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
+      # Game owned by Jack5 and Zeroman95.
+      'Tower Unite (PC)',
+      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+      'Trivia Tricks (PC)',
+      # Game owned by Jack5 and Zeroman95.
+      # 'Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)' has been removed from this list, as all its objectives are time consuming despite not being classified as such. A new implementation is required to break up its objectives into smaller objectives.
+      # Game owned by Jack5 and Zeroman95.
+      'Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)',
+    ]
+  game_selection_bag_size:
+    # Determines the size of the bag from which the weighted games in 'game_selection' and 'game_medley_game_selection' will be randomly selected.
+    # 0: No bag will be used and games may appear multiple times unbounded.
+    # 1: The bag will be filled with 1 of each game and will be drawn from randomly until it is empty, resulting in an even distribution of games. If the bag becomes empty, it will be refilled.
+    # 2+: The bag will initially be filled with the chosen number of each game, resulting in a slightly less even distribution of games where the maximum number of each game is the chosen number. Subsequent fills will revert to an even distribution. Similar logic applies for all other bag sizes.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5.
+    # Unchanged from the standard configuration.
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  ###########################
+  # Individual Game Options #
+  ###########################
+  asphalt_legends_weights:
+    # The weights to use for Asphalt Legends objective types. Defaults to only objectives that can be completed by new users. If at a high enough level to access VIP features, it is recommended to start with the following weights:
+    # ```yaml
+    # daily: 5
+    # vip: 2
+    # improve_car: 1
+    # bonus: 8
+    # ```
+    # Include VIP missions in the possible objectives.
+    bonus: 8
+    daily: 5
+    improve_car: 1
+    vip: 2
+  asphalt_legends_cars:
+    # The list of cars to use for the Asphalt Legends objective type `improve_car`. Defaults to a few early-game cars, add and remove cars as needed so all in the list are unlocked but not maxed out.
+    # Use all of Jack5's upgradable cars for the possible objectives.
+    [
+      'BMW Z4 LCI E89',
+      'Nissan Leaf Nismo RC',
+      'KTM X-Bow GTX',
+      'Renault Dezir',
+      'Italdesign Davinci',
+      'Peugeot SR1',
+      'Porsche 911 Carrera RS 3.8',
+      'Porsche 718 Cayman',
+      'Ford Shelby GT350R',
+      'Porsche 911 Targa 4S',
+      'Lotus Emira',
+      'Renault TreZor',
+      'Nissan 370Z Neon Edition',
+      'Honda Civic Type-R',
+      'Porsche Taycan Turbo S',
+      'TVR Griffith',
+      'Bentley Continental GT3',
+      'Glickenhaus 004C',
+      'Porsche Boxster 25th',
+      'Aston Martin V12 Speedster',
+      'Donkervoort D8 GTO Individual Series',
+      'Ford Shelby GR-1',
+      'Pininfarina H2 Speed',
+      'Artega Scalo Superelletra',
+      'Saleen S1',
+      'Acura 2017 NSX',
+      'Maserati Alfieri',
+      'Ferrari Monza SP1',
+      'Formula E Gen 2 Asphalt Edition',
+      'Ferrari F40',
+      'Renault R.S. 01',
+      'Lamborghini Miura Concept',
+      'Chevrolet Corvette Stingray',
+      'Maserati MC20 GT2',
+      'Lamborghini Diablo GT',
+      'Arrinera Hussarya 33',
+      'Porsche Panamera Turbo S',
+      'Lamborghini Gallardo LP 560-4',
+      'McLaren GT',
+      'Porsche 911 GTS Coupé',
+      'Aston Martin DB11',
+      'Jaguar F-Type SVR',
+      'Ferrari F50',
+      'Exotic Rides W70',
+      'Porsche 911 GT1 Evolution',
+      'Ford GT',
+      'Lamborghini Asterion',
+      'Italdesign Zerouno',
+      'Ferrari 488 GTB',
+      'Kepler Motion',
+      'Drako GTE',
+      'Glickenhaus 003S',
+      'Lego Technic Chevrolet Corvette Stingray',
+      'Ferrari F12tdf',
+      'Maserati MC20',
+      'Apex AP-0',
+      'Apollo IE',
+      'Sin R1 550',
+      'Ferrari Enzo Ferrari',
+      'Aston Martin DBS Superleggera',
+      'McLaren 600LT Spider',
+      'Lamborghini Invencible',
+      'Lamborghini Huracán Evo Spyder',
+      'Porsche Carrera GT',
+      'Nissan GTR-50 Italdesign',
+      'Porsche 911 GT3 RS',
+      'Ferrari 488 Challenge Evo',
+      'Lego Technic Lamborghini Revuelto',
+      'McLaren F1LM',
+      'Ford GT MK IV',
+      'Pagani Huayra R',
+      'Lamborghini Temerario',
+      'Nissan GT-R Nismo',
+      'Nio EP9',
+      'Dodge Viper GTS',
+      'Ferrari Laferrari',
+      'Lego technic Ferrari FXXK',
+      'Lamborghini Aventador SV Coupé',
+      'Ferrari 812 Superfast',
+      'Chevrolet Corvette ZR1',
+      'VLF Force 1 V10',
+      'Vanda Electrics Dendrobium',
+      'Porsche 918 Spyder',
+      'McLaren 570S Spider',
+      'Automobili Pininfarina Battista Edizione Nino Farina',
+      'Lamborghini Aventador J',
+      'Peugeot Onyx',
+      'Pagani Huayra BC',
+      'McLaren 650S GT3',
+      'Ferrari Laferrari Aperta',
+      'Genty Akylone',
+      'Ford Shelby Super Snake',
+      'Noble M600 Speedster',
+      'Lexus Electrified Sport Concept',
+      'Lamborghini Centenario',
+      'Lamborghini Veneno',
+      'Lamborghini Egoista',
+      'Trion Nemesis',
+      'Nissan GT-R Neon Edition',
+      'Koenigsegg One:1',
+    ]
+  custom_objective_list:
+    # A freeform list of custom objectives for Keymaster's Keep. The trials will sample directly from this list.
+    # We are using the Custom (META) objectives as a means of capturing a wide range of objectives related to us playing games in our Discord voice calls.
+    [
+      "2 or more people are Hungry Jacks'd at the same time",
+      "An Archipelago player's game is released",
+      'Buy something from the Discord Shop Orbs Exclusives',
+      'Change Discord profile badge',
+      'coatofarmor is the straight man of the group',
+      'coatofarmor leaves as soon as a game is over',
+      'Complete a game after this is revealed',
+      'Complete a game earlier than expected',
+      'Complete a game without using its PopTracker',
+      'Complete an annoying setup process',
+      'Complete something taxing and get barely anything in return',
+      'DoMess uses his microphone',
+      "DoMess' soundboard is perfectly timed",
+      'Drink water',
+      'Everyone immediately points out the song now playing',
+      "Find a new Keymaster's Keep codex entry to try",
+      "Five Night's at Freddy's reference",
+      'Game connection issues',
+      'Game crash',
+      'Get a message in the supporter channels',
+      'Glitch and Major Hawk10 argue',
+      "Glitch can't think of a good defense",
+      'Glitch dies in-game',
+      "Glitch doesn't care",
+      'Glitch gets a name wrong',
+      'Glitch is playing Minecraft',
+      'Go and take a shower',
+      'Go to bed',
+      'Gravey is a yes-man',
+      'Gravey joins then leaves soon after',
+      'Gravey plays a song on the music bot',
+      'Gravey sings a song playing on the music bot',
+      'Gravey streams something random',
+      "Hungry Jacks'd in two games at once",
+      'Internet connection fails',
+      "interp'd Reality reference",
+      "interp'd Reality session",
+      'Jack5 and Zeroman95 are playing the same games as last time',
+      'Jack5 and Zeroman95 reference the same YouTube Poop',
+      'Jack5 and Zeroman95 say the same thing at the same time',
+      'Jack5 becomes braindead',
+      "Jack5 can't open a link in Vesktop",
+      'Jack5 complains about something',
+      "Jack5 corrects someone's pronounciation",
+      "Jack5 doesn't play with the group",
+      'Jack5 downloads favourited Steam Workshop addons',
+      'Jack5 gets on way earlier than usual',
+      'Jack5 goes from elated to defeated in seconds',
+      'Jack5 has a playlist for that',
+      'Jack5 has a poor internet connection',
+      'Jack5 has a stroke',
+      'Jack5 leaves to cook',
+      'Jack5 leaves to do chores',
+      'Jack5 is caught playing Asphalt Legends',
+      'Jack5 is losing his sanity',
+      'Jack5 rides the walls',
+      "Jack5 says he can't play a game because of his hands",
+      'Jack5 takes a screenshot',
+      'Jack5 uses his NixOS laptop',
+      'Jack5 uses his wireless keyboard',
+      'Jack5 YouTube channel reference',
+      "Jack5's laughs are different each time",
+      'Johnny Cash - Ring of Fire plays',
+      'Listen to a song too many times',
+      'Lucas divulges too much information',
+      'Lucas is oddly calm',
+      'Lucas is too hyperactive',
+      'Major Hawk10 complains about something',
+      'Major Hawk10 explains a meme',
+      'Major Hawk10 gets defensive',
+      'Major Hawk10 goes on a long spiel about historical events',
+      'Major Hawk10 is in a voice channel alone with the music bot',
+      'Major Hawk10 is tipsy',
+      'Major Hawk10 makes a meme',
+      'Major Hawk10 makes a TopGear reference',
+      'Major Hawk10 points out "his D&D character"',
+      'Major Hawk10 says nothing for a long time',
+      'Major Hawk10 talks about music',
+      'Major Hawk10 talks about something from his real life',
+      'Major Hawk10 talks about something on his Instagram',
+      'Major Hawk10 trolls Glitch in a game',
+      'Make a change to a player config mid-run',
+      'Make an edit to a wiki',
+      'Music bot plays the wrong song',
+      'Nathalie - Desperado plays',
+      "Need something but don't have enough money",
+      'No-one can agree on what game to play',
+      'Obsidian vault housekeeping',
+      'Pizza night',
+      'Play an unplayed game from Backloggery',
+      'Post in the HOO-ROO GAMES Discord',
+      'Quote from SpongeBob SquarePants',
+      "Remind Keynaster's Keep developers about random bag",
+      'Report an issue in the Archipelago Discord',
+      'Say the same thing 5 times in a row without being questioned',
+      'Sell something on the Steam Community Market',
+      'Send a message in a group chat',
+      "Someone really doesn't like an inside joke",
+      'Sitting around waiting for a long while',
+      'Surprised by a game being completed',
+      "SweetCookie500 doesn't respond for a really long time",
+      'SweetCookie500 posts some art',
+      'SweetCookie500 references Star Wars',
+      'SweetCookie500 shows up',
+      'The Irish Goodbye: Someone leaves without saying anything',
+      "Understand someone's obscure reference",
+      'Unexpected bathroom break',
+      'Uninstall an unplayed game from Steam',
+      'Want to play an unsupported game',
+      'War of Rights discussion',
+      'Watch a Discord Orbs ad',
+      'Watch the latest Evaporate video',
+      'Watch videos in YouTube activity',
+      'Witness a physics bug',
+      'Wolf-PvP is in a voice channel for too long',
+      'Wolf-PvP says something very vulgar',
+      'Wolf-PvP says the opposite for no reason',
+      'Wolf-PvP shows up',
+      "Zeroman95 can't find something",
+      'Zeroman95 complains about something',
+      'Zeroman95 gets extremely frustrated',
+      'Zeroman95 laughs oddly deeply',
+      'Zeroman95 has trouble editing a spreadsheet/repository',
+      'Zeroman95 is flustered or shy',
+      'Zeroman95 "loves" something',
+      'Zeroman95 makes a SnapCube reference',
+      'Zeroman95 plays a non-PC game on physical hardware',
+      "Zeroman95 references a game other than the one he's playing",
+      'Zeroman95 says nothing for a long time',
+      'Zeroman95 talks about Disney Infinity',
+    ]
+  dominion_weights:
+    # The weights to use for Dominion objective types. Note that "win_with_card" and half of "win_against_ai" are classified as difficult, and will not appear if difficult objectives are disabled. Defaults to only objectives that can be completed in real life. If playing the 2021 version of Dominion by Temple Gates Games, it is recommended to start with the following weights:
+    # ```yaml
+    # setup_with_cards: 1
+    # play_card: 8
+    # win_with_card: 1
+    # win_against_ai: 1
+    # bonus: 2
+    # ```
+    # Since we are playing the video game, we've changed the weights to include video game objectives.
+    bonus: 2
+    play_card: 8
+    setup_with_cards: 1
+    win_against_ai: 1
+    win_with_card: 1
+  dominion_expansion_weights:
+    # The weights to use for expansions in Dominion objectives. Expansions are based on the 2021 version of Dominion by Temple Gates Games, where "...1st Edition" expansions only contain cards exclusive to them. Weights are proportional to the number of cards in their respective expansions. Defaults to only including the base game.
+    # These weights have been changed to include all of the DLC that Jack5 owns, which can be played by everyone.
+    Adventures: 0
+    Alchemy: 0
+    Allies: 0
+    Base: 1
+    Base 1st Edition: 0
+    Black Market: 1
+    Cornucopia: 1
+    Cornucopia 1st Edition: 1
+    Dark Ages: 0
+    Empires: 1
+    Guilds: 0
+    Guilds 1st Edition: 0
+    Hinterlands: 1
+    Hinterlands 1st Edition: 0
+    Intrigue: 1
+    Intrigue 1st Edition: 0
+    Marchland: 1
+    Menagerie: 0
+    Nocturne: 0
+    Plunder: 1
+    Promo Pack 1: 0
+    Promo Pack 2: 0
+    Prosperity: 1
+    Prosperity 1st Edition: 1
+    Renaissance: 1
+    Rising Sun: 0
+    Seaside: 0
+    Seaside 1st Edition: 0
+  # embr_weights:
+  # The weights to use for Embr objective types. Note that "embrgigs", "goals" and one-fifth of "bonus" are classified as difficult and time consuming, and will not appear if difficult or time consuming objectives are disabled.
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # embr_mission_weights:
+  # The weights to use for mission types in Embr objectives that use them (`mission_on_neighbourhood` (excludes "Rescue Mission"), `mission_with_loadout` and `mission_with_gear`).
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # embr_neighbourhood_weights:
+  # The weights to use for neighbourhoods in Embr objectives. Note that "Wayside Way" and all neighbourhoods outside of the "Bedbugstuy" district are classified as difficult, and will not appear if difficult objectives are disabled.
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  game_backlog_game_selection:
+    # Defines which games are in the player's backlog.
+    # Replace the placeholders with values of your own choosing.
+    # Included the vast majority of Jack5 and Zeroman95's unplayed Backloggery games. As most of this list is of Jack5's games, Zeroman95's games are duplicated to increase the chance they appear.
+    - Cakey's Twisted Bakery (Steam, Jack5)
+    - Content Warning (Steam, Jack5)
+    - Dead Island Riptide Definitive Edition (Steam, Jack5)
+    - 'DOOM 3: Resurrection of Evil (Steam, Jack5)'
+    - DOOM 3 (Steam, Jack5)
+    - Half-Life (Steam, Jack5)
+    - (Not Escape Room) (itch.io, Jack5)
+    - '[ENDLESS_OVERDRIVE] (itch.io, Jack5)'
+    - '[Speer] (itch.io, Jack5)'
+    - </reality> (itch.io, Jack5)
+    - 10 Flights of Ballooning (itch.io, Jack5)
+    - '10mg: Sealed Estate (itch.io, Jack5)'
+    - '10mg: SNAAAK (itch.io, Jack5)'
+    - 10S (itch.io, Jack5)
+    - 1993 Space Machine (itch.io, Jack5)
+    - 2 9 0 1 / / FREELANCER (itch.io, Jack5)
+    - '2064: Read Only Memories (itch.io, Jack5)'
+    - 6 pack of craft games (itch.io, Jack5)
+    - About Love, Hate & the other ones (itch.io, Jack5)
+    - Absolute Blue (itch.io, Jack5)
+    - 'After The End: The Harvest (itch.io, Jack5)'
+    - An Airport Game (itch.io, Jack5)
+    - Alien Life Lab (itch.io, Jack5)
+    - Alt-Frequencies (itch.io, Jack5)
+    - Amelie (itch.io, Jack5)
+    - An American Werewolf in LA (EN) (itch.io, Jack5)
+    - Amethyst Hearth (itch.io, Jack5)
+    - Antecrypt (itch.io, Jack5)
+    - The Arcade Tower (itch.io, Jack5)
+    - Arcade Spirits (itch.io, Jack5)
+    - Arlo The Rabbit (itch.io, Jack5)
+    - Asterism (itch.io, Jack5)
+    - Asteroids... But Roguelite (itch.io, Jack5)
+    - Attentat 1942 (itch.io, Jack5)
+    - Attraction Force (itch.io, Jack5)
+    - Attrition (itch.io, Jack5)
+    - Back To Bed (itch.io, Jack5)
+    - Backbone (itch.io, Jack5)
+    - Backspace Bouken (itch.io, Jack5)
+    - Balloony's adventure (itch.io, Jack5)
+    - Bard Harder! (itch.io, Jack5)
+    - BasketBelle (itch.io, Jack5)
+    - Bat Lizard Bonanza (itch.io, Jack5)
+    - 'Batbarian: Testament of the Primordials (itch.io, Jack5)'
+    - Beglitched (itch.io, Jack5)
+    - Bezier (itch.io, Jack5)
+    - Bicyclism EP (itch.io, Jack5)
+    - Binky's Trash Service (itch.io, Jack5)
+    - Bleed (itch.io, Jack5)
+    - Bleed 2 (itch.io, Jack5)
+    - 'Bombing!!: A Graffiti Sandbox (itch.io, Jack5)'
+    - Bonbon (itch.io, Jack5)
+    - BOTOLO (itch.io, Jack5)
+    - Bouncy Cars (itch.io, Jack5)
+    - BOX (itch.io, Jack5)
+    - Bring Back The Sun by Daniel de Silve (itch.io, Jack5)
+    - Bugspeed Collider (itch.io, Jack5)
+    - Bunflower (itch.io, Jack5)
+    - 'Bunnies vs. Bunnies: Ukraine Edition (itch.io, Jack5)'
+    - Bunny Hill Horror (itch.io, Jack5)
+    - 'Bunny Hill Horror: Bunny Boiler (itch.io, Jack5)'
+    - Bury me, my Love (itch.io, Jack5)
+    - 'Butterflies Episode 1: Rudies (itch.io, Jack5)'
+    - 'Butterflies Episode 2: Getting Up (itch.io, Jack5)'
+    - 'Can Androids Pray: Red (itch.io, Jack5)'
+    - Captain Backwater (itch.io, Jack5)
+    - Card Hog (itch.io, Jack5)
+    - Cardinal Cross (itch.io, Jack5)
+    - Cats are Liquid - A Better Place (itch.io, Jack5)
+    - Cats are Liquie - A Light in the Shadows (itch.io, Jack5)
+    - 'Catty & Batty: The Spirit Guide (itch.io, Jack5)'
+    - Cecconoid (itch.io, Jack5)
+    - Central Fugitive (itch.io, Jack5)
+    - Changeling (itch.io, Jack5)
+    - Chimpology (itch.io, Jack5)
+    - Chronicles of two Heroes (itch.io, Jack5)
+    - 'Chronology: Time Changes Everything (itch.io, Jack5)'
+    - Circa Infinity (itch.io, Jack5)
+    - Clam Man (itch.io, Jack5)
+    - Clash Force (itch.io, Jack5)
+    - Clean ATTACK! (itch.io, Jack5)
+    - Cloud Gardens (itch.io, Jack5)
+    - Cloud Serpent (itch.io, Jack5)
+    - co-open (itch.io, Jack5)
+    - Collateral Thinking DX (itch.io, Jack5)
+    - Color Jumper (itch.io, Jack5)
+    - Combo Postage (itch.io, Jack5)
+    - Commune Corvidae (itch.io, Jack5)
+    - Concentric (itch.io, Jack5)
+    - Containment (itch.io, Jack5)
+    - Cosmic Rochambo (itch.io, Jack5)
+    - The Count of Monte Carlo (itch.io, Jack5)
+    - Cruel World (itch.io, Jack5)
+    - The Crystal Golen (itch.io, Jack5)
+    - Curious Expedition (itch.io, Jack5)
+    - Curse of the Crescent Isle DX (itch.io, Jack5)
+    - Cycle 28 (itch.io, Jack5)
+    - Danger Crew (itch.io, Jack5)
+    - Danger Scavenger (itch.io, Jack5)
+    - Dangerous Roads Ahead (itch.io, Jack5)
+    - Dark Sheep (itch.io, Jack5)
+    - Dates & Wires (itch.io, Jack5)
+    - Dawn of a Soul (itch.io, Jack5)
+    - Dayscream (itch.io, Jack5)
+    - Death and Taxes (itch.io, Jack5)
+    - Death Drives A Bus (itch.io, Jack5)
+    - Dee Dum (itch.io, Jack5)
+    - Déjà Vu (itch.io, Jack5)
+    - Delver (itch.io, Jack5)
+    - Democratic Socialism Simulator (itch.io, Jack5)
+    - Demonizer (itch.io, Jack5)
+    - Dépanneur Nocturne (itch.io, Jack5)
+    - Depth of Extinction (itch.io, Jack5)
+    - Derpy Deep Drive (itch.io, Jack5)
+    - Desolate Roads (itch.io, Jack5)
+    - 'Detective Case and Clown Bot in: Murder in The Hotel Lisbon (itch.io, Jack5)'
+    - Dino Island The Four Crystals (itch.io, Jack5)
+    - Disobedient Sheep (itch.io, Jack5)
+    - 'DLFE: Masquerade (itch.io, Jack5)'
+    - 'Dogs Throwing Swords II: Three Barks To The Wind (itch.io, Jack5)'
+    - "Don't Escape: 4 Days to Survive (itch.io, Jack5)"
+    - Doomer (itch.io, Jack5)
+    - Double Cross (itch.io, Jack5)
+    - Dragon Drop (itch.io, Jack5)
+    - Dragons in Space (itch.io, Jack5)
+    - Drew and the Floating Labyrinth (itch.io, Jack5)
+    - dstnce. (itch.io, Jack5)
+    - Dumpy & Bumpy (itch.io, Jack5)
+    - Eatvolve (itch.io, Jack5)
+    - El Gancho (itch.io, Jack5)
+    - 'Elden: Path of the Forgotten (itch.io, Jack5)'
+    - Eldritch (itch.io, Jack5)
+    - Elephantasy (itch.io, Jack5)
+    - 'Eternia: Pet Whisperer (itch.io, Jack5)'
+    - EVADER (itch.io, Jack5)
+    - Evangeline (itch.io, Jack5)
+    - Evergate (itch.io, Jack5)
+    - Explorers (Deluxe Edition) (itch.io, Jack5)
+    - Eye of Ra (itch.io, Jack5)
+    - Eyewear Cleaner 2077 (itch.io, Jack5)
+    - The Fall Of Lazarus (itch.io, Jack5)
+    - 'Fantastic Fetus: Prebirth (itch.io, Jack5)'
+    - Fatum Betula (itch.io, Jack5)
+    - Feyna's Quest (itch.io, Jack5)
+    - Figment (itch.io, Jack5)
+    - Final Spike (itch.io, Jack5)
+    - Find Me (itch.io, Jack5)
+    - Firemakaf (itch.io, Jack5)
+    - Fit For A King (itch.io, Jack5)
+    - Flufftopia (itch.io, Jack5)
+    - for|rest (itch.io, Jack5)
+    - A Forgetful Loop (itch.io, Jack5)
+    - Fortune-499 (itch.io, Jack5)
+    - Fossil Hunters (itch.io, Jack5)
+    - Fostering Apocalypse (itch.io, Jack5)
+    - Four Horsemen (itch.io, Jack5)
+    - Frick, Inc. (itch.io, Jack5)
+    - Future Unfolding (itch.io, Jack5)
+    - 'FUTUREVOXIMAGINARIUMDOTEXEV1.1:DOGELOVEREDITION (itch.io, Jack5)'
+    - Fuzz Dungeon (itch.io, Jack5)
+    - GalaxSeed (itch.io, Jack5)
+    - Ganbare! Super Strikers (itch.io, Jack5)
+    - The Geography (itch.io, Jack5)
+    - Gig Life (itch.io, Jack5)
+    - Gigabit (itch.io, Jack5)
+    - Gimmick in the Chaos Dimension (itch.io, Jack5)
+    - Gladiabots (itch.io, Jack5)
+    - Glittermitten Grove (itch.io, Jack5)
+    - gloom reducer (itch.io, Jack5)
+    - GoNNER (itch.io, Jack5)
+    - A Good Snowman Is Hard To Buil (itch.io, Jack5)d
+    - Good Morning Hon (itch.io, Jack5)
+    - Good Mourning (itch.io, Jack5)
+    - GourMelee (itch.io, Jack5)
+    - Grapple Force Rena (itch.io, Jack5)
+    - GRAVITY Pilot! (itch.io, Jack5)
+    - Grime House (itch.io, Jack5)
+    - 'Grimm & Tonic: Aperitif (itch.io, Jack5)'
+    - 'Grow Big (or Go Home): Ultimate Edition (itch.io, Jack5)'
+    - Gun Rounds (itch.io, Jack5)
+    - Gunmetal Arcadia Zero (itch.io, Jack5)
+    - Guppy (itch.io, Jack5)
+    - Gutwhale (itch.io, Jack5)
+    - Haque (itch.io, Jack5)
+    - Harvest Hero Origins (itch.io, Jack5)
+    - Head AS Code (itch.io, Jack5)
+    - 'Headspun: Dazed Edition (itch.io, Jack5)'
+    - Hellcraze (itch.io, Jack5)
+    - Hero Generations (itch.io, Jack5)
+    - Hero Hours Contact (itch.io, Jack5)
+    - Hexed (itch.io, Jack5)
+    - Hidden Folks (itch.io, Jack5)
+    - Hiding Spot (itch.io, Jack5)
+    - A Hole New World (itch.io, Jack5)
+    - Home - A Unique Horror Adventure (itch.io, Jack5)
+    - Homunculus Hotel (itch.io, Jack5)
+    - Hoplegs (itch.io, Jack5)
+    - Hunter's Moon Remastered "(C64)" (itch.io, Jack5)
+    - Hyperspace Dogfights (itch.io, Jack5)
+    - i hurt myself - postjam edition (itch.io, Jack5)
+    - I'm a love interest in my childhood friend's reverse harem!!! (itch.io, Jack5)
+    - Il Filo Conduttore (itch.io, Jack5)
+    - Imaginaria (itch.io, Jack5)
+    - INDEPENDANT VIDEO VIDEO GAME (itch.io, Jack5)
+    - Infini (itch.io, Jack5)
+    - INMOST (itch.io, Jack5)
+    - Inner Tao (itch.io, Jack5)
+    - 'Intelligent Design: An Evolutionary Sandbox (itch.io, Jack5)'
+    - Interstellaria (itch.io, Jack5)
+    - 'Intra-System: Trust Issues (itch.io, Jack5)'
+    - Isolation Story (itch.io, Jack5)
+    - It's Six Random Characters and a Single Floor Dungeon, That's the Whole Game (itch.io, Jack5)
+    - Jabberwocky (itch.io, Jack5)
+    - 'Jotun: Valhalla Edition (itch.io, Jack5)'
+    - Jupitron Game Collection Vol.1 (itch.io, Jack5)
+    - Jupitron Game Collection Vol.4 - Middleware (itch.io, Jack5)
+    - 'Kaiju Big Battel: Fighto Fantasy (itch.io, Jack5)'
+    - Kakatte Koi Yo! (itch.io, Jack5)
+    - KIDS (itch.io, Jack5)
+    - Kill the Superweapon (itch.io, Jack5)
+    - Kingtom Two Crowns (itch.io, Jack5)
+    - Klang 2 (itch.io, Jack5)
+    - Knight Bewitched (itch.io, Jack5)
+    - Knight Bewitched 2 (itch.io, Jack5)
+    - 'Korpus: Buried over the Black Soil (itch.io, Jack5)'
+    - Landlord of the Woods (itch.io, Jack5)
+    - The Last Librarian (itch.io, Jack5)
+    - The Last Survey (itch.io, Jack5)
+    - Last Fleet (itch.io, Jack5)
+    - 'Last Knight: Rogue Rider Edition (itch.io, Jack5)'
+    - Lawn Buster for Hire (itch.io, Jack5)
+    - LAZA KNITEZ!! (itch.io, Jack5)
+    - Learn Japanese To Survive! Hiragana Battle (itch.io, Jack5)
+    - Learn Japanese To Survive! Kanji Combat (itch.io, Jack5)
+    - Leggite Luta Livre (itch.io, Jack5)
+    - Lenna's Inception (itch.io, Jack5)
+    - The Light at the End of the Ocean (itch.io, Jack5)
+    - A Light Long Gone (itch.io, Jack5)
+    - little boats of farewell (itch.io, Jack5)
+    - Little Burned Maiden (itch.io, Jack5)
+    - LiveScream (itch.io, Jack5)
+    - Lizard Lady vs the Cats (itch.io, Jack5)
+    - Lonely People Potion Shop (itch.io, Jack5)
+    - Long Gone Days (itch.io, Jack5)
+    - The Lost Art of Innkeeping (itch.io, Jack5)
+    - The Lost Cave of the Ozarks (itch.io, Jack5)
+    - The Lost Night (itch.io, Jack5)
+    - Lost Dreams (itch.io, Jack5)
+    - Lost Potato (itch.io, Jack5)
+    - 'LOST ORBIT: Terminal Velocity (itch.io, Jack5)'
+    - LouveSystems' TrackMasters (itch.io, Jack5)
+    - Lucifer Within Us (itch.io, Jack5)
+    - Luna (itch.io, Jack5)
+    - Lunarrota (itch.io, Jack5)
+    - Lydia (itch.io, Jack5)
+    - The Machine's Garden (itch.io, Jack5)
+    - The Majesty of Colors (itch.io, Jack5)
+    - The Manse on Soracca (itch.io, Jack5)
+    - Marginalia (itch.io, Jack5)
+    - Mastermind Classic (itch.io, Jack5)
+    - Maze Of Bears (itch.io, Jack5)
+    - Mech_Romancer Charity Bundle 2 (itch.io, Jack5)
+    - Mending Wall (itch.io, Jack5)
+    - 'MENOS: PSI-SHATTER (itch.io, Jack5)'
+    - Meta Form (itch.io, Jack5)
+    - Metamorphabet (2015) (itch.io, Jack5)
+    - Metori (itch.io, Jack5)
+    - MewnBase (itch.io, Jack5)
+    - Micro Dash (itch.io, Jack5)
+    - 'Midnight Scenes Ep.1: The Highway (Special Edition) (itch.io, Jack5)'
+    - 'Midnight Scenes Ep.2: The Goodbye Note (Special Edition) (itch.io, Jack5)'
+    - 'Midnight Scenes: The Nanny (itch.io, Jack5)'
+    - Millikan's Reach (itch.io, Jack5)
+    - Mini's Magic World (itch.io, Jack5)
+    - Minit Fun Racer (itch.io, Jack5)
+    - MiTOS (itch.io, Jack5)
+    - 'MMM: Murder Most Misfortunate (itch.io, Jack5)'
+    - Moon Hunters (itch.io, Jack5)
+    - A Mortician's Tale (itch.io, Jack5)
+    - Mostly Intense Monster Defense (itch.io, Jack5)
+    - Move 'n' Bloom (itch.io, Jack5)
+    - Muffin Fight VR (itch.io, Jack5)
+    - Murder at the Cat Show (itch.io, Jack5)
+    - Mutiny Island (itch.io, Jack5)
+    - Mysteries Under Lake Ophelia (itch.io, Jack5)
+    - Naughty Elves - Christmas puzzle game (itch.io, Jack5)
+    - Nauticrawl (itch.io, Jack5)
+    - Nebs 'n Debs "(NES)" (itch.io, Jack5)
+    - NEON STRUCT (itch.io, Jack5)
+    - Nepenthe (itch.io, Jack5)
+    - Newtraction (itch.io, Jack5)
+    - Night Call (itch.io, Jack5)
+    - A NIGHTMARE'S TRIP (itch.io, Jack5)
+    - 'Nina Aquila: Legal Eagle, Season One (itch.io, Jack5)'
+    - Nonsense Soccer (itch.io, Jack5)
+    - Old Man's Journey (itch.io, Jack5)
+    - Only One Burn (itch.io, Jack5)
+    - Operation STEEL (itch.io, Jack5)
+    - Ossuary (itch.io, Jack5)
+    - Other Minds (itch.io, Jack5)
+    - An Outcry, prelude (itch.io, Jack5)
+    - PALACE OF WOE (itch.io, Jack5)
+    - Pale Cachexia (itch.io, Jack5)
+    - Panic Factory (itch.io, Jack5)
+    - ParamediCats (itch.io, Jack5)
+    - PARANOIHELL (itch.io, Jack5)
+    - PARTICLE MACE (itch.io, Jack5)
+    - Partition Sector (itch.io, Jack5)
+    - Peace of Mind (itch.io, Jack5)
+    - Pebble Witch (itch.io, Jack5)
+    - Peck N Run (itch.io, Jack5)
+    - Penance (itch.io, Jack5)
+    - 'Pendula Swing: The Complete Journey (itch.io, Jack5)'
+    - Pig Eat Ball (itch.io, Jack5)
+    - Pipe Push Paradise (itch.io, Jack5)
+    - Pippu - Bauble Quest (itch.io, Jack5)
+    - Pixel Fireplace (itch.io, Jack5)
+    - A Planet of Mine (itch.io, Jack5)
+    - Planet Diver (itch.io, Jack5)
+    - Plant Down (itch.io, Jack5)
+    - Plunge (itch.io, Jack5)
+    - Polyroll (itch.io, Jack5)
+    - Possession (itch.io, Jack5)
+    - 'Prison of the Magi: Ch. 0 (itch.io, Jack5)'
+    - Project MALLOW (itch.io, Jack5)
+    - Project SNAQE (itch.io, Jack5)
+    - PROVIDER (itch.io, Jack5)
+    - Pullfrog (itch.io, Jack5)
+    - Purple Noise Echo (itch.io, Jack5)
+    - Quest of Dungeons (itch.io, Jack5)
+    - Quest of Graal DX (itch.io, Jack5)
+    - Quiet as a Stone (itch.io, Jack5)
+    - Rakete (itch.io, Jack5)
+    - 'RB: Axolotl (itch.io, Jack5)'
+    - RD Mars (itch.io, Jack5)
+    - Rebop Blasters (itch.io, Jack5)
+    - Record Store Nightmare (itch.io, Jack5)
+    - Redd's Runaway (itch.io, Jack5)
+    - Regina & Mac (itch.io, Jack5)
+    - reIterate() (itch.io, Jack5)
+    - Revolver and Co (itch.io, Jack5)
+    - Rhythm 'n Bullets - VR (itch.io, Jack5)
+    - Ripped Pants at Work (itch.io, Jack5)
+    - Ripple (itch.io, Jack5)
+    - RITE (itch.io, Jack5)
+    - RogueCraft Squadron (itch.io, Jack5)
+    - RogueSlide (itch.io, Jack5)
+    - 'Roll for Confidence: A CMC Vignette (itch.io, Jack5)'
+    - Roly-Polo (itch.io, Jack5)
+    - Rose & Time (itch.io, Jack5)
+    - Route Me Mail and Delivery Co (itch.io, Jack5)
+    - Rubies In Space (FULL GAME) (Old Build) (itch.io, Jack5)
+    - Rune of Eternity (itch.io, Jack5)
+    - Rusty Lake Hotel (itch.io, Jack5)
+    - Safari Zone (itch.io, Jack5)
+    - Sagebrush (itch.io, Jack5)
+    - Sarawak (itch.io, Jack5)
+    - Sausage Sports Club (itch.io, Jack5)
+    - Schildmaid MX (itch.io, Jack5)
+    - Secrets of Raetikon (itch.io, Jack5)
+    - Sector 781 (itch.io, Jack5)
+    - seethe and scab (itch.io, Jack5)
+    - Self-Checkout Unlimited (itch.io, Jack5)
+    - Serious Scramblers (itch.io, Jack5)
+    - Shattered Planet (itch.io, Jack5)
+    - Shell Out Showdown (itch.io, Jack5)
+    - Shiny Gauntlet (itch.io, Jack5)
+    - Shipwreck (itch.io, Jack5)
+    - A Short Hike (itch.io, Jack5)
+    - Shredded Secrets (itch.io, Jack5)
+    - SHUT IN (itch.io, Jack5)
+    - Sidewords (itch.io, Jack5)
+    - SKELERUN (itch.io, Jack5)
+    - A Sketchbook About Her Sun (itch.io, Jack5)
+    - Sky Rogue (itch.io, Jack5)
+    - 'Skyling : Garden Defense (itch.io, Jack5)'
+    - Snack Scoffer (itch.io, Jack5)
+    - Snowdown (itch.io, Jack5)
+    - Sonny (itch.io, Jack5)
+    - SPACE / MECH / PILOT - THE UNIVERSE DRIVE 1.0 (itch.io, Jack5)
+    - The Spark of One (itch.io, Jack5)
+    - Spaß Taxi (itch.io, Jack5)
+    - Speed Dating for Ghosts (itch.io, Jack5)
+    - Spell Casting (itch.io, Jack5)
+    - 'Spell Slingers: Trick or Treat (itch.io, Jack5)'
+    - SPLASH BLAST PANIC (itch.io, Jack5)
+    - SPOOKWARE (itch.io, Jack5)
+    - Spooky Station (itch.io, Jack5)
+    - Spooky Waltz (itch.io, Jack5)
+    - StarFighter R&D HD Edition (itch.io, Jack5)
+    - Starlight Shores (itch.io, Jack5)
+    - Steam Marines (itch.io, Jack5)
+    - Steam Marines 2 (itch.io, Jack5)
+    - Stellar Interface (itch.io, Jack5)
+    - Strife of Cosmos (itch.io, Jack5)
+    - Sub-Uber-Marine (itch.io, Jack5)
+    - Sudd City Adventures (itch.io, Jack5)
+    - "Sulphur Nimbus: Hel's Elixir (itch.io, Jack5)"
+    - Summer Gems (itch.io, Jack5)
+    - Summer in Mara (itch.io, Jack5)
+    - Summoner's Mess (itch.io, Jack5)
+    - Sun Dogs (itch.io, Jack5)
+    - 'Sundered: Eldritch Edition (itch.io, Jack5)'
+    - Sunlight (itch.io, Jack5)
+    - Super Head Ball (itch.io, Jack5)
+    - Super Mumtaz Bros. (itch.io, Jack5)
+    - Super Win the Game (itch.io, Jack5)
+    - Swim Out (itch.io, Jack5)
+    - Swung (itch.io, Jack5)
+    - T.A.R.S (itch.io, Jack5)
+    - 'Taimumari: Definitive Edition (itch.io, Jack5)'
+    - Tales From Windy Meadow (itch.io, Jack5)
+    - Tallowmere (itch.io, Jack5)
+    - Temple Of Tangram (itch.io, Jack5)
+    - Tenderfoot Tactics (itch.io, Jack5)
+    - TEOCALLI (itch.io, Jack5)
+    - Thermo Puzzle (itch.io, Jack5)
+    - They Bleed Pixels (itch.io, Jack5)
+    - Throw Cubes into Brick Towers To Collapse Them (itch.io, Jack5)
+    - Towayami (itch.io, Jack5)
+    - 'The Tower: The Order of XII (itch.io, Jack5)'
+    - TowerFall Ascension (itch.io, Jack5)
+    - TowerFall Dark World Expansion (itch.io, Jack5)
+    - Toybox Aviation (itch.io, Jack5)
+    - Type The Entire Of Ulysses. That's it. That's the game. (itch.io, Jack5)
+    - Ug! Caveman Game (itch.io, Jack5)
+    - Ultimate Zombie Death Ball (itch.io, Jack5)
+    - Ultra Hat Dimension (itch.io, Jack5)
+    - Underhero (itch.io, Jack5)
+    - Unfinished - An Artist's Lament (itch.io, Jack5)
+    - UPSQUID (itch.io, Jack5)
+    - Vampire Night Shift (itch.io, Jack5)
+    - Void Wisp (itch.io, Jack5)
+    - VOID (itch.io, Jack5)
+    - Volatile (itch.io, Jack5)
+    - Vulture (itch.io, Jack5)
+    - Vylan (itch.io, Jack5)
+    - Wand Wars (itch.io, Jack5)
+    - Wanderers (itch.io, Jack5)
+    - WarpThrough (itch.io, Jack5)
+    - Watch Me Jump (itch.io, Jack5)
+    - WATER'S FINE (itch.io, Jack5)
+    - We should talk. (itch.io, Jack5)
+    - Welcome to Elk (itch.io, Jack5)
+    - Wheels of Aurelia (itch.io, Jack5)
+    - When The River Runs Dry Early Release (itch.io, Jack5)
+    - Where the Snow Settles (itch.io, Jack5)
+    - The White Door (itch.io, Jack5)
+    - Widget Satchel (itch.io, Jack5)
+    - Windosill (itch.io, Jack5)
+    - The Wishing Stone (itch.io, Jack5)
+    - Without Escape (itch.io, Jack5)
+    - Wizard Battle (itch.io, Jack5)
+    - "Wonderland Nights: White Rabbit's Diary (itch.io, Jack5)"
+    - Wrapped With A Kiss (itch.io, Jack5)
+    - The Wratch's Den (itch.io, Jack5)
+    - Xenogunner (itch.io, Jack5)
+    - Yi and the Thousand Moons (itch.io, Jack5)
+    - Ynglet (itch.io, Jack5)
+    - You Can Pet The Dog VR (itch.io, Jack5)
+    - Your Future Self (itch.io, Jack5)
+    - ZeroRanger (itch.io, Jack5)
+    - Zombie Admin (itch.io, Jack5)
+    - Zombusters (itch.io, Jack5)
+    - Scrabble Interactive 2007 Edition (Nintendo DS, Jack5)
+    - Bubble Bobble (PICO-8, Jack5)
+    - 'Buns: Bunny survivor (PICO-8, Jack5)'
+    - Donsol for PICO-8 (PICO-8, Jack5)
+    - Flip Knight (PICO-8, Jack5)
+    - floodedcaves (PICO-8, Jack5)
+    - 'Froggy Knight: Lost in the Forest (PICO-8, Jack5)'
+    - Guncho (PICO-8, Jack5)
+    - Harold's Bad Day (PICO-8, Jack5)
+    - 'NEST 2: Fast-paced Coin-Op Action (PICO-8, Jack5)'
+    - NETTY (PICO-8, Jack5)
+    - OMEGA ZONE (PICO-8, Jack5)
+    - pakpok (PICO-8, Jack5)
+    - Phoenix (PICO-8, Jack5)
+    - Pico Dino - Chrome's T-rex game reimagined (PICO-8, Jack5)
+    - Pico Off Road (PICO-8, Jack5)
+    - Pico Tetris v1.1 (PICO-8, Jack5)
+    - Pico World Race 1.2 (PICO-8, Jack5)
+    - PICORACER-2048 (PICO-8, Jack5)
+    - Return of the SLIMEPIRES! (PICO-8, Jack5)
+    - Sewers of d'Oh! (PICO-8, Jack5)
+    - Super Disc Box (PICO-8, Jack5)
+    - 'Tera: Mind Over Matter (PICO-8, Jack5)'
+    - Ufo Tofu (PICO-8, Jack5)
+    - VIOLET (PICO-8, Jack5)
+    - Void Protocol (PICO-8, Jack5)
+    - Zoo Keeper (PICO-8, Jack5)
+    - METROID PRIME BLAST BALL (3DS, Jack5)
+    - 7 Wonders of the Ancient World (PC, Zeroman95)
+    - 7 Wonders of the Ancient World (PC, Zeroman95)
+    - Age of Mythology Gold Edition (PC, Zeroman95)
+    - Age of Mythology Gold Edition (PC, Zeroman95)
+    - Age of Mythology (2002) (PC, Zeroman95)
+    - Age of Mythology (2002) (PC, Zeroman95)
+    - 'Age of Mythology: The Titans (PC, Zeroman95)'
+    - 'Age of Mythology: The Titans (PC, Zeroman95)'
+    - Alabama Smith in the Quest of Fate (PC, Zeroman95)
+    - Alabama Smith in the Quest of Fate (PC, Zeroman95)
+    - 'Alabama Smith in the Quest of Fate: Night in the Opera (PC, Zeroman95)'
+    - 'Alabama Smith in the Quest of Fate: Night in the Opera (PC, Zeroman95)'
+    - Angry Birds Rio (PC, Zeroman95)
+    - Angry Birds Rio (PC, Zeroman95)
+    - Angry Birds Star Wars (PC, Zeroman95)
+    - Angry Birds Star Wars (PC, Zeroman95)
+    - 'Battle Of Britain II: Wings Of Victory (PC, Zeroman95)'
+    - 'Battle Of Britain II: Wings Of Victory (PC, Zeroman95)'
+    - Bears & Bees (PC, Zeroman95)
+    - Bears & Bees (PC, Zeroman95)
+    - Bejeweled 3 (PC, Zeroman95)
+    - Bejeweled 3 (PC, Zeroman95)
+    - Beyond Good & Evil (PC, Zeroman95)
+    - Beyond Good & Evil (PC, Zeroman95)
+    - Circuit Breakers (PC, Zeroman95)
+    - Circuit Breakers (PC, Zeroman95)
+    - Command & Conquer (1995) (PC, Zeroman95)
+    - Command & Conquer (1995) (PC, Zeroman95)
+    - "Command & Conquer 3: Kane's Wrath (PC, Zeroman95)"
+    - "Command & Conquer 3: Kane's Wrath (PC, Zeroman95)"
+    - 'Command & Conquer 3: Tiberium Wars Kane Edition (PC, Zeroman95)'
+    - 'Command & Conquer 3: Tiberium Wars Kane Edition (PC, Zeroman95)'
+    - 'Command & Conquer: Red Alert 3 (PC, Zeroman95)'
+    - 'Command & Conquer: Red Alert 3 (PC, Zeroman95)'
+    - 'The Elder Scrolls V: Skyrim (PC, Zeroman95)'
+    - 'The Elder Scrolls V: Skyrim (PC, Zeroman95)'
+    - Finding Nemo (PC, Zeroman95)
+    - Finding Nemo (PC, Zeroman95)
+    - 'Fishdom: H2O Hidden Odyssey (PC, Zeroman95)'
+    - 'Fishdom: H2O Hidden Odyssey (PC, Zeroman95)'
+    - 'Fishdom: Seasons Under The Sea (PC, Zeroman95)'
+    - 'Fishdom: Seasons Under The Sea (PC, Zeroman95)'
+    - Ford Racing 3 (PC, Zeroman95)
+    - Ford Racing 3 (PC, Zeroman95)
+    - 'Guitar Hero III: Legends of Rock (PC, Zeroman95)'
+    - 'Guitar Hero III: Legends of Rock (PC, Zeroman95)'
+    - 'Hot Wheels: MechaniX (PC, Zeroman95)'
+    - 'Hot Wheels: MechaniX (PC, Zeroman95)'
+    - IL-2 Sturmovik (PC, Zeroman95)
+    - IL-2 Sturmovik (PC, Zeroman95)
+    - Ion Fury (PC, Zeroman95)
+    - Ion Fury (PC, Zeroman95)
+    - 'Jewel Quest 5: The Sleepless Star (PC, Zeroman95)'
+    - 'Jewel Quest 5: The Sleepless Star (PC, Zeroman95)'
+    - Jewel Quest Heritage (PC, Zeroman95)
+    - Jewel Quest Heritage (PC, Zeroman95)
+    - Jewel Quest II (PC, Zeroman95)
+    - Jewel Quest II (PC, Zeroman95)
+    - Lemmings for Windows (PC, Zeroman95)
+    - Lemmings for Windows (PC, Zeroman95)
+    - 'Luxor: Quest for the Afterlife (PC, Zeroman95)'
+    - 'Luxor: Quest for the Afterlife (PC, Zeroman95)'
+    - 'Magrunner: Dark Pulse (PC, Zeroman95)'
+    - 'Magrunner: Dark Pulse (PC, Zeroman95)'
+    - Microsoft Revenge of Arcade (PC, Zeroman95)
+    - Microsoft Revenge of Arcade (PC, Zeroman95)
+    - Minecraft Story Mode The Complete Adventure (PC, Zeroman95)
+    - Minecraft Story Mode The Complete Adventure (PC, Zeroman95)
+    - Need for Speed Most Wanted (2005) (PC, Zeroman95)
+    - Need for Speed Most Wanted (2005) (PC, Zeroman95)
+    - Need for Speed Underground 2 (PC, Zeroman95)
+    - Need for Speed Underground 2 (PC, Zeroman95)
+    - "No One Lives Forever 2: A Spy In H.A.R.M.'s Way (PC, Zeroman95)"
+    - "No One Lives Forever 2: A Spy In H.A.R.M.'s Way (PC, Zeroman95)"
+    - Peggle Nights (PC, Zeroman95)
+    - Peggle Nights (PC, Zeroman95)
+    - Perfect Universe (PC, Zeroman95)
+    - Perfect Universe (PC, Zeroman95)
+    - Pro Pinball Fantastic Journey (PC, Zeroman95)
+    - Pro Pinball Fantastic Journey (PC, Zeroman95)
+    - Rayman 2 The Great Escape (PC, Zeroman95)
+    - Rayman 2 The Great Escape (PC, Zeroman95)
+    - Rollercaster Tycoon 2 (PC, Zeroman95)
+    - Rollercaster Tycoon 2 (PC, Zeroman95)
+    - Sam & Max Season One (PC, Zeroman95)
+    - Sam & Max Season One (PC, Zeroman95)
+    - The Settlers II 10th Anniversary (PC, Zeroman95)
+    - The Settlers II 10th Anniversary (PC, Zeroman95)
+    - The Settlers IV Gold Edition (PC, Zeroman95)
+    - The Settlers IV Gold Edition (PC, Zeroman95)
+    - 'Spongebob Squarepants: Lights, Camera, Pants! (PC, Zeroman95)'
+    - 'Spongebob Squarepants: Lights, Camera, Pants! (PC, Zeroman95)'
+    - Targeting Maths Lab 4 (PC, Zeroman95)
+    - Targeting Maths Lab 4 (PC, Zeroman95)
+    - Targeting Maths Lab 6 (PC, Zeroman95)
+    - Targeting Maths Lab 6 (PC, Zeroman95)
+    - Warlords Battlecry III (PC, Zeroman95)
+    - Warlords Battlecry III (PC, Zeroman95)
+    - Zapper One Wicket Cricket! (PC, Zeroman95)
+    - Zapper One Wicket Cricket! (PC, Zeroman95)
+    - 10 Second Ninja X (Steam, Zeroman95)
+    - 10 Second Ninja X (Steam, Zeroman95)
+    - Aegis Defenders (Steam, Zeroman95)
+    - Aegis Defenders (Steam, Zeroman95)
+    - Ampersat (Steam, Zeroman95)
+    - Ampersat (Steam, Zeroman95)
+    - Arcade Moonlander (Steam, Zeroman95)
+    - Arcade Moonlander (Steam, Zeroman95)
+    - 'ARK: Survival Of The Fittest (Steam, Zeroman95)'
+    - 'ARK: Survival Of The Fittest (Steam, Zeroman95)'
+    - 'Arma: Cold War Assault (Steam, Zeroman95)'
+    - 'Arma: Cold War Assault (Steam, Zeroman95)'
+    - Banana Hell (Steam, Zeroman95)
+    - Banana Hell (Steam, Zeroman95)
+    - Barro GT (Steam, Zeroman95)
+    - Barro GT (Steam, Zeroman95)
+    - Battlestar Galactica Deadlock (Steam, Zeroman95)
+    - Battlestar Galactica Deadlock (Steam, Zeroman95)
+    - Beholder (Steam, Zeroman95)
+    - Beholder (Steam, Zeroman95)
+    - Black Desert (Steam, Zeroman95)
+    - Black Desert (Steam, Zeroman95)
+    - Blade Symphony (Steam, Zeroman95)
+    - Blade Symphony (Steam, Zeroman95)
+    - Borderlands 2 (Steam, Zeroman95)
+    - Borderlands 2 (Steam, Zeroman95)
+    - Cakey's Twisted Bakery (Steam, Zeroman95)
+    - Cakey's Twisted Bakery (Steam, Zeroman95)
+    - 'Call of Duty: Black Ops II (Steam, Zeroman95)'
+    - 'Call of Duty: Black Ops II (Steam, Zeroman95)'
+    - Call of Juarez Gunslinger (Steam, Zeroman95)
+    - Call of Juarez Gunslinger (Steam, Zeroman95)
+    - Caribbean Crashers (Steam, Zeroman95)
+    - Caribbean Crashers (Steam, Zeroman95)
+    - Castle Break (Steam, Zeroman95)
+    - Castle Break (Steam, Zeroman95)
+    - Chuzzle Deluxe (Steam, Zeroman95)
+    - Chuzzle Deluxe (Steam, Zeroman95)
+    - CRYPTARK (Steam, Zeroman95)
+    - CRYPTARK (Steam, Zeroman95)
+    - Dark Sector (Steam, Zeroman95)
+    - Dark Sector (Steam, Zeroman95)
+    - Dead Island Riptide Definitive Edition (Steam, Zeroman95)
+    - Dead Island Riptide Definitive Edition (Steam, Zeroman95)
+    - 'Dear Esther: Landmark Edition (Steam, Zeroman95)'
+    - 'Dear Esther: Landmark Edition (Steam, Zeroman95)'
+    - Desktop Dungeons (Steam, Zeroman95)
+    - Desktop Dungeons (Steam, Zeroman95)
+    - Distant Space 2 (Steam, Zeroman95)
+    - Distant Space 2 (Steam, Zeroman95)
+    - Divide by Sheep (Steam, Zeroman95)
+    - Divide by Sheep (Steam, Zeroman95)
+    - 'DOOM 3: BFG Edition (Steam, Zeroman95)'
+    - 'DOOM 3: BFG Edition (Steam, Zeroman95)'
+    - 'DOOM 3: Resurrection of Evil (Steam, Zeroman95)'
+    - 'DOOM 3: Resurrection of Evil (Steam, Zeroman95)'
+    - DOOM II (Steam, Zeroman95)
+    - DOOM II (Steam, Zeroman95)
+    - DRACOMATON (Steam, Zeroman95)
+    - DRACOMATON (Steam, Zeroman95)
+    - Drones, The Human Condition (Steam, Zeroman95)
+    - Drones, The Human Condition (Steam, Zeroman95)
+    - Drop (Steam, Zeroman95)
+    - Drop (Steam, Zeroman95)
+    - Duck Game (Steam, Zeroman95)
+    - Duck Game (Steam, Zeroman95)
+    - Dungeon of the ENDLESS (Steam, Zeroman95)
+    - Dungeon of the ENDLESS (Steam, Zeroman95)
+    - Dystopia (Steam, Zeroman95)
+    - Dystopia (Steam, Zeroman95)
+    - ENDLESS Legend (Steam, Zeroman95)
+    - ENDLESS Legend (Steam, Zeroman95)
+    - Endustry (Steam, Zeroman95)
+    - Endustry (Steam, Zeroman95)
+    - 'The Escapists: The Walking Dead (Steam, Zeroman95)'
+    - 'The Escapists: The Walking Dead (Steam, Zeroman95)'
+    - Fantasy General II (Steam, Zeroman95)
+    - Fantasy General II (Steam, Zeroman95)
+    - Fearless Fantasy (Steam, Zeroman95)
+    - Fearless Fantasy (Steam, Zeroman95)
+    - 'Field of Glory II: Medieval (Steam, Zeroman95)'
+    - 'Field of Glory II: Medieval (Steam, Zeroman95)'
+    - Field of Glory II (Steam, Zeroman95)
+    - Field of Glory II (Steam, Zeroman95)
+    - Figment (Steam, Zeroman95)
+    - Figment (Steam, Zeroman95)
+    - The Forest (Steam, Zeroman95)
+    - The Forest (Steam, Zeroman95)
+    - Founders' Fortune (Steam, Zeroman95)
+    - Founders' Fortune (Steam, Zeroman95)
+    - Golden Light (Steam, Zeroman95)
+    - Golden Light (Steam, Zeroman95)
+    - 'Ground Control II: Operation Exodus (Steam, Zeroman95)'
+    - 'Ground Control II: Operation Exodus (Steam, Zeroman95)'
+    - Half-Life 2 (Steam, Zeroman95)
+    - Half-Life 2 (Steam, Zeroman95)
+    - 'Half-Life: Blue Shift (Steam, Zeroman95)'
+    - 'Half-Life: Blue Shift (Steam, Zeroman95)'
+    - Hand Simulator (Steam, Zeroman95)
+    - Hand Simulator (Steam, Zeroman95)
+    - Hellslave (Steam, Zeroman95)
+    - Hellslave (Steam, Zeroman95)
+    - Holy Clash Cards (Steam, Zeroman95)
+    - Holy Clash Cards (Steam, Zeroman95)
+    - Hue (Steam, Zeroman95)
+    - Hue (Steam, Zeroman95)
+    - Ion Fury (Steam, Zeroman95)
+    - Ion Fury (Steam, Zeroman95)
+    - Isle of Jura (Steam, Zeroman95)
+    - Isle of Jura (Steam, Zeroman95)
+    - Jagged Alliance Gold (Steam, Zeroman95)
+    - Jagged Alliance Gold (Steam, Zeroman95)
+    - Kitchen Wars (Steam, Zeroman95)
+    - Kitchen Wars (Steam, Zeroman95)
+    - 'Knightfall: A Daring Journey (Steam, Zeroman95)'
+    - 'Knightfall: A Daring Journey (Steam, Zeroman95)'
+    - Lara Croft and The Temple of Osiris (Steam, Zeroman95)
+    - Lara Croft and The Temple of Osiris (Steam, Zeroman95)
+    - Little Big Workshop (Steam, Zeroman95)
+    - Little Big Workshop (Steam, Zeroman95)
+    - Lords of the Fallen (Steam, Zeroman95)
+    - Lords of the Fallen (Steam, Zeroman95)
+    - Machinka Museum (Steam, Zeroman95)
+    - Machinka Museum (Steam, Zeroman95)
+    - Metal Fatigue (Steam, Zeroman95)
+    - Metal Fatigue (Steam, Zeroman95)
+    - Metro 2033 Redux (Steam, Zeroman95)
+    - Metro 2033 Redux (Steam, Zeroman95)
+    - 'Metro: Last Light Complete Edition (Steam, Zeroman95)'
+    - 'Metro: Last Light Complete Edition (Steam, Zeroman95)'
+    - Mini Thief (Steam, Zeroman95)
+    - Mini Thief (Steam, Zeroman95)
+    - 'NEXT JUMP: Shmup Tactics (Steam, Zeroman95)'
+    - 'NEXT JUMP: Shmup Tactics (Steam, Zeroman95)'
+    - Nightmare Kart (Steam, Zeroman95)
+    - Nightmare Kart (Steam, Zeroman95)
+    - Ninja Stealth (Steam, Zeroman95)
+    - Ninja Stealth (Steam, Zeroman95)
+    - Nuclear Dawn (Steam, Zeroman95)
+    - Nuclear Dawn (Steam, Zeroman95)
+    - Out There Somewhere (Steam, Zeroman95)
+    - Out There Somewhere (Steam, Zeroman95)
+    - Oxygen Not Included (Steam, Zeroman95)
+    - Oxygen Not Included (Steam, Zeroman95)
+    - PAC-MAN CHAMPIONSHIP EDITION 2 (Steam, Zeroman95)
+    - PAC-MAN CHAMPIONSHIP EDITION 2 (Steam, Zeroman95)
+    - Pankapu (Steam, Zeroman95)
+    - Pankapu (Steam, Zeroman95)
+    - Papa's Pizzeria Deluxe (Steam, Zeroman95)
+    - Papa's Pizzeria Deluxe (Steam, Zeroman95)
+    - Paradox Soul (Steam, Zeroman95)
+    - Paradox Soul (Steam, Zeroman95)
+    - Pirates Vikings & Knights II (Steam, Zeroman95)
+    - Pirates Vikings & Knights II (Steam, Zeroman95)
+    - Plunder Panic (Steam, Zeroman95)
+    - Plunder Panic (Steam, Zeroman95)
+    - The Powder Toy (Steam, Zeroman95)
+    - The Powder Toy (Steam, Zeroman95)
+    - Press Any Button (Steam, Zeroman95)
+    - Press Any Button (Steam, Zeroman95)
+    - Rayman Origins (Steam, Zeroman95)
+    - Rayman Origins (Steam, Zeroman95)
+    - Red Gate (Steam, Zeroman95)
+    - Red Gate (Steam, Zeroman95)
+    - Reignfall (Steam, Zeroman95)
+    - Reignfall (Steam, Zeroman95)
+    - Run Prop, Run! - Puropu Pursuit (Steam, Zeroman95)
+    - Run Prop, Run! - Puropu Pursuit (Steam, Zeroman95)
+    - RunnerDot (Steam, Zeroman95)
+    - RunnerDot (Steam, Zeroman95)
+    - The Search (Steam, Zeroman95)
+    - The Search (Steam, Zeroman95)
+    - Sonic The Hedghog 2 (Steam, Zeroman95)
+    - Sonic The Hedghog 2 (Steam, Zeroman95)
+    - Serious Sam 2 (Steam, Zeroman95)
+    - Serious Sam 2 (Steam, Zeroman95)
+    - Shade Silver (Steam, Zeroman95)
+    - Shade Silver (Steam, Zeroman95)
+    - Showdown Bandit (Steam, Zeroman95)
+    - Showdown Bandit (Steam, Zeroman95)
+    - 'Space Crew: Legendary Edition (Steam, Zeroman95)'
+    - 'Space Crew: Legendary Edition (Steam, Zeroman95)'
+    - 'Space Pilgrim Episode II: Epsilon Indi (Steam, Zeroman95)'
+    - 'Space Pilgrim Episode II: Epsilon Indi (Steam, Zeroman95)'
+    - Steamworld Dig (Steam, Zeroman95)
+    - Steamworld Dig (Steam, Zeroman95)
+    - 'Stellar Mess: The Princess Conundrum (Steam, Zeroman95)'
+    - 'Stellar Mess: The Princess Conundrum (Steam, Zeroman95)'
+    - Supreme Commander (Steam, Zeroman95)
+    - Supreme Commander (Steam, Zeroman95)
+    - Surviving Mars (Steam, Zeroman95)
+    - Surviving Mars (Steam, Zeroman95)
+    - Tell Me Why (Steam, Zeroman95)
+    - Tell Me Why (Steam, Zeroman95)
+    - TGV Voyages Train Simulator (Steam, Zeroman95)
+    - TGV Voyages Train Simulator (Steam, Zeroman95)
+    - 'Ticket to Ride: First Journey (Steam, Zeroman95)'
+    - 'Ticket to Ride: First Journey (Steam, Zeroman95)'
+    - "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure (Steam, Zeroman95)"
+    - "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure (Steam, Zeroman95)"
+    - Titan Quest Anniversary Edition (Steam, Zeroman95)
+    - Titan Quest Anniversary Edition (Steam, Zeroman95)
+    - Titan Souls (Steam, Zeroman95)
+    - Titan Souls (Steam, Zeroman95)
+    - Tomb Raider (Steam, Zeroman95)
+    - Tomb Raider (Steam, Zeroman95)
+    - 'Total War: SHOGUN 2 (Steam, Zeroman95)'
+    - 'Total War: SHOGUN 2 (Steam, Zeroman95)'
+    - Ultimate Zombie Defense (Steam, Zeroman95)
+    - Ultimate Zombie Defense (Steam, Zeroman95)
+    - 'The Uncertain: Last Quiet Day (Steam, Zeroman95)'
+    - 'The Uncertain: Last Quiet Day (Steam, Zeroman95)'
+    - 'The Walking Dead: Season 2 (Steam, Zeroman95)'
+    - 'The Walking Dead: Season 2 (Steam, Zeroman95)'
+    - 'Warhammer 40,000: Dawn of War - Anniversary Edition (Steam, Zeroman95)'
+    - 'Warhammer 40,000: Dawn of War - Anniversary Edition (Steam, Zeroman95)'
+    - 'Warhammer 40,000: Dawn of War - Dark Crusade (Steam, Zeroman95)'
+    - 'Warhammer 40,000: Dawn of War - Dark Crusade (Steam, Zeroman95)'
+    - 'Warhammer 40,000: Dawn of War - Winter Assault (Steam, Zeroman95)'
+    - 'Warhammer 40,000: Dawn of War - Winter Assault (Steam, Zeroman95)'
+    - Warhammer Underworlds - Shadespire Edition (Steam, Zeroman95)
+    - Warhammer Underworlds - Shadespire Edition (Steam, Zeroman95)
+    - Weapon of Choice (Steam, Zeroman95)
+    - Weapon of Choice (Steam, Zeroman95)
+    - WHAT THE PAK?! (Steam, Zeroman95)
+    - WHAT THE PAK?! (Steam, Zeroman95)
+    - Will Glow the Wisp (Steam, Zeroman95)
+    - Will Glow the Wisp (Steam, Zeroman95)
+    - Zero-K (Steam, Zeroman95)
+    - Zero-K (Steam, Zeroman95)
+    - Zombie Panic! Source (Steam, Zeroman95)
+    - Zombie Panic! Source (Steam, Zeroman95)
+    - Sonic The Hedgehog 2 (Mega Drive, Zeroman95)
+    - Sonic The Hedgehog 2 (Mega Drive, Zeroman95)
+    - 'T2: The Arcade Game (Mega Drive, Zeroman95)'
+    - 'T2: The Arcade Game (Mega Drive, Zeroman95)'
+    - Colin McRae Rally (PS1, Zeroman95)
+    - Colin McRae Rally (PS1, Zeroman95)
+    - 'Star Wars: Demolition (PS1, Zeroman95)'
+    - 'Star Wars: Demolition (PS1, Zeroman95)'
+    - Stuart Little 2 (PS1, Zeroman95)
+    - Stuart Little 2 (PS1, Zeroman95)
+    - Hard Rock Casino (PS2, Zeroman95)
+    - Hard Rock Casino (PS2, Zeroman95)
+    - Harry Potter and the Goblet of Fire (PS2, Zeroman95)
+    - Harry Potter and the Goblet of Fire (PS2, Zeroman95)
+    - Harry Potter and the Order of the Phoenix (PS2, Zeroman95)
+    - Harry Potter and the Order of the Phoenix (PS2, Zeroman95)
+    - Harry Potter and the Prisoner of Azkaban (PS2, Zeroman95)
+    - Harry Potter and the Prisoner of Azkaban (PS2, Zeroman95)
+    - SOCOM II U.S. Navy SEALS (PS2, Zeroman95)
+    - SOCOM II U.S. Navy SEALS (PS2, Zeroman95)
+    - MechAssault 2 (Xbox, Zeroman95)
+    - MechAssault 2 (Xbox, Zeroman95)
+    - Shrek the Third (DS, Zeroman95)
+    - Shrek the Third (DS, Zeroman95)
+    - Wall-E (DS, Zeroman95)
+    - Wall-E (DS, Zeroman95)
+    - 'Kingdom Hearts: Birth by Sleep (PSP, Zeroman95)'
+    - 'Kingdom Hearts: Birth by Sleep (PSP, Zeroman95)'
+    - "Mega Minis Volume 3: Archibald's Adventures (PSP, Zeroman95)"
+    - "Mega Minis Volume 3: Archibald's Adventures (PSP, Zeroman95)"
+    - 'Mega Minis Volume 3: BreakQuest (PSP, Zeroman95)'
+    - 'Mega Minis Volume 3: BreakQuest (PSP, Zeroman95)'
+    - "Mega Minis Volume 3: Who's That Flying?! (PSP, Zeroman95)"
+    - "Mega Minis Volume 3: Who's That Flying?! (PSP, Zeroman95)"
+    - '1942: Joint Strike (Xbox 360, Zeroman95)'
+    - '1942: Joint Strike (Xbox 360, Zeroman95)'
+    - Gears of War Judgement (Xbox 360, Zeroman95)
+    - Gears of War Judgement (Xbox 360, Zeroman95)
+    - Facebreaker K.O. Party (Wii, Zeroman95)
+    - Facebreaker K.O. Party (Wii, Zeroman95)
+    - Sambe De Amigo (Wii, Zeroman95)
+    - Sambe De Amigo (Wii, Zeroman95)
+    - 'Call of Duty: Black Ops (PS3, Zeroman95)'
+    - 'Call of Duty: Black Ops (PS3, Zeroman95)'
+    - 'Call of Duty: Black Ops II (PS3, Zeroman95)'
+    - 'Call of Duty: Black Ops II (PS3, Zeroman95)'
+    - Crysis 2 (PS3, Zeroman95)
+    - Crysis 2 (PS3, Zeroman95)
+    - Dungeon Siege III (PS3, Zeroman95)
+    - Dungeon Siege III (PS3, Zeroman95)
+    - Gran Turismo 5 (PS3, Zeroman95)
+    - Gran Turismo 5 (PS3, Zeroman95)
+    - Gran Turismo 6 (PS3, Zeroman95)
+    - Gran Turismo 6 (PS3, Zeroman95)
+    - Need for Speed Undercover (PS3, Zeroman95)
+    - Need for Speed Undercover (PS3, Zeroman95)
+    - 'Need For Speed: Hot Pursuit (PS3, Zeroman95)'
+    - 'Need For Speed: Hot Pursuit (PS3, Zeroman95)'
+    - 'Need For Speed: The Run (PS3, Zeroman95)'
+    - 'Need For Speed: The Run (PS3, Zeroman95)'
+    - Smackdown VS Raw 2011 (PS3, Zeroman95)
+    - Smackdown VS Raw 2011 (PS3, Zeroman95)
+    - Disney Infinity 2.0 (PS4, Zeroman95)
+    - Disney Infinity 2.0 (PS4, Zeroman95)
+    - Disney Infinity 3.0 (PS4, Zeroman95)
+    - Disney Infinity 3.0 (PS4, Zeroman95)
+    - Dragon Quest Builders 2 (PS4, Zeroman95)
+    - Dragon Quest Builders 2 (PS4, Zeroman95)
+    - Kingdom Hearts HD 2.8 - Final Chapter Prologue (PS4, Zeroman95)
+    - Kingdom Hearts HD 2.8 - Final Chapter Prologue (PS4, Zeroman95)
+    - Kingdom Hearts III (PS4, Zeroman95)
+    - Kingdom Hearts III (PS4, Zeroman95)
+    - Cooking Simulator (Switch, Zeroman95)
+    - Cooking Simulator (Switch, Zeroman95)
+    - 'Hasbro Game Night: Monopoly for Nintendo Switch (Switch, Zeroman95)'
+    - 'Hasbro Game Night: Monopoly for Nintendo Switch (Switch, Zeroman95)'
+    - 'Hasbro Game Night: Trivial Pursuit Live! (Switch, Zeroman95)'
+    - 'Hasbro Game Night: Trivial Pursuit Live! (Switch, Zeroman95)'
+    - Ice Station Z (Switch, Zeroman95)
+    - Ice Station Z (Switch, Zeroman95)
+    - 'Call of Duty: Black Ops II (Wii U, Zeroman95)'
+    - 'Call of Duty: Black Ops II (Wii U, Zeroman95)'
+    - Nintendo Land (Wii U, Zeroman95)
+    - Nintendo Land (Wii U, Zeroman95)
+    - Rayman Legends (Wii U, Zeroman95)
+    - Rayman Legends (Wii U, Zeroman95)
+  game_backlog_actions:
+    # Defines the possible actions that could be required on a game in the backlog.
+    # You can customize this list to your liking.
+    # We changed the default game backlog actions to focus exclusively on trying games as opposed to beating them.
+    ['Try', 'Play 5 minutes of', 'Play 10 minutes of']
+  # garrys_mod_weights:
+  # The weights to use for Garry's Mod objective types. Defaults to objective type weights that work best with multiple gamemodes.
+  # If only playing Sandbox, it is recommended to start with the following weights:
+  # ```yaml
+  # gamemodes: 0
+  # maps: 4
+  # gamemode_in_map: 0
+  # weapons: 4
+  # player_models: 1
+  # props: 4
+  # tools: 4
+  # npcs: 1
+  # pose_npcs_in_map: 1
+  # pose_npc_with_props: 1
+  # kill_npc_with_weapon: 1
+  # bonus: 4
+  # ```
+  # If not playing Sandbox, start with the following instead:
+  # ```yaml
+  # gamemodes: 7
+  # maps: 7
+  # gamemode_in_map: 2
+  # weapons: 4
+  # player_models: 1
+  # props: 0
+  # tools: 0
+  # npcs: 0
+  # pose_npcs_in_map: 0
+  # pose_npc_with_props: 0
+  # kill_npc_with_weapon: 0
+  # bonus: 0
+  # ```
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  garrys_mod_gamemodes:
+    # The list of gamemodes to use for Garry's Mod objectives that use them. Defaults to the two pre-installed gamemodes plus a few most-subscribed ones that can be played on any map, add and remove as needed.
+    # We are using all of Jack5's favourite gamemodes for the possible objectives.
+    [
+      'Sandbox',
+      'Prop Hunt',
+      'Murder',
+      'Guess Who',
+      'Hide and Seek',
+      'Cops and Runners',
+      'You Touched it Last',
+      'Neo-Smash',
+      'Horde',
+      'Nav Hunt',
+      'Vampire Hunters',
+      'DR5VE & SEEK',
+      'Freeze Tag',
+      '2014 Zombie Survival',
+      'Screenhack',
+      'G-Arena',
+      'Randomizer!',
+      'The Hidden',
+      "Stik's Deathmatch",
+      'Jazztronauts',
+    ]
+  garrys_mod_maps:
+    # The list of maps to use for the Garry's Mod objectives that use them. Defaults to the two pre-installed maps plus a few most-subscribed "gm_" maps that offer various scenery, add and remove as needed.
+    # We are using all of Jack5's favourite maps for the possible objectives.
+    [
+      'gm_construct but it is Hammer Editor',
+      'gm_launchsite',
+      "ttt_Al'sToyBarn",
+      'Waluigi Pinball',
+      'The Prop Arena',
+      'The Kleiner Community Center',
+      'ph_restaurant',
+      'gm_excess island two in one',
+      'gm_GirthConstructV2',
+      'gm_devbattle',
+      'Trackmania Map',
+      'Backwood Stadium Speedway',
+      'FlatOut 2: Parking Lot Derby',
+      'Defocus',
+      'Dissonance',
+      'Conglomerate',
+      'gm_ohioburgerking',
+      'ttt_oxxo_redux',
+      'gm_descent',
+      'gm_HL1_Lily_HECU_Base',
+      'gm_necrotics',
+      'gm_VoidIsland',
+      'Panopticon Parking',
+      'ph_zombie_bunker_remake',
+      '1950s Neighborhood',
+      'gm_Lifecenter',
+      'ph_westerncity',
+      'The Hidden - Discovery',
+      'The Hidden - Docks',
+      'The Hidden - Dam',
+    ]
+  garrys_mod_player_models:
+    # The list of player models to use for the Garry's Mod objectives that use them. Defaults to the pre-installed player models, add and remove as needed.
+    # We are using a combination of the default player models and all of Jack5's favourite player models for the possible objectives.
+    [
+      'Alyx Vance',
+      'Dr. Arne Magnusson',
+      'Barney Calhoun',
+      'Burnt Corpse',
+      'Chell',
+      'Citizen (Female)',
+      'Citizen (Male)',
+      'Combine Elite Soldier',
+      'Combine Soldier',
+      'Combine Soldier (Topless)',
+      'Corpse',
+      'Counter-Strike: Source Hostage',
+      'Counter-Strike: Source Counter-Terrorist (Gas Mask)',
+      'Counter-Strike: Source Counter-Terrorist (Riot)',
+      'Counter-Strike: Source Counter-Terrorist (SWAT)',
+      'Counter-Strike: Source Counter-Terrorist (Urban)',
+      'Counter-Strike: Source Terrorist (Arctic)',
+      'Counter-Strike: Source Terrorist (Guerilla)',
+      'Counter-Strike: Source Terrorist (Phoenix)',
+      'Counter-Strike: Source Terrorist (Sunglasses)',
+      'Day of Defeat: Source Soldier (American)',
+      'Day of Defeat: Source Soldier (German)',
+      'Eli Vance',
+      'Father Grigori',
+      'G-Man',
+      'Dr. Isaac Kleiner',
+      'Dr. Judith Mossman',
+      'Metro-Police',
+      'Nova Prospekt Guard',
+      'Odessa Cubbage',
+      'Rebel (Female)',
+      'Rebel (Male)',
+      'Rebel Medic (Female)',
+      'Rebel Medic (Male)',
+      'Skeleton',
+      'Wallace Breen',
+      'Zombie (Classic)',
+      'Zombie (Fast)',
+      'Zombine',
+      'Spanish Civil War 1936 - 1939',
+      'Darkwing Duck',
+      'Master Chief',
+      'Klonoa',
+      'Scrooge McDuck',
+      'Movie Sonic',
+      'Movie Tails',
+      'Movie Knuckles',
+      'Sniper Monkey',
+      'The Penguins of Madagascar',
+      'Azumanga Daioh character',
+      "Tyson Hesse's Tails",
+      'HWM Chell',
+      'Left 4 Dead Francis',
+      'Left 4 Dead Bill',
+      'Left 4 Dead Zoey',
+      'Left 4 Dead Louis',
+      'Left 4 Dead 2 Coach',
+      'Left 4 Dead 2 Nick',
+      'Left 4 Dead 2 Ellis',
+      'Left 4 Dead 2 Rochelle',
+      'Jax',
+      'Spiral Knights character',
+      'Tails Doll',
+      'Animal Crossing Villager',
+      'Among Us character',
+      'FNAF Security Breach character',
+      'Toad',
+      'Tails (solo)',
+    ]
+  garrys_mod_props:
+    # The list of prop types to use for the Garry's Mod objectives that use them. Defaults to some of the most recogniseable pre-installed prop types, add and remove as needed.
+    # Unchanged from the standard configuration.
+    [
+      'water barrel',
+      'tall gas canister',
+      'explosive barrel',
+      'brown barrel',
+      'propane canister',
+      'bench',
+      'concrete barrier',
+      'metal fence',
+      'prison cell door',
+      'fountain',
+      'bathtub',
+      'bedframe',
+      'mattress',
+      'couch',
+      'wooden cupboard',
+      'wooden table',
+      'wooden dresser',
+      'toilet',
+      'sink',
+      'washing machine',
+      'fridge',
+      'stove',
+      'teapot',
+      'cooking pot',
+      'radiator',
+      'gravestone',
+      'plastic crate',
+      'metal ladder',
+      'bridge',
+      'globe',
+      'corrugated metal sheet',
+      'helicopter bomb',
+      'pole',
+      'leather chair',
+      'wooden chair',
+      'metal chair',
+      'standing lamp',
+      'lockers',
+      'vending machine',
+      'wooden crate',
+      'cardboard box',
+      'cinder block',
+      'sawblade',
+      'metal bucket',
+      'fuel canister',
+      'plastic bucket',
+      'soda can',
+      'push cart',
+      'Ravenholm sign',
+      'plastic trash bin',
+      'traffic cone',
+      'dumpster',
+      'wooden pallet',
+      'animal carrier',
+      'sign',
+      'clock',
+      'metal trash bin',
+      'tyre',
+      'barricade',
+      'buoy',
+      'shipping container',
+      'gas pump',
+      'horizontal cooling tank',
+      'shelves',
+      'countertop',
+      'wheel',
+      'wooden fence',
+      'skull',
+      'Fast Zombie legs',
+      'Fast Zombie torso',
+      'cash register',
+      'dentist chair',
+      'stool',
+      'baby doll',
+      'cleaver',
+      'playground carousel',
+      'playground slide',
+      'playground tic-tac-toe block',
+      'horse statue',
+      'numbered road sign',
+      'picture road sign',
+      'briefcase',
+      'television',
+      'Wallace Breen bust',
+      'Combine interface',
+      'bicycle',
+      'garbage bag',
+      'coffee mug',
+      'glass bottle',
+      'metal can',
+      'milk bottle',
+      'milk carton',
+      'detergent bottle',
+      'boot',
+      'terracotta',
+      'watermelon',
+      'wheelbarrow',
+      'binder',
+      'chessboard',
+      'radio',
+      'clipboard',
+      'desk lamp',
+      'framed photo',
+      'hula doll',
+      'computer monitor',
+      'keyboard',
+      'payphone box',
+      'car door',
+      'balloon',
+      'camera',
+      'dynamite',
+      'bomb',
+      'portable lamp',
+      'burger',
+      'hot dog',
+      "Garry's Mod logo",
+      'headcrab',
+      'road ramp',
+      'traffic light',
+      'torpedo',
+      'Facepunch logo',
+      'recursive monitor',
+      'electric guitar',
+      'soccer ball',
+      'concrete pipe',
+      'donut',
+      'egg',
+      'triangular metal sheet',
+      'metal cylinder',
+      'metal dome',
+      'metal frame',
+      'glass sheet',
+      'glass cylinder',
+      'glass dome',
+      'wooden cylinder',
+      'wooden dome',
+      'wooden frame',
+      'plastic sheet',
+      'plastic blocks',
+      'plastic ramp',
+      'plastic cylinder',
+      'plastic dome',
+      'steel square beam',
+      'steel I-beam',
+      'gear',
+      'gear teeth',
+      'coaster train',
+      'roller coaster part',
+      'metal ball',
+      'ball track part',
+      'train tracks',
+      'airplane',
+      'commentary node',
+      'giant letter',
+      'ammo crate',
+      'wooden boat',
+      'train',
+      'destroyed car',
+      'generator',
+      'rock',
+    ]
+  garrys_mod_weapons:
+    # The list of weapons, specifically those that can harm players, NPCs and props, to use for the Garry's Mod objectives that use them. This list also includes entities that are functionally weapons when paired with the Gravity Gun. Defaults to the pre-installed weapons, add and remove as needed.
+    # We are using all of the default weapons and all of Jack5's favourite weapons for the possible objectives.
+    [
+      '.357 Magnum',
+      'Pulse-Rifle',
+      'Bugbait',
+      'Crossbow',
+      'Crowbar',
+      'Frag Grenade',
+      'Gravity Gun',
+      '9mm Pistol',
+      'RPG Launcher',
+      'Shotgun',
+      'S.L.A.M.',
+      'SMG',
+      'Stunstick',
+      'Manhack Gun',
+      'Fists',
+      'Flechette Gun',
+      'Medkit',
+      'Combine Mine',
+      'Resistance Mine',
+      'Helicopter Bomb',
+      'CanGun',
+      'Plank',
+      'Serious Sam 2 weapon',
+      'Raising the Bar: Redux weapon',
+      'Haax Gun 2.0',
+      'Half-Life weapon',
+    ]
+  garrys_mod_tools:
+    # The list of tools, which include weapons, vehicles, entities and anything else interesting, to use for the Garry's Mod objectives that use them. Defaults to the pre-installed tools, add and remove as needed.
+    # We are using all of the default tools and all of Jack5's favourite tools for the possible objectives.
+    [
+      'Camera',
+      'Tool Gun',
+      'Physics Gun',
+      'Fog Editor',
+      'Sky Editor',
+      'Sun Editor',
+      'Bouncy Ball',
+      'Chair',
+      'Airboat',
+      'Jalopy',
+      'Jeep',
+      'Prisoner Pod',
+      'Cloudbox tool',
+      'Collision Resizer',
+      'Ragdoll colorizer',
+      'Easy Bonemerge Tool',
+      'Easy Animation Tool',
+      'Ragdoll Mover',
+      'Improved Weight',
+      'Skybox Editor Tool',
+      'Particle Attacher',
+      'Ragdoll Resizer',
+      'Resizer',
+      'Weight STool',
+    ]
+  garrys_mod_npcs:
+    # The list of NPCs, only including those that can be killed, to use for the Garry's Mod objectives that use them. Defaults to the pre-installed NPCs, add and remove as needed.
+    # Unchanged from the standard configuration.
+    [
+      'Crow',
+      'Father Grigori',
+      'Pigeon',
+      'Seagull',
+      'Enemy Rebel',
+      'Shield Scanner',
+      'Combine Soldier',
+      'Combine Elite Soldier',
+      'Nova Prospekt Guard',
+      'Prison Shotgun Guard',
+      'Shotgun Soldier',
+      'Combine Gunship',
+      'City Scanner',
+      'Hunter-Chopper',
+      'Hunter',
+      'Manhack',
+      'Metro-Police',
+      'Stalker',
+      'Strider',
+      'Combine Turret',
+      'Alyx Vance',
+      'Barney Calhoun',
+      'Wallace Breen',
+      'Citizen',
+      'Rebel Medic',
+      'Rebel',
+      'Refugee',
+      'Dog',
+      'Eli Vance',
+      'G-Man',
+      'Dr. Isaac Kleiner',
+      'Dr. Arne Magnusson',
+      'Dr. Judith Mossman',
+      'Odessa Cubbage',
+      'Vortigaunt',
+      'Vortigaunt Slave',
+      'Uriah',
+      'Antlion',
+      'Antlion Grub',
+      'Antlion Worker',
+      'Antlion Guard',
+      'Antlion Guardian',
+      'Barnacle',
+      'Fast Zombie',
+      'Fast Zombie Torso',
+      'Headcrab',
+      'Poison Headcrab',
+      'Fast Headcrab',
+      'Poison Zombie',
+      'Zombie',
+      'Zombie Torso',
+      'Zombine',
+    ]
+  # goofy_gorillas_weights:
+  # The weights to use for Goofy Gorillas objective types.
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  gran_turismo_3_include_arcade_mode:
+    # Allow Arcade Mode races as objectives
+    # Unchanged from the standard configuration.
+    'false': 0
+    'true': 50
+  gran_turismo_3_include_career_mode:
+    # Allow Gran Turismo Mode races as objectives
+    # Unchanged from the standard configuration.
+    'false': 0
+    'true': 50
+  gran_turismo_3_career_sections:
+    # Which parts of Gran Turismo Mode are allowed for objectives:
+    # - Licenses
+    # - Beginner League
+    # - Amateur League
+    # - Professional League
+    # - Endurance League
+    # - Rally Events
+    # Unchanged from the standard configuration.
+    [
+      'Licenses',
+      'Beginner League',
+      'Amateur League',
+      'Professional League',
+      'Endurance League',
+      'Rally Events',
+    ]
+  mario_kart_8_is_deluxe:
+    # If true, use Mario Kart 8 Deluxe content. If false, only use Mario Kart 8 (Wii U) content.
+    # Unchanged from the standard configuration.
+    'false': 0
+    'true': 50
+  mario_kart_8_wii_u_dlc_owned:
+    # Indicates which Mario Kart 8 (Wii U) DLC the player owns, if any. Has no effect if Deluxe is enabled.
+    # Unchanged from the standard configuration.
+    [
+      'Animal Crossing x Mario Kart 8',
+      'Mercedes-Benz x Mario Kart 8',
+      'The Legend of Zelda x Mario Kart 8',
+    ]
+  mario_kart_8_deluxe_dlc_owned:
+    # Indicates which Mario Kart 8 Deluxe DLC the player owns, if any. Has no effect if Deluxe is disabled.
+    # This used to include 'Booster Course Pass', but it has been removed to maximise the ability for Zeroman95 to be able to complete objectives.
+    []
+  mario_kart_8_include_battle_mode:
+    # Indicates whether the player wants to include Mario Kart 8 Battle Mode objectives.
+    # This is now true in order to increase the variety of objectives.
+    'false': 0
+    'true': 50
+  peak_include_side_quests:
+    # Indicates whether to include random side quests when generating PEAK objectives.
+    # This includes anything ranging from collecting a specific badge to reaching the Peak with an added challenge.
+    # Adds some easy-to-obtain objectives to the objective pool.
+    'false': 0
+    'true': 50
+  paperball_dlc_owned:
+    # Indicates which Paperball DLC the player owns, if any.
+    # Jack5 does not own any of the DLCs.
+    []
+  paperball_included_modes:
+    # Indicates which modes the player wants to include in their Paperball runs.
+    # Removed 'Arcade', 'Blitz', 'Mad Shuffle' and 'Rush' from the list, as it is possible to get marathon challenges from them. The only mode left is 'Medal', which could potentially get boring over time.
+    ['Medal']
+  paperball_included_medal_mode_worlds:
+    # Indicates which worlds the player wants to include in their Paperball Medal Mode runs.
+    # Unchanged from the standard configuration.
+    [
+      'Alpine',
+      'Canyon',
+      'Swamp',
+      'Volcano',
+      'Savanna',
+      'City',
+      'Stratosphere',
+      'Antarctic',
+      'Coast',
+      'Moon',
+      'Void',
+      'Facility',
+      'Underwater',
+      'Orient',
+      'Sunflowers Day',
+      'Sunflowers Sunset',
+      'Sunflowers Night',
+      'Psychedelic',
+    ]
+  paperball_included_courses:
+    # Indicates which courses the player wants to include in their Paperball runs.
+    # Unchanged from the standard configuration.
+    [
+      'Novice',
+      'Intermediate',
+      'Expert',
+      'Champion',
+      'Secret Spy',
+      'Deep Sea',
+      'Cherry Sky',
+      'Sunflower Fields',
+    ]
+  plants_vs_zombies_include_adventure_mode:
+    # Indicates whether to include Plants vs. Zombies's Adventure Mode when generating objectives.
+    # While this adds more objectives to the objective pool, Zeroman95's version of the game is one where he is unable to play levels he has already completed, making Adventure Mode more of a chore than a fun thing to do.
+    'false': 50
+    'true': 0
+  peggle_deluxe_include_challenges:
+    # Indicates whether to include Peggle Deluxe challenges when generating objectives.
+    # Adds some more objectives to the objective pool, provided that the player is using a 100% save file.
+    'false': 0
+    'true': 60
+  peggle_deluxe_include_insane_challenges:
+    # Indicates whether to include Peggle Deluxe insane challenges when generating objectives.
+    # Unchanged from the standard configuration.
+    'false': 50
+    'true': 0
+  platinumquest_level_packs:
+    # Indicates which PlatinumQuest level packs the player wants to include when generating objectives.
+    # Unchanged from the standard configuration.
+    [
+      'Gold',
+      'Ultra',
+      'Platinum',
+      'PlatinumQuest',
+      'PlatinumQuest Locked',
+      'Hunt',
+      'Hunt Snow',
+      'Hunt Fright',
+    ]
+  platinumquest_difficulties:
+    # Indicates which PlatinumQuest difficulties the player wants to include when generating objectives.
+    # Unchanged from the standard configuration.
+    ['Tutorial', 'Beginner', 'Intermediate', 'Advanced', 'Expert', 'Bonus']
+  # portal_weights:
+  # The weights to use for Portal objective types. Note that "dinosaur_in_chamber", "complete_advanced_chamber", two-thirds of "challenges" and half of "bonus" are classified as difficult, and will not appear if difficult objectives are disabled.
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # portal_challenge_weights:
+  # The weights to use for challenge types in Portal objectives.
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # sanctum_weights:
+  # The weights to use for Sanctum objective types.
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # sanctum_gamemode_weights:
+  # The weights to use for gamemodes in Sanctum objectives that use them.
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  sanctum_owned_dlcs:
+    # The list of DLCs that are owned by the player, which controls which levels are available in Sanctum objectives in addition to `sanctum_level_weights`. Defaults to no DLC. Supported DLCs are "Map Pack 1", "Map Pack 2", "X-Mas Carnage" and "Yogscave".
+    # Zeroman95 owns all DLCs.
+    ['Map Pack 1', 'Map Pack 2', 'X-Mas Carnage', 'Yogscave']
+  # sanctum_level_weights:
+  # The weights to use for levels in Sanctum objectives that use them. Levels that belong to DLCs that are not included in `sanctum_owned_dlcs` will not appear.
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  super_smash_bros_3ds_wiiu_dlc_characters:
+    # Indicates which Super Smash Bros. DLC characters the player owns, if any.
+    # Zeroman95 does not own any DLCs.
+    []
+  super_smash_bros_3ds_wiiu_dlc_stages:
+    # Indicates which Super Smash Bros. DLC stages the player owns, if any.
+    # Pirate Ship is Wii U exclusive and will be ignored if the chosen platform is 3DS.
+    # Zeroman95 does not own any DLCs.
+    []
+  super_smash_bros_3ds_wiiu_hard_mode:
+    # Indicates whether to include harder CPU levels. Normal mode CPU level range is 1-6, while hard mode is 4-9
+    # Unchanged from the standard configuration.
+    'false': 50
+    'true': 0
+  super_smash_bros_3ds_wiiu_console:
+    # Indicates whether you are playing with a 3DS or a Wii U.
+    # Zeroman95 is a 3DS player.
+    3ds: 50
+    wiiu: 0
+  tower_unite_multiplayer_content:
+    # Indicates what type of Multiplayer Content the player wants to include when generating objectives.
+    # Unchanged from the standard configuration.
+    ['PAEnabled', 'GWEnabled']
+  tower_unite_plaza_activities:
+    # Indicates which Plaza Activities the player wants to include when generating objectives.
+    # Unchanged from the standard configuration.
+    [
+      'Casino',
+      'Arcade',
+      'Trivia',
+      'Bowling',
+      'Laser Tag',
+      'Dark Voyage',
+      'Minigames Arena',
+      'Billiards',
+      'Boardwalk',
+      'Fishing',
+    ]
+  tower_unite_game_worlds:
+    # Indicates which Game Worlds the player wants to include when generating objectives.
+    # Unchanged from the standard configuration.
+    [
+      'Minigolf',
+      'Ball Race',
+      'SDNL',
+      'Virus',
+      'Little Crusaders',
+      'Zombie Massacre',
+      'Accelerate',
+    ]
+  # trivia_tricks_weights:
+  # The weights to use for Trivia Tricks objective types. "twitch" is disabled by default. Note that "players_on_gamemode_win" and "coop_bosses_win" are classified as difficult, and will not appear if difficult objectives are disabled.
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # trivia_tricks_gamemode_weights:
+  # The weights to use for gamemodes in Trivia Tricks objectives that use them.
+  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  trivia_tricks_categories:
+    # The categories to use in Trivia Tricks objectives that use them. "Steam Workshop" is included by default, but can be replaced with the names of the Steam Workshop categories one is subscribed to, or removed entirely.
+    # Explicitly include Jack5's favourite categories as part of the objectives.
+    [
+      'Animals',
+      'Anime',
+      'Art & Literature',
+      'Film & TV',
+      'Food & Drink',
+      'Geography',
+      'History',
+      'Language',
+      'Math',
+      'Music',
+      'Science & Technology',
+      'Sports',
+      'Video Games',
+      'Mii Games & Mii Trivia',
+      'Video Game Doodles',
+      'Random trivia',
+      'One Piece',
+      'Film & TV Haikus',
+      'Which is higher',
+      'Video Game Haikus',
+      'Xbox Trivia',
+      'Legend of Zelda: Ocarina of Time Trivia',
+      'Kingdom Hearts',
+      'Voice Actor',
+      'Pokémon Generation 1 - Kanto',
+      'Dragonball',
+      'AFL Trivia',
+      'Major US Sports',
+      'F1 Trivia',
+      'Football / Soccer',
+      'Rick and Morty Quiz pack',
+      "Who's That Pokemon",
+      'Harry Potter',
+      'MCU Movies',
+      'Metal Gear Series',
+      'Star Wars',
+      'The Impossible Trivia',
+      'Pokemon',
+      'Toys',
+      'Super Smash Bros & related universes',
+      'Super Mario Trivia',
+      'Sonic the Quiz Pack',
+      'Horrible Histories',
+      'Horrible Science',
+      'Australia Trivia',
+      'PlayStation Trivia',
+      'Horrible Geography',
+      'Jack5 Trivia Extravaganza',
+    ]
+  vampire_survivors_dlc_owned:
+    # Indicates which Vampire Survivors DLC the player owns, if any.
+    # Jack5 owns all of the DLCs.
+    [
+      'Legacy of Moonspell',
+      'Tides of Foscari',
+      'Emergency Meeting',
+      'Operation Guns',
+      'Ode to Castlevania',
+    ]
+  vampire_survivors_allow_secret_characters:
+    # If true, secret characters will be part of the characters that can be selected.
+    # Do not include secret characters as they would make objectives too easy.
+    'false': 50
+    'true': 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # So far, all of these are unchanged from the standard configuration.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
