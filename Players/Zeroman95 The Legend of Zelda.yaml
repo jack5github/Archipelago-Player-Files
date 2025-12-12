@@ -1,0 +1,86 @@
+name: ZeromanTLOZ
+
+description: |-
+  Zeroman95's YAML for The Legend of Zelda.
+
+  Not a fan of many NES games, but this game I really enjoy running through. I had to decrease my Progression Balancing due to getting my best Sword the Magical Sword too early, allowing me to run through a good chunk of the game really quickly.
+
+game: The Legend of Zelda
+requires:
+  version: 0.6.4
+
+The Legend of Zelda:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Progression balancing is lowered, 50 seems to be too high for the Magical Sword Item and by the time I finish Dungeon 3 I can finish the game.
+    25: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0
+    normal: 0
+    extreme: 0
+
+  accessibility:
+    # Set to full to allow access to every Dungeon.
+    full: 50
+    minimal: 0
+
+  ExpandedPool:
+    # Allows checks for clearing Dungeon Rooms and Items.
+    'false': 0
+    'true': 50
+
+  TriforceLocations:
+    # Allow my Triforce pieces to be anywhere in any World. Makes me so I don't have to run into every Dungeon to get the Triforce pieces.
+    vanilla: 0
+    dungeons: 0
+    anywhere: 50
+
+  StartingPosition:
+    # This doesn't effect the starting location for Link, however it shuffles the Sword locations into random spots including random worlds.
+    safe: 0
+    unsafe: 0
+    dangerous: 0
+    very_dangerous: 50
+
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with the specified amount of these items. Example: "Bomb: 1"
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
+
+  plando_items:
+    # Generic items plando.
+    []
