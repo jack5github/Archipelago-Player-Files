@@ -316,12 +316,12 @@ The Witness:
   death_link_amnesty:
     # The number of panel fails to allow before sending a death through Death Link.
     # 0 means every panel fail will send a death, 1 means every other panel fail will send a death, etc.
-    #
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5.
     # Randomly generated between 0 and 3, as a means of heightening the tension on half of all runs, as I typically played with an amnesty of 2.
-    random: 50
+    random: 0
     random-low: 0
-    random-high: 3
+    random-high: 0
+    random-range-0-3: 50
   puzzle_randomization_seed:
     # Sigma Rando, which is the basis for all puzzle randomization in this randomizer, uses a seed from 1 to 9999999 for the puzzle randomization. This option lets you set this seed yourself.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 9999999.

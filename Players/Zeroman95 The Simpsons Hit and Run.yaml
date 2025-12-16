@@ -68,9 +68,9 @@ The Simpsons Hit And Run:
     'false': 0
     'true': 50
   wasppercent:
-    # Sets amount and will always be set to random-low.
+    # Amount will always be a random low number.
     50: 0
-    random: 50
+    random: 0
     random-low: 50
     random-high: 0
   EnableCardPercent:
@@ -80,7 +80,7 @@ The Simpsons Hit And Run:
   cardpercent:
     # Same as Wasps above except Cards.
     50: 0
-    random: 50
+    random: 0
     random-low: 50
     random-high: 0
   shufflecards:
@@ -105,15 +105,15 @@ The Simpsons Hit And Run:
     random-low: 0
     random-high: 0
   minprice:
-    # Sets minimum price for Shops. I like random pricings.
+    # Sets minimum price for Shops. I like low random pricings.
     100: 0
-    random: 50
+    random: 0
     random-low: 50
     random-high: 0
   maxprice:
     # Does the same thing as minimum price except it's maximum price.
     300: 0
-    random: 50
+    random: 0
     random-low: 50
     random-high: 0
   shopscalemod:
@@ -136,9 +136,9 @@ The Simpsons Hit And Run:
     'false': 0
     'true': 50
   filler_traps:
-    # Randomize amount of traps per run. Random and Random-Low are selected.
+    # Randomize amount of traps per run. Random-Low is selected.
     0: 0
-    random: 50
+    random: 0
     random-low: 50
     random-high: 0
   eject:
