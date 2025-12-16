@@ -29,9 +29,11 @@ Keymaster's Keep:
     # Determines the victory condition.
     # Keymasters Challenge: Retrieve X artifacts of resolve to unlock the Keymaster's challenge chamber and beat the ultimate challenge
     # Magic Key Heist: Acquire X magic keys and escape the Keymaster's Keep
-    # Rather than having the entire run hinge on a final challenge, simply require a certain number of keys.
+    # Area Domination: Acquire conquest medallions by completing all trials in X% of keep areas and escape the Keymaster's Keep
+    # Rather than having the entire run hinge on a final challenge (which we've never played) or require a certain number of keys, require a certain number of areas to be completed.
     keymasters_challenge: 0
-    magic_key_heist: 50
+    magic_key_heist: 0
+    area_domination: 50
   artifacts_of_resolve_total:
     # Determines how many Artifacts of Resolve are in the item pool.
     # Only relevant if the selected goal is Keymaster's Challenge.
@@ -47,6 +49,14 @@ Keymaster's Keep:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
     # Irrelevant as our goal is Magic Key Heist.
     3: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  conquest_medallions_percentage_required:
+    # Determines the percentage of Conquest Medallions required before escaping the Keymaster's Keep. Completing all trials in a keep awards a Conquest Medallion.
+    # Only relevant if the selected goal is Area Domination.
+    # Unchanged from the base configuration.
+    80: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -245,7 +255,6 @@ Keymaster's Keep:
       'Gran Turismo 3: A-Spec (PS2)',
       'Left 4 Dead 2 (PC + X360)',
       'Mario Kart 8 (SW + WIIU)',
-      'Paperball (PC + SW)',
       'PEAK (PC)',
       'Peggle Deluxe (PC)',
       'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
@@ -316,7 +325,7 @@ Keymaster's Keep:
       # Game owned by Jack5 and Zeroman95.
       'Mario Kart 8 (SW + WIIU)',
       # Game owned by Jack5.
-      'Paperball (PC + SW)',
+      # 'Paperball (PC + SW)' has been removed from this list, as its objectives are all mostly the same, and the game gets boring quick.
       # Game owned by Jack5 and Zeroman95.
       'PEAK (PC)',
       # Game owned by Zeroman95.
@@ -400,7 +409,6 @@ Keymaster's Keep:
       'Maserati Alfieri',
       'Ferrari Monza SP1',
       'Formula E Gen 2 Asphalt Edition',
-      'Ferrari F40',
       'Renault R.S. 01',
       'Lamborghini Miura Concept',
       'Chevrolet Corvette Stingray',
@@ -463,7 +471,6 @@ Keymaster's Keep:
       'Ferrari Laferrari Aperta',
       'Genty Akylone',
       'Ford Shelby Super Snake',
-      'Noble M600 Speedster',
       'Lexus Electrified Sport Concept',
       'Lamborghini Centenario',
       'Lamborghini Veneno',
@@ -471,6 +478,7 @@ Keymaster's Keep:
       'Trion Nemesis',
       'Nissan GT-R Neon Edition',
       'Koenigsegg One:1',
+      'Mercedes-Benz Mercedes-AMG GT Black Series',
     ]
   custom_objective_list:
     # A freeform list of custom objectives for Keymaster's Keep. The trials will sample directly from this list.
@@ -541,7 +549,6 @@ Keymaster's Keep:
       'Johnny Cash - Ring of Fire plays',
       'Listen to a song too many times',
       'Lucas divulges too much information',
-      'Lucas is oddly calm',
       'Lucas is too hyperactive',
       'Major Hawk10 complains about something',
       'Major Hawk10 explains a meme',
