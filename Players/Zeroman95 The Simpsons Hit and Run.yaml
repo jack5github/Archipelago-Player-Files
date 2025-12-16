@@ -1,14 +1,11 @@
-name: ZeromanSHAR
-
+name: ZeromanSHAR{NUMBER}
 description: |-
   Zeroman95's YAML for The Simpsons Hit & Run
 
   Most settings are set to default to make for a regular run. The Simpsons Hit and Run is best to run through for checks and it's the best way to enjoy it. The Configuration for this YAML is pretty normal.
-
 game: The Simpsons Hit And Run
 requires:
   version: 0.6.4
-
 The Simpsons Hit And Run:
   ################
   # Game Options #
@@ -21,217 +18,158 @@ The Simpsons Hit And Run:
     disabled: 0
     normal: 50
     extreme: 0
-
   accessibility:
     # Set to full to access all checks in the game.
     full: 50
     minimal: 0
-
   goal:
     # Set to all story missions. Means I must complete all 49 Story Missions in the whole game.
     goal_all_missions_complete: 0
     goal_all_story_missions_complete: 50
     goal_final_missionl7m7: 0
     goal_wasps_and_cards_collected: 0
-
   levelsanity:
     # Set to levels meaning the randomizer can pick any set of Story Missions for a level to begin with. If set to linear it will default to the 1st set of Story Missions in Level 1.
     linear: 0
     levels: 50
-
   startingcarshuffle:
     # Shuffle starting car. If set false will always be Family Sadan.
     'false': 0
     'true': 50
-
   shuffleattack:
     # Can be set to remove Attack Items or set ALL to send all Attack Items into the pool.
     ['All']
-
   shufflejump:
     # Same as attack, except it's Jumps.
     ['All']
-
   startjumplevel:
     # Set to 1 by default. Can be increased or just removed entirely.
     1: 50
     random: 0
     random-low: 0
     random-high: 0
-
   shufflegagfinder:
     # Set to none, allowing Gags to be usable if the Level is unlocked.
     ['None']
-
   shufflecheckeredflags:
     # Set to ALL by default.
     ['All']
-
   shuffleebrake:
     # Set to ALL by default.
     ['All']
-
   shuffleforward:
     # Set to None, because if it is set to all I cannot drive forward or move forward until I get the actual Item for a character.
     ['None']
-
   earlyforward:
     # Allows forward early if above is set to ALL.
     ['All']
-
   EnableWaspPercent:
     # Includes amount of Wasps in GOAL Objectives.
     'false': 0
     'true': 50
-
   wasppercent:
     # Sets amount and will always be set to random-low.
     50: 0
     random: 50
     random-low: 50
     random-high: 0
-
   EnableCardPercent:
     # Same as Wasps above except Cards.
     'false': 0
     'true': 50
-
   cardpercent:
     # Same as Wasps above except Cards.
     50: 0
     random: 50
     random-low: 50
     random-high: 0
-
   shufflecards:
     # Same as Wasps above except Cards.
     'false': 0
     'true': 50
-
   cardlogic:
     # Set to Carless by default, cars and glitched are broken currently.
     carless: 50
     cars: 0
     glitched: 0
-
   wasplogic:
     # Set to Strict by default, meaning they cannot be destroyed by Cars. Only can be destroyed by Attacks from characters.
     strict: 50
     unlockable: 0
     cars: 0
     open: 0
-
   missionlocks:
     # Set to 0, all this does is add Vehicle requirements for missions.
     0: 50
     random: 0
     random-low: 0
     random-high: 0
-
   minprice:
     # Sets minimum price for Shops. I like random pricings.
     100: 0
     random: 50
     random-low: 50
     random-high: 0
-
   maxprice:
     # Does the same thing as minimum price except it's maximum price.
     300: 0
     random: 50
     random-low: 50
     random-high: 0
-
   shopscalemod:
     # Set to 2 by default. Setting it higher might take forever to grind.
     2: 50
     random: 0
     random-low: 0
     random-high: 0
-
   shophintpolicy:
     # Onlyprog is enabled to only show hints for Progression Items. If set to ALL displays all Items as Hints.
     all: 0
     onlyprog: 50
     none: 0
-
   extrahintpolicy:
     # default to True, no idea what this does.
     'false': 0
     'true': 50
-
   shuffletraffic:
     # Randomizes Traffic to be vehicles. Defaulted to True.
     'false': 0
     'true': 50
-
   filler_traps:
     # Randomize amount of traps per run. Random and Random-Low are selected.
     0: 0
     random: 50
     random-low: 50
     random-high: 0
-
   eject:
     # Whether to include Eject traps in the item pool.
     'false': 0
     'true': 50
-
   duff:
     # Whether to include Duff traps in the item pool.
     'false': 0
     'true': 50
-
   launch:
     # Whether to include Launch traps in the item pool.
     'false': 0
     'true': 50
-
   hnr:
     # Whether to include Hit N Run traps in the item pool.
     'false': 0
     'true': 50
-
   traffictrap:
     # Whether to include Traffic traps in the item pool.
     'false': 0
     'true': 50
-
   ###########################
   # Item & Location Options #
   ###########################
-  local_items:
-    # Forces these items to be in their native world.
-    []
-
-  non_local_items:
-    # Forces these items to be outside their native world.
-    []
-
-  start_inventory:
-    # Start with the specified amount of these items. Example: "Bomb: 1"
-    {}
-
-  start_hints:
-    # Start with these item's locations prefilled into the ``!hint`` command.
-    []
-
-  start_location_hints:
-    # Start with these locations and their item prefilled into the ``!hint`` command.
-    []
-
-  exclude_locations:
-    # Prevent these locations from having an important item.
-    []
-
-  priority_locations:
-    # Prevent these locations from having an unimportant item.
-    []
-
-  item_links:
-    # Share part of your item pool with other players.
-    []
-
-  plando_items:
-    # Generic items plando.
-    []
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
