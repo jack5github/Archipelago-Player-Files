@@ -224,7 +224,6 @@ Keymaster's Keep:
       'Mario Kart 8 (SW + WIIU)',
       'Paperball (PC + SW)',
       'PEAK (PC)',
-      'Peggle Deluxe (PC)',
       'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
       'PlatinumQuest (MOD)',
       'Sanctum (PC)',
@@ -256,7 +255,6 @@ Keymaster's Keep:
       'Left 4 Dead 2 (PC + X360)',
       'Mario Kart 8 (SW + WIIU)',
       'PEAK (PC)',
-      'Peggle Deluxe (PC)',
       'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
       'PlatinumQuest (MOD)',
       'Portal (PC + PS3, SW, X360)',
@@ -329,7 +327,7 @@ Keymaster's Keep:
       # Game owned by Jack5 and Zeroman95.
       'PEAK (PC)',
       # Game owned by Zeroman95.
-      'Peggle Deluxe (PC)',
+      # 'Peggle Deluxe (PC)' has been removed from this list, as Zeroman95 has no desire to beat the entirety of Adventure Mode in order to have access to everything.
       # Game owned by Zeroman95.
       'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
       # Game owned by Jack5.
@@ -2147,7 +2145,7 @@ Keymaster's Keep:
     # Indicates whether to include Peggle Deluxe challenges when generating objectives.
     # Adds some more objectives to the objective pool, provided that the player is using a 100% save file.
     'false': 0
-    'true': 60
+    'true': 50
   peggle_deluxe_include_insane_challenges:
     # Indicates whether to include Peggle Deluxe insane challenges when generating objectives.
     # Unchanged from the standard configuration.
