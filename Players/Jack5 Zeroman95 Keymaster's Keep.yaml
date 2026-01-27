@@ -31,7 +31,7 @@ Keymaster's Keep:
     # Magic Key Heist: Acquire X magic keys and escape the Keymaster's Keep
     # Area Domination: Acquire conquest medallions by completing all trials in X% of keep areas and escape the Keymaster's Keep
     # Rather than having the entire run hinge on a final challenge (which we've never played) or require a certain number of keys, require a certain number of areas to be completed.
-    keymasters_challenge: 0
+    keymasters_challenge: 0 # TODO: Play this
     magic_key_heist: 0
     area_domination: 50
   artifacts_of_resolve_total:
@@ -76,8 +76,8 @@ Keymaster's Keep:
     # Determines how many areas are in the Keymaster's Keep.
     # Each area will contain a new set of trials and most will be locked by one or more keys.
     # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 100.
-    # This has been reduced to roughly half all of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has been increased from 10 to 12 to bring the number of checks closer to 150.
-    12: 50
+    # This has been reduced to roughly half all of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has been increased from 10 to 12 to bring the number of checks closer to 150. Increased by 1 in order to add a shop to the keeps.
+    13: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -139,15 +139,15 @@ Keymaster's Keep:
     # If true, keep areas will have a chance to be replaced by a shop that will sell a handful of items.
     # The presence of shops will add Unique Relics to the item pool, which will need to be found to purchase items.
     # Yes, the option is named "shops_". Thank you, ALTTP!
-    # Shops would distract from the point of Keymaster's Keep, which is to be able to play games that are outside of Archipelago's support.
-    'false': 50
-    'true': 0
+    # Shops might distract from the point of Keymaster's Keep, which is to be able to play games that are outside of Archipelago's support, but we are trying them anyway.
+    'false': 0
+    'true': 50
   shops_percentage_chance:
     # Determines the percentage chance of a shop overriding a keep area when shops are enabled.
     # A maximum of 10 shops can exist in the keep at once.
     # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 50.
-    # Irrelevant because we are not playing with shops.
-    20: 50
+    # This has been reduced to 8% so that we only play with a single shop.
+    8: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -155,8 +155,8 @@ Keymaster's Keep:
     # Determines the minimum amount of items that could be sold in a shop.
     # The amount of items sold in a shop will be a random number between this value and the maximum.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
-    # Irrelevant because we are not playing with shops.
-    2: 50
+    # Increased from the default of 2 to make sure there is something more substantial about the shops.
+    3: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -164,7 +164,7 @@ Keymaster's Keep:
     # Determines the maximum amount of items that could be sold in a shop.
     # The amount of items sold in a shop will be a random number between the minimum and this value.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
-    # Irrelevant because we are not playing with shops.
+    # Unchanged from the base configuration.
     5: 50
     random: 0
     random-low: 0
@@ -181,7 +181,7 @@ Keymaster's Keep:
     random-high: 0
   shop_hints:
     # If true, upon discovering a shop, hints will be generated for the items sold in that shop.
-    # Irrelevant because we are not playing with shops.
+    # We haven't been playing with other games alongside Keymaster's Keep, so this is irrelevant for now.
     'false': 50
     'true': 0
   ######################################
@@ -212,7 +212,6 @@ Keymaster's Keep:
     # If a game specified here only offers difficult objectives, this option will have no effect for it.
     # At the moment, the only games where difficult objectives are allowed are Portal and Trivia Tricks.
     [
-      'Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX)',
       'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
       'Custom (META)',
       'Embr (PC + PS4, SW, XONE)',
@@ -245,7 +244,6 @@ Keymaster's Keep:
     # If a game specified here only offers time-consuming objectives, this option will have no effect for it.
     # At the moment, the only game where time consuming objectives are allowed is Game Backlog, as all its objectives are classified as time consuming even though changes have been made to reduce the time it takes to complete them.
     [
-      'Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX)',
       'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
       'Custom (META)',
       'Embr (PC + PS4, SW, XONE)',
@@ -299,7 +297,7 @@ Keymaster's Keep:
     # You are allowed to add the same game multiple times here. This will act as a weighted pool.
     [
       # Game owned by Jack5. Implementation created by Jack5.
-      'Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX)',
+      # 'Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX)' has been removed from this list, as Jack5 plays it all the time and it would be boring to have it show up as part of a Keymaster's Keep run.
       # Game owned by Jack5 and Zeroman95. Included due to Major Hawk10's play games with us.
       'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
       # Things both of us can experience. Implementation comes with Keymaster's Keep. Included twice to increase the chance it appears.
@@ -599,6 +597,7 @@ Keymaster's Keep:
       'Wolf-PvP says something very vulgar',
       'Wolf-PvP says the opposite for no reason',
       'Wolf-PvP shows up',
+      'Write a game review in the Jack5 Steam Group',
       "Zeroman95 can't find something",
       'Zeroman95 complains about something',
       'Zeroman95 gets extremely frustrated',
@@ -678,12 +677,10 @@ Keymaster's Keep:
     - DOOM 3 (Steam, Jack5)
     - Half-Life (Steam, Jack5)
     - (Not Escape Room) (itch.io, Jack5)
-    - '[ENDLESS_OVERDRIVE] (itch.io, Jack5)'
     - '[Speer] (itch.io, Jack5)'
     - </reality> (itch.io, Jack5)
     - 10 Flights of Ballooning (itch.io, Jack5)
     - '10mg: Sealed Estate (itch.io, Jack5)'
-    - '10mg: SNAAAK (itch.io, Jack5)'
     - 10S (itch.io, Jack5)
     - 1993 Space Machine (itch.io, Jack5)
     - 2 9 0 1 / / FREELANCER (itch.io, Jack5)
@@ -701,12 +698,10 @@ Keymaster's Keep:
     - Antecrypt (itch.io, Jack5)
     - The Arcade Tower (itch.io, Jack5)
     - Arcade Spirits (itch.io, Jack5)
-    - Arlo The Rabbit (itch.io, Jack5)
     - Asterism (itch.io, Jack5)
     - Asteroids... But Roguelite (itch.io, Jack5)
     - Attentat 1942 (itch.io, Jack5)
     - Attraction Force (itch.io, Jack5)
-    - Attrition (itch.io, Jack5)
     - Back To Bed (itch.io, Jack5)
     - Backbone (itch.io, Jack5)
     - Backspace Bouken (itch.io, Jack5)
@@ -1135,33 +1130,6 @@ Keymaster's Keep:
     - ZeroRanger (itch.io, Jack5)
     - Zombie Admin (itch.io, Jack5)
     - Zombusters (itch.io, Jack5)
-    - Scrabble Interactive 2007 Edition (Nintendo DS, Jack5)
-    - Bubble Bobble (PICO-8, Jack5)
-    - 'Buns: Bunny survivor (PICO-8, Jack5)'
-    - Donsol for PICO-8 (PICO-8, Jack5)
-    - Flip Knight (PICO-8, Jack5)
-    - floodedcaves (PICO-8, Jack5)
-    - 'Froggy Knight: Lost in the Forest (PICO-8, Jack5)'
-    - Guncho (PICO-8, Jack5)
-    - Harold's Bad Day (PICO-8, Jack5)
-    - 'NEST 2: Fast-paced Coin-Op Action (PICO-8, Jack5)'
-    - NETTY (PICO-8, Jack5)
-    - OMEGA ZONE (PICO-8, Jack5)
-    - pakpok (PICO-8, Jack5)
-    - Phoenix (PICO-8, Jack5)
-    - Pico Dino - Chrome's T-rex game reimagined (PICO-8, Jack5)
-    - Pico Off Road (PICO-8, Jack5)
-    - Pico Tetris v1.1 (PICO-8, Jack5)
-    - Pico World Race 1.2 (PICO-8, Jack5)
-    - PICORACER-2048 (PICO-8, Jack5)
-    - Return of the SLIMEPIRES! (PICO-8, Jack5)
-    - Sewers of d'Oh! (PICO-8, Jack5)
-    - Super Disc Box (PICO-8, Jack5)
-    - 'Tera: Mind Over Matter (PICO-8, Jack5)'
-    - Ufo Tofu (PICO-8, Jack5)
-    - VIOLET (PICO-8, Jack5)
-    - Void Protocol (PICO-8, Jack5)
-    - Zoo Keeper (PICO-8, Jack5)
     - METROID PRIME BLAST BALL (3DS, Jack5)
     - 7 Wonders of the Ancient World (PC, Zeroman95)
     - 7 Wonders of the Ancient World (PC, Zeroman95)
