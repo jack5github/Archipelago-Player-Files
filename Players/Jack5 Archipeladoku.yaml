@@ -1,6 +1,6 @@
 name: Jack5Sudoku{NUMBER}
 description: |-
-  Jack5 Archipeladoku player file
+  Jack5's Archipeladoku player file
 
   This Archipeladoku configuration subtly changes the generation options to ensure a stable number of unlock locations. In order to achieve this, a 3x3 board size is used. Other adjustments include the removal of emoji traps, and the increased chance of disco and tunnel vision traps for more challenging Sudoku games, especially when rapidly filling in numbers.
 game: Archipeladoku

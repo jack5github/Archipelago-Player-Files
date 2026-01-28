@@ -1,0 +1,130 @@
+name: Jack5Portal2{NUMBER}
+description: |-
+  Jack5's Portal 2 player file
+
+  This Portal 2 configuration adjusts the potential randomisation of the game to be more suitable for playing it in conjunction with other games. Traps are enabled, and the accessible maps are restricted to ensure more levels get played.
+game: Portal 2
+requires:
+  version: 0.6.6
+  game:
+    Portal 2: 0.3.3
+Portal 2:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-99: 0
+    disabled: 0
+    normal: 50
+    extreme: 0
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+    minimal: 0
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # "No need to be selfish, luv, you're gonna die." - Wheatley
+    'false': 0
+    'true': 50
+  ####################
+  # Location Options #
+  ####################
+  open_world:
+    # If all maps are accessible from the start.
+    # Default is false, only 1 map from each chapter is accessible and maps are unlocked through completing previous ones.
+    # If true all maps are accessible from the start. This makes it easier to play but does break intended level progression logic
+    # I prefer starting out with as little access to maps as possible.
+    'false': 50
+    'true': 0
+  cutscenelevels:
+    # Determines whether cutscene maps are added to the map pool
+    # I do not want to have to watch cutscenes to progress.
+    'false': 50
+    'true': 0
+    # TODO: There are still maps present in Portal 2 that I would rather not play, but are not covered by the above options, such as those that scarcely make use of the Portal Gun and require lots of walking. These are documented below in the event that a way to ban maps is added.
+    # - Chapter 1: Container Ride
+    # - Chapter 1: Secret Panel
+    # - Chapter 1: Wake Up
+    # - Chapter 5: Turret Factory
+    # - Chapter 9: Finale 1
+  early_playability_percentage:
+    # What percentage of starting maps are in the first round of map selection
+    # Minimum of 60 -> Over half of the starting maps are available from the get go, slightly slower start
+    # Maximum of 100 -> All starting maps are available from the get go, a very quick start
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 60
+    # Maximum value is 100
+    # Unchanged from the base configuration.
+    75: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-60-100: 0
+  ################
+  # Trap Options #
+  ################
+  trap_fill_percentage:
+    # Replace a percentage of junk items in the item pool with random traps
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    # The default is to have no traps at all, increased to 10%.
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-100: 0
+  motion_blur_trap_weight:
+    # Likelihood of receiving a trap which makes it a little hard to see
+    # Unchanged from the base configuration.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  fizzle_portal_trap_weight:
+    # Likelihood of receiving a trap which fizzles ALL portals on the map
+    # Unchanged from the base configuration.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  butter_fingers_trap_weight:
+    # Likelihood of receiving a trap which makes it a little hard to hold items
+    # Unchanged from the base configuration.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  cube_confetti_trap_weight:
+    # Likelihood of receiving a trap which makes an explosion of colorful cubes at your feet
+    # Unchanged from the base configuration.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  slippery_floor_trap_weight:
+    # Likelihood of receiving a trap which makes Chell slip and slide
+    # Unchanged from the base configuration.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # Unchanged from the base configuration.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []

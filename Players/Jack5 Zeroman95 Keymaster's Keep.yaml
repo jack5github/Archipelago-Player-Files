@@ -480,10 +480,10 @@ Keymaster's Keep:
     # A freeform list of custom objectives for Keymaster's Keep. The trials will sample directly from this list.
     # We are using the Custom (META) objectives as a means of capturing a wide range of objectives related to us playing games in our Discord voice calls.
     [
-      "2 or more people are Hungry Jacks'd at the same time",
+      "2 or more people are Hungry Jacks'd at the same time (if possible)",
       "An Archipelago player's game is released",
       'Buy something from the Discord Shop Orbs Exclusives',
-      'Change Discord profile badge',
+      'Change Discord server tag',
       'coatofarmor is the straight man of the group',
       'coatofarmor leaves as soon as a game is over',
       'Complete a game after this is revealed',
@@ -513,7 +513,7 @@ Keymaster's Keep:
       'Gravey plays a song on the music bot',
       'Gravey sings a song playing on the music bot',
       'Gravey streams something random',
-      "Hungry Jacks'd in two games at once",
+      "Hungry Jacks'd in two games at once (if possible)",
       'Internet connection fails',
       "interp'd Reality reference",
       "interp'd Reality session",
@@ -591,6 +591,7 @@ Keymaster's Keep:
       'War of Rights discussion',
       'Watch a Discord Orbs ad',
       'Watch the latest Evaporate video',
+      'Watch the latest GARANIKOR video',
       'Watch videos in YouTube activity',
       'Witness a physics bug',
       'Wolf-PvP is in a voice channel for too long',
@@ -766,7 +767,6 @@ Keymaster's Keep:
     - Danger Crew (itch.io, Jack5)
     - Danger Scavenger (itch.io, Jack5)
     - Dangerous Roads Ahead (itch.io, Jack5)
-    - Dark Sheep (itch.io, Jack5)
     - Dates & Wires (itch.io, Jack5)
     - Dawn of a Soul (itch.io, Jack5)
     - Dayscream (itch.io, Jack5)
@@ -774,7 +774,6 @@ Keymaster's Keep:
     - Death Drives A Bus (itch.io, Jack5)
     - Dee Dum (itch.io, Jack5)
     - Déjà Vu (itch.io, Jack5)
-    - Delver (itch.io, Jack5)
     - Democratic Socialism Simulator (itch.io, Jack5)
     - Demonizer (itch.io, Jack5)
     - Dépanneur Nocturne (itch.io, Jack5)
@@ -892,7 +891,6 @@ Keymaster's Keep:
     - Knight Bewitched 2 (itch.io, Jack5)
     - 'Korpus: Buried over the Black Soil (itch.io, Jack5)'
     - Landlord of the Woods (itch.io, Jack5)
-    - The Last Librarian (itch.io, Jack5)
     - The Last Survey (itch.io, Jack5)
     - Last Fleet (itch.io, Jack5)
     - 'Last Knight: Rogue Rider Edition (itch.io, Jack5)'
@@ -1015,7 +1013,6 @@ Keymaster's Keep:
     - RogueSlide (itch.io, Jack5)
     - 'Roll for Confidence: A CMC Vignette (itch.io, Jack5)'
     - Roly-Polo (itch.io, Jack5)
-    - Rose & Time (itch.io, Jack5)
     - Route Me Mail and Delivery Co (itch.io, Jack5)
     - Rubies In Space (FULL GAME) (Old Build) (itch.io, Jack5)
     - Rune of Eternity (itch.io, Jack5)
@@ -1034,7 +1031,6 @@ Keymaster's Keep:
     - Shell Out Showdown (itch.io, Jack5)
     - Shiny Gauntlet (itch.io, Jack5)
     - Shipwreck (itch.io, Jack5)
-    - A Short Hike (itch.io, Jack5)
     - Shredded Secrets (itch.io, Jack5)
     - SHUT IN (itch.io, Jack5)
     - Sidewords (itch.io, Jack5)
@@ -1429,8 +1425,6 @@ Keymaster's Keep:
     - Playcraft (2023) (Steam, Zeroman95)
     - Plunder Panic (2022) (Steam, Zeroman95)
     - Plunder Panic (2022) (Steam, Zeroman95)
-    - Press Any Button (2021) (Steam, Zeroman95)
-    - Press Any Button (2021) (Steam, Zeroman95)
     - Pro Pinball Fantastic Journey (2007) (PC, Zeroman95)
     - Pro Pinball Fantastic Journey (2007) (PC, Zeroman95)
     - Rayman 2 The Great Escape (1999) (PC, Zeroman95)
@@ -1497,8 +1491,6 @@ Keymaster's Keep:
     - TGV Voyages Train Simulator (2016) (Steam, Zeroman95)
     - 'The Elder Scrolls V: Skyrim (2011) (PC, Zeroman95)'
     - 'The Elder Scrolls V: Skyrim (2011) (PC, Zeroman95)'
-    - 'The Escapists: The Walking Dead (2015) (Steam, Zeroman95)'
-    - 'The Escapists: The Walking Dead (2015) (Steam, Zeroman95)'
     - The Forest (2018) (Steam, Zeroman95)
     - The Forest (2018) (Steam, Zeroman95)
     - The Powder Toy (2024) (Steam, Zeroman95)
@@ -1509,8 +1501,6 @@ Keymaster's Keep:
     - The Settlers II 10th Anniversary (2006) (PC, Zeroman95)
     - The Settlers IV Gold Edition (2002) (PC, Zeroman95)
     - The Settlers IV Gold Edition (2002) (PC, Zeroman95)
-    - 'The Walking Dead: Season 2 (2013) (Steam, Zeroman95)'
-    - 'The Walking Dead: Season 2 (2013) (Steam, Zeroman95)'
     - 'Ticket to Ride: First Journey (2017) (Steam, Zeroman95)'
     - 'Ticket to Ride: First Journey (2017) (Steam, Zeroman95)'
     - 'Tiny Tina s Assault on Dragon Keep: A Wonderlands One-shot Adventure (2021) (Steam, Zeroman95)'
@@ -1525,8 +1515,6 @@ Keymaster's Keep:
     - 'Total War: SHOGUN 2 (2011) (Steam, Zeroman95)'
     - Ultimate Zombie Defense (2020) (Steam, Zeroman95)
     - Ultimate Zombie Defense (2020) (Steam, Zeroman95)
-    - Wall-E (2008) (DS, Zeroman95)
-    - Wall-E (2008) (DS, Zeroman95)
     - 'Warhammer 40,000: Dawn of War - Anniversary Edition (2006) (Steam, Zeroman95)'
     - 'Warhammer 40,000: Dawn of War - Anniversary Edition (2006) (Steam, Zeroman95)'
     - 'Warhammer 40,000: Dawn of War - Dark Crusade (2006) (Steam, Zeroman95)'
