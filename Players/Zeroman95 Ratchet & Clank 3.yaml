@@ -1,14 +1,11 @@
-name: ZeromanRAC3
-
+name: ZeromanRAC3{NUMBER}
 description: |-
   Zeroman95's Ratchet & Clank 3 Player file
 
   This is the YAML file for Ratchet & Clank 3. Stay noted that the Ratchet & Clank 3 World is still in Alpha meaning it's still got unstable data and could break when used. Ratchet & Clank 3 is Zeroman95's most loved game of all time and this file will have the most challenge it can be to make it as difficult as possible to make it even more fun!
-
 game: Ratchet & Clank 3
 requires:
   version: 0.6.4
-
 Ratchet & Clank 3:
   ################
   # Game Options #
@@ -21,16 +18,13 @@ Ratchet & Clank 3:
     disabled: 50
     normal: 0
     extreme: 0
-
   accessibility:
     # Set to minimal to limit planet locations and checks. Makes the game more challenging.
     full: 0
     minimal: 50
-
   exclude_locations:
     # Prevent these locations from having an important item.
     ['Weapons', 'Gadgets', 'Long Term Trophy', 'Unstable']
-
   starting_weapons:
     # Starting with the RY3NO makes the game very boring and unfair. Rest is fair play. Whatever weapon is ticked 0 means they will not be a Starting Weapon. 1 Does the opposite.
     Agents of Doom: 1
@@ -53,7 +47,6 @@ Ratchet & Clank 3:
     Shock Blaster: 1
     Spitting Hydra: 1
     Suck Cannon: 1
-
   bolt_and_xp_multiplier:
     # X1 is picked because buying Items is considered Junk Checks. Higher multiplier means more bolts and experience (Experience not included yet!)
     x1: 50
@@ -62,12 +55,10 @@ Ratchet & Clank 3:
     x6: 0
     x8: 0
     x10: 0
-
   enable_progressive_weapons:
     # Progressive items are disabled to have less weapons available and allow weapon experience. Progressive Weapons upgrade already progressed weapon.
     disable: 50
     enable: 0
-
   extra_armor_upgrade:
     # No extra, makes it harder to find my armor upgrades thus making the game more difficult. The more extra gives a bigger chance for armor.
     no_extra: 50
@@ -75,24 +66,20 @@ Ratchet & Clank 3:
     extra_2: 0
     extra_3: 0
     extra_4: 0
-
   skill_points:
     # Played the game hundreds of times. Every Skill Point is memorable. None makes Skill Points have no checks. Simple gives only the first 14 Skill points checks.
     none: 0
     simple: 0
     every_skill_point: 50
-
   trophies:
     # I know where every single trophy is in the game. Means more work for me! Same as Skill points except Collectables means only the Statues of characters give checks.
     none: 0
     collectables: 0
     every_trophy: 50
-
   titanium_bolts:
     # Titanium Bolts giving checks means more effort! Disabling removes checks.
     disabled: 0
     enabled: 50
-
   nanotech_milestones:
     # I want every Nanotech increase to give something. Means more effort, but allows for more diversity compared to collecting Titanium Bolts and Trophies and Skill Points. The more higher the more checks.
     none: 0
@@ -100,44 +87,17 @@ Ratchet & Clank 3:
     every_10: 0
     every_20: 0
     all: 50
-
   ###########################
   # Item & Location Options #
   ###########################
-  local_items:
-    # Forces these items to be in their native world.
-    []
-
-  non_local_items:
-    # Forces these items to be outside their native world.
-    []
-
-  start_inventory:
-    # Start with the specified amount of these items. Example: "Bomb: 1"
-    {}
-
-  start_inventory_from_pool:
-    # Start with the specified amount of these items and don't place them in the world. Example: "Bomb: 1"
-    #
-    # The game decides what the replacement items will be.
-    {}
-
-  start_hints:
-    # Start with these item's locations prefilled into the ``!hint`` command.
-    []
-
-  start_location_hints:
-    # Start with these locations and their item prefilled into the ``!hint`` command.
-    []
-
-  priority_locations:
-    # Prevent these locations from having an unimportant item.
-    []
-
-  item_links:
-    # Share part of your item pool with other players.
-    []
-
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  start_hints: []
+  start_location_hints: []
+  priority_locations: []
+  item_links: []
   plando_items:
     # places the RY3NO right at the end of the game making it unusable and banned.
     - locations:

@@ -1,11 +1,13 @@
+What follows are common properties that are found in Archipelago player files and descriptions of what they do. For more information, refer to [this Archipelago guide](https://archipelago.gg/tutorial/Archipelago/advanced_settings_en#root-options).
+
 # `name`
 
 The name of the slot that one needs to log into in Archipelago. Limited to 16 characters.
 
 - `{player}` will be replaced with the player's slot number.
-- `{PLAYER}` will be replaced with the player's slot number, if that slot number is greater than 1.
-- `{number}` will be replaced with the counter value of the name.
-- `{NUMBER}` will be replaced with the counter value of the name, if the counter value is greater than 1.
+- `{PLAYER}` will be replaced with the player's slot number, if it is greater than 1.
+- `{number}` will be replaced with the number of times the name is being used.
+- `{NUMBER}` will be replaced with the number of times the name is being used, if it is greater than 1. (This is our preferred suffix in the case that we ever want to play multiple instances of the same game in a run.)
 
 # `description`
 
@@ -38,9 +40,9 @@ normal: 50 # equivalent to 50
 extreme: 0 # equivalent to 99
 ```
 
-To set it to a different value, set `normal` to 0 and create a new key/value pair like so: `<value>: 50`.
+To set it to a different fixed value, set `normal` to 0 and create a new key/value pair like so: `<value>: 50`.
 
-To set it to a random value, set `normal` to 0 and `random` to 50, then set `random-low` and `random-high` to the minimum and maximum values respectively.
+To set it to a random value, refer to the [RNG props guide](./rng-props.md).
 
 ## `accessibility`
 
