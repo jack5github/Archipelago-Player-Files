@@ -1,0 +1,167 @@
+name: Jack5Simon{NUMBER}
+description: |-
+  Jack5's Simon Tatham's Portable Puzzle Collection player file
+
+  # TODO: Add description
+game: Simon Tatham's Portable Puzzle Collection
+requires:
+  version: 0.6.6
+  game:
+    Simon Tatham's Portable Puzzle Collection: 0.1.11
+Simon Tatham's Portable Puzzle Collection:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-99: 0
+    disabled: 0
+    normal: 50
+    extreme: 0
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+    minimal: 0
+  ##################
+  # Puzzle Options #
+  ##################
+  puzzle_count:
+    # Number of puzzles to randomly generate.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 2000
+    # The default is 50. Other Archipelago games usually have an unlock count of 150, so we use that here.
+    150: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-1-2000: 0
+  starting_puzzles:
+    # Number of puzzles to randomly add to the starting inventory. These will be
+    # removed from the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 20
+    # Unchanged from the base configuration.
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-20: 0
+  completion_percentage:
+    # Percent of puzzles which must be completed to finish the world, rounding up.
+    # 
+    # If you set this to a low value, it is HIGHLY RECOMMENDED to disable release on world completion.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 10
+    # Maximum value is 100
+    # Unchanged from the base configuration.
+    80: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-10-100: 0
+  min_difficulty:
+    # Minimum difficulty to select generated presets from. Note that not all genres have presets at "Hard" difficulty,
+    # so they will never appear if the minimum difficulty is set to Hard (unless you specify custom presets for them).
+    # Unchanged from the base configuration.
+    easy: 50
+    normal: 0
+    hard: 0
+  max_difficulty:
+    # Maximum difficulty to select generated presets from. Takes priority over the Minimum Difficulty option if it is lower.
+    # 
+    # Puzzles on "Ridiculous" difficulty are either very big or not actually randomized. Use this difficulty at your own risk.
+    # Unchanged from the base configuration.
+    easy: 0
+    normal: 50
+    hard: 0
+    ridiculous: 0
+  genre_weights:
+    # Relative chance for each genre to be selected as a random preset. Set a genre's
+    # weight to 0 or remove it from this list to disable it.
+    # Some puzzle weights have been changed, and the reasons for doing so are explained below:
+    blackbox: 0 # Blackbox is a light reflecting game, but its puzzles seem impossible, as there is no way to place marbles on diagonals.
+    bridges: 10
+    cube: 0 # Cube is a Bloxorz puzzle that punishes you for moving in the wrong direction.
+    dominosa: 0 # It is not immediately clear how to beat Dominosa, nor does it ever become clear.
+    fifteen: 0 # Fifteen is a sliding puzzle, which is not fun at all to play.
+    filling: 10
+    flip: 0 # Flip is a flipping puzzle, which is not fun at all to play.
+    flood: 0 # Flood is not colour-blind friendly. Restore this once the game is updated.
+    galaxies: 10
+    guess: 0 # Guess is not colour-blind friendly. Restore this once the game is updated.
+    inertia: 10
+    keen: 10
+    lightup: 10
+    loopy: 10
+    magnets: 10
+    map: 0 # Map is not colour-blind friendly. Restore this once the game is updated.
+    mines: 10
+    mosaic: 10
+    net: 10
+    netslide: 0 # NetSlide is a sliding puzzle, which is not fun at all to play.
+    palisade: 0 # When following all the rules of this The Witness-style puzzle, it proves to be impossible.
+    pattern: 10
+    pearl: 10
+    pegs: 0 # Pegs is a 2D peg-hopping game, the second dimension making it ridiculously hard.
+    range: 0 # Range gameplay is braindead, mindlessly clicking blocks on and off.
+    rect: 10
+    samegame: 0 # SameGame is a Super Collapse! puzzle, which is only fun in an arcade context.
+    signpost: 0 # Signpost is an arrow-linking game, which is deceptively hard given there are so many possibilities.
+    singles: 0 # Even on Easy, Singles is deceptively hard to play, unlike Sudoku.
+    sixteen: 0 # Sixteen is a sliding puzzle, which is not fun at all to play.
+    slant: 10
+    solo: 0 # A bad implementation of Sudoku. If I want to play it, I will play Archipeladoku instead.
+    tents: 10
+    towers: 10
+    tracks: 10
+    twiddle: 0 # Twiddle is a sliding puzzle, which is not fun at all to play.
+    undead: 10
+    unequal: 10
+    unruly: 10
+    untangle: 5 # Untangle puzzles always feel the same, so their chance of occurring is reduced.
+  preset_overrides:
+    # List of presets to use for a given genre. Replaces the default presets for
+    # that puzzle if specified.
+    # 
+    # For example, to make Net puzzles always use wrapping grids, add:
+    # net: [5x5w, 7x7w, 9x9w, 11x11w]
+    # Some puzzle presets have been overridden, and the reasons for doing so are explained below:
+    net: [5x5, 7x7, 9x9, 11x11, 13x11] # Disable wrapping grids on Net puzzles.
+  genre_min_difficulty:
+    # Minimum difficulty for each genre. Use 0 for easy, 1 for normal, 2 for hard, and 3 for ridiculous.
+    # Unchanged from the base configuration.
+    {}
+  genre_max_difficulty:
+    # Maximum difficulty for each genre. Use 0 for easy, 1 for normal, 2 for hard, and 3 for ridiculous.
+    # Some max puzzle difficulties have been changed, and the reasons for doing so are explained below:
+    mines: 0 # Even on Normal, Minesweeper can generate a board that requires insane luck to solve first try.
+    undead: 0 # Undead is like Sudoku, but with symbols with different rules, and there shouldn't be any reason for it to be hard.
+  fixed_puzzles:
+    # List of additional puzzles to include. These puzzles will be placed at the start of the list.
+    # The remaining list (up to puzzle_count) will be filled according to genre_weights.
+    # 
+    # You can specify by genre (net), parameter string (net:2x2), seed (net:2x2#12345), or ID (net:2x2:c494).
+    # Unchanged from the base configuration.
+    []
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # Unchanged from the base configuration.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_pool: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
