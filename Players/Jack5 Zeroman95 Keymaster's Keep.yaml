@@ -55,8 +55,8 @@ Keymaster's Keep:
   conquest_medallions_percentage_required:
     # Determines the percentage of Conquest Medallions required before escaping the Keymaster's Keep. Completing all trials in a keep awards a Conquest Medallion.
     # Only relevant if the selected goal is Area Domination.
-    # Unchanged from the base configuration.
-    80: 50
+    # Was originally 10/12 of the total keep areas, now 11/13 with the inclusion of Consumables.
+    85: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -76,7 +76,7 @@ Keymaster's Keep:
     # Determines how many areas are in the Keymaster's Keep.
     # Each area will contain a new set of trials and most will be locked by one or more keys.
     # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 100.
-    # This has been reduced to roughly half all of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has been increased from 10 to 12 to bring the number of checks closer to 150. Increased by 1 in order to add a shop to the keeps.
+    # This has been reduced to roughly half all of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has been increased from 10 to 12 to bring the number of checks closer to 150. Increased by 1 with the inclusion of Consumables, trials that do not require effort to complete.
     13: 50
     random: 0
     random-low: 0
@@ -103,7 +103,7 @@ Keymaster's Keep:
     # Determines the minimum amount of Magic Keys that could be required to unlock an area.
     # The amount of keys required to unlock an area will be a random number between this value and the maximum. Note that this option will be ignored for the first few areas to ensure the game is completable.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     1: 50
     random: 0
     random-low: 0
@@ -139,14 +139,14 @@ Keymaster's Keep:
     # If true, keep areas will have a chance to be replaced by a shop that will sell a handful of items.
     # The presence of shops will add Unique Relics to the item pool, which will need to be found to purchase items.
     # Yes, the option is named "shops_". Thank you, ALTTP!
-    # Shops might distract from the point of Keymaster's Keep, which is to be able to play games that are outside of Archipelago's support, but we are trying them anyway.
-    'false': 0
-    'true': 50
+    # After trying out shops, it can confidently be said that they distract from the point of Keymaster's Keep, especially since it is not obvious that an unlocked area is a shop. The addition of shops also makes the effect of other options less clear.
+    'false': 50
+    'true': 0
   shops_percentage_chance:
     # Determines the percentage chance of a shop overriding a keep area when shops are enabled.
     # A maximum of 10 shops can exist in the keep at once.
     # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 50.
-    # This has been reduced to 8% so that we only play with a single shop.
+    # This was reduced to 8% so that only a single shop would appear with 13 areas, but it being a chance instead of a guarantee means that there could be 0, 2 or more shops instead.
     8: 50
     random: 0
     random-low: 0
@@ -169,7 +169,6 @@ Keymaster's Keep:
     random: 0
     random-low: 0
     random-high: 0
-
   shop_items_progression_percentage_chance:
     # Determines the percentage chance of each item in a shop being a guaranteed progression item.
     # Since items are purchased with unique relics, it is recommended to set this value on the higher side. Each unique relic will only be able to unlock a single item in the keep, so ideally, they are worth the trouble.
@@ -181,7 +180,7 @@ Keymaster's Keep:
     random-high: 0
   shop_hints:
     # If true, upon discovering a shop, hints will be generated for the items sold in that shop.
-    # We haven't been playing with other games alongside Keymaster's Keep, so this is irrelevant for now.
+    # Irrelevant because we are not playing with shops.
     'false': 50
     'true': 0
   ######################################
@@ -190,13 +189,13 @@ Keymaster's Keep:
   include_adult_only_or_unrated_games:
     # Determines if adult only or unrated games should be considered for the game pool.
     # Can be a useful filter to adhere to the rules of certain communities.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'false': 50
     'true': 0
   include_modern_console_games:
     # Determines if modern console games should be considered for the game pool.
     # Can be a useful filter to adhere to the rules of certain communities.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'false': 0
     'true': 50
   include_difficult_objectives:
@@ -266,7 +265,7 @@ Keymaster's Keep:
   hints_reveal_objectives:
     # Determines if Archipelago hints will provide information about a location's objective.
     # Enabling this option will potentially spoil the game for an area and the objective that needs to be completed.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'false': 50
     'true': 0
   game_medley_mode:
@@ -278,7 +277,7 @@ Keymaster's Keep:
   game_medley_percentage_chance:
     # Determines the percentage chance of a game medley being selected when Game Medley Mode is enabled.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     100: 50
     random: 0
     random-low: 0
@@ -289,7 +288,7 @@ Keymaster's Keep:
     # You are allowed to place games that already appear in other selection options here.
     # You are allowed to add the same game multiple times here. This will act as a weighted pool.
     # If this is left empty, all games from other selection options will be used as a default.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     []
   game_selection:
     # Defines the game pool to select from.
@@ -300,14 +299,16 @@ Keymaster's Keep:
       # 'Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX)' has been removed from this list, as Jack5 plays it all the time and it would be boring to have it show up as part of a Keymaster's Keep run.
       # Game owned by Jack5 and Zeroman95. Included due to Major Hawk10's play games with us.
       'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
-      # Things both of us can experience. Implementation comes with Keymaster's Keep. Included twice to increase the chance it appears.
+      # An alternative to the in-built shop. Implementation created by Jack5.
+      'Consumables (META)',
+      # Things Jack5 and Zeroman95 experience regularly. Implementation comes with Keymaster's Keep. Included twice to allow it to appear a second time (first time is forced).
       'Custom (META)',
       'Custom (META)',
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
       'Dominion (BOARD + AND, IOS, PC)',
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
       'Embr (PC + PS4, SW, XONE)',
-      # Games on Jack5 and Zeroman95's Backloggery. Implementation comes with Keymaster's Keep. Included twice to increase the chance it appears.
+      # Games on Jack5 and Zeroman95's Backloggery. Implementation comes with Keymaster's Keep. Included twice to allow it to appear a second time (first time is forced).
       'Game Backlog (META)',
       'Game Backlog (META)',
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
@@ -351,14 +352,21 @@ Keymaster's Keep:
     # 1: The bag will be filled with 1 of each game and will be drawn from randomly until it is empty, resulting in an even distribution of games. If the bag becomes empty, it will be refilled.
     # 2+: The bag will initially be filled with the chosen number of each game, resulting in a slightly less even distribution of games where the maximum number of each game is the chosen number. Subsequent fills will revert to an even distribution. Similar logic applies for all other bag sizes.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     1: 50
     random: 0
     random-low: 0
     random-high: 0
-  ###########################
-  # Individual Game Options #
-  ###########################
+  game_selection_force_select:
+    # Forces certain games to become areas, selected and placed randomly from this list. This option does not affect shops or the Keymaster's challenge room. If more games than permitted areas are specified, this option will cause an error. 'game_selection_bag_size' will treat games added by this option as if they have been pre-drawn from their respective bags.
+    # You are allowed to add the same game multiple times here. This will cause that many instances of the game to appear as areas.
+    # 1 of Consumables, Custom and Game Backlog (all meta games) have been added to this list to ensure they appear at least once.
+    - 'Consumables (META)'
+    - 'Custom (META)'
+    - 'Game Backlog (META)'
+  ############################################################
+  # Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX) #
+  ############################################################
   asphalt_legends_weights:
     # The weights to use for Asphalt Legends objective types. Defaults to only objectives that can be completed by new users. If at a high enough level to access VIP features, it is recommended to start with the following weights:
     # ```yaml
@@ -476,6 +484,47 @@ Keymaster's Keep:
       'Koenigsegg One:1',
       'Mercedes-Benz Mercedes-AMG GT Black Series',
     ]
+  ######################
+  # Consumables (META) #
+  ######################
+  # consumables_min_rarity:
+  # The minimum rarity required for consumables to appear. Increasing this will raise the overall power of consumables.
+  # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 6.
+  # As this is unchanged from the base configuration, it is omitted in case the values change.
+  # consumables_max_rarity:
+  # The maximum rarity allowed for consumables to appear. Reducing this will lower the overall power of consumables.
+  # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 6.
+  # As this is unchanged from the base configuration, it is omitted in case the values change.
+  consumables_banned_types:
+    # The list of consumable types banned from appearing. A consumable's types can be found in the `consumables()` method of the source code. "on_hint" and "on_shop" are banned by default, "on_hint" in order to get players used to the concept of consumables, and "on_shop" as it is uncommon for players of Keymaster's Keep to have shops enabled. To allow these conditional consumables to appear, set this to an empty list.
+    # "on_hint" has been removed from the list to allow its consumables to appear.
+    ['on_shop']
+  # consumables_custom_consumables:
+  # A YAML list of user-made consumables to add to the game, passed as a string. Custom consumables obey the `consumables_min_rarity`, `consumables_max_rarity` and `consumables_banned_types` options. When setting this option, put "|-" after the option name and fill out the list on subsequent lines. Each item in the list should be a dictionary with the following keys:
+  #     - `name` (str) - The name of the consumable.
+  #     - `description` (str) - The description of the consumable.
+  #     - `rarity` (str | int) - The rarity of the consumable, as it is represented in the `ConsumableRarity` enum.
+  #     - `types` (list[str]): The types of the consumable, used in filtering. Defaults to None.
+  #     - `creators` (str | list[str]) - The people that came up with the idea for the consumable.
+  # As this is unchanged from the base configuration, it is omitted in case the way the option's values are stored changes.
+  consumables_show_names:
+    # Whether to show consumable names at the start of their descriptions.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  consumables_show_rarities:
+    # Whether to show consumable rarities at the end of their descriptions.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  consumables_show_creators:
+    # Whether to show consumable creators at the end of their descriptions.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  #################
+  # Custom (META) #
+  #################
   custom_objective_list:
     # A freeform list of custom objectives for Keymaster's Keep. The trials will sample directly from this list.
     # We are using the Custom (META) objectives as a means of capturing a wide range of objectives related to us playing games in our Discord voice calls.
@@ -612,6 +661,9 @@ Keymaster's Keep:
       'Zeroman95 says nothing for a long time',
       'Zeroman95 talks about Disney Infinity',
     ]
+  ###################################
+  # Dominion (BOARD + AND, IOS, PC) #
+  ###################################
   dominion_weights:
     # The weights to use for Dominion objective types. Note that "win_with_card" and half of "win_against_ai" are classified as difficult, and will not appear if difficult objectives are disabled. Defaults to only objectives that can be completed in real life. If playing the 2021 version of Dominion by Temple Gates Games, it is recommended to start with the following weights:
     # ```yaml
@@ -658,15 +710,26 @@ Keymaster's Keep:
     Rising Sun: 0
     Seaside: 0
     Seaside 1st Edition: 0
+  #############################
+  # Embr (PC + PS4, SW, XONE) #
+  #############################
   # embr_weights:
   # The weights to use for Embr objective types. Note that "embrgigs", "goals" and one-fifth of "bonus" are classified as difficult and time consuming, and will not appear if difficult or time consuming objectives are disabled.
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   # embr_mission_weights:
   # The weights to use for mission types in Embr objectives that use them (`mission_on_neighbourhood` (excludes "Rescue Mission"), `mission_with_loadout` and `mission_with_gear`).
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   # embr_neighbourhood_weights:
   # The weights to use for neighbourhoods in Embr objectives. Note that "Wayside Way" and all neighbourhoods outside of the "Bedbugstuy" district are classified as difficult, and will not appear if difficult objectives are disabled.
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
+  #######################
+  # Game Backlog (META) #
+  #######################
+  game_backlog_actions:
+    # Defines the possible actions that could be required on a game in the backlog.
+    # You can customize this list to your liking.
+    # This list has been simplified as much as possible to focus exclusively on trying games as opposed to beating them.
+    ['Try']
   game_backlog_game_selection:
     # Defines which games are in the player's backlog.
     # Replace the placeholders with values of your own choosing.
@@ -1541,12 +1604,9 @@ Keymaster's Keep:
     - Zero-K (2018) (Steam, Zeroman95)
     - Zombie Panic! Source (2007) (Steam, Zeroman95)
     - Zombie Panic! Source (2007) (Steam, Zeroman95)
-
-  game_backlog_actions:
-    # Defines the possible actions that could be required on a game in the backlog.
-    # You can customize this list to your liking.
-    # We changed the default game backlog actions to focus exclusively on trying games as opposed to beating them.
-    ['Try', 'Play 5 minutes of', 'Play 10 minutes of']
+  ##########################
+  # Garry's Mod (PC + MOD) #
+  ##########################
   # garrys_mod_weights:
   # The weights to use for Garry's Mod objective types. Defaults to objective type weights that work best with multiple gamemodes.
   # If only playing Sandbox, it is recommended to start with the following weights:
@@ -1579,7 +1639,7 @@ Keymaster's Keep:
   # kill_npc_with_weapon: 0
   # bonus: 0
   # ```
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   garrys_mod_gamemodes:
     # The list of gamemodes to use for Garry's Mod objectives that use them. Defaults to the two pre-installed gamemodes plus a few most-subscribed ones that can be played on any map, add and remove as needed.
     # We are using all of Jack5's favourite gamemodes for the possible objectives.
@@ -1715,7 +1775,7 @@ Keymaster's Keep:
     ]
   garrys_mod_props:
     # The list of prop types to use for the Garry's Mod objectives that use them. Defaults to some of the most recogniseable pre-installed prop types, add and remove as needed.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     [
       'water barrel',
       'tall gas canister',
@@ -1940,7 +2000,7 @@ Keymaster's Keep:
     ]
   garrys_mod_npcs:
     # The list of NPCs, only including those that can be killed, to use for the Garry's Mod objectives that use them. Defaults to the pre-installed NPCs, add and remove as needed.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     [
       'Crow',
       'Father Grigori',
@@ -1995,17 +2055,23 @@ Keymaster's Keep:
       'Zombie Torso',
       'Zombine',
     ]
+  #######################
+  # Goofy Gorillas (PC) #
+  #######################
   # goofy_gorillas_weights:
   # The weights to use for Goofy Gorillas objective types.
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
+  ################################
+  # Gran Turismo 3: A-Spec (PS2) #
+  ################################
   gran_turismo_3_include_arcade_mode:
     # Allow Arcade Mode races as objectives
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'false': 0
     'true': 50
   gran_turismo_3_include_career_mode:
     # Allow Gran Turismo Mode races as objectives
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'false': 0
     'true': 50
   gran_turismo_3_career_sections:
@@ -2016,7 +2082,7 @@ Keymaster's Keep:
     # - Professional League
     # - Endurance League
     # - Rally Events
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     [
       'Licenses',
       'Beginner League',
@@ -2025,14 +2091,17 @@ Keymaster's Keep:
       'Endurance League',
       'Rally Events',
     ]
+  ############################
+  # Mario Kart 8 (SW + WIIU) #
+  ############################
   mario_kart_8_is_deluxe:
     # If true, use Mario Kart 8 Deluxe content. If false, only use Mario Kart 8 (Wii U) content.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'false': 0
     'true': 50
   mario_kart_8_wii_u_dlc_owned:
     # Indicates which Mario Kart 8 (Wii U) DLC the player owns, if any. Has no effect if Deluxe is enabled.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     [
       'Animal Crossing x Mario Kart 8',
       'Mercedes-Benz x Mario Kart 8',
@@ -2047,12 +2116,18 @@ Keymaster's Keep:
     # This is now true in order to increase the variety of objectives.
     'false': 0
     'true': 50
+  #############
+  # PEAK (PC) #
+  #############
   peak_include_side_quests:
     # Indicates whether to include random side quests when generating PEAK objectives.
     # This includes anything ranging from collecting a specific badge to reaching the Peak with an added challenge.
     # Adds some easy-to-obtain objectives to the objective pool.
     'false': 0
     'true': 50
+  #######################
+  # Paperball (PC + SW) #
+  #######################
   paperball_dlc_owned:
     # Indicates which Paperball DLC the player owns, if any.
     # Jack5 does not own any of the DLCs.
@@ -2063,7 +2138,7 @@ Keymaster's Keep:
     ['Medal']
   paperball_included_medal_mode_worlds:
     # Indicates which worlds the player wants to include in their Paperball Medal Mode runs.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     [
       'Alpine',
       'Canyon',
@@ -2086,7 +2161,7 @@ Keymaster's Keep:
     ]
   paperball_included_courses:
     # Indicates which courses the player wants to include in their Paperball runs.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     [
       'Novice',
       'Intermediate',
@@ -2097,11 +2172,9 @@ Keymaster's Keep:
       'Cherry Sky',
       'Sunflower Fields',
     ]
-  plants_vs_zombies_include_adventure_mode:
-    # Indicates whether to include Plants vs. Zombies's Adventure Mode when generating objectives.
-    # While this adds more objectives to the objective pool, Zeroman95's version of the game is one where he is unable to play levels he has already completed, making Adventure Mode more of a chore than a fun thing to do.
-    'false': 50
-    'true': 0
+  ######################
+  # Peggle Deluxe (PC) #
+  ######################
   peggle_deluxe_include_challenges:
     # Indicates whether to include Peggle Deluxe challenges when generating objectives.
     # Adds some more objectives to the objective pool, provided that the player is using a 100% save file.
@@ -2109,12 +2182,23 @@ Keymaster's Keep:
     'true': 50
   peggle_deluxe_include_insane_challenges:
     # Indicates whether to include Peggle Deluxe insane challenges when generating objectives.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'false': 50
     'true': 0
+  ############################################################
+  # Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360) #
+  ############################################################
+  plants_vs_zombies_include_adventure_mode:
+    # Indicates whether to include Plants vs. Zombies's Adventure Mode when generating objectives.
+    # While this adds more objectives to the objective pool, Zeroman95's version of the game is one where he is unable to play levels he has already completed, making Adventure Mode more of a chore than a fun thing to do.
+    'false': 50
+    'true': 0
+  #######################
+  # PlatinumQuest (MOD) #
+  #######################
   platinumquest_level_packs:
     # Indicates which PlatinumQuest level packs the player wants to include when generating objectives.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     [
       'Gold',
       'Ultra',
@@ -2127,27 +2211,36 @@ Keymaster's Keep:
     ]
   platinumquest_difficulties:
     # Indicates which PlatinumQuest difficulties the player wants to include when generating objectives.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     ['Tutorial', 'Beginner', 'Intermediate', 'Advanced', 'Expert', 'Bonus']
+  ###############################
+  # Portal (PC + PS3, SW, X360) #
+  ###############################
   # portal_weights:
   # The weights to use for Portal objective types. Note that "dinosaur_in_chamber", "complete_advanced_chamber", two-thirds of "challenges" and half of "bonus" are classified as difficult, and will not appear if difficult objectives are disabled.
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   # portal_challenge_weights:
   # The weights to use for challenge types in Portal objectives.
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
+  ################
+  # Sanctum (PC) #
+  ################
   # sanctum_weights:
   # The weights to use for Sanctum objective types.
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   # sanctum_gamemode_weights:
   # The weights to use for gamemodes in Sanctum objectives that use them.
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   sanctum_owned_dlcs:
     # The list of DLCs that are owned by the player, which controls which levels are available in Sanctum objectives in addition to `sanctum_level_weights`. Defaults to no DLC. Supported DLCs are "Map Pack 1", "Map Pack 2", "X-Mas Carnage" and "Yogscave".
     # Zeroman95 owns all DLCs.
     ['Map Pack 1', 'Map Pack 2', 'X-Mas Carnage', 'Yogscave']
   # sanctum_level_weights:
   # The weights to use for levels in Sanctum objectives that use them. Levels that belong to DLCs that are not included in `sanctum_owned_dlcs` will not appear.
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
+  ################################################
+  # Super Smash Bros. for 3DS/Wii U (3DS + WIIU) #
+  ################################################
   super_smash_bros_3ds_wiiu_dlc_characters:
     # Indicates which Super Smash Bros. DLC characters the player owns, if any.
     # Zeroman95 does not own any DLCs.
@@ -2159,7 +2252,7 @@ Keymaster's Keep:
     []
   super_smash_bros_3ds_wiiu_hard_mode:
     # Indicates whether to include harder CPU levels. Normal mode CPU level range is 1-6, while hard mode is 4-9
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'false': 50
     'true': 0
   super_smash_bros_3ds_wiiu_console:
@@ -2167,13 +2260,16 @@ Keymaster's Keep:
     # Zeroman95 is a 3DS player.
     3ds: 50
     wiiu: 0
+  ####################
+  # Tower Unite (PC) #
+  ####################
   tower_unite_multiplayer_content:
     # Indicates what type of Multiplayer Content the player wants to include when generating objectives.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     ['PAEnabled', 'GWEnabled']
   tower_unite_plaza_activities:
     # Indicates which Plaza Activities the player wants to include when generating objectives.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     [
       'Casino',
       'Arcade',
@@ -2188,7 +2284,7 @@ Keymaster's Keep:
     ]
   tower_unite_game_worlds:
     # Indicates which Game Worlds the player wants to include when generating objectives.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     [
       'Minigolf',
       'Ball Race',
@@ -2198,12 +2294,15 @@ Keymaster's Keep:
       'Zombie Massacre',
       'Accelerate',
     ]
+  ######################
+  # Trivia Tricks (PC) #
+  ######################
   # trivia_tricks_weights:
   # The weights to use for Trivia Tricks objective types. "twitch" is disabled by default. Note that "players_on_gamemode_win" and "coop_bosses_win" are classified as difficult, and will not appear if difficult objectives are disabled.
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   # trivia_tricks_gamemode_weights:
   # The weights to use for gamemodes in Trivia Tricks objectives that use them.
-  # As these are unchanged from the standard configuration, they have been omitted in case the default weights change.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   trivia_tricks_categories:
     # The categories to use in Trivia Tricks objectives that use them. "Steam Workshop" is included by default, but can be replaced with the names of the Steam Workshop categories one is subscribed to, or removed entirely.
     # Explicitly include Jack5's favourite categories as part of the objectives.
@@ -2257,6 +2356,9 @@ Keymaster's Keep:
       'Horrible Geography',
       'Jack5 Trivia Extravaganza',
     ]
+  ##############################################################
+  # Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX) #
+  ##############################################################
   vampire_survivors_dlc_owned:
     # Indicates which Vampire Survivors DLC the player owns, if any.
     # Jack5 owns all of the DLCs.
@@ -2269,13 +2371,13 @@ Keymaster's Keep:
     ]
   vampire_survivors_allow_secret_characters:
     # If true, secret characters will be part of the characters that can be selected.
-    # Do not include secret characters as they would make objectives too easy.
-    'false': 50
-    'true': 0
+    # While secret characters make objectives too easy, it is necessary that they are included because a Vampire Survivors area takes too long to complete otherwise.
+    'false': 0
+    'true': 50
   ###########################
   # Item & Location Options #
   ###########################
-  # So far, all of these are unchanged from the standard configuration.
+  # So far, all of these are unchanged from the base configuration.
   local_items: []
   non_local_items: []
   start_inventory: {}
