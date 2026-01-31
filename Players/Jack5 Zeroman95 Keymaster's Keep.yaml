@@ -209,7 +209,7 @@ Keymaster's Keep:
     # When 'include_difficult_objectives' is enabled, this option allows you to still exclude specific games.
     # Only game names originally listed in 'game_selection' are accepted.
     # If a game specified here only offers difficult objectives, this option will have no effect for it.
-    # At the moment, the only games where difficult objectives are allowed are Portal and Trivia Tricks.
+    # At the moment, the only games where difficult objectives are allowed are Portal, R.E.P.O. and Trivia Tricks.
     [
       'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
       'Custom (META)',
@@ -255,6 +255,7 @@ Keymaster's Keep:
       'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
       'PlatinumQuest (MOD)',
       'Portal (PC + PS3, SW, X360)',
+      'R.E.P.O. (PC)',
       'Sanctum (PC)',
       'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
       'Tower Unite (PC)',
@@ -333,6 +334,8 @@ Keymaster's Keep:
       # 'PlatinumQuest (MOD)' has been removed from this list, as it has 'Beat the Platinum Score' objectives, which are difficult but are not considered as such. An update to the implementation is required to remedy this. The game is also similar to Paperball.
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
       'Portal (PC + PS3, SW, X360)',
+      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+      'R.E.P.O. (PC)',
       # Game owned by Zeroman95. Implementation created by Jack5.
       'Sanctum (PC)',
       # Game owned by Zeroman95.
@@ -2213,6 +2216,12 @@ Keymaster's Keep:
   # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   # portal_challenge_weights:
   # The weights to use for challenge types in Portal objectives.
+  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
+  #################
+  # R.E.P.O. (PC) #
+  #################
+  # repo_weights:
+  # The weights to use for R.E.P.O. objective types.
   # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   ################
   # Sanctum (PC) #
