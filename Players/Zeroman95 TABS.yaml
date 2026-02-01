@@ -1,13 +1,10 @@
-name: Zeroman95
-
+name: ZeromanTABS{NUMBER}
 description: Zeroman95's TAB Yaml
-
 game: Totally Accurate Battle Simulator
 requires:
   version: 0.6.6
   game:
     Totally Accurate Battle Simulator: 0.1.0
-
 Totally Accurate Battle Simulator:
   progression_balancing:
     random: 0
@@ -17,11 +14,9 @@ Totally Accurate Battle Simulator:
     disabled: 0
     normal: 50
     extreme: 0
-
   accessibility:
     full: 50
     minimal: 0
-
   factions:
     [
       'Tribal',
@@ -39,41 +34,26 @@ Totally Accurate Battle Simulator:
       'Spooky',
       'Farmer',
     ]
-
   progressive_factions:
     'false': 50
     'true': 0
-
   secret_type:
     none: 0
     regular: 50
     no_unlocks: 0
     all: 0
-
   required_campaigns: ['Adventure', 'Challenge', 'Introduction']
-
   additional_campaigns: ['Simulation']
-
   hidden_campaign_unlocks:
     'false': 0
     'true': 50
-
   local_items: []
-
   non_local_items: []
-
   start_inventory: {}
-
   start_inventory_from_pool: {}
-
   start_hints: []
-
   start_location_hints: []
-
   exclude_locations: []
-
   priority_locations: []
-
   item_links: []
-
   plando_items: []

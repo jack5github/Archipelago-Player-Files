@@ -1,75 +1,32 @@
-﻿# Q. What is this file?
-# A. This file contains options which allow you to configure your multiworld experience while allowing
-#    others to play how they want as well.
-#
-# Q. How do I use it?
-# A. The options in this file are weighted. This means the higher number you assign to a value, the
-#    more chances you have for that option to be chosen. For example, an option like this:
-#
-#    map_shuffle:
-#      on: 5
-#      off: 15
-#
-#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
-#    off.
-#
-# Q. I've never seen a file like this before. What characters am I allowed to use?
-# A. This is a .yaml file. You are allowed to use most characters.
-#    To test if your yaml is valid or not, you can use this website:
-#        http://www.yamllint.com/
-#    You can also verify that your Archipelago options are valid at this site:
-#        https://archipelago.gg/check
+﻿name: ZeromanRAC3{NUMBER}
+description: |-
+  Zeroman95's Ratchet & Clank 3 Player file
 
-# Your name in-game, limited to 16 characters.
-#     {player} will be replaced with the player's slot number.
-#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
-#     {number} will be replaced with the counter value of the name.
-#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
-name: Zeroman95
-
-# Used to describe your yaml. Useful if you have multiple files.
-description: Zeroman95's Ratchet & Clank 3 Player file
-
+  This is the YAML file for Ratchet & Clank 3. Stay noted that the Ratchet & Clank 3 World is still in Alpha meaning it's still got unstable data and could break when used. Ratchet & Clank 3 is Zeroman95's most loved game of all time and this file will have the most challenge it can be to make it as difficult as possible to make it even more fun!
 game: Ratchet & Clank 3
 requires:
-  version: 0.6.6 # Version of Archipelago required for this yaml to work as expected.
-
+  version: 0.6.6
 Ratchet & Clank 3:
   ###################
   # Generic Options #
   ###################
   progression_balancing:
-    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    #
-    # A lower setting means more getting stuck. A higher setting means less getting stuck.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 99
-    0: 99
+    # I want my Items to be anywhere within the Multiworld. Setting the progression to disabled makes that happen.
     random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-0-99: 0 # random value between 0 and 99
-    disabled: 0 # equivalent to 0
-    normal: 0 # equivalent to 50
-    extreme: 0 # equivalent to 99
-
+    random-low: 0
+    random-high: 0
+    disabled: 50
+    normal: 0
+    extreme: 0
   accessibility:
-    # Set rules for reachability of your items/locations.
-    #
-    # **Full:** ensure everything can be reached and acquired.
-    #
-    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    # Set to minimal to limit planet locations and checks. Makes the game more challenging.
     full: 0
     minimal: 50
-
   deathlink:
     # Any players with "Death Link" who die in their game will
     # cause all other players with this option enabled to also die
     'off': 0
     'on': 50
-
   #####################
   # RAC3 Game Options #
   #####################
@@ -80,23 +37,21 @@ Ratchet & Clank 3:
     # would have been placed on Veldin.
     disabled: 0
     enabled: 50
-
   holostar_skip:
     # How much of the linear sections of Holostar studios should get skipped?
     # Start as Clank: Nothing is skipped, the planet behaves like normal.
     # Start at Trailer: Skip the Clank section and begin as Ratchet by the trailer
     start_as_clank: 50
     start_at_trailer: 0
-
   bolt_and_xp_multiplier:
     # Determines what your base bolt and xp multiplier will be set to,
     # recommended to use x8 if you're looking to do a sync.
+    # X1 is picked because buying Items is considered Junk Checks. Higher multiplier means more bolts and experience (Experience not included yet!)
     x1: 50
     x2: 0
     x4: 0
     x8: 0
     x16: 0
-
   one_hp_challenge:
     # Game is too easy? Try this challenge mode where the player has only 1 HP!
     # Each option toggles 1 HP for a specific character or vehicle.
@@ -114,14 +69,14 @@ Ratchet & Clank 3:
     Qwark: 0
     Ratchet: 0
     Vehicle: 0
-
-    #####################
+  #####################
   # RAC3 Item Options #
   #####################
   starting_weapons:
     # Determines which weapons you will be starting the game with,
     # provide a count of the weapons you want to be picked between,
     # two are selected to be placed on Veldin.
+    # Starting with the RY3NO makes the game very boring and unfair. Rest is fair play. Whatever weapon is ticked 0 means they will not be a Starting Weapon. 1 Does the opposite.
     Agents of Doom: 1
     Annihilator: 1
     Bouncer: 1
@@ -141,16 +96,14 @@ Ratchet & Clank 3:
     Shield Charger: 1
     Shock Blaster: 1
     Spitting Hydra: 1
-    Suck Cannon:
-      1
-
-      # Determines whether weapon level-ups are progressive items or not.
-    # **Disable**: Weapon leveling and exp functions like in the vanilla game.
-    # **Enable**: Weapons level-up when it's progressive item is collected, weapon exp is disabled.
+    Suck Cannon: 1
+  # Determines whether weapon level-ups are progressive items or not.
+  # **Disable**: Weapon leveling and exp functions like in the vanilla game.
+  # **Enable**: Weapons level-up when it's progressive item is collected, weapon exp is disabled.
+  # Progressive items are disabled to have less weapons available and allow weapon experience. Progressive Weapons upgrade already progressed weapon.
   enable_progressive_weapons:
     disable: 50
     enable: 0
-
   armor_upgrade:
     # Determines how many Progressive Armor items are included in the item pool.
     # Set to 0 for No Armor.
@@ -166,7 +119,6 @@ Ratchet & Clank 3:
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-0-8: 0 # random value between 0 and 8
-
   clank_options:
     # Determines how Clank and his packs appear in the world.
     # Start with: Begin with Clank and all packs already collected.
@@ -178,14 +130,12 @@ Ratchet & Clank 3:
     shuffled_as_one: 0
     shuffled_independently: 50
     shuffled_progressive: 0
-
   traps_enabled:
     # Determines whether trap items are included in the item pool.
     # Disabled: No traps will be included in the item pool.
     # Enabled: Traps will be included in the item pool.
     disabled: 0
     enabled: 50
-
   trap_weight:
     # Sets the relative weights of trap items in the item pool.
     # A higher value increases the likelihood of a particular trap to appear in the item pool.
@@ -196,7 +146,6 @@ Ratchet & Clank 3:
     No Ammo Trap: 2
     No Clank Trap: 2
     Wrench Only Trap: 2
-
   filler_weight:
     # Sets the relative weights of filler items in the item pool.
     # A higher value increases the likelihood of a particular filler item to appear in the item pool.
@@ -205,8 +154,7 @@ Ratchet & Clank 3:
     Jackpot: 1
     Player EXP: 1
     Weapon Level-Up: 5 # UNUSED NO PROGRESSIVE WEAPONS
-
-    #########################
+  #########################
   # RAC3 Location Options #
   #########################
   weapon_vendors:
@@ -218,7 +166,6 @@ Ratchet & Clank 3:
     # Enabled: Weapon vendors are added as locations.
     disabled: 50
     enabled: 0
-
   skill_points:
     # Determines which skill points are locations in the world.
     # Any Skill Points locked behind other locations such as Ranger Missions require those options to be enabled
@@ -241,28 +188,28 @@ Ratchet & Clank 3:
     # - Aridia: Skillpoint: Zap back at ya'
     # - Hideout: Skillpoint: Break the Dan
     # - Command Center: Skillpoint: Spread your germs
+    # Played the game hundreds of times. Every Skill Point is memorable. None makes Skill Points have no checks. Simple gives only the first 14 Skill points checks.
     none: 0
     simple: 0
     all: 50
-
   trophies:
     # Determines which trophies are locations in the world.
     # None: No trophies are locations.
     # Collectables: Only the collectable trophies found on various planets are locations.
     # Every Trophy: All special trophies that do not require NG+ are now also locations.
     # Long Term Trophy: Skill Master is only included in the pool if all 30 skill points are in the world.
+    # I know where every single trophy is in the game. Means more work for me! Same as Skill points except Collectables means only the Statues of characters give checks.
     none: 0
     collectables: 0
     every_trophy: 50
-
   titanium_bolts:
     # Determines whether Titanium Bolts are locations in the world.
     # Disabled: No Titanium Bolts are locations.
     # Enabled: Titanium Bolts are added as locations. Any Titanium bolts locked behind other locations such as
     # Ranger Missions require those options to be enabled
+    # Titanium Bolts giving checks means more effort! Disabling removes checks.
     disabled: 0
     enabled: 50
-
   rangers:
     # Determines whether Ranger Missions and anything that is located in or behind them is a location.
     # None: Removes anything that is located in or behind a Ranger Mission from being a location.
@@ -277,7 +224,6 @@ Ratchet & Clank 3:
     story_missions: 0
     optional_missions: 0
     all: 50
-
   vidcomics:
     # Determines whether VidComics and anything that is located in or behind them is a location.
     # Disabled: Removes anything that is located in or behind a VidComic from being a location.
@@ -285,7 +231,6 @@ Ratchet & Clank 3:
     # Any Skill Points or Titanium Bolts are added if their respective setting is enabled.
     disabled: 0
     enabled: 50
-
   vr_challenges:
     # Determines whether VR Challenges and anything that is located in or behind them is a location.
     # Disabled: Removes anything that is located in or behind a VR Challenge from being a location.
@@ -294,7 +239,6 @@ Ratchet & Clank 3:
     # This option also includes the VR Training Challenge before Daxx and all of it's checks
     disabled: 0
     enabled: 50
-
   arena:
     # Determines whether Annihilation Nation challenges and anything that is located in or behind them is a location.
     # None: Removes anything that is located in or behind an Annihilation Nation challenge from being a location.
@@ -306,7 +250,6 @@ Ratchet & Clank 3:
     first_only: 0
     second_only: 0
     all: 50
-
   sewer_crystals:
     # Determines whether sewer crystals are locations in the world.
     # None: No sewer crystals are locations.
@@ -321,7 +264,6 @@ Ratchet & Clank 3:
     every_10: 0
     every_5: 0
     all: 50
-
   sewer_limitation:
     # Determines the upper limit of the Sewer Crystal locations in the multiworld between 1 and 99.
     # This option has no effect when sewer_crystals are disabled.
@@ -337,7 +279,6 @@ Ratchet & Clank 3:
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-1-100: 0 # random value between 1 and 100
-
   nanotech_milestones:
     # Determines whether nanotech milestones are locations in the world.
     # None: No nanotech milestones are locations.
@@ -345,12 +286,12 @@ Ratchet & Clank 3:
     # Every 10: Makes every 10 nanotech milestones locations starting from nanotech level 20.
     # Every 5: Makes every 5 nanotech milestones locations starting from nanotech level 15.
     # All: All nanotech milestones are locations.
+    # I want every Nanotech increase to give something. Means more effort, but allows for more diversity compared to collecting Titanium Bolts and Trophies and Skill Points. The more higher the more checks.
     none: 0
     every_20: 0
     every_10: 0
     every_5: 0
     all: 50
-
   nanotech_limitation:
     # Determines the upper limit of the nanotech milestone locations in the multiworld between 11 and 100.
     # Nanotech milestone checks start from nanotech level 11 and can go up to nanotech level 100.
@@ -365,11 +306,8 @@ Ratchet & Clank 3:
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
-    random-range-11-100:
-      0 # random value between 11 and 100
-
-
-      #########################
+    random-range-11-100: 0 # random value between 11 and 100
+  #########################
   # RAC3 Cosmetic Options #
   #########################
   ship_nose:
@@ -378,14 +316,12 @@ Ratchet & Clank 3:
     standard: 50
     split: 0
     scoop: 0
-
   ship_wings:
     # Cosmetic:
     # What Wings should you have on the ship?
     standard: 0
     hi_lift: 0
     heavy_ordinance: 50
-
   ship_skin:
     # Cosmetic:
     # What Skin should you have on the ship?
@@ -421,7 +357,6 @@ Ratchet & Clank 3:
     sasha_scarlet: 0
     florana_breeze: 0
     ozzy_kamikaze: 0
-
   skin:
     # Cosmetic:
     # What Skin should Ratchet have?
@@ -436,50 +371,46 @@ Ratchet & Clank 3:
     unused_robot: 0
     robo_rooster: 50
     trooper: 0
-    robo:
-      0
-
-      ###########################
+    robo: 0
+  ###########################
   # Item & Location Options #
   ###########################
   exclude_locations:
     # Prevent these locations from having an important item.
     ['Unstable']
-
   local_items:
     # Forces these items to be in their native world.
     []
-
   non_local_items:
     # Forces these items to be outside their native world.
     []
-
   start_inventory:
     # Start with the specified amount of these items. Example: "Bomb: 1"
     {}
-
   start_inventory_from_pool:
     # Start with the specified amount of these items and don't place them in the world. Example: "Bomb: 1"
-    #
     # The game decides what the replacement items will be.
     {}
-
   start_hints:
     # Start with these item's locations prefilled into the ``!hint`` command.
     []
-
   start_location_hints:
     # Start with these locations and their item prefilled into the ``!hint`` command.
     []
-
   priority_locations:
     # Prevent these locations from having an unimportant item.
     []
-
   item_links:
     # Share part of your item pool with other players.
     []
-
   plando_items:
     # Generic items plando.
-    []
+    # places the RY3NO right at the end of the game making it unusable and banned.
+    - locations:
+        [
+          'Command Center: Dr. Nefarious Defeated!',
+          'Command Center: Biobliterator Defeated!',
+        ]
+      items:
+        RY3N0: true
+      force: true
