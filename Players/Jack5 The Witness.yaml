@@ -102,7 +102,7 @@ The Witness:
     everything_is_eligible: 0
     disable_mountain_lasers_locations: 0
     disable_challenge_lasers_locations: 50
-    disable_anything_locked_by_lasers:
+    disable_anything_locked_by_lasers: 0
   panel_hunt_discourage_same_area_factor:
     # Only relevant if the Victory Condition is "Panel Hunt".
     # The greater this value, the less likely it is that many Hunt Panels show up in the same area.
