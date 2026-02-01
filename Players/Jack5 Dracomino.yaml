@@ -1,0 +1,208 @@
+﻿name: Jack5Dracomino{NUMBER}
+description: |-
+  Jack5's Dracomino player file
+
+  This configuration for Dracomino makes the game significantly harder. It starts with me being forced to use multiple pentominoes, and keeps important items locked away in other games.
+game: Dracomino
+requires:
+  version: 0.6.6
+  game:
+    Dracomino: 0.2.0
+Dracomino:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-99: 0
+    disabled: 0
+    normal: 50
+    extreme: 0
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+    minimal: 0
+  goal:
+    # How many lines to clear to win?
+    # Number of checks will be this x2.5 this amount with tetrominos, x2 with pentominos, more with smaller shape types.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 1000.
+    # I reduced this to get the game within the range of 100-200 unlock locations, there being about 190 with this config.
+    70: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-1000: 0 # random value between 1 and 1000
+  starting_drop_method:
+    # How will shapes fall initially?
+    # Unchanged from the base configuration.
+    gravity: 50
+    soft_drop: 0
+    hard_drop: 0
+  starting_shapes:
+    # Number of shapes to start with.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # I reduced this from 7 to the absolute minimum, as it chooses tetrominoes most of the time, and I would rather start with pentominos. This, working in conjunction with `start_inventory`, will ensure I start with pentominoes.
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-1-100: 0
+  extra_shapes:
+    # Extra shapes to add to the pool to make goaling easier/safer.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 100.
+    # I reduced this from 20 to increase the difficulty.
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-10-100: 0
+  randomize_orientations:
+    # Randomize the starting orientation of pieces? If disabled, pieces are oriented with flat side down.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  monomino_weight:
+    # Ratio of monominos (1-block) to all shape types.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100
+    # I added the monomino in order to help with early line clearing. This currently has an approximately 10% chance of occurring given the number of pentominoes.
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-100: 0
+    none: 0 # equivalent to 0
+    per unique shapes: 50 # equivalent to 1
+  domino_weight:
+    # Ratio of dominos (2-blocks) to all shape types.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-100: 0
+    none: 50 # equivalent to 0
+    per unique shapes: 0 # equivalent to 1
+  tromino_weight:
+    # Ratio of tromino (3-blocks) to all shape types.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-100: 0
+    none: 50 # equivalent to 0
+    per unique shapes: 0 # equivalent to 2
+  tetromino_weight:
+    # Ratio of tetromino (4-blocks) to all shape types.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # I have multiplied this value by 10 to make it easier to specify ratios for other mino types.
+    70: 10
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-100: 0
+    none: 0 # equivalent to 0
+    per unique shapes: 0 # equivalent to 7
+  pentomino_weight:
+    # Ratio of pentomino (5-blocks) to all shape types.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Pentominoes add more difficulty to the game, but there should not be more than Tetris pieces, so they are treated as if they are an 8th Tetris piece altogether.
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-100: 0
+    none: 0 # equivalent to 0
+    per unique shapes: 0 # equivalent to 18
+  next_piece_slots:
+    # Number of Next Piece Slots present in the multiworld.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
+    # I have reduced this from 5 to be more in line with online Tetris gameplay. While only 1 slot works well in single-world gameplay, it is not advised for multiworlds.
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-10: 0
+  hold_slots:
+    # Number of Hold Slots present in the multiworld.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
+    # The game does not look good with any more than 1 hold slot.
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-10: 0
+  max_stacking_height:
+    # How high logic expects you to stack blocks to reach tiles.
+    # Warning! Setting this higher than your board height can make the game more difficult or even impossible!
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    20: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-0-100: 0
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # Hurt me and others plenty.
+    'false': 0
+    'true': 50
+  death_on_restart:
+    # When Death Link is enabled, send a death whenever you reset your board?
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items:
+    # Unchanged from the base configuration.
+    []
+  non_local_items:
+    # Forces these items to be outside their native world.
+    # Rotation, I tetrominos and the hold slot make the game too easy, so I am forcing these to be in other worlds.
+    - Hold Slot
+    - I Tetromino
+    - Rotate Clockwise
+    - Rotate Counterclockwise
+  start_inventory:
+    # Start with the specified amount of these items. Example: "Bomb: 1"
+    # Tetris is annoying to play without soft and hard drop. In addition to this, I have added multiple starting minos. Refer to `starting_shapes` for why I have done this.
+    Soft Drop: 1
+    Hard Drop: 1
+    Monomino: 1
+    N Pentomino: 1
+    T Pentomino: 1
+    Y Pentomino: 1
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    # Unchanged from the base configuration.
+    []
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    # Unchanged from the base configuration.
+    []
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    # Unchanged from the base configuration.
+    []
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    # Unchanged from the base configuration.
+    []
+  item_links:
+    # Share part of your item pool with other players.
+    # Unchanged from the base configuration.
+    []
+  plando_items:
+    # Generic items plando.
+    # Effectively ban the skinniest and tallest mino by locking it behind the very last line being cleared. It is not possible to do the same for the tetromino counterpart, because it is not always clear how many of them there are.
+    [
+      {
+        'locations': ['Line 69 Cleared'],
+        'items': { 'I Pentomino': true },
+        'force': true
+      }
+    ]
