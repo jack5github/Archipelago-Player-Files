@@ -88,10 +88,10 @@ Archipeladoku:
     # - Auto: Locations are scouted automatically when fully revealed.
     # - Manual: Locations can be scouted manually.
     # - Disabled: Locations cannot be scouted.
-    # Manual scouting is annoying, so it is set to automatic.
-    auto: 50
+    # Scouting essentially means auto-discovery of unlock hints. This clutters the Multiworld Tracker, thus it is disabled.
+    auto: 0
     manual: 0
-    disabled: 0
+    disabled: 50
   solve_selected_cell_ratio:
     # Ratio of Solve Selected Cell filler items to number of boards, in percent.
     #
@@ -110,8 +110,8 @@ Archipeladoku:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 5000
-    # Unchanged from the base configuration.
-    150: 50
+    # Increased from 150% to 200%.
+    200: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -122,8 +122,8 @@ Archipeladoku:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 5000
-    # Unchanged from the base configuration.
-    300: 50
+    # Increased from 300% to 400%.
+    400: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -135,8 +135,8 @@ Archipeladoku:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 5000
-    # The emoji trap is disabled as it is annoying.
-    0: 50
+    # At first I had the emoji trap disabled, but after creating the Shapes variant for it, I am much more comfortable with it. Additionally, the chance of it occurring has been increased from 20%.
+    50: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -148,8 +148,8 @@ Archipeladoku:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 5000
-    # The chance of the disco trap occurring has been doubled from 20%.
-    40: 50
+    # The chance of the disco trap occurring has been increased from 20% and 40%.
+    50: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -161,8 +161,8 @@ Archipeladoku:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 5000
-    # The chance of the tunnel vision trap occurring has been doubled from 20%.
-    40: 50
+    # The chance of the tunnel vision trap occurring has been increased from 20% and 40%.
+    50: 50
     random: 0
     random-low: 0
     random-high: 0

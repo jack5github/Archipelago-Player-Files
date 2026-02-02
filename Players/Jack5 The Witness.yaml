@@ -45,18 +45,18 @@ The Witness:
     # - Mountain Box Long: Input the long solution to the Mountaintop Box (requires Challenge Lasers).
     # - Panel Hunt: Solve a specific number of randomly selected panels before going to the secret ending in Tutorial.
     # It is important to note that while the Mountain Box requires Desert Laser to be redirected in Town for that laser to count, the laser locks on the Elevator and Challenge Timer panels do not.
-    # My preferred victory condition is to reach the earliest possible linear objective, which is Mountain Box Short. However, to increase variety, there is a 25% chance that the whole game needs to be completed (Elevator), and a 25% chance of Panel Hunt happening. No challenge goals are used.
-    elevator: 25
+    # My preferred victory condition is to reach the earliest possible linear objective, which is Mountain Box Short. However, to increase variety, I have added an equal chance of the whole game needs to be completed (Elevator) and of Panel Hunt happening. No challenge goals are used.
+    elevator: 33
     challenge: 0
-    mountain_box_short: 50
+    mountain_box_short: 33
     mountain_box_long: 0
-    panel_hunt: 25
+    panel_hunt: 33
   mountain_lasers:
     # Sets the number of lasers required to enter the Mountain.
     # If set to a higher number than 7, the mountaintop box will be slightly rotated to make it possible to solve without the hatch being opened.
     # This change will also be applied logically to the long solution ("Challenge Lasers" option).
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 11.
-    # This is left unchanged from the base game.
+    # Unchanged from the base configuration.
     7: 50
     random: 0
     random-low: 0
@@ -64,7 +64,7 @@ The Witness:
   challenge_lasers:
     # Sets the number of lasers required to enter the Caves through the Mountain Bottom Floor Discard and to unlock the Challenge Timer Panel.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 11.
-    # This is unchanged from the base game.
+    # Unchanged from the base configuration.
     11: 50
     random: 0
     random-low: 0
@@ -109,7 +109,7 @@ The Witness:
     # At 0, Hunt Panels will be selected randomly.
     # At 100, Hunt Panels will be almost completely evenly distributed between areas.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     40: 50
     random: 0
     random-low: 0
@@ -162,9 +162,9 @@ The Witness:
     # This includes many puzzles that heavily involve the environment, such as Shadows, Monastery or Orchard.
     # The lasers for those areas will activate as you solve optional puzzles, such as Discarded Panels.
     # Additionally, the panel activating the Jungle Popup Wall will be on from the start.
-    # While there is no point in doing the same unrandomised puzzles over and over again, some variety is in order, so there is a 10% chance that they will be included in the randomiser.
-    'false': 10
-    'true': 90
+    # While there is no point in doing the same unrandomised puzzles over and over again, some variety is in order, so there is a chance that they will be included in the randomiser. Increased from 10% to 25%.
+    'false': 25
+    'true': 75
   #####################
   # Progression Items #
   #####################
@@ -180,9 +180,9 @@ The Witness:
     # - Panels: The panel on the door will be locked until receiving its corresponding key.
     # - Doors: The door will open immediately upon receiving its key. Door panels are added as location checks.
     # - Mixed: Includes all doors from "doors", and all control panels (bridges, elevators etc.) from "panels".
-    # This was annoying when it was enabled, as panels would arbitrarily be locked and doors wouldn't open when they were supposed to, so it is kept disabled for the most part, but there is a 10% chance that panels will require keys.
-    'off': 90
-    panels: 10
+    # This was annoying when it was enabled, as panels would arbitrarily be locked and doors wouldn't open when they were supposed to, so it is kept disabled for the most part, but there is a chance that panels will require keys. Increased from 10% to 25%.
+    'off': 75
+    panels: 25
     doors: 0
     mixed: 0
   door_groupings:
@@ -255,7 +255,7 @@ The Witness:
     # Adds hints to Audio Logs. If set to a low amount, up to 2 additional duplicates of each hint will be added.
     # Remaining Audio Logs will have junk hints.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 49.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     12: 50
     random: 0
     random-low: 0
@@ -267,7 +267,7 @@ The Witness:
     # If set to "experimental", region names will be eligible as well, and you will never receive a "somewhere in" hint. Keep in mind that region names are not always intended to be comprehensible to players — only turn this on if you are okay with a bit of chaos.
     # The distinction does not matter in single player, as Witness implements location groups for every location.
     # Also, please don't pester any devs about implementing location groups. Bring it up nicely, accept their response even if it is "No".
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'off': 50
     stable: 0
     experimental: 0
@@ -277,14 +277,14 @@ The Witness:
     # "Area hints" tell you some general info about the items you can find in one of the main geographic areas on the island.
     # Use this option to specify how many of your hints you want to be area hints. The rest will be location hints.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     33: 50
     random: 0
     random-low: 0
     random-high: 0
   laser_hints:
     # If on, lasers will tell you where their items are if you walk close to them in-game. Only applies if Laser Shuffle is enabled.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'false': 50
     'true': 0
   ########
@@ -305,7 +305,7 @@ The Witness:
     # - Quarry Elevator: Makes the Quarry Elevator come down when you approach it from lower Quarry and back up when you approach it from above
     # - Swamp Long Bridge: Rotates the side you approach it from towards you, but also rotates the other side away
     # - Bunker Elevator: Makes the Bunker Elevator come to any floor that you approach it from, meaning it can be accessed from the roof immediately
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     ['Quarry Elevator']
   death_link:
     # If on, whenever you fail a puzzle (with some exceptions), you and everyone who is also on Death Link dies.
@@ -325,7 +325,7 @@ The Witness:
   puzzle_randomization_seed:
     # Sigma Rando, which is the basis for all puzzle randomization in this randomizer, uses a seed from 1 to 9999999 for the puzzle randomization. This option lets you set this seed yourself.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 9999999.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     random: 50
     random-low: 0
     random-high: 0
@@ -334,7 +334,7 @@ The Witness:
   #################
   shuffle_dog:
     # Adds petting the dog statue in Town into the location pool. Alternatively, you can force it to be a Puzzle Skip.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'off': 0
     puzzle_skip: 50
     random_item: 0
@@ -358,15 +358,15 @@ The Witness:
       # Triangles are needed to be a local item in order to allow for the Caves Lone Pillar to be completed.
       'Triangles',
     ]
-  # Unchanged from the standard configuration.
+  # Unchanged from the base configuration.
   non_local_items: []
   start_inventory: {
       # The first early-game symbol that is critical for getting right into the action.
       'Black/White Squares': 1,
     }
-  # Unchanged from the standard configuration.
+  # Unchanged from the base configuration.
   start_hints: []
-  # Unchanged from the standard configuration.
+  # Unchanged from the base configuration.
   start_location_hints: []
   exclude_locations: [
       # The Keep is simply too far away from everything else, not randomisable enough, and annoying to have to complete due to needing to walk on light-up panels. Excluding this locations does not prevent it from being accessed, it just isn't necessary for completion.
@@ -383,9 +383,9 @@ The Witness:
       # The treehouse's puzzles are some of the most annoying in the game, primarily because they are so far away from everything else, but they also are very difficult and even time-sensitive in some situations. Excluding these locations does not prevent them from being accessed, they just aren't necessary for completion.
       'Treehouse',
     ]
-  # Unchanged from the standard configuration.
+  # Unchanged from the base configuration.
   priority_locations: []
-  # Unchanged from the standard configuration.
+  # Unchanged from the base configuration.
   item_links: []
   plando_items: [
       # Ensure that entering the Caves and solving the lone pillar puzzle progresses towards winning the game.

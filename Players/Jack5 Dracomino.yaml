@@ -44,8 +44,8 @@ Dracomino:
   starting_shapes:
     # Number of shapes to start with.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
-    # I reduced this from 7 to the absolute minimum, as it chooses tetrominoes most of the time, and I would rather start with pentominos. This, working in conjunction with `start_inventory`, will ensure I start with pentominoes.
-    1: 50
+    # At one point I reduced this from the default of 7 to the absolute minimum of 1. My intention for doing so was to start with pentominoes using `start_inventory`. The issue with this is that every run would start with the exact same set of pentominoes that I specified. Instead, I have just reduced this to the number that lines up more with what I wanted to start with.
+    5: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -67,17 +67,18 @@ Dracomino:
   monomino_weight:
     # Ratio of monominos (1-block) to all shape types.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100
-    # I added the monomino in order to help with early line clearing. This currently has an approximately 10% chance of occurring given the number of pentominoes.
+    # Unchanged from the base configuration. I used this in my first run, but figured that dominos would be better.
     random: 0
     random-low: 0
     random-high: 0
     random-range-0-100: 0
-    none: 0 # equivalent to 0
-    per unique shapes: 50 # equivalent to 1
+    none: 50 # equivalent to 0
+    per unique shapes: 0 # equivalent to 1
   domino_weight:
     # Ratio of dominos (2-blocks) to all shape types.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # Unchanged from the base configuration.
+    # I added the domino in order to help with later line clearing. I tried using monomimos with an approximately 10% chance of occurring given the number of pentominoes, but that was too hard, so I'm trying 20% chance with this instead.
+    2: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -97,8 +98,8 @@ Dracomino:
   tetromino_weight:
     # Ratio of tetromino (4-blocks) to all shape types.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # I have multiplied this value by 10 to make it easier to specify ratios for other mino types.
-    70: 10
+    # I multiplied this value from 7 by 10 to make it easier to specify ratios for other mino types, but it was occurring too often, so I've reduced it to 5x the weight of pentominos.
+    50: 10
     random: 0
     random-low: 0
     random-high: 0
@@ -108,7 +109,7 @@ Dracomino:
   pentomino_weight:
     # Ratio of pentomino (5-blocks) to all shape types.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # Pentominoes add more difficulty to the game, but there should not be more than Tetris pieces, so they are treated as if they are an 8th Tetris piece altogether.
+    # Pentominoes add more difficulty to the game, but there should not be more than Tetris pieces. See `tetromino_weight` for more information.
     10: 50
     random: 0
     random-low: 0
@@ -119,8 +120,8 @@ Dracomino:
   next_piece_slots:
     # Number of Next Piece Slots present in the multiworld.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
-    # I have reduced this from 5 to be more in line with online Tetris gameplay. While only 1 slot works well in single-world gameplay, it is not advised for multiworlds.
-    4: 50
+    # Unchanged from the base configuration. While 4 makes more sense in multiplayer, the default of 5 is better suited for multiworlds.
+    5: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -169,13 +170,10 @@ Dracomino:
     - Rotate Counterclockwise
   start_inventory:
     # Start with the specified amount of these items. Example: "Bomb: 1"
-    # Tetris is annoying to play without soft and hard drop. In addition to this, I have added multiple starting minos. Refer to `starting_shapes` for why I have done this.
+    # Tetris is annoying to play without soft and hard drop, and it also doesn't make much sense for the ghost piece to be hidden in the multiworld.
+    Ghost Piece: 1
     Soft Drop: 1
     Hard Drop: 1
-    Monomino: 1
-    N Pentomino: 1
-    T Pentomino: 1
-    Y Pentomino: 1
   start_hints:
     # Start with these item's locations prefilled into the ``!hint`` command.
     # Unchanged from the base configuration.
