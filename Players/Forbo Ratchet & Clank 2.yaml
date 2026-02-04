@@ -6,6 +6,7 @@ escription: |-
 game: Ratchet & Clank 2
 requires:
   version: 0.5.0
+Ratchet & Clank 2:
   ################ 
   # Game Options #
   ################
@@ -15,7 +16,7 @@ requires:
     full: 50
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
-    true: 50
+    'true': 50
   starting_weapons:
     # Randomize what two weapons you start the game with.
     # vanilla: Start with the Lancer and Gravity Bomb.
@@ -25,34 +26,34 @@ requires:
     balanced: 50
   randomize_megacorp_vendor:
     # Randomize what items appear at the Megacorp vendor. New items will get added as you visit more planets.
-    true: 50
+    'true': 50
   randomize_gadgetron_vendor:
     # Randomize what items appear at the Gadgetron vendor on Barlow.
-    false: 50
+    'false': 50
   exclude_very_expensive_items:
     # Exclude RYNO II and Zodiac from the randomization leaving them at their vanilla locations.
     # This will only take effect if the corresponding vendors are randomized.
-    true: 50
+    'true': 50
   skip_wupash_nebula:
     # Skips the Wupash Nebula ship section that appears when first traveling to Maktar Nebula.
-    true: 50
+    'true': 50
   enable_bolt_multiplier:
     # Enables the bolt multiplier feature without being in New Game+.
-    false: 50
+    'false': 50
   no_revisit_reward_change: 
     # In the vanilla game, rewards given when killing enemies change when you come back to a previously visited planet
     # (bolts & experience). Enabling this option removes this behavior, making the experience and bolts obtained more
     # stable throughout the seed.
-    true: 50
+    'true': 50
   no_kill_reward_degradation:
     # In the vanilla game, rewards given by a specific enemy decrease each time you kill it (bolts & experience).
     # Enabling this option removes this behavior, making the experience and bolts obtained more stable throughout
     # the seed.
-    true: 50
+    'true': 50
   free_challenge_selection:
     # Makes all hoverbike and spaceship challenges selectable right away, which means you don't have to win a
     # challenge to access the next one.
-    false: 50
+    'false': 50
   nanotech_xp_multiplier:
     # A multiplier applied to experience gained for Nanotech levels, in percent.
     # You can define additional values between the minimum and maximum values.
@@ -68,12 +69,12 @@ requires:
   extra_spaceship_challenge_locations:
     # In the vanilla game, only the first challenge and the race challenge completed perfectly give an item as a
     # reward. If enabled, this option makes all spaceship challenges reward an item on first completion.
-    false: 50
+    'false': 50
   extend_weapon_progression: 
     # If enabled, make all weapon tiers obtainable through weapon experience. This means LV2 (orange) weapons can
     # upgrade into LV3 (yellow) weapons, which can then upgrade into LV4 (blue) weapons.
     # This effectively makes all weapons that are usually restricted to NG+ available with enough grinding.
-    true: 50
+    'true': 50
   first_person_mode_glitch_in_logic:
     # Determines if logic should take first person mode glitches into account when evaluating which locations are reachable.
     # Various difficulty levels can be picked:

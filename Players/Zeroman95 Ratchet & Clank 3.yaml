@@ -60,8 +60,7 @@ Ratchet & Clank 3:
     # Vehicle: Vehicles have only 1 HP.
     # Qwark: Qwark has only 1 HP.
     # Giant Clank: Giant Clank has only 1 HP. This one is impossible as terror of talos will one hit you immediately
-    # If you feel like this is too hard for you, you can always toggle the challenge for a character using /one_hp [
-    # character name]
+    # If you feel like this is too hard for you, you can always toggle the challenge for a character using /one_hp [character name]
     #
     # 1 = Enabled, 0 = Disabled
     Clank: 0
@@ -407,10 +406,8 @@ Ratchet & Clank 3:
     # Generic items plando.
     # places the RY3NO right at the end of the game making it unusable and banned.
     - locations:
-        [
-          'Command Center: Dr. Nefarious Defeated!',
-          'Command Center: Biobliterator Defeated!',
-        ]
+        - 'Command Center: Dr. Nefarious Defeated!'
+        - 'Command Center: Biobliterator Defeated!'
       items:
         RY3N0: true
       force: true

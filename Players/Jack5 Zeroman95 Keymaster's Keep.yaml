@@ -160,33 +160,31 @@ Keymaster's Keep:
     # Only game names originally listed in 'game_selection' are accepted.
     # If a game specified here only offers difficult objectives, this option will have no effect for it.
     # At the moment, the only games where difficult objectives are allowed are Portal and Trivia Tricks.
-    [
-      'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
-      'Consumables (META)',
-      'Custom (META)',
-      'Dicey Dungeons (PC + SW, AND, IOS)',
-      'Dominion (BOARD + AND, IOS, PC)',
-      'Embr (PC + PS4, SW, XONE)',
-      'Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)',
-      'Game Backlog (META)',
-      "Garry's Mod (PC + MOD)",
-      'Goofy Gorillas (PC)',
-      'Gran Turismo 3: A-Spec (PS2)',
-      'Left 4 Dead 2 (PC + X360)',
-      'Magic the Gathering (CARD + PC, AND, IOS)',
-      'Mario Kart 8 (SW + WIIU)',
-      'Paperball (PC + SW)',
-      'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
-      'PlatinumQuest (MOD)',
-      'Sanctum (PC)',
-      'Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)',
-      'Super Hexagon (PC + AND, IOS)',
-      'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
-      "Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)",
-      'Tower Unite (PC)',
-      'Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)',
-      'Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)',
-    ]
+    - Bloons TD 6 (PC + AND, IOS, PS4, XONE)
+    - Consumables (META)
+    - Custom (META)
+    - Dicey Dungeons (PC + SW, AND, IOS)
+    - Dominion (BOARD + AND, IOS, PC)
+    - Embr (PC + PS4, SW, XONE)
+    - Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)
+    - Game Backlog (META)
+    - Garry's Mod (PC + MOD)
+    - Goofy Gorillas (PC)
+    - 'Gran Turismo 3: A-Spec (PS2)
+    - Left 4 Dead 2 (PC + X360)
+    - Magic the Gathering (CARD + PC, AND, IOS)
+    - Mario Kart 8 (SW + WIIU)
+    - Paperball (PC + SW)
+    - Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)
+    - PlatinumQuest (MOD)
+    - Sanctum (PC)
+    - Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)
+    - Super Hexagon (PC + AND, IOS)
+    - Super Smash Bros. for 3DS/Wii U (3DS + WIIU)
+    - Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)
+    - Tower Unite (PC)
+    - Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)
+    - Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)
   include_time_consuming_objectives:
     # Determines if time-consuming objectives should be considered.
     # Enabling this option might yield objectives that take much longer to complete (i.e. more than 1 hour).
@@ -199,33 +197,31 @@ Keymaster's Keep:
     # Only game names originally listed in 'game_selection' are accepted.
     # If a game specified here only offers time-consuming objectives, this option will have no effect for it.
     # At the moment, the only game where time consuming objectives are allowed is Game Backlog, as all its objectives are classified as time consuming even though changes have been made to reduce the time it takes to complete them.
-    [
-      'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
-      'Consumables (META)',
-      'Custom (META)',
-      'Dicey Dungeons (PC + SW, AND, IOS)',
-      'Dominion (BOARD + AND, IOS, PC)',
-      'Embr (PC + PS4, SW, XONE)',
-      'Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)',
-      "Garry's Mod (PC + MOD)",
-      'Goofy Gorillas (PC)',
-      'Gran Turismo 3: A-Spec (PS2)',
-      'Left 4 Dead 2 (PC + X360)',
-      'Magic the Gathering (CARD + PC, AND, IOS)',
-      'Mario Kart 8 (SW + WIIU)',
-      'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
-      'PlatinumQuest (MOD)',
-      'Portal (PC + PS3, SW, X360)',
-      'Sanctum (PC)',
-      'Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)',
-      'Super Hexagon (PC + AND, IOS)',
-      'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
-      "Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)",
-      'Tower Unite (PC)',
-      'Trivia Tricks (PC)',
-      'Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)',
-      'Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)',
-    ]
+    - Bloons TD 6 (PC + AND, IOS, PS4, XONE)
+    - Consumables (META)
+    - Custom (META)
+    - Dicey Dungeons (PC + SW, AND, IOS)
+    - Dominion (BOARD + AND, IOS, PC)
+    - Embr (PC + PS4, SW, XONE)
+    - Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)
+    - Garry's Mod (PC + MOD)
+    - Goofy Gorillas (PC)
+    - 'Gran Turismo 3: A-Spec (PS2)'
+    - Left 4 Dead 2 (PC + X360)
+    - Magic the Gathering (CARD + PC, AND, IOS)
+    - Mario Kart 8 (SW + WIIU)
+    - Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)
+    - PlatinumQuest (MOD)
+    - Portal (PC + PS3, SW, X360)
+    - Sanctum (PC)
+    - Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)
+    - Super Hexagon (PC + AND, IOS)
+    - Super Smash Bros. for 3DS/Wii U (3DS + WIIU)
+    - Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)
+    - Tower Unite (PC)
+    - Trivia Tricks (PC)
+    - Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)
+    - Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)
   hints_reveal_objectives:
     # Determines if Archipelago hints will provide information about a location's objective.
     # Enabling this option will potentially spoil the game for an area and the objective that needs to be completed.
@@ -250,102 +246,98 @@ Keymaster's Keep:
     # You are allowed to add the same game multiple times here. This will act as a weighted pool.
     # If this is left empty, all games from other selection options will be used as a default.
     # Game Medley should contain all non-meta games.
-    [
-      'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
-      'Dicey Dungeons (PC + SW, AND, IOS)',
-      'Dominion (BOARD + AND, IOS, PC)',
-      'Embr (PC + PS4, SW, XONE)',
-      'Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)',
-      "Garry's Mod (PC + MOD)",
-      'Goofy Gorillas (PC)',
-      'Gran Turismo 3: A-Spec (PS2)',
-      'Left 4 Dead 2 (PC + X360)',
-      'Magic the Gathering (CARD + PC, AND, IOS)',
-      'Mario Kart 8 (SW + WIIU)',
-      'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
-      'Portal (PC + PS3, SW, X360)',
-      'Rhythm Heaven Fever (WII + WIIU)',
-      'Sanctum (PC)',
-      'Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)',
-      'Super Hexagon (PC + AND, IOS)',
-      'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
-      "Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)",
-      'Tower Unite (PC)',
-      'Trivia Tricks (PC)',
-      'Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)',
-    ]
+    - Bloons TD 6 (PC + AND, IOS, PS4, XONE)
+    - Dicey Dungeons (PC + SW, AND, IOS)
+    - Dominion (BOARD + AND, IOS, PC)
+    - Embr (PC + PS4, SW, XONE)
+    - Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)
+    - Garry's Mod (PC + MOD)
+    - Goofy Gorillas (PC)
+    - 'Gran Turismo 3: A-Spec (PS2)'
+    - Left 4 Dead 2 (PC + X360)
+    - Magic the Gathering (CARD + PC, AND, IOS)
+    - Mario Kart 8 (SW + WIIU)
+    - Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)
+    - Portal (PC + PS3, SW, X360)
+    - Rhythm Heaven Fever (WII + WIIU)
+    - Sanctum (PC)
+    - Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)
+    - Super Hexagon (PC + AND, IOS)
+    - Super Smash Bros. for 3DS/Wii U (3DS + WIIU)
+    - Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)
+    - Tower Unite (PC)
+    - Trivia Tricks (PC)
+    - Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)
   game_selection:
     # Defines the game pool to select from.
     # All supported games are listed. Remove the ones you don't own or want to play.
     # You are allowed to add the same game multiple times here. This will act as a weighted pool.
-    [
-      # Game owned by Jack5. Implementation created by Jack5.
-      # 'Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX)' has been removed from this list, as Jack5 plays it all the time and it would be boring to have it show up as part of a Keymaster's Keep run.
-      # Game owned by Jack5 and Zeroman95. Included due to Major Hawk10's desire to play games with us.
-      'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
-      # An alternative to the in-built shop. Implementation created by Jack5.
-      'Consumables (META)',
-      # Things Jack5 and Zeroman95 experience regularly. Implementation comes with Keymaster's Keep. Included twice to allow it to appear a second time (first time is forced).
-      'Custom (META)',
-      'Custom (META)',
-      # Game owned by Jack5 and forbo.
-      'Dicey Dungeons (PC + SW, AND, IOS)',
-      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
-      'Dominion (BOARD + AND, IOS, PC)',
-      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
-      'Embr (PC + PS4, SW, XONE)',
-      # Game owned by Jack5 and forbo.
-      'Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)',
-      # Games on Jack5 and Zeroman95's Backloggery. Implementation comes with Keymaster's Keep. Included twice to allow it to appear a second time (first time is forced).
-      'Game Backlog (META)',
-      'Game Backlog (META)',
-      # Game owned by Jack5, Zeroman95 and forbo. Implementation created by Jack5.
-      "Garry's Mod (PC + MOD)",
-      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
-      'Goofy Gorillas (PC)',
-      # Game owned by Jack5.
-      'Gran Turismo 3: A-Spec (PS2)',
-      # Game owned by Jack5 and Zeroman95.
-      'Left 4 Dead 2 (PC + X360)',
-      # Game owned by forbo.
-      'Magic the Gathering (CARD + PC, AND, IOS)',
-      # Game owned by Jack5 and Zeroman95.
-      'Mario Kart 8 (SW + WIIU)',
-      # Game owned by Jack5.
-      # 'Paperball (PC + SW)' has been removed from this list, as its objectives are all mostly the same, and the game gets boring quick.
-      # Game owned by Jack5 and Zeroman95.
-      # 'PEAK (PC)' has been removed from this list, as Jack5 has installed the official PEAK mod.
-      # Game owned by Zeroman95 and forbo.
-      # 'Peggle Deluxe (PC)' has been removed from this list, as Zeroman95 has no desire to beat the entirety of Adventure Mode in order to have access to everything.
-      # Game owned by Zeroman95.
-      'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
-      # Game owned by Jack5.
-      'PlatinumQuest (MOD)',
-      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
-      'Portal (PC + PS3, SW, X360)',
-      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
-      # 'R.E.P.O. (PC)' has been removed from this list, as Jack5 has installed the official R.E.P.O. mod.
-      # Game owned by forbo.
-      'Rhythm Heaven Fever (WII + WIIU)',
-      # Game owned by Zeroman95. Implementation created by Jack5.
-      'Sanctum (PC)',
-      # Game owned by Zeroman95 and forbo.
-      'Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)',
-      # Game owned by Jack5 and forbo.
-      'Super Hexagon (PC + AND, IOS)',
-      # Game owned by Zeroman95.
-      'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
-      # Game owned by Jack5 and forbo.
-      "Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)",
-      # Game owned by Jack5, Zeroman95 and forbo.
-      'Tower Unite (PC)',
-      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
-      'Trivia Tricks (PC)',
-      # Game owned by Jack5 and Zeroman95.
-      # 'Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)' has been removed from this list, as all its objectives are time consuming despite not being classified as such. A new implementation is required to break up its objectives into smaller objectives.
-      # Game owned by Jack5 and Zeroman95.
-      'Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)',
-    ]
+    # Game owned by Jack5. Implementation created by Jack5.
+    # - Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX) has been removed from this list, as Jack5 plays it all the time and it would be boring to have it show up as part of a Keymaster's Keep run.
+    # Game owned by Jack5 and Zeroman95. Included due to Major Hawk10's desire to play games with us.
+    - Bloons TD 6 (PC + AND, IOS, PS4, XONE)
+    # An alternative to the in-built shop. Implementation created by Jack5.
+    - Consumables (META)
+    # Things Jack5 and Zeroman95 experience regularly. Implementation comes with Keymaster's Keep. Included twice to allow it to appear a second time (first time is forced).
+    - Custom (META)
+    - Custom (META)
+    # Game owned by Jack5 and forbo.
+    - Dicey Dungeons (PC + SW, AND, IOS)
+    # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+    - Dominion (BOARD + AND, IOS, PC)
+    # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+    - Embr (PC + PS4, SW, XONE)
+    # Game owned by Jack5 and forbo.
+    - Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)
+    # Games on Jack5 and Zeroman95's Backloggery. Implementation comes with Keymaster's Keep. Included twice to allow it to appear a second time (first time is forced).
+    - Game Backlog (META)
+    - Game Backlog (META)
+    # Game owned by Jack5, Zeroman95 and forbo. Implementation created by Jack5.
+    - Garry's Mod (PC + MOD)
+    # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+    - Goofy Gorillas (PC)
+    # Game owned by Jack5.
+    - 'Gran Turismo 3: A-Spec (PS2)'
+    # Game owned by Jack5 and Zeroman95.
+    - Left 4 Dead 2 (PC + X360)
+    # Game owned by forbo.
+    - Magic the Gathering (CARD + PC, AND, IOS)
+    # Game owned by Jack5 and Zeroman95.
+    - Mario Kart 8 (SW + WIIU)
+    # Game owned by Jack5.
+    # - Paperball (PC + SW) has been removed from this list, as its objectives are all mostly the same, and the game gets boring quick.
+    # Game owned by Jack5 and Zeroman95.
+    # - PEAK (PC) has been removed from this list, as Jack5 has installed the official PEAK mod.
+    # Game owned by Zeroman95 and forbo.
+    # - Peggle Deluxe (PC) has been removed from this list, as Zeroman95 has no desire to beat the entirety of Adventure Mode in order to have access to everything.
+    # Game owned by Zeroman95.
+    - Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)
+    # Game owned by Jack5.
+    - PlatinumQuest (MOD)
+    # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+    - Portal (PC + PS3, SW, X360)
+    # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+    # - R.E.P.O. (PC) has been removed from this list, as Jack5 has installed the official R.E.P.O. mod.
+    # Game owned by forbo.
+    - Rhythm Heaven Fever (WII + WIIU)
+    # Game owned by Zeroman95. Implementation created by Jack5.
+    - Sanctum (PC)
+    # Game owned by Zeroman95 and forbo.
+    - Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)
+    # Game owned by Jack5 and forbo.
+    - Super Hexagon (PC + AND, IOS)
+    # Game owned by Zeroman95.
+    - Super Smash Bros. for 3DS/Wii U (3DS + WIIU)
+    # Game owned by Jack5 and forbo.
+    - Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)
+    # Game owned by Jack5, Zeroman95 and forbo.
+    - Tower Unite (PC)
+    # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+    - Trivia Tricks (PC)
+    # Game owned by Jack5 and Zeroman95.
+    # - Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX) has been removed from this list, as all its objectives are time consuming despite not being classified as such. A new implementation is required to break up its objectives into smaller objectives.
+    # Game owned by Jack5 and Zeroman95.
+    - Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)
   game_selection_bag_size:
     # Determines the size of the bag from which the weighted games in 'game_selection' and 'game_medley_game_selection' will be randomly selected.
     # 0: No bag will be used and games may appear multiple times unbounded.
@@ -408,146 +400,144 @@ Keymaster's Keep:
   custom_objective_list:
     # A freeform list of custom objectives for Keymaster's Keep. The trials will sample directly from this list.
     # We are using the Custom (META) objectives as a means of capturing a wide range of objectives related to us playing games in our Discord voice calls.
-    [
-      "2 or more people are Hungry Jacks'd at the same time (if possible)",
-      "An Archipelago player's game is released",
-      'Buy something from the Discord Shop Orbs Exclusives',
-      'Catch a shiny Pokémon',
-      'Change Discord server tag',
-      'coatofarmor is the straight man of the group',
-      'coatofarmor leaves as soon as a game is over',
-      'Complete a game after this is revealed',
-      'Complete a game earlier than expected',
-      'Complete a game without using its PopTracker',
-      'Complete an annoying setup process',
-      'Complete something taxing and get barely anything in return',
-      'DoMess uses his microphone',
-      "DoMess' soundboard is perfectly timed",
-      "Don't play a game for an entire voice call",
-      'Drink water',
-      'Earn any RetroAchievement',
-      'Everyone immediately points out the song now playing',
-      "Find a new Keymaster's Keep codex entry to try",
-      'Finish a round of the Wiki Speedrun Game',
-      "Five Night's at Freddy's reference",
-      'Game connection issues',
-      'Game crash',
-      'Get a message in the supporter channels',
-      'Go outside and touch grass',
-      'Glitch and Major Hawk10 argue',
-      "Glitch can't think of a good defense",
-      'Glitch dies in-game',
-      "Glitch doesn't care",
-      'Glitch gets a name wrong',
-      'Glitch is playing Minecraft',
-      'Go and take a shower',
-      'Go to bed',
-      'Gravey is a yes-man',
-      'Gravey joins then leaves soon after',
-      'Gravey plays a song on the music bot',
-      'Gravey sings a song playing on the music bot',
-      'Gravey streams something random',
-      "Hungry Jacks'd in two games at once (if possible)",
-      'Internet connection fails',
-      "interp'd Reality reference",
-      "interp'd Reality session",
-      'Jack5 and Zeroman95 are playing the same games as last time',
-      'Jack5 and Zeroman95 reference the same YouTube Poop',
-      'Jack5 and Zeroman95 say the same thing at the same time',
-      'Jack5 becomes braindead',
-      "Jack5 can't open a link in Vesktop",
-      'Jack5 complains about something',
-      "Jack5 corrects someone's pronounciation",
-      "Jack5 doesn't play with the group",
-      'Jack5 downloads favourited Steam Workshop addons',
-      'Jack5 gets on way earlier than usual',
-      'Jack5 goes from elated to defeated in seconds',
-      'Jack5 has a playlist for that',
-      'Jack5 has a poor internet connection',
-      'Jack5 has a stroke',
-      'Jack5 leaves to cook',
-      'Jack5 leaves to do chores',
-      'Jack5 is caught playing Asphalt Legends',
-      'Jack5 is losing his sanity',
-      'Jack5 rides the walls',
-      "Jack5 says he can't play a game because of his hands",
-      'Jack5 takes a screenshot',
-      'Jack5 uses his NixOS laptop',
-      'Jack5 uses his wireless keyboard',
-      'Jack5 YouTube channel reference',
-      "Jack5's laughs are different each time",
-      'Johnny Cash - Ring of Fire plays',
-      'Listen to a song too many times',
-      'Lucas divulges too much information',
-      'Lucas is too hyperactive',
-      'Major Hawk10 complains about something',
-      'Major Hawk10 explains a meme',
-      'Major Hawk10 gets defensive',
-      'Major Hawk10 goes on a long spiel about historical events',
-      'Major Hawk10 is in a voice channel alone with the music bot',
-      'Major Hawk10 is tipsy',
-      'Major Hawk10 makes a meme',
-      'Major Hawk10 makes a TopGear reference',
-      'Major Hawk10 points out "his D&D character"',
-      'Major Hawk10 says nothing for a long time',
-      'Major Hawk10 talks about music',
-      'Major Hawk10 talks about something from his real life',
-      'Major Hawk10 talks about something on his Instagram',
-      'Major Hawk10 trolls Glitch in a game',
-      'Make a change to a player config mid-run',
-      'Make an edit to a wiki',
-      'Music bot plays the wrong song',
-      'Nathalie - Desperado plays',
-      "Need something but don't have enough money",
-      'No-one can agree on what game to play',
-      'Obsidian vault housekeeping',
-      'Pizza night',
-      # Disabled due to Game Backlog always being present as an area.
-      # 'Play an unplayed game from Backloggery',
-      'Post in the HOO-ROO GAMES Discord',
-      'Quote from SpongeBob SquarePants',
-      "Remind Keynaster's Keep developers about random bag",
-      'Report an issue in the Archipelago Discord',
-      'Say the same thing 5 times in a row without being questioned',
-      'Sell something on the Steam Community Market',
-      'Send a message in a group chat',
-      "Someone really doesn't like an inside joke",
-      'Sitting around waiting for a long while',
-      "Solve today's Wordle",
-      'Surprised by a game being completed',
-      "SweetCookie500 doesn't respond for a really long time",
-      'SweetCookie500 posts some art',
-      'SweetCookie500 references Star Wars',
-      'SweetCookie500 shows up',
-      'The Irish Goodbye: Someone leaves without saying anything',
-      "Understand someone's obscure reference",
-      'Unexpected bathroom break',
-      'Uninstall an unplayed game from Steam',
-      'Want to play an unsupported game',
-      'War of Rights discussion',
-      'Watch a Discord Orbs ad',
-      'Watch the latest Evaporate video',
-      'Watch the latest GARANIKOR video',
-      'Watch videos in YouTube activity',
-      'Witness a physics bug',
-      'Wolf-PvP is in a voice channel for too long',
-      'Wolf-PvP says something very vulgar',
-      'Wolf-PvP says the opposite for no reason',
-      'Wolf-PvP shows up',
-      'Write a game review in the Jack5 Steam Group',
-      "Zeroman95 can't find something",
-      'Zeroman95 complains about something',
-      'Zeroman95 gets extremely frustrated',
-      'Zeroman95 laughs oddly deeply',
-      'Zeroman95 has trouble editing a spreadsheet/repository',
-      'Zeroman95 is flustered or shy',
-      'Zeroman95 "loves" something',
-      'Zeroman95 makes a SnapCube reference',
-      'Zeroman95 plays a non-PC game on physical hardware',
-      "Zeroman95 references a game other than the one he's playing",
-      'Zeroman95 says nothing for a long time',
-      'Zeroman95 talks about Disney Infinity',
-    ]
+    - 2 or more people are Hungry Jacks'd at the same time (if possible)
+    - An Archipelago player's game is released
+    - Buy something from the Discord Shop Orbs Exclusives
+    - Catch a shiny Pokémon
+    - Change Discord server tag
+    - coatofarmor is the straight man of the group
+    - coatofarmor leaves as soon as a game is over
+    - Complete a game after this is revealed
+    - Complete a game earlier than expected
+    - Complete a game without using its PopTracker
+    - Complete an annoying setup process
+    - Complete something taxing and get barely anything in return
+    - DoMess uses his microphone
+    - DoMess' soundboard is perfectly timed
+    - Don't play a game for an entire voice call
+    - Drink water
+    - Earn any RetroAchievement
+    - Everyone immediately points out the song now playing
+    - Find a new Keymaster's Keep codex entry to try
+    - Finish a round of the Wiki Speedrun Game
+    - Five Night's at Freddy's reference
+    - Game connection issues
+    - Game crash
+    - Get a message in the supporter channels
+    - Go outside and touch grass
+    - Glitch and Major Hawk10 argue
+    - Glitch can't think of a good defense
+    - Glitch dies in-game
+    - Glitch doesn't care
+    - Glitch gets a name wrong
+    - Glitch is playing Minecraft
+    - Go and take a shower
+    - Go to bed
+    - Gravey is a yes-man
+    - Gravey joins then leaves soon after
+    - Gravey plays a song on the music bot
+    - Gravey sings a song playing on the music bot
+    - Gravey streams something random
+    - Hungry Jacks'd in two games at once (if possible)
+    - Internet connection fails
+    - interp'd Reality reference
+    - interp'd Reality session
+    - Jack5 and Zeroman95 are playing the same games as last time
+    - Jack5 and Zeroman95 reference the same YouTube Poop
+    - Jack5 and Zeroman95 say the same thing at the same time
+    - Jack5 becomes braindead
+    - Jack5 can't open a link in Vesktop
+    - Jack5 complains about something
+    - Jack5 corrects someone's pronounciation
+    - Jack5 doesn't play with the group
+    - Jack5 downloads favourited Steam Workshop addons
+    - Jack5 gets on way earlier than usual
+    - Jack5 goes from elated to defeated in seconds
+    - Jack5 "hates" something
+    - Jack5 has a playlist for that
+    - Jack5 has a poor internet connection
+    - Jack5 has a stroke
+    - Jack5 leaves to cook
+    - Jack5 leaves to do chores
+    - Jack5 is caught playing Asphalt Legends
+    - Jack5 is losing his sanity
+    - Jack5 rides the walls
+    - Jack5 says he can't play a game because of his hands
+    - Jack5 takes a screenshot
+    - Jack5 uses his NixOS laptop
+    - Jack5 uses his wireless keyboard
+    - Jack5 YouTube channel reference
+    - Jack5's laughs are different each time
+    - Johnny Cash - Ring of Fire plays
+    - Listen to a song too many times
+    - Lucas divulges too much information
+    - Lucas is too hyperactive
+    - Major Hawk10 complains about something
+    - Major Hawk10 explains a meme
+    - Major Hawk10 gets defensive
+    - Major Hawk10 goes on a long spiel about historical events
+    - Major Hawk10 is in a voice channel alone with the music bot
+    - Major Hawk10 is tipsy
+    - Major Hawk10 makes a meme
+    - Major Hawk10 makes a TopGear reference
+    - Major Hawk10 points out "his D&D character"
+    - Major Hawk10 says nothing for a long time
+    - Major Hawk10 talks about music
+    - Major Hawk10 talks about something from his real life
+    - Major Hawk10 talks about something on his Instagram
+    - Major Hawk10 trolls Glitch in a game
+    - Make a change to a player config mid-run
+    - Make an edit to a wiki
+    - Music bot plays the wrong song
+    - Nathalie - Desperado plays
+    - Need something but don't have enough money
+    - No-one can agree on what game to play
+    - Obsidian vault housekeeping
+    - Pizza night
+    # - Play an unplayed game from Backloggery - Disabled due to Game Backlog always being present as an area.
+    - Post in the HOO-ROO GAMES Discord
+    - Quote from SpongeBob SquarePants
+    - Remind Keynaster's Keep developers about random bag
+    - Report an issue in the Archipelago Discord
+    - Say the same thing 5 times in a row without being questioned
+    - Sell something on the Steam Community Market
+    - Send a message in a group chat
+    - Someone really doesn't like an inside joke
+    - Sitting around waiting for a long while
+    - Solve today's Wordle
+    - Surprised by a game being completed
+    - SweetCookie500 doesn't respond for a really long time
+    - SweetCookie500 posts some art
+    - SweetCookie500 references Star Wars
+    - SweetCookie500 shows up
+    - 'The Irish Goodbye: Someone leaves without saying anything'
+    - Understand someone's obscure reference
+    - Unexpected bathroom break
+    - Uninstall an unplayed game from Steam
+    - Want to play an unsupported game
+    - War of Rights discussion
+    - Watch a Discord Orbs ad
+    - Watch the latest Evaporate video
+    - Watch the latest GARANIKOR video
+    - Watch videos in YouTube activity
+    - Witness a physics bug
+    - Wolf-PvP is in a voice channel for too long
+    - Wolf-PvP says something very vulgar
+    - Wolf-PvP says the opposite for no reason
+    - Wolf-PvP shows up
+    - Write a game review in the Jack5 Steam Group
+    - Zeroman95 can't find something
+    - Zeroman95 complains about something
+    - Zeroman95 gets extremely frustrated
+    - Zeroman95 laughs oddly deeply
+    - Zeroman95 has trouble editing a spreadsheet/repository
+    - Zeroman95 is flustered or shy
+    - Zeroman95 "loves" something
+    - Zeroman95 makes a SnapCube reference
+    - Zeroman95 plays a non-PC game on physical hardware
+    - Zeroman95 references a game other than the one he's playing
+    - Zeroman95 says nothing for a long time
+    - Zeroman95 talks about Disney Infinity
   ###################################
   # Dominion (BOARD + AND, IOS, PC) #
   ###################################
@@ -1553,199 +1543,189 @@ Keymaster's Keep:
   garrys_mod_gamemodes:
     # The list of gamemodes to use for Garry's Mod objectives that use them. Defaults to the two pre-installed gamemodes plus a few most-subscribed ones that can be played on any map, add and remove as needed.
     # We are using all of Jack5's favourite gamemodes for the possible objectives.
-    [
-      'Sandbox',
-      'Prop Hunt',
-      'Murder',
-      'Guess Who',
-      'Hide and Seek',
-      'Cops and Runners',
-      'You Touched it Last',
-      'Neo-Smash',
-      'Horde',
-      'Nav Hunt',
-      'Vampire Hunters',
-      'DR5VE & SEEK',
-      'Freeze Tag',
-      '2014 Zombie Survival',
-      'Screenhack',
-      'G-Arena',
-      'Randomizer!',
-      'The Hidden',
-      "Stik's Deathmatch",
-      'Jazztronauts',
-    ]
+    - Sandbox
+    - Prop Hunt
+    - Murder
+    - Guess Who
+    - Hide and Seek
+    - Cops and Runners
+    - You Touched it Last
+    - Neo-Smash
+    - Horde
+    - Nav Hunt
+    - Vampire Hunters
+    - DR5VE & SEEK
+    - Freeze Tag
+    - 2014 Zombie Survival
+    - Screenhack
+    - G-Arena
+    - Randomizer!
+    - The Hidden
+    - Stik's Deathmatch
+    - Jazztronauts
   garrys_mod_maps:
     # The list of maps to use for the Garry's Mod objectives that use them. Defaults to the two pre-installed maps plus a few most-subscribed "gm_" maps that offer various scenery, add and remove as needed.
     # We are using all of Jack5's favourite maps for the possible objectives.
-    [
-      'gm_construct but it is Hammer Editor',
-      'gm_launchsite',
-      "ttt_Al'sToyBarn",
-      'Waluigi Pinball',
-      'The Prop Arena',
-      'The Kleiner Community Center',
-      'ph_restaurant',
-      'gm_excess island two in one',
-      'gm_GirthConstructV2',
-      'gm_devbattle',
-      'Trackmania Map',
-      'Backwood Stadium Speedway',
-      'FlatOut 2: Parking Lot Derby',
-      'Defocus',
-      'Dissonance',
-      'Conglomerate',
-      'gm_ohioburgerking',
-      'ttt_oxxo_redux',
-      'gm_descent',
-      'gm_HL1_Lily_HECU_Base',
-      'gm_necrotics',
-      'gm_VoidIsland',
-      'Panopticon Parking',
-      'ph_zombie_bunker_remake',
-      '1950s Neighborhood',
-      'gm_Lifecenter',
-      'ph_westerncity',
-      'The Hidden - Discovery',
-      'The Hidden - Docks',
-      'The Hidden - Dam',
-    ]
+    - gm_construct but it is Hammer Editor
+    - gm_launchsite
+    - ttt_Al'sToyBarn
+    - Waluigi Pinball
+    - The Prop Arena
+    - The Kleiner Community Center
+    - ph_restaurant
+    - gm_excess island two in one
+    - gm_GirthConstructV2
+    - gm_devbattle
+    - Trackmania Map
+    - Backwood Stadium Speedway
+    - 'FlatOut 2: Parking Lot Derby'
+    - Defocus
+    - Dissonance
+    - Conglomerate
+    - gm_ohioburgerking
+    - ttt_oxxo_redux
+    - gm_descent
+    - gm_HL1_Lily_HECU_Base
+    - gm_necrotics
+    - gm_VoidIsland
+    - Panopticon Parking
+    - ph_zombie_bunker_remake
+    - 1950s Neighborhood
+    - gm_Lifecenter
+    - ph_westerncity
+    - The Hidden - Discovery
+    - The Hidden - Docks
+    - The Hidden - Dam
   garrys_mod_player_models:
     # The list of player models to use for the Garry's Mod objectives that use them. Defaults to the pre-installed player models, add and remove as needed.
     # We are using a combination of the default player models and all of Jack5's favourite player models for the possible objectives.
-    [
-      'Alyx Vance',
-      'Dr. Arne Magnusson',
-      'Barney Calhoun',
-      'Burnt Corpse',
-      'Chell',
-      'Citizen (Female)',
-      'Citizen (Male)',
-      'Combine Elite Soldier',
-      'Combine Soldier',
-      'Combine Soldier (Topless)',
-      'Corpse',
-      'Counter-Strike: Source Hostage',
-      'Counter-Strike: Source Counter-Terrorist (Gas Mask)',
-      'Counter-Strike: Source Counter-Terrorist (Riot)',
-      'Counter-Strike: Source Counter-Terrorist (SWAT)',
-      'Counter-Strike: Source Counter-Terrorist (Urban)',
-      'Counter-Strike: Source Terrorist (Arctic)',
-      'Counter-Strike: Source Terrorist (Guerilla)',
-      'Counter-Strike: Source Terrorist (Phoenix)',
-      'Counter-Strike: Source Terrorist (Sunglasses)',
-      'Day of Defeat: Source Soldier (American)',
-      'Day of Defeat: Source Soldier (German)',
-      'Eli Vance',
-      'Father Grigori',
-      'G-Man',
-      'Dr. Isaac Kleiner',
-      'Dr. Judith Mossman',
-      'Metro-Police',
-      'Nova Prospekt Guard',
-      'Odessa Cubbage',
-      'Rebel (Female)',
-      'Rebel (Male)',
-      'Rebel Medic (Female)',
-      'Rebel Medic (Male)',
-      'Skeleton',
-      'Wallace Breen',
-      'Zombie (Classic)',
-      'Zombie (Fast)',
-      'Zombine',
-      'Spanish Civil War 1936 - 1939',
-      'Darkwing Duck',
-      'Master Chief',
-      'Klonoa',
-      'Scrooge McDuck',
-      'Movie Sonic',
-      'Movie Tails',
-      'Movie Knuckles',
-      'Sniper Monkey',
-      'The Penguins of Madagascar',
-      'Azumanga Daioh character',
-      "Tyson Hesse's Tails",
-      'HWM Chell',
-      'Left 4 Dead Francis',
-      'Left 4 Dead Bill',
-      'Left 4 Dead Zoey',
-      'Left 4 Dead Louis',
-      'Left 4 Dead 2 Coach',
-      'Left 4 Dead 2 Nick',
-      'Left 4 Dead 2 Ellis',
-      'Left 4 Dead 2 Rochelle',
-      'Jax',
-      'Spiral Knights character',
-      'Tails Doll',
-      'Animal Crossing Villager',
-      'Among Us character',
-      'FNAF Security Breach character',
-      'Toad',
-      'Tails (solo)',
-    ]
+    - Alyx Vance
+    - Dr. Arne Magnusson
+    - Barney Calhoun
+    - Burnt Corpse
+    - Chell
+    - Citizen (Female)
+    - Citizen (Male)
+    - Combine Elite Soldier
+    - Combine Soldier
+    - Combine Soldier (Topless)
+    - Corpse
+    - 'Counter-Strike: Source Hostage'
+    - 'Counter-Strike: Source Counter-Terrorist (Gas Mask)'
+    - 'Counter-Strike: Source Counter-Terrorist (Riot)'
+    - 'Counter-Strike: Source Counter-Terrorist (SWAT)'
+    - 'Counter-Strike: Source Counter-Terrorist (Urban)'
+    - 'Counter-Strike: Source Terrorist (Arctic)'
+    - 'Counter-Strike: Source Terrorist (Guerilla)'
+    - 'Counter-Strike: Source Terrorist (Phoenix)'
+    - 'Counter-Strike: Source Terrorist (Sunglasses)'
+    - 'Day of Defeat: Source Soldier (American)'
+    - 'Day of Defeat: Source Soldier (German)'
+    - Eli Vance
+    - Father Grigori
+    - G-Man
+    - Dr. Isaac Kleiner
+    - Dr. Judith Mossman
+    - Metro-Police
+    - Nova Prospekt Guard
+    - Odessa Cubbage
+    - Rebel (Female)
+    - Rebel (Male)
+    - Rebel Medic (Female)
+    - Rebel Medic (Male)
+    - Skeleton
+    - Wallace Breen
+    - Zombie (Classic)
+    - Zombie (Fast)
+    - Zombine
+    - Spanish Civil War 1936 - 1939
+    - Darkwing Duck
+    - Master Chief
+    - Klonoa
+    - Scrooge McDuck
+    - Movie Sonic
+    - Movie Tails
+    - Movie Knuckles
+    - Sniper Monkey
+    - The Penguins of Madagascar
+    - Azumanga Daioh character
+    - Tyson Hesse's Tails
+    - HWM Chell
+    - Left 4 Dead Francis
+    - Left 4 Dead Bill
+    - Left 4 Dead Zoey
+    - Left 4 Dead Louis
+    - Left 4 Dead 2 Coach
+    - Left 4 Dead 2 Nick
+    - Left 4 Dead 2 Ellis
+    - Left 4 Dead 2 Rochelle
+    - Jax
+    - Spiral Knights character
+    - Tails Doll
+    - Animal Crossing Villager
+    - Among Us character
+    - FNAF Security Breach character
+    - Toad
+    - Tails (solo)
   # garrys_mod_props:
   # The list of prop types to use for the Garry's Mod objectives that use them. Defaults to some of the most recogniseable pre-installed prop types, add and remove as needed.
   # Unchanged from the base configuration, so they are not listed here.
   garrys_mod_weapons:
     # The list of weapons, specifically those that can harm players, NPCs and props, to use for the Garry's Mod objectives that use them. This list also includes entities that are functionally weapons when paired with the Gravity Gun. Defaults to the pre-installed weapons, add and remove as needed.
     # We are using all of the default weapons and all of Jack5's favourite weapons for the possible objectives.
-    [
-      '.357 Magnum',
-      'Pulse-Rifle',
-      'Bugbait',
-      'Crossbow',
-      'Crowbar',
-      'Frag Grenade',
-      'Gravity Gun',
-      '9mm Pistol',
-      'RPG Launcher',
-      'Shotgun',
-      'S.L.A.M.',
-      'SMG',
-      'Stunstick',
-      'Manhack Gun',
-      'Fists',
-      'Flechette Gun',
-      'Medkit',
-      'Combine Mine',
-      'Resistance Mine',
-      'Helicopter Bomb',
-      'CanGun',
-      'Plank',
-      'Serious Sam 2 weapon',
-      'Raising the Bar: Redux weapon',
-      'Haax Gun 2.0',
-      'Half-Life weapon',
-    ]
+    - .357 Magnum
+    - Pulse-Rifle
+    - Bugbait
+    - Crossbow
+    - Crowbar
+    - Frag Grenade
+    - Gravity Gun
+    - 9mm Pistol
+    - RPG Launcher
+    - Shotgun
+    - S.L.A.M.
+    - SMG
+    - Stunstick
+    - Manhack Gun
+    - Fists
+    - Flechette Gun
+    - Medkit
+    - Combine Mine
+    - Resistance Mine
+    - Helicopter Bomb
+    - CanGun
+    - Plank
+    - Serious Sam 2 weapon
+    - 'Raising the Bar: Redux weapon'
+    - Haax Gun 2.0
+    - Half-Life 1 weapon
   garrys_mod_tools:
     # The list of tools, which include weapons, vehicles, entities and anything else interesting, to use for the Garry's Mod objectives that use them. Defaults to the pre-installed tools, add and remove as needed.
     # We are using all of the default tools and all of Jack5's favourite tools for the possible objectives.
-    [
-      'Camera',
-      'Tool Gun',
-      'Physics Gun',
-      'Fog Editor',
-      'Sky Editor',
-      'Sun Editor',
-      'Bouncy Ball',
-      'Chair',
-      'Airboat',
-      'Jalopy',
-      'Jeep',
-      'Prisoner Pod',
-      'Cloudbox tool',
-      'Collision Resizer',
-      'Ragdoll colorizer',
-      'Easy Bonemerge Tool',
-      'Easy Animation Tool',
-      'Ragdoll Mover',
-      'Improved Weight',
-      'Skybox Editor Tool',
-      'Particle Attacher',
-      'Ragdoll Resizer',
-      'Resizer',
-      'Weight STool',
-    ]
+    - Camera
+    - Tool Gun
+    - Physics Gun
+    - Fog Editor
+    - Sky Editor
+    - Sun Editor
+    - Bouncy Ball
+    - Chair
+    - Airboat
+    - Jalopy
+    - Jeep
+    - Prisoner Pod
+    - Cloudbox tool
+    - Collision Resizer
+    - Ragdoll colorizer
+    - Easy Bonemerge Tool
+    - Easy Animation Tool
+    - Ragdoll Mover
+    - Improved Weight
+    - Skybox Editor Tool
+    - Particle Attacher
+    - Ragdoll Resizer
+    - Resizer
+    - Weight STool
   # garrys_mod_npcs:
   # The list of NPCs, only including those that can be killed, to use for the Garry's Mod objectives that use them. Defaults to the pre-installed NPCs, add and remove as needed.
   # Unchanged from the base configuration, so they are not listed here.
@@ -1777,14 +1757,12 @@ Keymaster's Keep:
     # - Endurance League
     # - Rally Events
     # Unchanged from the base configuration.
-    [
-      'Licenses',
-      'Beginner League',
-      'Amateur League',
-      'Professional League',
-      'Endurance League',
-      'Rally Events',
-    ]
+    - Licenses
+    - Beginner League
+    - Amateur League
+    - Professional League
+    - Endurance League
+    - Rally Events
   ############################
   # Mario Kart 8 (SW + WIIU) #
   ############################
@@ -1796,11 +1774,9 @@ Keymaster's Keep:
   mario_kart_8_wii_u_dlc_owned:
     # Indicates which Mario Kart 8 (Wii U) DLC the player owns, if any. Has no effect if Deluxe is enabled.
     # Unchanged from the base configuration.
-    [
-      'Animal Crossing x Mario Kart 8',
-      'Mercedes-Benz x Mario Kart 8',
-      'The Legend of Zelda x Mario Kart 8',
-    ]
+    - Animal Crossing x Mario Kart 8
+    - Mercedes-Benz x Mario Kart 8
+    - The Legend of Zelda x Mario Kart 8
   mario_kart_8_deluxe_dlc_owned:
     # Indicates which Mario Kart 8 Deluxe DLC the player owns, if any. Has no effect if Deluxe is disabled.
     # This used to include 'Booster Course Pass', but it has been removed to maximise the ability for Zeroman95 to be able to complete objectives.
@@ -1833,16 +1809,14 @@ Keymaster's Keep:
   platinumquest_level_packs:
     # Indicates which PlatinumQuest level packs the player wants to include when generating objectives.
     # Unchanged from the base configuration.
-    [
-      'Gold',
-      'Ultra',
-      'Platinum',
-      'PlatinumQuest',
-      'PlatinumQuest Locked',
-      'Hunt',
-      'Hunt Snow',
-      'Hunt Fright',
-    ]
+    - Gold
+    - Ultra
+    - Platinum
+    - PlatinumQuest
+    - PlatinumQuest Locked
+    - Hunt
+    - Hunt Snow
+    - Hunt Fright
   platinumquest_difficulties:
     # Indicates which PlatinumQuest difficulties the player wants to include when generating objectives.
     # Unchanged from the base configuration.
@@ -1913,30 +1887,26 @@ Keymaster's Keep:
   tower_unite_plaza_activities:
     # Indicates which Plaza Activities the player wants to include when generating objectives.
     # Unchanged from the base configuration.
-    [
-      'Casino',
-      'Arcade',
-      'Trivia',
-      'Bowling',
-      'Laser Tag',
-      'Dark Voyage',
-      'Minigames Arena',
-      'Billiards',
-      'Boardwalk',
-      'Fishing',
-    ]
+    - Casino
+    - Arcade
+    - Trivia
+    - Bowling
+    - Laser Tag
+    - Dark Voyage
+    - Minigames Arena
+    - Billiards
+    - Boardwalk
+    - Fishing
   tower_unite_game_worlds:
     # Indicates which Game Worlds the player wants to include when generating objectives.
     # Unchanged from the base configuration.
-    [
-      'Minigolf',
-      'Ball Race',
-      'SDNL',
-      'Virus',
-      'Little Crusaders',
-      'Zombie Massacre',
-      'Accelerate',
-    ]
+    - Minigolf
+    - Ball Race
+    - SDNL
+    - Virus
+    - Little Crusaders
+    - Zombie Massacre
+    - Accelerate
   ######################
   # Trivia Tricks (PC) #
   ######################
@@ -1949,69 +1919,65 @@ Keymaster's Keep:
   trivia_tricks_categories:
     # The categories to use in Trivia Tricks objectives that use them. "Steam Workshop" is included by default, but can be replaced with the names of the Steam Workshop categories one is subscribed to, or removed entirely.
     # Explicitly include Jack5's favourite categories as part of the objectives.
-    [
-      'Animals',
-      'Anime',
-      'Art & Literature',
-      'Film & TV',
-      'Food & Drink',
-      'Geography',
-      'History',
-      'Language',
-      'Math',
-      'Music',
-      'Science & Technology',
-      'Sports',
-      'Video Games',
-      'Mii Games & Mii Trivia',
-      'Video Game Doodles',
-      'Random trivia',
-      'One Piece',
-      'Film & TV Haikus',
-      'Which is higher',
-      'Video Game Haikus',
-      'Xbox Trivia',
-      'Legend of Zelda: Ocarina of Time Trivia',
-      'Kingdom Hearts',
-      'Voice Actor',
-      'Pokémon Generation 1 - Kanto',
-      'Dragonball',
-      'AFL Trivia',
-      'Major US Sports',
-      'F1 Trivia',
-      'Football / Soccer',
-      'Rick and Morty Quiz pack',
-      "Who's That Pokemon",
-      'Harry Potter',
-      'MCU Movies',
-      'Metal Gear Series',
-      'Star Wars',
-      'The Impossible Trivia',
-      'Pokemon',
-      'Toys',
-      'Super Smash Bros & related universes',
-      'Super Mario Trivia',
-      'Sonic the Quiz Pack',
-      'Horrible Histories',
-      'Horrible Science',
-      'Australia Trivia',
-      'PlayStation Trivia',
-      'Horrible Geography',
-      'Jack5 Trivia Extravaganza',
-    ]
+    - Animals
+    - Anime
+    - Art & Literature
+    - Film & TV
+    - Food & Drink
+    - Geography
+    - History
+    - Language
+    - Math
+    - Music
+    - Science & Technology
+    - Sports
+    - Video Games
+    - Mii Games & Mii Trivia
+    - Video Game Doodles
+    - Random trivia
+    - One Piece
+    - Film & TV Haikus
+    - Which is higher
+    - Video Game Haikus
+    - Xbox Trivia
+    - 'Legend of Zelda: Ocarina of Time Trivia'
+    - Kingdom Hearts
+    - Voice Actor
+    - Pokémon Generation 1 - Kanto
+    - Dragonball
+    - AFL Trivia
+    - Major US Sports
+    - F1 Trivia
+    - Football / Soccer
+    - Rick and Morty Quiz pack
+    - Who's That Pokemon
+    - Harry Potter
+    - MCU Movies
+    - Metal Gear Series
+    - Star Wars
+    - The Impossible Trivia
+    - Pokemon
+    - Toys
+    - Super Smash Bros & related universes
+    - Super Mario Trivia
+    - Sonic the Quiz Pack
+    - Horrible Histories
+    - Horrible Science
+    - Australia Trivia
+    - PlayStation Trivia
+    - Horrible Geography
+    - Jack5 Trivia Extravaganza
   ##############################################################
   # Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX) #
   ##############################################################
   vampire_survivors_dlc_owned:
     # Indicates which Vampire Survivors DLC the player owns, if any.
     # Jack5 owns all of the DLCs.
-    [
-      'Legacy of Moonspell',
-      'Tides of Foscari',
-      'Emergency Meeting',
-      'Operation Guns',
-      'Ode to Castlevania',
-    ]
+    - Legacy of Moonspell
+    - Tides of Foscari
+    - Emergency Meeting
+    - Operation Guns
+    - Ode to Castlevania
   vampire_survivors_allow_secret_characters:
     # If true, secret characters will be part of the characters that can be selected.
     # While secret characters make objectives too easy, it is necessary that they are included because a Vampire Survivors area takes too long to complete otherwise.

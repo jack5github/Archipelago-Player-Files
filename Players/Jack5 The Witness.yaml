@@ -341,57 +341,53 @@ The Witness:
   ###########################
   # Item & Location Options #
   ###########################
-  local_items: [
-      # I didn't realise how much I missed having the boat until my first run. This ensures it can be found within my copy of The Witness and not any other game.
-      'Boat',
-      # For a long time in my run with access to 'Early Caves', I couldn't even get in there because that access was locked behind a different game. This will fix that.
-      'Caves Shortcuts',
-      # It was really frustrating not having access to the Desert Control Panels when I first tried randomised Witness. Even though they're not critical, I don't want them to be randomised. These have been moved from the Start Inventory to Local Items so not all runs start exactly the same.
-      'Desert Control Panels',
-      # Not every symbol should be found within my game, but at least ensure that this critical puzzle element can be found.
-      'Progressive Dots',
-      # Not every symbol should be found within my game, but at least ensure that this critical puzzle element can be found.
-      'Progressive Symmetry',
-      # Puzzle skips should not hinge on other players' games.
-      'Puzzle Skip',
-      # 'Symbols' has ben removed from this list, as not every symbol should be found within my game.
-      # Triangles are needed to be a local item in order to allow for the Caves Lone Pillar to be completed.
-      'Triangles',
-    ]
+  local_items:
+    # I didn't realise how much I missed having the boat until my first run. This ensures it can be found within my copy of The Witness and not any other game.
+    - Boat
+    # For a long time in my run with access to 'Early Caves', I couldn't even get in there because that access was locked behind a different game. This will fix that.
+    - Caves Shortcuts
+    # It was really frustrating not having access to the Desert Control Panels when I first tried randomised Witness. Even though they're not critical, I don't want them to be randomised. These have been moved from the Start Inventory to Local Items so not all runs start exactly the same.
+    - Desert Control Panels
+    # Not every symbol should be found within my game, but at least ensure that this critical puzzle element can be found.
+    - Progressive Dots
+    # Not every symbol should be found within my game, but at least ensure that this critical puzzle element can be found.
+    - Progressive Symmetry
+    # Puzzle skips should not hinge on other players' games.
+    - Puzzle Skip
+    # 'Symbols' has ben removed from this list, as not every symbol should be found within my game.
+    # Triangles are needed to be a local item in order to allow for the Caves Lone Pillar to be completed.
+    - Triangles
   # Unchanged from the base configuration.
   non_local_items: []
-  start_inventory: {
-      # The first early-game symbol that is critical for getting right into the action.
-      'Black/White Squares': 1,
-    }
+  start_inventory:
+    # The first early-game symbol that is critical for getting right into the action.
+    Black/White Squares: 1
   # Unchanged from the base configuration.
   start_hints: []
   # Unchanged from the base configuration.
   start_location_hints: []
-  exclude_locations: [
-      # The Keep is simply too far away from everything else, not randomisable enough, and annoying to have to complete due to needing to walk on light-up panels. Excluding this locations does not prevent it from being accessed, it just isn't necessary for completion.
-      'Keep',
-      # The same rationale as the Keep applies for the Shipwreck, as it is tied to the Keep.
-      'Shipwreck',
-      # The RGB House is one of the most annoying parts of The Witness, so make sure it is excluded from being important.
-      'Town RGB House Entry Panel',
-      'Town RGB House Sound Room Left',
-      'Town RGB House Sound Room Right',
-      'Town RGB House Upstairs Left',
-      'Town RGB House Upstairs RGB Control',
-      'Town RGB House Upstairs Right',
-      # The treehouse's puzzles are some of the most annoying in the game, primarily because they are so far away from everything else, but they also are very difficult and even time-sensitive in some situations. Excluding these locations does not prevent them from being accessed, they just aren't necessary for completion.
-      'Treehouse',
-    ]
+  exclude_locations:
+    # The Keep is simply too far away from everything else, not randomisable enough, and annoying to have to complete due to needing to walk on light-up panels. Excluding this locations does not prevent it from being accessed, it just isn't necessary for completion.
+    - Keep
+    # The same rationale as the Keep applies for the Shipwreck, as it is tied to the Keep.
+    - Shipwreck
+    # The RGB House is one of the most annoying parts of The Witness, so make sure it is excluded from being important.
+    - Town RGB House Entry Panel
+    - Town RGB House Sound Room Left
+    - Town RGB House Sound Room Right
+    - Town RGB House Upstairs Left
+    - Town RGB House Upstairs RGB Control
+    - Town RGB House Upstairs Right
+    # The treehouse's puzzles are some of the most annoying in the game, primarily because they are so far away from everything else, but they also are very difficult and even time-sensitive in some situations. Excluding these locations does not prevent them from being accessed, they just aren't necessary for completion.
+    - Treehouse
   # Unchanged from the base configuration.
   priority_locations: []
   # Unchanged from the base configuration.
   item_links: []
-  plando_items: [
-      # Ensure that entering the Caves and solving the lone pillar puzzle progresses towards winning the game.
-      {
-        'locations': ['Caves Lone Pillar'],
-        'items': { 'Bunker Laser': true },
-        'force': true,
-      },
-    ]
+  plando_items:
+    # Ensure that entering the Caves and solving the lone pillar puzzle progresses towards winning the game.
+    - locations:
+        - Caves Lone Pillar
+      items:
+        Bunker Laser: true
+      force: true

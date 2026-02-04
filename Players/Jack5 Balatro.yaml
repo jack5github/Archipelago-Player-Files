@@ -94,23 +94,21 @@ Balatro:
     # Select which decks will be playable in the game.
     # This option is only considered if Playable Decks is set to choose.
     # I have chosen 8 specific decks from the pool, specifically those that don't have easy ways to break them like the Checkered Deck or the Zodiac Deck.
-    [
-      'Red Deck',
-      'Blue Deck',
-      'Yellow Deck',
-      'Green Deck',
-      'Black Deck',
-      # 'Magic Deck',
-      'Nebula Deck',
-      # 'Ghost Deck',
-      'Abandoned Deck',
-      # 'Checkered Deck',
-      # 'Zodiac Deck',
-      'Painted Deck',
-      # 'Anaglyph Deck',
-      # 'Plasma Deck',
-      # 'Erratic Deck',
-    ]
+    - Red Deck
+    - Blue Deck
+    - Yellow Deck
+    - Green Deck
+    - Black Deck
+    # - Magic Deck
+    - Nebula Deck
+    # - Ghost Deck
+    - Abandoned Deck
+    # - Checkered Deck
+    # - Zodiac Deck
+    - Painted Deck
+    # - Anaglyph Deck
+    # - Plasma Deck
+    # - Erratic Deck
   include_deckNumber:
     # Specify how many randomly selected decks will be playable.
     # This option is only considered if playable Decks is set to number.
@@ -149,10 +147,8 @@ Balatro:
     # (Also make sure to capitalize the first letters, it's case sensitive.)
     # This option is only considered if playable Stakes is set to choose.
     # Every single run I have played, I have always begged to be able to use the White Stake over all other stakes. This forces the White stake to be the only one that I'm ever able to use.
-    [
-      'White Stake',
-      # 'Red Stake'
-    ]
+    - White Stake
+    # - Red Stake
   include_stakesNumber:
     # Specify how many randomly selected stakes will be playable.
     # This option is only considered if playable Stakes is set to number.
@@ -196,13 +192,11 @@ Balatro:
     # The Syntax of this is the following: ['The Fool;The Magician;The High Priestess;The Empress;The Emperor', ...] where the bundles are separated by the commas.
     # Make sure to use the right symbols.
     # Unchanged from the standard configuration.
-    [
-      'The Fool;The Magician;The High Priestess;The Empress;The Emperor',
-      'The Hierophant;The Lovers',
-      'The Chariot;Justice;The Hermit;The Wheel of Fortune;Strength;Death',
-      'The Hanged Man;Temperance;The Devil;The Tower;The Star',
-      'The Moon;The Sun;Judgement;The World',
-    ]
+    - 'The Fool;The Magician;The High Priestess;The Empress;The Emperor'
+    - 'The Hierophant;The Lovers'
+    - 'The Chariot;Justice;The Hermit;The Wheel of Fortune;Strength;Death'
+    - 'The Hanged Man;Temperance;The Devil;The Tower;The Star'
+    - 'The Moon;The Sun;Judgement;The World'
   planet_bundle:
     # Instead of making every planet card an individual item, you have the option to put them all in one bundle, that gets placed in the world.
     # There is also the possibility to make custom bundles (not recommended).
@@ -323,22 +317,20 @@ Balatro:
   ###########################
   # Item & Location Options #
   ###########################
-  local_items: [
-      # Ensure that the first 5 out of 20 Joker Bundles can be found in Balatro, in order to reduce the annoyance of being unable to do anything in it.
-      'Joker Bundle 1',
-      'Joker Bundle 2',
-      'Joker Bundle 3',
-      'Joker Bundle 4',
-      'Joker Bundle 5',
-    ]
+  local_items:
+    # Ensure that the first 5 out of 20 Joker Bundles can be found in Balatro, in order to reduce the annoyance of being unable to do anything in it.
+    - Joker Bundle 1
+    - Joker Bundle 2
+    - Joker Bundle 3
+    - Joker Bundle 4
+    - Joker Bundle 5
   # Most of the rest of these options are left unchanged from the standard configuration.
   non_local_items: []
-  start_inventory: {
-      # Allow Archipelago items to be unlocked as soon as possible.
-      Archipelago Belt: 1,
-      Archipelago Tarot: 1,
-      Archipelago Spectral: 1,
-    }
+  start_inventory:
+    # Allow Archipelago items to be unlocked as soon as possible.
+    Archipelago Belt: 1
+    Archipelago Tarot: 1
+    Archipelago Spectral: 1
   start_hints: []
   start_location_hints: []
   exclude_locations: []

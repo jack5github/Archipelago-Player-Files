@@ -197,10 +197,8 @@ Dracomino:
   plando_items:
     # Generic items plando.
     # Effectively ban the skinniest and tallest mino by locking it behind the very last line being cleared. It is not possible to do the same for the tetromino counterpart, because it is not always clear how many of them there are.
-    [
-      {
-        'locations': ['Line 69 Cleared'],
-        'items': { 'I Pentomino': true },
-        'force': true
-      }
-    ]
+    - locations:
+        - Line 69 Cleared
+      items:
+        I Pentomino: true
+      force: true

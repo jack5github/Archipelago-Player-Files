@@ -18,22 +18,20 @@ Totally Accurate Battle Simulator:
     full: 50
     minimal: 0
   factions:
-    [
-      'Tribal',
-      'Wild West',
-      'Fantasy Good',
-      'Legacy',
-      'Secret',
-      'Medieval',
-      'Ancient',
-      'Dynasty',
-      'Renaissance',
-      'Pirate',
-      'Viking',
-      'Fantasy Evil',
-      'Spooky',
-      'Farmer',
-    ]
+    - Tribal
+    - Wild West
+    - Fantasy Good
+    - Legacy
+    - Secret
+    - Medieval
+    - Ancient
+    - Dynasty
+    - Renaissance
+    - Pirate
+    - Viking
+    - Fantasy Evil
+    - Spooky
+    - Farmer
   progressive_factions:
     'false': 50
     'true': 0
