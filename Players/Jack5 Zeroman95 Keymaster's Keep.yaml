@@ -558,8 +558,8 @@ Keymaster's Keep:
   game_backlog_actions:
     # Defines the possible actions that could be required on a game in the backlog.
     # You can customize this list to your liking.
-    # This list has been simplified as much as possible to focus exclusively on trying games as opposed to beating them.
-    ['Try']
+    # This list has been simplified as much as possible to focus exclusively on playing games as opposed to beating them.
+    ['Play']
   game_backlog_game_selection:
     # Defines which games are in the player's backlog.
     # Replace the placeholders with values of your own choosing.
@@ -1053,10 +1053,10 @@ Keymaster's Keep:
     - Castle Break (2019) (Steam, Zeroman95)
     - Chuzzle Deluxe (2006) (Steam, Zeroman95)
     - Perfect Universe (2016) (PC Steam, Zeroman95)
-    - 'Command & Conquer: Red Alert 2 and Yuri s Revenge (2001) (Steam, Zeroman95)'
+    - "Command & Conquer: Red Alert 2 and Yuri's Revenge (2001) (Steam, Zeroman95)"
     - 'Command & Conquer: Red Alert 3 (2008) (PC, Zeroman95)'
-    - 'Command & Conquer 3: Kane s Wrath (2008) (PC, Zeroman95)'
-    - 'Command & Conquer 3: Kane s Wrath (2009) (Steam, Zeroman95)'
+    - "Command & Conquer 3: Kane's Wrath (2008) (PC, Zeroman95)"
+    - "Command & Conquer 3: Kane's Wrath (2009) (Steam, Zeroman95)"
     - 'Command & Conquer 3: Tiberium Wars Kane Edition (2007) (PC, Zeroman95)'
     - 'Command & Conquer and the Covert Operations (1996) (Steam, Zeroman95)'
     - Command & Conquer Generals (2003) (Steam, Zeroman95)
@@ -1140,7 +1140,7 @@ Keymaster's Keep:
     - 'Magrunner: Dark Pulse (2013) (PC Steam, Zeroman95)'
     - MechAssault 2 (2005) (Xbox, Zeroman95)
     - Archibald's Adventures (PSP, Zeroman95)
-    - BreakQuest (PSP, Zeroman95)    - Who's That Flying?! (PSP, Zeroman95)
+    - BreakQuest (PSP, Zeroman95)
     - Who's That Flying?! (PSP, Zeroman95)
     - Metal Fatigue (2000) (Steam, Zeroman95)
     - 'Metro: Last Light Complete Edition (2019) (Steam, Zeroman95)'
@@ -1207,7 +1207,7 @@ Keymaster's Keep:
     - The Settlers II 10th Anniversary (2006) (PC, Zeroman95)
     - The Settlers IV Gold Edition (2002) (PC, Zeroman95)
     - 'Ticket to Ride: First Journey (2017) (Steam, Zeroman95)'
-    - 'Tiny Tina s Assault on Dragon Keep: A Wonderlands One-shot Adventure (2021) (Steam, Zeroman95)'
+    - "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure (2021) (Steam, Zeroman95)"
     - Titan Souls (2015) (Steam, Zeroman95)
     - Tomb Raider (2013) (Steam, Zeroman95)
     - 'Total War: SHOGUN 2 (2011) (Steam, Zeroman95)'
@@ -1257,7 +1257,7 @@ Keymaster's Keep:
     - Chicken Invaders 2 (2016) (Steam, Zeroman95)
     - Chuzzle (2005) (PC, Zeroman95)
     - Circuit Breakers (2015) (PC Steam, Zeroman95)
-    - 'Command & Conquer 3: Kane s Wrath (2008) (Xbox 360, Zeroman95)'
+    - "Command & Conquer 3: Kane's Wrath (2008) (Xbox 360, Zeroman95)"
     - 'Command & Conquer 3: Tiberium Wars (2007) (Steam, Zeroman95)'
     - Command & Conquer 4 Tiberian Twilight (2010) (Steam, Zeroman95)
     - Command & Conquer Red Alert 3 (2008) (Steam, Zeroman95)
@@ -1270,7 +1270,7 @@ Keymaster's Keep:
     - Crystal Crisis (2019) (Steam, Zeroman95)
     - Cuphead (2019) (Switch, Zeroman95)
     - Cursed Companions (2025) (Steam, Zeroman95)
-    - 'Defendin  De Penguin (2010) (Wii, Zeroman95)'
+    - "Defendin' De Penguin (2010) (Wii, Zeroman95)"
     - Dicey Dungeons (2019) (Steam, Zeroman95)
     - Dig Or Die (2018) (Steam, Zeroman95)
     - 'Disney Hotshots: Buzz Lightyear of Star Command (2001) (PC, Zeroman95)'
@@ -1278,8 +1278,8 @@ Keymaster's Keep:
     - 'Doctor Who: Evacuation Earth (2010) (DS, Zeroman95)'
     - Donkey Kong 64 (1999) (Wii U Virtual Console, Zeroman95)
     - 'Donkey Kong Country: Tropical Freeze (2018) (Switch, Zeroman95)'
-    - 'Don t Starve (2013) (Steam, Zeroman95)'
-    - 'Dood s Big Adventure (2011) (Wii, Zeroman95)'
+    - "Don't Starve (2013) (Steam, Zeroman95)"
+    - "Dood's Big Adventure (2011) (Wii, Zeroman95)"
     - DOOM 3 (2004) (Steam, Zeroman95)
     - DOOM 64 (2020) (Steam, Zeroman95)
     - DOOM + DOOM II (1995) (Steam, Zeroman95)
@@ -1314,7 +1314,7 @@ Keymaster's Keep:
     - Human Fall Flat (2016) (Steam, Zeroman95)
     - Hydroneer (2020) (Steam, Zeroman95)
     - Hylics (2015) (Steam, Zeroman95)
-    - 'I'm on Observation Duty (2018) (Steam, Zeroman95)'
+    - "I'm on Observation Duty (2018) (Steam, Zeroman95)"
     - Inazuma Eleven Go! Light (2015) (3DS, Zeroman95)
     - Insaniquarium! Deluxe (2006) (Steam, Zeroman95)
     - 'Jak II: Renegade (2003) (PlayStation 2, Zeroman95)'
@@ -1331,10 +1331,10 @@ Keymaster's Keep:
     - Mario Tennis Aces (2018) (Switch, Zeroman95)
     - Medieval Games (2009) (Wii, Zeroman95)
     - Arcade Airhockey & Bowling (2011) (PSP, Zeroman95)
-    - 'Megaman: Dr. Willy's Revenge (1992) (Gameboy, Zeroman95)'
+    - "Megaman: Dr. Willy's Revenge (1992) (Gameboy, Zeroman95)"
     - Minecraft Dungeons (2020) (Switch, Zeroman95)
     - Minecraft Xbox 360 Edition (2013) (Xbox 360, Zeroman95)
-    - 'Monaco: What's Yours is Mine (2013) (Steam, Zeroman95)'
+    - "Monaco: What's Yours is Mine (2013) (Steam, Zeroman95)"
     - Monster Hunter 4 Ultimate (2015) (3DS, Zeroman95)
     - Moonbase Alpha (2010) (Steam, Zeroman95)
     - Move or Die (2016) (Steam, Zeroman95)
@@ -1389,7 +1389,7 @@ Keymaster's Keep:
     - Shrek SuperSlam (2005) (Gamecube, Zeroman95)
     - Slime Rancher (2017) (Steam, Zeroman95)
     - 'Snack World: The Dungeon Crawl - Gold (2020) (Switch, Zeroman95)'
-    - 'Sonic 3D Flickies' Island (1998) (PC, Zeroman95)'
+    - "Sonic 3D Flickies' Island (1998) (PC, Zeroman95)"
     - Sonic All-Stars Racing Transformed Limited Edition (2012) (Xbox 360, Zeroman95)
     - 'Sonic Colours: Ultimate (2021) (Switch, Zeroman95)'
     - Sonic Colours (2010) (Wii, Zeroman95)
