@@ -1,9 +1,8 @@
 ﻿name: ZeroJackKeep{NUMBER}
-# TODO: Create version of Keymaster's Keep player file that works better in multiworlds
 description: |-
   Jack5 and Zeroman95's Keymaster's Keep player file
 
-  This Keymaster's Keep configuration combines our non-Archipelago-supported games and interests into a single player file, which is more condensed compared to the Keymaster's Keep default for both simplicity and an added challenge. The main difference is the goal being changed from 'Keymaster's Challenge' to 'Area Domination', as we would prefer this config's completion not to hinge on a single challenge.
+  This Keymaster's Keep configuration combines our non-Archipelago-supported games and interests into a single player file, which is more condensed compared to the Keymaster's Keep default for both simplicity and an added challenge. The main difference is the goal being changed from 'Keymaster's Challenge' to either 'Magic Key Heist' or 'Area Domination', as we would prefer this config's completion not to hinge on a single challenge.
 game: Keymaster's Keep
 requires:
   version: 0.6.4
@@ -26,8 +25,9 @@ Keymaster's Keep:
     # Magic Key Heist: Acquire X magic keys and escape the Keymaster's Keep
     # Area Domination: Acquire conquest medallions by completing all trials in X% of keep areas and escape the Keymaster's Keep
     # Rather than having the entire run hinge on a final challenge (which we've never played) or require a certain number of keys, require a certain number of areas to be completed.
+    # Jack5 and Zeroman95 have played Keymaster's Keep many times, and their preferred goals are Magic Key Heist and Area Domination. Because there is a time and a place for both, and they are equally good when compared to each other, there is a random chance that either will be selected. The Keymaster's Challenge is not desired due to the game hinging on a single area.
     keymasters_challenge: 0 # TODO: Play this
-    magic_key_heist: 0
+    magic_key_heist: 50
     area_domination: 50
   artifacts_of_resolve_total:
     # Determines how many Artifacts of Resolve are in the item pool.
@@ -44,8 +44,8 @@ Keymaster's Keep:
   conquest_medallions_percentage_required:
     # Determines the percentage of Conquest Medallions required before escaping the Keymaster's Keep. Completing all trials in a keep awards a Conquest Medallion.
     # Only relevant if the selected goal is Area Domination.
-    # Was originally 10/12 of the total keep areas, now 11/13 with the inclusion of Consumables.
-    85: 50
+    # Even with the inclusion of Consumables, if this value is made too high, it makes completing Keymaster's Keep too difficult. Since Magic Key Heist has been restored as a potential goal, this value has been reduced from 80% (10/12-13 areas) to make it more in line with the effort required to complete Magic Key Heist (now 60%, 8/13 areas).
+    60: 50
   magic_keys_required:
     # Determines how many Magic Keys are required before escaping the Keymaster's Keep.
     # Only relevant if the selected goal is Magic Key Heist.
@@ -162,19 +162,27 @@ Keymaster's Keep:
     # At the moment, the only games where difficult objectives are allowed are Portal and Trivia Tricks.
     [
       'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
+      'Consumables (META)',
       'Custom (META)',
+      'Dicey Dungeons (PC + SW, AND, IOS)',
+      'Dominion (BOARD + AND, IOS, PC)',
       'Embr (PC + PS4, SW, XONE)',
+      'Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)',
       'Game Backlog (META)',
       "Garry's Mod (PC + MOD)",
       'Goofy Gorillas (PC)',
       'Gran Turismo 3: A-Spec (PS2)',
       'Left 4 Dead 2 (PC + X360)',
+      'Magic the Gathering (CARD + PC, AND, IOS)',
       'Mario Kart 8 (SW + WIIU)',
       'Paperball (PC + SW)',
       'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
       'PlatinumQuest (MOD)',
       'Sanctum (PC)',
+      'Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)',
+      'Super Hexagon (PC + AND, IOS)',
       'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
+      "Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)",
       'Tower Unite (PC)',
       'Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)',
       'Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)',
@@ -193,18 +201,26 @@ Keymaster's Keep:
     # At the moment, the only game where time consuming objectives are allowed is Game Backlog, as all its objectives are classified as time consuming even though changes have been made to reduce the time it takes to complete them.
     [
       'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
+      'Consumables (META)',
       'Custom (META)',
+      'Dicey Dungeons (PC + SW, AND, IOS)',
+      'Dominion (BOARD + AND, IOS, PC)',
       'Embr (PC + PS4, SW, XONE)',
+      'Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)',
       "Garry's Mod (PC + MOD)",
       'Goofy Gorillas (PC)',
       'Gran Turismo 3: A-Spec (PS2)',
       'Left 4 Dead 2 (PC + X360)',
+      'Magic the Gathering (CARD + PC, AND, IOS)',
       'Mario Kart 8 (SW + WIIU)',
       'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
       'PlatinumQuest (MOD)',
       'Portal (PC + PS3, SW, X360)',
       'Sanctum (PC)',
+      'Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)',
+      'Super Hexagon (PC + AND, IOS)',
       'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
+      "Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)",
       'Tower Unite (PC)',
       'Trivia Tricks (PC)',
       'Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)',
@@ -219,22 +235,45 @@ Keymaster's Keep:
   game_medley_mode:
     # If true, a percentage of keep areas will feature Game Medley as their game, with each trial sourced randomly from a separate, dedicated pool of games.
     # Activating Game Medley Mode will disable optional game conditions for keep areas assigned to Game Medley.
-    # We currently don't have any desire to play Game Medley, but this may change in the future.
-    'false': 50
-    'true': 0
+    # This has been enabled in order to give Game Medley a chance, though its chance of occurring should be low considering it is harder to earn a Conquest Medallion from it.
+    'false': 0
+    'true': 50
   game_medley_percentage_chance:
     # Determines the percentage chance of a game medley being selected when Game Medley Mode is enabled.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
-    # Unchanged from the base configuration.
-    100: 50
+    # Reduced to a mere 5% to make Game Medley very unlikely to occur.
+    5: 50
   game_medley_game_selection:
     # Defines the game pool that will be used to generate Game Medley trials.
     # Only game names originally listed in 'game_selection' are accepted.
     # You are allowed to place games that already appear in other selection options here.
     # You are allowed to add the same game multiple times here. This will act as a weighted pool.
     # If this is left empty, all games from other selection options will be used as a default.
-    # Unchanged from the base configuration.
-    []
+    # Game Medley should contain all non-meta games.
+    [
+      'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
+      'Dicey Dungeons (PC + SW, AND, IOS)',
+      'Dominion (BOARD + AND, IOS, PC)',
+      'Embr (PC + PS4, SW, XONE)',
+      'Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)',
+      "Garry's Mod (PC + MOD)",
+      'Goofy Gorillas (PC)',
+      'Gran Turismo 3: A-Spec (PS2)',
+      'Left 4 Dead 2 (PC + X360)',
+      'Magic the Gathering (CARD + PC, AND, IOS)',
+      'Mario Kart 8 (SW + WIIU)',
+      'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
+      'Portal (PC + PS3, SW, X360)',
+      'Rhythm Heaven Fever (WII + WIIU)',
+      'Sanctum (PC)',
+      'Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)',
+      'Super Hexagon (PC + AND, IOS)',
+      'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
+      "Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)",
+      'Tower Unite (PC)',
+      'Trivia Tricks (PC)',
+      'Worms Armageddon (PC + PS4, PS5, SW, XONE, XSX)',
+    ]
   game_selection:
     # Defines the game pool to select from.
     # All supported games are listed. Remove the ones you don't own or want to play.
@@ -242,21 +281,25 @@ Keymaster's Keep:
     [
       # Game owned by Jack5. Implementation created by Jack5.
       # 'Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX)' has been removed from this list, as Jack5 plays it all the time and it would be boring to have it show up as part of a Keymaster's Keep run.
-      # Game owned by Jack5 and Zeroman95. Included due to Major Hawk10's play games with us.
+      # Game owned by Jack5 and Zeroman95. Included due to Major Hawk10's desire to play games with us.
       'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
       # An alternative to the in-built shop. Implementation created by Jack5.
       'Consumables (META)',
       # Things Jack5 and Zeroman95 experience regularly. Implementation comes with Keymaster's Keep. Included twice to allow it to appear a second time (first time is forced).
       'Custom (META)',
       'Custom (META)',
+      # Game owned by Jack5 and forbo.
+      'Dicey Dungeons (PC + SW, AND, IOS)',
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
       'Dominion (BOARD + AND, IOS, PC)',
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
       'Embr (PC + PS4, SW, XONE)',
+      # Game owned by Jack5 and forbo.
+      'Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)',
       # Games on Jack5 and Zeroman95's Backloggery. Implementation comes with Keymaster's Keep. Included twice to allow it to appear a second time (first time is forced).
       'Game Backlog (META)',
       'Game Backlog (META)',
-      # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
+      # Game owned by Jack5, Zeroman95 and forbo. Implementation created by Jack5.
       "Garry's Mod (PC + MOD)",
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
       'Goofy Gorillas (PC)',
@@ -264,27 +307,37 @@ Keymaster's Keep:
       'Gran Turismo 3: A-Spec (PS2)',
       # Game owned by Jack5 and Zeroman95.
       'Left 4 Dead 2 (PC + X360)',
+      # Game owned by forbo.
+      'Magic the Gathering (CARD + PC, AND, IOS)',
       # Game owned by Jack5 and Zeroman95.
       'Mario Kart 8 (SW + WIIU)',
       # Game owned by Jack5.
       # 'Paperball (PC + SW)' has been removed from this list, as its objectives are all mostly the same, and the game gets boring quick.
       # Game owned by Jack5 and Zeroman95.
       # 'PEAK (PC)' has been removed from this list, as Jack5 has installed the official PEAK mod.
-      # Game owned by Zeroman95.
+      # Game owned by Zeroman95 and forbo.
       # 'Peggle Deluxe (PC)' has been removed from this list, as Zeroman95 has no desire to beat the entirety of Adventure Mode in order to have access to everything.
       # Game owned by Zeroman95.
       'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
       # Game owned by Jack5.
-      # 'PlatinumQuest (MOD)' has been removed from this list, as it has 'Beat the Platinum Score' objectives, which are difficult but are not considered as such. An update to the implementation is required to remedy this. The game is also similar to Paperball.
+      'PlatinumQuest (MOD)',
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
       'Portal (PC + PS3, SW, X360)',
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
       # 'R.E.P.O. (PC)' has been removed from this list, as Jack5 has installed the official R.E.P.O. mod.
+      # Game owned by forbo.
+      'Rhythm Heaven Fever (WII + WIIU)',
       # Game owned by Zeroman95. Implementation created by Jack5.
       'Sanctum (PC)',
+      # Game owned by Zeroman95 and forbo.
+      'Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)',
+      # Game owned by Jack5 and forbo.
+      'Super Hexagon (PC + AND, IOS)',
       # Game owned by Zeroman95.
       'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
-      # Game owned by Jack5 and Zeroman95.
+      # Game owned by Jack5 and forbo.
+      "Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)",
+      # Game owned by Jack5, Zeroman95 and forbo.
       'Tower Unite (PC)',
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
       'Trivia Tricks (PC)',
@@ -359,6 +412,7 @@ Keymaster's Keep:
       "2 or more people are Hungry Jacks'd at the same time (if possible)",
       "An Archipelago player's game is released",
       'Buy something from the Discord Shop Orbs Exclusives',
+      'Catch a shiny Pokémon',
       'Change Discord server tag',
       'coatofarmor is the straight man of the group',
       'coatofarmor leaves as soon as a game is over',
@@ -369,13 +423,17 @@ Keymaster's Keep:
       'Complete something taxing and get barely anything in return',
       'DoMess uses his microphone',
       "DoMess' soundboard is perfectly timed",
+      "Don't play a game for an entire voice call",
       'Drink water',
+      'Earn any RetroAchievement',
       'Everyone immediately points out the song now playing',
       "Find a new Keymaster's Keep codex entry to try",
+      'Finish a round of the Wiki Speedrun Game',
       "Five Night's at Freddy's reference",
       'Game connection issues',
       'Game crash',
       'Get a message in the supporter channels',
+      'Go outside and touch grass',
       'Glitch and Major Hawk10 argue',
       "Glitch can't think of a good defense",
       'Glitch dies in-game',
@@ -444,7 +502,8 @@ Keymaster's Keep:
       'No-one can agree on what game to play',
       'Obsidian vault housekeeping',
       'Pizza night',
-      'Play an unplayed game from Backloggery',
+      # Disabled due to Game Backlog always being present as an area.
+      # 'Play an unplayed game from Backloggery',
       'Post in the HOO-ROO GAMES Discord',
       'Quote from SpongeBob SquarePants',
       "Remind Keynaster's Keep developers about random bag",
@@ -454,6 +513,7 @@ Keymaster's Keep:
       'Send a message in a group chat',
       "Someone really doesn't like an inside joke",
       'Sitting around waiting for a long while',
+      "Solve today's Wordle",
       'Surprised by a game being completed',
       "SweetCookie500 doesn't respond for a really long time",
       'SweetCookie500 posts some art',
@@ -1834,6 +1894,15 @@ Keymaster's Keep:
     # Zeroman95 is a 3DS player.
     3ds: 50
     wiiu: 0
+  #############################################################
+  # Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX) #
+  #############################################################
+  tony_hawks_pro_skater_1_plus_2_include_create_a_skater:
+    # Enable objectives that require a custom skater.
+    1: 50
+  tony_hawks_pro_skater_1_plus_2_include_secret_skaters:
+    # Enable objectives that require secret skaters.
+    1: 50
   ####################
   # Tower Unite (PC) #
   ####################
