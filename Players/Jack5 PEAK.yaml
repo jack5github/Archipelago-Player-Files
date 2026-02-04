@@ -1,0 +1,403 @@
+﻿name: Jack5Peak{NUMBER}
+description: |-
+  Jack5's PEAK player file
+
+
+game: PEAK
+requires:
+  version: 0.6.6
+PEAK:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    normal: 50
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+  goal:
+    # Determines the goal of the seed
+    # Reach Peak: Reach the peak on the specified ascent level
+    # Complete All Badges: Collect the specified number of badges
+    # 24 Karat Badge: Toss the Ancient Idol into The Kiln's lava.
+    # Peak and Badges: Reach the peak on the specified ascent level and collect the specified number of badges
+    # I'm not the kind of person to be able to get a ton of badges in a short period of time, so I'm going to focus on reaching the Peak only.
+    reach_peak: 50
+    complete_all_badges: 0
+    24_karat_badge: 0
+    peak_and_badges: 0
+  ascent_count:
+    # The ascent level required to complete the Reach Peak goal (0-7)
+    # Higher ascents add more difficulty modifiers and challenges
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 7.
+    # Considering how long PEAK takes to beat once, I think only needing to beat the game twice is a good value to start with.
+    2: 50
+  badge_count:
+    # The number of badges required to complete the Complete All Badges goal
+    # There are 54 total badges available in the game
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 54.
+    # Irrelevant as my goal is not to collect all badges.
+    20: 50
+  progressive_stamina:
+    # Enable progressive stamina bars
+    # Players start with 25% stamina and unlock 25% more with each upgrade until reaching 100%
+    # I have chosen to enable this in order to have a worse start, as is typical in Archipelago runs.
+    'false': 0
+    'true': 50
+  additional_stamina_bars:
+    # Enable 4 additional stamina bars beyond the base 100%
+    # Allows players to reach up to 200% total stamina (requires Progressive Stamina to be enabled)
+    # I have chosen to enable this in order to have an easier end, as is typical in Archipelago runs.
+    'false': 0
+    'true': 50
+  ring_link:
+    # When enabled, ring pickups are shared among all players with Ring Link enabled
+    # For PEAK; rings are stamina. Consuming food will send Rings to other players with Ring Link enabled. Poisonous food will send negative rings.
+    # Enabled in case we use Ring Link in other games.
+    'false': 0
+    'true': 50
+  hard_ring_link:
+    # When enabled, ring pickups are shared among all players with Hard Ring Link enabled
+    # Similar to Ring Link, but instead of sending rings when consuming food, rings are sent from certain actions and events.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  energy_link:
+    # When enabled, allows sending and receiving energy from a shared server pool
+    # Players can contribute stamina to help others in need
+    # Enabled in case we use Energy Link in other games.
+    'false': 0
+    'true': 50
+  trap_link:
+    # When enabled, traps you receive are also sent to other players with Trap Link enabled
+    # You will also receive any linked traps from other players with Trap Link enabled,
+    # if you have a weight above "none" set for that trap
+    # Enabled in case we use Trap Link in other games.
+    'false': 0
+    'true': 50
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # YOUR BODIES WILL NEVER BE FOUND.
+    'false': 0
+    'true': 50
+  death_link_behavior:
+    # Determines what happens when a Death Link is received
+    # Kill Random Player: A random player in your lobby will be killed
+    # Reset to Last Checkpoint: All players will be teleported to the last checkpoint/campfire
+    # Killing a random player is far too punishing when it comes to PEAK, for I could be playing alone, and this would effectively cause a game over.
+    kill_random_player: 0
+    reset_to_last_checkpoint: 50
+  death_link_send_behavior:
+    # Determines when Death Links are sent to other players
+    # Any Player Dies: Send Death Link whenever any player in your game dies
+    # All Players Dead: Send Death Link only when all players are dead (game over)
+    # Death Link has to happen often, does it not?
+    any_player_dies: 50
+    all_players_dead: 0
+  trap_percentage:
+    # Replace a percentage of junk items in the item pool with random traps
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Increased from 10% to 20%, as I have done in other games I've played.
+    20: 50
+  instant_death_trap_weight:
+    # Likelihood of receiving a trap which instantly kills a player
+    # Absolutely not.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  items_to_bombs_weight:
+    # Likelihood of receiving a trap which drops the currently held item and replaces it with Dynamite
+    # THROW THAT SUCKER!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  pokemon_trivia_trap_weight:
+    # Likelihood of receiving a trap which quizzes the player with Pokemon trivia
+    # Do I look like I know what a Pokemon is?
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  blackout_trap_weight:
+    # Likelihood of receiving a trap which blacks out the player's screen temporarily
+    # Ah yes, I've finally gone blind.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  spawn_bee_swarm_weight:
+    # Likelihood of receiving a trap which spawns a swarm of bees
+    # NO NOT THE BEES! AAAAAAARRRRRGRGGGHHH!! THEY'RE IN MY EYES! AHHHHHHHHGHGGGHGHHH!!!
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  banana_peel_trap_weight:
+    # Likelihood of receiving a trap which spawns a berrynana peel in front of a player
+    # Get Mario Karted, idiot.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  minor_poison_trap_weight:
+    # Likelihood of receiving a trap which applies a weak Poison Affliction to a player
+    # A little radiation.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  poison_trap_weight:
+    # Likelihood of receiving a trap which applies a Poison Affliction to a player
+    # More radiation!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  deadly_poison_trap_weight:
+    # Likelihood of receiving a trap which applies a strong Poison Affliction to a player
+    # TOO MUCH RADIATION!!!
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  tornado_trap_weight:
+    # Likelihood of receiving a trap which spawns a tornado on a player
+    # Excuse me, but I did NOT sign up for tornados to be on biomes other than Mesa!
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  swap_trap_weight:
+    # Likelihood of receiving a trap which swaps the position of all players
+    # This oughta be fun.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  nap_time_trap_weight:
+    # Likelihood of receiving a trap which applies a Drowsy Affliction to a player
+    # Night night!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  hungry_hungry_camper_trap_weight:
+    # Likelihood of receiving a trap which applies a Hunger Affliction to a player
+    # I'm very hungry! Give me the Scout!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  balloon_trap_weight:
+    # Likelihood of receiving a trap which ties a bundle of balloons to a player
+    # You know, I wonder how dangerous this trap is going to be.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  slip_trap_weight:
+    # Likelihood of receiving a trap which makes a player slip and fall
+    # Whoops!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  freeze_trap_weight:
+    # Likelihood of receiving a trap which applies a Cold Affliction to a player
+    # FREEZE RAY!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  cold_trap_weight:
+    # Likelihood of receiving a trap which applies a mild Cold Affliction to a player
+    # Brrrrrr, it's cold out here.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  hot_trap_weight:
+    # Likelihood of receiving a trap which applies a Hot Affliction to a player
+    # AOUW AOUW AOUW! HOTHOTHOTHOTHOTHOT!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  injury_trap_weight:
+    # Likelihood of receiving a trap which applies an Injury Affliction to a player
+    # Yeah no. I don't want to lose a whole bunch of health permanently from a trap.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  cactus_ball_trap_weight:
+    # Likelihood of receiving a trap which replaces a players currently held item with a Cactus Ball
+    # Thorns for hands!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  yeet_trap_weight:
+    # Likelihood of receiving a trap which causes a player to throw their currently held item at max force
+    # ...yyyyyyyyyyYEET!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  tumbleweed_trap_weight:
+    # Likelihood of receiving a trap which spawns a tumbleweed that chases a player
+    # Oh, this trap is going to be SUPER SCARY.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  zombie_horde_trap_weight:
+    # Likelihood of receiving a trap which spawns a horde of mushroom zombies
+    # Zombies are already super terrifying when they happen normally, NO THANKS!
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  gust_trap_weight:
+    # Likelihood of receiving a trap which spawns a wind storm that pushes players around
+    # This blows.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  mandrake_trap_weight:
+    # Likelihood of receiving a trap which replaces a player's currently held item with a Mandrake
+    # I have never seen a Mandrake before, and after looking it up on the PEAK wiki... NOPE. NOPE NOPE NOPE NOPE NOPE.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  fungal_infection_trap_weight:
+    # Likelihood of receiving a trap which applies a Spores Affliction over time to a player
+    # Similar situation as with zombies.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  fear_trap_weight:
+    # Likelihood of receiving a spooky trap
+    # JUMPSCARE!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  scoutmaster_trap_weight:
+    # Likelihood of receiving a trap which summons the Scoutmaster to hinder a player
+    # OH BOY. The Scoutmaster randomly appearing is going to be the most terrifying thing imaginable.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  zoom_trap_weight:
+    # Likelihood of receiving a trap which drastically changes a player's camera zoom level
+    # FIELD OF VIEW!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  screen_flip_trap_weight:
+    # Likelihood of receiving a trap which flips a player's screen upside-down temporarily
+    # Oh hey, I've got Hmm's curse.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  drop_everything_trap_weight:
+    # Likelihood of receiving a trap which forces a player to drop all currently held items
+    # Better hope you're not on the side of a mountain when this happens!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  pixel_trap_weight:
+    # Likelihood of receiving a trap which reduces a player's screen resolution to pixelated graphics temporarily
+    # I can't- FREAKING SEE!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  eruption_trap_weight:
+    # Likelihood of receiving a trap which creates a fiery eruption at a player's location
+    # I can just imagine an inferno flaring up on any old biome, not just Caldera...
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  beetle_horde_trap_weight:
+    # Likelihood of receiving a trap which spawns a horde of beetles to chase a player
+    # Yyyyyeeeaaahhh... pretty much everything in the Roots update is something that I don't want to mess with.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  custom_trivia_trap_weight:
+    # Likelihood of receiving a trap which quizzes the player with custom trivia questions
+    # I don't see any way to set up custom trivia questions, so I'm setting this to none for now.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  disable_multiplayer_badges:
+    # Exclude multiplayer-only badge checks. These badges are normally earned by cooperating with other players.
+    # These badges include:
+    #     Ultimate Badge
+    #     Clutch Badge
+    #     Participation Badge
+    #     Emergency Preparedness Badge
+    #     First Aid Badge
+    #     Resourcefulness Badge
+    #     Disaster Response Badge
+    #     Applied Esoterica Badge
+    #     Needlepoint Badge
+    # My PEAK game shouldn't hinge on needing to play with others.
+    'false': 0
+    'true': 50
+  disable_hard_badges:
+    # Exclude somewhat hard badge checks. These badges include:
+    #     Speed Climber Badge
+    #     Lone Wolf Badge
+    #     Balloon Badge
+    #     Bing Bong Badge
+    #     Competitive Eating Badge
+    # While I COULD do these, I really shouldn't.
+    'false': 0
+    'true': 50
+  disable_biome_badges:
+    # Exclude biome exclusive badge checks. These will not remove the badges involved with completing the biomes.
+    # These badges include:
+    #     Astronomy Badge
+    #     Bundled Up Badge
+    #     Undead Encounter Badge
+    #     Mycoacrobatics Badge
+    #     Web Security Badge
+    #     Cool Cucumber Badge
+    #     Daredevil Badge
+    #     Megaentomology Badge
+    #     Tread Lightly Badge
+    #     Advanced Mycology Badge
+    # My PEAK game shouldn't hinge on needing to wait for certain biomes to be in the rotation.
+    'false': 0
+    'true': 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items:
+    # With the power of friendship, I will climb this mountain!
+    - Progressive Stamina Bar
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
