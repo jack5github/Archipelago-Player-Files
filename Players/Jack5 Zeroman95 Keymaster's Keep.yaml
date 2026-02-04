@@ -159,7 +159,7 @@ Keymaster's Keep:
     # When 'include_difficult_objectives' is enabled, this option allows you to still exclude specific games.
     # Only game names originally listed in 'game_selection' are accepted.
     # If a game specified here only offers difficult objectives, this option will have no effect for it.
-    # At the moment, the only games where difficult objectives are allowed are Portal, R.E.P.O. and Trivia Tricks.
+    # At the moment, the only games where difficult objectives are allowed are Portal and Trivia Tricks.
     [
       'Bloons TD 6 (PC + AND, IOS, PS4, XONE)',
       'Custom (META)',
@@ -171,7 +171,6 @@ Keymaster's Keep:
       'Left 4 Dead 2 (PC + X360)',
       'Mario Kart 8 (SW + WIIU)',
       'Paperball (PC + SW)',
-      'PEAK (PC)',
       'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
       'PlatinumQuest (MOD)',
       'Sanctum (PC)',
@@ -201,11 +200,9 @@ Keymaster's Keep:
       'Gran Turismo 3: A-Spec (PS2)',
       'Left 4 Dead 2 (PC + X360)',
       'Mario Kart 8 (SW + WIIU)',
-      'PEAK (PC)',
       'Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360)',
       'PlatinumQuest (MOD)',
       'Portal (PC + PS3, SW, X360)',
-      'R.E.P.O. (PC)',
       'Sanctum (PC)',
       'Super Smash Bros. for 3DS/Wii U (3DS + WIIU)',
       'Tower Unite (PC)',
@@ -272,7 +269,7 @@ Keymaster's Keep:
       # Game owned by Jack5.
       # 'Paperball (PC + SW)' has been removed from this list, as its objectives are all mostly the same, and the game gets boring quick.
       # Game owned by Jack5 and Zeroman95.
-      'PEAK (PC)',
+      # 'PEAK (PC)' has been removed from this list, as Jack5 has installed the official PEAK mod.
       # Game owned by Zeroman95.
       # 'Peggle Deluxe (PC)' has been removed from this list, as Zeroman95 has no desire to beat the entirety of Adventure Mode in order to have access to everything.
       # Game owned by Zeroman95.
@@ -282,7 +279,7 @@ Keymaster's Keep:
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
       'Portal (PC + PS3, SW, X360)',
       # Game owned by Jack5 and Zeroman95. Implementation created by Jack5.
-      'R.E.P.O. (PC)',
+      # 'R.E.P.O. (PC)' has been removed from this list, as Jack5 has installed the official R.E.P.O. mod.
       # Game owned by Zeroman95. Implementation created by Jack5.
       'Sanctum (PC)',
       # Game owned by Zeroman95.
@@ -1798,12 +1795,6 @@ Keymaster's Keep:
   # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   # portal_challenge_weights:
   # The weights to use for challenge types in Portal objectives.
-  # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
-  #################
-  # R.E.P.O. (PC) #
-  #################
-  # repo_weights:
-  # The weights to use for R.E.P.O. objective types.
   # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
   ################
   # Sanctum (PC) #
