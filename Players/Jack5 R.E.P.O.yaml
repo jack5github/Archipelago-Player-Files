@@ -1,0 +1,109 @@
+﻿name: Jack5REPO{NUMBER}
+description: |-
+  Jack5's R.E.P.O. player file
+
+  This R.E.P.O. configuration is mostly unchanged from the base configuration, but with a few modifications to reflect the playstyle of Jack5's Discord server. This player file has increased responsibility due to it generating around 270 unlock locations, and is intended to be played with others in multiplayer.
+game: R.E.P.O
+requires:
+  version: 0.6.6
+  game:
+    R.E.P.O: 0.3.0
+R.E.P.O:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    normal: 50
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+  pellys_required:
+    # Choose which Pellys will be required for victory
+    # Pellys are Archipelago statues that appear in-game and must be salvaged. Unchanged from the base configuration.
+    ['Gold Pelly', 'Standard Pelly', 'Glass Pelly']
+  pelly_spawning:
+    # Determines how Pellys are spawned
+    # True: Spawns all Pellys. All Pellys are locations.
+    # False: Only spawns Pellys chosen in 'Pellys Required'. Only spawned Pellys are Locations.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  level_quota:
+    # Choose how many levels must be completed for your goal. This is in addition to gathering all Pellys.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 20.
+    # Unchanged from the base configuration.
+    8: 50
+  valuable_hunt:
+    # Determines if extracting all valuables is required for your goal.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  monster_hunt:
+    # Determines if extracting all monster souls is required for your goal.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  combat_logic:
+    # Determines what items are logically required to fight monsters.
+    # Easy: Guns or Explosives
+    # Medium: Strength Upgrades, Melee Weapons, Guns, or Explosives
+    # Hard: Nothing. Player may have to use valuables found in levels.
+    # Unchanged from the base configuration.
+    easy: 0
+    medium: 50
+    hard: 0
+  shop_stock:
+    # Choose how many Archipelago Shop Items are unlocked with each Progressive Shop Stock.
+    # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 50.
+    # Unchanged from the base configuration.
+    10: 50
+  shop_upgrade_total:
+    # Choose how many Archipelago Items show up in the Upgrades section of the Shop
+    # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
+    # Unchanged from the base configuration.
+    80: 50
+  shop_upgrade_logical:
+    # Choose how many shop how many shop upgrades will be potentially logically relevant.
+    # Items past this number will not have progression items.
+    # This number gets set to the Total Shop Upgrade Locations if its greater.
+    # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
+    # Unchanged from the base configuration.
+    60: 50
+  starting_level_type:
+    # Choose which level type to start with
+    # Unchanged from the base configuration.
+    swiftbroom_academy: 0
+    headman_manor: 0
+    mcjannek_station: 0
+    museum_of_human_art: 0
+    random: 50
+  upgrade_item_weights:
+    # Choose the Weights for adding Upgrades to the Item Pool (death head battery does nothing in singleplayer)
+    # All non-commented weights are unchanged from the base configuration.
+    Crouch Rest Upgrade: 2
+    # Death head upgrades are useless, for players can strategically speak while dead at just the right moments.
+    Death Head Battery Upgrade: 0
+    Double Jump Upgrade: 2
+    Health Upgrade: 5
+    Map Player Count Upgrade: 1
+    Range Upgrade: 2
+    Sprint Speed Upgrade: 3
+    Stamina Upgrade: 5
+    Strength Upgrade: 3
+    Tumble Climb Upgrade: 2
+    Tumble Launch Upgrade: 2
+    Tumble Wings Upgrade: 2
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # Unchanged from the base configuration.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []

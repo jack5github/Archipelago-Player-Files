@@ -1,8 +1,8 @@
-﻿name: Jack5Peak{NUMBER}
+﻿name: Jack5PEAK{NUMBER}
 description: |-
   Jack5's PEAK player file
 
-
+  This PEAK configuration makes a multitude of changes in order for it to have the same responsibility as other player files. The number of Ascents required has been reduced, additional progressive stamina has been enabled, and all Link functionality has been turned on. In addition, a variety of traps have been disabled, with the overall chance being increased.
 game: PEAK
 requires:
   version: 0.6.6
@@ -32,7 +32,7 @@ PEAK:
     # Higher ascents add more difficulty modifiers and challenges
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 7.
     # Considering how long PEAK takes to beat once, I think only needing to beat the game twice is a good value to start with.
-    2: 50
+    1: 50
   badge_count:
     # The number of badges required to complete the Complete All Badges goal
     # There are 54 total badges available in the game
