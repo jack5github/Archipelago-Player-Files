@@ -1,8 +1,9 @@
 ﻿name: ZeroJackKeep{NUMBER}
+# TODO: Create version of Keymaster's Keep player file that works better in multiworlds
 description: |-
   Jack5 and Zeroman95's Keymaster's Keep player file
 
-  This Keymaster's Keep configuration combines our non-Archipelago-supported games and interests into a single player file, which is more condensed compared to the Keymaster's Keep default for both simplicity and an added challenge. The main difference is the goal being changed from 'Keymaster's Challenge' to 'Magic Key Heist', as we would prefer this config's completion not to hinge on a single challenge. We would at some point in the future like to have the goal be related to area completion in order to prevent our runs from arbitrarily ending.
+  This Keymaster's Keep configuration combines our non-Archipelago-supported games and interests into a single player file, which is more condensed compared to the Keymaster's Keep default for both simplicity and an added challenge. The main difference is the goal being changed from 'Keymaster's Challenge' to 'Area Domination', as we would prefer this config's completion not to hinge on a single challenge.
 game: Keymaster's Keep
 requires:
   version: 0.6.4
@@ -12,16 +13,10 @@ Keymaster's Keep:
   ################
   progression_balancing:
     # We haven't seen any reason to change this value so far.
-    random: 0
-    random-low: 0
-    random-high: 0
-    disabled: 0
     normal: 50
-    extreme: 0
   accessibility:
     # It is not sensible to restrict any of the options in Keymaster's Keep, as it may remove certain games from rotation, so we'll keep this at Full.
     full: 50
-    minimal: 0
   ################
   # Goal Options #
   ################
@@ -38,37 +33,25 @@ Keymaster's Keep:
     # Determines how many Artifacts of Resolve are in the item pool.
     # Only relevant if the selected goal is Keymaster's Challenge.
     # You can define additional values between the minimum and maximum values. Minimum value is 3, maximum value is 25.
-    # Irrelevant as our goal is Magic Key Heist.
+    # Irrelevant as our goal is not Keymaster's Challenge.
     5: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   artifacts_of_resolve_required:
     # Determines how many Artifacts of Resolve are required to unlock the Keymaster's challenge room.
     # Only relevant if the selected goal is Keymaster's Challenge.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
-    # Irrelevant as our goal is Magic Key Heist.
+    # Irrelevant as our goal is not Keymaster's Challenge.
     3: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   conquest_medallions_percentage_required:
     # Determines the percentage of Conquest Medallions required before escaping the Keymaster's Keep. Completing all trials in a keep awards a Conquest Medallion.
     # Only relevant if the selected goal is Area Domination.
     # Was originally 10/12 of the total keep areas, now 11/13 with the inclusion of Consumables.
     85: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   magic_keys_required:
     # Determines how many Magic Keys are required before escaping the Keymaster's Keep.
     # Only relevant if the selected goal is Magic Key Heist.
     # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 50.
-    # This has been reduced to roughly half of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has gone from 66% of the total magic keys to roughly 90%. It cannot be any lower than 10.
+    # This is a legacy option that was being used when our goal was Magic Key Heist. This was reduced to roughly half of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has gone from 66% of the total magic keys to roughly 90%. It cannot be any lower than 10.
     10: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   ###########################
   # Keep Generation Options #
   ###########################
@@ -78,63 +61,42 @@ Keymaster's Keep:
     # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 100.
     # This has been reduced to roughly half all of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has been increased from 10 to 12 to bring the number of checks closer to 150. Increased by 1 with the inclusion of Consumables, trials that do not require effort to complete.
     13: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   magic_keys_total:
     # Determines how many Magic Keys are in the item pool.
     # The keys in that pool will be used to generate the lock combinations for areas in the Keymaster's Keep. They will also act as the amount of available keys to the player in the Magic Key Heist goal.
     # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 50.
     # This has been reduced to roughly half all of the default keep generation options in order to align with the chosen .py files and to be more manageable. As there are 2 unlocked areas by default, the remaining keeps are locked with a single key.
-    11: 50
-    random: 0
-    random-low: 0
-    random-high: 0
+    10: 50
   unlocked_areas:
     # Determines how many areas are unlocked at the start of the game.
     # The remaining areas will be locked by one or more keys.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
-    # Changing this from 1 to 2 increases the chance of games playable by both Jack5 and Zeroman95 to be present.
-    2: 50
-    random: 0
-    random-low: 0
-    random-high: 0
+    # This has been changed from 1 to 3 to increase the chance of games playable by both Jack5 and Zeroman95 to be present.
+    3: 50
   lock_magic_keys_minimum:
     # Determines the minimum amount of Magic Keys that could be required to unlock an area.
     # The amount of keys required to unlock an area will be a random number between this value and the maximum. Note that this option will be ignored for the first few areas to ensure the game is completable.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
     # Unchanged from the base configuration.
     1: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   lock_magic_keys_maximum:
     # Determines the maximum amount of Magic Keys that could be required to unlock an area.
     # The amount of keys required to unlock an area will be a random number between the minimum and this value. Note that this option will be ignored for the first few areas to ensure the game is completable.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
     # As there are very few keeps, it would not make sense to have one be locked by 3 keys at once.
     2: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   area_trials_minimum:
     # Determines the minimum amount of trials that could be in an area.
     # The amount of trials in an area will be a random number between this value and the maximum, but might get adjusted upwards to hold the item pool size.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
     # The default of these has the trial count hovering around 5. This has been changed to hover around 10 in order to increase the number of checks to approximately 150.
     8: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   area_trials_maximum:
     # Determines the maximum amount of trials that could be in an area.
     # The amount of trials in an area will be a random number between the minimum and this value, but might get adjusted upwards to hold the item pool size.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
     # The default of these has the trial count hovering around 5. This has been changed to hover around 10 in order to increase the number of checks to approximately 150.
     12: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   shops_:
     # If true, keep areas will have a chance to be replaced by a shop that will sell a handful of items.
     # The presence of shops will add Unique Relics to the item pool, which will need to be found to purchase items.
@@ -148,36 +110,24 @@ Keymaster's Keep:
     # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 50.
     # This was reduced to 8% so that only a single shop would appear with 13 areas, but it being a chance instead of a guarantee means that there could be 0, 2 or more shops instead.
     8: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   shop_items_minimum:
     # Determines the minimum amount of items that could be sold in a shop.
     # The amount of items sold in a shop will be a random number between this value and the maximum.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
     # Increased from the default of 2 to make sure there is something more substantial about the shops.
     3: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   shop_items_maximum:
     # Determines the maximum amount of items that could be sold in a shop.
     # The amount of items sold in a shop will be a random number between the minimum and this value.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
     # Unchanged from the base configuration.
     5: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   shop_items_progression_percentage_chance:
     # Determines the percentage chance of each item in a shop being a guaranteed progression item.
     # Since items are purchased with unique relics, it is recommended to set this value on the higher side. Each unique relic will only be able to unlock a single item in the keep, so ideally, they are worth the trouble.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Irrelevant because we are not playing with shops.
     100: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   shop_hints:
     # If true, upon discovering a shop, hints will be generated for the items sold in that shop.
     # Irrelevant because we are not playing with shops.
@@ -280,9 +230,6 @@ Keymaster's Keep:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
     # Unchanged from the base configuration.
     100: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   game_medley_game_selection:
     # Defines the game pool that will be used to generate Game Medley trials.
     # Only game names originally listed in 'game_selection' are accepted.
@@ -367,126 +314,6 @@ Keymaster's Keep:
     - 'Consumables (META)'
     - 'Custom (META)'
     - 'Game Backlog (META)'
-  ############################################################
-  # Asphalt Legends (IOS + AND, PC, PS4, PS5, SW, XONE, XSX) #
-  ############################################################
-  asphalt_legends_weights:
-    # The weights to use for Asphalt Legends objective types. Defaults to only objectives that can be completed by new users. If at a high enough level to access VIP features, it is recommended to start with the following weights:
-    # ```yaml
-    # daily: 5
-    # vip: 2
-    # improve_car: 1
-    # bonus: 8
-    # ```
-    # Include VIP missions in the possible objectives.
-    bonus: 8
-    daily: 5
-    improve_car: 1
-    vip: 2
-  asphalt_legends_cars:
-    # The list of cars to use for the Asphalt Legends objective type `improve_car`. Defaults to a few early-game cars, add and remove cars as needed so all in the list are unlocked but not maxed out.
-    # Use all of Jack5's upgradable cars for the possible objectives.
-    [
-      'BMW Z4 LCI E89',
-      'Nissan Leaf Nismo RC',
-      'KTM X-Bow GTX',
-      'Renault Dezir',
-      'Italdesign Davinci',
-      'Peugeot SR1',
-      'Porsche 911 Carrera RS 3.8',
-      'Porsche 718 Cayman',
-      'Ford Shelby GT350R',
-      'Porsche 911 Targa 4S',
-      'Lotus Emira',
-      'Renault TreZor',
-      'Nissan 370Z Neon Edition',
-      'Honda Civic Type-R',
-      'Porsche Taycan Turbo S',
-      'TVR Griffith',
-      'Bentley Continental GT3',
-      'Glickenhaus 004C',
-      'Porsche Boxster 25th',
-      'Aston Martin V12 Speedster',
-      'Donkervoort D8 GTO Individual Series',
-      'Ford Shelby GR-1',
-      'Pininfarina H2 Speed',
-      'Artega Scalo Superelletra',
-      'Saleen S1',
-      'Acura 2017 NSX',
-      'Maserati Alfieri',
-      'Ferrari Monza SP1',
-      'Formula E Gen 2 Asphalt Edition',
-      'Renault R.S. 01',
-      'Lamborghini Miura Concept',
-      'Chevrolet Corvette Stingray',
-      'Maserati MC20 GT2',
-      'Lamborghini Diablo GT',
-      'Arrinera Hussarya 33',
-      'Porsche Panamera Turbo S',
-      'Lamborghini Gallardo LP 560-4',
-      'McLaren GT',
-      'Porsche 911 GTS Coupé',
-      'Aston Martin DB11',
-      'Jaguar F-Type SVR',
-      'Ferrari F50',
-      'Exotic Rides W70',
-      'Porsche 911 GT1 Evolution',
-      'Ford GT',
-      'Lamborghini Asterion',
-      'Italdesign Zerouno',
-      'Ferrari 488 GTB',
-      'Kepler Motion',
-      'Drako GTE',
-      'Glickenhaus 003S',
-      'Lego Technic Chevrolet Corvette Stingray',
-      'Ferrari F12tdf',
-      'Maserati MC20',
-      'Apex AP-0',
-      'Apollo IE',
-      'Sin R1 550',
-      'Ferrari Enzo Ferrari',
-      'Aston Martin DBS Superleggera',
-      'McLaren 600LT Spider',
-      'Lamborghini Invencible',
-      'Lamborghini Huracán Evo Spyder',
-      'Porsche Carrera GT',
-      'Nissan GTR-50 Italdesign',
-      'Porsche 911 GT3 RS',
-      'Ferrari 488 Challenge Evo',
-      'Lego Technic Lamborghini Revuelto',
-      'McLaren F1LM',
-      'Ford GT MK IV',
-      'Pagani Huayra R',
-      'Lamborghini Temerario',
-      'Nissan GT-R Nismo',
-      'Nio EP9',
-      'Dodge Viper GTS',
-      'Ferrari Laferrari',
-      'Lego technic Ferrari FXXK',
-      'Lamborghini Aventador SV Coupé',
-      'Ferrari 812 Superfast',
-      'Chevrolet Corvette ZR1',
-      'VLF Force 1 V10',
-      'Vanda Electrics Dendrobium',
-      'Porsche 918 Spyder',
-      'McLaren 570S Spider',
-      'Automobili Pininfarina Battista Edizione Nino Farina',
-      'Lamborghini Aventador J',
-      'Peugeot Onyx',
-      'Pagani Huayra BC',
-      'McLaren 650S GT3',
-      'Ferrari Laferrari Aperta',
-      'Genty Akylone',
-      'Ford Shelby Super Snake',
-      'Lexus Electrified Sport Concept',
-      'Lamborghini Centenario',
-      'Lamborghini Veneno',
-      'Lamborghini Egoista',
-      'Trion Nemesis',
-      'Nissan GT-R Neon Edition',
-      'Koenigsegg One:1',
-      'Mercedes-Benz Mercedes-AMG GT Black Series',
-    ]
   ######################
   # Consumables (META) #
   ######################
@@ -1768,171 +1595,9 @@ Keymaster's Keep:
       'Toad',
       'Tails (solo)',
     ]
-  garrys_mod_props:
-    # The list of prop types to use for the Garry's Mod objectives that use them. Defaults to some of the most recogniseable pre-installed prop types, add and remove as needed.
-    # Unchanged from the base configuration.
-    [
-      'water barrel',
-      'tall gas canister',
-      'explosive barrel',
-      'brown barrel',
-      'propane canister',
-      'bench',
-      'concrete barrier',
-      'metal fence',
-      'prison cell door',
-      'fountain',
-      'bathtub',
-      'bedframe',
-      'mattress',
-      'couch',
-      'wooden cupboard',
-      'wooden table',
-      'wooden dresser',
-      'toilet',
-      'sink',
-      'washing machine',
-      'fridge',
-      'stove',
-      'teapot',
-      'cooking pot',
-      'radiator',
-      'gravestone',
-      'plastic crate',
-      'metal ladder',
-      'bridge',
-      'globe',
-      'corrugated metal sheet',
-      'helicopter bomb',
-      'pole',
-      'leather chair',
-      'wooden chair',
-      'metal chair',
-      'standing lamp',
-      'lockers',
-      'vending machine',
-      'wooden crate',
-      'cardboard box',
-      'cinder block',
-      'sawblade',
-      'metal bucket',
-      'fuel canister',
-      'plastic bucket',
-      'soda can',
-      'push cart',
-      'Ravenholm sign',
-      'plastic trash bin',
-      'traffic cone',
-      'dumpster',
-      'wooden pallet',
-      'animal carrier',
-      'sign',
-      'clock',
-      'metal trash bin',
-      'tyre',
-      'barricade',
-      'buoy',
-      'shipping container',
-      'gas pump',
-      'horizontal cooling tank',
-      'shelves',
-      'countertop',
-      'wheel',
-      'wooden fence',
-      'skull',
-      'Fast Zombie legs',
-      'Fast Zombie torso',
-      'cash register',
-      'dentist chair',
-      'stool',
-      'baby doll',
-      'cleaver',
-      'playground carousel',
-      'playground slide',
-      'playground tic-tac-toe block',
-      'horse statue',
-      'numbered road sign',
-      'picture road sign',
-      'briefcase',
-      'television',
-      'Wallace Breen bust',
-      'Combine interface',
-      'bicycle',
-      'garbage bag',
-      'coffee mug',
-      'glass bottle',
-      'metal can',
-      'milk bottle',
-      'milk carton',
-      'detergent bottle',
-      'boot',
-      'terracotta',
-      'watermelon',
-      'wheelbarrow',
-      'binder',
-      'chessboard',
-      'radio',
-      'clipboard',
-      'desk lamp',
-      'framed photo',
-      'hula doll',
-      'computer monitor',
-      'keyboard',
-      'payphone box',
-      'car door',
-      'balloon',
-      'camera',
-      'dynamite',
-      'bomb',
-      'portable lamp',
-      'burger',
-      'hot dog',
-      "Garry's Mod logo",
-      'headcrab',
-      'road ramp',
-      'traffic light',
-      'torpedo',
-      'Facepunch logo',
-      'recursive monitor',
-      'electric guitar',
-      'soccer ball',
-      'concrete pipe',
-      'donut',
-      'egg',
-      'triangular metal sheet',
-      'metal cylinder',
-      'metal dome',
-      'metal frame',
-      'glass sheet',
-      'glass cylinder',
-      'glass dome',
-      'wooden cylinder',
-      'wooden dome',
-      'wooden frame',
-      'plastic sheet',
-      'plastic blocks',
-      'plastic ramp',
-      'plastic cylinder',
-      'plastic dome',
-      'steel square beam',
-      'steel I-beam',
-      'gear',
-      'gear teeth',
-      'coaster train',
-      'roller coaster part',
-      'metal ball',
-      'ball track part',
-      'train tracks',
-      'airplane',
-      'commentary node',
-      'giant letter',
-      'ammo crate',
-      'wooden boat',
-      'train',
-      'destroyed car',
-      'generator',
-      'rock',
-    ]
+  # garrys_mod_props:
+  # The list of prop types to use for the Garry's Mod objectives that use them. Defaults to some of the most recogniseable pre-installed prop types, add and remove as needed.
+  # Unchanged from the base configuration, so they are not listed here.
   garrys_mod_weapons:
     # The list of weapons, specifically those that can harm players, NPCs and props, to use for the Garry's Mod objectives that use them. This list also includes entities that are functionally weapons when paired with the Gravity Gun. Defaults to the pre-installed weapons, add and remove as needed.
     # We are using all of the default weapons and all of Jack5's favourite weapons for the possible objectives.
@@ -1993,63 +1658,9 @@ Keymaster's Keep:
       'Resizer',
       'Weight STool',
     ]
-  garrys_mod_npcs:
-    # The list of NPCs, only including those that can be killed, to use for the Garry's Mod objectives that use them. Defaults to the pre-installed NPCs, add and remove as needed.
-    # Unchanged from the base configuration.
-    [
-      'Crow',
-      'Father Grigori',
-      'Pigeon',
-      'Seagull',
-      'Enemy Rebel',
-      'Shield Scanner',
-      'Combine Soldier',
-      'Combine Elite Soldier',
-      'Nova Prospekt Guard',
-      'Prison Shotgun Guard',
-      'Shotgun Soldier',
-      'Combine Gunship',
-      'City Scanner',
-      'Hunter-Chopper',
-      'Hunter',
-      'Manhack',
-      'Metro-Police',
-      'Stalker',
-      'Strider',
-      'Combine Turret',
-      'Alyx Vance',
-      'Barney Calhoun',
-      'Wallace Breen',
-      'Citizen',
-      'Rebel Medic',
-      'Rebel',
-      'Refugee',
-      'Dog',
-      'Eli Vance',
-      'G-Man',
-      'Dr. Isaac Kleiner',
-      'Dr. Arne Magnusson',
-      'Dr. Judith Mossman',
-      'Odessa Cubbage',
-      'Vortigaunt',
-      'Vortigaunt Slave',
-      'Uriah',
-      'Antlion',
-      'Antlion Grub',
-      'Antlion Worker',
-      'Antlion Guard',
-      'Antlion Guardian',
-      'Barnacle',
-      'Fast Zombie',
-      'Fast Zombie Torso',
-      'Headcrab',
-      'Poison Headcrab',
-      'Fast Headcrab',
-      'Poison Zombie',
-      'Zombie',
-      'Zombie Torso',
-      'Zombine',
-    ]
+  # garrys_mod_npcs:
+  # The list of NPCs, only including those that can be killed, to use for the Garry's Mod objectives that use them. Defaults to the pre-installed NPCs, add and remove as needed.
+  # Unchanged from the base configuration, so they are not listed here.
   #######################
   # Goofy Gorillas (PC) #
   #######################
@@ -2120,66 +1731,6 @@ Keymaster's Keep:
     # Adds some easy-to-obtain objectives to the objective pool.
     'false': 0
     'true': 50
-  #######################
-  # Paperball (PC + SW) #
-  #######################
-  paperball_dlc_owned:
-    # Indicates which Paperball DLC the player owns, if any.
-    # Jack5 does not own any of the DLCs.
-    []
-  paperball_included_modes:
-    # Indicates which modes the player wants to include in their Paperball runs.
-    # Removed 'Arcade', 'Blitz', 'Mad Shuffle' and 'Rush' from the list, as it is possible to get marathon challenges from them. The only mode left is 'Medal', which could potentially get boring over time.
-    ['Medal']
-  paperball_included_medal_mode_worlds:
-    # Indicates which worlds the player wants to include in their Paperball Medal Mode runs.
-    # Unchanged from the base configuration.
-    [
-      'Alpine',
-      'Canyon',
-      'Swamp',
-      'Volcano',
-      'Savanna',
-      'City',
-      'Stratosphere',
-      'Antarctic',
-      'Coast',
-      'Moon',
-      'Void',
-      'Facility',
-      'Underwater',
-      'Orient',
-      'Sunflowers Day',
-      'Sunflowers Sunset',
-      'Sunflowers Night',
-      'Psychedelic',
-    ]
-  paperball_included_courses:
-    # Indicates which courses the player wants to include in their Paperball runs.
-    # Unchanged from the base configuration.
-    [
-      'Novice',
-      'Intermediate',
-      'Expert',
-      'Champion',
-      'Secret Spy',
-      'Deep Sea',
-      'Cherry Sky',
-      'Sunflower Fields',
-    ]
-  ######################
-  # Peggle Deluxe (PC) #
-  ######################
-  peggle_deluxe_include_challenges:
-    # Indicates whether to include Peggle Deluxe challenges when generating objectives.
-    # Adds some more objectives to the objective pool, provided that the player is using a 100% save file.
-    'false': 0
-    'true': 50
-  peggle_deluxe_include_insane_challenges:
-    # Indicates whether to include Peggle Deluxe insane challenges when generating objectives.
-    # Unchanged from the base configuration.
-    'false': 50
-    'true': 0
   ############################################################
   # Plants vs. Zombies (PC + AND, IOS, NDS, PS3, VITA, X360) #
   ############################################################
