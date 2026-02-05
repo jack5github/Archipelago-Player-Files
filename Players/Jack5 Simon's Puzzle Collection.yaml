@@ -14,17 +14,10 @@ Simon Tatham's Portable Puzzle Collection:
   ################
   progression_balancing:
     # Unchanged from the base configuration.
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-99: 0
-    disabled: 0
     normal: 50
-    extreme: 0
   accessibility:
     # Unchanged from the base configuration.
     full: 50
-    minimal: 0
   ##################
   # Puzzle Options #
   ##################
@@ -34,12 +27,8 @@ Simon Tatham's Portable Puzzle Collection:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 2000
-    # The default is 50. Other Archipelago games usually have an unlock count of 150, so we use that here.
-    150: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-1-2000: 0
+    # The default is 50. Other Archipelago games usually have an unlock count of 150, but that is simply too many puzzles to solve, so I have settled on exactly 100.
+    100: 50
   starting_puzzles:
     # Number of puzzles to randomly add to the starting inventory. These will be
     # removed from the item pool.
@@ -49,10 +38,6 @@ Simon Tatham's Portable Puzzle Collection:
     # Maximum value is 20
     # Unchanged from the base configuration.
     5: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-20: 0
   completion_percentage:
     # Percent of puzzles which must be completed to finish the world, rounding up.
     # 
@@ -63,10 +48,6 @@ Simon Tatham's Portable Puzzle Collection:
     # Maximum value is 100
     # Unchanged from the base configuration.
     80: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-10-100: 0
   min_difficulty:
     # Minimum difficulty to select generated presets from. Note that not all genres have presets at "Hard" difficulty,
     # so they will never appear if the minimum difficulty is set to Hard (unless you specify custom presets for them).
@@ -92,10 +73,10 @@ Simon Tatham's Portable Puzzle Collection:
     cube: 0 # Cube is a Bloxorz puzzle that punishes you for moving in the wrong direction.
     dominosa: 0 # It is not immediately clear how to beat Dominosa, nor does it ever become clear.
     fifteen: 0 # Fifteen is a sliding puzzle, which is not fun at all to play.
-    filling: 10
+    filling: 0 # I can never figure out Filling. Even at its smallest size its puzzles prove to be impossible.
     flip: 0 # Flip is a flipping puzzle, which is not fun at all to play.
     flood: 0 # Flood is not colour-blind friendly. Restore this once the game is updated.
-    galaxies: 10
+    galaxies: 0 # As much as I like Galaxies, even on higher difficulties, it is not kind to my hands, as every cell border needs to be clicked individually.
     guess: 0 # Guess is not colour-blind friendly. Restore this once the game is updated.
     inertia: 10
     keen: 10
@@ -103,7 +84,7 @@ Simon Tatham's Portable Puzzle Collection:
     loopy: 10
     magnets: 10
     map: 0 # Map is not colour-blind friendly. Restore this once the game is updated.
-    mines: 10
+    mines: 0 # Even on the easiest possible difficulty, Minesweeper can generate a board that requires insane luck to solve first try.
     mosaic: 10
     net: 10
     netslide: 0 # NetSlide is a sliding puzzle, which is not fun at all to play.
@@ -134,7 +115,52 @@ Simon Tatham's Portable Puzzle Collection:
     # For example, to make Net puzzles always use wrapping grids, add:
     # net: [5x5w, 7x7w, 9x9w, 11x11w]
     # Some puzzle presets have been overridden, and the reasons for doing so are explained below:
-    net: [5x5, 7x7, 9x9, 11x11, 13x11] # Disable wrapping grids on Net puzzles.
+    bridges:
+      # Enable Bridges puzzles that support up to 3 connections per bridge.
+      - 7x7i30e10m2d0
+      - 7x7i30e10m2d1
+      - 7x7i30e10m2d2
+      - 7x7i30e10m3d0
+      - 7x7i30e10m3d1
+      - 7x7i30e10m3d2
+      - 10x10i30e10m2d0
+      - 10x10i30e10m2d1
+      - 10x10i30e10m2d2
+      - 10x10i30e10m3d0
+      - 10x10i30e10m3d1
+      - 10x10i30e10m3d2
+      - 15x15i30e10m2d0
+      - 15x15i30e10m2d1
+      - 15x15i30e10m2d2
+      - 15x15i30e10m3d0
+      - 15x15i30e10m3d1
+      - 15x15i30e10m3d2
+    inertia:
+      # Add 25x20 and 25x25 for an added challenge, since Inertia puzzles are more like platforming games and do not require a lot of strategy.
+      - 10x8
+      - 15x12
+      - 20x16
+      - 25x20
+      - 25x25
+    mosaic:
+      # Nonograms of 5x5 and below are deeply unsatisfying to solve.
+      - 10x10
+      - 15x15
+      - 25x25
+      - 50x50
+    net:
+      # Disable wrapping grids on Net puzzles.
+      - 5x5
+      - 7x7
+      - 9x9
+      - 11x11
+      - 13x11
+    slant:
+      # Any hard Slant puzzles beyond 5x5 are unsatisfying to solve.
+      - 5x5de
+      - 5x5dh
+      - 8x8de
+      - 12x10de
   genre_min_difficulty:
     # Minimum difficulty for each genre. Use 0 for easy, 1 for normal, 2 for hard, and 3 for ridiculous.
     # Unchanged from the base configuration.
@@ -142,6 +168,7 @@ Simon Tatham's Portable Puzzle Collection:
   genre_max_difficulty:
     # Maximum difficulty for each genre. Use 0 for easy, 1 for normal, 2 for hard, and 3 for ridiculous.
     # Some max puzzle difficulties have been changed, and the reasons for doing so are explained below:
+    magnets: 0 # Keeping track of all the polarities of Magnets on Normal takes too long.
     mines: 0 # Even on Normal, Minesweeper can generate a board that requires insane luck to solve first try.
     undead: 0 # Undead is like Sudoku, but with symbols with different rules, and there shouldn't be any reason for it to be hard.
   fixed_puzzles:
