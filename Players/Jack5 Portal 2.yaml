@@ -44,11 +44,9 @@ Portal 2:
     # What percentage of starting maps are in the first round of map selection
     # Minimum of 60 -> Over half of the starting maps are available from the get go, slightly slower start
     # Maximum of 100 -> All starting maps are available from the get go, a very quick start
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 60
-    # Maximum value is 100
-    75: 50
+    # You can define additional values between the minimum and maximum values. Minimum value is 60, maximum value is 100.
+    # Portal 2 becomes boring the more Chapter 1 levels are made available at the start of the game, so I have set this option to its absolute minimum.
+    60: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
@@ -63,6 +61,9 @@ Portal 2:
     # - Chapter 1: Secret Panel
     # - Chapter 1: Wake Up
     # - Chapter 5: Turret Factory
+    # - Chapter 5: Neurotoxin Sabotage
+    # - Chapter 5: Turret Sabotage
+    # - Chapter 6: Cave Johnson
     # - Chapter 9: Finale 1
   wheatleymonitors:
     # Determines whether breaking Wheatly monitors will send location checks
