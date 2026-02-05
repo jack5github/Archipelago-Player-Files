@@ -54,9 +54,9 @@ PEAK:
   ring_link:
     # When enabled, ring pickups are shared among all players with Ring Link enabled
     # For PEAK; rings are stamina. Consuming food will send Rings to other players with Ring Link enabled. Poisonous food will send negative rings.
-    # Enabled in case we use Ring Link in other games.
-    'false': 0
-    'true': 50
+    # Every time a new item is collected, PEAK freezes in order for Archipelago to send the event. If Ring Link is enabled, PEAK will freeze every time any food is consumed. This quickly becomes annoying, and since we aren't playing any other games that use Ring Link, I have chosen to disable it.
+    'false': 50
+    'true': 0
   hard_ring_link:
     # When enabled, ring pickups are shared among all players with Hard Ring Link enabled
     # Similar to Ring Link, but instead of sending rings when consuming food, rings are sent from certain actions and events.
