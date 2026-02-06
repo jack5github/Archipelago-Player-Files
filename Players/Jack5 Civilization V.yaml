@@ -99,11 +99,12 @@ Civilization V:
   # Item & Location Options #
   ###########################
   local_items:
-    # Without eras being available in the game, it is impossible to proceed with unlocking all the policies. Additionally, early game has me struggling to keep afloat in terms of gold, so getting access to Currency earlier will make things easier.
-    - Era - Progressive
+    # The early game has me struggling to keep afloat in terms of gold, so getting access to Currency earlier will make things easier.
     - Tech - Progressive Gold
+  non_local_items:
+    # Without eras being available in the game, it is impossible to proceed with unlocking all the policies. However, if they are local items, it is possible for them to become trapped behind nearly unattainable goals such as building world wonders. For that reason, I am relying on other players to unlock eras for me.
+    - Era - Progressive
   # All of the below are unchanged from the standard configuration.
-  non_local_items: []
   start_inventory: {}
   start_hints: []
   start_location_hints: []
