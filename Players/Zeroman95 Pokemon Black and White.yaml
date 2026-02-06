@@ -4,13 +4,16 @@ description: Zeroman95's Pokemon White YAML
 
 game: Pokemon Black and White
 requires:
-  version: 0.6.4
+  version: 0.6.6
+  game:
+    Pokemon Black and White: 0.3.17
 
 Pokemon Black and White:
   progression_balancing:
     random: 0
     random-low: 0
     random-high: 0
+    random-range-0-99: 0
     disabled: 0
     normal: 50
     extreme: 0
@@ -34,17 +37,14 @@ Pokemon Black and White:
     legendary_hunt: 0
     pokemon_master: 0
 
-  randomize_wild_pokemon:
-    ['Randomize']
+  randomize_wild_pokemon: ['Randomize']
 
-  randomize_trainer_pokemon:
-    ['Randomize']
+  randomize_trainer_pokemon: ['Randomize']
 
   pokemon_randomization_adjustments:
     Stats leniency: 10
 
-  encounter_plando:
-    []
+  encounter_plando: []
 
   shuffle_badges:
     vanilla: 0
@@ -63,23 +63,27 @@ Pokemon Black and White:
     random: 0
     random-low: 0
     random-high: 0
+    random-range-0-649: 0
 
   season_control:
     vanilla: 50
     changeable: 0
     randomized: 0
 
-  adjust_levels:
-    ['Wild', 'Trainer']
+  adjust_levels: ['Wild', 'Trainer']
 
-  master_ball_seller:
-    ['Ns Castle']
+  modify_encounter_rates:
+    vanilla: 50
+    try_normalized: 0
+    try_normalized_alt: 0
+    invasive: 0
+    randomized_12: 0
 
-  modify_item_pool:
-    ['Useful filler']
+  master_ball_seller: ['Ns Castle']
 
-  modify_logic:
-    ['Prioritize key item locations', 'Require Flash']
+  modify_item_pool: ['Useful filler']
+
+  modify_logic: ['Prioritize key item locations', 'Require Flash']
 
   reusable_tms:
     'on': 50
@@ -87,32 +91,22 @@ Pokemon Black and White:
     of_course: 0
     im_not_a_masochist: 0
 
-  local_items:
-    []
+  local_items: []
 
-  non_local_items:
-    []
+  non_local_items: []
 
-  start_inventory:
-    {}
+  start_inventory: {}
 
-  start_inventory_from_pool:
-    {}
+  start_inventory_from_pool: {}
 
-  start_hints:
-    []
+  start_hints: []
 
-  start_location_hints:
-    []
+  start_location_hints: []
 
-  exclude_locations:
-    []
+  exclude_locations: []
 
-  priority_locations:
-    []
+  priority_locations: []
 
-  item_links:
-    []
+  item_links: []
 
-  plando_items:
-    []
+  plando_items: []
