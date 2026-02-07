@@ -394,8 +394,8 @@ PEAK:
     # With the power of friendship, I will climb this mountain!
     - Progressive Stamina Bar
   start_inventory:
-    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. When I first generated a PEAK run, I saw a total of 6 of these items in the pool, so I am forcing that number here.
-    Progressive Mountain: 6
+    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. There are 4 of these, one for each biome after the Shore (excluding the Peak).
+    Progressive Mountain: 4
   start_hints: []
   start_location_hints: []
   exclude_locations: []

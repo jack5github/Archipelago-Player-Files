@@ -108,10 +108,11 @@ Portal 2:
   ###########################
   # Item & Location Options #
   ###########################
-  # Unchanged from the base configuration.
   local_items: []
   non_local_items: []
-  start_inventory: {}
+  start_inventory:
+    # Lasers and Laser Relays are already items that can be unlocked during a run. It doesn't make sense for catchers to be an item too, as this makes it take much longer to be able to use lasers in general.
+    Laser Catchers: 1
   start_hints: []
   start_location_hints: []
   exclude_locations: []
