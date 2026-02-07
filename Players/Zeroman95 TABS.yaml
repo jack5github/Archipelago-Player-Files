@@ -8,10 +8,10 @@ requires:
 Totally Accurate Battle Simulator:
   progression_balancing:
     random: 0
-    random-low: 99
+    random-low: 0
     random-high: 0
     random-range-0-99: 0
-    disabled: 0
+    disabled: 50
     normal: 50
     extreme: 0
   accessibility:
@@ -37,17 +37,17 @@ Totally Accurate Battle Simulator:
     'true': 0
   secret_type:
     none: 0
-    regular: 50
+    regular: 0
     no_unlocks: 0
-    all: 0
-  required_campaigns: ['Adventure', 'Challenge', 'Introduction']
-  additional_campaigns: ['Simulation']
+    all: 50
+  required_campaigns: ['Adventure', 'Challenge', 'Introduction', 'Simulation']
+  additional_campaigns: []
   hidden_campaign_unlocks:
     'false': 0
     'true': 50
   local_items: []
   non_local_items: []
-  start_inventory: {}
+  start_inventory: { 'Halfling' } # Start with Halfling instead of Clubber.
   start_inventory_from_pool: {}
   start_hints: []
   start_location_hints: []
