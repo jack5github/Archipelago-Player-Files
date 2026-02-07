@@ -48,7 +48,7 @@ Totally Accurate Battle Simulator:
   local_items: []
   non_local_items: []
   start_inventory: {}
-  start_inventory_from_pool: { 'Halfing': 1 } # Start with Halfling instead of Clubber.
+  start_inventory_from_pool: { 'Halfling': 1 } # Start with Halfling instead of Clubber.
   start_hints: []
   start_location_hints: []
   exclude_locations: []
