@@ -1,6 +1,6 @@
-﻿name: Jack5REPO{NUMBER}
+﻿name: MultiREPO{NUMBER}
 description: |-
-  Jack5's R.E.P.O. player file
+  Multiplayer R.E.P.O. player file by Jack5
 
   This R.E.P.O. configuration is mostly unchanged from the base configuration, but with a few modifications to reflect the playstyle of Jack5's Discord server. This player file has increased responsibility due to it generating around 270 unlock locations, and is intended to be played with others in multiplayer.
 game: R.E.P.O

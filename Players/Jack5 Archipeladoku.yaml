@@ -11,18 +11,11 @@ Archipeladoku:
   # Game Options #
   ################
   progression_balancing:
-    # Unchanged from the base configuration.
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-99: 0
-    disabled: 0
-    normal: 50
-    extreme: 0
+    # Increased to try to have this game finish before others, as it is unsatisfying when it is the one to end a run.
+    60: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
-    minimal: 0
   block_size:
     # The size of a single block (and the width/height of each board).
     # Force 3x3 sudoku boards, as a means of stabilising the number of unlock locations generated.
@@ -41,9 +34,6 @@ Archipeladoku:
     # Minimum value is 1
     # Maximum value is 100
     # The grouping of boards only affects the sudoku gameplay superficially and does not affect the number of unlock locations, therefore it is set to randomly choose between groupings of 1 and 5. Higher groupings are not used as groupings bigger than 5 do not look good.
-    random: 0
-    random-low: 0
-    random-high: 0
     random-range-1-5: 50
     no_grouping: 0
     square_of_5: 0
@@ -55,15 +45,8 @@ Archipeladoku:
     # - 4-9: 100 boards
     # - 12: 64 boards
     # - 16: 36 boards
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 3
-    # Maximum value is 100
+    # You can define additional values between the minimum and maximum values. Minimum value is 3, maximum value is 100.
     # Randomly choose between 5 and 7 boards, since 6 boards generates approximately 150 unlock locations.
-    6: 0
-    random: 0
-    random-low: 0
-    random-high: 0
     random-range-5-7: 50
   difficulty:
     # The overall difficulty level. Solving techniques required:
@@ -94,93 +77,44 @@ Archipeladoku:
     disabled: 50
   solve_selected_cell_ratio:
     # Ratio of Solve Selected Cell filler items to number of boards, in percent.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 5000
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5000.
     # Unchanged from the base configuration.
     100: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-5000: 0
   solve_random_cell_ratio:
     # Ratio of Solve Random Cell filler items to number of boards, in percent.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 5000
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5000.
     # Increased from 150% to 200%.
     200: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-5000: 0
   remove_random_candidate_ratio:
     # Ratio of Remove Random Candidate filler items to number of boards, in percent.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 5000
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5000.
     # Increased from 300% to 400%.
     400: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-5000: 0
   emoji_trap_ratio:
     # Ratio of Emoji Trap filler items to number of boards, in percent.
     # When received your numbers will be replaced with emojis for a time.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 5000
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5000.
     # At first I had the emoji trap disabled, but after creating the Shapes variant for it, I am much more comfortable with it. Additionally, the chance of it occurring has been increased from 20%.
     50: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-5000: 0
   disco_trap_ratio:
     # Ratio of Disco Trap filler items to number of boards, in percent.
     # When received all cells will shift colors for a time.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 5000
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5000.
     # The chance of the disco trap occurring has been increased from 20% and 40%.
     50: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-5000: 0
   tunnel_vision_trap_ratio:
     # Ratio of Tunnel Vision Trap filler items to number of boards, in percent.
     # When received you will only be able to see a small area of the board for a time.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 5000
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5000.
     # The chance of the tunnel vision trap occurring has been increased from 20% and 40%.
     50: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-5000: 0
   pre_fill_nothings_percent:
     # Percentage of Nothing items that should be pre-filled, forcing them to be placed in
     # an Archipeladoku game and thus excluding them from other games.
     # Caution: This reduces the number of filler items in the item pool. Having few fillers can lead to increased generation times or even generation failures.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 100
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
     50: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-100: 0
   ###########################
   # Item & Location Options #
   ###########################

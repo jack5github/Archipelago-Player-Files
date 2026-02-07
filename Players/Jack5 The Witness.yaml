@@ -13,12 +13,6 @@ The Witness:
   progression_balancing:
     # It was far too easy to get stuck in The Witness at 50, 60 and 70, so I have increased this value to 75.
     75: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    disabled: 0
-    normal: 0
-    extreme: 0
   accessibility:
     # I want to keep the run focused on reaching the goal and not indulge too much in other content. As much as the temptation is there to change this to full, don't do it.
     full: 0
@@ -58,17 +52,11 @@ The Witness:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 11.
     # Unchanged from the base configuration.
     7: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   challenge_lasers:
     # Sets the number of lasers required to enter the Caves through the Mountain Bottom Floor Discard and to unlock the Challenge Timer Panel.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 11.
     # Unchanged from the base configuration.
     11: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   ######################
   # Panel Hunt Options #
   ######################
@@ -76,20 +64,14 @@ The Witness:
     # Only relevant if the Victory Condition is "Panel Hunt".
     # Determines the percentage of "Panel Hunt" panels that need to be solved to win.
     # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
-    # This has been reduced from 63% to 50%, as the original amount was far too high.
+    # This has been reduced from 63% to 50%, as the original amount was far too high. 50% also felt too high, however that was in a game with shuffled panels enabled, so 50% needs to be tested in a game without shuffled panels.
     50: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   panel_hunt_total:
     # Only relevant if the Victory Condition is "Panel Hunt".
     # Sets the number of random panels that will get marked as "Panel Hunt" panels in the "Panel Hunt" game mode.
     # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 100.
-    # This has been increased from 40 to 50 to increase the likelihood that I can beat the game.
+    # This was increased from 40 to make it a more rounded number. This has no effect on the difficulty of beating the game, see `panel_hunt_required_percentage` for that.
     50: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   panel_hunt_postgame:
     # Only relevant if the Victory Condition is "Panel Hunt".
     # In panel hunt, there are technically no postgame locations.
@@ -109,11 +91,8 @@ The Witness:
     # At 0, Hunt Panels will be selected randomly.
     # At 100, Hunt Panels will be almost completely evenly distributed between areas.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # Unchanged from the base configuration.
-    40: 50
-    random: 0
-    random-low: 0
-    random-high: 0
+    # Distribute Panel Hunt panels as evenly as possible to prevent overlap between puzzles.
+    100: 50
   panel_hunt_plando:
     # Only relevant if the Victory Condition is "Panel Hunt".
     # Specify specific hunt panels you want for your panel hunt game.
@@ -180,9 +159,9 @@ The Witness:
     # - Panels: The panel on the door will be locked until receiving its corresponding key.
     # - Doors: The door will open immediately upon receiving its key. Door panels are added as location checks.
     # - Mixed: Includes all doors from "doors", and all control panels (bridges, elevators etc.) from "panels".
-    # This was annoying when it was enabled, as panels would arbitrarily be locked and doors wouldn't open when they were supposed to, so it is kept disabled for the most part, but there is a chance that panels will require keys. Increased from 10% to 25%.
-    'off': 75
-    panels: 25
+    # This has only ever been annoying, no matter what setting it is on when enabled, as panels become arbitrarily locked and doors don't open when they should. Keep this off no matter what.
+    'off': 50
+    panels: 0
     doors: 0
     mixed: 0
   door_groupings:
@@ -227,17 +206,11 @@ The Witness:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 30.
     # Increased from the usual 10 due to how often I was getting stuck on certain puzzles. Although 20 seems like too much of a cheese, it is absolutely necessary.
     20: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   trap_percentage:
     # Replaces junk items with traps, at the specified rate.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # I have substantially increased trap percentage to get bonked more often.
     50: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   trap_weights:
     # Specify the weights determining how many copies of each trap item will be in your itempool.
     # If you don't want a specific type of trap, you can set the weight for it to 0.
@@ -257,9 +230,6 @@ The Witness:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 49.
     # Unchanged from the base configuration.
     12: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   vague_hints:
     # Make Location Hints a bit more vague, where they only tell you about the general area the item is in.
     # Area Hints will be generated as normal.
@@ -279,9 +249,6 @@ The Witness:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
     33: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   laser_hints:
     # If on, lasers will tell you where their items are if you walk close to them in-game. Only applies if Laser Shuffle is enabled.
     # Unchanged from the base configuration.
@@ -318,17 +285,12 @@ The Witness:
     # 0 means every panel fail will send a death, 1 means every other panel fail will send a death, etc.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5.
     # Randomly generated between 0 and 3, as a means of heightening the tension on half of all runs, as I typically played with an amnesty of 2.
-    random: 0
-    random-low: 0
-    random-high: 0
     random-range-0-3: 50
   puzzle_randomization_seed:
     # Sigma Rando, which is the basis for all puzzle randomization in this randomizer, uses a seed from 1 to 9999999 for the puzzle randomization. This option lets you set this seed yourself.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 9999999.
     # Unchanged from the base configuration.
     random: 50
-    random-low: 0
-    random-high: 0
   #################
   # Silly Options #
   #################
