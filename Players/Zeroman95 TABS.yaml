@@ -12,7 +12,7 @@ Totally Accurate Battle Simulator:
     random-high: 0
     random-range-0-99: 0
     disabled: 50
-    normal: 50
+    normal: 0
     extreme: 0
   accessibility:
     full: 50
@@ -47,8 +47,8 @@ Totally Accurate Battle Simulator:
     'true': 50
   local_items: []
   non_local_items: []
-  start_inventory: { 'Halfling' } # Start with Halfling instead of Clubber.
-  start_inventory_from_pool: {}
+  start_inventory: {}
+  start_inventory_from_pool: { 'Halfing': 1 } # Start with Halfling instead of Clubber.
   start_hints: []
   start_location_hints: []
   exclude_locations: []
