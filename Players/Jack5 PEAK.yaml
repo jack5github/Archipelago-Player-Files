@@ -2,7 +2,7 @@
 description: |-
   Jack5's PEAK player file
 
-  This PEAK configuration makes a multitude of changes in order for it to have the same responsibility as other player files. The number of Ascents required has been reduced, additional progressive stamina has been enabled, and all Link functionality has been turned on. In addition, a variety of traps have been disabled, with the overall chance being increased.
+  This PEAK configuration makes a multitude of changes in order for it to have the same responsibility as other player files. The number of Ascents required has been reduced to just 1, additional progressive stamina has been enabled, and Energy Link functionality has been turned on. In addition, a variety of traps have been disabled, with the overall chance of them occurring being increased.
 game: PEAK
 requires:
   version: 0.6.6
@@ -31,8 +31,8 @@ PEAK:
     # The ascent level required to complete the Reach Peak goal (0-7)
     # Higher ascents add more difficulty modifiers and challenges
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 7.
-    # Considering how long PEAK takes to beat once, I think only needing to beat the game twice is a good value to start with.
-    1: 50
+    # Considering how long PEAK takes to beat once, only a single Ascent is required.
+    0: 50
   badge_count:
     # The number of badges required to complete the Complete All Badges goal
     # There are 54 total badges available in the game
@@ -156,7 +156,6 @@ PEAK:
     low: 0
     medium: 50
     high: 0
-
   deadly_poison_trap_weight:
     # Likelihood of receiving a trap which applies a strong Poison Affliction to a player
     # TOO MUCH RADIATION!!!
@@ -394,7 +393,9 @@ PEAK:
   non_local_items:
     # With the power of friendship, I will climb this mountain!
     - Progressive Stamina Bar
-  start_inventory: {}
+  start_inventory:
+    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. When I first generated a PEAK run, I saw a total of 6 of these items in the pool, so I am forcing that number here.
+    Progressive Mountain: 6
   start_hints: []
   start_location_hints: []
   exclude_locations: []
