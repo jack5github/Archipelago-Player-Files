@@ -37,10 +37,10 @@ Totally Accurate Battle Simulator:
     'true': 0
   secret_type:
     none: 0
-    regular: 0
+    regular: 50
     no_unlocks: 0
-    all: 50
-  required_campaigns: ['Adventure', 'Challenge', 'Introduction', 'Simulation']
+    all: 0
+  required_campaigns: ['Introduction', 'Dynasty', 'Renaissance', 'Simulation'] # Originally Introduction, Adventure, Challenge. Don't want to play Adventure and Challenge. Too many Scenarios for me to go through to finish.
   additional_campaigns: []
   hidden_campaign_unlocks:
     'false': 0
