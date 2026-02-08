@@ -312,65 +312,65 @@ Ratchet and Clank 3:
   ship_nose:
     # Cosmetic:
     # What Nose should you have on the ship?
-    standard: 50
-    split: 0
-    scoop: 0
+    standard: 1
+    split: 1
+    scoop: 1
   ship_wings:
     # Cosmetic:
     # What Wings should you have on the ship?
-    standard: 0
-    hi_lift: 0
-    heavy_ordinance: 50
+    standard: 1
+    hi_lift: 1
+    heavy_ordinance: 1
   ship_skin:
     # Cosmetic:
     # What Skin should you have on the ship?
-    blargian_red: 0
-    orxon_green: 0
-    bogon_blue: 0
-    insomniac_special: 0
-    dark_nebula: 0
-    dreks_black_heart: 0
-    space_storm: 0
-    lunar_eclipse: 0
-    plaidtastic: 0
-    supernova: 0
-    solar_wind: 0
-    clowner: 0
-    silent_strike: 0
-    lombax_orange: 0
-    neutron_star: 0
-    star_traveller: 0
-    hooked_on_onyx: 0
-    tyhrranoid_void: 0
-    zeldren_sunset: 0
-    ghost_pirate_purple: 0
-    qwark_green: 0
-    agent_orange: 0
-    helgas_hues: 0
-    ameboid_green: 0
-    pulsing_purple: 0
-    obani_orange: 0
-    low_rider: 50
-    black_hole: 0
-    sun_storm: 0
-    sasha_scarlet: 0
-    florana_breeze: 0
-    ozzy_kamikaze: 0
+    blargian_red: 1
+    orxon_green: 1
+    bogon_blue: 1
+    insomniac_special: 1
+    dark_nebula: 1
+    dreks_black_heart: 1
+    space_storm: 1
+    lunar_eclipse: 1
+    plaidtastic: 1
+    supernova: 1
+    solar_wind: 1
+    clowner: 1
+    silent_strike: 1
+    lombax_orange: 1
+    neutron_star: 1
+    star_traveller: 1
+    hooked_on_onyx: 1
+    tyhrranoid_void: 1
+    zeldren_sunset: 1
+    ghost_pirate_purple: 1
+    qwark_green: 1
+    agent_orange: 1
+    helgas_hues: 1
+    ameboid_green: 1
+    pulsing_purple: 1
+    obani_orange: 1
+    low_rider: 1
+    black_hole: 1
+    sun_storm: 1
+    sasha_scarlet: 1
+    florana_breeze: 1
+    ozzy_kamikaze: 1
   skin:
     # Cosmetic:
     # What Skin should Ratchet have?
     # Remember to reload your save file after starting a new game to apply the skin!
     # Alternatively, go to the Armor Vendor to reload the skin.
-    default: 0
-    old_school: 0
-    snowman: 0
-    tuxedo: 0
-    buginoid: 0
-    brainius: 0
-    unused_robot: 0
-    robo_rooster: 50
-    trooper: 0
-    robo: 0
+    default: 1
+    old_school: 1
+    snowman: 1
+    tuxedo: 1
+    buginoid: 1
+    brainius: 1
+    unused_robot: 1
+    robo_rooster: 1
+    trooper: 1
+    robo: 1
   ###########################
   # Item & Location Options #
   ###########################
