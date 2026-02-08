@@ -14,17 +14,10 @@ Portal 2:
   ################
   progression_balancing:
     # Unchanged from the base configuration.
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-99: 0
-    disabled: 0
     normal: 50
-    extreme: 0
   accessibility:
     # Unchanged from the base configuration.
     full: 50
-    minimal: 0
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
     # "No need to be selfish, luv, you're gonna die." - Wheatley
@@ -47,10 +40,6 @@ Portal 2:
     # You can define additional values between the minimum and maximum values. Minimum value is 60, maximum value is 100.
     # Portal 2 becomes boring the more Chapter 1 levels are made available at the start of the game, so I have set this option to its absolute minimum.
     60: 50
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-60-100: 0 # random value between 60 and 100
   cutscenelevels:
     # Determines whether cutscene maps are added to the map pool
     # I do not want to have to watch cutscenes to progress.
@@ -81,10 +70,6 @@ Portal 2:
     # Maximum value is 100
     # The default is to have no traps at all, increased to 10%.
     10: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-100: 0
   motion_blur_trap_weight:
     # Likelihood of receiving a trap which makes it a little hard to see
     # Unchanged from the base configuration.
@@ -123,10 +108,11 @@ Portal 2:
   ###########################
   # Item & Location Options #
   ###########################
-  # Unchanged from the base configuration.
   local_items: []
   non_local_items: []
-  start_inventory: {}
+  start_inventory:
+    # Lasers and Laser Relays are already items that can be unlocked during a run. It doesn't make sense for catchers to be an item too, as this makes it take much longer to be able to use lasers in general.
+    Laser Catchers: 1
   start_hints: []
   start_location_hints: []
   exclude_locations: []

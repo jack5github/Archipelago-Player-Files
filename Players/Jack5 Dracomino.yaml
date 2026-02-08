@@ -13,8 +13,8 @@ Dracomino:
   # Game Options #
   ################
   progression_balancing:
-    # Unchanged from the base configuration.
-    normal: 50
+    # Increased to try to have this game finish before others, as it is unsatisfying when it is the one to end a run.
+    60: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
@@ -38,8 +38,8 @@ Dracomino:
   extra_shapes:
     # Extra shapes to add to the pool to make goaling easier/safer.
     # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 100.
-    # I reduced this from 20 to increase the difficulty.
-    10: 50
+    # I reduced this from 20 to increase the difficulty, yet 10 is too low.
+    15: 50
   randomize_orientations:
     # Randomize the starting orientation of pieces? If disabled, pieces are oriented with flat side down.
     # Unchanged from the base configuration.
@@ -50,34 +50,34 @@ Dracomino:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100
     # I used this in my first run, but figured that dominos would be better. Minos of size 1-3 have a random chance of occurring, though it is more likely for them to all not occur at all.
     random-range-low-0-2: 50
-    none: 50 # equivalent to 0
+    none: 0 # equivalent to 0
     per unique shapes: 0 # equivalent to 1
   domino_weight:
     # Ratio of dominos (2-blocks) to all shape types.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # I added the domino in order to help with later line clearing. I tried using monomimos with an approximately 10% chance of occurring given the number of pentominoes, but that was too hard, so I'm trying 20% chance with this instead. Minos of size 1-3 have a random chance of occurring, though it is more likely for them to all not occur at all.
     random-range-low-0-2: 50
-    none: 50 # equivalent to 0
+    none: 0 # equivalent to 0
     per unique shapes: 0 # equivalent to 1
   tromino_weight:
     # Ratio of tromino (3-blocks) to all shape types.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Minos of size 1-3 have a random chance of occurring, though it is more likely for them to all not occur at all.
     random-range-low-0-2: 50
-    none: 50 # equivalent to 0
+    none: 0 # equivalent to 0
     per unique shapes: 0 # equivalent to 2
   tetromino_weight:
     # Ratio of tetromino (4-blocks) to all shape types.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # I multiplied this value from 7 by 10 to make it easier to specify ratios for other mino types, but it was occurring too often, so I've reduced it to 5x the weight of pentominos.
-    50: 10
+    50: 50
     none: 0 # equivalent to 0
     per unique shapes: 0 # equivalent to 7
   pentomino_weight:
     # Ratio of pentomino (5-blocks) to all shape types.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # Pentominoes add more difficulty to the game, but there should not be more than Tetris pieces. See `tetromino_weight` for more information.
-    10: 50
+    # Pentominoes add more difficulty to the game, but there should not be more than Tetris pieces, see `tetromino_weight` for more information. A weight of 10 feels good, but permit the weight to go as low as 8 and as high as 15 as a means of randomising the difficulty.
+    random-range-8-15: 50
     none: 0 # equivalent to 0
     per unique shapes: 0 # equivalent to 18
   next_piece_slots:

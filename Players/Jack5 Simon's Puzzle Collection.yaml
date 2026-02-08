@@ -13,8 +13,8 @@ Simon Tatham's Portable Puzzle Collection:
   # Game Options #
   ################
   progression_balancing:
-    # Unchanged from the base configuration.
-    normal: 50
+    # Increased to try to have this game finish before others, as it is unsatisfying when it is the one to end a run.
+    60: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50

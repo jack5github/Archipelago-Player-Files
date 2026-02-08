@@ -13,12 +13,6 @@ Balatro:
   progression_balancing:
     # Balatro should be stuck more than any other game, as it is so difficult that I want to avoid playing it.
     40: 50
-    random: 0
-    random-low: 0
-    random-high: 0
-    disabled: 0
-    normal: 0
-    extreme: 0
   accessibility:
     # In a game like Balatro, it is necessary to have access to every single item in order to be able to stumble upon a good build.
     full: 50
@@ -44,36 +38,24 @@ Balatro:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 38.
     # Irrelevant as my goal is 'Beat Decks'.
     12: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   decks_win_goal:
     # If your goal is 'beat Decks' or 'beat decks on stake', specify the number of wins you need to beat.
     # If your goal isn't "beat decks" or "beat decks on stake", you can ignore this setting.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 15.
     # The default goal of 4 always seemed quite daunting and sluggish, but now that I have actually tested it with my new config, it is fine. Even though I only have access to a single stake, DO NOT CHANGE THIS FROM 4.
     4: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   unique_deck_win_goal:
     # If your goal is 'beat unique decks', specify the number of unique decks you need to beat
     # This setting can be ignored if your goal isn't "beat unique decks".
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 120.
     # Irrelevant as my goal is 'Beat Decks'.
     4: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   jokers_unlock_goal:
     # Number of jokers you need to collect to win.
     # If your goal isn't 'unlock jokers' or 'Win with jokers on stake', this setting can be ignored.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 150.
     # Irrelevant as my goal is 'Beat Decks'.
     75: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   required_stake_for_goal:
     # The required stake for your goal.
     # If no stake is specified or the stake specified is not in the playable stakes it will default to the highest playable one.
@@ -115,9 +97,6 @@ Balatro:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 15.
     # Irrelevant as I am choosing specific decks.
     8: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   stake_unlock_mode:
     # Decide how stakes are handled by the Randomizer.
     # unlocked: all stakes are unlocked from the start
@@ -155,9 +134,6 @@ Balatro:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 8.
     # Irrelevant as I am choosing specific stakes.
     2: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   joker_bundles:
     # Rather than handling each joker as an individual item, you can group them into bundles for quicker progress
     # and fewer items to manage in the world. When enabled, all 150 jokers will be placed into randomly generated bundles.
@@ -170,9 +146,6 @@ Balatro:
     # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 30.
     # Use the smallest possible bundle size.
     5: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   remove_or_debuff_jokers:
     # Choose whether locked jokers should be completely removed or appear in a debuffed state.
     # Set this to true to remove them entirely, or set it to false to have them appear debuffed.
@@ -232,9 +205,6 @@ Balatro:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 15.
     # Unchanged from the standard configuration.
     1: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   filler_jokers:
     # Which Jokers are supposed to be filler (every Joker not in this list will be considered a progressive item)
     # Be careful with this option if your goal is "Unlock Jokers"
@@ -253,43 +223,28 @@ Balatro:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 300.
     # The default of 100 is ridiculously high, creating lots of checks. After trying 50 and seeing how hard the consumeables are to obtain, this has been reduced even lower, but not too low as not only is only one stake in use, but a small difference needs to be made up for in items vs. checks.
     35: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   permanent_filler:
     # The amount of permanent filler items (like "+1 Hand Size") that is going to be generated.
     # If you set this option to 3 for example it's going to fill the world with 3 "+1 Hand Size", 3 "+1 Joker Slot", etc.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Unchanged from the standard configuration.
     4: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   shop_items:
     # Number of AP Items that will be buyable as vouchers in the shop at each included Stake.
     # So for example if you include 3 Stakes and set this option to 11, then there will be 33 findable Shop Items in your game.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 150.
     # The default of 15 was ridiculously high, creating lots of checks as they apply to each stake. Now that there is only the White Stake, it needs to be even higher, so it has been set as the same as AP Consumable Items.
     35: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   minimum_price:
     # The minimum price for an AP Item Voucher in the shop.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
     # With the total number of Archipelago items reduced in the shop, it makes more sense for them to be harder to obtain, so their base price has been increased heavily. Increased from 5 to 6 to incentivise finishing runs as opposed to getting vouchers immediately.
     6: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   maximum_price:
     # The maximum price for an AP Item in the shop.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
     # It was a bit too punishing for the Archipelago items in Balatro to reach a price of $10 when they often don't give me anything at all, but a maximum price of $8 made them too easy to obtain, so this change has been reverted.
     10: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   trap_amount:
     # How often traps will appear as filler items
     # No traps: No traps will appear

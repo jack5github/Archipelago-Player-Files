@@ -1,8 +1,8 @@
-﻿name: ZeroJackKeep{NUMBER}
+﻿name: MultiKeep{NUMBER}
 description: |-
-  Jack5 and Zeroman95's Keymaster's Keep player file
+  Multiplayer Keymaster's Keep player file by Jack5 and Zeroman95
 
-  This Keymaster's Keep configuration combines our non-Archipelago-supported games and interests into a single player file, which is more condensed compared to the Keymaster's Keep default for both simplicity and an added challenge. The main difference is the goal being changed from 'Keymaster's Challenge' to either 'Magic Key Heist' or 'Area Domination', as we would prefer this config's completion not to hinge on a single challenge.
+  This Keymaster's Keep configuration combines Jack5, Zeroman95 and forbo's non-Archipelago-supported games and interests into a single player file, which is more condensed than the Keymaster's Keep default for both simplicity and an added challenge. The main difference is the goal being changed from 'Keymaster's Challenge' to either 'Magic Key Heist' or 'Area Domination', so this config's completion does not hinge on a single challenge. This player file has led to multiple contributions to Keymaster's Keep by Jack5, in particular, the addition of bag size options, the Area Domination goal and forced game selection.
 game: Keymaster's Keep
 requires:
   version: 0.6.4
@@ -170,7 +170,7 @@ Keymaster's Keep:
     - Game Backlog (META)
     - Garry's Mod (PC + MOD)
     - Goofy Gorillas (PC)
-    - 'Gran Turismo 3: A-Spec (PS2)
+    - 'Gran Turismo 3: A-Spec (PS2)'
     - Left 4 Dead 2 (PC + X360)
     - Magic the Gathering (CARD + PC, AND, IOS)
     - Mario Kart 8 (SW + WIIU)
@@ -346,9 +346,6 @@ Keymaster's Keep:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5.
     # Unchanged from the base configuration.
     1: 50
-    random: 0
-    random-low: 0
-    random-high: 0
   game_selection_force_select:
     # Forces certain games to become areas, selected and placed randomly from this list. This option does not affect shops or the Keymaster's challenge room. If more games than permitted areas are specified, this option will cause an error. 'game_selection_bag_size' will treat games added by this option as if they have been pre-drawn from their respective bags.
     # You are allowed to add the same game multiple times here. This will cause that many instances of the game to appear as areas.
@@ -371,13 +368,13 @@ Keymaster's Keep:
     # The list of consumable types banned from appearing. A consumable's types can be found in the `consumables()` method of the source code. "on_hint" and "on_shop" are banned by default, "on_hint" in order to get players used to the concept of consumables, and "on_shop" as it is uncommon for players of Keymaster's Keep to have shops enabled. To allow these conditional consumables to appear, set this to an empty list.
     # "on_hint" has been removed from the list to allow its consumables to appear.
     ['on_shop']
-  # consumables_custom_consumables:
-  # A YAML list of user-made consumables to add to the game, passed as a string. Custom consumables obey the `consumables_min_rarity`, `consumables_max_rarity` and `consumables_banned_types` options. When setting this option, put "|-" after the option name and fill out the list on subsequent lines. Each item in the list should be a dictionary with the following keys:
+  # consumables_custom:
+  # A dictionary of custom content to add to the implementation. Currently accepts a list of consumables under the key `consumables`, which obey the `consumables_min_rarity`, `consumables_max_rarity` and `consumables_banned_types` options, each of which is expected to have the following keys:
   #     - `name` (str) - The name of the consumable.
   #     - `description` (str) - The description of the consumable.
-  #     - `rarity` (str | int) - The rarity of the consumable, as it is represented in the `ConsumableRarity` enum.
-  #     - `types` (list[str]): The types of the consumable, used in filtering. Defaults to None.
-  #     - `creators` (str | list[str]) - The people that came up with the idea for the consumable.
+  #     - `rarity` (str | int, optional) - The rarity of the consumable, as it is represented in the `ConsumableRarity` enum. Defaults to 0.
+  #     - `types` (list[str], optional): The types of the consumable, used in filtering. Defaults to [].
+  #     - `creators` (str | list[str], optional) - The people that came up with the idea for the consumable. Defaults to "Custom".
   # As this is unchanged from the base configuration, it is omitted in case the way the option's values are stored changes.
   consumables_show_names:
     # Whether to show consumable names at the start of their descriptions.
