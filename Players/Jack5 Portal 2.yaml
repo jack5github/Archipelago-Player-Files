@@ -2,7 +2,7 @@ name: Jack5Portal2{NUMBER}
 description: |-
   Jack5's Portal 2 player file
 
-  This Portal 2 configuration adjusts the potential randomisation of the game to be more suitable for playing it in conjunction with other games. Traps are enabled, and the accessible maps are restricted to ensure more levels get played.
+  This Portal 2 configuration adjusts the potential randomisation of the game to be more suitable for playing it in conjunction with other games. Traps are enabled, and the accessible maps are restricted to ensure more levels get played, removing those where nothing happens.
 game: Portal 2
 requires:
   version: 0.6.6
@@ -26,13 +26,15 @@ Portal 2:
   ####################
   # Location Options #
   ####################
-  open_world:
-    # If all maps are accessible from the start.
-    # Default is false, only 1 map from each chapter is accessible and maps are unlocked through completing previous ones.
-    # If true all maps are accessible from the start. This makes it easier to play but does break intended level progression logic
-    # I prefer starting out with as little access to maps as possible.
-    'false': 50
-    'true': 0
+  game_mode:
+    # What map generation and logic options are set:
+    # normal -> Each chapter is randomised with it's own maps
+    # chaotic -> Any map can be in any chapter
+    # open_world -> maps appear in the correct order in the game and are all playable from the start
+    # Make all non-open world game modes equally likely to occur. Open world allows me to access the final map immediately, which could result in the game ending too quickly.
+    normal: 50
+    chaotic: 50
+    open_world: 0
   early_playability_percentage:
     # What percentage of starting maps are in the first round of map selection
     # Minimum of 60 -> Over half of the starting maps are available from the get go, slightly slower start
@@ -40,22 +42,30 @@ Portal 2:
     # You can define additional values between the minimum and maximum values. Minimum value is 60, maximum value is 100.
     # Portal 2 becomes boring the more Chapter 1 levels are made available at the start of the game, so I have set this option to its absolute minimum.
     60: 50
-  cutscenelevels:
+  remove_locations:
+    # Which maps will be removed entirly from the map pool.
+    # Different from Excluded Locations as Removed Locations will not be playable during the game. Excluded Locations are still in the map pool.
+    # These are maps that I would rather not play, mainly those that scarcely make use of the Portal Gun and require lots of walking.
+    - 'Chapter 1: Container Ride Completion'
+    - 'Chapter 1: Secret Panel Completion'
+    - 'Chapter 1: Wake Up Completion'
+    - 'Chapter 5: Neurotoxin Sabotage Completion'
+    - 'Chapter 5: Turret Factory Completion'
+    - 'Chapter 5: Turret Sabotage Completion'
+    - 'Chapter 6: Cave Johnson Completion'
+    - 'Chapter 9: Finale 1 Completion'
+  cutscene_levels:
     # Determines whether cutscene maps are added to the map pool
     # I do not want to have to watch cutscenes to progress.
     'false': 50
     'true': 0
-    # TODO: There are still maps present in Portal 2 that I would rather not play, but are not covered by the above options, such as those that scarcely make use of the Portal Gun and require lots of walking. These are documented below in the event that a way to ban maps is added.
-    # - Chapter 1: Container Ride
-    # - Chapter 1: Secret Panel
-    # - Chapter 1: Wake Up
-    # - Chapter 5: Turret Factory
-    # - Chapter 5: Neurotoxin Sabotage
-    # - Chapter 5: Turret Sabotage
-    # - Chapter 6: Cave Johnson
-    # - Chapter 9: Finale 1
-  wheatleymonitors:
+  wheatley_monitors:
     # Determines whether breaking Wheatly monitors will send location checks
+    # This option is a must in order to increase the number of locations.
+    'false': 0
+    'true': 50
+  ratman_dens:
+    # Determines whether locating Ratman Dens will send location checks
     # This option is a must in order to increase the number of locations.
     'false': 0
     'true': 50
@@ -64,12 +74,9 @@ Portal 2:
   ################
   trap_fill_percentage:
     # Replace a percentage of junk items in the item pool with random traps
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 100
-    # The default is to have no traps at all, increased to 10%.
-    10: 50
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # The default is to have no traps at all, increased to 20%, a number used in many of my other configs.
+    20: 50
   motion_blur_trap_weight:
     # Likelihood of receiving a trap which makes it a little hard to see
     # Unchanged from the base configuration.
@@ -111,11 +118,16 @@ Portal 2:
   local_items: []
   non_local_items: []
   start_inventory:
-    # Lasers and Laser Relays are already items that can be unlocked during a run. It doesn't make sense for catchers to be an item too, as this makes it take much longer to be able to use lasers in general.
-    Laser Catchers: 1
+    # Lasers and Laser Relays are already items that can be unlocked during a run. It doesn't make sense for catchers to be an item too, as this makes it take much longer to be able to use lasers in general. This change is temporarily disabled due to a bug in config generation.
+    # Laser Catchers: 1
+    {}
   start_hints: []
   start_location_hints: []
-  exclude_locations: []
-  priority_locations: []
+  exclude_locations:
+    # Do not consider the final map to be an important location. It causing all Portal 2-held items to be released is enough of a reward.
+    - 'Chapter 9: Finale 4 Completion'
+  priority_locations:
+    # Ensure this chamber is expected to be played, as it is a map that requires a lot of items to progress, ensuring a more complete playthrough of Portal 2.
+    - 'Chapter 8: Laser Catapult Completion'
   item_links: []
   plando_items: []

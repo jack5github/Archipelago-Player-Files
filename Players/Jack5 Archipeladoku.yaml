@@ -118,9 +118,10 @@ Archipeladoku:
   ###########################
   # Item & Location Options #
   ###########################
-  # Unchanged from the base configuration.
   local_items: []
-  non_local_items: []
+  non_local_items:
+    # Require other games to be played in order to unlock new number blocks in sudoku.
+    - Blocks
   start_inventory: {}
   start_hints: []
   start_location_hints: []
