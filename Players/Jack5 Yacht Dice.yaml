@@ -1,0 +1,198 @@
+﻿name: Jack5Yahtzee{NUMBER}
+description: |-
+  Jack5's Yacht Dice player file
+
+  TODO: Add description
+game: Yacht Dice
+requires:
+  version: 0.6.6
+  game:
+    Yacht Dice: 2.1.4
+Yacht Dice:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    normal: 50
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+  game_difficulty:
+    # Difficulty. This option determines how difficult the scores are to achieve.
+    # Easy: for beginners. No luck required, just roll the dice and have fun. Lower final goal.
+    # Medium: intended difficulty. If you play smart, you will finish the game without any trouble.
+    # Hard: you will need to play smart and be lucky.
+    # Extreme: really hard mode, which requires many brain wrinkles and insane luck. NOT RECOMMENDED FOR MULTIWORLDS.
+    # Unchanged from the base configuration.
+    easy: 0
+    medium: 50
+    hard: 0
+    extreme: 0
+  score_for_last_check:
+    # The items in the item pool will always allow you to reach a score of 1000.
+    # By default, the last check is also at a score of 1000.
+    # However, you can set the score for the last check to be lower. This will make the game shorter and easier.
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 500, maximum value is 1000.
+    # Unchanged from the base configuration.
+    1000: 50
+  score_for_goal:
+    # This option determines what score you need to reach to finish the game.
+    # It cannot be higher than the score for the last check (if it is, this option is changed automatically).
+    # You can define additional values between the minimum and maximum values. Minimum value is 500, maximum value is 1000.
+    # Unchanged from the base configuration.
+    777: 50
+  minimal_number_of_dice_and_rolls:
+    # The minimal number of dice and rolls in the pool.
+    # These are guaranteed, unlike the later items.
+    # You can never get more than 8 dice and 5 rolls.
+    # You start with one dice and one roll.
+    # Make all of the non-standard Yahtzee dice counts and roll numbers equally likely.
+    5_dice_and_3_rolls: 0
+    5_dice_and_5_rolls: 25
+    6_dice_and_4_rolls: 25
+    7_dice_and_3_rolls: 25
+    8_dice_and_2_rolls: 25
+  number_of_dice_fragments_per_dice:
+    # Dice can be split into fragments, gathering enough will give you an extra dice.
+    # You start with one dice, and there will always be one full dice in the pool.
+    # The other dice are split into fragments, according to this option.
+    # Setting this to 1 fragment per dice just puts "Dice" objects in the pool.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Unchanged from the base configuration.
+    4: 50
+  number_of_roll_fragments_per_roll:
+    # Rolls can be split into fragments, gathering enough will give you an extra roll.
+    # You start with one roll, and there will always be one full roll in the pool.
+    # The other rolls are split into fragments, according to this option.
+    # Setting this to 1 fragment per roll just puts "Roll" objects in the pool.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Unchanged from the base configuration.
+    4: 50
+  alternative_categories:
+    # There are 16 default categories, but there are also 16 alternative categories.
+    # These alternative categories can be randomly selected to replace the default categories.
+    # They are a little strange, but can give a fun new experience.
+    # In the game, you can hover over categories to check what they do.
+    # This option determines the number of alternative categories in your game.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 16.
+    # Fully randomise all categories for a non-standard Yahtzee experience.
+    random-range-0-16: 50
+  allow_manual_input:
+    # If allowed, players can roll IRL dice and input them manually into the game.
+    # By sending "manual" in the chat, an input field appears where you can type your dice rolls.
+    # Of course, we cannot check anymore if the player is playing fair.
+    # I will not be using real-life dice.
+    yes_allow: 0
+    no_dont_allow: 50
+  ###########################
+  # Extra progression items #
+  ###########################
+  weight_of_dice:
+    # The item pool is always filled in such a way that you can reach a score of 1000.
+    # Extra progression items are added that will help you on your quest.
+    # You can set the weight for each extra progressive item in the following options.
+    # Of course, more dice = more points!
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    5: 50
+  weight_of_roll:
+    # With more rolls, you will be able to reach higher scores.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    20: 50
+  weight_of_fixed_score_multiplier:
+    # Getting a Fixed Score Multiplier will boost all future scores by 10%.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    30: 50
+  weight_of_step_score_multiplier:
+    # The Step Score Multiplier boosts your multiplier after every roll by 1%, and resets on sheet reset.
+    # So, keep high scoring categories for later to get the most out of them.
+    # By default, this item is not included. It is fun however, you just need to know the above strategy.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    0: 50
+  weight_of_double_category:
+    # This option allows categories to appear multiple times.
+    # Each time you get a category after the first, its score value gets doubled.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    50: 50
+  weight_of_points:
+    # Are you tired of rolling dice countless times and tallying up points one by one, all by yourself?
+    # Worry not, as this option will simply add some points items to the item pool!
+    # And getting one of these points items gives you... points!
+    # Imagine how nice it would be to find tons of them. Or even better, having others find them FOR you!
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    20: 50
+  points_size:
+    # If you choose to add points to the item pool, you can choose to have many small points,
+    # medium-size points, a few larger points, or a mix of them.
+    # Unchanged from the base configuration.
+    small: 0
+    medium: 50
+    large: 0
+    mix: 0
+  ###############
+  # Other items #
+  ###############
+  minimize_extra_items:
+    # Besides necessary items, Yacht Dice has extra useful/filler items in the item pool.
+    # It is possible however to decrease the number of locations and extra items.
+    # This option will:
+    # - decrease the number of locations at the start (you'll start with 2 dice and 2 rolls).
+    # - will limit the number of dice/roll fragments per dice/roll to 2.
+    # - in multiplayer games, it will reduce the number of filler items.
+    # Unchanged from the base configuration.
+    no_dont: 50
+    yes_please: 0
+  add_bonus_points:
+    # Yacht Dice typically has space for extra items.
+    # This option determines if bonus points are put into the item pool.
+    # They make the game a little bit easier, as they are not considered in the logic.
+    # All Of It: fill all locations with extra points
+    # Sure: put some bonus points in
+    # Never: do not put any bonus points
+    # I think that Yahtzee should be more a game of skill rather than luck, so I am turning off bonus points.
+    all_of_it: 0
+    sure: 0
+    never: 50
+  add_story_chapters:
+    # Yacht Dice typically has space for more items.
+    # This option determines if extra story chapters are put into the item pool.
+    # Note: if you have extra points on "all_of_it", there will not be story chapters.
+    # All Of It: fill all locations with story chapters
+    # Sure: if there is space left, put in 10 story chapters.
+    # Never: do not put any story chapters in, I do not like reading (but I am glad you are reading THIS!)
+    # Yahtzee has a story!? Uh, yeah, no thanks.
+    all_of_it: 0
+    sure: 0
+    never: 50
+  which_story:
+    # The most important part of Yacht Dice is the narrative.
+    # Of course you will need to add story chapters to the item pool.
+    # You can read story chapters in the feed on the website and there are several stories to choose from.
+    # Unchanged from the base configuration.
+    the_quest_of_the_dice_warrior: 0
+    the_tragedy_of_fortunas_gambit: 0
+    the_dicey_animal_dice_game: 0
+    whispers_of_fate: 0
+    a_yacht_dice_odyssey: 0
+    a_rollin_rhyme_adventure: 0
+    random_story: 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # Unchanged from the base configuration.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
