@@ -2,7 +2,7 @@
 description: |-
   Jack5's Yacht Dice player file
 
-  TODO: Add description
+  This Yacht Dice configuration is aimed at making the simple game of Yahtzee more varied, difficult and exciting for Archipelago runs. The number of dice and rolls are randomised, as are the categories that can be scored in. Extra dice and rolls must be found in other games, while categories are discovered while playing, ensuring that any time playing this game is a chaotic experience.
 game: Yacht Dice
 requires:
   version: 0.6.6
@@ -41,8 +41,8 @@ Yacht Dice:
     # This option determines what score you need to reach to finish the game.
     # It cannot be higher than the score for the last check (if it is, this option is changed automatically).
     # You can define additional values between the minimum and maximum values. Minimum value is 500, maximum value is 1000.
-    # Unchanged from the base configuration.
-    777: 50
+    # Increased slightly from 777 to raise the overall difficulty.
+    800: 50
   minimal_number_of_dice_and_rolls:
     # The minimal number of dice and rolls in the pool.
     # These are guaranteed, unlike the later items.
@@ -186,10 +186,16 @@ Yacht Dice:
   ###########################
   # Item & Location Options #
   ###########################
-  # Unchanged from the base configuration.
-  local_items: []
-  non_local_items: []
-  start_inventory: {}
+  local_items:
+    # Prevent Categories from being found within other games to add a sense of progression to Yahtzee.
+    - Categories
+  non_local_items:
+    # Prevent Dice and Roll Fragments from being found within Yahtzee to encourage switching between games.
+    - Dice Fragment
+    - Roll Fragment
+  start_inventory:
+    # Start with enough Dice Fragments for a second dice.
+    Dice Fragment: 4
   start_hints: []
   start_location_hints: []
   exclude_locations: []

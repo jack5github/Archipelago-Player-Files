@@ -88,8 +88,8 @@ Dracomino:
   hold_slots:
     # Number of Hold Slots present in the multiworld.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
-    # The game does not look good with any more than 1 hold slot.
-    1: 50
+    # I used to have this set to 1, as at the time, the game did not look good with any more than 1 Hold Slot. The HUD has since been updated to fix this, but having too many Hold Slots could prove to be OP, so I have increased this count to 3, 1 more than 2 (like Next Piece Slots are 1 more than 4).
+    3: 50
   max_stacking_height:
     # How high logic expects you to stack blocks to reach tiles.
     # Warning! Setting this higher than your board height can make the game more difficult or even impossible!
