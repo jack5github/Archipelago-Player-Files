@@ -1,0 +1,31 @@
+name: ForboChess{NUMBER}
+description: |-
+  Forbo's ChecksMate player file
+
+  TODO: Add description
+game: ChecksMate
+ChecksMate:
+  progression_balancing: 50
+  accessibility: full
+  goal: single
+  difficulty: daily
+  enable_tactics: all
+  piece_locations: chaos
+  piece_types: stable
+  early_material: 'off'
+  max_engine_penalties: 5
+  max_pocket: 12
+  max_kings: 1
+  fairy_kings: 1
+  fairy_chess_pieces: fide
+  fairy_chess_army: chaos
+  fairy_chess_pawns: vanilla
+  minor_piece_limit_by_type: 1
+  major_piece_limit_by_type: 1
+  queen_piece_limit_by_type: 1
+  queen_piece_limit: 1
+  pocket_limit_by_pocket: 4
+  death_link: false
+  asymmetric_trades: disabled
+  fairy_chess_pieces_configure:
+    - FIDE
