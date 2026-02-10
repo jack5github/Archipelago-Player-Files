@@ -291,10 +291,10 @@ PEAK:
     high: 0
   scoutmaster_trap_weight:
     # Likelihood of receiving a trap which summons the Scoutmaster to hinder a player
-    # OH BOY. The Scoutmaster randomly appearing is going to be the most terrifying thing imaginable.
+    # The Scoutmaster randomly appearing can be the most terrifying thing imaginable, but it can also be an extreme hinderance, especially when spawning in for the first time with only 25% stamina and a whole bunch of items yet to be picked up.
     none: 0
-    low: 0
-    medium: 50
+    low: 50
+    medium: 0
     high: 0
   zoom_trap_weight:
     # Likelihood of receiving a trap which drastically changes a player's camera zoom level
