@@ -89,14 +89,14 @@ Keymaster's Keep:
     # Determines the minimum amount of trials that could be in an area.
     # The amount of trials in an area will be a random number between this value and the maximum, but might get adjusted upwards to hold the item pool size.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
-    # The default of these has the trial count hovering around 5. This has been changed to hover around 10 in order to increase the number of checks to approximately 150.
-    8: 50
+    # The default of these has the trial count hovering around 5. This was been changed to hover around 10 in order to increase the number of checks to approximately 150, but now hovers around 6.5 due to the length of Keymaster's Keep not working well in a multiworld.
+    5: 50
   area_trials_maximum:
     # Determines the maximum amount of trials that could be in an area.
     # The amount of trials in an area will be a random number between the minimum and this value, but might get adjusted upwards to hold the item pool size.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
-    # The default of these has the trial count hovering around 5. This has been changed to hover around 10 in order to increase the number of checks to approximately 150.
-    12: 50
+    # The default of these has the trial count hovering around 5. This was been changed to hover around 10 in order to increase the number of checks to approximately 150, but now hovers around 6.5 due to the length of Keymaster's Keep not working well in a multiworld.
+    8: 50
   shops_:
     # If true, keep areas will have a chance to be replaced by a shop that will sell a handful of items.
     # The presence of shops will add Unique Relics to the item pool, which will need to be found to purchase items.
