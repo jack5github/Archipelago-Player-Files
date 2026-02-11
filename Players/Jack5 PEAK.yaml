@@ -2,7 +2,7 @@
 description: |-
   Jack5's PEAK player file
 
-  This PEAK configuration makes a multitude of changes in order for it to have the same responsibility as other player files. The number of Ascents required has been reduced to just 1, additional progressive stamina has been enabled, and Energy Link functionality has been turned on. In addition, a variety of traps have been disabled, with the overall chance of them occurring being increased.
+  This PEAK configuration makes a multitude of changes in order for it to have the same responsibility as other player files. The number of Ascents required has been reduced to just 1, progressive stamina has been enabled and Energy Link functionality has been turned on. In addition, a variety of traps have been disabled, with the overall chance of them occurring being increased.
 game: PEAK
 requires:
   version: 0.6.6
@@ -48,9 +48,9 @@ PEAK:
   additional_stamina_bars:
     # Enable 4 additional stamina bars beyond the base 100%
     # Allows players to reach up to 200% total stamina (requires Progressive Stamina to be enabled)
-    # I have chosen to enable this in order to have an easier end, as is typical in Archipelago runs.
-    'false': 0
-    'true': 50
+    # I tried a run with this enabled, but it made the game too easy, as Progressive Endurance can also be found which divides stamina usage by up to 2.
+    'false': 50
+    'true': 0
   ring_link:
     # When enabled, ring pickups are shared among all players with Ring Link enabled
     # For PEAK; rings are stamina. Consuming food will send Rings to other players with Ring Link enabled. Poisonous food will send negative rings.
@@ -392,10 +392,11 @@ PEAK:
   local_items: []
   non_local_items:
     # With the power of friendship, I will climb this mountain!
+    - Progressive Endurance
     - Progressive Stamina Bar
   start_inventory:
-    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. There are 4 of these, one for each biome after the Shore (excluding the Peak).
-    Progressive Mountain: 4
+    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. There are 6 of these, 4 of which are for each biome after the Shore (excluding the Peak), the other 2 being basically filler items.
+    Progressive Mountain: 6
   start_hints: []
   start_location_hints: []
   exclude_locations: []
