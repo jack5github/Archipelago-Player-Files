@@ -245,14 +245,14 @@ Keymaster's Keep:
     # You are allowed to place games that already appear in other selection options here.
     # You are allowed to add the same game multiple times here. This will act as a weighted pool.
     # If this is left empty, all games from other selection options will be used as a default.
-    # Game Medley should contain all non-meta games.
+    # Game Medley should contain all non-meta games that make sense to be played exclusively in single player.
     - Bloons TD 6 (PC + AND, IOS, PS4, XONE)
     - Dicey Dungeons (PC + SW, AND, IOS)
     - Dominion (BOARD + AND, IOS, PC)
     - Embr (PC + PS4, SW, XONE)
     - Fall Guys (PC + PS4, PS5, XONE, XSX, SW, AND, IOS)
-    - Garry's Mod (PC + MOD)
-    - Goofy Gorillas (PC)
+    # - Garry's Mod (PC + MOD) - Removed as it does not make sense to play in single player.
+    # - Goofy Gorillas (PC) - Removed as it does not make sense to play in single player.
     - 'Gran Turismo 3: A-Spec (PS2)'
     - Left 4 Dead 2 (PC + X360)
     - Magic the Gathering (CARD + PC, AND, IOS)
