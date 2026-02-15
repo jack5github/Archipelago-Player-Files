@@ -324,7 +324,7 @@ Ratchet and Clank 3:
   ship_skin:
     # Cosmetic:
     # What Skin should you have on the ship?
-    blargian_red: 1
+    blargian_red: 0
     orxon_green: 1
     bogon_blue: 1
     insomniac_special: 1
