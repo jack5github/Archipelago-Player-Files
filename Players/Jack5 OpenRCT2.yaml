@@ -1,0 +1,501 @@
+﻿name: Jack5RCT2{NUMBER}
+description: |-
+  Jack5's OpenRCT2 player file
+
+  This RollerCoaster Tycoon 2 configuration intends to maximise the perceived variety of the game within each new Archipelago run, while minimising the difficulty of the game, as it has a rather hardcore-oriented community. In particular, scenarios with unique terrain are favoured over flat ones, stat randomisation is kept low to ensure a consistent experience, and the win conditions have a chance to be reduced by between 0% and 10%. There is also a 10% chance of Monopoly Mode occurring.
+game: OpenRCT2
+requires:
+  version: 0.6.6
+  game:
+    OpenRCT2: 0.1.20
+OpenRCT2:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    normal: 50
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+  ignore_ride_stat_changes:
+    # Disables changes to base ride stats. If enabled, rides will always behave like they do in the base game.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  death_link:
+    # If you die, everybody dies, and vise versa!
+    # This manifests itself in exploding rides. Somebody dying will cause a random ride to crash, and building rides badly will cause others to die. There's a 20 second timer between deathlink events.
+    # Fix that coaster quickly! This option can be enabled/disabled in game as well by typing !!toggledeathlink in the chat tab of the unlock shop.
+    # Unchanged from the base configuration.
+    disabled: 0
+    enabled: 50
+  ####################
+  # Scenario Options #
+  ####################
+  scenario:
+    # Choose which scenario you'd like to play! Random won't choose scenarios that are unreasonably difficult/tedious.
+    # Future updates will allow custom scenarios.
+    # The full scenario list can be found starting from https://rct.fandom.com/wiki/The_Complete_Scenario_List#RollerCoaster_Tycoon_2. All interesting scenarios are given a weight of 5, while all non-interesting but compatible scenarios are given a weight of 2 (1 if shared between built and non-built versions).
+    random_rct1: 0
+    random_loopy_landscapes: 0
+    random_corkscrew_follies: 0
+    random_rct2: 0
+    random_wacky_worlds: 0
+    random_time_twister: 0
+    random_rct1_expansions: 0
+    random_rct2_expansions: 0
+    # **Archipelago**
+    archipelago_madness_vanilla: 0
+    archipelago_madness_expansions: 5
+    # **RollerCoaster Tycoon 1**
+    forest_frontiers: 0
+    dynamite_dunes: 0 # (WARNING: NO WATER)
+    leafy_lake: 0
+    diamond_heights: 0
+    evergreen_gardens: 0
+    bumbly_beach: 0
+    trinity_islands: 0
+    katies_world: 0 # Katie's Dreamland
+    dinky_park: 0 # Pokey Park
+    aqua_park: 0 # White Water Park
+    millennium_mines: 0
+    karts_and_coasters: 0
+    mels_world: 0
+    mothball_mountain: 0 # Mystic Mountain
+    pacific_pyramids: 0 # (WARNING: NO WATER)
+    crumbly_woods: 0
+    big_pier: 0 # Paradise Pier (WARNING: UNREASONABLE)
+    lightning_peaks: 0
+    ivory_towers: 0
+    rainbow_valley: 0
+    thunder_rock: 0 # (WARNING: NO WATER)
+    whispering_cliffs: 0
+    three_monkeys_park: 0
+    canary_mines: 0 # (WARNING: NO WATER)
+    barony_bridge: 0
+    funtopia: 0
+    haunted_harbor: 0
+    fun_fortress: 0
+    future_world: 0
+    gentle_glen: 0
+    jolly_jungle: 0 # (WARNING: UNREASONABLE)
+    hydro_hills: 0
+    sprightly_park: 0
+    magic_quarters: 0
+    fruit_farm: 0
+    butterfly_dam: 0
+    coaster_canyon: 0
+    thunderstorm_park: 0
+    harmonic_hills: 0
+    roman_village: 0
+    swamp_cove: 0
+    adrenaline_heights: 0
+    utopia_park: 0
+    rotting_heights: 0
+    fiasco_forest: 0
+    pickle_park: 0
+    giggle_downs: 0
+    mineral_park: 0
+    coaster_crazy: 0
+    urban_park: 0 # (WARNING: UNREASONABLE)
+    geoffery_gardens: 0
+    iceberg_islands: 0
+    volcania: 0
+    arid_heights: 0
+    razor_rocks: 0
+    crater_lake: 0
+    vertigo_views: 0
+    big_pier_2: 0 # Paradise Pier 2 (WARNING: UNREASONABLE)
+    dragons_cove: 0
+    good_knight_park: 0
+    wacky_warren: 0
+    grand_glacier: 0
+    crazy_craters: 0
+    dusty_desert: 0
+    woodworm_park: 0
+    icarus_park: 0
+    sunny_swamps: 0
+    frightmare_hills: 0
+    thunder_rocks: 0
+    octagon_park: 0
+    pleasure_island: 0
+    icicle_worlds: 0
+    southern_sands: 0
+    tiny_towers: 0
+    nevermore_park: 0
+    pacifica: 0
+    urban_jungle: 0
+    terror_town: 0
+    megaworld_park: 0 # (WARNING: UNREASONABLE)
+    venus_ponds: 0
+    micro_park: 0 # (WARNING: UNREASONABLE)
+    # **RollerCoaster Tycoon 2**
+    crazy_castle: 5
+    electric_fields: 2
+    factory_capers: 2
+    amity_airfield: 2
+    botany_breakers: 2
+    bumbly_bazzar: 2
+    dusty_greens: 2
+    fungus_woods: 0 # (WARNING: UNREASONABLE)
+    gravity_gardens: 0 # (WARNING: UNREASONABLE)
+    infernal_views: 5
+    alpine_adventures: 5
+    extreme_heights: 2
+    ghost_town: 2
+    lucky_lake: 2
+    rainbow_summit: 2
+    over_the_edge: 2 # Victoria Falls
+    great_wall_of_china: 5
+    canyon_calamities: 2 # Grand Canyon
+    sugarloaf_shores: 2 # Rio Carnival
+    mines_of_africa: 5 # African Diamond Mine
+    park_maharaja: 2 # Maharaja Palace
+    ayers_adventure: 2 # Ayers Rock
+    european_extravaganza: 2 # European Cultural Festival
+    rollercoaster_heaven: 2
+    lost_city_founder: 2 # Inca Lost City
+    mirage_madness: 2 # Oasis
+    icy_adventures: 5 # Ecological Salvage
+    okinawa_coast: 2 # Japanese Coastal Reclaim
+    beach_barbecue_blast: 2 # Fun at the Beach
+    from_the_ashes: 5 # Renovation
+    wacky_waikiki: 5 # Extreme Hawaiian Island
+    rainforest_romp: 2 # Rain Forest Plateau
+    sherwood_forest: 2 # Robin Hood
+    crater_carnage: 5 # After the Asteroid
+    alcatraz: 5 # Prison Island
+    woodstock: 2 # Flower Power
+    cliffside_castle: 5
+    extraterrestrial_extravaganza: 2 # First Encounters
+    animatronic_antics: 2 # Animatronic Film Set
+    coastersaurus: 2 # Jurassic Safari
+    schneider_shores: 2 # Schneider Cup
+    gemini_city: 2 # Future World
+    mythological_madness: 5 # Cradle of Civilization
+    rocky_rambles: 5 # Stone Age
+    metropolis: 2 # Skyscrapers
+    rock_n_roll_revival: 2
+    alton_towers: 0 # (WARNING: UNREASONABLE)
+    heide_park: 0 # (WARNING: UNREASONABLE)
+    blackpool_pleasure_beach: 0 # (WARNING: UNREASONABLE)
+    six_flags_belgium: 1
+    six_flags_great_adventure: 1
+    six_flags_holland: 1
+    six_flags_magic_mountain: 1
+    six_flags_over_texas: 1
+    # **Extras**
+    mega_park: 0
+    fort_anachronism: 0
+    build_your_own_six_flags_belgium: 1
+    build_your_own_six_flags_great_adventure: 1
+    build_your_own_six_flags_holland: 1
+    build_your_own_six_flags_magic_mountain: 1
+    build_your_own_six_flags_park: 2
+    build_your_own_six_flags_over_texas: 1
+  difficulty:
+    # Choose a difficulty for the randomization. This will make rides have more difficult stat results (If that's enabled), as well as affect things like the loan interest rate.
+    # Reduced from Medium, as I am no RollerCoaster Tycoon freak, just someone that enjoys the game.
+    very_easy: 0
+    easy: 50
+    medium: 0
+    hard: 0
+    extreme: 0
+  scenario_length:
+    # Choose how long this game will last. This will affect things such as unlock shop prices and if prerequisites are required before purchase. It's recommended to choose based on how long other worlds in the multi-world take to complete.
+    # Synchronous Short: Around 2 hours to complete.
+    # Synchronous Long: Around 4 hours to complete.
+    # Lengthy: Recommended for Asyncs.
+    # Marathon: Recommended for Asyncs.
+    # Unchanged from the base configuration.
+    synchronous_short: 50
+    synchronous_long: 0
+    lengthy: 0
+    marathon: 0
+  randomization_range:
+    # Influences how spread random values will be (Mostly this affects the excitement, intensity, and nausea ratings). The more extreme this value,
+    # the more extreme the difficulty will swing, with easy becoming much easier and hard becoming much more difficult.
+    # Reduced from Medium, as I am no RollerCoaster Tycoon freak, just someone that enjoys the game.
+    none: 0
+    low: 50
+    medium: 0
+    high: 0
+    extreme: 0
+  randomize_park_values:
+    # Randomizes values such as starting cash, starting bank loan amount, and the max bank loan
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  preferred_intensity:
+    # Choose a preferred intensity for your guests. Less intense will limit guests to a maximum of 4 intensity, and more intense will limit guests to a minimum of 8 intensity in most circumstances. Normal is highly recommended for most players! Seriously, unless you really know what you are doing and want the (likely very tedious) challenge, you shouldn't change this.
+    # Unchanged from the base configuration.
+    less_intense: 0
+    normal: 50
+    more_intense: 0
+  stat_rerolls:
+    # How often to re-randomize the stats for ride types. Build the Theme Park of Theseus!
+    # Never re-roll ride statistics.
+    never: 50
+    infrequent: 0
+    semi_frequent: 0
+    frequent: 0
+    very_frequent: 0
+    extremely_frequent: 0
+  ################
+  # Goal Options #
+  ################
+  guest_objective:
+    # Choose how many guests are required to win the scenario
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 7500.
+    # For all of these goal options, I have made them range randomly between their default and 10% less.
+    random-range-900-1000: 50
+  park_value_objective:
+    # If enabled, choose what park value (In USD) is required to win the scenario.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000000.
+    # For all of these goal options, I have made them range randomly between their default and 10% less.
+    random-range-180000-200000: 50
+  roller_coaster_objective:
+    # If enabled, choose how many coasters, and what prerequisites they need to beat the scenario.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
+    # For all of these goal options, I have made them range randomly between their default and 10% less.
+    random-range-4-5: 50
+  roller_coaster_excitement:
+    # Select the minimum excitement 😀 for a coaster to count towards your objective. 0 will disable a minimum excitement rating.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 9.
+    # For all of these goal options, I have made them range randomly between their default and 10% less.
+    random-range-4-5: 50
+  roller_coaster_intensity:
+    # Select the minimum intensity 😬 for a coaster to count towards your objective. 0 will disable a minimum intensity rating.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 9.
+    # For all of these goal options, I have made them range randomly between their default and 10% less.
+    random-range-4-5: 50
+  roller_coaster_nausea:
+    # Select the minimum nausea 🤢 for a coaster to count towards your objective. 0 will disable a minimum nausea rating.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 6.
+    # For all of these goal options, I have made them range randomly between their default and 10% less.
+    random-range-3-4: 50
+  required_unique_rides:
+    # Requires specific rides to be built before scenario completion is awarded. These will tend to appear in the later half of the game.
+    # It's highly recommended to have this set to at least 1!
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
+    # For all of these goal options, I have made them range randomly between their default and 10% less.
+    random-range-4-5: 50
+  park_rating_objective:
+    # If enabled, choose the minimum park rating needed to beat the scenario.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 999.
+    # For all of these goal options, I have made them range randomly between their default and 10% less.
+    random-range-720-800: 50
+  pay_off_loan:
+    # Require Loan to be paid off before scenario completion is awarded. Multiple objectives can be enabled!
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  monopoly_mode:
+    # Monopoly Mode is a new objective type. Every unowned tile will be set to purchasable (Or purchasable construction rights for any unowned tile with a grounded path. Elevated paths will not be purchasable). To complete the objective, all tiles on the map must be purchased. Multiple Objectives can be enabled!
+    # Add a small chance that this objective will be enabled.
+    'false': 90
+    'true': 10
+  fireworks:
+    # Have an explosive firework display on victory! Strongly discouraged if you intend to keep playing after victory or if you expect to have a huge park.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  #########
+  # Rules #
+  #########
+  difficult_guest_generation:
+    # Makes guests harder to generate. Unlockable puts an item in generation that disables the rule when found.
+    # Unchanged from the base configuration.
+    'off': 0
+    unlockable: 50
+    'on': 0
+  difficult_park_rating:
+    # Makes park rating harder to improve. Unlockable puts an item in generation that disables the rule when found.
+    # Disabled as I am no RollerCoaster Tycoon freak, just someone that enjoys the game.
+    'off': 50
+    unlockable: 0
+    'on': 0
+  forbid_high_construction:
+    # Limits building to tree height. Unlockable puts an item in generation that disables the rule when found.
+    # Unchanged from the base configuration.
+    'off': 0
+    unlockable: 50
+    'on': 0
+  forbid_landscape_changes:
+    # Forbids the landscape from being altered. Unlockable puts an item in generation that disables the rule when found.
+    # Unchanged from the base configuration.
+    'off': 0
+    unlockable: 50
+    'on': 0
+  forbid_marketing_campaigns:
+    # Forbids marketing campaigns. Unlockable puts an item in generation that disables the rule when found.
+    # Unchanged from the base configuration.
+    'off': 0
+    unlockable: 50
+    'on': 0
+  forbid_tree_removal:
+    # Forbids removing trees. Unlockable puts an item in generation that disables the rule when found.
+    # Unchanged from the base configuration.
+    'off': 0
+    unlockable: 50
+    'on': 0
+  ################
+  # Shop Options #
+  ################
+  shop_minimum_excitement:
+    # If the shop determines you need a ride with a minimum excitement, this value will be the lowest it can ask for.
+    # If this value is higher than the maximum, the generator will assume it is a mistake and set it to 0.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
+    # Unchanged from the base configuration.
+    0: 50
+  shop_maximum_excitement:
+    # If the shop determines you need a ride with a minimum excitement, this value will be the highest it can ask for.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
+    # Unchanged from the base configuration.
+    5: 50
+  shop_minimum_intensity:
+    # If the shop determines you need a ride with a minimum intensity, this value will be the lowest it can ask for.
+    # If this value is higher than the maximum, the generator will assume it is a mistake and set it to 0.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 7.
+    # Unchanged from the base configuration.
+    0: 50
+  shop_maximum_intensity:
+    # If the shop determines you need a ride with a minimum intensity, this value will be the highest it can ask for.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 7.
+    # Unchanged from the base configuration.
+    5: 50
+  shop_minimum_nausea:
+    # If the shop determines you need a ride with a minimum nausea, this value will be the lowest it can ask for.
+    # If this value is higher than the maximum, the generator will assume it is a mistake and set it to 0.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 4.
+    # Unchanged from the base configuration.
+    0: 50
+  shop_maximum_nausea:
+    # If the shop determines you need a ride with a minimum nausea, this value will be the highest it can ask for.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 4.
+    # Unchanged from the base configuration.
+    4: 50
+  shop_minimum_length:
+    # If the shop determines you need a ride with a minimum length (In Meters), this value in meters will be the lowest it can ask for. If this value is higher than the maximum, the generator will assume it is a mistake and set it to 0.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 2500.
+    # Unchanged from the base configuration.
+    0: 50
+  shop_maximum_length:
+    # If the shop determines you need a ride with a minimum length (In Meters), this value will be the highest it can ask for.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 2500.
+    # Unchanged from the base configuration.
+    500: 50
+  shop_minimum_total_customers:
+    # If the shop determines you need a ride with a minimum total number of customers, this value will be the lowest it can ask for. If this value is higher than the maximum, the generator will assume it is a mistake and set it to 0.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
+    # Unchanged from the base configuration.
+    0: 50
+  shop_maximum_total_customers:
+    # If the shop determines you need a ride with a minimum total number of customers, this value will be the highest it can ask for.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
+    # Unchanged from the base configuration.
+    400: 50
+  balance_guest_counts:
+    # Attempts to balance the minimum guest requirements to the ride they're attached to. Low throughput rides like Spiral Slides will tend towards the minimum, while high throughput rides like roller coasters will tend towards the maximum.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  visibility:
+    # Choose how much the unlock shop displays.
+    # "Nothing" tells you nothing about the item you'll purchase.
+    # Progression tells you what class of item (Normal, Progression, Useful Trap) you're sending.
+    # Recipient tells you who will receive the item, but not what they'll receive.
+    # Progression Recipient tells you both the class of item and who receives it.
+    # Full tells you what you're buying and who receives it.
+    # Changed from Recipient as no other games in my multiworlds have automatic hinting.
+    nothing: 50
+    progression: 0
+    recipient: 0
+    progression_recipient: 0
+    full: 0
+  awards:
+    # Choose what types (if any) of awards will have checks behind them.
+    # Negative awards will always reward a trap item, even if they're otherwise disabled!
+    # All Awards will have a check behind every award in the game.
+    # Positive will only place a check behind awards with positive attributes.
+    # None will not place checks behind awards.
+    # Unchanged from the base configuration.
+    all: 50
+    positive: 0
+    none: 0
+  exclude_safest_park:
+    # Exclude the Safest Park Award from having a check. This may be useful depending on deathlink settings.
+    # In a multiworld, having this set to true is a must!
+    'false': 0
+    'true': 50
+  #######################
+  # Item & Trap Options #
+  #######################
+  filler:
+    # How many extra filler items to add to the mix as a percentage. This will mostly consist of Cash Bonuses.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
+    # Unchanged from the base configuration.
+    10: 50
+  include_atm:
+    # Includes an ATM in the item list, regardless of whether it normally appears in the chosen scenario.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  include_first_aid:
+    # Includes a First Aid Room in the item list, regardless of whether it normally appears in the chosen scenario.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  include_gamespeed_items:
+    # If included, the ability to use the speed toggle will be restricted behind an item. 4 items total will be added, each progressively unlocking a faster speed.
+    # Increased game speed should be available from the start.
+    'false': 50
+    'true': 0
+  skips:
+    # By default, every game starts with a single skip to ignore a shop requirement. This will add additional skips to be found in the item pool.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    7: 50
+  furry_convention_traps:
+    # When found, instantly hosts a furry convention in your park! Adding traps will increase the total number of items in the world.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
+    # Disabled due to it requiring firing all newly spawned Entertainers, which I'd rather not do given my aversion to mouse clicking.
+    0: 50
+  bathroom_traps:
+    # When found, instantly maxes out the bathroom stat of every guest! Adding traps will increase the total number of items in the world.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
+    # Increased from 5 to equate to the standard trap count of 20.
+    7: 50
+  spam_traps:
+    # When found, spams ads all over the screen! Adding traps will increase the total number of items in the world.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
+    # Increased from 5 to equate to the standard trap count of 20.
+    7: 50
+  loan_shark_traps:
+    # When found, increases your loan! Adding traps will increase the total number of items in the world.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
+    # Increased from 5 to equate to the standard trap count of 20.
+    7: 50
+  all_rides_and_scenery_base:
+    # Adds every ride and scenery pack in the base game to the item pool. This will make for a significantly longer scenario.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  all_rides_and_scenery_expansion:
+    # Adds every ride and scenery pack in the RCT2 Expansion Packs to the item pool. If this is true the base game rides and scenery will also be included. This will make for a significantly longer scenario.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # Unchanged from the base configuration.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
