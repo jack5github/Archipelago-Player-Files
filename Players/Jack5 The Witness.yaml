@@ -26,10 +26,10 @@ The Witness:
     # "Sigma Expert" is an entirely new experience with extremely difficult random puzzles. Do not underestimate this mode, it is brutal.
     # "Umbra Variety" focuses on unique symbol combinations not featured in the original game. It is harder than Sigma Normal, but easier than Sigma Expert.
     # "None" means that the puzzles are unchanged from the original game.
-    # I want to create new puzzles of the same difficulty as the original game, but to increase the variety of puzzles in the game, I've made new symbol combinations have a 25% chance of appearing.
-    sigma_normal: 75
+    # I want to create new puzzles of the same difficulty as the original game. Expert is too difficult, and Variety prevents me from playing the game due to puzzles using more symbols and thus being more likely to be locked.
+    sigma_normal: 50
     sigma_expert: 0
-    umbra_variety: 25
+    umbra_variety: 0
     none: 0
   victory_condition:
     # Set the victory condition for this world.
