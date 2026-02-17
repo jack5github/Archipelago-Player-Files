@@ -2,7 +2,7 @@ name: Jack5Simon{NUMBER}
 description: |-
   Jack5's Simon Tatham's Portable Puzzle Collection player file
 
-  # TODO: Add description
+  This Simon configuration attempts to make the rotation of puzzles more bearable in a multiworld than it is with its default config. While the puzzle count has been increased, several puzzle types have been disabled, and individual puzzle seeds have been adjusted, mostly to reduce difficulty and increase variety.
 game: Simon Tatham's Portable Puzzle Collection
 requires:
   version: 0.6.6
@@ -14,7 +14,7 @@ Simon Tatham's Portable Puzzle Collection:
   ################
   progression_balancing:
     # Increased to try to have this game finish before others, as it is unsatisfying when it is the one to end a run.
-    60: 50
+    70: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
@@ -23,41 +23,28 @@ Simon Tatham's Portable Puzzle Collection:
   ##################
   puzzle_count:
     # Number of puzzles to randomly generate.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 1
-    # Maximum value is 2000
-    # The default is 50. Other Archipelago games usually have an unlock count of 150, but that is simply too many puzzles to solve, so I have settled on exactly 100.
-    100: 50
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 2000.
+    # The default is 50. Other Archipelago games usually have an unlock count of 150, but that is simply too many puzzles to solve. I tried 100, but that is too many, so I have settled on 75.
+    75: 50
   starting_puzzles:
-    # Number of puzzles to randomly add to the starting inventory. These will be
-    # removed from the item pool.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 20
+    # Number of puzzles to randomly add to the starting inventory. These will be removed from the item pool.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Unchanged from the base configuration.
     5: 50
   completion_percentage:
     # Percent of puzzles which must be completed to finish the world, rounding up.
-    # 
     # If you set this to a low value, it is HIGHLY RECOMMENDED to disable release on world completion.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 10
-    # Maximum value is 100
-    # Unchanged from the base configuration.
-    80: 50
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 100.
+    # This should be around 75%, adjusted slightly to make a nicer goal number.
+    73: 50
   min_difficulty:
-    # Minimum difficulty to select generated presets from. Note that not all genres have presets at "Hard" difficulty,
-    # so they will never appear if the minimum difficulty is set to Hard (unless you specify custom presets for them).
+    # Minimum difficulty to select generated presets from. Note that not all genres have presets at "Hard" difficulty, so they will never appear if the minimum difficulty is set to Hard (unless you specify custom presets for them).
     # Unchanged from the base configuration.
     easy: 50
     normal: 0
     hard: 0
   max_difficulty:
     # Maximum difficulty to select generated presets from. Takes priority over the Minimum Difficulty option if it is lower.
-    # 
     # Puzzles on "Ridiculous" difficulty are either very big or not actually randomized. Use this difficulty at your own risk.
     # Unchanged from the base configuration.
     easy: 0
@@ -65,8 +52,7 @@ Simon Tatham's Portable Puzzle Collection:
     hard: 0
     ridiculous: 0
   genre_weights:
-    # Relative chance for each genre to be selected as a random preset. Set a genre's
-    # weight to 0 or remove it from this list to disable it.
+    # Relative chance for each genre to be selected as a random preset. Set a genre's weight to 0 or remove it from this list to disable it.
     # Some puzzle weights have been changed, and the reasons for doing so are explained below:
     blackbox: 0 # Blackbox is a light reflecting game, but its puzzles seem impossible, as there is no way to place marbles on diagonals.
     bridges: 10
@@ -79,7 +65,7 @@ Simon Tatham's Portable Puzzle Collection:
     galaxies: 0 # As much as I like Galaxies, even on higher difficulties, it is not kind to my hands, as every cell border needs to be clicked individually.
     guess: 0 # Guess is not colour-blind friendly. Restore this once the game is updated.
     inertia: 10
-    keen: 10
+    keen: 6 # Keen is Sudoku-like, and as there are many of these puzzles, its chance of occurring is reduced.
     lightup: 10
     loopy: 10
     magnets: 10
@@ -101,17 +87,15 @@ Simon Tatham's Portable Puzzle Collection:
     slant: 10
     solo: 0 # A bad implementation of Sudoku. If I want to play it, I will play Archipeladoku instead.
     tents: 10
-    towers: 10
+    towers: 6 # Towers is Sudoku-like, and as there are many of these puzzles, its chance of occurring is reduced.
     tracks: 10
     twiddle: 0 # Twiddle is a sliding puzzle, which is not fun at all to play.
     undead: 10
-    unequal: 10
+    unequal: 6 # Unequal is Sudoku-like, and as there are many of these puzzles, its chance of occurring is reduced.
     unruly: 10
-    untangle: 5 # Untangle puzzles always feel the same, so their chance of occurring is reduced.
+    untangle: 6 # Untangle puzzles always feel the same, so their chance of occurring is reduced.
   preset_overrides:
-    # List of presets to use for a given genre. Replaces the default presets for
-    # that puzzle if specified.
-    # 
+    # List of presets to use for a given genre. Replaces the default presets for that puzzle if specified.
     # For example, to make Net puzzles always use wrapping grids, add:
     # net: [5x5w, 7x7w, 9x9w, 11x11w]
     # Some puzzle presets have been overridden, and the reasons for doing so are explained below:
@@ -143,11 +127,10 @@ Simon Tatham's Portable Puzzle Collection:
       - 25x20
       - 25x25
     mosaic:
-      # Nonograms of 5x5 and below are deeply unsatisfying to solve.
+      # Mosaics of 5x5 and below are deeply unsatisfying to solve. Somehow I let 50x50 slip through the cracks, why did I think that was a good idea!?
       - 10x10
       - 15x15
       - 25x25
-      - 50x50
     net:
       # Disable wrapping grids on Net puzzles.
       - 5x5
@@ -174,7 +157,6 @@ Simon Tatham's Portable Puzzle Collection:
   fixed_puzzles:
     # List of additional puzzles to include. These puzzles will be placed at the start of the list.
     # The remaining list (up to puzzle_count) will be filled according to genre_weights.
-    # 
     # You can specify by genre (net), parameter string (net:2x2), seed (net:2x2#12345), or ID (net:2x2:c494).
     # Unchanged from the base configuration.
     []
