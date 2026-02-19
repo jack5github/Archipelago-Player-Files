@@ -1,0 +1,92 @@
+﻿name: ZeromanFNAFW{NUMBER}
+
+description: |-
+  Zeroman95's FNAF WORLD Yaml.
+
+game: FNaFW
+requires:
+  version: 0.6.6
+
+FNaFW:
+  progression_balancing:
+    normal: 99 # Unchanged
+
+  accessibility:
+    full: 99 # Unchanged
+
+  ending_goal:
+    scott: 99 # Unchanged
+
+  initial_characters:
+    true_random: 99 # Give me ANY Character in the game to start with; Doesn't matter!
+
+  vanilla_halloween:
+    # Unchanged
+    'false': 0
+    'true': 50
+
+  vanilla_lasers:
+    # Unchanged
+    'false': 50
+    'true': 0
+
+  vanilla_pearl:
+    # Unchanged
+    'false': 50
+    'true': 0
+
+  hard_logic:
+    # Unchanged
+    'false': 50
+    'true': 0
+
+  cheap_endo:
+    # I want to grind, also for the fact that the Items give you Tokens anyway.
+    'false': 50
+    'true': 0
+
+  require_find_char:
+    # Unchanged
+    'false': 0
+    'true': 50
+
+  progressive_anims:
+    # Don't care what Animatronics I get, just randomly give them to me.
+    'false': 50
+    'true': 0
+
+  progressive_bytes:
+    # Same as above.
+    'false': 50
+    'true': 0
+
+  progressive_chips:
+    # Same as above above.
+    'false': 50
+    'true': 0
+
+  area_warping:
+    visit_area: 0 # Setting it to always will make me require an item for each area to warp.
+    always: 99
+    warp_item: 0
+
+  fazcoin_chests:
+    3: 99 # Fazcoin chests should be set to three so that there are always three unique checks in each area.
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
