@@ -17,7 +17,7 @@ Totally Accurate Battle Simulator:
   accessibility:
     full: 50
     minimal: 0
-  factions:
+  factions: # Tribal, Wild West, Fantasy Good, Legacy, Secret, Medieval, Ancient, Dynasty, Renaissance, Pirate, Viking, Fantasy Evil, Spooky, Farmer.
     - Tribal
     - Wild West
     - Fantasy Good
@@ -40,7 +40,7 @@ Totally Accurate Battle Simulator:
     regular: 0
     no_unlocks: 0
     all: 50
-  required_campaigns: ['Introduction', 'Dynasty', 'Renaissance', 'Simulation'] # Originally Introduction, Adventure, Challenge. Don't want to play Adventure and Challenge. Too many Scenarios for me to go through to finish.
+  required_campaigns: ['Introduction', 'Dynasty', 'Renaissance', 'Simulation'] # Introduction, Adventure, Challenge, Dynasty, Renaissance, Pirate, Spooky, Simulation, Wild West, Legacy, Fantasy Good, Fantasy Evil.
   additional_campaigns: []
   hidden_campaign_unlocks:
     'false': 0
@@ -48,14 +48,14 @@ Totally Accurate Battle Simulator:
   local_items: []
   non_local_items: []
   start_inventory: {}
-  start_inventory_from_pool: { 'Halfling': 1 } # Start with Halfling instead of Clubber.
+  start_inventory_from_pool: { 'Halfling': 1 } # Clubber, Protector, Spear Thrower, Stoner, Bone Mage, Chieftain, Mammoth, Halfling, Farmer, Hay Baler, Potionseller, Harvester, Wheelbarrow, Scarecrow, Bard, Squire, Archer, Healer, Knight, Catapult, The King, Shield Bearer, Sarissa, Hoplite, Snake Archer, Ballista, Minotaur, Zeus, Headbutter, Ice Archer, Brawler, Berserker, Valkyrie, Longship, Jarl, Samurai, Firework Archer, Monk, Ninja, Dragon, Hwacha, Monkey King, Painter, Fencer, Balloon Archer, Musketeer, Halberd, Jouster, Da Vinci Tank, Flintlock, Blunderbuss, Bomb Thrower, Harpooner, Cannon, Pirate Captain, Pirate Queen, Skeleton Warrior, Skeleton Archer, Candlehead, Vampire, Pumpkin Catapult, Swordcaster, Reaper, Dynamite Thrower, Miner, Cactus, Gunslinger, Lasso, Deadeye, Quickdraw, Peasent, Banner Bearer, Poacher, Blowdarter, Pike, Barrel Roller, Boxer, Flag Bearer, Pharaoh, Wizard, Chariot, Thor, Tank, Devout Gauntlet, Celestial Aegis, Radiant Glaive, Righteous Paladin, Divine Arbiter, Sacred Elephant, Chronomancer, Shadow Walker, Exiled Sentinel, Mad Mechanic, Void Cultist, Tempest Lich, Death Bringer, Void Monarch, Ballooner, Bomb on the Stick, Fan Bearer, Raptor, The Teacher, Jester, Ball 'n' Chain, Chu Ko Nu, Executioner, Shouter, Taekwondo, Raptor Rider, Cheerleader, Cupid, Mace Spinner, CLAMS, Present Elf, Ice Mage, Infernal Whip, Bank Robbers, Witch, Banshee, Necromancer, Solar Architect, Wheelbarrow Dragon, Bomb Cannon, Skeleton Giant, Cavalry, Vlad, Gatling Gun, Blackbeard, Samurai Giant, Ullr, Lady Red Jade, Sensei, Shogun, Tree Giant, Artemis, Ice Giant.
   start_hints: []
   start_location_hints: []
   exclude_locations: []
   priority_locations: []
   item_links: []
   plando_items:
-    # Present Elf is placed at end of Simulation Campaign because Present Elf as a unit makes the game too easy.
+    # Present Elf is placed at end of Whatever final Campaign because Present Elf as a unit makes the game too easy.
     - locations:
         - Pit (Simulation-17)
       items:
