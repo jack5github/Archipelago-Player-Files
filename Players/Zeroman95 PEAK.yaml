@@ -1,0 +1,347 @@
+﻿name: ZeromanPEAK{NUMBER}
+description: |-
+  Zeroman95's PEAK YAML File
+
+game: PEAK
+requires:
+  version: 0.6.6
+
+PEAK:
+  progression_balancing:
+    random-high: 99 # set to random-high to give better items and to make the game go quicker.
+
+  accessibility:
+    full: 99 # Unchanged
+
+  goal:
+    reach_peak: 99 # Never done all Badges, never did karat; Not doing both Peak and Badges at the same time.
+    complete_all_badges: 0
+    24_karat_badge: 0
+    peak_and_badges: 0
+
+  ascent_count:
+    0: 99
+
+  badge_count:
+    20: 99 # UNCHANGED NOT USING.
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-1-54: 0
+
+  progressive_stamina:
+    'false': 0
+    'true': 50 # Makes game more difficult, but challenging.
+
+  additional_stamina_bars:
+    'false': 0
+    'true': 50 # Suggested to have it turned on first before having an opinion.
+
+  ring_link:
+    'false': 50 # Unchanged
+    'true': 0
+
+  hard_ring_link:
+    'false': 50 # Unchanged
+    'true': 0
+
+  energy_link:
+    'false': 0
+    'true': 50 # Fun, and Dynamite.
+
+  trap_link:
+    'false': 0
+    'true': 50 # Turned on because Jack5 PEAK has it enabled.
+
+  death_link:
+    'false': 0
+    'true': 50 # Turned on because Jack5 PEAK has it enabled.
+
+  death_link_behavior:
+    kill_random_player: 0
+    reset_to_last_checkpoint: 99 # Kill Random Player is too BRUTAL.
+
+  death_link_send_behavior:
+    any_player_dies: 0
+    all_players_dead: 99 # Only works when the Game is over.
+
+  trap_percentage:
+    random-high: 99 # I have this set the same for Ratchet 3 and Hit and Run, but this might be too much so maybe turn it down next time.
+
+  instant_death_trap_weight:
+    # This sounds like Torture. So no.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  items_to_bombs_weight:
+    # Likelihood of receiving a trap which drops the currently held item and replaces it with Dynamite
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  pokemon_trivia_trap_weight:
+    # NO TRIVIA ON THE MOUNTAIN.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  blackout_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  spawn_bee_swarm_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  banana_peel_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  minor_poison_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  poison_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  deadly_poison_trap_weight:
+    # Set to low, might be too dangerous to be on Medium.
+    none: 0
+    low: 50
+    medium: 0
+    high: 0
+
+  tornado_trap_weight:
+    # Set to low.
+    none: 0
+    low: 50
+    medium: 0
+    high: 0
+
+  swap_trap_weight:
+    # Set to NONE. Because I am the only one.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  nap_time_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  hungry_hungry_camper_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  balloon_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  slip_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  freeze_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  cold_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  hot_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  injury_trap_weight:
+    # Set to low.
+    none: 0
+    low: 50
+    medium: 0
+    high: 0
+
+  cactus_ball_trap_weight:
+    # Set to High, GIVE ME ALL THE CACTUS BALLS!
+    none: 0
+    low: 0
+    medium: 0
+    high: 50
+
+  yeet_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  tumbleweed_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  zombie_horde_trap_weight:
+    # Changed to low.
+    none: 0
+    low: 50
+    medium: 0
+    high: 0
+
+  gust_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  mandrake_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  fungal_infection_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  fear_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  scoutmaster_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  zoom_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  screen_flip_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  drop_everything_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  pixel_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  eruption_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  beetle_horde_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  custom_trivia_trap_weight:
+    # Set to None.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  disable_multiplayer_badges:
+    # Unchanged
+    'false': 50
+    'true': 0
+
+  disable_hard_badges:
+    # Set to True for checks.
+    'false': 0
+    'true': 50
+
+  disable_biome_badges:
+    # Unchanged
+    'false': 50
+    'true': 0
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
