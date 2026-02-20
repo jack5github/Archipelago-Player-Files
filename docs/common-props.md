@@ -87,6 +87,7 @@ A list of locations that will always have an important item.
 
 ## `item_links`
 
+<!-- TODO: Improve this description based on what can be found at https://archipelago.gg/tutorial/Archipelago/advanced_settings_en#example -->
 A list of items that can be shared with other players.
 
 ## `plando_items`
