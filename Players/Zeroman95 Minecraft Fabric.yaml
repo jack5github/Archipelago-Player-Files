@@ -1,0 +1,170 @@
+﻿# Q. What is this file?
+name: ZeromanMCFabric{NUMBER}
+
+description: |-
+  Zeroman95's Minecraft Fabric YAML.
+
+game: Minecraft Fabric
+requires:
+  version: 0.6.6
+  game:
+    Minecraft Fabric: 1.0.6
+
+Minecraft Fabric:
+  progression_balancing:
+    normal: 99 # Unchanged
+
+  accessibility:
+    full: 99 # Unchanged
+
+  goal_condition:
+    ruby_hunt: 99 # Not going after the Dragon, it takes a while to even get there; Ruby Hunt seems to be a more fun way to play.
+
+  advancements_required_for_goal:
+    0: 99 # Don't want Advancements for my Goal.
+
+  excluded_locations: ['Unreasonable', 'Hard', 'Exploration'] # All turned on because again I don't want to do Advancements.
+
+  speedrunner_mode:
+    # False. Even then didn't need to be modified. All this mode does is require Bed for Ender Dragon.
+    'false': 50
+    'true': 0
+
+  percentage_of_rubies_needed:
+    100: 99 # Unchanged
+
+  total_rubies:
+    16: 99 # Unchanged
+
+  itemsanity:
+    # Yes. Set this to True I want to do Itemsanity NOT Advancements.
+    'false': 0
+    'true': 50
+
+  itemsanity_local_fill:
+    50: 99 # Have this at 50% so it's all shared around.
+
+  excluded_from_itemsanity: [
+      'Sherds',
+      'Trims',
+      'Rare Ores',
+      'Netherite Gear',
+      'Mob Heads',
+    ] # Music Discs are removed because I know how to do them and they are pretty easy.
+
+  empty_fill_percentage:
+    0: 99 # Unchanged
+
+  required_before_nether: {} # Unchanged
+
+  required_before_bosses: [] # Removed Bow, Iron Armor, Sprint, Beds, Iron Weapons, Jump.
+
+  required_before_raids: [] # Removed Jump, Iron Weapons, Iron Armor
+
+  keep_inventory:
+    # Unchanged
+    'false': 0
+    'true': 50
+
+  randomized_abilities: {} # Unchanged
+
+  time_saving_options: [
+      'Rabbits Foot',
+      'Drowned Items',
+      'Copper Oxidation',
+      'Wither Skulls',
+    ] # Unchanged
+
+  trap_fill_percentage:
+    50: 99 # Bring it on. I would rather Traps then Junk.
+
+  reverse_controls_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  inverted_mouse_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  ice_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  random_effect_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  stun_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  tnt_trap_weight:
+    # Set TNT Trap to low.
+    none: 0
+    low: 50
+    medium: 0
+    high: 0
+
+  teleport_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  bee_trap_weight:
+    # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  literature_trap_weight:
+    # Set to none.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  deathlink_enabled:
+    # Unchanged
+    'false': 0
+    'true': 50
+
+  traplink_enabled:
+    # Unchanged
+    'false': 0
+    'true': 50
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: ['vanilla_advancements', 'archipelago_advancements'] # Done so I am not required to do the Advancements. But can still happen if I complete one randomly.
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
