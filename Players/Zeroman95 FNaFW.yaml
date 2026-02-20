@@ -46,9 +46,9 @@ FNaFW:
     'true': 0
 
   require_find_char:
-    # Unchanged
-    'false': 0
-    'true': 50
+    # set to false because it messes with the Poptracker; Because for SOME reason I can still get characters without the Character Chip. So false.
+    'false': 50
+    'true': 0
 
   progressive_anims:
     # Don't care what Animatronics I get, just randomly give them to me.
