@@ -401,5 +401,7 @@ PEAK:
   start_location_hints: []
   exclude_locations: []
   priority_locations: []
-  item_links: []
+  item_links:
+    # Share Progressive Endurance with Zeroman95.
+    - Progressive Endurance
   plando_items: []
