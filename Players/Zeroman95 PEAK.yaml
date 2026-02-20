@@ -332,7 +332,9 @@ PEAK:
 
   non_local_items: []
 
-  start_inventory: {}
+  start_inventory:
+    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. There are 6 of these, 4 of which are for each biome after the Shore (excluding the Peak), the other 2 being basically filler items.
+    Progressive Mountain: 6
 
   start_hints: []
 
@@ -342,6 +344,8 @@ PEAK:
 
   priority_locations: []
 
-  item_links: []
+  item_links:
+    # Share Progressive Endurance with Zeroman95.
+    - Progressive Endurance
 
   plando_items: []
