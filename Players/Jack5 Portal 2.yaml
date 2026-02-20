@@ -31,8 +31,8 @@ Portal 2:
     # normal -> Each chapter is randomised with it's own maps
     # chaotic -> Any map can be in any chapter
     # open_world -> maps appear in the correct order in the game and are all playable from the start
-    # Make all non-open world game modes equally likely to occur. Open world allows me to access the final map immediately, which could result in the game ending too quickly.
-    normal: 50
+    # Normal is too predictable, and Open World allows me to access the final map immediately, which could result in the game ending too quickly. For that reason, I only play Chaos, CHAOS!
+    normal: 0
     chaotic: 50
     open_world: 0
   early_playability_percentage:
@@ -42,6 +42,14 @@ Portal 2:
     # You can define additional values between the minimum and maximum values. Minimum value is 60, maximum value is 100.
     # Portal 2 becomes boring the more Chapter 1 levels are made available at the start of the game, so I have set this option to its absolute minimum.
     60: 50
+  logic_difficulty:
+    # If logic should be for the average player or for an experienced glitch speedrunner
+    # normal -> assumes you have everything required to beat the level
+    # speedrunner -> assumes you know difficult speedrun techniques for the whole game including some sla tricks, experimental
+    # (if you don't speedrun the game don't choose this option)
+    # Unchanged from the base configuration.
+    normal: 50
+    speedrunner: 0
   remove_locations:
     # Which maps will be removed entirly from the map pool.
     # Different from Excluded Locations as Removed Locations will not be playable during the game. Excluded Locations are still in the map pool.
@@ -75,8 +83,8 @@ Portal 2:
   trap_fill_percentage:
     # Replace a percentage of junk items in the item pool with random traps
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # The default is to have no traps at all, increased to 20%, a number used in many of my other configs.
-    20: 50
+    # The default is to have no traps at all. As Portal 2 is played in short, sporadic bursts, this needs to be a high number. I have tried 20%, and it isn't enough.
+    30: 50
   motion_blur_trap_weight:
     # Likelihood of receiving a trap which makes it a little hard to see
     # Unchanged from the base configuration.
@@ -118,9 +126,9 @@ Portal 2:
   local_items: []
   non_local_items: []
   start_inventory:
-    # Lasers and Laser Relays are already items that can be unlocked during a run. It doesn't make sense for catchers to be an item too, as this makes it take much longer to be able to use lasers in general. This change is temporarily disabled due to a bug in config generation.
-    # Laser Catchers: 1
-    {}
+    # Lasers and Laser Relays are already items that can be unlocked during a run. It doesn't make sense for catchers to be an item too, as this makes it take much longer to be able to use lasers in general. In addition to this, starting out with only one portal makes the majority of Portal 2 impossible to play, and if not given early, can result in Portal 2 being unplayable for the entire run.
+    Laser Catchers: 1
+    Upgraded Portal Gun: 1
   start_hints: []
   start_location_hints: []
   exclude_locations:
