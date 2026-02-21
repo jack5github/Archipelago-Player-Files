@@ -83,7 +83,7 @@ FNaFW:
 
   start_location_hints: []
 
-  exclude_locations:
+  exclude_locations: # Added because those locations only have ONE Chest spot meaning you need to keep resetting the game just for them to spawn. I have Fazchest checks set to Three meaning I would have to do this THREE different times.
     [
       'Deep-Metal Mine: Fazcoin Chest 1',
       'Deep-Metal Mine: Fazcoin Chest 2',
