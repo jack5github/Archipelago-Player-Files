@@ -83,7 +83,18 @@ FNaFW:
 
   start_location_hints: []
 
-  exclude_locations: []
+  exclude_locations:
+    [
+      'Deep-Metal Mine: Fazcoin Chest 1',
+      'Deep-Metal Mine: Fazcoin Chest 2',
+      'Deep-Metal Mine: Fazcoin Chest 3',
+      'Pinwheel Circus: Fazcoin Chest 1',
+      'Pinwheel Circus: Fazcoin Chest 2',
+      'Pinwheel Circus: Fazcoin Chest 3',
+      'Pinwheel Funhouse: Fazcoin Chest 1',
+      'Pinwheel Funhouse: Fazcoin Chest 2',
+      'Pinwheel Funhouse: Fazcoin Chest 3',
+    ]
 
   priority_locations: []
 
