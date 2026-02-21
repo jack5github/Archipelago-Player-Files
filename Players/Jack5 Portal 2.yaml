@@ -51,7 +51,7 @@ Portal 2:
     normal: 50
     speedrunner: 0
   remove_locations:
-    # Which maps will be removed entirly from the map pool.
+    # Which maps will be removed entirely from the map pool.
     # Different from Excluded Locations as Removed Locations will not be playable during the game. Excluded Locations are still in the map pool.
     # These are maps that I would rather not play, mainly those that scarcely make use of the Portal Gun and require lots of walking.
     - 'Chapter 1: Container Ride Completion'

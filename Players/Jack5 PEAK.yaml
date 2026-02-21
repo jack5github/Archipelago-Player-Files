@@ -70,9 +70,8 @@ PEAK:
     'false': 0
     'true': 50
   trap_link:
-    # When enabled, traps you receive are also sent to other players with Trap Link enabled
-    # You will also receive any linked traps from other players with Trap Link enabled,
-    # if you have a weight above "none" set for that trap
+    # When enabled, traps you receive are also sent to other players with Trap Link enabled.
+    # You will also receive any linked traps from other players with Trap Link enabled, if you have a weight above "none" set for that trap.
     # Enabled in case we use Trap Link in other games.
     'false': 0
     'true': 50
@@ -399,7 +398,18 @@ PEAK:
     Progressive Mountain: 6
   start_hints: []
   start_location_hints: []
-  exclude_locations: []
+  exclude_locations:
+    # Several locations are immediately accessible upon starting a game of PEAK, so these shouldn't contain any important unlocks.
+    - Acquire Bing Bong
+    - Acquire Binoculars
+    - Acquire Bugle
+    - Acquire Compass
+    - Acquire Conch
+    - Acquire Flare
+    - Acquire Flying Disc
+    - Acquire Guidebook
+    - Acquire Lantern
+    - Open 1 luggage
   priority_locations: []
   item_links: []
   plando_items: []

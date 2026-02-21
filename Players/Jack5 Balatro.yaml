@@ -16,7 +16,6 @@ Balatro:
   accessibility:
     # In a game like Balatro, it is necessary to have access to every single item in order to be able to stumble upon a good build.
     full: 50
-    minimal: 0
   goal:
     # Goal for this playthrough
     # Beat Decks: Win with the specified amount of Decks
@@ -71,7 +70,6 @@ Balatro:
     all: 0
     choose: 50
     number: 0
-
   include_deckChoice:
     # Select which decks will be playable in the game.
     # This option is only considered if Playable Decks is set to choose.

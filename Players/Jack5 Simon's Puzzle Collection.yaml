@@ -144,6 +144,12 @@ Simon Tatham's Portable Puzzle Collection:
       - 5x5dh
       - 8x8de
       - 12x10de
+    untangle:
+      # Tangles of 6 points are unsatisfying to solve.
+      - '10'
+      - '15'
+      - '20'
+      - '25'
   genre_min_difficulty:
     # Minimum difficulty for each genre. Use 0 for easy, 1 for normal, 2 for hard, and 3 for ridiculous.
     # Unchanged from the base configuration.
