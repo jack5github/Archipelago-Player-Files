@@ -40,7 +40,7 @@ Totally Accurate Battle Simulator:
     regular: 0
     no_unlocks: 0
     all: 50
-  required_campaigns: ['Introduction', 'Dynasty', 'Renaissance', 'Simulation'] # Introduction, Adventure, Challenge, Dynasty, Renaissance, Pirate, Spooky, Simulation, Wild West, Legacy, Fantasy Good, Fantasy Evil. Roll Four Campaigns with a Random Number Generator.
+  required_campaigns: ['Introduction', 'Wild West', 'Spooky', 'Simulation'] # Introduction, Adventure, Challenge, Dynasty, Renaissance, Pirate, Spooky, Simulation, Wild West, Legacy, Fantasy Good, Fantasy Evil. Roll Four Campaigns with a Random Number Generator.
   additional_campaigns: []
   hidden_campaign_unlocks:
     'false': 0
