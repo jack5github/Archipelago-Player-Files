@@ -64,8 +64,8 @@ The Witness:
     # Only relevant if the Victory Condition is "Panel Hunt".
     # Determines the percentage of "Panel Hunt" panels that need to be solved to win.
     # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
-    # This has been reduced from 63% to 50%, as the original amount was far too high. 50% also felt too high, however that was in a game with shuffled panels enabled, so 50% needs to be tested in a game without shuffled panels.
-    50: 50
+    # I originally reduced this from 63% to 50%, as the original amount was far too high with `panel_hunt_discourage_same_area_factor` set to its default value. However, in a game where the panels are maximally evenly spread out, the game becomes too easy to beat at a low percentage, so I've increased this again. This value should be adjusted in 10% increments whenever it needs to be again.
+    60: 50
   panel_hunt_total:
     # Only relevant if the Victory Condition is "Panel Hunt".
     # Sets the number of random panels that will get marked as "Panel Hunt" panels in the "Panel Hunt" game mode.

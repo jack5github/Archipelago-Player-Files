@@ -22,9 +22,9 @@ ChecksMate:
     # Ordered Progressive: When you deliver checkmate, you instead graduate to a Super-Sized board. Your goal is to checkmate again, on that board!
     # Progressive: As Ordered Progressive, but the board grows larger when someone sends you your Super-Sized board.
     # Super: You skip the 8x8 board immediately. Nearly equivalent to adding Super-Size Me to your Start Inventory.
-    # Unchanged from the base configuration.
-    single: 0
-    ordered_progressive: 50
+    # Playing on the large-size board is unsatisfying, because by that point, I have already gotten a majority of the checks in the game.
+    single: 50
+    ordered_progressive: 0
     progressive: 0
     super: 0
   difficulty:
@@ -122,7 +122,13 @@ ChecksMate:
     # Camel: Adds a custom army themed after 3,x leapers like the Camel (3,1) and Tribbabah (3,0). (The Knight is a 2,1 leaper.)
     # Petal: Adds a custom army themed after pieces that move down angled paths. The Gardener is a 2,2 leaper with additional pacifist moves. The Ribbon moves 1 space as a Bishop before rotating to move 2 more spaces. The Petal moves 3 spaces as a Rook before rotating 3 more spaces. The Miracle moves as a Ribbon and as a Petal.
     # Unchanged from the base configuration.
-    ['FIDE', 'Camel', 'Petal', 'Clobberers', 'Rookies', 'Nutty', 'Cannon']
+    - FIDE
+    - Camel
+    - Petal
+    - Clobberers
+    - Rookies
+    - Nutty
+    - Cannon
   fairy_chess_army:
     # Whether to mix pieces between the Different Armies. Does not affect pawns. Note that the Cannon pieces, which replace the Bishop and Knight with a Vao and Cannon, constitute a very powerful yet flawed Different Army.
     # Chaos: Chooses random enabled options. (You can disable armies by setting "Fairy Chess Pieces Configure".)
