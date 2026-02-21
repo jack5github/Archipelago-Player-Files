@@ -18,7 +18,7 @@ FNaFW:
     scott: 99 # Unchanged
 
   initial_characters:
-    true_random: 99 # Give me ANY Character in the game to start with; Doesn't matter!
+    limited_random: 99 # Start with simple characters on the first three rows.
 
   vanilla_halloween:
     # Unchanged
@@ -51,19 +51,19 @@ FNaFW:
     'true': 0
 
   progressive_anims:
-    # Don't care what Animatronics I get, just randomly give them to me.
-    'false': 50
-    'true': 0
+    # Changed to True, if set to false makes game super easy.
+    'false': 0
+    'true': 50
 
   progressive_bytes:
-    # Same as above.
-    'false': 50
-    'true': 0
+    # Changed to True, if set to false makes game super easy.
+    'false': 0
+    'true': 50
 
   progressive_chips:
-    # Same as above above.
-    'false': 50
-    'true': 0
+    # Changed to True, if set to false makes game super easy.
+    'false': 0
+    'true': 50
 
   area_warping:
     visit_area: 0 # Setting it to always will make me require an item for each area to warp.
