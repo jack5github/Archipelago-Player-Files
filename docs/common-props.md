@@ -87,8 +87,18 @@ A list of locations that will always have an important item.
 
 ## `item_links`
 
-<!-- TODO: Improve this description based on what can be found at https://archipelago.gg/tutorial/Archipelago/advanced_settings_en#example -->
-A list of items that can be shared with other players.
+A list of dictionaries which define items that are shared with other player files. Each dictionary in the list is defined as follows:
+
+- `name` - The name of the link. This should be a term that represents the items being shared (e.g. "Lasers", "Rods", etc.) but should not be too broad so as to overlap with an item or group name.
+- `item_pool` - A list of item or group names from the player file's world that should be shared among other player files with the link.
+- `local_items` - Item or group names from `item_pool` that are forced to be in the worlds of the player files with the link.
+- `replacement_item` - The name of the item that will stand in for vacant slots created by sharing items, or `null` to have the generator randomly pick a filler item.
+- `link_replacement` (optional) - A boolean that, if `true`, will share replacement items among other player files with the link.
+- `skip_if_solo` (optional) - A boolean that, if `true`, will cause the link to have no effect if there is only one player file with the link in the generation.
+
+`item_links` works irrespective of locations. This means that it is impossible to have specific locations in one player file give specific items to another player file. This option creates item-to-item relationships only.
+
+For an example of how `item_links` is used, refer to the [Archipelago Advanced YAML Guide](https://archipelago.gg/tutorial/Archipelago/advanced_settings_en#example).
 
 ## `plando_items`
 
