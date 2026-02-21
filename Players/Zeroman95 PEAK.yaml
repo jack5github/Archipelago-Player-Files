@@ -34,8 +34,8 @@ PEAK:
     'true': 50 # Makes game more difficult, but challenging.
 
   additional_stamina_bars:
-    'false': 0
-    'true': 50 # Suggested to have it turned on first before having an opinion.
+    'false': 50 # Changed to false because I completed the game basically before I reached 100% Stamina
+    'true': 0
 
   ring_link:
     'false': 50 # Unchanged
