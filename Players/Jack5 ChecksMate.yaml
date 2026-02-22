@@ -14,7 +14,7 @@ ChecksMate:
     # Unchanged from the base configuration.
     random-range-0-99: 50
   accessibility:
-    # Unchanged from the base configuration.
+    # Unchanged from the base configuration. Based on personal testing, this should NEVER be set to `minimal`.
     full: 50
     minimal: 50
   goal:
