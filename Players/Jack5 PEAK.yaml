@@ -11,11 +11,12 @@ PEAK:
   # Game Options #
   ################
   progression_balancing:
-    # Unchanged from the base configuration.
-    normal: 50
+    # Tested and playable within the given range.
+    random-range-50-80: 50
   accessibility:
-    # Unchanged from the base configuration.
+    # PEAK having minimal accessibility seems to have no effect on the gameplay, so I've chosen for both options to be equally likely.
     full: 50
+    minimal: 50
   goal:
     # Determines the goal of the seed
     # Reach Peak: Reach the peak on the specified ascent level
@@ -97,8 +98,8 @@ PEAK:
   trap_percentage:
     # Replace a percentage of junk items in the item pool with random traps
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # Increased from 10% to 20%, as I have done in other games I've played.
-    20: 50
+    # Tested and noticeable within the given range.
+    random-range-20-80: 50
   instant_death_trap_weight:
     # Likelihood of receiving a trap which instantly kills a player
     # Absolutely not.
@@ -143,10 +144,10 @@ PEAK:
     high: 0
   minor_poison_trap_weight:
     # Likelihood of receiving a trap which applies a weak Poison Affliction to a player
-    # A little radiation.
-    none: 0
+    # From what I have observed, this trap does nothing most of the time.
+    none: 50
     low: 0
-    medium: 50
+    medium: 0
     high: 0
   poison_trap_weight:
     # Likelihood of receiving a trap which applies a Poison Affliction to a player
@@ -213,10 +214,10 @@ PEAK:
     high: 0
   cold_trap_weight:
     # Likelihood of receiving a trap which applies a mild Cold Affliction to a player
-    # Brrrrrr, it's cold out here.
-    none: 0
+    # From what I have observed, this trap does nothing most of the time.
+    none: 50
     low: 0
-    medium: 50
+    medium: 0
     high: 0
   hot_trap_weight:
     # Likelihood of receiving a trap which applies a Hot Affliction to a player
@@ -356,9 +357,9 @@ PEAK:
     #     Disaster Response Badge
     #     Applied Esoterica Badge
     #     Needlepoint Badge
-    # My PEAK game shouldn't hinge on needing to play with others.
-    'false': 0
-    'true': 50
+    # My PEAK game shouldn't hinge on needing to play with others. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+    'false': 50
+    'true': 0
   disable_hard_badges:
     # Exclude somewhat hard badge checks. These badges include:
     #     Speed Climber Badge
@@ -366,9 +367,9 @@ PEAK:
     #     Balloon Badge
     #     Bing Bong Badge
     #     Competitive Eating Badge
-    # While I COULD do these, I really shouldn't.
-    'false': 0
-    'true': 50
+    # While I COULD do these, I really shouldn't. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+    'false': 50
+    'true': 0
   disable_biome_badges:
     # Exclude biome exclusive badge checks. These will not remove the badges involved with completing the biomes.
     # These badges include:
@@ -382,9 +383,9 @@ PEAK:
     #     Megaentomology Badge
     #     Tread Lightly Badge
     #     Advanced Mycology Badge
-    # My PEAK game shouldn't hinge on needing to wait for certain biomes to be in the rotation.
-    'false': 0
-    'true': 50
+    # My PEAK game shouldn't hinge on needing to wait for certain biomes to be in the rotation. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+    'false': 50
+    'true': 0
   ###########################
   # Item & Location Options #
   ###########################
@@ -410,6 +411,45 @@ PEAK:
     - Acquire Guidebook
     - Acquire Lantern
     - Open 1 luggage
+    # Several badges are not likely to get, or are made obsolete by the act of completing a summit, so they shouldn't contain any important unlocks.
+    - 24 Karat Badge # Difficult
+    - Advanced Mycology Badge # Unlikely
+    - Animal Serenading Badge # Unlikely
+    - Applied Esoterica Badge # Multiplayer
+    - Astronomy Badge # Unlikely
+    - Balloon Badge # Endgame
+    - Bing Bong Badge # Endgame
+    - Bookworm Badge # Unlikely
+    - Bouldering Badge # Unlikely
+    - Bundled Up Badge # Difficult
+    - Calcium Intake Badge # Unlikely
+    - Clutch Badge # Multiplayer
+    - Competitive Eating Badge # Difficult
+    - Cool Cucumber Badge # Difficult
+    - Cryptogastronomy Badge # Difficult
+    - Daredevil Badge # Unlikely
+    - Disaster Response Badge # Multiplayer
+    - Emergency Preparedness Badge # Multiplayer
+    - First Aid Badge # Multiplayer
+    - Foraging Badge # Unlikely
+    - Gourmand Badge # Difficult
+    - Happy Camper Badge # Multiplayer
+    # - Hasty Badge # Endgame (not in implementation)
+    - High Altitude Badge # Unlikely
+    - Knot Tying Badge # Unlikely
+    - Leave No Trace Badge # Endgame
+    - Lone Wolf Badge # Endgame
+    - Megaentomology Badge # Unlikely
+    - Mycoacrobatics Badge # Difficult
+    - Mycology Badge # Difficult
+    - Naturalist Badge # Endgame
+    - Needlepoint Badge # Difficult
+    - Participation Badge # Multiplayer
+    - Survivalist Badge # Endgame
+    - Tread Lightly Badge # Difficult
+    - Toxicology Badge # Unlikely
+    - Ultimate Badge # Multiplayer
+    - Undead Encounter Badge # Difficult
   priority_locations: []
   item_links: []
   plando_items: []
