@@ -9,7 +9,7 @@ requires:
 
 FNaFW:
   progression_balancing:
-    normal: 99 # Unchanged
+    0: 99 # Changed to 0 for Disabled.
 
   accessibility:
     full: 99 # Unchanged
