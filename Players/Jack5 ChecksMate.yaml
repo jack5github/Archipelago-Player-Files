@@ -14,7 +14,7 @@ ChecksMate:
     # Unchanged from the base configuration.
     normal: 50
   accessibility:
-    # Unchanged from the base configuration.
+    # Unchanged from the base configuration. Based on personal testing, this should NEVER be set to `minimal`.
     full: 50
   goal:
     # How victory is defined.

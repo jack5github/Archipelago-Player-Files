@@ -41,7 +41,7 @@ Yacht Dice:
     # This option determines what score you need to reach to finish the game.
     # It cannot be higher than the score for the last check (if it is, this option is changed automatically).
     # You can define additional values between the minimum and maximum values. Minimum value is 500, maximum value is 1000.
-    # Increased slightly from 777 to raise the overall difficulty.
+    # Increased slightly from 777 to raise the overall difficulty. Based on personal testing, this likely should not exceed 850.
     800: 50
   minimal_number_of_dice_and_rolls:
     # The minimal number of dice and rolls in the pool.

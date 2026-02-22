@@ -14,8 +14,7 @@ The Witness:
     # It was far too easy to get stuck in The Witness at 50, 60 and 70, so I have increased this value to 75.
     75: 50
   accessibility:
-    # I want to keep the run focused on reaching the goal and not indulge too much in other content. As much as the temptation is there to change this to full, don't do it.
-    full: 0
+    # I want to keep the run focused on reaching the goal and not indulge too much in other content. As much as the temptation is there to change this to `full`, don't do it.
     minimal: 50
   ##################
   # Puzzles & Goal #
@@ -204,13 +203,13 @@ The Witness:
   puzzle_skip_amount:
     # Adds this many Puzzle Skips into the pool, if there is room. Puzzle Skips let you skip one panel.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 30.
-    # Increased from the usual 10 due to how often I was getting stuck on certain puzzles. Although 20 seems like too much of a cheese, it is absolutely necessary.
+    # Increased from the usual 10 due to how often I was getting stuck on certain puzzles. Although 20 seems like too much of a cheese, it is absolutely necessary. Based on personal testing, this should NEVER be lower than 10.
     20: 50
   trap_percentage:
     # Replaces junk items with traps, at the specified rate.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # I have substantially increased trap percentage to get bonked more often.
-    50: 50
+    # I have substantially increased trap percentage to get bonked more often. Tested and noticeable within the given range.
+    random-range-50-90: 50
   trap_weights:
     # Specify the weights determining how many copies of each trap item will be in your itempool.
     # If you don't want a specific type of trap, you can set the weight for it to 0.
