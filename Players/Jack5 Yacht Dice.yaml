@@ -14,10 +14,11 @@ Yacht Dice:
   ################
   progression_balancing:
     # Unchanged from the base configuration.
-    normal: 50
+    random-range-0-99: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
+    minimal: 50
   game_difficulty:
     # Difficulty. This option determines how difficult the scores are to achieve.
     # Easy: for beginners. No luck required, just roll the dice and have fun. Lower final goal.
@@ -27,7 +28,7 @@ Yacht Dice:
     # Unchanged from the base configuration.
     easy: 0
     medium: 50
-    hard: 0
+    hard: 50
     extreme: 0
   score_for_last_check:
     # The items in the item pool will always allow you to reach a score of 1000.
@@ -42,7 +43,7 @@ Yacht Dice:
     # It cannot be higher than the score for the last check (if it is, this option is changed automatically).
     # You can define additional values between the minimum and maximum values. Minimum value is 500, maximum value is 1000.
     # Increased slightly from 777 to raise the overall difficulty.
-    800: 50
+    random-range-800-1000: 50
   minimal_number_of_dice_and_rolls:
     # The minimal number of dice and rolls in the pool.
     # These are guaranteed, unlike the later items.
@@ -61,7 +62,7 @@ Yacht Dice:
     # Setting this to 1 fragment per dice just puts "Dice" objects in the pool.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
     # Unchanged from the base configuration.
-    4: 50
+    random-range-2-5: 50
   number_of_roll_fragments_per_roll:
     # Rolls can be split into fragments, gathering enough will give you an extra roll.
     # You start with one roll, and there will always be one full roll in the pool.
@@ -69,7 +70,7 @@ Yacht Dice:
     # Setting this to 1 fragment per roll just puts "Roll" objects in the pool.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
     # Unchanged from the base configuration.
-    4: 50
+    random-range-2-5: 50
   alternative_categories:
     # There are 16 default categories, but there are also 16 alternative categories.
     # These alternative categories can be randomly selected to replace the default categories.
@@ -96,30 +97,30 @@ Yacht Dice:
     # Of course, more dice = more points!
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
-    5: 50
+    random-range-1-100: 50
   weight_of_roll:
     # With more rolls, you will be able to reach higher scores.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
-    20: 50
+    random-range-1-100: 50
   weight_of_fixed_score_multiplier:
     # Getting a Fixed Score Multiplier will boost all future scores by 10%.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
-    30: 50
+    random-range-1-100: 50
   weight_of_step_score_multiplier:
     # The Step Score Multiplier boosts your multiplier after every roll by 1%, and resets on sheet reset.
     # So, keep high scoring categories for later to get the most out of them.
     # By default, this item is not included. It is fun however, you just need to know the above strategy.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
-    0: 50
+    random-range-0-100: 50
   weight_of_double_category:
     # This option allows categories to appear multiple times.
     # Each time you get a category after the first, its score value gets doubled.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
-    50: 50
+    random-range-1-100: 50
   weight_of_points:
     # Are you tired of rolling dice countless times and tallying up points one by one, all by yourself?
     # Worry not, as this option will simply add some points items to the item pool!
@@ -127,15 +128,15 @@ Yacht Dice:
     # Imagine how nice it would be to find tons of them. Or even better, having others find them FOR you!
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
-    20: 50
+    random-range-1-100: 50
   points_size:
     # If you choose to add points to the item pool, you can choose to have many small points,
     # medium-size points, a few larger points, or a mix of them.
     # Unchanged from the base configuration.
-    small: 0
-    medium: 50
-    large: 0
-    mix: 0
+    small: 25
+    medium: 25
+    large: 25
+    mix: 25
   ###############
   # Other items #
   ###############
@@ -148,7 +149,7 @@ Yacht Dice:
     # - in multiplayer games, it will reduce the number of filler items.
     # Unchanged from the base configuration.
     no_dont: 50
-    yes_please: 0
+    yes_please: 50
   add_bonus_points:
     # Yacht Dice typically has space for extra items.
     # This option determines if bonus points are put into the item pool.

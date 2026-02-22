@@ -12,7 +12,7 @@ Civilization V:
   ################
   progression_balancing:
     # It is a bit too easy to get stuck in Civilization V, so its progression has been increased to 60.
-    60: 50
+    random-range-60-99: 50
   accessibility:
     # Keep the run focused on reaching the goal, don't indulge too much in other content.
     minimal: 50
@@ -84,7 +84,7 @@ Civilization V:
     # The percent chance for a filler item to be a trap instead. Has no effect if traps are not enabled.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the standard configuration.
-    5: 50
+    random-range-5-100: 50
   ###########################
   # Item & Location Options #
   ###########################

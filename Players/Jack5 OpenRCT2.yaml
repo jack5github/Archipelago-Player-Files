@@ -14,10 +14,11 @@ OpenRCT2:
   ################
   progression_balancing:
     # Unchanged from the base configuration.
-    normal: 50
+    random-range-0-99: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
+    minimal: 50
   ignore_ride_stat_changes:
     # Disables changes to base ride stats. If enabled, rides will always behave like they do in the base game.
     # Unchanged from the base configuration.
@@ -198,9 +199,9 @@ OpenRCT2:
     # Choose a difficulty for the randomization. This will make rides have more difficult stat results (If that's enabled), as well as affect things like the loan interest rate.
     # Reduced from Medium, as I am no RollerCoaster Tycoon freak, just someone that enjoys the game.
     very_easy: 0
-    easy: 50
-    medium: 0
-    hard: 0
+    easy: 33
+    medium: 33
+    hard: 33
     extreme: 0
   scenario_length:
     # Choose how long this game will last. This will affect things such as unlock shop prices and if prerequisites are required before purchase. It's recommended to choose based on how long other worlds in the multi-world take to complete.
@@ -218,9 +219,9 @@ OpenRCT2:
     # I have tried this a couple of times on Low, and I feel like the randomisation isn't enough, so I've increased it to Medium.
     none: 0
     low: 0
-    medium: 50
-    high: 0
-    extreme: 0
+    medium: 33
+    high: 33
+    extreme: 33
   randomize_park_values:
     # Randomizes values such as starting cash, starting bank loan amount, and the max bank loan
     # Unchanged from the base configuration.
@@ -248,22 +249,22 @@ OpenRCT2:
     # Choose how many guests are required to win the scenario
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 7500.
     # For all of these goal options, I have made them range randomly between their default and 10% less.
-    random-range-900-1000: 50
+    random-range-900-2000: 50
   park_value_objective:
     # If enabled, choose what park value (In USD) is required to win the scenario.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000000.
     # For all of these goal options, I have made them range randomly between their default and 10% less.
-    random-range-180000-200000: 50
+    random-range-180000-30000: 50
   roller_coaster_objective:
     # If enabled, choose how many coasters, and what prerequisites they need to beat the scenario.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # For all of these goal options, I have made them range randomly between their default and 10% less.
-    random-range-4-5: 50
+    random-range-4-10: 50
   roller_coaster_excitement:
     # Select the minimum excitement 😀 for a coaster to count towards your objective. 0 will disable a minimum excitement rating.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 9.
     # For all of these goal options, I have made them range randomly between their default and 10% less. This option has the possibility of being higher, because it is easy to achieve.
-    random-range-4-6: 50
+    random-range-4-9: 50
   roller_coaster_intensity:
     # Select the minimum intensity 😬 for a coaster to count towards your objective. 0 will disable a minimum intensity rating.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 9.
@@ -273,7 +274,7 @@ OpenRCT2:
     # Select the minimum nausea 🤢 for a coaster to count towards your objective. 0 will disable a minimum nausea rating.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 6.
     # For all of these goal options, I have made them range randomly between their default and 10% less.
-    random-range-3-4: 50
+    random-range-3-6: 50
   required_unique_rides:
     # Requires specific rides to be built before scenario completion is awarded. These will tend to appear in the later half of the game.
     # It's highly recommended to have this set to at least 1!
@@ -284,7 +285,7 @@ OpenRCT2:
     # If enabled, choose the minimum park rating needed to beat the scenario.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 999.
     # For all of these goal options, I have made them range randomly between their default and 10% less.
-    random-range-720-800: 50
+    random-range-720-999: 50
   pay_off_loan:
     # Require Loan to be paid off before scenario completion is awarded. Multiple objectives can be enabled!
     # Unchanged from the base configuration.
@@ -352,7 +353,7 @@ OpenRCT2:
     # If the shop determines you need a ride with a minimum excitement, this value will be the highest it can ask for.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
     # Unchanged from the base configuration.
-    5: 50
+    10: 50
   shop_minimum_intensity:
     # If the shop determines you need a ride with a minimum intensity, this value will be the lowest it can ask for.
     # If this value is higher than the maximum, the generator will assume it is a mistake and set it to 0.
@@ -363,7 +364,7 @@ OpenRCT2:
     # If the shop determines you need a ride with a minimum intensity, this value will be the highest it can ask for.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 7.
     # Unchanged from the base configuration.
-    5: 50
+    7: 50
   shop_minimum_nausea:
     # If the shop determines you need a ride with a minimum nausea, this value will be the lowest it can ask for.
     # If this value is higher than the maximum, the generator will assume it is a mistake and set it to 0.
@@ -384,7 +385,7 @@ OpenRCT2:
     # If the shop determines you need a ride with a minimum length (In Meters), this value will be the highest it can ask for.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 2500.
     # Unchanged from the base configuration.
-    500: 50
+    2500: 50
   shop_minimum_total_customers:
     # If the shop determines you need a ride with a minimum total number of customers, this value will be the lowest it can ask for. If this value is higher than the maximum, the generator will assume it is a mistake and set it to 0.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
@@ -394,7 +395,7 @@ OpenRCT2:
     # If the shop determines you need a ride with a minimum total number of customers, this value will be the highest it can ask for.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
     # Unchanged from the base configuration.
-    400: 50
+    1000: 50
   balance_guest_counts:
     # Attempts to balance the minimum guest requirements to the ride they're attached to. Low throughput rides like Spiral Slides will tend towards the minimum, while high throughput rides like roller coasters will tend towards the maximum.
     # Unchanged from the base configuration.
@@ -435,7 +436,7 @@ OpenRCT2:
     # How many extra filler items to add to the mix as a percentage. This will mostly consist of Cash Bonuses.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
     # Unchanged from the base configuration.
-    10: 50
+    random-range-1-50: 50
   include_atm:
     # Includes an ATM in the item list, regardless of whether it normally appears in the chosen scenario.
     # Unchanged from the base configuration.
@@ -454,27 +455,27 @@ OpenRCT2:
   skips:
     # By default, every game starts with a single skip to ignore a shop requirement. This will add additional skips to be found in the item pool.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    7: 50
+    random-range-0-10: 50
   furry_convention_traps:
     # When found, instantly hosts a furry convention in your park! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Disabled due to it requiring firing all newly spawned Entertainers, which I'd rather not do given my aversion to mouse clicking.
-    0: 50
+    random-range-0-10: 50
   bathroom_traps:
     # When found, instantly maxes out the bathroom stat of every guest! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Adjusted from 5 to equate to the standard trap count of 20.
-    8: 50
+    random-range-0-10: 50
   spam_traps:
     # When found, spams ads all over the screen! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Adjusted from 5 to equate to the standard trap count of 20.
-    8: 50
+    random-range-0-10: 50
   loan_shark_traps:
     # When found, increases your loan! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Adjusted from 5 to equate to the standard trap count of 20. This specific trap has been reduced in quantity because of the strain it puts on the game.
-    4: 50
+    random-range-0-5: 50
   all_rides_and_scenery_base:
     # Adds every ride and scenery pack in the base game to the item pool. This will make for a significantly longer scenario.
     # Unchanged from the base configuration.

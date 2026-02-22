@@ -14,10 +14,11 @@ R.E.P.O:
   ################
   progression_balancing:
     # Unchanged from the base configuration.
-    normal: 50
+    random-range-0-99: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
+    minimal: 50
   pellys_required:
     # Choose which Pellys will be required for victory
     # Pellys are Archipelago statues that appear in-game and must be salvaged. Unchanged from the base configuration.
@@ -33,7 +34,7 @@ R.E.P.O:
     # Choose how many levels must be completed for your goal. This is in addition to gathering all Pellys.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 20.
     # Unchanged from the base configuration.
-    8: 50
+    random-range-5-8: 50
   valuable_hunt:
     # Determines if extracting all valuables is required for your goal.
     # Unchanged from the base configuration.
@@ -43,33 +44,33 @@ R.E.P.O:
     # Determines if extracting all monster souls is required for your goal.
     # Unchanged from the base configuration.
     'false': 50
-    'true': 0
+    'true': 50
   combat_logic:
     # Determines what items are logically required to fight monsters.
     # Easy: Guns or Explosives
     # Medium: Strength Upgrades, Melee Weapons, Guns, or Explosives
     # Hard: Nothing. Player may have to use valuables found in levels.
     # Unchanged from the base configuration.
-    easy: 0
+    easy: 50
     medium: 50
     hard: 0
   shop_stock:
     # Choose how many Archipelago Shop Items are unlocked with each Progressive Shop Stock.
     # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 50.
     # Unchanged from the base configuration.
-    10: 50
+    random-range-5-15: 50
   shop_upgrade_total:
     # Choose how many Archipelago Items show up in the Upgrades section of the Shop
     # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
     # Unchanged from the base configuration.
-    80: 50
+    random-range-60-100: 50
   shop_upgrade_logical:
     # Choose how many shop how many shop upgrades will be potentially logically relevant.
     # Items past this number will not have progression items.
     # This number gets set to the Total Shop Upgrade Locations if its greater.
     # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
     # Unchanged from the base configuration.
-    60: 50
+    random-range-60-100: 50
   starting_level_type:
     # Choose which level type to start with
     # Unchanged from the base configuration.

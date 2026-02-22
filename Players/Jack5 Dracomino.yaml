@@ -14,10 +14,11 @@ Dracomino:
   ################
   progression_balancing:
     # Increased to try to have this game finish before others, as it is unsatisfying when it is the one to end a run.
-    60: 50
+    random-range-60-99: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
+    minimal: 50
   goal:
     # How many lines to clear to win?
     # Number of checks will be this x2.5 this amount with tetrominos, x2 with pentominos, more with smaller shape types.
@@ -34,17 +35,17 @@ Dracomino:
     # Number of shapes to start with.
     # You can define additional values between the minimum and maximum values. Minimum value is 3, maximum value is 100.
     # At one point I reduced this from the default of 7 to the absolute minimum of 1. My intention for doing so was to start with pentominoes using `start_inventory`. The issue with this is that every run would start with the exact same set of pentominoes that I specified. Instead, I have just reduced this to the number that lines up more with what I wanted to start with.
-    5: 50
+    random-range-3-7: 50
   extra_shapes:
     # Extra shapes to add to the pool to make goaling easier/safer.
     # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 100.
     # I reduced this from 20 to increase the difficulty, yet 10 is too low.
-    15: 50
+    random-range-11-15: 50
   randomize_orientations:
     # Randomize the starting orientation of pieces? If disabled, pieces are oriented with flat side down.
     # Unchanged from the base configuration.
     'false': 50
-    'true': 0
+    'true': 50
   monomino_weight:
     # Ratio of monominos (1-block) to all shape types.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100

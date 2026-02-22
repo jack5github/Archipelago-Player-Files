@@ -12,7 +12,7 @@ The Witness:
   ################
   progression_balancing:
     # It was far too easy to get stuck in The Witness at 50, 60 and 70, so I have increased this value to 75.
-    75: 50
+    random-range-75-99: 50
   accessibility:
     # I want to keep the run focused on reaching the goal and not indulge too much in other content. As much as the temptation is there to change this to full, don't do it.
     full: 0
@@ -51,7 +51,7 @@ The Witness:
     # This change will also be applied logically to the long solution ("Challenge Lasers" option).
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 11.
     # Unchanged from the base configuration.
-    7: 50
+    random-range-7-11: 50
   challenge_lasers:
     # Sets the number of lasers required to enter the Caves through the Mountain Bottom Floor Discard and to unlock the Challenge Timer Panel.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 11.
@@ -65,7 +65,7 @@ The Witness:
     # Determines the percentage of "Panel Hunt" panels that need to be solved to win.
     # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
     # I originally reduced this from 63% to 50%, as the original amount was far too high with `panel_hunt_discourage_same_area_factor` set to its default value. However, in a game where the panels are maximally evenly spread out, the game becomes too easy to beat at a low percentage, so I've increased this again. This value should be adjusted in 10% increments whenever it needs to be again.
-    60: 50
+    random-range-60-100: 50
   panel_hunt_total:
     # Only relevant if the Victory Condition is "Panel Hunt".
     # Sets the number of random panels that will get marked as "Panel Hunt" panels in the "Panel Hunt" game mode.
@@ -205,12 +205,12 @@ The Witness:
     # Adds this many Puzzle Skips into the pool, if there is room. Puzzle Skips let you skip one panel.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 30.
     # Increased from the usual 10 due to how often I was getting stuck on certain puzzles. Although 20 seems like too much of a cheese, it is absolutely necessary.
-    20: 50
+    random-range-11-20: 50
   trap_percentage:
     # Replaces junk items with traps, at the specified rate.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # I have substantially increased trap percentage to get bonked more often.
-    50: 50
+    random-range-50-100: 50
   trap_weights:
     # Specify the weights determining how many copies of each trap item will be in your itempool.
     # If you don't want a specific type of trap, you can set the weight for it to 0.
@@ -229,7 +229,7 @@ The Witness:
     # Remaining Audio Logs will have junk hints.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 49.
     # Unchanged from the base configuration.
-    12: 50
+    random-range-0-49: 50
   vague_hints:
     # Make Location Hints a bit more vague, where they only tell you about the general area the item is in.
     # Area Hints will be generated as normal.
@@ -248,12 +248,12 @@ The Witness:
     # Use this option to specify how many of your hints you want to be area hints. The rest will be location hints.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
-    33: 50
+    random-range-0-100: 50
   laser_hints:
     # If on, lasers will tell you where their items are if you walk close to them in-game. Only applies if Laser Shuffle is enabled.
     # Unchanged from the base configuration.
     'false': 50
-    'true': 0
+    'true': 50
   ########
   # Misc #
   ########
@@ -299,7 +299,7 @@ The Witness:
     # Unchanged from the base configuration.
     'off': 0
     puzzle_skip: 50
-    random_item: 0
+    random_item: 50
   ###########################
   # Item & Location Options #
   ###########################

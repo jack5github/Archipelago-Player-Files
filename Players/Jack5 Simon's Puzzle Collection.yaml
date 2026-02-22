@@ -14,10 +14,11 @@ Simon Tatham's Portable Puzzle Collection:
   ################
   progression_balancing:
     # Increased to try to have this game finish before others, as it is unsatisfying when it is the one to end a run.
-    70: 50
+    random-range-70-99: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
+    minimal: 50
   ##################
   # Puzzle Options #
   ##################
@@ -47,7 +48,7 @@ Simon Tatham's Portable Puzzle Collection:
     # Maximum difficulty to select generated presets from. Takes priority over the Minimum Difficulty option if it is lower.
     # Puzzles on "Ridiculous" difficulty are either very big or not actually randomized. Use this difficulty at your own risk.
     # Unchanged from the base configuration.
-    easy: 0
+    easy: 50
     normal: 50
     hard: 0
     ridiculous: 0

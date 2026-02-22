@@ -12,10 +12,11 @@ ChecksMate:
   ################
   progression_balancing:
     # Unchanged from the base configuration.
-    normal: 50
+    random-range-0-99: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
+    minimal: 50
   goal:
     # How victory is defined.
     # Single: Your opponent starts with an army of 7 pieces and 8 pawns. You have a king. Finding checkmate is your goal. To get there, find checks, mate!
@@ -44,7 +45,7 @@ ChecksMate:
     # Turns: Adds the "Play Turns" locations to the pool. (This adds 4 locations and items.)
     # None: Neither "Fork" nor "Play Turns" locations will be in the pool.
     # Unchanged from the base configuration.
-    all: 0
+    all: 50
     turns: 50
     none: 0
   piece_locations:
@@ -80,7 +81,7 @@ ChecksMate:
     # The number of times the engine will receive a reduction to their skill level. These reductions are currently named "Progressive ELO Engine Lobotomy," and each level reduces the AI's access to both analysis and information.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5.
     # Unchanged from the base configuration.
-    5: 50
+    random-range-1-5: 50
   max_pocket:
     # The number of Progressive Pocket Pieces the game is allowed to add to the multiworld.
     # Each Progressive Pocket Piece will improve your 1st, 2nd, or 3rd pocket slot up to 4 times, from Nothing to Pawn, to Minor Piece (like a pocket Knight), to Major Piece (like a pocket Rook), to Queen.
@@ -94,7 +95,7 @@ ChecksMate:
     # The player always starts with 1 King, but may find Progressive Consuls if this is set higher than 1. Progressive Consuls add additional Kings to the player's starting board.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 3.
     # Unchanged from the base configuration.
-    1: 50
+    random-range-1-3: 50
   fairy_kings:
     # Whether to use fairy king upgrades, such as the Knight's moves. Adding multiple upgrades to the pool will allow your King to become a hyper-powerful invented piece if all upgrades are collected.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 2.
@@ -181,7 +182,7 @@ ChecksMate:
     # Disabling this option will remove Pocket items from the item pool.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 4.
     # Unchanged from the base configuration.
-    4: 50
+    random-range-1-4: 50
     disabled: 0 # equivalent to 0
   locked_items:
     # Guarantees that these progression and filler items will be unlockable.

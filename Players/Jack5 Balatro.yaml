@@ -12,7 +12,7 @@ Balatro:
   ################
   progression_balancing:
     # Balatro should be stuck more than any other game, as it is so difficult that I want to avoid playing it.
-    40: 50
+    random-range-0-40: 50
   accessibility:
     # In a game like Balatro, it is necessary to have access to every single item in order to be able to stumble upon a good build.
     full: 50
@@ -226,7 +226,7 @@ Balatro:
     # If you set this option to 3 for example it's going to fill the world with 3 "+1 Hand Size", 3 "+1 Joker Slot", etc.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Unchanged from the standard configuration.
-    4: 50
+    random-range-0-20: 50
   shop_items:
     # Number of AP Items that will be buyable as vouchers in the shop at each included Stake.
     # So for example if you include 3 Stakes and set this option to 11, then there will be 33 findable Shop Items in your game.
@@ -237,12 +237,12 @@ Balatro:
     # The minimum price for an AP Item Voucher in the shop.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
     # With the total number of Archipelago items reduced in the shop, it makes more sense for them to be harder to obtain, so their base price has been increased heavily. Increased from 5 to 6 to incentivise finishing runs as opposed to getting vouchers immediately.
-    6: 50
+    random-range-6-10: 50
   maximum_price:
     # The maximum price for an AP Item in the shop.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
     # It was a bit too punishing for the Archipelago items in Balatro to reach a price of $10 when they often don't give me anything at all, but a maximum price of $8 made them too easy to obtain, so this change has been reverted.
-    10: 50
+    random-range-10-15: 50 # From initial testing, anything above $10 is an overreach
   trap_amount:
     # How often traps will appear as filler items
     # No traps: No traps will appear
@@ -253,9 +253,9 @@ Balatro:
     # Unchanged from the standard configuration.
     no_traps: 0
     low_amount: 0
-    medium_amount: 50
-    high_amount: 0
-    mayhem: 0
+    medium_amount: 33
+    high_amount: 33
+    mayhem: 33
   deathlink:
     # When your run ends, everybody will die. When somebody else dies, your run will end.
     # Unchanged from the standard configuration.

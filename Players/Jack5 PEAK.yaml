@@ -12,10 +12,11 @@ PEAK:
   ################
   progression_balancing:
     # Unchanged from the base configuration.
-    normal: 50
+    random-range-0-99: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
+    minimal: 50
   goal:
     # Determines the goal of the seed
     # Reach Peak: Reach the peak on the specified ascent level
@@ -26,7 +27,7 @@ PEAK:
     reach_peak: 50
     complete_all_badges: 0
     24_karat_badge: 0
-    peak_and_badges: 0
+    peak_and_badges: 50
   ascent_count:
     # The ascent level required to complete the Reach Peak goal (0-7)
     # Higher ascents add more difficulty modifiers and challenges
@@ -38,7 +39,7 @@ PEAK:
     # There are 54 total badges available in the game
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 54.
     # Irrelevant as my goal is not to collect all badges.
-    20: 50
+    random-range-10-30: 50
   progressive_stamina:
     # Enable progressive stamina bars
     # Players start with 25% stamina and unlock 25% more with each upgrade until reaching 100%
@@ -98,7 +99,7 @@ PEAK:
     # Replace a percentage of junk items in the item pool with random traps
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Increased from 10% to 20%, as I have done in other games I've played.
-    20: 50
+    random-range-20-100: 50
   instant_death_trap_weight:
     # Likelihood of receiving a trap which instantly kills a player
     # Absolutely not.

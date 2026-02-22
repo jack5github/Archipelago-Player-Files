@@ -14,10 +14,11 @@ Portal 2:
   ################
   progression_balancing:
     # Unchanged from the base configuration.
-    normal: 50
+    random-range-0-99: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
+    minimal: 50
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
     # "No need to be selfish, luv, you're gonna die." - Wheatley
@@ -84,7 +85,7 @@ Portal 2:
     # Replace a percentage of junk items in the item pool with random traps
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # The default is to have no traps at all. As Portal 2 is played in short, sporadic bursts, this needs to be a high number. I have tried 20%, and it isn't enough.
-    30: 50
+    random-range-30-100: 50
   motion_blur_trap_weight:
     # Likelihood of receiving a trap which makes it a little hard to see
     # Unchanged from the base configuration.
