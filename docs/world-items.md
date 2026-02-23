@@ -1,8 +1,8 @@
 # World Items
 
-This document lists items that are commonly observed in various Archipelago worlds, in order to discover connections between them and add these connections into player files as `item_links` entries. Codified item group names are written as `code blocks`, while unimplemented groups are written in *italics*.
+This document lists items that are commonly observed in various Archipelago worlds, in order to discover connections between them and add these connections into player files as `item_links` and `plando_items` entries. Codified item group names are written as `code blocks`, while unimplemented groups are written in *italics*.
 
-For more information on the `item_links` option, refer to **[Common Properties](./common-props.md#item_links)**.
+For more information on the `item_links` and `plando_items` options, refer to **[Common Properties](./common-props.md#item_links)**.
 
 ## Archipeladoku
 
@@ -47,6 +47,13 @@ For more information on the `item_links` option, refer to **[Common Properties](
 - Progressive Characters
 - Warps
 -->
+
+## Grapple Dog
+
+- *Cosmic Gadgets* - Gives one of four gadgets that are required to access the final boss. (Directly related to game completion.)
+- *Abilities* - Unlocks abilities that can be used to play Grapple Dog. (Directly related to game completion.)
+- *Objects* - Unlocks the ability to use specific types of objects in levels. (Directly related to game completion.)
+- *Levels* - Unlocks levels from any of the five worlds in the game.
 
 ## Keymaster's Keep
 
