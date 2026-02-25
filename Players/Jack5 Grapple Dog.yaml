@@ -1,0 +1,202 @@
+﻿name: Jack5Grapple{NUMBER}
+description: |-
+  Jack5's Grapple Dog player file
+
+  TODO: Add description
+game: Grapple Dog
+requires:
+  version: 0.6.6
+Grapple Dog:
+  progression_balancing:
+    # Unchanged from the base configuration.
+    normal: 50
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+  boomerang_score_one:
+    # What score is needed for Boomerang Bandit check 1. (0 disables the check)
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 999999.
+    # Increased from 10000 to a range that is possible for me to achieve.
+    random-range-10000-25000: 50
+  boomerang_score_two:
+    # What score is needed for Boomerang Bandit check 2. (0 disables the check)
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 999999.
+    # Increased from 20000 to a range that is possible for me to achieve.
+    random-range-25001-50000: 50
+  boomerang_score_three:
+    # What score is needed for Boomerang Bandit check 3. (0 disables the check)
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 999999.
+    # Increased from 30000 to a range that is possible for me to achieve.
+    random-range-50001-100000: 50
+  #########
+  # Goals #
+  #########
+  goal:
+    # How to win the game
+    # Unchanged from the base configuration due to there being no other options.
+    defeat_nul: 50
+  randomise_gadgets:
+    # Whether to add gadgets to the item pool vs beating bosses
+    # Set to true to have Grapple Dog behave like other games in a multiworld.
+    'false': 0
+    'true': 50
+  level_progression:
+    # WIP: Not Yet Implemented
+    # Unchanged from the base configuration due to there being no other options.
+    fully_random: 50
+  starting_levels:
+    # How many levels are available at the start of the game
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 56.
+    # Increased from 1 to create more opportunities to find checks, like in Portal 2.
+    random-range-3-5: 50
+  #############
+  # Abilities #
+  #############
+  start_with_hook:
+    # Whether you start with the hook
+    # While double jump is not implemented, this should remain true.
+    'false': 0
+    'true': 50
+  movement_rando:
+    # Whether movement abilities start locked
+    # Enabled to create complexity in what levels are possible at the start of a run.
+    'false': 0
+    'true': 50
+  starting_health:
+    # How much health you start with.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 8.
+    # Reduced from 4 for the maximum challenge. While there is no way to ensure that easy levels are picked first, the minimum for this should be at least 2.
+    2: 50
+  max_health:
+    # How much health you end with.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 8.
+    # Increased from 4 to allieviate stress at the end of a run.
+    8: 50
+  ##########
+  # Checks #
+  ##########
+  check_banking:
+    # When do checks get sent
+    # Unchanged from the base configuration due to there being no other options.
+    instant: 50
+  minimum_gems_in_pool:
+    # How many gems should be expected to be collected during a run.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 200.
+    # Unchanged from the base configuration.
+    190: 50
+  remaining_gem_usefulness:
+    # WIP: Not Yet Implemented
+    # What percentage of the remaining gems will be marked as useful as opposed to filler
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    40: 50
+  fruit_gem_one_target:
+    # How many fruit you need to get the first fruit gem
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 150.
+    # Changed to range from the default to a more acceptable near-50% requirement.
+    random-range-110-125: 50
+  fruit_gem_two_target:
+    # How many fruit you need to get the second fruit gem
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 250.
+    # Changed to range from the default to a more acceptable near-100% requirement.
+    random-range-220-240: 50
+  speedrunner_choice_multiplier:
+    # How many times more levels are required for speedrunner checks to be in logic
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3.
+    # Unchanged from the base configuration.
+    2: 50
+  speedrunner_count_one:
+    # How many gold medals are required for the speedrunner check. (0 disables the check)
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 11.
+    # Increased from 1 to 1 whole level's worth of medals.
+    3: 50
+  speedrunner_count_two:
+    # How many gold medals are required for the speedrunner check. (0 disables the check)
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 22.
+    # Increased from 2 to 2 whole levels' worth of medals.
+    6: 50
+  speedrunner_count_three:
+    # How many gold medals are required for the speedrunner check. (0 disables the check)
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 33.
+    # Increased from 3 to 3 whole levels' worth of medals.
+    9: 50
+  ##########
+  # Bosses #
+  ##########
+  boss_level_unlock:
+    # How you unlock boss levels
+    # This has been changed from the default of Gems And Level to just Level, which will create the behaviour of all bosses being freely playable except 5-B, which requires all four Gadgets.
+    gems: 0
+    gems_and_level: 0
+    level: 50
+  gems_for_boss_one:
+    # How many gems are needed to play level 1-B
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 200.
+    # Unchanged from the base configuration.
+    25: 50
+  gems_for_boss_two:
+    # How many gems are needed to play level 2-B
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 200.
+    # Unchanged from the base configuration.
+    40: 50
+  gems_for_boss_three:
+    # How many gems are needed to play level 3-B
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 200.
+    # Unchanged from the base configuration.
+    80: 50
+  gems_for_boss_four:
+    # How many gems are needed to play level 4-B
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 200.
+    # Unchanged from the base configuration.
+    120: 50
+  gems_for_boss_five:
+    # How many gems are needed to play level 5-B
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 200.
+    # Unchanged from the base configuration.
+    190: 50
+  require_gadgets_for_final_boss:
+    # Whether the 4 gadgets are required to play level 5-B
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items:
+    # The Cosmic Gadgets, which are required to play level 5-B, should be found within Grapple Dog.
+    - Gadget 1
+    - Gadget 2
+    - Gadget 3
+    - Gadget 4
+  non_local_items:
+    # Level objects and movement abilities, which allow playing more complex levels, should be found in other games.
+    - Balloons
+    - Bounce Pads
+    - Cannons
+    - Carrots
+    - Climb
+    - Slam
+    - Swim
+  start_inventory:
+    # Attempting to play Grapple Dog without access to Wall Jump forces me to play Boomerang Bandit, which gets tiring when it is the start of every run, so I have made myself start with Wall Jump to try and allieviate this pressure.
+    Wall Jump: 1
+  start_hints: []
+  start_location_hints: []
+  exclude_locations:
+    # Prevent any incidental actions from unlocking important items. Boomerang Bandit high scores must not be made unimportant, because otherwise, the generation frequently fails, citing needing 3 more important locations.
+    # - Boomerang Bandit (Score 10000)
+    # - Boomerang Bandit (Score 20000)
+    # - Boomerang Bandit (Score 30000)
+    - Have A Nap
+    - Pet The Dog
+    - Read The Credits
+  priority_locations: []
+  item_links: []
+  # TODO: Use `plando_items` to lock difficult levels behind hard-to-achieve criteria in others so that I am more likely to have enough health to beat them by then.
+  plando_items:
+    # Bonus 5-4 is an incredibly annoying level that always seems to get picked by the randomiser, so ensure it contains Gems which by their nature are not important.
+    - items:
+        Gem: 3
+      locations:
+        - Bonus 5-4
+      force: false
