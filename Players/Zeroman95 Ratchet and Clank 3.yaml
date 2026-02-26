@@ -411,4 +411,4 @@ Ratchet and Clank 3:
         - 'Command Center: Biobliterator Defeated!'
       items:
         RY3N0: true
-      force: true
+      force: false

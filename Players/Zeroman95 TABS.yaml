@@ -60,4 +60,4 @@ Totally Accurate Battle Simulator:
         - Pit (Simulation-17)
       items:
         Present Elf: true
-      force: true
+      force: false

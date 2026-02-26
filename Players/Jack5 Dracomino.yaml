@@ -133,4 +133,4 @@ Dracomino:
         - Line 69 Cleared
       items:
         I Pentomino: true
-      force: true
+      force: false

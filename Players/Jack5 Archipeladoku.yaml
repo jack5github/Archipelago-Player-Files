@@ -120,7 +120,7 @@ Archipeladoku:
   ###########################
   local_items: []
   non_local_items:
-    # Require other games to be played in order to unlock new number blocks in sudoku.
+    # Require other games to be played in order to unlock new sudoku blocks.
     - Blocks
   start_inventory: {}
   start_hints: []
