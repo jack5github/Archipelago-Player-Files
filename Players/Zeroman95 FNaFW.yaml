@@ -40,9 +40,9 @@ FNaFW:
     'true': 0
 
   hard_logic:
-    # Unchanged
-    'false': 50
-    'true': 0
+    # Changed to true for Grinding.
+    'false': 0
+    'true': 50
 
   cheap_endo:
     # I want to grind, also for the fact that the Items found give you Tokens anyway.
