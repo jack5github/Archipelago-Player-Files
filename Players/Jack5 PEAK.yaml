@@ -452,4 +452,25 @@ PEAK:
     - Undead Encounter Badge # Difficult
   priority_locations: []
   item_links: []
-  plando_items: []
+  plando_items:
+    # There is a 25% chance for stamina to only be found in games where the checks relate mostly to getting more powerful.
+    - items:
+        Progressive Stamina Bar: true
+      world:
+        - Jack5CivV
+        - MultiKMK
+        - ZeromanFNAFW
+        - ZeromanRAC3
+        - ZeromanTLOZ
+      percentage: 25
+      force: false
+    # There is a 25% chance for endurance to only be found in games where the checks relate mostly to getting faster.
+    - items:
+        Progressive Endurance: true
+      world:
+        - Jack5Sudoku
+        - Jack5Yahtzee
+        - MultiREPO
+        - ZeromanSHAR
+      percentage: 25
+      force: false

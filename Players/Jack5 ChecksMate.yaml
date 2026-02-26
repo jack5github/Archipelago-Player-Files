@@ -213,4 +213,16 @@ ChecksMate:
   exclude_locations: []
   priority_locations: []
   item_links: []
-  plando_items: []
+  plando_items:
+    # There is a 33% chance for chessmen to only be found in games where the checks relate mostly to purchasing or defeating units.
+    - items:
+        Chessmen: true
+      world:
+        - Jack5Balatro
+        - Jack5RCT2
+        - MultiREPO
+        - ZeromanFNAFW
+        - ZeromanTABS
+        - ZeromanWhite
+      percentage: 33
+      force: false

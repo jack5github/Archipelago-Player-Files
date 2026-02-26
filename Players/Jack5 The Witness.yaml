@@ -349,3 +349,26 @@ The Witness:
       locations:
         - Caves Lone Pillar
       force: false
+    # For some other lasers, a random assortment of them are forced to be found in pivotal locations within The Witness.
+    - item:
+        Lasers: 1
+      count:
+        min: 0
+        max: 5
+      locations:
+        - Desert Laser Panel
+        - Keep Laser Panel Pressure Plates
+        - Outside Tutorial Outpost Exit Panel
+        - Quarry Laser Panel
+        - Quarry Stoneworks Stairs Panel
+        - Symmetry Island Laser Panel
+      force: false
+    # For remaining lasers, there is a 25% chance for them to only be found in games where the checks relate mostly to firing lasers.
+    - items:
+        Lasers: true
+      world:
+        - Jack5Portal2
+        - ZeromanFNAFW
+        - ZeromanRAC3
+      percentage: 25
+      force: false

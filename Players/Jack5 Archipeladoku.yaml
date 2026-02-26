@@ -128,4 +128,16 @@ Archipeladoku:
   exclude_locations: []
   priority_locations: []
   item_links: []
-  plando_items: []
+  plando_items:
+    # There is a 33% chance for sudoku blocks to only be found in games where the locations relate mostly to blocks.
+    - items:
+        Blocks: true
+      world:
+        - Jack5Chess
+        - Jack5Minecraft
+        - Jack5Simon
+        - Jack5Tetris
+        - Jack5Witness
+        - ZeromanMinecraft
+      percentage: 33
+      force: false
