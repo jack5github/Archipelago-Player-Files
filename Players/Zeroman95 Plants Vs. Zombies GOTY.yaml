@@ -128,9 +128,9 @@ requires:
     'false': 50
     'true': 0
 
-  easy_upgrade_plants: # Unchanged
-    'false': 50
-    'true': 0
+  easy_upgrade_plants: # Changed because you don't get many plants early on.
+    'false': 0
+    'true': 50
 
   imitater_behaviour: # Unchanged
     normal: 99
