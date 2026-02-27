@@ -1,0 +1,203 @@
+name: ZeromanPVZGOTY{NUMBER}
+
+description: 'Zeroman95 Plants Vs. Zombies Game of the Year YAML'
+
+game: 'Plants vs. Zombies: Replanted'
+requires:
+  version: 0.6.6
+  game:
+    'Plants vs. Zombies: Replanted': 1.5.2
+
+'Plants vs. Zombies: Replanted':
+  progression_balancing: # Unchanged
+    normal: 99
+
+  accessibility: # Unchanged
+    full: 99
+
+  goty_compatability_mode: # Must be on to work with GOTY Edition.
+    'false': 0
+    'true': 50
+
+  death_link: # Turned on for True Experience.
+    'false': 0
+    'true': 50
+
+  adventure_mode_progression: # Picked level_items meaning all levels are an item in the pool.
+    level_items: 99
+
+  minigame_levels: # all Minigame levels are items just like the adventure mode levels.
+    level_items: 99
+
+  puzzle_levels: # Just like the other two. All Puzzle levels are Items.
+    level_items: 99
+
+  survival_levels: # Same as other three above.
+    level_items: 99
+
+  cloudy_day_levels: # Cloudy Day Levels do not exist in GOTY Edition so off by default.
+    'off': 99
+
+  bonus_levels: # Same as Cloudy Day Levels as it does not exist in GOTY Edition.
+    'off': 99
+
+  china_level: # This also does not exist in GOTY Edition.
+    'off': 99
+
+  huge_wave_locations: # Unchanged
+    'false': 0
+    'true': 50
+
+  shop_items: # Set to 64 to have EIGHT Pages filled with Shop Items when the Shop Keys are found.
+    64: 99
+
+  adventure_levels_goal: # All Adventure levels must be completed.
+    49: 99
+
+  adventure_areas_goal: # All Adventure Areas must be complete in order to fight Dr. Zomboss.
+    5: 99
+
+  minigame_levels_goal: # Random amount required.
+    random-high: 99
+
+  puzzle_levels_goal: # Same as above.
+    random-high: 99
+
+  survival_levels_goal: # Same as above.
+    random-high: 99
+
+  cloudy_day_levels_goal: # Unchanged
+    0: 99
+
+  bonus_levels_goal: # Unchanged
+    0: 99
+
+  total_levels_goal: # Pick a random amount of levels at a high amount.
+    random-high: 99
+
+  fast_goal: # Option is set forced on if level_items is selected for adventure levels.
+    'false': 0
+    'true': 50
+
+  conveyor_randomisation: # THIS is awesome. Set that on.
+    'false': 0
+    'true': 50
+
+  zombie_randomisation: # This is also AWESOME.
+    'false': 0
+    'true': 50
+
+  zombie_randomised_modes: # Unchanged
+    Adventure: 1
+    Mini-games: 1
+    Survival: 1
+
+  randomised_zombies: # Every Zombie is on except Trash Can Zombie because Trash Can Zombie is not in GOTY.
+    Balloon: 1
+    Buckethead: 1
+    Bungee: 1
+    Catapult: 1
+    Conehead: 1
+    Dancer: 1
+    Digger: 1
+    DolphinRider: 1
+    Football: 1
+    Gargantuar: 1
+    GatlingHead: 1
+    GigaGargantuar: 1
+    JackInTheBox: 1
+    JalapenoHead: 1
+    Ladder: 1
+    Newspaper: 1
+    PeaHead: 1
+    Pogo: 1
+    Polevaulter: 1
+    ScreenDoor: 1
+    Snorkel: 1
+    SquashHead: 1
+    TallnutHead: 1
+    TrashCan: 0
+    WallnutHead: 1
+    Zomboni: 1
+
+  plant_stat_randomisation: # Unchanged
+    'false': 50
+    'true': 0
+
+  maintain_vanilla_projectile_strength: # Unchanged
+    'false': 50
+    'true': 0
+
+  easy_upgrade_plants: # Unchanged
+    'false': 50
+    'true': 0
+
+  imitater_behaviour: # Unchanged
+    normal: 99
+    open: 0
+
+  starting_sun_upgrades: # Unchanged
+    'off': 99
+    5_sun_each: 0
+    25_sun_each: 0
+    50_sun_each: 0
+
+  maximum_sun_upgrade: # Unchanged
+    50: 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    random-range-50-150: 0
+
+  disable_storm_flashes: # Let it pick for me.
+    'false': 50
+    'true': 50
+
+  music_shuffle: # Unchanged
+    disabled: 99
+    by_type: 0
+    by_level: 0
+
+  starting_plants: # Unchanged
+    1: 99
+
+  starting_seed_slots: # Unchanged
+    6: 99
+
+  early_sunflower: # Unchanged
+    'false': 50
+    'true': 0
+
+  early_shovel: # Unchanged
+    'false': 50
+    'true': 0
+
+  trap_percentage: # Give me all the Traps...
+    random-high: 99
+
+  mower_deploy_trap_weight: # Random.
+    random: 99
+
+  seed_packet_cooldown_trap_weight: # RAndom.
+    random: 99
+
+  zombie_ambush_trap_weight: # RANDOM.
+    random: 99
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
