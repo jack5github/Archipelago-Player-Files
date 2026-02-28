@@ -22,12 +22,12 @@ FNaFW:
     chipper: 10
 
   initial_characters:
-    true_random: 99 # Picks ANY Character in the list. (Except for the last row from the Halloween Update)
+    true_random: 99 # Picks ANY Character in the list.
 
   vanilla_halloween:
-    # Unchanged (I don't want to even TOUCH The Halloween Mini-Games. They are frustrating.)
-    'false': 0
-    'true': 50
+    # CHANGED to allow the Animatronic Progression to be elsewhere. Plus all Halloween related checks are now excluded.
+    'false': 50
+    'true': 0
 
   vanilla_lasers:
     # Unchanged
@@ -40,9 +40,9 @@ FNaFW:
     'true': 0
 
   hard_logic:
-    # Changed to true for Grinding.
-    'false': 0
-    'true': 50
+    # Unchanged
+    'false': 50
+    'true': 0
 
   cheap_endo:
     # I want to grind, also for the fact that the Items found give you Tokens anyway.
@@ -60,12 +60,12 @@ FNaFW:
     'true': 50
 
   progressive_bytes:
-    # Changed to False because it slows the game down.
+    # Changed to False because it makes the game more challenging.
     'false': 50
     'true': 0
 
   progressive_chips:
-    # Changed to False because it slows the game down.
+    # Changed to False because it makes the game more challenging.
     'false': 50
     'true': 0
 
@@ -87,17 +87,16 @@ FNaFW:
 
   start_location_hints: []
 
-  exclude_locations: # Added because those locations only have ONE Chest spot meaning you need to keep resetting the game just for them to spawn. I have Fazchest checks set to Three meaning I would have to do this THREE different times.
+  exclude_locations: # The Halloween Character locations are now excluded.
     [
-      'Deep-Metal Mine: Fazcoin Chest 1',
-      'Deep-Metal Mine: Fazcoin Chest 2',
-      'Deep-Metal Mine: Fazcoin Chest 3',
-      'Pinwheel Circus: Fazcoin Chest 1',
-      'Pinwheel Circus: Fazcoin Chest 2',
-      'Pinwheel Circus: Fazcoin Chest 3',
-      'Pinwheel Funhouse: Fazcoin Chest 1',
-      'Pinwheel Funhouse: Fazcoin Chest 2',
-      'Pinwheel Funhouse: Fazcoin Chest 3',
+      'Jack-O-Bonnie',
+      'Jack-O-Chica',
+      'Animdude',
+      'Mr. Chipper',
+      'Nightmare BB',
+      'Nightmarionne',
+      'Coffee',
+      'Purpleguy',
     ]
 
   priority_locations: ['Fazbear Hills: Pearl']
