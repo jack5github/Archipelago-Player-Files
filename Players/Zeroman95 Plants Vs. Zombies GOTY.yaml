@@ -1,4 +1,4 @@
-name: ZeromanPVZGOTY{NUMBER}
+name: ZeromanPVZ{NUMBER}
 
 description: 'Zeroman95 Plants Vs. Zombies Game of the Year YAML'
 
@@ -51,11 +51,11 @@ requires:
   shop_items: # Set to 64 to have EIGHT Pages filled with Shop Items when the Shop Keys are found.
     64: 99
 
-  adventure_levels_goal: # All Adventure levels must be completed.
-    49: 99
+  adventure_levels_goal: # Lowered to HALF. All 49 Adventure levels takes too long along with everything else.
+    random-range-0-24: 99
 
-  adventure_areas_goal: # All Adventure Areas must be complete in order to fight Dr. Zomboss.
-    5: 99
+  adventure_areas_goal: # changed to 0 to never have to complete a whole area.
+    0: 99
 
   minigame_levels_goal: # Random amount required.
     random-high: 99
@@ -87,10 +87,10 @@ requires:
     'false': 0
     'true': 50
 
-  zombie_randomised_modes: # Unchanged
+  zombie_randomised_modes: # Removed Randomised mode for Survival since that does randomise itself.
     Adventure: 1
     Mini-games: 1
-    Survival: 1
+    Survival: 0
 
   randomised_zombies: # Every Zombie is on except Trash Can Zombie because Trash Can Zombie is not in GOTY.
     Balloon: 1
@@ -132,13 +132,13 @@ requires:
     'false': 0
     'true': 50
 
-  imitater_behaviour: # Unchanged
-    normal: 99
-    open: 0
+  imitater_behaviour: # Set to Open to allow ANY Plant even if I don't have it.
+    normal: 0
+    open: 50
 
-  starting_sun_upgrades: # Unchanged
-    'off': 99
-    5_sun_each: 0
+  starting_sun_upgrades: # set to 5 sun each.
+    'off': 0
+    5_sun_each: 99
     25_sun_each: 0
     50_sun_each: 0
 
@@ -178,8 +178,8 @@ requires:
   mower_deploy_trap_weight: # Random.
     random: 99
 
-  seed_packet_cooldown_trap_weight: # RAndom.
-    random: 99
+  seed_packet_cooldown_trap_weight: # Doesn't work in GOTY.
+    0: 99
 
   zombie_ambush_trap_weight: # RANDOM.
     random: 99
