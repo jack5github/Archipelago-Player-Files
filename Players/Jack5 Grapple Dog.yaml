@@ -149,7 +149,7 @@ Grapple Dog:
     # How many gems are needed to play level 4-B
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 200.
     # Unchanged from the base configuration.
-    1random-range-0-200: 50
+    random-range-1-200: 50
   gems_for_boss_five:
     # How many gems are needed to play level 5-B
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 200.
