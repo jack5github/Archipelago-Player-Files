@@ -108,18 +108,18 @@ Grapple Dog:
   speedrunner_count_one:
     # How many gold medals are required for the speedrunner check. (0 disables the check)
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 11.
-    # Increased from 1 to 1 whole level's worth of medals.
-    3: 50
+    # Unchanged from the base configuration (1 = 1 GOLD medal).
+    1: 50
   speedrunner_count_two:
     # How many gold medals are required for the speedrunner check. (0 disables the check)
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 22.
-    # Increased from 2 to 2 whole levels' worth of medals.
-    6: 50
+    # Unchanged from the base configuration (2 = 2 GOLD medals).
+    2: 50
   speedrunner_count_three:
     # How many gold medals are required for the speedrunner check. (0 disables the check)
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 33.
-    # Increased from 3 to 3 whole levels' worth of medals.
-    9: 50
+    # Unchanged from the base configuration (3 = 3 GOLD medals).
+    3: 50
   ##########
   # Bosses #
   ##########
