@@ -1,7 +1,7 @@
-﻿name: ZeromanFNAFW{NUMBER}
+﻿name: ZeromanFNaFW{NUMBER}
 
 description: |-
-  Zeroman95's FNAF WORLD Yaml.
+  Zeroman95's FNaF WORLD Yaml.
 
 game: FNaFW
 requires:
@@ -14,16 +14,20 @@ FNaFW:
   accessibility:
     full: 99 # Unchanged
 
-  ending_goal:
-    scott: 99 # Unchanged
+  ending_goal: # Added other goals, making each game a unique run.
+    scott: 10
+    clock: 10
+    fourth_glitch: 10
+    universe_end: 10
+    chipper: 10
 
   initial_characters:
-    limited_random: 99 # Start with simple characters on the first three rows.
+    true_random: 99 # Picks ANY Character in the list.
 
   vanilla_halloween:
-    # Unchanged
-    'false': 0
-    'true': 50
+    # CHANGED to allow the Animatronic Progression to be elsewhere. Plus all Halloween related checks are now excluded.
+    'false': 50
+    'true': 0
 
   vanilla_lasers:
     # Unchanged
@@ -41,7 +45,7 @@ FNaFW:
     'true': 0
 
   cheap_endo:
-    # I want to grind, also for the fact that the Items give you Tokens anyway.
+    # I want to grind, also for the fact that the Items found give you Tokens anyway.
     'false': 50
     'true': 0
 
@@ -56,14 +60,14 @@ FNaFW:
     'true': 50
 
   progressive_bytes:
-    # Changed to True, if set to false makes game super easy.
-    'false': 0
-    'true': 50
+    # Changed to False because it makes the game more challenging.
+    'false': 50
+    'true': 0
 
   progressive_chips:
-    # Changed to True, if set to false makes game super easy.
-    'false': 0
-    'true': 50
+    # Changed to False because it makes the game more challenging.
+    'false': 50
+    'true': 0
 
   area_warping:
     visit_area: 0 # Setting it to always will make me require an item for each area to warp.
@@ -83,20 +87,19 @@ FNaFW:
 
   start_location_hints: []
 
-  exclude_locations: # Added because those locations only have ONE Chest spot meaning you need to keep resetting the game just for them to spawn. I have Fazchest checks set to Three meaning I would have to do this THREE different times.
+  exclude_locations: # The Halloween Character locations are now excluded.
     [
-      'Deep-Metal Mine: Fazcoin Chest 1',
-      'Deep-Metal Mine: Fazcoin Chest 2',
-      'Deep-Metal Mine: Fazcoin Chest 3',
-      'Pinwheel Circus: Fazcoin Chest 1',
-      'Pinwheel Circus: Fazcoin Chest 2',
-      'Pinwheel Circus: Fazcoin Chest 3',
-      'Pinwheel Funhouse: Fazcoin Chest 1',
-      'Pinwheel Funhouse: Fazcoin Chest 2',
-      'Pinwheel Funhouse: Fazcoin Chest 3',
+      'Jack-O-Bonnie',
+      'Jack-O-Chica',
+      'Animdude',
+      'Mr. Chipper',
+      'Nightmare BB',
+      'Nightmarionne',
+      'Coffee',
+      'Purpleguy',
     ]
 
-  priority_locations: []
+  priority_locations: ['Fazbear Hills: Pearl']
 
   item_links: []
 

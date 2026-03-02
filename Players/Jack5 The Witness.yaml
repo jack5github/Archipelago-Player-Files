@@ -326,9 +326,10 @@ The Witness:
   start_hints: []
   start_location_hints: []
   exclude_locations:
-    # The Keep is simply too far away from everything else, not randomisable enough, and annoying to have to complete due to needing to walk on light-up panels. Excluding this locations does not prevent it from being accessed, it just isn't necessary for completion.
-    - Keep
-    # The same rationale as the Keep applies for the Shipwreck, as it is tied to the Keep.
+    # Excluding the below locations does not prevent them from being accessed, they just aren't necessary for completion.
+    # While the Keep is far away from everything else, not randomisable enough and sometimes annoying to have to complete due to needing to walk on light-up panels, there should at least be a chance that it is important.
+    # - Keep
+    # The same rationale as the Keep applies doubly so for the Shipwreck, as it is tied to the Keep.
     - Shipwreck
     # The RGB House is one of the most annoying parts of The Witness, so make sure it is excluded from being important.
     - Town RGB House Entry Panel
@@ -337,14 +338,14 @@ The Witness:
     - Town RGB House Upstairs Left
     - Town RGB House Upstairs RGB Control
     - Town RGB House Upstairs Right
-    # The treehouse's puzzles are some of the most annoying in the game, primarily because they are so far away from everything else, but they also are very difficult and even time-sensitive in some situations. Excluding these locations does not prevent them from being accessed, they just aren't necessary for completion.
+    # The treehouse's puzzles are some of the most annoying in the game, primarily because they are so far away from everything else, but they also are very difficult and even time-sensitive in some situations.
     - Treehouse
   priority_locations: []
   item_links: []
   plando_items:
-    # Ensure that entering the Caves and solving the lone pillar puzzle progresses towards winning the game.
-    - locations:
-        - Caves Lone Pillar
-      items:
+    # In order to ensure that the Caves are visited in most runs, the lone pillar is forced to give the Bunker Laser.
+    - items:
         Bunker Laser: true
-      force: true
+      locations:
+        - Caves Lone Pillar
+      force: false

@@ -89,20 +89,63 @@ A list of locations that will always have an important item.
 
 ### `item_links`
 
-A list of dictionaries which define items that are shared with other player files. Each dictionary in the list is defined as follows:
+A list of dictionaries which define items that are shared with other player files. Each dictionary in the list is defined as follows.
+
+(For examples of how `item_links` is used, refer to the [Archipelago Advanced YAML Guide](https://archipelago.gg/tutorial/Archipelago/advanced_settings_en#example).)
 
 - `name` - The name of the link. This should be a term that represents the items being shared (e.g. "Lasers", "Rods", etc.) but should not be too broad so as to overlap with an item or group name.
 - `item_pool` - A list of item or group names from the player file's world that should be shared among other player files with the link.
 - `local_items` - Item or group names from `item_pool` that are forced to be in the worlds of the player files with the link.
 - `replacement_item` - The name of the item that will stand in for vacant slots created by sharing items, or `null` to have the generator randomly pick a filler item.
-- `link_replacement` (optional) - A boolean that, if `true`, will share replacement items among other player files with the link.
-- `skip_if_solo` (optional) - A boolean that, if `true`, will cause the link to have no effect if there is only one player file with the link in the generation.
+- `link_replacement` (optional) - A boolean where:
+  - `true` - Will share replacement items among other player files with the link.
+  - `false` - Will not share replacement items. (default)
+- `skip_if_solo` (optional) - A boolean where:
+  - `true` - Will cause the link to have no effect if there is only one player file with the link in the generation.
+  - `false` - Will cause the link to always have an effect. (default)
 
 `item_links` works irrespective of locations. This means that it is impossible to have specific locations in one player file give specific items to another player file. This option creates item-to-item relationships only.
 
-For an example of how `item_links` is used, refer to the [Archipelago Advanced YAML Guide](https://archipelago.gg/tutorial/Archipelago/advanced_settings_en#example).
-
 ### `plando_items`
 
-<!-- TODO: Add detailed breakdown of how this option works -->
-Restrictions on where specific items can be found.
+A list of dictionaries which restrict where specific items can be found in the world. Each dictionary in the list is defined as follows.
+
+(For examples of how `plando_items` is used, refer to the [Archipelago Plando Guide](https://archipelago.gg/tutorial/Archipelago/plando_en#item-plando-examples).)
+
+#### Item Properties
+
+- One of:
+  - `items` - A dictionary of items that occupy the plando. The dictionary's keys are the item names, while the values are integers for a specific count of an item, or `true` for all of that item.
+  - `item` - A dictionary of items that may occupy the plando, from which one is chosen. The dictionary's keys are the item names, while the values are integers for how likely the item is to be chosen proportional to the others specified.
+- `count` (optional) - How many of the specified items to place in the plando. One of:
+  - An integer - Places the specified number of items.
+  - `false` - Places all specified item quantities. If not specified, items have a quantity of 1. (default)
+  - A dictionary with the following optional keys:
+    - `min` - The minimum quantity of items to place in the plando.
+    - `max` - The maximum quantity of items to place in the plando.
+- `from_pool` (optional) - A boolean where:
+  - `true` - Will move the specified items from the item pool to the plando. (default)
+  - `false` - Will created the specified items out of thin air, which may have unintended effects.
+
+#### Location Properties
+
+One of the following must be specified, or both.
+
+- `world` - Which player file the plando is in. If this is specified, it is important to set `force` to `false` so that generation is possible if the specified world does not exist. One of:
+  - The slot name of another player file.
+  - A list of player file slot names.
+  - `true` - Any player file except the current one.
+  - `false` - The current player file. (default)
+  - `null` - Any player file.
+- One of:
+  - `locations` - A list of location names that form the plando, in which the specified items can be found.
+  - `location` - A single location name that forms the plando, in which the specified items can be found.
+  - The above properties can include the strings `early_locations` (for checks found near the start of a run) or `non_early_locations` (for those found later).
+
+#### Miscellaneous Properties
+
+- `percentage` (optional) - An integer from 0 to 100 that specifies how likely the plando is to be enabled.
+- `force` (optional) - A boolean or string where:
+  - `true` - Halts the generation if the plando is impossible.
+  - `false` - Ignores the plando if it is impossible and produce a warning.
+  - `silent` - Ignores the plando if it is impossible with no warning. (default)
