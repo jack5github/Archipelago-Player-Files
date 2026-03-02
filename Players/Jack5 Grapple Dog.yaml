@@ -95,12 +95,12 @@ Grapple Dog:
     # How many fruit you need to get the first fruit gem
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 150.
     # Changed to range from the default to a more acceptable near-50% requirement.
-    random-range-100-219: 50
+    random-range-1-150: 50
   fruit_gem_two_target:
     # How many fruit you need to get the second fruit gem
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 250.
     # Changed to range from the default to a more acceptable near-100% requirement.
-    random-range-220-250: 50
+    random-range-151-250: 50
   speedrunner_choice_multiplier:
     # How many times more levels are required for speedrunner checks to be in logic
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3.
