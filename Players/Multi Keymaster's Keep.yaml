@@ -181,6 +181,7 @@ Keymaster's Keep:
     - Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)
     - Super Hexagon (PC + AND, IOS)
     - Super Smash Bros. for 3DS/Wii U (3DS + WIIU)
+    - Tomodachi Life (3DS)
     - Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)
     - Tower Unite (PC)
     - Vampire Survivors (PC + AND, IOS, PS4, PS5, SW, XONE, XSX)
@@ -217,6 +218,7 @@ Keymaster's Keep:
     - Stardew Valley (PC + PS4, PS5, SW, XONE, XSX, AND, IOS)
     - Super Hexagon (PC + AND, IOS)
     - Super Smash Bros. for 3DS/Wii U (3DS + WIIU)
+    - Tomodachi Life (3DS)
     - Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)
     - Tower Unite (PC)
     - Trivia Tricks (PC)
@@ -328,6 +330,8 @@ Keymaster's Keep:
     - Super Hexagon (PC + AND, IOS)
     # Game owned by Zeroman95.
     - Super Smash Bros. for 3DS/Wii U (3DS + WIIU)
+    # Game owned by Jack5. Implementation created by Jack5.
+    - Tomodachi Life (3DS)
     # Game owned by Jack5 and forbo.
     - Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX)
     # Game owned by Jack5, Zeroman95 and forbo.
@@ -525,6 +529,7 @@ Keymaster's Keep:
     - Write a game review in the Jack5 Steam Group
     - Zeroman95 can't find something
     - Zeroman95 complains about something
+    - Zeroman95 geeks out over something
     - Zeroman95 gets extremely frustrated
     - Zeroman95 laughs oddly deeply
     - Zeroman95 has trouble editing a spreadsheet/repository
@@ -1863,6 +1868,131 @@ Keymaster's Keep:
     # Zeroman95 is a 3DS player.
     3ds: 0
     wiiu: 50
+  ########################
+  # Tomodachi Life (3DS) #
+  ########################
+  # tomodachi_life_weights:
+    # The weights to use for Tomodachi Life objective types.
+    # Unchanged from the base configuration.
+  tomodachi_life_region:
+    # The region of the copy of Tomodachi Life being played. `europe`, `united_kingdom` and `australia` are synonymous with each-other, but affect the appearance and weight of items due to differing languages and currencies.
+    # Set to Australia.
+    north_america: 0
+    europe: 0
+    united_kingdom: 0
+    australia: 50
+    japan: 0
+    korea: 0
+  tomodachi_life_language:
+    # The preferred romanised language of Tomodachi Life objectives. Languages other than `north_america` will inherit `europe` where possible.
+    # Set to Europe.
+    north_america: 0
+    europe: 50
+    japan: 0
+    korea: 0
+  # tomodachi_life_special_characters:
+    # Whether to display the Japanese characters for Tomodachi Life items after their romanised names. Only applies if `tomodachi_life_region` is set to `japan`.
+    # Unchanged from the base configuration.
+  # tomodachi_life_trash:
+    # Whether to allow trash items (e.g. Mouldy bread) to appear as part of Tomodachi Life objectives.
+    # Unchanged from the base configuration.
+  tomodachi_life_male_miis:
+    # The list of male Miis living in the copy of Tomodachi Life to use for objectives that require a specific male Mii. If empty, specific male Mii objectives will not appear. Defaults to ["your favourite male Mii"].
+    # Add my Miis from Orwellian Island.
+    - AC Villager
+    - Adefire Wynness
+    - Al Yankovic
+    - Baldi Basics
+    - Bart Simpson
+    - Billy Mays
+    - Bonnie Bunny
+    - Chris Kringle
+    - Curly Stringer
+    - Daniel Mandel
+    - Danny DeVito
+    - Finn Mertens
+    - G Man
+    - Ganon Dragmire
+    - Geno Pinocchio
+    - Gordon Freeman
+    - Isaac Kleiner
+    - Jack Shringle (Jack6)
+    - Jack Springbell (Jack7)
+    - Jack String (Jack5½)
+    - Jack Stringer (Jack5)
+    - Jimmy Neutron
+    - Leon Dreyfus (Karl)
+    - Luigi Mario
+    - Mega Mind
+    - Miles Prower
+    - Mister Tricks
+    - Morty Smith
+    - Papyrus Gaster
+    - PaRappa Rapper
+    - Phineas Flynn
+    - Race Hedgehog
+    - Raymond Crossing
+    - Reggie Fils-Aimé
+    - Samurai Jack
+    - Snoopy Dogg
+    - Solid Snake
+    - Stanley \#
+    - Tahkaru Incaris (Hmm)
+    - The Boyfriend
+    - Toad Stocker
+    - Troy Averett (Tipper)
+    - Wakko Warner
+    - Wheatley Core
+    - William Afton
+    - Xavier Lisa
+  tomodachi_life_female_miis:
+    # The list of female Miis living in the copy of Tomodachi Life to use for objectives that require a specific female Mii. If empty, specific female Mii objectives will not appear. Defaults to ["your favourite female Mii"].
+    # Add my Miis from Orwellian Island.
+    - Alice Kingsley
+    - Alyx Vance
+    - Ayano Aishi
+    - Ayumu Kasuga (Osaka)
+    - Chara Dreemurr
+    - Colette Vance
+    - Coraline Heart
+    - CTN SERIAL (Cortana)
+    - Daisy Deiji-hime
+    - Daisy Stringer
+    - Dawn Hikari
+    - Elizabeth Layton
+    - Fenneko Fennec
+    - Flutter Shy
+    - Girlfriend Dearest
+    - Gladys Berejiklian
+    - Hatsune Miku
+    - Hermione Granger
+    - Hyper Blossom
+    - Isabelle Shizue
+    - Jaclyn Striegel
+    - Jana Mogal (Janal)
+    - Jasmine Agrabah
+    - Jenny Wakeman
+    - Judith Susan Blum (Judge Judy)
+    - Katie Stringer
+    - Komi Shouko
+    - Mabel Pines
+    - Michelle Obama
+    - Mona Lisa
+    - monika .chr
+    - Nana Climber
+    - Nikki Swapnote
+    - Peach Toadstool
+    - Pearl Squid
+    - Peppa Pig
+    - Phoebe Flame (Flame P.)
+    - Powered Buttercup
+    - Rosalina Star
+    - Samus Aran
+    - Snow White
+    - Splatoon Inkling
+    - Summer Smith
+    - Temmie Chang
+    - Turanga Leela
   #############################################################
   # Tony Hawk's Pro Skater 1+2 (PC + PS4, PS5, SW, XONE, XSX) #
   #############################################################
