@@ -9,8 +9,8 @@ requires:
     'Plants vs. Zombies: Replanted': 1.5.2
 
 'Plants vs. Zombies: Replanted':
-  progression_balancing: # Unchanged
-    normal: 99
+  progression_balancing: # Set to 0. Disabled.
+    0: 99
 
   accessibility: # Unchanged
     full: 99
