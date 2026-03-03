@@ -208,8 +208,8 @@ The Witness:
   trap_percentage:
     # Replaces junk items with traps, at the specified rate.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # I have substantially increased trap percentage to get bonked more often. Tested and noticeable within the given range.
-    random-range-50-90: 50
+    # I have substantially increased trap percentage to get bonked more often. Tested and noticeable within the given range. Unbearable at 88%.
+    random-range-50-80: 50
   trap_weights:
     # Specify the weights determining how many copies of each trap item will be in your itempool.
     # If you don't want a specific type of trap, you can set the weight for it to 0.
