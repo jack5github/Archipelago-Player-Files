@@ -8,8 +8,8 @@ requires:
   version: 0.6.6
 Grapple Dog:
   progression_balancing:
-    # Unchanged from the base configuration.
-    normal: 50
+    # Slightly increased in order to not get stuck as much.
+    60: 50
   accessibility:
     # Made minimal in order to make the game more varied, by removing random levels and abilities to unlock.
     minimal: 50
