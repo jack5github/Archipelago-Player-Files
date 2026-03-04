@@ -317,9 +317,9 @@ OpenRCT2:
     'on': 0
   forbid_high_construction:
     # Limits building to tree height. Unlockable puts an item in generation that disables the rule when found.
-    # Unchanged from the base configuration.
-    'off': 0
-    unlockable: 50
+    # Being unable to construct anything beyond tree height is incredibly annoying, and even makes certain scenarios impossible.
+    'off': 50
+    unlockable: 0
     'on': 0
   forbid_landscape_changes:
     # Forbids the landscape from being altered. Unlockable puts an item in generation that disables the rule when found.

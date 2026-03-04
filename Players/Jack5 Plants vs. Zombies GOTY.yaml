@@ -249,7 +249,7 @@ requires:
     # Zombie Bobsled Team cannot be randomised
     DolphinRider: 1
     JackInTheBox: 1
-    Balloon: 1
+    Balloon: 0 # Balloon Zombie is too strong to be randomised
     Digger: 0 # Digger Zombie is too strong to be randomised
     Pogo: 1
     # Zombie Yeti cannot be randomised
@@ -334,10 +334,10 @@ requires:
     'true': 50
   music_shuffle:
     # Randomises the music played during levels.
-    # Enabled for variety.
-    disabled: 0
+    # Disabled as the randomisation of music makes the tracks feel out of place and stale.
+    disabled: 50
     by_type: 0
-    by_level: 50
+    by_level: 0
   ######################
   # Other Item Options #
   ######################
