@@ -327,6 +327,8 @@ The Witness:
   start_location_hints: []
   exclude_locations:
     # Excluding the below locations does not prevent them from being accessed, they just aren't necessary for completion.
+    # UNDER NO CIRCUMSTANCES SHOULD I BE FORCED TO PLAY THE CHALLENGE. SCREW THAT. NOT DEALING WITH IT.
+    - Challenge
     # While the Keep is far away from everything else, not randomisable enough and sometimes annoying to have to complete due to needing to walk on light-up panels, there should at least be a chance that it is important.
     # - Keep
     # The same rationale as the Keep applies doubly so for the Shipwreck, as it is tied to the Keep.
