@@ -397,7 +397,7 @@ requires:
   start_location_hints: []
   exclude_locations:
     # ZomBotany 2 is a very difficult minigame.
-    - "Mini-games: ZomBotany 2"
+    - 'Mini-games: ZomBotany 2 (Clear)'
   priority_locations: []
   item_links: []
   plando_items: []
