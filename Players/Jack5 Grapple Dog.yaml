@@ -163,11 +163,8 @@ Grapple Dog:
   # Item & Location Options #
   ###########################
   local_items:
-    # The Cosmic Gadgets, which are required to play level 5-B, should be found within Grapple Dog.
-    - Gadget 1
-    - Gadget 2
-    - Gadget 3
-    - Gadget 4
+    # One of the Cosmic Gadgets, which are required to play level 5-B, should be found within Grapple Dog.
+    - Cosmic Phone
   non_local_items:
     # Level objects and movement abilities, which allow playing more complex levels, should be found in other games.
     - Balloons
@@ -177,6 +174,10 @@ Grapple Dog:
     - Climb
     - Slam
     - Swim
+    # The remaining Cosmic Gadgets should be found in other games.
+    - Cosmic Bulb
+    - Cosmic Disc
+    - Cosmic Battery
   start_inventory:
     # Attempting to play Grapple Dog without access to Wall Jump forces me to play Boomerang Bandit, which gets tiring when it is the start of every run, so I have made myself start with Wall Jump to try and allieviate this pressure.
     Wall Jump: 1
