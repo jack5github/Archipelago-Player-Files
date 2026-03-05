@@ -11,8 +11,8 @@ Grapple Dog:
     # Slightly increased in order to not get stuck as much.
     60: 50
   accessibility:
-    # Made minimal in order to make the game more varied, by removing random levels and abilities to unlock.
-    minimal: 50
+    # I tried to play this on `minimal` in order to make the game more varied, by removing random levels and abilities to unlock. Unfortunately, because Grapple Dog is already an APworld that struggles with being locked out of abilities, `minimal` makes things WAY WORSE. Therefore, this must remain at `full`.
+    full: 50
   boomerang_score_one:
     # What score is needed for Boomerang Bandit check 1. (0 disables the check)
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 999999.
