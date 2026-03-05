@@ -146,7 +146,7 @@ OpenRCT2:
     ghost_town: 2
     lucky_lake: 2
     rainbow_summit: 2
-    over_the_edge: 2 # Victoria Falls
+    over_the_edge: 0 # Victoria Falls (disabled, not enough space to build)
     great_wall_of_china: 5
     canyon_calamities: 2 # Grand Canyon
     sugarloaf_shores: 2 # Rio Carnival
@@ -458,23 +458,23 @@ OpenRCT2:
   furry_convention_traps:
     # When found, instantly hosts a furry convention in your park! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
-    # Disabled due to it requiring firing all newly spawned Entertainers, which I'd rather not do given my aversion to mouse clicking.
-    0: 50
+    # Adjusted from 5 to equate to the standard trap count of 20. Requires firing all newly spawned Entertainers by solving a quiz, rather than excessive mouse clicking.
+    6: 50
   bathroom_traps:
     # When found, instantly maxes out the bathroom stat of every guest! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Adjusted from 5 to equate to the standard trap count of 20.
-    8: 50
+    6: 50
   spam_traps:
     # When found, spams ads all over the screen! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Adjusted from 5 to equate to the standard trap count of 20.
-    8: 50
+    6: 50
   loan_shark_traps:
     # When found, increases your loan! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Adjusted from 5 to equate to the standard trap count of 20. This specific trap has been reduced in quantity because of the strain it puts on the game.
-    4: 50
+    3: 50
   all_rides_and_scenery_base:
     # Adds every ride and scenery pack in the base game to the item pool. This will make for a significantly longer scenario.
     # Unchanged from the base configuration.
