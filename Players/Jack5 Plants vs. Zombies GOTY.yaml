@@ -392,11 +392,19 @@ requires:
   ###########################
   local_items: []
   non_local_items: []
-  start_inventory: {}
+  start_inventory:
+    # Start with access to the Energy Link shop, as it may be holding important items.
+    # TODO: For Energy Link, withdrawing $100 requires 100 megajoules, yet playing PEAK is only able to produce around 50 kilojoules. Energy Link balancing options are necessary to rectify this discrepancy.
+    Crazy Dave's Car Keys: 1
   start_hints: []
   start_location_hints: []
   exclude_locations:
-    # ZomBotany 2 is a very difficult minigame.
+    # Last Stand and ZomBotany 2 are very difficult minigames.
+    - 'Mini-games: Last Stand (Flag #1)'
+    - 'Mini-games: Last Stand (Flag #2)'
+    - 'Mini-games: Last Stand (Flag #3)'
+    - 'Mini-games: Last Stand (Flag #4)'
+    - 'Mini-games: Last Stand (Clear)'
     - 'Mini-games: ZomBotany 2 (Clear)'
   priority_locations: []
   item_links: []
