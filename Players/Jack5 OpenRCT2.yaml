@@ -419,10 +419,10 @@ OpenRCT2:
     # All Awards will have a check behind every award in the game.
     # Positive will only place a check behind awards with positive attributes.
     # None will not place checks behind awards.
-    # Unchanged from the base configuration.
-    all: 50
+    # When I play RCT2, I don't think about getting awards, so it is better to just remove those checks.
+    all: 0
     positive: 0
-    none: 0
+    none: 50
   exclude_safest_park:
     # Exclude the Safest Park Award from having a check. This may be useful depending on deathlink settings.
     # In a multiworld, having this set to true is a must!
