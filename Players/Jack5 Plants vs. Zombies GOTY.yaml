@@ -137,8 +137,10 @@ requires:
     # A value of 0 disables the shop entirely.
     # A value of 64 has eight pages.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 64.
-    # Maximise the number of items possible to find in the multiworld.
-    64: 50
+    # The maximum of 64 items has caused issues in the past, due to me not having unlocked all of my shop pages. Because of this, I am limiting myself to between 4 and 6 pages.
+    32: 33 # 4 pages
+    40: 33 # 5 pages
+    48: 33 # 6 pages
   ########
   # Goal #
   ########
