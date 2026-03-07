@@ -179,10 +179,10 @@ PEAK:
     high: 0
   nap_time_trap_weight:
     # Likelihood of receiving a trap which applies a Drowsy Affliction to a player
-    # Night night!
-    none: 0
+    # This doesn't seem to do anything.
+    none: 50
     low: 0
-    medium: 50
+    medium: 0
     high: 0
   hungry_hungry_camper_trap_weight:
     # Likelihood of receiving a trap which applies a Hunger Affliction to a player
