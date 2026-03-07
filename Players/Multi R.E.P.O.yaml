@@ -97,10 +97,11 @@ R.E.P.O:
   ###########################
   # Item & Location Options #
   ###########################
-  # Unchanged from the base configuration.
   local_items: []
   non_local_items: []
-  start_inventory: {}
+  start_inventory:
+    # Start with Energy Crystals purchasable so that any unlocked guns can be reloaded.
+    Energy Crystal Unlock: 1
   start_hints: []
   start_location_hints: []
   exclude_locations: []
