@@ -8,7 +8,7 @@ requires:
 
 PEAK:
   progression_balancing:
-    random-high: 99 # set to random-high to give better items and to make the game go quicker.
+    random-range-50-80: 99 # set to random-range-50-80 to give better items and to make the game go quicker.
 
   accessibility:
     full: 99 # Unchanged
