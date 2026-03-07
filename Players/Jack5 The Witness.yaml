@@ -38,12 +38,12 @@ The Witness:
     # - Mountain Box Long: Input the long solution to the Mountaintop Box (requires Challenge Lasers).
     # - Panel Hunt: Solve a specific number of randomly selected panels before going to the secret ending in Tutorial.
     # It is important to note that while the Mountain Box requires Desert Laser to be redirected in Town for that laser to count, the laser locks on the Elevator and Challenge Timer panels do not.
-    # My preferred victory condition is to reach the earliest possible linear objective, which is Mountain Box Short. However, to increase variety, I have added an equal chance of the whole game needs to be completed (Elevator) and of Panel Hunt happening. No challenge goals are used.
-    elevator: 33
+    # My preferred victory condition is to reach the earliest possible linear objective, which is Mountain Box Short. However, to increase variety, I have added an equal chance of Panel Hunt happening. No challenge goals are used. I tried the objective that required me to beat the game, but that quickly turned out to be torture.
+    elevator: 0
     challenge: 0
-    mountain_box_short: 33
+    mountain_box_short: 50
     mountain_box_long: 0
-    panel_hunt: 33
+    panel_hunt: 50
   mountain_lasers:
     # Sets the number of lasers required to enter the Mountain.
     # If set to a higher number than 7, the mountaintop box will be slightly rotated to make it possible to solve without the hatch being opened.
@@ -208,8 +208,8 @@ The Witness:
   trap_percentage:
     # Replaces junk items with traps, at the specified rate.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # I have substantially increased trap percentage to get bonked more often. Tested and noticeable within the given range.
-    random-range-50-100: 50
+    # I have substantially increased trap percentage to get bonked more often. Tested and noticeable within the given range. Unbearable at 88%.
+    random-range-50-80: 50
   trap_weights:
     # Specify the weights determining how many copies of each trap item will be in your itempool.
     # If you don't want a specific type of trap, you can set the weight for it to 0.
@@ -327,6 +327,8 @@ The Witness:
   start_location_hints: []
   exclude_locations:
     # Excluding the below locations does not prevent them from being accessed, they just aren't necessary for completion.
+    # UNDER NO CIRCUMSTANCES SHOULD I BE FORCED TO PLAY THE CHALLENGE. SCREW THAT. NOT DEALING WITH IT.
+    - Challenge
     # While the Keep is far away from everything else, not randomisable enough and sometimes annoying to have to complete due to needing to walk on light-up panels, there should at least be a chance that it is important.
     # - Keep
     # The same rationale as the Keep applies doubly so for the Shipwreck, as it is tied to the Keep.

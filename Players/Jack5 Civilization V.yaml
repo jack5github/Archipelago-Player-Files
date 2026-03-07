@@ -5,7 +5,9 @@ description: |-
   This configuration for Sid Meier's Civilization V attempts to remedy the issues faced by locking away most of the game's features by keeping them stored locally, particularly eras and the ability to generate gold, which are the most troublesome things not to have. All traps are enabled for maximum carnage, but the chance is kept low due to their extreme consequences.
 game: Civilization V
 requires:
-  version: 0.6.4
+  version: 0.6.6
+  game:
+    Civilization V: 0.9.8
 Civilization V:
   ################
   # Game Options #
@@ -41,9 +43,52 @@ Civilization V:
     # Do not require ocean travel to win.
     'false': 50
     'true': 0
+  policy_cost_modifier:
+    # Multiplies the base cost of adopting social policies with the given percentage.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
+    # Has a chance to be approximately no more than 20% less than the default percentage.
+    random-range-70-90: 50
+  tech_cost_modifier:
+    # Multiplies the base cost of researching technologies with the given percentage.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
+    # Has a chance to be approximately no more than 20% more than the default percentage.
+    random-range-100-120: 50
   progressive_techs:
     # Use progressive technologies. Progressive technologies divides all 79 technologies (excl. Agriculture) into 11 categories. This makes the unlocking of technologies feel less chaotic and more streamlined compared to true random technologies. It also makes it far less likely to not have important early-era buildings in the mid to late game.
     # Allow research endeavours to be unlocked and be immediately useable, rather than being blocked by other locked research.
+    'false': 0
+    'true': 50
+  item_hints:
+    # Enable item hints for all locations. Options are:
+    # - full: Locations state their exact item.
+    # - classification: Locations state the classification of their item (progression; useful; filler; trap).
+    # - none: Locations do not state their item.
+    # Unchanged from the base configuration.
+    full: 0
+    classification: 50
+    none: 0
+  disguise_traps:
+    # Item classification hints will classify traps as progression items.
+    # Keep in mind that if item hints are set to 'full', the name of the trap is still visible and could potentially spoil you of the true nature of the item.
+    # Has no effect if item hints are set to 'none'.
+    # There is a 50-50 chance that this will happen.
+    'false': 50
+    'true': 50
+  satellites_meets_all:
+    # Receiving the Satellites technology will also meet all civilizations and city-states.
+    # Changed to `true` in order to reflect the standard behaviour of the game.
+    'false': 0
+    'true': 50
+  building_sanity:
+    # Add most standard buildings to the location pool. This adds 53 buildings to the location pool in total.
+    # Buildings that will not be added:
+    # - Palace
+    # - Courthouse
+    # - Any religious building (Cathedral; Monastery; Mosque; and Pagoda)
+    # - Any civilization-unique building (they count as the building they replace instead)
+    # - Any National Wonder (see National Wonder Sanity instead)
+    # - Any World Wonder (see World Wonder Sanity instead)
+    # Changed to `true`, as these buildings are commonly constructed in eery run.
     'false': 0
     'true': 50
   national_wonder_sanity:
@@ -54,7 +99,7 @@ Civilization V:
   world_wonder_sanity:
     # Add all world wonders to the location pool. This adds the 47 world wonders to the location pool, including the 3 ideology world wonders.
     # WARNING: This option is NOT suitable for syncs.
-    # Unchanged from the standard configuration.
+    # Unchanged from the base configuration.
     'false': 50
     'true': 0
   enable_traps:
@@ -78,13 +123,17 @@ Civilization V:
     # Trap - Minor Faith
     # Trap - Minor Gold
     # Trap - War
-    # I used to remove excessively damaging traps from the filler pool, but as they are so few and far between, they have been restored. I have to experience some punishment from other games, otherwise it feels like Civ V isn't impacted at all.
-    []
+    # Now that traps are not few and far between, I will be removing excessively damaging traps from the filler pool.
+    - Trap - All City Population -2
+    - Trap - Major Culture
+    - Trap - Major Faith
+    - Trap - Major Gold
+    - Trap - War
   trap_filler_chance:
     # The percent chance for a filler item to be a trap instead. Has no effect if traps are not enabled.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # Unchanged from the standard configuration.
-    random-range-5-100: 50
+    # Increased to a random range that is acceptable for most APworlds in my runs.
+    random-range-50-80: 50
   ###########################
   # Item & Location Options #
   ###########################
@@ -94,7 +143,7 @@ Civilization V:
   non_local_items:
     # Without eras being available in the game, it is impossible to proceed with unlocking all the policies. However, if they are local items, it is possible for them to become trapped behind nearly unattainable goals such as building world wonders. For that reason, I am relying on other players to unlock eras for me.
     - Era - Progressive
-  # All of the below are unchanged from the standard configuration.
+  # All of the below are unchanged from the base configuration.
   start_inventory: {}
   start_hints: []
   start_location_hints: []

@@ -8,7 +8,7 @@ requires:
 
 PEAK:
   progression_balancing:
-    random-high: 99 # set to random-high to give better items and to make the game go quicker.
+    random-range-50-80: 99 # set to random-range-50-80 to give better items and to make the game go quicker.
 
   accessibility:
     full: 99 # Unchanged
@@ -340,7 +340,46 @@ PEAK:
 
   start_location_hints: []
 
-  exclude_locations: []
+  exclude_locations:
+    # Several badges are not likely to get, or are made obsolete by the act of completing a summit, so they shouldn't contain any important unlocks.
+    - 24 Karat Badge # Difficult
+    - Advanced Mycology Badge # Unlikely
+    - Animal Serenading Badge # Unlikely
+    - Applied Esoterica Badge # Multiplayer
+    - Astronomy Badge # Unlikely
+    - Balloon Badge # Endgame
+    - Bing Bong Badge # Endgame
+    - Bookworm Badge # Unlikely
+    - Bouldering Badge # Unlikely
+    - Bundled Up Badge # Difficult
+    - Calcium Intake Badge # Unlikely
+    - Clutch Badge # Multiplayer
+    - Competitive Eating Badge # Difficult
+    - Cool Cucumber Badge # Difficult
+    - Cryptogastronomy Badge # Difficult
+    - Daredevil Badge # Unlikely
+    - Disaster Response Badge # Multiplayer
+    - Emergency Preparedness Badge # Multiplayer
+    - First Aid Badge # Multiplayer
+    - Foraging Badge # Unlikely
+    - Gourmand Badge # Difficult
+    - Happy Camper Badge # Multiplayer
+    # - Hasty Badge # Endgame (not in implementation)
+    - High Altitude Badge # Unlikely
+    - Knot Tying Badge # Unlikely
+    - Leave No Trace Badge # Endgame
+    - Lone Wolf Badge # Endgame
+    - Megaentomology Badge # Unlikely
+    - Mycoacrobatics Badge # Difficult
+    - Mycology Badge # Difficult
+    - Naturalist Badge # Endgame
+    - Needlepoint Badge # Difficult
+    - Participation Badge # Multiplayer
+    - Survivalist Badge # Endgame
+    - Tread Lightly Badge # Difficult
+    - Toxicology Badge # Unlikely
+    - Ultimate Badge # Multiplayer
+    - Undead Encounter Badge # Difficult
 
   priority_locations: []
 

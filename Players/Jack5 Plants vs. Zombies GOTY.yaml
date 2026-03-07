@@ -1,0 +1,423 @@
+﻿name: Jack5PVZ{NUMBER}
+description: |-
+  Jack5's Plants vs. Zombies: Game of the Year Edition player file
+
+  TODO: Add description
+game: 'Plants vs. Zombies: Replanted'
+requires:
+  version: 0.6.6
+  game:
+    'Plants vs. Zombies: Replanted': 1.5.2
+'Plants vs. Zombies: Replanted':
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    normal: 50
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+  ###############
+  # AP Settings #
+  ###############
+  goty_compatability_mode:
+    # Forces your options to comply with the restrictions of Victor Tran's GOTY client.
+    # Setting this to true will automatically adjust your options to ensure they remain compatible.
+    # Enabled.
+    'false': 0
+    'true': 50
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # I will have this set to true for now, but if the game proves to be too difficult, I will disable it.
+    'false': 0
+    'true': 50
+  ################
+  # Level Access #
+  ################
+  adventure_mode_progression:
+    # Determines the way in which you will progress through Adventure Mode.
+    # This setting only affects levels within Adventure Mode and has no impact on the other modes.
+    # - linear: Adventure Mode levels will be unlocked by clearing the previous level, just like in the vanilla game. Clearing an area will unlock the next one.
+    # - area_unlock_items: Locks each unique area (Night, Pool, Fog and Roof) of Adventure Mode behind a different item. You can swap between unlocked areas whenever you like, but the levels within each area must be cleared in order. (e.g. You must clear 5-1 before you can play 5-2)
+    # - open_area_unlock_items: After receiving an area unlock item, all levels within that area are instantly unlocked. (e.g. After unlocking Fog Access, you can instantly play 4-2 without playing 4-1)
+    # - level_items: You will start with the first five levels unlocked. Other levels are individually unlocked as separate items. If this option is enabled without enabling enough additional locations to place these items in, you will not be able to generate a world.
+    # Maximise the amount of unlocks possible to find in the multiworld.
+    linear: 0
+    area_unlock_items: 0
+    open_area_unlock_items: 0
+    level_items: 50
+  minigame_levels:
+    # Determines how Mini-game levels will be incorporated into the game.
+    # - off: Mini-game levels will not be included.
+    # - vanilla: After obtaining the "Mini-games" item, the first three Mini-game levels will be available to play. Clearing any Mini-game level will unlock a new one, in order.
+    # - randomised_order: After obtaining the "Mini-games" item, three random Mini-game levels will be available to play. Clearing any Mini-game level will unlock a new one, in a randomised order.
+    # - open: After obtaining the "Mini-games" item, you have instant access to all Mini-game levels.
+    # - level_items: Every individual Mini-game level is a separate item.
+    # Maximise the amount of unlocks possible to find in the multiworld.
+    'off': 0
+    vanilla: 0
+    randomised_order: 0
+    open: 0
+    level_items: 50
+  puzzle_levels:
+    # Determines how Puzzle levels will be incorporated into the game.
+    # - off: Puzzle levels will not be included.
+    # - vanilla: After obtaining the "Puzzle Mode" item, the first Vasebreaker level and the first I, Zombie level will be available to play. Clearing a Puzzle level will unlock the next one in its category, in order.
+    # - randomised_order: After obtaining the "Puzzle Mode" item, one random Vasebreaker level and one random I, Zombie level will be available to play. Clearing any Puzzle level will unlock the next one in its category, in a randomised order.
+    # - open: After obtaining the "Puzzle Mode" item, you have instant access to all Puzzle levels.
+    # - level_items: Every individual Puzzle level is a separate item.
+    # Maximise the amount of unlocks possible to find in the multiworld.
+    'off': 0
+    vanilla: 0
+    randomised_order: 0
+    open: 0
+    level_items: 50
+  survival_levels:
+    # Determines how Survival levels will be incorporated into the game.
+    # - off: Survival levels will not be included.
+    # - vanilla: After obtaining the "Survival Mode" item, the first three Survival levels will be available to play. Clearing any Survival level will unlock a new one, in order.
+    # - randomised_order: After obtaining the "Survival Mode" item, three random Survival levels will be available to play. Clearing any Survival level will unlock a new one, in a randomised order.
+    # - open: After obtaining the "Survival Mode" item, you have instant access to all Survival levels.
+    # - level_items: Every individual Survival level is a separate item.
+    # Survival levels are disabled as they are marathon levels.
+    'off': 50
+    vanilla: 0
+    randomised_order: 0
+    open: 0
+    level_items: 0
+  cloudy_day_levels:
+    # Determines how Cloudy Day levels will be incorporated into the game.
+    # These can be particularly challenging compared to the rest of the game.
+    # - off: Cloudy Day levels will not be included.
+    # - vanilla: After obtaining the "Cloudy Day" item, the first Cloudy Day level will be available to play. Clearing a Cloudy Day level will unlock the next one, in order.
+    # - randomised_order: After obtaining the "Cloudy Day" item, one random Cloudy Day level will be available to play. Clearing a Cloudy Day level will unlock a new one, in a randomised order.
+    # - open: After obtaining the "Cloudy Day" item, you have instant access to all Cloudy Day levels.
+    # - level_items: Every individual Cloudy Day level is a separate item.
+    # *This option is forced to "off" if goty_compatability_mode is enabled.
+    # This option is incompatible with the Game of the Year edition.
+    'off': 50
+    vanilla: 0
+    randomised_order: 0
+    open: 0
+    level_items: 0
+  bonus_levels:
+    # Determines how Bonus Levels (also known as Limbo Levels) will be incorporated into the game.
+    # - off: Bonus Levels will not be included.
+    # - vanilla: After obtaining the "Bonus Levels" item, you have instant access to all Bonus Levels.
+    # - level_items: Every individual Bonus Level is a separate item.
+    # *This option is forced to "off" if goty_compatability_mode is enabled.
+    # This option is incompatible with the Game of the Year edition.
+    'off': 50
+    vanilla: 0
+    level_items: 0
+  china_level:
+    # Determines how the China level ("The Great Wall") will be incorporated into the game.
+    # - off: The China level will not be included.
+    # - vanilla: The China level will be instantly accessible.
+    # - item: The China level will be locked behind an item.
+    # *This option is forced to "off" if goty_compatability_mode is enabled.
+    # This option is incompatible with the Game of the Year edition.
+    'off': 50
+    vanilla: 0
+    item: 0
+  ###################
+  # Extra Locations #
+  ###################
+  huge_wave_locations:
+    # Include locations for defeating Huge Waves prior to each level's Final Wave.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  shop_items:
+    # How many items to include in Crazy Dave's shop.
+    # You cannot access the shop until you obtain Crazy Dave's Car Keys.
+    # Each page contains eight items.
+    # Each page after the first must be unlocked by obtaining a "Twiddydinkies Restock" item.
+    # A value of 0 disables the shop entirely.
+    # A value of 64 has eight pages.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 64.
+    # The maximum of 64 items has caused issues in the past, due to me not having unlocked all of my shop pages. Because of this, I am limiting myself to between 4 and 6 pages.
+    32: 33 # 4 pages
+    40: 33 # 5 pages
+    48: 33 # 6 pages
+  ########
+  # Goal #
+  ########
+  adventure_levels_goal:
+    # Determines how many unique levels of Adventure Mode (if any) must be cleared before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 49.
+    # As I am starting out with Plants vs. Zombies, I have set this to a completely random number. The minimum is 8 based on my gameplay.
+    random-range-low-8-49: 50
+  adventure_areas_goal:
+    # Determines how many unique areas of Adventure Mode (if any) must be fully cleared before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5.
+    # Rather than using this option, I am using `adventure_levels_goal` instead.
+    0: 50
+  minigame_levels_goal:
+    # Determines how many unique Mini-game levels (if any) must be cleared before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
+    # Mini-games must be enabled in order for this setting to have any effect.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
+    # As I am starting out with Plants vs. Zombies, I have set this to a completely random number. The minimum is 3 based on my gameplay.
+    random-range-low-3-20: 50
+  puzzle_levels_goal:
+    # Determines how many unique Puzzle levels (if any) must be cleared before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
+    # Puzzle Levels must be enabled in order for this setting to have any effect.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 18.
+    # As I am starting out with Plants vs. Zombies, I have set this to a completely random number. The minimum and maximum of 6 and 12 based on my gameplay.
+    random-range-low-6-12: 50 # random value between 0 and 18
+  survival_levels_goal:
+    # Determines how many unique Survival levels (if any) must be cleared before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
+    # Survival Levels must be enabled in order for this setting to have any effect.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
+    # Irrelevant as I am not playing with Survival levels.
+    0: 50
+  cloudy_day_levels_goal:
+    # Determines how many unique Cloudy Day levels (if any) must be cleared before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
+    # Cloudy Day Levels must be enabled in order for this setting to have any effect.
+    # *This option is forced to 0 if goty_compatability_mode is enabled.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 12.
+    # This option is incompatible with the Game of the Year edition.
+    0: 50
+  bonus_levels_goal:
+    # Determines how many unique Bonus Levels (if any) must be cleared before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
+    # Bonus Levels must be enabled in order for this setting to have any effect.
+    # *This option is forced to 0 if goty_compatability_mode is enabled.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
+    # This option is incompatible with the Game of the Year edition.
+    0: 50
+  total_levels_goal:
+    # Determines how many unique levels (if any) must be cleared across all modes combined before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
+    # If this option is assigned a number higher than the number of available levels then it will be automatically reduced.
+    # *This option is limited to 97 if goty_compatability_mode is enabled.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 120.
+    # This option is not displayed in-game, making it difficult to tell when it is possible to play Level 5-10.
+    0: 50
+  fast_goal:
+    # If this option is enabled, you can instantly fight Dr. Zomboss in Roof: Level 5-10 as soon as your custom goal requirements are met.
+    # If this option is disabled, your custom goal requirements will be needed in addition to how your chosen adventure_mode_progression setting would typically lead to 5-10. (i.e. "linear" requires 5-9 to be completed; "area_unlock_items" requires Roof Access and 5-9 to be completed; "open_area_unlock_items" requires Roof Access)
+    # This option is forced on if adventure_mode_progression is set to "level_items".
+    # If you are playing with adventure_mode_progression set to "level_items", make sure you set at least one goal.
+    # If you have adventure_mode_progression set to "level_items" with all goals set to 0, you will be able to complete the game immediately!
+    # In other Archipelago games (e.g. The Witness), I enjoy being able to rush to the end and complete the final objective, so I am enabling this.
+    'false': 0
+    'true': 50
+  ################################
+  # Zombie & Plant Randomisation #
+  ################################
+  conveyor_randomisation:
+    # Randomises the Seed Packet types present on Conveyor Belt levels.
+    # Enabled for variety.
+    'false': 0
+    'true': 50
+  zombie_randomisation:
+    # Randomises the Zombie types included in each level.
+    # Enabled, now that the `randomised_zombies` option has been adjusted.
+    'false': 0
+    'true': 50
+  zombie_randomised_modes:
+    # Determines which levels will have their Zombies randomised.
+    # This setting only matters if zombie_randomisation is set to true.
+    # If zombie_randomisation is set to false, this option will be ignored and no Zombies will be randomised.
+    # Any mode set to 1 will feature levels with randomised selection of Zombies.
+    # Any mode set to 0 will contain its usual Zombies from the original game.
+    # Unchanged from the base configuration.
+    Adventure: 1
+    Bonus Levels: 1
+    Cloudy Day: 0
+    Mini-games: 1
+    Survival: 1
+  randomised_zombies:
+    # Determines which Zombie types will be included in randomisation.
+    # This setting only matters if zombie_randomisation is set to true.
+    # If zombie_randomisation is set to false, this option will be ignored and no Zombies will be randomised.
+    # Any Zombie type set to 1 will be included in randomisation and can appear in randomly selected levels.
+    # Any Zombie type set to 0 will stay in its usual level(s) and will not be randomised to any others.
+    # *Trash Can Zombie is forced to 0 if goty_compatability_mode is enabled.
+    # https://plantsvszombies.wiki.gg/wiki/Zombies_(PvZ)
+    # Unchanged from the base configuration.
+    # Zombie cannot be randomised
+    # Flag Zombie cannot be randomised
+    Conehead: 1
+    Polevaulter: 1
+    Buckethead: 1
+    Newspaper: 1
+    ScreenDoor: 0 # Screen Door Zombie is too strong to be randomised
+    Football: 0 # Football Zombie is too strong to be randomised
+    Dancer: 1
+    # Ducky Tube Zombie cannot be randomised
+    Snorkel: 1
+    Zomboni: 0 # Zomboni is too strong to be randomised
+    # Zombie Bobsled Team cannot be randomised
+    DolphinRider: 1
+    JackInTheBox: 1
+    Balloon: 0 # Balloon Zombie is too strong to be randomised
+    Digger: 0 # Digger Zombie is too strong to be randomised
+    Pogo: 1
+    # Zombie Yeti cannot be randomised
+    Bungee: 1
+    Ladder: 1
+    Catapult: 0 # Catapult Zombie is too strong to be randomised
+    Gargantuar: 0 # Gargantuar is too strong to be randomised
+    # Imp cannot be randomised
+    # Dr. Zomboss cannot be randomised
+    TrashCan: 0
+    # Target Zombie cannot be randomised
+    PeaHead: 0
+    WallnutHead: 0
+    GatlingHead: 0
+    TallnutHead: 0
+    JalapenoHead: 0
+    SquashHead: 0
+    # Giga-Football Zombie cannot be randomised
+    GigaGargantuar: 0
+    # Catapult Baseball Zombie cannot be randomised
+    # Baseball Zombie cannot be randomised
+  plant_stat_randomisation:
+    # Randomises the stats of each Plant in the game. 
+    # This affects Sun Cost, Packet Refresh Time, Toughness, Firing Rate and Projectile Damage.
+    # Plants should remain relatively balanced while still providing variety.
+    # While this affects the majority of levels in the game, it doesn't affect Puzzle levels or certain Mini-game levels.
+    # It only affects Conveyor Belt levels if conveyor_randomisation is set to true.
+    # This is a brand new option that has not yet been heavily tested.
+    # It may be unwise to bring it to group multiworlds in its current state.
+    # Enable at your own risk, but if you're up to the challenge, let me know how you get on!
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  maintain_vanilla_projectile_strength:
+    # Prevents Plant Stat Randomisation from affecting the damage of projectiles.
+    # If this option is enabled, then projectiles will maintain their original damage values.
+    # This will result in plants that play much more similarly to their standard versions.
+    # This option only matters if plant_stat_randomisation is set to true.
+    # If plant_stat_randomisation is set to false then projectiles will provide their usual damage and this option is irrelevant.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  ###################
+  # Gameplay Tweaks #
+  ###################
+  easy_upgrade_plants:
+    # Allows you to place upgrade plants without requiring their base form.
+    # For example, Gatling Pea could be placed straight onto the lawn without requiring a Repeater first.
+    # Enabling this option increases the Sun prices of Upgrade Plants accordingly.
+    # Enabled so that I can place these plants no matter what.
+    'false': 0
+    'true': 50
+  imitater_behaviour:
+    # Determines which seeds can be copied by Imitater.
+    # - normal: Imitater can copy the seeds of plants you have already unlocked.
+    # - open: Imitater can copy any seed in the game - even the seeds of plants you haven't unlocked yet.
+    # Set to open so that the Imitater is more useful.
+    normal: 0
+    open: 50
+  starting_sun_upgrades:
+    # Adds "Additional Starting Sun" items to the item pool.
+    # Obtaining an "Additional Starting Sun" item increases the amount of Sun you will start a level with.
+    # - off: No "Additional Starting Sun" items will be generated.
+    # - 5_sun_each: Each "Additional Starting Sun" item you obtain will give you 5 additional Sun at the beginning of each level.
+    # - 25_sun_each: Each "Additional Starting Sun" item you obtain will give you 25 additional Sun at the beginning of each level.
+    # - 50_sun_each: Each "Additional Starting Sun" item you obtain will give you 50 additional Sun at the beginning of each level.
+    # Enabled, but in its weakest form for testing.
+    'off': 0
+    5_sun_each: 50
+    25_sun_each: 0
+    50_sun_each: 0
+  maximum_sun_upgrade:
+    # Determines the maximum amount of additional Sun that "Additional Starting Sun" items can provide.
+    # Increasing this number results in more "Additional Starting Sun" items being generated.
+    # You can define additional values between the minimum and maximum values. Minimum value is 50, maximum value is 150.
+    # Unchanged from the base configuration.
+    50: 50
+  disable_storm_flashes:
+    # Disables the storm flashes in "Fog: Level 4-10" and "Dark Stormy Night".
+    # Storm flashes are disabled for accessibility.
+    'false': 0
+    'true': 50
+  music_shuffle:
+    # Randomises the music played during levels.
+    # Disabled as the randomisation of music makes the tracks feel out of place and stale.
+    disabled: 50
+    by_type: 0
+    by_level: 0
+  ######################
+  # Other Item Options #
+  ######################
+  starting_plants:
+    # How many unique plants to begin the game with.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 49.
+    # Give a random number of plants to start with.
+    random-range-3-5: 50
+  starting_seed_slots:
+    # How many seed slots to begin the game with.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
+    # Allowed to go lower than the normal.
+    random-range-4-6: 50
+  early_sunflower:
+    # Attempts to place Sunflower, Sun-shroom and Coffee Bean in the first sphere, making for a more beginner-friendly game.
+    # Enabled as I am not an expert.
+    'false': 0
+    'true': 50
+  early_shovel:
+    # Attempts to place the Shovel in the first sphere.
+    # Enabled for I have seen the anguish that not having the Shovel causes Zeroman95.
+    'false': 0
+    'true': 50
+  #########
+  # Traps #
+  #########
+  trap_percentage:
+    # Determines the percentage of filler items that will be replaced with trap items.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Increased to a random percentage between 50% and 80% baesd on testing.
+    random-range-50-80: 50
+  mower_deploy_trap_weight:
+    # This trap instantly activates all Lawn Mowers on the lawn.
+    # A higher number means that you are more likely to see the given trap. A value of 0 means the trap will not appear.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    50: 50
+  seed_packet_cooldown_trap_weight:
+    # This trap instantly puts all Seed Packets on cooldown.
+    # A higher number means that you are more likely to see the given trap. A value of 0 means the trap will not appear.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # This option is incompatible with the Game of the Year edition.
+    0: 50
+  zombie_ambush_trap_weight:
+    # This trap instantly causes an ambush of Zombies.
+    # A higher number means that you are more likely to see the given trap. A value of 0 means the trap will not appear.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    50: 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items: []
+  start_inventory:
+    # Start with access to the Energy Link shop, as it may be holding important items.
+    # TODO: For Energy Link, withdrawing $100 requires 100 megajoules, yet playing PEAK is only able to produce around 50 kilojoules. Energy Link balancing options are necessary to rectify this discrepancy.
+    Crazy Dave's Car Keys: 1
+    # Start with the Almanac, which explains how all unlocked plants and zombies behave.
+    Almanac: 1
+    # Start with cheat items that have no effect on gameplay so they do not appear in-game.
+    Mustache Mode: 1
+    Future Zombies Mode: 1
+    Tricked Out Mode: 1
+    Daisies Mode: 1
+    Pinata Mode: 1
+    Alternate Brains Sound: 1
+    Dancing Zombies Mode: 1
+  start_hints: []
+  start_location_hints: []
+  exclude_locations:
+    # Last Stand and ZomBotany 2 are very difficult minigames.
+    - 'Mini-games: Last Stand (Flag #1)'
+    - 'Mini-games: Last Stand (Flag #2)'
+    - 'Mini-games: Last Stand (Flag #3)'
+    - 'Mini-games: Last Stand (Flag #4)'
+    - 'Mini-games: Last Stand (Clear)'
+    - 'Mini-games: ZomBotany 2 (Clear)'
+  priority_locations: []
+  item_links: []
+  plando_items: []

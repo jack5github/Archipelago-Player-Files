@@ -1,0 +1,46 @@
+﻿name: ZeromanElement
+
+description: Zeroman95s Elementipelago
+
+game: Elementipelago
+requires:
+  version: 0.6.6
+
+Elementipelago:
+  progression_balancing: # Unchanged
+    normal: 99
+
+  accessibility: # Unchanged
+    full: 50
+    minimal: 0
+
+  element_amount: # Changed to Half
+    50: 99
+
+  filler_amount: # Changed to Half
+    50: 99
+
+  intermediate_amount: # Changed to Half
+    50: 99
+
+  compounds_are_ingredients: # Unchanged
+    'false': 50
+    'true': 0
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []

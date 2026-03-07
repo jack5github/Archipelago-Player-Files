@@ -9,9 +9,9 @@ requires:
 Grapple Dog:
   progression_balancing:
     # Unchanged from the base configuration.
-    random-range-0-99: 50
+    random-range-60-99: 50
   accessibility:
-    # Unchanged from the base configuration.
+    # I tried to play this on `minimal` in order to make the game more varied, by removing random levels and abilities to unlock. Unfortunately, because Grapple Dog is already an APworld that struggles with being locked out of abilities, `minimal` makes things WAY WORSE. Therefore, this must remain at `full`.
     full: 50
     minimal: 50
   boomerang_score_one:
@@ -163,41 +163,37 @@ Grapple Dog:
   ###########################
   # Item & Location Options #
   ###########################
-  local_items:
-    # The Cosmic Gadgets, which are required to play level 5-B, should be found within Grapple Dog.
-    - Gadget 1
-    - Gadget 2
-    - Gadget 3
-    - Gadget 4
+  local_items: []
   non_local_items:
     # Level objects and movement abilities, which allow playing more complex levels, should be found in other games.
-    - Balloons
-    - Bounce Pads
-    - Cannons
-    - Carrots
-    - Climb
-    - Slam
-    - Swim
-  start_inventory: {}
+    - Features
+    # The remaining Cosmic Gadgets (not handled by `plando_items`) should be found in other games.
+    - Gadgets
+  start_inventory:
     # Attempting to play Grapple Dog without access to Wall Jump forces me to play Boomerang Bandit, which gets tiring when it is the start of every run, so I have made myself start with Wall Jump to try and allieviate this pressure.
     # Wall Jump: 1
   start_hints: []
   start_location_hints: []
   exclude_locations:
-    # Prevent any incidental actions from unlocking important items. Boomerang Bandit high scores must not be made unimportant, because otherwise, the generation frequently fails, citing needing 3 more important locations.
-    # - Boomerang Bandit (Score 10000)
-    # - Boomerang Bandit (Score 20000)
-    # - Boomerang Bandit (Score 30000)
+    # Prevent any incidental actions and regions from unlocking important items.
+    - Boomerang Bandit
     - Have A Nap
     - Pet The Dog
     - Read The Credits
+    # Bonus 5-4 and 6-2 are incredibly annoying levels that always seems to get picked by the randomiser, so ensure they contain unimportant items.
+    - 'Bonus 5-4: Gem 1'
+    - 'Bonus 5-4: Gem 2'
+    - 'Bonus 5-4: Gem 3'
+    - 'Bonus 6-2: Gem 1'
+    - 'Bonus 6-2: Gem 2'
+    - 'Bonus 6-2: Gem 3'
   priority_locations: []
   item_links: []
   # TODO: Use `plando_items` to lock difficult levels behind hard-to-achieve criteria in others so that I am more likely to have enough health to beat them by then.
   plando_items:
-    # Bonus 5-4 is an incredibly annoying level that always seems to get picked by the randomiser, so ensure it contains Gems which by their nature are not important.
+    # Place one Cosmic Gadget in the world, found upon completing a random level.
     - items:
-        Gem: 3
+        Gadgets: 1
       locations:
-        - Bonus 5-4
+        - Completions
       force: false

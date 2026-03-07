@@ -147,7 +147,7 @@ OpenRCT2:
     ghost_town: 2
     lucky_lake: 2
     rainbow_summit: 2
-    over_the_edge: 2 # Victoria Falls
+    over_the_edge: 0 # Victoria Falls (disabled, not enough space to build)
     great_wall_of_china: 5
     canyon_calamities: 2 # Grand Canyon
     sugarloaf_shores: 2 # Rio Carnival
@@ -318,9 +318,9 @@ OpenRCT2:
     'on': 0
   forbid_high_construction:
     # Limits building to tree height. Unlockable puts an item in generation that disables the rule when found.
-    # Unchanged from the base configuration.
-    'off': 0
-    unlockable: 50
+    # Being unable to construct anything beyond tree height is incredibly annoying, and even makes certain scenarios impossible.
+    'off': 50
+    unlockable: 0
     'on': 0
   forbid_landscape_changes:
     # Forbids the landscape from being altered. Unlockable puts an item in generation that disables the rule when found.
@@ -420,10 +420,10 @@ OpenRCT2:
     # All Awards will have a check behind every award in the game.
     # Positive will only place a check behind awards with positive attributes.
     # None will not place checks behind awards.
-    # Unchanged from the base configuration.
-    all: 50
+    # When I play RCT2, I don't think about getting awards, so it is better to just remove those checks.
+    all: 0
     positive: 0
-    none: 0
+    none: 50
   exclude_safest_park:
     # Exclude the Safest Park Award from having a check. This may be useful depending on deathlink settings.
     # In a multiworld, having this set to true is a must!
@@ -459,8 +459,8 @@ OpenRCT2:
   furry_convention_traps:
     # When found, instantly hosts a furry convention in your park! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
-    # Disabled due to it requiring firing all newly spawned Entertainers, which I'd rather not do given my aversion to mouse clicking.
-    random-range-0-10: 50
+    # Adjusted from 5 to equate to the standard trap count of 20. Requires firing all newly spawned Entertainers by solving a quiz, rather than excessive mouse clicking.
+    random-range-0-16: 50
   bathroom_traps:
     # When found, instantly maxes out the bathroom stat of every guest! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
