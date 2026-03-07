@@ -137,8 +137,10 @@ requires:
     # A value of 0 disables the shop entirely.
     # A value of 64 has eight pages.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 64.
-    # Maximise the number of items possible to find in the multiworld.
-    64: 50
+    # The maximum of 64 items has caused issues in the past, due to me not having unlocked all of my shop pages. Because of this, I am limiting myself to between 4 and 6 pages.
+    32: 33 # 4 pages
+    40: 33 # 5 pages
+    48: 33 # 6 pages
   ########
   # Goal #
   ########
@@ -249,7 +251,7 @@ requires:
     # Zombie Bobsled Team cannot be randomised
     DolphinRider: 1
     JackInTheBox: 1
-    Balloon: 1
+    Balloon: 0 # Balloon Zombie is too strong to be randomised
     Digger: 0 # Digger Zombie is too strong to be randomised
     Pogo: 1
     # Zombie Yeti cannot be randomised
@@ -334,10 +336,10 @@ requires:
     'true': 50
   music_shuffle:
     # Randomises the music played during levels.
-    # Enabled for variety.
-    disabled: 0
+    # Disabled as the randomisation of music makes the tracks feel out of place and stale.
+    disabled: 50
     by_type: 0
-    by_level: 50
+    by_level: 0
   ######################
   # Other Item Options #
   ######################
@@ -392,11 +394,29 @@ requires:
   ###########################
   local_items: []
   non_local_items: []
-  start_inventory: {}
+  start_inventory:
+    # Start with access to the Energy Link shop, as it may be holding important items.
+    # TODO: For Energy Link, withdrawing $100 requires 100 megajoules, yet playing PEAK is only able to produce around 50 kilojoules. Energy Link balancing options are necessary to rectify this discrepancy.
+    Crazy Dave's Car Keys: 1
+    # Start with the Almanac, which explains how all unlocked plants and zombies behave.
+    Almanac: 1
+    # Start with cheat items that have no effect on gameplay so they do not appear in-game.
+    Mustache Mode: 1
+    Future Zombies Mode: 1
+    Tricked Out Mode: 1
+    Daisies Mode: 1
+    Pinata Mode: 1
+    Alternate Brains Sound: 1
+    Dancing Zombies Mode: 1
   start_hints: []
   start_location_hints: []
   exclude_locations:
-    # ZomBotany 2 is a very difficult minigame.
+    # Last Stand and ZomBotany 2 are very difficult minigames.
+    - 'Mini-games: Last Stand (Flag #1)'
+    - 'Mini-games: Last Stand (Flag #2)'
+    - 'Mini-games: Last Stand (Flag #3)'
+    - 'Mini-games: Last Stand (Flag #4)'
+    - 'Mini-games: Last Stand (Clear)'
     - 'Mini-games: ZomBotany 2 (Clear)'
   priority_locations: []
   item_links: []
