@@ -164,8 +164,8 @@ requires:
     # Determines how many unique Puzzle levels (if any) must be cleared before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
     # Puzzle Levels must be enabled in order for this setting to have any effect.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 18.
-    # As I am starting out with Plants vs. Zombies, I have set this to a completely random number. The minimum is 6 based on my gameplay.
-    random-range-low-6-18: 50 # random value between 0 and 18
+    # As I am starting out with Plants vs. Zombies, I have set this to a completely random number. The minimum and maximum of 6 and 12 based on my gameplay.
+    random-range-low-6-12: 50 # random value between 0 and 18
   survival_levels_goal:
     # Determines how many unique Survival levels (if any) must be cleared before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
     # Survival Levels must be enabled in order for this setting to have any effect.
