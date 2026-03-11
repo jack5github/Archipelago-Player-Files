@@ -98,8 +98,8 @@ PEAK:
   trap_percentage:
     # Replace a percentage of junk items in the item pool with random traps
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # Tested and noticeable within the given range.
-    random-range-20-80: 50
+    # Tested and noticeable within the given range. Increased to a minimum of 50% to be in line with other player files.
+    random-range-50-80: 50
   instant_death_trap_weight:
     # Likelihood of receiving a trap which instantly kills a player
     # Absolutely not.
