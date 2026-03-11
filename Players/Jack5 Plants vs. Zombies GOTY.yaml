@@ -32,6 +32,11 @@ requires:
     # I will have this set to true for now, but if the game proves to be too difficult, I will disable it.
     'false': 0
     'true': 50
+  energy_link:
+    # Adds an "Energy Link" button, allowing you to deposit and withdraw money via Energy Link.
+    # I am shocked that I somehow didn't have this enabled.
+    'false': 0
+    'true': 50
   ################
   # Level Access #
   ################
@@ -193,6 +198,19 @@ requires:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 120.
     # This option is not displayed in-game, making it difficult to tell when it is possible to play Level 5-10.
     0: 50
+  taco_hunt_items:
+    # Determines the total number of Taco items to be included in the item pool.
+    # If necessary, this number will be automatically reduced to match the amount of remaining locations.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 30.
+    # Similar to my The Witness config, there is a 50% chance that 50 Tacos will be present in the item pool.
+    0: 50
+    50: 50
+  taco_hunt_percentage:
+    # Determines what percentage of Taco items must be obtained before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
+    # *This option requires that taco_hunt_items be set to a number higher than 0.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Similar to my The Witness config, 50% of all Tacos must be obtained in order to play the final battle.
+    50: 50
   fast_goal:
     # If this option is enabled, you can instantly fight Dr. Zomboss in Roof: Level 5-10 as soon as your custom goal requirements are met.
     # If this option is disabled, your custom goal requirements will be needed in addition to how your chosen adventure_mode_progression setting would typically lead to 5-10. (i.e. "linear" requires 5-9 to be completed; "area_unlock_items" requires Roof Access and 5-9 to be completed; "open_area_unlock_items" requires Roof Access)
@@ -311,6 +329,29 @@ requires:
     # Set to open so that the Imitater is more useful.
     normal: 0
     open: 50
+  disable_storm_flashes:
+    # Disables the storm flashes in "Fog: Level 4-10" and "Dark Stormy Night".
+    # Storm flashes are disabled for accessibility.
+    'false': 0
+    'true': 50
+  music_shuffle:
+    # Randomises the music played during levels.
+    # Disabled as the randomisation of music makes the tracks feel out of place and stale.
+    disabled: 50
+    by_type: 0
+    by_level: 0
+  ###################
+  # Item Generation #
+  ###################
+  zen_garden_items:
+    # Determines whether to include Zen Garden items.
+    # Enabling Zen Garden items adds the following useful items to your game: Zen Garden, Phonograph, Gardening Glove, Wheelbarrow, Stinky and Gold Watering Can.
+    # It also adds the following filler items: Fertilizer, Bug Spray, Chocolate and Tree Food.
+    # Fertilizer, Bug Spray and Tree Food will be infinitely repurchaseable in Crazy Dave's shop.
+    # There are no AP locations related to Zen Garden, but growing your Tree of Wisdom can provide item hints.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
   starting_sun_upgrades:
     # Adds "Additional Starting Sun" items to the item pool.
     # Obtaining an "Additional Starting Sun" item increases the amount of Sun you will start a level with.
@@ -329,20 +370,18 @@ requires:
     # You can define additional values between the minimum and maximum values. Minimum value is 50, maximum value is 150.
     # Unchanged from the base configuration.
     50: 50
-  disable_storm_flashes:
-    # Disables the storm flashes in "Fog: Level 4-10" and "Dark Stormy Night".
-    # Storm flashes are disabled for accessibility.
-    'false': 0
-    'true': 50
-  music_shuffle:
-    # Randomises the music played during levels.
-    # Disabled as the randomisation of music makes the tracks feel out of place and stale.
-    disabled: 50
-    by_type: 0
-    by_level: 0
-  ######################
-  # Other Item Options #
-  ######################
+  mower_reward_upgrades:
+    # Determines the number of "Mower Reward Upgrade" items to include in the item pool.
+    # Obtaining an "Mower Reward Upgrade" item increases the number of Gold Coins you receive for each remaining Lawn Mower at the end of a level.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5.
+    # I'm not sure how much of a reward these upgrades give, so for now, I've set it to be positive but completely random.
+    random-range-1-5: 50
+  random_seed_filler:
+    # Determines whether to include "Random Seed Packet" filler items.
+    # This item drops a random Seed Packet onto the lawn which can be freely picked up and planted, just like the ones you see in Vasebreaker.
+    # Considering that there are other important filler items, and how difficult it is to place seed packets at high game speeds, this is being left at false.
+    'false': 50
+    'true': 0
   starting_plants:
     # How many unique plants to begin the game with.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 49.
@@ -361,6 +400,11 @@ requires:
   early_shovel:
     # Attempts to place the Shovel in the first sphere.
     # Enabled for I have seen the anguish that not having the Shovel causes Zeroman95.
+    'false': 0
+    'true': 50
+  early_zen_garden:
+    # Attempts to place Zen Garden in the first sphere.
+    # Enabled as I would like to be able to access the Tree of Wisdom.
     'false': 0
     'true': 50
   #########
