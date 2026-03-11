@@ -179,7 +179,14 @@ Grapple Dog:
     - Have A Nap
     - Pet The Dog
     - Read The Credits
-    # Bonus 5-4 and 6-2 are incredibly annoying levels that always seems to get picked by the randomiser, so ensure they contain unimportant items.
+    # Level 6-2, Bonus 5-4 and Bonus 6-2 are incredibly annoying levels that always seems to get picked by the randomiser, so ensure they contain unimportant items.
+    - 'Level 6-2: Gem 1'
+    - 'Level 6-2: Gem 2'
+    - 'Level 6-2: Gem 3'
+    - 'Level 6-2: Gem 4'
+    - 'Level 6-2: Gem 5'
+    - 'Level 6-2: Fruit Gem 1'
+    - 'Level 6-2: Fruit Gem 2'
     - 'Bonus 5-4: Gem 1'
     - 'Bonus 5-4: Gem 2'
     - 'Bonus 5-4: Gem 3'
