@@ -1,98 +1,106 @@
 name: ZeromanPVZ{NUMBER}
 
-description: 'Zeroman95 Plants Vs. Zombies Game of the Year YAML'
+description: 'Zeroman95 Plants Vs. Zombies Game of the YEar YAML'
 
-game: 'Plants vs. Zombies: Replanted'
+game: Plants vs. Zombies
 requires:
   version: 0.6.6
-  game:
-    'Plants vs. Zombies: Replanted': 1.5.2
 
-'Plants vs. Zombies: Replanted':
-  progression_balancing: # Set to 0. Disabled.
+Plants vs. Zombies:
+  progression_balancing:
     0: 99
 
-  accessibility: # Unchanged
+  accessibility:
     full: 99
 
-  goty_compatability_mode: # Must be on to work with GOTY Edition.
+  goty_compatability_mode:
     'false': 0
     'true': 50
 
-  death_link: # Turned on for True Experience.
+  death_link:
     'false': 0
     'true': 50
 
-  adventure_mode_progression: # Picked level_items meaning all levels are an item in the pool.
-    level_items: 99
-
-  minigame_levels: # all Minigame levels are items just like the adventure mode levels.
-    level_items: 99
-
-  puzzle_levels: # Just like the other two. All Puzzle levels are Items.
-    level_items: 99
-
-  survival_levels: # Same as other three above.
-    level_items: 99
-
-  cloudy_day_levels: # Cloudy Day Levels do not exist in GOTY Edition so off by default.
-    'off': 99
-
-  bonus_levels: # Same as Cloudy Day Levels as it does not exist in GOTY Edition.
-    'off': 99
-
-  china_level: # This also does not exist in GOTY Edition.
-    'off': 99
-
-  huge_wave_locations: # Unchanged
+  energy_link:
     'false': 0
     'true': 50
 
-  shop_items: # Set to 64 to have EIGHT Pages filled with Shop Items when the Shop Keys are found.
+  adventure_mode_progression:
+    level_items: 99
+
+  minigame_levels:
+    level_items: 99
+
+  puzzle_levels:
+    level_items: 99
+
+  survival_levels:
+    level_items: 99
+
+  cloudy_day_levels:
+    'off': 99
+
+  bonus_levels:
+    'off': 99
+
+  china_level:
+    'off': 99
+
+  huge_wave_locations:
+    'false': 0
+    'true': 50
+
+  shop_items:
     64: 99
 
-  adventure_levels_goal: # Lowered to HALF. All 49 Adventure levels takes too long along with everything else.
+  adventure_levels_goal:
     random-range-0-24: 99
 
-  adventure_areas_goal: # changed to 0 to never have to complete a whole area.
+  adventure_areas_goal:
     0: 99
 
-  minigame_levels_goal: # Random amount required.
+  minigame_levels_goal:
     random-high: 99
 
-  puzzle_levels_goal: # Same as above.
+  puzzle_levels_goal:
     random-high: 99
 
-  survival_levels_goal: # Same as above.
+  survival_levels_goal:
     random-high: 99
 
-  cloudy_day_levels_goal: # Unchanged
+  cloudy_day_levels_goal:
     0: 99
 
-  bonus_levels_goal: # Unchanged
+  bonus_levels_goal:
     0: 99
 
-  total_levels_goal: # Pick a random amount of levels at a high amount.
-    random-high: 99
+  total_levels_goal:
+    0: 50
 
-  fast_goal: # Option is set forced on if level_items is selected for adventure levels.
+  taco_hunt_items:
+    0: 99
+
+  taco_hunt_percentage:
+    100: 99
+
+  fast_goal:
     'false': 0
     'true': 50
 
-  conveyor_randomisation: # THIS is awesome. Set that on.
+  conveyor_randomisation:
     'false': 0
     'true': 50
 
-  zombie_randomisation: # This is also AWESOME.
+  zombie_randomisation:
     'false': 0
     'true': 50
 
-  zombie_randomised_modes: # Removed Randomised mode for Survival since that does randomise itself.
+  zombie_randomised_modes:
     Adventure: 1
     Mini-games: 1
     Survival: 0
 
-  randomised_zombies: # Every Zombie is on except Trash Can Zombie because Trash Can Zombie is not in GOTY.
+  randomised_zombies:
     Balloon: 1
     Buckethead: 1
     Bungee: 1
@@ -120,68 +128,83 @@ requires:
     WallnutHead: 1
     Zomboni: 1
 
-  plant_stat_randomisation: # Unchanged
+  plant_stat_randomisation:
     'false': 50
     'true': 0
 
-  maintain_vanilla_projectile_strength: # Unchanged
+  maintain_vanilla_projectile_strength:
     'false': 50
     'true': 0
 
-  easy_upgrade_plants: # Changed because you don't get many plants early on.
+  easy_upgrade_plants:
     'false': 0
     'true': 50
 
-  imitater_behaviour: # Set to Open to allow ANY Plant even if I don't have it.
+  imitater_behaviour:
     normal: 0
     open: 50
 
-  starting_sun_upgrades: # set to 5 sun each.
+  disable_storm_flashes:
+    'false': 50
+    'true': 50
+
+  music_shuffle:
+    disabled: 50
+    by_type: 0
+    by_level: 0
+
+  zen_garden_items:
+    'false': 0
+    'true': 50
+
+  starting_sun_upgrades:
     'off': 0
     5_sun_each: 99
     25_sun_each: 0
     50_sun_each: 0
 
-  maximum_sun_upgrade: # Unchanged
+  maximum_sun_upgrade:
     50: 99
     random: 0
     random-low: 0
     random-high: 0
     random-range-50-150: 0
 
-  disable_storm_flashes: # Let it pick for me.
-    'false': 50
+  mower_reward_upgrades:
+    5: 99
+
+  random_seed_filler:
+    'false': 0
     'true': 50
 
-  music_shuffle: # Unchanged
-    disabled: 99
-    by_type: 0
-    by_level: 0
-
-  starting_plants: # Unchanged
+  starting_plants:
     1: 99
 
-  starting_seed_slots: # Unchanged
-    6: 99
+  starting_seed_slots:
+    3: 99
 
-  early_sunflower: # Unchanged
+  early_sunflower:
     'false': 50
     'true': 0
 
-  early_shovel: # Unchanged
+  early_shovel:
     'false': 50
     'true': 0
 
-  trap_percentage: # Give me all the Traps...
+  early_zen_garden:
+    'false': 50
+    'true': 0
+
+  trap_percentage:
     random-high: 99
 
-  mower_deploy_trap_weight: # Random.
+  mower_deploy_trap_weight:
     random: 99
 
-  seed_packet_cooldown_trap_weight: # Doesn't work in GOTY.
+  seed_packet_cooldown_trap_weight:
     0: 99
 
-  zombie_ambush_trap_weight: # RANDOM.
+  zombie_ambush_trap_weight:
     random: 99
 
   local_items: []
