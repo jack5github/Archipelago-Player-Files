@@ -169,9 +169,10 @@ Grapple Dog:
     - Features
     # The remaining Cosmic Gadgets (not handled by `plando_items`) should be found in other games.
     - Gadgets
-  start_inventory:
+  start_inventory: {
     # Attempting to play Grapple Dog without access to Wall Jump forces me to play Boomerang Bandit, which gets tiring when it is the start of every run, so I have made myself start with Wall Jump to try and allieviate this pressure.
-    # Wall Jump: 1
+    # "Wall Jump": 1
+  }
   start_hints: []
   start_location_hints: []
   exclude_locations:
