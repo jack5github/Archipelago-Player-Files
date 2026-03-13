@@ -3,12 +3,10 @@ description: |-
   Jack5's Plants vs. Zombies: Game of the Year Edition player file
 
   TODO: Add description
-game: 'Plants vs. Zombies: Replanted'
+game: Plants vs. Zombies
 requires:
   version: 0.6.6
-  game:
-    'Plants vs. Zombies: Replanted': 1.5.2
-'Plants vs. Zombies: Replanted':
+Plants vs. Zombies:
   ################
   # Game Options #
   ################
@@ -443,7 +441,7 @@ requires:
     # TODO: For Energy Link, withdrawing $100 requires 100 megajoules, yet playing PEAK is only able to produce around 50 kilojoules. Energy Link balancing options are necessary to rectify this discrepancy.
     Crazy Dave's Car Keys: 1
     # Start with the Almanac, which explains how all unlocked plants and zombies behave.
-    Almanac: 1
+    Suburban Almanac: 1
     # Start with cheat items that have no effect on gameplay so they do not appear in-game.
     Mustache Mode: 1
     Future Zombies Mode: 1
