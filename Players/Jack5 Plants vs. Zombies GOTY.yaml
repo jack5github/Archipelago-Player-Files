@@ -200,9 +200,9 @@ Plants vs. Zombies:
     # Determines the total number of Taco items to be included in the item pool.
     # If necessary, this number will be automatically reduced to match the amount of remaining locations.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 30.
-    # Similar to my The Witness config, there is a 50% chance that 50 Tacos will be present in the item pool.
+    # Similar to my The Witness config, there is a 50% chance that the maximum of 30 Tacos will be present in the item pool.
     0: 50
-    50: 50
+    30: 50
   taco_hunt_percentage:
     # Determines what percentage of Taco items must be obtained before you can play the final battle with Dr. Zomboss in Roof: Level 5-10.
     # *This option requires that taco_hunt_items be set to a number higher than 0.
