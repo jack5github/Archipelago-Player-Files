@@ -140,10 +140,9 @@ Plants vs. Zombies:
     # A value of 0 disables the shop entirely.
     # A value of 64 has eight pages.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 64.
-    # The maximum of 64 items has caused issues in the past, due to me not having unlocked all of my shop pages. Because of this, I am limiting myself to between 4 and 6 pages.
-    32: 33 # 4 pages
-    40: 33 # 5 pages
-    48: 33 # 6 pages
+    # I find grinding for money in Plants vs. Zombies to be a very unsatisfying experience, therefore I am keeping the number of shop items relatively low.
+    16: 33 # 2 pages
+    24: 33 # 3 pages
   ########
   # Goal #
   ########
