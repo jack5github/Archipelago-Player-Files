@@ -10,7 +10,7 @@ requires:
 
 Luigi's Mansion:
   progression_balancing:
-    25: 99
+    50: 99
 
   accessibility:
     full: 50
@@ -221,8 +221,8 @@ Luigi's Mansion:
 
   early_first_key:
     # If enabled, this will attempt to find a key that lets you out of your starting room and place it early in your own world.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   ###############
   # QOL Changes #
