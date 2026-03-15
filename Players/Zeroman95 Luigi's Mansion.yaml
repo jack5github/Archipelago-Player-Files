@@ -1,0 +1,637 @@
+name: ZeromanLM{NUMBER}
+
+description: 'Zeroman95s Luigis Mansion YAML'
+
+game: Luigi's Mansion
+requires:
+  version: 0.6.6
+  game:
+    Luigi's Mansion: 0.6.0
+
+Luigi's Mansion:
+  progression_balancing:
+    25: 99
+
+  accessibility:
+    full: 50
+    minimal: 0
+
+  furnisanity:
+    # Adds interactable objects, such as dressers, paintings, candles, and light fixtures, to the location pool.
+    #
+    # Different sets of locations can be added within the list. Valid strings are:
+    #
+    # "Hangables" includes items on walls such as paintings and other decor
+    #
+    # "Decor" includes items such as instruments and suits of armor
+    #
+    # "Ceiling" includes ceiling fans and lights attached to the ceiling
+    #
+    # "Candles" includes any candles that can be interacted with
+    #
+    # "Seating" includes chairs, stools and other typs of seating
+    #
+    # "Surfaces" includes tables and other flat items
+    #
+    # "Storage" includes things like barrels, boxes and shelves
+    #
+    # "Plants" includes all waterable plants in the mansion
+    #
+    # "Drawers" includes dressers, drawers, end tables and similar items
+    #
+    # "Treasures" turns on only locations that contain treasure (including all plants) in the vanilla game. Does not create duplicate locations
+    #
+    # "Basement, 1st Floor, 2nd Floor, Attic, and Roof can be used to turn on all furniture pieces on that level.
+    #
+    # "Full" turns on all furniture locations and will override any other specified groups
+    ['Treasures']
+
+  toadsanity:
+    # Add Toads as locations to be checked.
+    'false': 50
+    'true': 0
+
+  gold_mice:
+    # Adds Gold Mice as locations to be checked.
+    #
+    # Logic requires these to be obtained after blackout so they can't be missed. They can be acquired without black out, out of logic.
+    'false': 50
+    'true': 0
+
+  boosanity:
+    # Turns Boos into Items and Locations.
+    'false': 0
+    'true': 50
+
+  portrification:
+    # Turn Portrait Ghosts into checks in addition to their clear chests.
+    'false': 0
+    'true': 50
+
+  silver_ghosts:
+    # Adds locations on getting a Silver border for catching a portrait ghost.
+    # Increasing Portrait Ghost health values will require Vacuum Upgrades in varying amounts
+    'false': 50
+    'true': 0
+
+  gold_ghosts:
+    # Adds locations on getting a Gold border for catching a portrait ghost
+    # Increasing Portrait Ghost health values will require Vacuum Upgrades in varying amounts
+    'false': 50
+    'true': 0
+
+  speedy_spirits:
+    # Adds Blue Ghosts to location pool. These have moved to be only available during blackout so they cannot be missed
+    'false': 50
+    'true': 0
+
+  lightsanity:
+    # Adds the act of lighting up rooms as locations.
+    'false': 50
+    'true': 0
+
+  walksanity:
+    # Adds the act of visiting rooms as locations.
+    'false': 50
+    'true': 0
+
+  grassanity:
+    # Add grass locations to the location pool
+    'false': 50
+    'true': 0
+
+  WDYM_checks:
+    # Adds locations you would never expect.
+    'false': 50
+    'true': 0
+
+  ##################
+  # Access Options #
+  ##################
+  rank_requirement:
+    # Choose the required rank (H to A) to complete the game, with A being the highest.
+    #
+    # Rank H requires any amount of money to finish the game, including 0
+    #
+    # Rank A requires 5 Gold Diamonds (or equivalent money) to finish the game
+    rank_h: 0
+    rank_g: 0
+    rank_f: 0
+    rank_e: 0
+    rank_d: 0
+    rank_c: 50
+    rank_b: 0
+    rank_a: 0
+
+  game_mode:
+    # Enable alternate game modes:
+    #
+    # Default - Play through the mansion as usual
+    #
+    # Poltergust Hunt - You must first find the Poltergust 3000 inside a piece of furniture before use. Enabling this will
+    # automatically add certain pieces of furniture to the pool of locations even if other furniture options are turned off.
+    # This will also unlock all doors in the mansion. This is intended as a short form game mode
+    default: 50
+    poltergust_hunt: 0
+
+  vacuum_start:
+    # Enable Luigi to have the Poltergust 3000 at the start.
+    'false': 50
+    'true': 0
+
+  mario_items:
+    # How many Mario Items it takes to capture the Fortune-Teller. 0 = Starts Capturable
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 5
+    5: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-5: 0 # random value between 0 and 5
+
+  boo_gates:
+    # Toggle the events that prevent progress unless a certain number of boos have been caught
+    #
+    # Default to on. If this is turned off, the Boo Count options are ignored.
+    'false': 0
+    'true': 50
+
+  balcony_boo_count:
+    # Set the number of Boos required to reach the Balcony. 0 = Starts Open
+    #
+    # If Boosanity is off, this count may be reduced to make the seed viable, based on spawn location
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    20: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-50: 0 # random value between 0 and 50
+
+  final_boo_count:
+    # Set the number of Boos required to reach the Secret Altar. 0 = Starts Open
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    40: 0
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-30-50: 50 # random value between 0 and 50
+
+  enemizer:
+    # Choose if and how ghosts are randomized.
+    #
+    # Vanilla - No ghost randomization
+    #
+    # Randomized Elements - Randomized ghost elements and waves
+    #
+    # No Elements - Remove ghost elements, randomize waves
+    vanilla: 50
+    randomized_elements: 0
+    no_elements: 0
+
+  door_rando:
+    # Various options regarding which doors are locked or unlocked in the mansion.
+    #
+    # Off - Doors are in their vanilla state
+    #
+    # Randomized - All doors are randomly locked or unlocked
+    #
+    # Suit Doors - Randomize doors but guarantee the Suit Key Doors remain locked
+    #
+    # All Doors Unlocked - Unlocks all doors in the mansion. Without Boo gates, this will make King Boo immediately accessible.
+    #
+    # All Doors Locked - Locks all door in the mansion.
+    'off': 0
+    randomized: 0
+    suit_doors: 0
+    all_doors_unlocked: 0
+    all_doors_locked: 50
+
+  random_spawn:
+    # Allows Luigi to randomly spawn somewhere in the mansion.
+    'false': 0
+    'true': 50
+
+  early_first_key:
+    # If enabled, this will attempt to find a key that lets you out of your starting room and place it early in your own world.
+    'false': 50
+    'true': 0
+
+  ###############
+  # QOL Changes #
+  ###############
+  walk_speed:
+    # Choose how fast Luigi moves. Speeds above normal may cause OoB issues
+    normal_speed: 50
+    kinda_fast: 0
+    schmoovin: 0
+
+  luigi_max_health:
+    # Adjust Luigi's maximum health value, 1-1000. Values 5 or below should be treated as One-Hit KO
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 1000
+    100: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-1000: 0 # random value between 1 and 1000
+
+  enable_fear_animation:
+    # Turn on Luigi being scared by ghosts if they spawn close to him.
+    # Set this to false if you want to turn it off
+    'false': 0
+    'true': 50
+
+  enable_pickup_animation:
+    # Turn on Luigi's pickup animations.
+    # Set this to false if you want to turn these animations off.
+    'false': 0
+    'true': 50
+
+  self_item_messages:
+    # Choose whether you want all in-game received messages for your own items, only progression, or none at all.
+    all_messages: 0
+    progression_items_only: 0
+    nothing: 50
+
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    'false': 50
+    'true': 0
+
+  trap_link:
+    # Games that support traplink will all receive similar traps when a matching trap is sent from another traplink game
+    'false': 50
+    'true': 0
+
+  enable_trap_client_msg:
+    # Enables messages in the client whenever a trap link is received.
+    'false': 0
+    'true': 50
+
+  energy_link:
+    # Games that support energylink will be able to send and retrieve 'energy' from the team's pool.
+    # If no team is present, the default team will be used (0).
+    #
+    # 'Energy' in the context of Luigi's Mansion will be money.
+    'false': 50
+    'true': 0
+
+  ring_link:
+    # Games that support ringlink will be able to send and retrieve 'rings' sent from another ringlink game.
+    #
+    # 'Rings' in the context of Luigi's Mansion will be Coins.
+    'false': 50
+    'true': 0
+
+  enable_ring_client_msg:
+    # Enables messages in the client whenever a ring link is received.
+    'false': 0
+    'true': 50
+
+  vacuum_upgrades:
+    # Choose how many vacuum upgrades to include, up to 5.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 5
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-5: 0 # random value between 0 and 5
+
+  boo_radar:
+    # Start with Boo Radar
+    #
+    # start_with: Start with Boo Radar
+    #
+    # include: Boo Radar in pool
+    #
+    # exclude: No Boo Radar - generation will fail if excluded while Boo Gates or Boosanity are enabled
+    start_with: 0
+    include: 50
+    exclude: 0
+
+  hidden_mansion:
+    # Begin in the Hidden Mansion
+    'false': 50
+    'true': 0
+
+  hint_distribution:
+    # Choose the level of hint from in-game hints. Will affect Portrait Ghost hints if the option is on.
+    #
+    # Junk hints will  not hint any items and instead provide funny lines
+    #
+    # Strong hints will favor hinting progression items when choosing hints
+    #
+    # Balanced will pick between progression items or other items to hint, but slightly favor progression items
+    #
+    # Chaos wil pick items completely at random, with no favoring of progression or not
+    #
+    # Vague hints will tell you the game the item is in, but not where
+    #
+    # Disabled hints disables hint text completely
+    balanced: 50
+    junk: 0
+    chaos: 0
+    strong: 0
+    vague: 0
+    disabled: 0
+
+  portrait_hints:
+    # Choose to add hints to the scans of the Portrait Ghosts' Hearts in the mansions
+    'false': 50
+    'true': 0
+
+  send_hints:
+    # If enabled, in-game hints will be sent out to the multiworld when discovered.
+    #
+    # This is automatically disabled if hint distribution is set to Junk, Disabled or Vague
+    'false': 0
+    'true': 50
+
+  ###############
+  # Enemy Stats #
+  ###############
+  king_boo_health:
+    # Set King Boo's health in the final fight.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 1000
+    500: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-1000: 0 # random value between 1 and 1000
+
+  boolossus_difficulty:
+    # Alter the difficulty of the mini-boos in the Boolossus fight. Easy slows them down, Hard speeds them up.
+    easy: 0
+    normal: 50
+    hard: 0
+
+  boo_health_option:
+    # Choose how Boo Health is determined
+    #
+    # Choice: Use Boo Health Value to set all boos to the specified value
+    #
+    # Random Values: Every boo has a different, randomly chosen health value between 1 and the value set in Boo Health Value
+    #
+    # Boo Health by Sphere: Boos will receive health values based on the spheres they are in. Boo Health Value will determine the highest health a Boo can have
+    #
+    # Vanilla: No changes are made to Boos from the base game. Boos with HP over 150 may not be catchable within the current room and logic cannot account for where they move
+    choice: 50
+    random_values: 0
+    boo_health_by_sphere: 0
+    vanilla: 0
+
+  boo_health_value:
+    # Choose the health value all Boos will have if the Boo Health Option is Choice. Range between 1 and 999
+    # If boo_health_option is set to random_values, if you set this to "100: 50", the max value used will be 100 instead.
+    # If you want a custom range, use a random range function: https://archipelago.gg/tutorial/Archipelago/advanced_settings_en#random-numbers
+    #
+    # Values over 150 may not be catchable within the current room and logic cannot account for where they move
+    #
+    # If you have a boo go into an area you cannot access yet, you may need to save and quit to main menu to reload them.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 999
+    30: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-999: 0 # random value between 1 and 999
+
+  boo_speed:
+    # Choose how fast boos move. Range from 1 to 36
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 36
+    15: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-36: 0 # random value between 1 and 36
+
+  boo_escape_time:
+    # Choose how long before Boos leave the current room. Range between 1 and 300.
+    #
+    # Values below 90 may not be catchable within the current room and logic cannot account for where they move
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 300
+    120: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-300: 0 # random value between 1 and 300
+
+  boo_anger:
+    # Choose whether boos can damage Luigi.
+    'false': 50
+    'true': 0
+
+  extra_boo_spots:
+    # Adds extra spots for boos to hide in when furniture locations have been added to the pool
+    'false': 50
+    'true': 0
+
+  portrait_health_option:
+    # Choose how Portrait Ghost Health is determined. Gold and Silver border locations will require upgrades if turned on
+    # and Health is above certain values
+    #
+    # Choice: Use Portrait Health Value to set all boos to the specified value
+    #
+    # Random Values: Every Portrait Ghost has a different, randomly chosen health value between 1 and the value set in Boo Health Value
+    #
+    # Portrait Health by Sphere: Portrait Ghosts will receive health values based on the spheres they are in. Portrait
+    # Health Value will determine the highest health a Boo can have - this is capped by Vacuum upgrades in the pool
+    #
+    # Vanilla: No changes are made to Portrait Ghosts from the base game.
+    choice: 50
+    random_values: 0
+    portrait_health_by_sphere: 0
+    vanilla: 0
+
+  portrait_health_value:
+    # Choose the health value all Portrait Ghosts will have if the Portrait Health Option is Choice. Range between 1 and 999
+    # If portrait_health_option is set to random_values, if you set this to "100: 50", the max value used will be 100 instead.
+    # If you want a custom range, use a random range function: https://archipelago.gg/tutorial/Archipelago/advanced_settings_en#random-numbers
+    #
+    # Higher values will require increasing amounts of vacuum upgrades. These will be forced on
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 650
+    100: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-650: 0 # random value between 1 and 650
+
+  #############
+  # Cosmetics #
+  #############
+  random_music:
+    # Randomize Music
+    'false': 50
+    'true': 0
+
+  door_model_rando:
+    # Randomly choose models for every door in the mansion.
+    'false': 50
+    'true': 0
+
+  chest_types:
+    # Determines how chest colors and size are chosen,
+    #
+    # vanilla: Chests are their original size and color
+    #
+    # default: Size and color are determined by attempting to match the item type to a representative color similar to the vanilla game
+    #
+    # full_random: Size and color are chosen completely at random.
+    #
+    # color: Chest color represents the AP item classification
+    #
+    # size_and_color: Both size and color are determined by AP item classification
+    #
+    # no_fuzzy_matching: Same as default but uses item classification for other players' items
+    vanilla: 0
+    default: 0
+    full_random: 50
+    color: 0
+    size_and_color: 0
+    no_fuzzy_matching: 0
+
+  trap_chests:
+    # Determines if chests containing traps can look like progression items
+    #
+    # filler: Trap chests only appear as traps
+    #
+    # progression: Trap chests only appear as progression
+    #
+    # anything: Trap chests can appear as anything
+    filler: 50
+    progression: 0
+    anything: 0
+
+  spookiness:
+    # Change ambient room sounds.
+    # Vanilla = unchanged ambience
+    # Full Spooky = All rooms become spooky
+    # Random Rooms = Random rooms become spooky
+    vanilla: 50
+    full_spooky: 0
+    random_rooms: 0
+
+  call_mario:
+    # Let everyone know you're looking for Mario in the client!
+    # (CAUTION: THIS CAN EASILY SPAM THE CLIENT WITH MESSAGES)
+    'false': 0
+    'true': 50
+
+  ##################
+  # Filler Weights #
+  ##################
+  filler_weights:
+    # Set filler weights for filler items.
+    # Each weight represents a number of balls in a lottery roller with that trap on it.
+    # So if you had Banana Trap set to 3, and Ice Trap set to 7, and the rest set to 0,
+    # you would have a 3/10 for a Banana Trap to be chosen when rolling for trap fillers
+    # Must be between 0 and 100
+    Bars: 10
+    Bills: 10
+    Bundles: 10
+    Coins: 15
+    Dust: 40
+    Gems: 5
+    Hearts: 10
+
+  trap_percentage:
+    # Set the percentage of filler items that are traps. Default percentage is 0%
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  trap_weights:
+    # Set Trap Weights for traps chosen as filler items, if Trap Percentage is greater than 0
+    # Each weight represents a number of balls in a lottery roller with that trap on it.
+    # So if you had Banana Trap set to 3, and Ice Trap set to 7, and the rest set to 0,
+    # you would have a 3/10 for a Banana Trap to be chosen when rolling for trap fillers
+    # Must be between 0 and 100
+    Banana Trap: 15
+    Bomb: 15
+    Bonk Trap: 15
+    Fear Trap: 25
+    Ghost: 15
+    Ice Trap: 15
+    No Vac Trap: 5
+    Poison Mushroom: 15
+    Possession Trap: 5
+    Spooky Time: 25
+    Squash Trap: 15
+
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with the specified amount of these items. Example: "Bomb: 1"
+    {}
+
+  start_inventory_from_pool:
+    # Start with the specified amount of these items and don't place them in the world. Example: "Bomb: 1"
+    #
+    # The game decides what the replacement items will be.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
+
+  plando_items:
+    # Generic items plando.
+    []
