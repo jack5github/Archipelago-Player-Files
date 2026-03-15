@@ -9,7 +9,7 @@ requires:
 
 FNaFW:
   progression_balancing:
-    0: 99 # Changed to 0 for Disabled.
+    25: 99 # Changed to 25 because FNaFW never gets gameplay.
 
   accessibility:
     full: 99 # Unchanged

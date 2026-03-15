@@ -7,13 +7,8 @@ requires:
     Totally Accurate Battle Simulator: 0.1.0
 Totally Accurate Battle Simulator:
   progression_balancing:
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-99: 0
-    disabled: 50
-    normal: 0
-    extreme: 0
+    25: 99
+
   accessibility:
     full: 50
     minimal: 0

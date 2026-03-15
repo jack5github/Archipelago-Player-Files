@@ -12,12 +12,7 @@ Ratchet and Clank 3:
   ###################
   progression_balancing:
     # I want my Items to be anywhere within the Multiworld. Setting the progression to disabled makes that happen.
-    random: 0
-    random-low: 0
-    random-high: 0
-    disabled: 50
-    normal: 0
-    extreme: 0
+    0: 99
   accessibility:
     # Set to minimal to limit planet locations and checks. Makes the game more challenging.
     full: 0

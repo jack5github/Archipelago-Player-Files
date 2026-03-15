@@ -10,14 +10,7 @@ requires:
 
 The Legend of Zelda:
   progression_balancing:
-    0: 99
-    random: 0
-    random-low: 0
-    random-high: 0
-    random-range-0-99: 0
-    disabled: 0
-    normal: 0
-    extreme: 0
+    25: 99
 
   accessibility:
     full: 50
