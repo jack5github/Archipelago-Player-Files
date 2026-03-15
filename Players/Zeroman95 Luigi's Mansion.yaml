@@ -283,8 +283,8 @@ Luigi's Mansion:
     # If no team is present, the default team will be used (0).
     #
     # 'Energy' in the context of Luigi's Mansion will be money.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   ring_link:
     # Games that support ringlink will be able to send and retrieve 'rings' sent from another ringlink game.
