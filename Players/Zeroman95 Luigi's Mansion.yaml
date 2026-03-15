@@ -265,8 +265,8 @@ Luigi's Mansion:
 
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   trap_link:
     # Games that support traplink will all receive similar traps when a matching trap is sent from another traplink game
