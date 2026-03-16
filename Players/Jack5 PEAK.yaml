@@ -76,6 +76,11 @@ PEAK:
     # Enabled in case we use Trap Link in other games.
     'false': 0
     'true': 50
+  breath_link:
+    # When enabled, if any player in the lobby runs out of stamina, all players with Breath Link enabled get their stamina fully depleted.
+    # This is not widely supported by most APworlds, and it also just sounds awful, so I have chosen to disable it.
+    'false': 50
+    'true': 0
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
     # YOUR BODIES WILL NEVER BE FOUND.
@@ -345,6 +350,42 @@ PEAK:
     low: 0
     medium: 0
     high: 0
+  pokemon_count_trap_weight:
+    # Likelihood of receiving a trap where Pokemon stroll across the screen and the player must count how many of a specific Pokemon appeared
+    # I don't want any Pokémon-related traps in the game.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  inverted_mouse_trap_weight:
+    # Likelihood of receiving a trap which inverts a player's mouse controls for 10 seconds
+    # Delightfully devilish, Seymour!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  stamina_drain_trap_weight:
+    # Likelihood of receiving a trap which slowly drains a player's stamina over 15 seconds
+    # Oh gosh... this is going to be horrible... let's do it.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  chaos_control_trap_weight:
+    # Likelihood of receiving a trap which inverts screen colors, freezes the player in midair, and displays a 10 second countdown
+    # CHAOS... CONTROL!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  item_sanity:
+    # When enabled, items must be unlocked via Archipelago before they appear in the loot pool.
+    # "Acquire X" checks require the corresponding unlock item first.
+    # When disabled, all items are always available in the loot pool.
+    # "Acquire X" checks still exist but only require biome access.
+    # I've played this APworld both with and without itemsanity before this option was added. I've made it a 50-50 toggle for now.
+    'false': 50
+    'true': 50
   disable_multiplayer_badges:
     # Exclude multiplayer-only badge checks. These badges are normally earned by cooperating with other players.
     # These badges include:
