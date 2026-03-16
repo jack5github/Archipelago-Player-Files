@@ -183,7 +183,7 @@ Luigi's Mansion: # Set to 25 because disabled would make me get SUPER STUCK earl
     random-range-199-300: 99
 
   boo_speed: # boo_speed only really effects how fast they can escape; So pick random.
-    random-range-1-36: 0 # random value between 1 and 36
+    random-range-1-36: 99 # random value between 1 and 36
 
   boo_escape_time: # allow the Boo's to have a random amount of time to leave the room.
     random-range-120-300: 99
