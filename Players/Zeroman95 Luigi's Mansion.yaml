@@ -139,9 +139,9 @@ Luigi's Mansion: # Set to 25 because disabled would make me get SUPER STUCK earl
     'false': 0
     'true': 50
 
-  ring_link: # Honestly not sure how this works, this includes energy_link. No idea either.
-    'false': 0
-    'true': 50
+  ring_link: # Changed to false because energy and ring links cannot be enabled AT THE SAME TIME.
+    'false': 50
+    'true': 0
 
   enable_ring_client_msg: # Unchanged
     'false': 0
