@@ -52,6 +52,77 @@ PEAK:
     # I tried a run with this enabled, but it made the game too easy, as Progressive Endurance can also be found which divides stamina usage by up to 2.
     'false': 50
     'true': 0
+  item_sanity:
+    # When enabled, items must be unlocked via Archipelago before they appear in the loot pool.
+    # "Acquire X" checks require the corresponding unlock item first.
+    # When disabled, all items are always available in the loot pool.
+    # "Acquire X" checks still exist but only require biome access.
+    # I've played this APworld both with and without itemsanity before this option was added. I've made it a 50-50 toggle for now.
+    'false': 50
+    'true': 50
+  loot_sanity:
+    # Controls which loot pools have their contents shuffled with all available items.
+    # Affected pools will have every AP-tracked item added at equal weight, meaning any item can drop from any affected source.
+    # Items not yet unlocked (when Item Sanity is on) are excluded.
+    # None: Loot pools are unchanged. Items only appear in their vanilla pools.
+    # Luggage: Luggage (suitcases) across all biomes have their contents shuffled.
+    # Trees and Bushes: Natural sources (berry bushes, mushroom clusters, coconut trees, willow trees, vines, winterberry trees, nests, cacti, redwoods) have their drops shuffled.
+    # All: Both luggage and natural source pools are shuffled.
+    # The Scout Statue is never affected by this option — see Logical Scout Statue instead.
+    # I've played this APworld both with and without lootsanity before this option was added. I've made it a 50-50 toggle for now, only on luggage because random items on trees look weird.
+    none: 50
+    luggage: 50
+    trees_and_bushes: 0
+    all: 0
+  logical_scout_statue:
+    # When enabled, the Scout Statue will only drop items that you haven't sent an "Acquire" check for yet.
+    # The available items are filtered by your current biome access (Progressive Mountain count) and item unlock status (if Item Sanity is enabled).
+    # As you pick up new items and send Acquire checks, the Scout Statue's pool shrinks, guiding you toward items you still need.
+    # When disabled, the Scout Statue uses the default game loot table.
+    # I've played this APworld both with and without a logical Scout Statue before this option was added. I've made it a 50-50 toggle for now.
+    'false': 50
+    'true': 50
+  disable_multiplayer_badges:
+    # Exclude multiplayer-only badge checks. These badges are normally earned by cooperating with other players.
+    # These badges include:
+    #     Ultimate Badge
+    #     Clutch Badge
+    #     Participation Badge
+    #     Emergency Preparedness Badge
+    #     First Aid Badge
+    #     Resourcefulness Badge
+    #     Disaster Response Badge
+    #     Applied Esoterica Badge
+    #     Needlepoint Badge
+    # My PEAK game shouldn't hinge on needing to play with others. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+    'false': 50
+    'true': 0
+  disable_hard_badges:
+    # Exclude somewhat hard badge checks. These badges include:
+    #     Speed Climber Badge
+    #     Lone Wolf Badge
+    #     Balloon Badge
+    #     Bing Bong Badge
+    #     Competitive Eating Badge
+    # While I COULD do these, I really shouldn't. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+    'false': 50
+    'true': 0
+  disable_biome_badges:
+    # Exclude biome exclusive badge checks. These will not remove the badges involved with completing the biomes.
+    # These badges include:
+    #     Astronomy Badge
+    #     Bundled Up Badge
+    #     Undead Encounter Badge
+    #     Mycoacrobatics Badge
+    #     Web Security Badge
+    #     Cool Cucumber Badge
+    #     Daredevil Badge
+    #     Megaentomology Badge
+    #     Tread Lightly Badge
+    #     Advanced Mycology Badge
+    # My PEAK game shouldn't hinge on needing to wait for certain biomes to be in the rotation. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+    'false': 50
+    'true': 0
   ring_link:
     # When enabled, ring pickups are shared among all players with Ring Link enabled
     # For PEAK; rings are stamina. Consuming food will send Rings to other players with Ring Link enabled. Poisonous food will send negative rings.
@@ -378,55 +449,20 @@ PEAK:
     low: 0
     medium: 50
     high: 0
-  item_sanity:
-    # When enabled, items must be unlocked via Archipelago before they appear in the loot pool.
-    # "Acquire X" checks require the corresponding unlock item first.
-    # When disabled, all items are always available in the loot pool.
-    # "Acquire X" checks still exist but only require biome access.
-    # I've played this APworld both with and without itemsanity before this option was added. I've made it a 50-50 toggle for now.
-    'false': 50
-    'true': 50
-  disable_multiplayer_badges:
-    # Exclude multiplayer-only badge checks. These badges are normally earned by cooperating with other players.
-    # These badges include:
-    #     Ultimate Badge
-    #     Clutch Badge
-    #     Participation Badge
-    #     Emergency Preparedness Badge
-    #     First Aid Badge
-    #     Resourcefulness Badge
-    #     Disaster Response Badge
-    #     Applied Esoterica Badge
-    #     Needlepoint Badge
-    # My PEAK game shouldn't hinge on needing to play with others. Rather than badges being disabled here, they are disabled in `excluded_locations`.
-    'false': 50
-    'true': 0
-  disable_hard_badges:
-    # Exclude somewhat hard badge checks. These badges include:
-    #     Speed Climber Badge
-    #     Lone Wolf Badge
-    #     Balloon Badge
-    #     Bing Bong Badge
-    #     Competitive Eating Badge
-    # While I COULD do these, I really shouldn't. Rather than badges being disabled here, they are disabled in `excluded_locations`.
-    'false': 50
-    'true': 0
-  disable_biome_badges:
-    # Exclude biome exclusive badge checks. These will not remove the badges involved with completing the biomes.
-    # These badges include:
-    #     Astronomy Badge
-    #     Bundled Up Badge
-    #     Undead Encounter Badge
-    #     Mycoacrobatics Badge
-    #     Web Security Badge
-    #     Cool Cucumber Badge
-    #     Daredevil Badge
-    #     Megaentomology Badge
-    #     Tread Lightly Badge
-    #     Advanced Mycology Badge
-    # My PEAK game shouldn't hinge on needing to wait for certain biomes to be in the rotation. Rather than badges being disabled here, they are disabled in `excluded_locations`.
-    'false': 50
-    'true': 0
+  emergency_rescue_trap_weight:
+    # Likelihood of receiving a trap which summons the run-ending helicopter, immediately ending the current run for all players
+    # I would hate for all my hard work to be immediately wasted by this trap.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  explosion_trap_weight:
+    # Likelihood of receiving a trap which spawns an explosion on a random player
+    # A whole ton of injury from out of nowhere? No thanks!
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
   ###########################
   # Item & Location Options #
   ###########################
@@ -476,7 +512,7 @@ PEAK:
     - Gourmand Badge # Difficult
     - Happy Camper Badge # Multiplayer
     # - Hasty Badge # Endgame (not in implementation)
-    - High Altitude Badge # Unlikely
+    # - High Altitude Badge # Unlikely (not in implementation)
     - Knot Tying Badge # Unlikely
     - Leave No Trace Badge # Endgame
     - Lone Wolf Badge # Endgame
