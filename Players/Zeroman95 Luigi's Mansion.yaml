@@ -15,6 +15,21 @@ Luigi's Mansion: # Set to 25 because disabled would make me get SUPER STUCK earl
   accessibility: # I want the whole Mansion.
     full: 99
 
+  # SANITY CHECK LIST
+  # Nothing - If no Sanity is turned on the whole default run is 82 Checks.
+  # Hangables - Adds 67 Checks
+  # Decor - Adds 165 Checks
+  # Ceiling - Adds 50 Checks
+  # Candles - Adds 28 Checks
+  # Seating - Adds 54 Checks
+  # Surfaces - Adds 30 checks
+  # Storage - Adds 81 Checks
+  # Plants - Adds 26 Checks
+  # Drawers - Adds 38 Checks
+  # Treasures - Adds 126 Checks
+  # Basement - Adds 52 Checks
+  # Full - Adds 538 Checks
+
   furnisanity: # Turning Treasures on means all Furniture that have Treasure in them will now have checks in them.
     ['Treasures']
 
