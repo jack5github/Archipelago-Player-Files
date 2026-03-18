@@ -257,7 +257,7 @@ Luigi's Mansion: # Set to 25 because disabled would make me get SUPER STUCK earl
     Hearts: 11
 
   trap_percentage: # Changed to random-low to allow small amount of traps.
-    random-low: 99
+    25: 99
 
   trap_weights: # Unchanged
     Banana Trap: 15
