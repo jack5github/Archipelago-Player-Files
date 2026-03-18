@@ -1,0 +1,162 @@
+name: Jack5SAHT{NUMBER}
+description: |-
+  Jack5's Spyro: A Hero's Tail player file
+
+  TODO: Add description
+game: "Spyro: A Hero's Tail"
+requires:
+  version: 0.6.7
+  game:
+    "Spyro: A Hero's Tail": 0.2.1
+"Spyro: A Hero's Tail":
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    normal: 50
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+    minimal: 0
+  randomize_sgt_byrd_minigames:
+    # Toggle randomizing Sgt. Byrds mini game rewards.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  randomize_blink_minigames:
+    # Toggle randomizing Blinks mini game rewards.
+    # Enabled to increase the variety of the APworld.
+    'false': 0
+    'true': 50
+  randomize_turret_minigames:
+    # Toggle randomizing Turret mini game rewards.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  randomize_sparx_minigames:
+    # Toggle randomizing Sparxs mini game rewards.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  randomize_breath:
+    # Determines which starting elemental breath you have.
+    # default: Fire breath.
+    # random: Start with a random breath.
+    # none: Start with no breath. Adds a starting check.
+    # Set to `none` to increase the variety of the APworld. This will likely need to be reverted after testing.
+    default: 0
+    randomized: 0
+    none: 50
+  randomize_swim:
+    # Toggle randomizing Spyro's ability to Swim.
+    # Enabled to increase the variety of the APworld.
+    'false': 0
+    'true': 50
+  randomize_glide:
+    # Toggle randomizing Spyro's ability to Glide.
+    # Enabled to increase the variety of the APworld.
+    'false': 0
+    'true': 50
+  randomize_charge:
+    # Toggle randomizing Spyro's ability to Charge.
+    # Enabled to increase the variety of the APworld.
+    'false': 0
+    'true': 50
+  randomize_shop_items:
+    # Randomize Moneybags shop items.
+    # Enabled to increase the variety of the APworld.
+    'false': 0
+    'true': 50
+  randomize_shop_prices:
+    # Sets Moneybags shop prices.
+    # NOTE: ``default`` currently does nothing.
+    # default: No changes to price. If ``Randomize Shop Items`` is enabled, this setting will automatically change to ``random``.
+    # random: Randomizes the price, defined by the range in **Minimum Shop Price** and **Maximum Shop Price**.
+    # random_low: Randomizes the price, with a bias towards a lower price.
+    # random_high: Randomizes the price, with a bias towards a higher price.
+    # Enabled to increase the variety of the APworld.
+    default: 0
+    randomized: 50
+    randomized_low: 0
+    randomized_high: 0
+  shop_prices_min:
+    # The minimum price for items in the shop.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10000.
+    # Unchanged from the base configuration.
+    1: 50
+  shop_prices_max:
+    # The maximum price for items in the shop.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10000.
+    # Unchanged from the base configuration.
+    500: 50
+  randomize_light_gem_door_costs:
+    # Sets the cost of light gem doors.
+    # default: No changes to cost.
+    # randomized: Randomizes the cost, defined by the range in **Minimum Light Gem Door Cost** and **Maximum Light Gem Door Cost**.
+    # shuffle: Shuffles the existing prices (20, 45, 70 and 95).
+    # Set to `randomized` to increase the variety of the APworld. This will likely need to be reverted after testing.
+    default: 0
+    randomized: 50
+    shuffle: 0
+  light_gem_door_cost_min:
+    # Sets the minimum cost for light gem doors.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Unchanged from the base configuration.
+    1: 50
+  light_gem_door_cost_max:
+    # Sets the maximum cost for light gem doors.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Unchanged from the base configuration.
+    50: 50
+  randomize_boss_lair_doors:
+    # Sets the Dark Gem requirement of the Boss Lairs.
+    # Note: The door to your goal boss will always be the most expensive of the 4.
+    # default: No changes to cost.
+    # randomized: Randomizes the cost, between 1 and 40.
+    # shuffle: Shuffles the existing costs (10, 20, 30, 40)
+    # Set to `randomized` to increase the variety of the APworld. This will likely need to be reverted after testing.
+    default: 0
+    randomized: 50
+    shuffle: 0
+  misc_goal:
+    # Set the goal condition.
+    # Unchanged from the base configuration.
+    gnorc: 0
+    ineptune: 0
+    red: 0
+    mechared: 50
+  misc_hint_minigame_rewards:
+    # When talking to a mini game npc, hint out their rewards.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  misc_skip_cutscenes:
+    # Enable a patch that skips realm intro cutscenes. USE WITH CAUTION, maybe have glitchy side-effects.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  misc_allow_immediate_realm_access:
+    # Enable a patch to access all realms at any time, instead of having to beat the previous realms boss first.
+    # IT IS RECOMMENDED TO KEEP THIS ENABLED, disabling may cause a generation failure.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  death_link:
+    # Enable Death Linking. <CURRENTLY DOES NOTHING>
+    # When this does work, I want to die.
+    'false': 0
+    'true': 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # Unchanged from the base configuration.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
