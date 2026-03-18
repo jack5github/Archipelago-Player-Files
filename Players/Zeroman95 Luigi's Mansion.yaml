@@ -284,7 +284,16 @@ Luigi's Mansion: # Set to 25 because disabled would make me get SUPER STUCK earl
 
   start_location_hints: []
 
-  exclude_locations: []
+  exclude_locations:
+    [
+      'Secret Altar C Chandelier',
+      'Secret Altar R Chandelier',
+      'Secret Altar L Chandelier',
+      'Secret Altar Brazier (near front, closest to 4th Wall)',
+      'Secret Altar Brazier (near front, away from 4th Wall)',
+      'Secret Altar L Candles',
+      'Secret Altar R Candles',
+    ]
 
   priority_locations: []
 
