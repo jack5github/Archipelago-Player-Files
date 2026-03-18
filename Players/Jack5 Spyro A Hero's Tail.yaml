@@ -60,9 +60,9 @@ requires:
     'true': 50
   randomize_charge:
     # Toggle randomizing Spyro's ability to Charge.
-    # Enabled to increase the variety of the APworld.
-    'false': 0
-    'true': 50
+    # Charge and Double Jump are absolute necessities in order for the game to not feel like a slog early on.
+    'false': 50
+    'true': 0
   randomize_shop_items:
     # Randomize Moneybags shop items.
     # Enabled to increase the variety of the APworld.
@@ -150,13 +150,46 @@ requires:
   ###########################
   # Item & Location Options #
   ###########################
-  # Unchanged from the base configuration.
   local_items: []
   non_local_items: []
-  start_inventory: {}
+  start_inventory:
+    # Charge and Double Jump are absolute necessities in order for the game to not feel like a slog early on.
+    Double Jump: 1
   start_hints: []
   start_location_hints: []
-  exclude_locations: []
+  exclude_locations:
+    # Exclude half of the shop items so that Sphere 1 does not wind up being gigantic.
+    - 'Moneybags: Shop Item 28'
+    - 'Moneybags: Shop Item 29'
+    - 'Moneybags: Shop Item 30'
+    - 'Moneybags: Shop Item 31'
+    - 'Moneybags: Shop Item 32'
+    - 'Moneybags: Shop Item 33'
+    - 'Moneybags: Shop Item 34'
+    - 'Moneybags: Shop Item 35'
+    - 'Moneybags: Shop Item 36'
+    - 'Moneybags: Shop Item 37'
+    - 'Moneybags: Shop Item 38'
+    - 'Moneybags: Shop Item 39'
+    - 'Moneybags: Shop Item 40'
+    - 'Moneybags: Shop Item 41'
+    - 'Moneybags: Shop Item 42'
+    - 'Moneybags: Shop Item 43'
+    - 'Moneybags: Shop Item 44'
+    - 'Moneybags: Shop Item 45'
+    - 'Moneybags: Shop Item 46'
+    - 'Moneybags: Shop Item 47'
+    - 'Moneybags: Shop Item 48'
+    - 'Moneybags: Shop Item 49'
+    - 'Moneybags: Shop Item 50'
+    - 'Moneybags: Shop Item 51'
+    - 'Moneybags: Shop Item 52'
+    - 'Moneybags: Shop Item 53'
+    - 'Moneybags: Shop Item 54'
+    - 'Moneybags: Shop Item 55'
+    - 'Moneybags: Shop Item 56'
+    # The 57th shop item has not appeared once before in my playthroughs, so I'm preventing anything important from appearing there.
+    - 'Moneybags: Shop Item 57'
   priority_locations: []
   item_links: []
   plando_items: []
