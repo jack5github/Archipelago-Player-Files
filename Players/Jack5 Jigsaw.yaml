@@ -5,7 +5,7 @@ description: |-
   TODO: Add description
 game: Jigsaw
 requires:
-  version: 0.6.6
+  version: 0.6.7
   game:
     Jigsaw: 0.10.0
 Jigsaw:
@@ -198,8 +198,8 @@ Jigsaw:
   number_of_fake_piece_bundles:
     # Number of fake piece bundles in the itempool.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 50.
-    # Unchanged from the base configuration.
-    0: 50
+    # Increased from 0 to add traps to the item pool.
+    10: 50
   impact_of_fake_piece_bundles:
     # How many fake pieces each fake piece bundle gives.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
@@ -209,8 +209,8 @@ Jigsaw:
     # Number of rotate traps in the itempool, that randomly rotate small clusters (<10 pieces).
     # This trap is only added when the rotations option is enabled.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 500.
-    # Unchanged from the base configuration.
-    0: 50
+    # Increased from 0 to add traps to the item pool.
+    10: 50
   impact_of_rotate_traps:
     # How many clusters each rotate trap affects.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
@@ -219,8 +219,8 @@ Jigsaw:
   number_of_swap_traps:
     # Number of swap traps in the itempool, that randomly swap two small clusters (<10 pieces).
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 500.
-    # Unchanged from the base configuration.
-    0: 50
+    # Increased from 0 to add traps to the item pool.
+    10: 50
   impact_of_swap_traps:
     # How many clusters each swap trap affects.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
@@ -241,9 +241,9 @@ Jigsaw:
     # Enable clues for the jigsaw puzzle.
     # If enabled, there is a button that shows the outline of pieces that can merge (unlimited uses).
     # If disabled, the button is simply not there.
-    # Unchanged from the base configuration.
-    'false': 0
-    'true': 50
+    # Zeroman95 is turning this off, so I am too.
+    'false': 50
+    'true': 0
   total_size_of_image:
     # How large the pieces will be. 100 means the puzzle is maximum size. 50 means width and height are halved.
     # If you want a lot of free space around the puzzle, you can set this to a lower value.
