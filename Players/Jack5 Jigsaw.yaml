@@ -154,22 +154,23 @@ Jigsaw:
     # This may be nice for big puzzles, it decreases the pressure at the start, while making the ending more interesting.
     # four_parts_non_rotated always gives axis-aligned quadrants (rectangular grid-like splits, like a +).
     # four_parts can involve rotated splits, so the quadrants may be split like + or x etc.
-    # Unchanged from the base configuration.
-    random_order: 50
+    # 4 preferred piece order types selected.
+    random_order: 25
     corners_edges_normal: 0
-    normal_edges_corners: 0
+    normal_edges_corners: 25
     edges_normal_corners: 0
     corners_normal_edges: 0
     normal_corners_edges: 0
-    edges_corners_normal: 0
-    four_parts: 0
+    edges_corners_normal: 25
+    four_parts: 25
     four_parts_non_rotated: 0
   strictness_piece_order_type:
     # This option determines how strictly the above piece type order is followed.
     # 1 means it is barely followed, 100 means it is followed in the strictest way possible.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
-    # Unchanged from the base configuration.
-    100: 50
+    # Although most pieces should fall into the selected piece order type, allow some (or even potentially all) of them to be out of order.
+    random-range-high-1-100: 50
+  # TODO: Do the same for the below two options as has been done for the above two
   piece_order:
     # This option affects the order in which you receive puzzle pieces.
     # random_order: pieces are added in random order with no extra constraints
@@ -208,8 +209,8 @@ Jigsaw:
     # Number of rotate traps in the itempool, that randomly rotate small clusters (<10 pieces).
     # This trap is only added when the rotations option is enabled.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 500.
-    # Increased from 0 to add traps to the item pool.
-    10: 50
+    # Increased from 0 to add traps to the item pool. Randomised to a higher degree.
+    random-range-10-20: 50
   impact_of_rotate_traps:
     # How many clusters each rotate trap affects.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
@@ -218,8 +219,8 @@ Jigsaw:
   number_of_swap_traps:
     # Number of swap traps in the itempool, that randomly swap two small clusters (<10 pieces).
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 500.
-    # Increased from 0 to add traps to the item pool.
-    10: 50
+    # Increased from 0 to add traps to the item pool. Randomised to a higher degree.
+    random-range-10-20: 50
   impact_of_swap_traps:
     # How many clusters each swap trap affects.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
