@@ -17,12 +17,12 @@ Jigsaw:
     minimal: 0
 
   number_of_pieces: # Set to 100 instead of 50.
-    100: 99
+    150: 99
 
   grid_type_and_rotations: # square rotation or no rotation that is the question.
-    square_no_rotation: 25
-    square_180_rotation: 25
-    square_90_rotation: 25
+    square_no_rotation: 33
+    square_180_rotation: 33
+    square_90_rotation: 33
     hex_no_rotation: 0
     hex_180_rotation: 0
     hex_120_rotation: 0
