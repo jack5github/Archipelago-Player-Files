@@ -32,10 +32,10 @@ Jigsaw:
     # The type of grid used for the jigsaw puzzle, along with the rotation options.
     # The "meme" options create really long or wide pieces in just one row or one column.
     # How to rotate: While dragging a piece, rotate by: 1) scroll wheel, 2) R/spacebar, 3) tap on screen with second body part.
-    # 4 preferred grid types selected.
+    # 4 preferred grid types selected. I tried 90 degree rotations, but I didn't enjoy using the mouse wheel that much.
     square_no_rotation: 25
-    square_180_rotation: 0
-    square_90_rotation: 25
+    square_180_rotation: 25
+    square_90_rotation: 0
     hex_no_rotation: 25
     hex_180_rotation: 0
     hex_120_rotation: 25
@@ -49,9 +49,9 @@ Jigsaw:
     # Especially fun with rotations, you won't be able to see which rotations are clearly wrong.
     # Note: your image will be cropped if necessary!
     # Note: this setting is turned off when using meme one row or column.
-    # Disabled due to not being that good at jigsaw puzzles.
-    'false': 50
-    'true': 0
+    # The puzzles look a little janky when this is disabled.
+    'false': 0
+    'true': 50
   border_type:
     # The type of border used for the jigsaw puzzle. You can change this in-game.
     # Classic: the typical jigsaw pieces with the innies and outies.
@@ -60,14 +60,13 @@ Jigsaw:
     # Diagonal: the borders are straight edges but at an angle.
     # Straight: the borders are straight edges. So the pieces are actual rectangles or hexagons.
     # Chaos: every border can be each of the other border types.
-    # 4 preferred border types selected.
-    classic: 25
-    triangle: 25
+    # 3 preferred border types selected. I tried `straight`, but it was very difficult putting the pieces together when they all look the same.
+    classic: 33
+    triangle: 33
     curved: 0
     diagonal: 0
-    straight: 25
-    chaos: 25
-  # TODO: Edit options from here
+    straight: 0
+    chaos: 33
   ############################
   # Important options: image #
   ############################
@@ -198,8 +197,8 @@ Jigsaw:
   number_of_fake_piece_bundles:
     # Number of fake piece bundles in the itempool.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 50.
-    # Increased from 0 to add traps to the item pool.
-    10: 50
+    # I have disabled fake pieces after trying 10, because they make the puzzle way harder than it needs to be.
+    0: 50
   impact_of_fake_piece_bundles:
     # How many fake pieces each fake piece bundle gives.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
@@ -214,8 +213,8 @@ Jigsaw:
   impact_of_rotate_traps:
     # How many clusters each rotate trap affects.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
-    # Unchanged from the base configuration.
-    1: 50
+    # Increased impact from 1, because these traps need to be more devastating.
+    3: 50
   number_of_swap_traps:
     # Number of swap traps in the itempool, that randomly swap two small clusters (<10 pieces).
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 500.
@@ -224,16 +223,16 @@ Jigsaw:
   impact_of_swap_traps:
     # How many clusters each swap trap affects.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
-    # Unchanged from the base configuration.
-    1: 50
+    # Increased impact from 1, because these traps need to be more devastating.
+    3: 50
   death_link:
     # When someone else dies, you'll get rotate traps and swap traps.
     # The number you set here determines how many traps you get.
     # If you set this to 0, deathlink is disabled.
     # (Jigsaw will never trigger death link.)
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
-    # Unchanged from the base configuration.
-    0: 50
+    # I'm only going to have this at 1 for now, because Death Link is likely to happen multiple times, which will screw up the jigsaw a lot even with this set at the minimum.
+    1: 50
   ###########################
   # Optional options: other #
   ###########################
@@ -241,15 +240,15 @@ Jigsaw:
     # Enable clues for the jigsaw puzzle.
     # If enabled, there is a button that shows the outline of pieces that can merge (unlimited uses).
     # If disabled, the button is simply not there.
-    # Zeroman95 is turning this off, so I am too.
-    'false': 50
-    'true': 0
+    # Although Zeroman95 is turning this off, I'm leaving this on because I need to make sure I at least have the ability to fall back on it if I get frustrated.
+    'false': 0
+    'true': 50
   total_size_of_image:
     # How large the pieces will be. 100 means the puzzle is maximum size. 50 means width and height are halved.
     # If you want a lot of free space around the puzzle, you can set this to a lower value.
     # You can define additional values between the minimum and maximum values. Minimum value is 30, maximum value is 100.
-    # Unchanged from the base configuration.
-    85: 50
+    # Reduced from 85%, the image was too large for me to have pieces arranged on the screen.
+    80: 50
   ###########################
   # Item & Location Options #
   ###########################
