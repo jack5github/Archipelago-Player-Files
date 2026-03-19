@@ -19,10 +19,10 @@ Jigsaw:
   number_of_pieces: # Set to 100 instead of 50.
     100: 99
 
-  grid_type_and_rotations: # Unchanged
-    square_no_rotation: 99
-    square_180_rotation: 0
-    square_90_rotation: 0
+  grid_type_and_rotations: # square rotation or no rotation that is the question.
+    square_no_rotation: 25
+    square_180_rotation: 25
+    square_90_rotation: 25
     hex_no_rotation: 0
     hex_180_rotation: 0
     hex_120_rotation: 0
@@ -32,12 +32,12 @@ Jigsaw:
     meme_one_column_no_rotation: 0
     meme_one_column_180_rotation: 0
 
-  uniform_piece_size: # Unchanged
-    'false': 50
-    'true': 0
+  uniform_piece_size: # Turned to true.
+    'false': 0
+    'true': 50
 
   border_type: # Unchanged
-    classic: 50
+    classic: 99
     triangle: 0
     curved: 0
     diagonal: 0
@@ -83,7 +83,7 @@ Jigsaw:
     'true': 50
 
   percentage_fillers_itempool: # Unchanged
-    0: 50
+    25: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
@@ -175,19 +175,15 @@ Jigsaw:
     random-high: 0 # random value weighted towards higher values
     random-range-1-10: 0 # random value between 1 and 10
 
-  death_link: # Unchanged
-    0: 50
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-0-10: 0 # random value between 0 and 10
+  death_link: # Set random amount of pieces to ruin.
+    random-range-0-10: 99
 
-  enable_clues: # Set to false.
+  enable_clues: # Set to false. Jack has this set to true.
     'false': 50
     'true': 0
 
-  total_size_of_image: # Unchanged
-    85: 50
+  total_size_of_image: # Image size changed to 65 because the pieces were really cramped on the whole board.
+    65: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
