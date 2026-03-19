@@ -8,9 +8,9 @@ requires:
   game:
     Luigi's Mansion: 0.6.0
 
-Luigi's Mansion: # Set to 25 because disabled would make me get SUPER STUCK early on.
+Luigi's Mansion: # Set to 60 now because 25 is not enough and I get stuck immediately.
   progression_balancing:
-    25: 99
+    60: 99
 
   accessibility: # I want the whole Mansion.
     full: 99

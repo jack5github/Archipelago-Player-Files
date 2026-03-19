@@ -7,8 +7,8 @@ requires:
   version: 0.6.6
 
 Plants vs. Zombies:
-  progression_balancing:
-    25: 99
+  progression_balancing: # Lowering Plants Vs. Zombies to 15 because there is so much to do in this game and I would rather not play it.
+    15: 99
 
   accessibility:
     full: 99

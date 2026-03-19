@@ -6,8 +6,8 @@ requires:
   game:
     Totally Accurate Battle Simulator: 0.1.0
 Totally Accurate Battle Simulator:
-  progression_balancing:
-    25: 99
+  progression_balancing: # Changed back to 50 because I have messed with Progression for too long.
+    50: 99
 
   accessibility:
     full: 50

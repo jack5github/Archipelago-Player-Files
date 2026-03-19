@@ -9,8 +9,8 @@ requires:
   version: 0.6.6
 
 The Legend of Zelda:
-  progression_balancing:
-    25: 99
+  progression_balancing: # Changed back to 50 because I have messed with Progression for too long.
+    50: 99
 
   accessibility:
     full: 50

@@ -8,7 +8,7 @@ requires:
 
 Elementipelago:
   progression_balancing: # Unchanged
-    25: 99
+    50: 99
 
   accessibility: # Unchanged
     full: 50

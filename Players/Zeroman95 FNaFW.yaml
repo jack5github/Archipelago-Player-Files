@@ -9,7 +9,7 @@ requires:
 
 FNaFW:
   progression_balancing:
-    25: 99 # Changed to 25 because FNaFW never gets gameplay.
+    85: 99 # Super increasing this to 85 because FNaFW NEVER gets played at all within 25.
 
   accessibility:
     full: 99 # Unchanged
