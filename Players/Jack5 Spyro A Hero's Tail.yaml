@@ -13,8 +13,8 @@ requires:
   # Game Options #
   ################
   progression_balancing:
-    # Unchanged from the base configuration.
-    normal: 50
+    # It feels really bad for an Archipelago run to be stuck because of Spyro: A Hero's Tail, so I've reduced the default progression balancing.
+    40: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
@@ -158,6 +158,10 @@ requires:
   start_hints: []
   start_location_hints: []
   exclude_locations:
+    # This particular Blink minigame is extremely difficult. More Blink minigames may be excluded in the future.
+    - 'Frostbite Village: Dragon Egg from Blink'
+    - 'Frostbite Village: Light Gem from Blink'
+    # TODO: Remove all of the below once the shop is fixed and rebalanced
     # Exclude half of the shop items so that Sphere 1 does not wind up being gigantic.
     - 'Moneybags: Shop Item 28'
     - 'Moneybags: Shop Item 29'
