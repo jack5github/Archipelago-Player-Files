@@ -1,0 +1,78 @@
+﻿name: ZeromanRefunct{NUMBER}
+
+description: Zeroman95s Refunct YAML
+
+game: Refunct
+requires:
+  version: 0.6.7
+  game:
+    Refunct: 0.8.3
+
+Refunct:
+  progression_balancing: # Unchanged
+    50: 99
+
+  accessibility: # Unchanged
+    full: 50
+    minimal: 0
+
+  amount_of_grass: # Set random amount of grass. Doesn't really matter.
+    random-range-10-160: 99
+
+  required_grass_percentage: # Set whatever amount of grass is needed randomly.
+    random-range-0-100: 99
+
+  final_platform: # This sets it so that I cannot know where my final platform is UNLESS I hint it with !hint final platform.
+    random_unknown: 99
+
+  cubes: # Unchanged
+    red_cubes_bag: 99
+
+  extra_cubes: # Unchanged
+    green_cubes_bag: 99
+
+  number_of_minigames: # Set to 0 I don't want to do any minigames at all.
+    0: 99
+
+  nerf_minigame_checks: # Unchanged (Minigames are off)
+    'false': 50
+    'true': 0
+
+  number_of_unlocks_per_minigame: # Unchanged (Minigames are off)
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-2: 0 # random value between 1 and 2
+
+  minigames_likeliness: # Unchanged (Minigames are off)
+    Block Brawl Minigame: 4
+    Button Galore Minigame: 1
+    OG Randomizer Minigame: 3
+    Seeker Minigame: 2
+    Vanilla Minigame: 3
+
+  traps: # Add all traps.
+    all: 99
+
+  death_link: # Course death link should be on.
+    'false': 0
+    'true': 50
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
