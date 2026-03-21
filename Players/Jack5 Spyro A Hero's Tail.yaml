@@ -7,7 +7,7 @@ game: "Spyro: A Hero's Tail"
 requires:
   version: 0.6.7
   game:
-    "Spyro: A Hero's Tail": 0.2.1
+    "Spyro: A Hero's Tail": 0.3.0
 "Spyro: A Hero's Tail":
   ################
   # Game Options #
@@ -107,8 +107,8 @@ requires:
   light_gem_door_cost_max:
     # Sets the maximum cost for light gem doors.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
-    # Unchanged from the base configuration.
-    50: 50
+    # Only 35% of Light Gems maximum are required to open Light Gem doors.
+    35: 50
   randomize_boss_lair_doors:
     # Sets the Dark Gem requirement of the Boss Lairs.
     # Note: The door to your goal boss will always be the most expensive of the 4.
@@ -119,6 +119,16 @@ requires:
     default: 0
     randomized: 50
     shuffle: 0
+  boss_lair_door_cost_min:
+    # Sets the minimum cost for the boss lairs.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 40.
+    # Unchanged from the base configuration.
+    1: 50
+  boss_lair_door_cost_max:
+    # Sets the maximum cost for the boss lairs.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 40.
+    # Only 35% of Dark Gems maximum are required to open Dark Gem doors.
+    14: 50
   misc_goal:
     # Set the goal condition.
     # Unchanged from the base configuration.
