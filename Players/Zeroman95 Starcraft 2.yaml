@@ -1,0 +1,484 @@
+﻿name: ZeromanSC2{NUMBER}
+
+description: Zeroman95s Starcraft 2 YAML
+
+game: Starcraft 2
+requires:
+  version: 0.6.7
+  game:
+    Starcraft 2: 4.0.0
+
+Starcraft 2:
+  progression_balancing: # Unchanged
+    50: 99
+
+  accessibility: # Unchanged
+    full: 50
+    minimal: 0
+
+  start_inventory: {}
+
+  disable_forced_camera: # Changed to false because I always play with forced camera.
+    'false': 50
+    'true': 0
+
+  skip_cutscenes: # Unchanged
+    'false': 50
+    'true': 0
+
+  game_difficulty: # Who doesn't love a good challenge?
+    hard: 99
+
+  game_speed: # The game is normally at faster speed when in Skirmish or any mode ever.
+    faster: 99
+
+  starter_unit: # Unchanged
+    'off': 99
+
+  required_tactics: # By setting it to advanced I need to be clever to progress.
+    advanced: 99
+
+  war_council_nerfs: # Makes all Protoss units from Legacy of The Void require their upgrades as seperate items in the pool.
+    'false': 0
+    'true': 50
+
+  difficulty_curve: # Uneven makes it so sure I get a easy mission at first but then easy missions can be anywhere else.
+    standard: 0
+    uneven: 50
+
+  mission_order: # Missions on a Grid is an incredible way to do it.
+    grid: 99
+
+  maximum_campaign_size: # 18 Missions that way it is a 4x4 grid.
+    18: 99
+
+  enabled_campaigns: # The first three Campaigns are picked to put into the Grid.
+    ['Wings of Liberty', 'Prophecy', 'Heart of the Swarm', 'Legacy of the Void']
+
+  enable_race_swap: # Unchanged
+    disabled: 50
+    pick_one: 0
+    pick_one_non_vanilla: 0
+    shuffle_all: 0
+    shuffle_all_non_vanilla: 0
+
+  shuffle_no_build: # Make all Missions including No Build Missions to be random.
+    'false': 50
+    'true': 0
+
+  key_mode: # Unchanged
+    disabled: 50
+    questlines: 0
+    missions: 0
+    progressive_questlines: 0
+    progressive_missions: 0
+    progressive_per_questline: 0
+
+  shuffle_campaigns: # Doesn't do anything unless Vanilla Shuffled or Mini Campaign Mission Order is picked.
+    'false': 0
+    'true': 50
+
+  all_in_map: # This only works if this final mission is picked. This is the Mission from WOL.
+    ground: 33
+    air: 33
+    random: 33
+
+  two_start_positions: # Unchanged
+    'false': 50
+    'true': 0
+
+  selected_races:
+    # Pick which factions' missions and items can be shuffled into the world.
+    ['Zerg', 'Protoss', 'Terran']
+
+  exclude_very_hard_missions: # Unchanged
+    default: 50
+    'true': 0
+    'false': 0
+
+  mission_race_balancing: # Disabled to make one of the races the most unique and special to the run.
+    disabled: 99
+    semi_balanced: 0
+    fully_balanced: 0
+
+  ensure_generic_items: # Make Generic Items completely random.
+    random-range-0-100: 99
+
+  min_number_of_upgrades: # MAX UPGRADES PLEASE.
+    13: 99
+
+  max_number_of_upgrades: # -1 means Infinite upgrades.
+    -1: 99
+
+  max_upgrade_level: # Mor upgrad.
+    5: 99
+
+  generic_upgrade_missions: # Unchanged
+    0: 99
+
+  generic_upgrade_research: # Sets it so when I get weapon armor or unique upgrades for a unit that I don't require to research them to make them work in the Mission.
+    always_auto: 99
+
+  generic_upgrade_research_speedup: # Unchanged
+    'false': 50
+    'true': 0
+
+  generic_upgrade_items: # Unchanged
+    individual_items: 99
+
+  kerrigan_presence: # Unchanged
+    vanilla: 99
+
+  grant_story_levels: # Unchanged
+    minimum: 99
+
+  kerrigan_levels_per_mission_completed: # Unchanged
+    0: 99
+
+  kerrigan_levels_per_mission_completed_cap: # Unchanged
+    -1: 99
+
+  kerrigan_level_item_sum: # Unchanged
+    70: 99
+
+  kerrigan_level_item_distribution: # Sets it so Kerrigans levels are ONE level each in the pool.
+    size_1: 99
+
+  kerrigan_total_level_cap: # Unchanged
+    -1: 99
+
+  start_primary_abilities: # Start with one ability for Kerrigan.
+    1: 99
+
+  kerrigan_primal_status: # Puts it as a Item in the pool.
+    item: 99
+
+  kerrigan_max_active_abilities: # Unchanged
+    12: 99
+
+  kerrigan_max_passive_abilities: # Unchanged
+    5: 99
+
+  spear_of_adun_presence: # Protoss Campaign only.
+    any_race_lotv: 99
+
+  spear_of_adun_present_in_no_build: # Unchanged
+    'false': 50
+    'true': 0
+
+  spear_of_adun_passive_ability_presence: # Protoss Campaign only.
+    any_race_lotv: 99
+
+  spear_of_adun_passive_present_in_no_build: # Unchanged
+    'false': 50
+    'true': 0
+
+  spear_of_adun_max_active_abilities: # Unchanged
+    13: 99
+
+  spear_of_adun_max_passive_abilities: # Unchanged
+    3: 99
+
+  nova_max_weapons: # NOVA CAMPAIGN NOT SELECTED.
+    5: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-5: 0 # random value between 0 and 5
+
+  nova_max_gadgets: # NOVA CAMPAIGN NOT SELECTED.
+    5: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-5: 0 # random value between 0 and 5
+
+  nova_ghost_of_a_chance_variant: # NOVA CAMPAIGN NOT SELECTED.
+    wol: 50
+    nco: 0
+    auto: 0
+
+  enable_morphling: # Unchanged
+    'false': 50
+    'true': 0
+
+  mercenary_highlanders: # Unchanged
+    'false': 0
+    'true': 50
+
+  victory_cache: # Unchanged
+    0: 99
+
+  vanilla_locations: # Unchanged
+    enabled: 99
+
+  extra_locations: # Sets it so all bonus objectives have a 50% chance of being added.
+    half_chance: 99
+
+  challenge_locations: # Sets it so all bonus objectives have a 50% chance of being added.
+    half_chance: 99
+
+  mastery_locations: # Not happening.
+    disabled: 99
+
+  basebust_locations: # Nope.
+    disabled: 99
+
+  speedrun_locations: # Absolutely not.
+    disabled: 99
+
+  preventative_locations: # Nah.
+    disabled: 50
+
+  filler_percentage: # Have 25% be filler at least.
+    25: 99
+
+  minerals_per_item: # Unchanged
+    25: 99
+
+  vespene_per_item: # Unchanged
+    25: 99
+
+  starting_supply_per_item: # One Supply per item in pool.
+    1: 99
+
+  maximum_supply_per_item: # Need that supply!
+    10: 99
+
+  maximum_supply_reduction_per_item: # Supply Trap will make it challenging.
+    10: 99
+
+  lowest_maximum_supply: # Unchanged
+    180: 99
+
+  research_cost_reduction_per_item: # Unchanged
+    2: 99
+
+  filler_items_distribution: # Unchanged
+    1 Kerrigan Level: 0
+    Additional Maximum Supply: 1
+    Additional Starting Minerals: 1
+    Additional Starting Supply: 1
+    Additional Starting Vespene: 1
+    Decreased Maximum Supply: 0
+    Increased Building Construction Speed: 1
+    Increased Shield Regeneration: 1
+    Increased Upgrade Research Speed: 1
+    Reduced Upgrade Research Cost: 1
+
+  locked_items: {}
+
+  excluded_items: {}
+
+  unexcluded_items: {}
+
+  vanilla_items_only: # Unchanged
+    'false': 50
+    'true': 0
+
+  exclude_overpowered_items: # Unchanged
+    'false': 50
+    'true': 0
+
+  excluded_missions: []
+
+  mission_order_scouting: # Hints all objective checks if the Mission is first completed.
+    completed: 99
+
+  difficulty_damage_modifier: # Unchanged
+    'false': 0
+    'true': 50
+
+  take_over_ai_allies: # Unchanged
+    'false': 50
+    'true': 0
+
+  enable_void_trade: # Unchanged
+    'false': 50
+    'true': 0
+
+  void_trade_age_limit: # Unchanged
+    disabled: 0
+    1_week: 0
+    1_day: 0
+    4_hours: 0
+    2_hours: 0
+    1_hour: 0
+    30_minutes: 50
+    5_minutes: 0
+
+  void_trade_workers: # Unchanged
+    'false': 50
+    'true': 0
+
+  grant_story_tech: # Unchanged
+    no_grant: 50
+    grant: 0
+    allow_substitutes: 0
+
+  custom_mission_order: # Unchanged
+    Default Campaign:
+      Default Layout:
+        size: 9
+        type: grid
+      display_name: 'null'
+      entry_rules: []
+      global:
+        display_name: 'null'
+        entry_rules: []
+        exit: false
+        goal: false
+        max_difficulty: relative
+        min_difficulty: relative
+        mission_pool:
+          - all missions
+        missions: []
+        unique_name: false
+        unique_progression_track: 0
+      goal: true
+      max_difficulty: relative
+      min_difficulty: relative
+      unique_name: false
+      unique_progression_track: 0
+
+  player_color_terran_raynor: # Pick a Colour any colour!
+    white: 4
+    red: 4
+    blue: 4
+    teal: 4
+    purple: 4
+    yellow: 4
+    orange: 4
+    green: 4
+    light_pink: 4
+    violet: 4
+    light_grey: 4
+    dark_green: 4
+    brown: 4
+    light_green: 4
+    dark_grey: 4
+    pink: 4
+    rainbow: 4
+    mengsk: 4
+    bright_lime: 4
+    arcane: 4
+    ember: 4
+    hot_pink: 4
+    default: 4
+
+  player_color_protoss:
+    white: 4
+    red: 4
+    blue: 4
+    teal: 4
+    purple: 4
+    yellow: 4
+    orange: 4
+    green: 4
+    light_pink: 4
+    violet: 4
+    light_grey: 4
+    dark_green: 4
+    brown: 4
+    light_green: 4
+    dark_grey: 4
+    pink: 4
+    rainbow: 4
+    mengsk: 4
+    bright_lime: 4
+    arcane: 4
+    ember: 4
+    hot_pink: 4
+    default: 4
+
+  player_color_zerg:
+    white: 4
+    red: 4
+    blue: 4
+    teal: 4
+    purple: 4
+    yellow: 4
+    orange: 4
+    green: 4
+    light_pink: 4
+    violet: 4
+    light_grey: 4
+    dark_green: 4
+    brown: 4
+    light_green: 4
+    dark_grey: 4
+    pink: 4
+    rainbow: 4
+    mengsk: 4
+    bright_lime: 4
+    arcane: 4
+    ember: 4
+    hot_pink: 4
+    default: 4
+
+  player_color_zerg_primal:
+    white: 4
+    red: 4
+    blue: 4
+    teal: 4
+    purple: 4
+    yellow: 4
+    orange: 4
+    green: 4
+    light_pink: 4
+    violet: 4
+    light_grey: 4
+    dark_green: 4
+    brown: 4
+    light_green: 4
+    dark_grey: 4
+    pink: 4
+    rainbow: 4
+    mengsk: 4
+    bright_lime: 4
+    arcane: 4
+    ember: 4
+    hot_pink: 4
+    default: 4
+
+  player_color_nova: # Unchanged
+    # Determines in-game player team color in Nova Covert Ops missions.
+    white: 0
+    red: 0
+    blue: 0
+    teal: 0
+    purple: 0
+    yellow: 0
+    orange: 0
+    green: 0
+    light_pink: 0
+    violet: 0
+    light_grey: 0
+    dark_green: 0
+    brown: 0
+    light_green: 0
+    dark_grey: 0
+    pink: 0
+    rainbow: 0
+    mengsk: 0
+    bright_lime: 0
+    arcane: 0
+    ember: 0
+    hot_pink: 0
+    default: 50
+
+  local_items: []
+
+  non_local_items: []
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
