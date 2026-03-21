@@ -1,0 +1,154 @@
+﻿name: MultiAuto{NUMBER}
+description: |-
+  Multiplayer Autopelago player file by Jack5
+
+  TODO: Add description
+game: Autopelago
+requires:
+  version: 0.6.7
+  game:
+    Autopelago: 0.11.0
+Autopelago:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    normal: 50
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+  fill_with_determination:
+    # Either fills the rat with determination, or does nothing. Perhaps both.
+    # This option was added early on for technical reasons. It does not directly affect the game.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  victory_location:
+    # Optionally moves the final victory location earlier to reduce the number of locations in the multiworld.
+    # - **Captured Goldfish:** The game stops at the end of The Sewers. This gives the shortest game.
+    # - **Secret Cache:** The game stops at the end of Cool World. This gives the middlest-length game.
+    # - **Snakes on a Planet (default):** The game goes all the way to "Moon, The". This gives the longest game.
+    # Stop at the end of the computer realm, two-thirds of the standard game length.
+    captured_goldfish: 0
+    secret_cache: 50
+    snakes_on_a_planet: 0
+  enabled_buffs:
+    # Enables various buffs that affect how the rat behaves. All are enabled by default.
+    # - **Well Fed:** Gets more done
+    # - **Lucky:** One free success
+    # - **Energized:** Moves faster
+    # - **Stylish:** Better RNG
+    # - **Confident:** Ignore a trap
+    # - **Smart:** Next check is progression
+    # Unchanged from the base configuration.
+    - Confident
+    - Stylish
+    - Energized
+    - Lucky
+    - Smart
+    - Well Fed
+  enabled_traps:
+    # Enables various traps that affect how the rat behaves. All are enabled by default.
+    # - **Upset Tummy:** Gets less done
+    # - **Unlucky:** Worse RNG
+    # - **Sluggish:** Moves slower
+    # - **Distracted:** Skip a "step"
+    # - **Startled:** Run towards start
+    # - **Conspiratorial:** Next check is trap
+    # Unchanged from the base configuration.
+    - Conspiratorial
+    - Sluggish
+    - Unlucky
+    - Distracted
+    - Startled
+    - Upset Tummy
+  msg_changed_target:
+    # What messages the rat can say when a buff or trap is added to the queue of location checks to send before resuming its normal logic.
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    # The text {LOCATION} will be replaced with the name of the actual location.
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    # Below are the default messages:
+    - Oh, hey, what's that thing over there at {LOCATION}?
+    - There's something at {LOCATION}, I'm sure of it!
+    - Something at {LOCATION} smells good!
+    - There's a rumor that something's going on at {LOCATION}!
+    # And below are some custom messages:
+    - The stone that was covering {LOCATION} broke apart! I'm checking it out. # Archipeladoku
+    - I'm making a beeline for {LOCATION}, there's bound to be some good resources there! # Civilization V
+    - Once I get through the glitch world, I'll be at {LOCATION} in no time! # FNAF World
+    - Be right back, just swinging my way over to {LOCATION}! # Grapple Dog
+    - It's my personal objective to head to {LOCATION}. Off I go! # Keymaster's Keep
+    - On my way to {LOCATION}, hopefully nothing spooky pops up... # Luigi's Mansion
+    - The path to {LOCATION} has been built! I can't wait to give it a whirl! # OpenRCT2
+    - Time to make the expedition up to {LOCATION}, I hope I have enough stamina. # PEAK
+    - The plants in this region are telling me there's something at {LOCATION}... # Plants vs. Zombies
+    - My rogue AI companion is saying I ought to go to {LOCATION} next. # Portal 2
+    - Maybe there will be a fancy gadget in {LOCATION}? Only one way to find out! # Ratchet & Clank 3
+    - There's bound to be some expensive valuables at {LOCATION}! # R.E.P.O.
+    - It's quite crowded on the way to {LOCATION}, but I'll make it through. # The Simpsons: Hit and Run
+    - There's a floor puzzle leading me right to {LOCATION}! # The Witness
+    - I rolled some dice, and it says to go to {LOCATION}. I'm in your hands, Lady Luck! # Yacht Dice
+  msg_enter_go_mode:
+    # What messages the rat can say when it first realizes that it can complete its goal.
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    # Unchanged from the base configuration.
+    # TODO: Add custom messages
+    - That's it! I have everything I need! The goal is in sight!
+  msg_enter_bk:
+    # What messages the rat can say when it first sees that no further location checks are in logic.
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    # Unchanged from the base configuration.
+    # TODO: Add custom messages
+    - I don't have anything to do right now. Go team!
+    - Hey, I'm completely stuck. But I still believe in you!
+    - I've run out of things to do. How are you?
+    - I'm out of things for now, gonna get a coffee. Anyone want something?
+  msg_remind_bk:
+    # What messages the rat can say to occasionally remind the players that it has no further location checks in logic.
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    # Unchanged from the base configuration.
+    # TODO: Add custom messages
+    - I don't have anything to do right now. Go team!
+    - Hey, I'm completely stuck. But I still believe in you!
+    - I've run out of things to do. How are you?
+    - I'm out of things for now, gonna get a coffee. Anyone want something?
+  msg_exit_bk:
+    # What messages the rat can say after one or more location checks become in logic.
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    # Unchanged from the base configuration.
+    # TODO: Add custom messages
+    - Yippee, that's just what I needed!
+    - I'm back! I knew you could do it!
+    - Sweet, I'm unblocked! Thanks!
+    - Squeak-squeak, it's rattin' time!
+  msg_completed_goal:
+    # What messages the rat can say to celebrate victory.
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    # Unchanged from the base configuration.
+    # TODO: Add custom messages
+    - Yeah, I did it! er... WE did it!
+  lactose_intolerant:
+    # Replaces all references to lactose-containing products with less offensive ones.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items:
+    # Everything that progresses this idle game should be found in other worlds, requiring the involvement of real players.
+    - Progression Items
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
