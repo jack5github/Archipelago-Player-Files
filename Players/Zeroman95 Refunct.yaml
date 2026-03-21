@@ -10,7 +10,7 @@ requires:
 
 Refunct:
   progression_balancing: # Unchanged
-    50: 99
+    60: 99
 
   accessibility: # Unchanged
     full: 50
