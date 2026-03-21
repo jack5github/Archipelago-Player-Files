@@ -20,7 +20,7 @@ Refunct:
     random-range-10-160: 99
 
   required_grass_percentage: # Set whatever amount of grass is needed randomly.
-    random-range-25-100: 99
+    random-range-50-100: 99
 
   final_platform: # This sets it so that I cannot know where my final platform is UNLESS I hint it with !hint final platform.
     random_unknown: 99
