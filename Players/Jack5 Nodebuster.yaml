@@ -13,8 +13,8 @@ Nodebuster:
   # Game Options #
   ################
   progression_balancing:
-    # Unchanged from the base configuration.
-    normal: 50
+    # Nodebuster is a very long game. Using normal progression balancing causes it to be played too frequently, because other games have nothing to do in them. Therefore, make this game get stuck more often.
+    40: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
