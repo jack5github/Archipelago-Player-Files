@@ -1,8 +1,5 @@
 name: ForboChess{NUMBER}
-description: |-
-  Forbo's ChecksMate player file
-
-  TODO: Add description
+description: Forbo's ChecksMate player file
 game: ChecksMate
 ChecksMate:
   progression_balancing: 50

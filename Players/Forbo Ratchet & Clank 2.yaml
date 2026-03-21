@@ -1,8 +1,5 @@
 ﻿name: ForboRAC2{NUMBER}
-escription: |-
-  Forbo's Ratchet & Clank 2 player file
-
-  TODO: Add description
+escription: Forbo's Ratchet & Clank 2 player file
 game: Ratchet & Clank 2
 requires:
   version: 0.5.0
@@ -40,7 +37,7 @@ Ratchet & Clank 2:
   enable_bolt_multiplier:
     # Enables the bolt multiplier feature without being in New Game+.
     'false': 50
-  no_revisit_reward_change: 
+  no_revisit_reward_change:
     # In the vanilla game, rewards given when killing enemies change when you come back to a previously visited planet
     # (bolts & experience). Enabling this option removes this behavior, making the experience and bolts obtained more
     # stable throughout the seed.
@@ -70,7 +67,7 @@ Ratchet & Clank 2:
     # In the vanilla game, only the first challenge and the race challenge completed perfectly give an item as a
     # reward. If enabled, this option makes all spaceship challenges reward an item on first completion.
     'false': 50
-  extend_weapon_progression: 
+  extend_weapon_progression:
     # If enabled, make all weapon tiers obtainable through weapon experience. This means LV2 (orange) weapons can
     # upgrade into LV3 (yellow) weapons, which can then upgrade into LV4 (blue) weapons.
     # This effectively makes all weapons that are usually restricted to NG+ available with enough grinding.

@@ -1,8 +1,5 @@
 name: ForboToon{NUMBER}
-description: |-
-  Forbo's Toontown player file
-
-  TODO: Add description
+description: Forbo's Toontown player file
 game: Toontown
 requires:
   version: 0.6.3
@@ -32,7 +29,7 @@ Toontown:
   max_global_gag_xp: 30
   # The gags to have when starting a new game. using "randomized" instead of a gag will replace with a random extra gag.
   # you cannot start with gags above level 1, duplicate values other than "randomized" will be ignored.
-  # 
+  #
   # valid keys: ["randomized", "toonup", "trap", "lure", "sound", "throw", "squirt", "drop"]
   # ex. ["toonup", "sound"] will start you with toonup and sound as starting tracks
   # ex. ["sound"] will start you with only sound as a starting track
@@ -40,7 +37,7 @@ Toontown:
   # (cont.) This will allow for gag combinations such as ["trap", "toonup"] to be possible with randomization
   # ex. ['wild', 'randomized', 'randomized'] will roll two random tracks with no consideration
   # An empty list will start you with no gag tracks
-  starting_gags: ['randomized', 'randomized']
+  starting_gags: [ 'randomized', 'randomized' ]
   # Choose an offensive gag track to not receive during the seed.
   # none (default): Receive all Gag tracks
   # trap: Never receive Trap Gags
@@ -94,7 +91,7 @@ Toontown:
   # "randomized" - Will choose a random not-yet chosen goal as one of your goals.
   #                NOTE: Can be input into the below list multiple times for multiple random goals
   # Examples: ["cog-bosses", "hood-tasks"] | ["randomized", "randomized", "gag-tracks"]
-  win_condition: ["cog-bosses"]
+  win_condition: [ "cog-bosses" ]
   # Allows for the selected win conditions to be omitted when randomizing a win condition.
   # Example: Adding "bounties" to this option will ensure bounties can't be rolled when you roll for a randomized win condition
   # valid keys: [ "cog-bosses", "bounties", "total-tasks", "hood-tasks", "gag-tracks",
@@ -313,8 +310,7 @@ Toontown:
   # Traps - All traps
   # Starting hints for items in your world
   # Includes Cog Disguises by default
-  start_hints:
-    [Cog Disguises]
+  start_hints: [ Cog Disguises ]
   local_items:
     # Forces these items to be in your own game.
     []
