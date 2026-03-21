@@ -137,9 +137,7 @@ Refunct:
   ###########################
   # Item & Location Options #
   ###########################
-  local_items:
-    # Grass is one of the items required for game completion. It doesn't make sense for this item to be in a different world. Instead, clusters should be in other worlds.
-    - Grass
+  local_items: []
   non_local_items:
     # Clusters are items that reveal platforms to turn into grass. These should be found in other worlds.
     - Trigger Cluster 1
@@ -172,6 +170,8 @@ Refunct:
     - Trigger Cluster 28
     - Trigger Cluster 29
     - Trigger Cluster 30
+    # Grass is one of the items required for game completion. I tried setting this as a local item, however this caused Refunct to contain primarily grass over other world items. Because of this, I am using `plando_items` to specify platforms with grass, while all others will be found in other worlds.
+    - Grass
   start_inventory:
     # Without Swim, it is possible to get into a position where it is impossible to continue as a solo player, due to there being large expanses of water that you can't cross.
     Swim: 1
@@ -180,4 +180,34 @@ Refunct:
   exclude_locations: []
   priority_locations: []
   item_links: []
-  plando_items: []
+  plando_items:
+    # 25 hard-to-reach platforms are forced to give grass. The rest of the grass is found in other worlds.
+    - items:
+        Grass: true
+      locations:
+        - Platform 3-2
+        - Platform 4-2
+        - Platform 6-1
+        - Platform 6-2
+        - Platform 8-10
+        - Platform 9-6
+        - Platform 10-2
+        - Platform 14-2
+        - Platform 17-2
+        - Platform 18-1
+        - Platform 18-3
+        - Platform 19-5
+        - Platform 20-7
+        - Platform 21-5
+        - Platform 23-1
+        - Platform 23-2
+        - Platform 24-1
+        - Platform 27-1
+        - Platform 27-8
+        - Platform 28-3
+        - Platform 28-8
+        - Platform 28-18
+        - Platform 29-1
+        - Platform 29-2
+        - Platform 30-11
+      force: false
