@@ -2,7 +2,7 @@
 description: |-
   Jack5's ChecksMate player file
 
-  TODO: Add description
+  This Chess player file attempts to reduce the overall difficulty of the game, while also improving the randomisation to create a more natural yet Fairy piece-supporting experience. Chess pieces must be found in other worlds.
 game: ChecksMate
 requires:
   version: 0.6.6
@@ -22,11 +22,11 @@ ChecksMate:
     # Ordered Progressive: When you deliver checkmate, you instead graduate to a Super-Sized board. Your goal is to checkmate again, on that board!
     # Progressive: As Ordered Progressive, but the board grows larger when someone sends you your Super-Sized board.
     # Super: You skip the 8x8 board immediately. Nearly equivalent to adding Super-Size Me to your Start Inventory.
-    # Playing on the large-size board is unsatisfying, because by that point, I have already gotten a majority of the checks in the game.
+    # Playing on the large-size board progressively is unsatisfying, because by that point, I have already gotten a majority of the checks in the game. Instead, let there be a 50% chance for the board to replace the 8x8 board at any time during a run.
     single: 50
     ordered_progressive: 0
     progressive: 0
-    super: 0
+    super: 50
   difficulty:
     # Which kinds of checks to expect of the player. In general, this mostly affects later checks (like Checkmate Maxima, the victory condition).
     # Grandmaster: All checks are baseline. You will generally hope for equal material, and may find yourself struggling.
@@ -34,10 +34,10 @@ ChecksMate:
     # Daily: The player may expect some difficulty with early checks, but complex game states will be relaxed. You will have about an extra Bishop and an extra Pawn for Checkmate Maxima to be considered in logic.
     # Bullet: All checks are relaxed. Material expectations are raised, so the player will have more material earlier. You will have about an extra Rook and an extra Bishop for Checkmate Maxima to be considered in logic.
     # Relaxed: Most checks require almost twice as much material, so the player will have overwhelming forces. You will have about an extra Queen and an extra Rook and an extra Pawn for Checkmate Maxima to be considered in logic.
-    # Unchanged from the base configuration.
+    # Reduced from Daily due to my difficulties succeeding early on within this game.
     grandmaster: 0
-    daily: 50
-    bullet: 0
+    daily: 0
+    bullet: 50
     relaxed: 0
   enable_tactics:
     # All: Adds the "Fork" and "Play Turns" locations to the pool. (This adds 10 locations and items.)
@@ -93,13 +93,13 @@ ChecksMate:
     # How many Royal pieces (Kings) to place, which must all be captured before one experiences defeat.
     # The player always starts with 1 King, but may find Progressive Consuls if this is set higher than 1. Progressive Consuls add additional Kings to the player's starting board.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 3.
-    # Unchanged from the base configuration.
-    1: 50
+    # Allow a second King to appear on the board 50% of the time.
+    random-range-1-2: 50
   fairy_kings:
     # Whether to use fairy king upgrades, such as the Knight's moves. Adding multiple upgrades to the pool will allow your King to become a hyper-powerful invented piece if all upgrades are collected.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 2.
-    # I am enabling all Fairy movement for my King for now.
-    2: 50
+    # Fairy movement should not be enabled all the time for Kings, so allow this option to be 0 randomly
+    random-range-0-2: 50
   fairy_chess_pieces:
     # Which collection of fairy pieces to allow, if any. Choose FIDE to disable fairy chess pieces. Choose Configure to disable this option in favor of the more precise "Fairy Chess Pieces Configure" option.
     # FIDE: The default, which only allows the standard pieces defined by FIDE (Queen, Rook, Knight, Bishop).
@@ -146,15 +146,15 @@ ChecksMate:
     # Any Pawn: A mix of Vanilla and Berolina - anything referred to as a Pawn by the source text.
     # Any Fairy: A mix of Berolina and Checkers - anything except ordinary Pawns.
     # Any Classical: A mix of Vanilla and Checkers - anything a player would recognise from their childhood.
-    # I am enabling all Fairy pieces for now.
-    vanilla: 0
-    mixed: 50
-    berolina: 0
-    checkers: 0
+    # Allow Fairy pawns to appear, but do not mix them with other Fairy pawn types. Also have there be a chance of only vanilla pawns appearing.
+    vanilla: 2
+    mixed: 0
+    berolina: 1
+    checkers: 1
     reserved: 0
-    any_pawn: 0
+    any_pawn: 1
     any_fairy: 0
-    any_classical: 0
+    any_classical: 1
   minor_piece_limit_by_type:
     # How many of any given type of minor piece you might play with. If set to 1, you will never start with more than 1 Knight, nor 1 Bishop, but you may have both 1 Knight and 1 Bishop. If set to 0, this setting is disabled.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 15.
@@ -197,8 +197,8 @@ ChecksMate:
     # Whether to add custom pieces to the pool of an unusual material type, enabling trades of asymmetric material values.
     # Disabled: Use the standard set of Pawn (1), Minor (3), Major (5), and Queen (9) pieces.
     # Jacks: As Disabled, but also add the custom Jack family of pieces, which are worth 7 material each. They may castle.
-    # I am enabling all Fairy pieces for now.
-    disabled: 0
+    # Let there be a 50-50 chance for 7-material pieces to appear.
+    disabled: 50
     jacks: 50
   ###########################
   # Item & Location Options #
