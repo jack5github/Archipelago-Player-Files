@@ -13,11 +13,12 @@ Nodebuster:
   # Game Options #
   ################
   progression_balancing:
-    # Nodebuster is a very long game. Using normal progression balancing causes it to be played too frequently, because other games have nothing to do in them. Therefore, make this game get stuck more often.
-    40: 50
+    # Nodebuster is a very long game. Using normal progression balancing causes it to be played too frequently, because other games have nothing to do in them. Therefore, I am making this game get stuck more often. 40% was too high.
+    30: 50
   accessibility:
-    # Unchanged from the base configuration.
+    # I am experimenting with a 50-50 chance of getting either full or minimal accessibility.
     full: 50
+    minimal: 50
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
     # How could I not include this when all the in-game runs are so short?
@@ -38,9 +39,9 @@ Nodebuster:
     'true': 50
   milestone:
     # Adds the Milestones Rewards and Locations to the item pool.
-    # I am not adding this, as Nodebuster already has too many locations.
-    'false': 50
-    'true': 0
+    # Getting free currency from other worlds doesn't seem like a bad idea.
+    'false': 0
+    'true': 50
   bossdrops:
     # Randomize Boss Drops.
     # - None - No boss drops will be randomized.
@@ -81,32 +82,32 @@ Nodebuster:
     - Boss-23
     - Boss-24
     - Boss-25
-    # Milestones
-    - Reds500
-    - Reds2k
-    - Reds4k
-    - Reds6k
-    - Reds8k
-    - Reds10k
-    - Reds15k
-    - Reds20k
-    - Reds30k
-    - Reds50k
-    - Reds100k
-    - Blues10
-    - Blues100
-    - Blues200
-    - Blues300
-    - Blues500
-    - Blues800
-    - Blues1.2k
-    - Blues1.6k
-    - Blues2k
-    - Blues4k
-    - Blues8k
-    - Yellows5
-    - Yellows10
-    - Yellows15
+    # Milestones used to be in this list, but I've since expunged them, as I think it would be more interesting to find various items there. That and the fact that I have enabled the milestone rewards randomisation option.
+    # - Reds500
+    # - Reds2k
+    # - Reds4k
+    # - Reds6k
+    # - Reds8k
+    # - Reds10k
+    # - Reds15k
+    # - Reds20k
+    # - Reds30k
+    # - Reds50k
+    # - Reds100k
+    # - Blues10
+    # - Blues100
+    # - Blues200
+    # - Blues300
+    # - Blues500
+    # - Blues800
+    # - Blues1.2k
+    # - Blues1.6k
+    # - Blues2k
+    # - Blues4k
+    # - Blues8k
+    # - Yellows5
+    # - Yellows10
+    # - Yellows15
     # Crypto Mine speed levels past 16, these are trivial to get given lots of processors
     - CryptoLevel-17
     - CryptoLevel-18
