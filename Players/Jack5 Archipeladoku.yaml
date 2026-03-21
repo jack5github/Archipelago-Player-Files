@@ -2,7 +2,7 @@ name: Jack5Sudoku{NUMBER}
 description: |-
   Jack5's Archipeladoku player file
 
-  This Archipeladoku configuration subtly changes the generation options to ensure a stable number of unlock locations. In order to achieve this, a 3x3 board size is used. Other adjustments include the removal of emoji traps, and the increased chance of disco and tunnel vision traps for more challenging Sudoku games, especially when rapidly filling in numbers.
+  This Archipeladoku configuration subtly changes the generation options to ensure a relatively stable number of unlock locations. In order to achieve this, a 3x3 and similar board sizes are used. Other adjustments include the removal of emoji traps, and the increased chance of disco and tunnel vision traps for more challenging Sudoku games, especially when rapidly filling in numbers.
 game: Archipeladoku
 requires:
   version: 0.6.6
@@ -18,11 +18,11 @@ Archipeladoku:
     full: 50
   block_size:
     # The size of a single block (and the width/height of each board).
-    # Force 3x3 sudoku boards, as a means of stabilising the number of unlock locations generated.
+    # I used to force 3x3 sudoku boards as a means of stabilising the number of unlock locations generated, however I have since made this select one of three acceptable board sizes.
     '4': 0
-    '6': 0
-    '8': 0
-    '9': 50
+    '6': 33
+    '8': 33
+    '9': 33
     '12': 0
     '16': 0
     random: 0
@@ -46,8 +46,8 @@ Archipeladoku:
     # - 12: 64 boards
     # - 16: 36 boards
     # You can define additional values between the minimum and maximum values. Minimum value is 3, maximum value is 100.
-    # Randomly choose between 5 and 7 boards, since 6 boards generates approximately 150 unlock locations.
-    random-range-5-7: 50
+    # Randomly choose between 5 and 10 boards, since 6 boards generates approximately 150 unlock locations at board size 9.
+    random-range-5-10: 50
   difficulty:
     # The overall difficulty level. Solving techniques required:
     # - Beginner: Naked/hidden singles.
