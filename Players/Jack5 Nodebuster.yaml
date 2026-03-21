@@ -1,0 +1,147 @@
+name: Jack5Node{NUMBER}
+description: |-
+  Jack5's Nodebuster player file
+
+  TODO: Add description
+game: Nodebuster
+requires:
+  version: 0.6.7
+  game:
+    Nodebuster: 0.1.3
+Nodebuster:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    # Unchanged from the base configuration.
+    normal: 50
+  accessibility:
+    # Unchanged from the base configuration.
+    full: 50
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # How could I not include this when all the in-game runs are so short?
+    'false': 0
+    'true': 50
+  goal:
+    # Defines the goal to accomplish in order to complete the randomizer.
+    # - Release Virus.
+    # - Release Virus with all 9 infinity upgrades unlocked.
+    # Unchanged from the base configuration.
+    release_virus: 50
+    release_virus_with_infinity: 0
+  crypto:
+    # Adds the 36 levels of the CryptoMine into the pool.
+    # When you level up the crypto mine, instead of speeding up the crypto mine it will instead give you a randomized item from the pool.
+    # I'm allowing the CryptoMine to be levelled up by actions other than my own.
+    'false': 0
+    'true': 50
+  milestone:
+    # Adds the Milestones Rewards and Locations to the item pool.
+    # I am not adding this, as Nodebuster already has too many locations.
+    'false': 50
+    'true': 0
+  bossdrops:
+    # Randomize Boss Drops.
+    # - None - No boss drops will be randomized.
+    # - Necessary Only - All boss drops are randomized but only 18 cores and 8 filler items.
+    # - All 26 - All 26 levels of boss drops will be randomized.
+    # I'm going all in on the randomisation here.
+    none: 0
+    necessary: 0
+    all_26: 50
+  progressive_items:
+    # Replaces a large portion of items in the pool with progressive versions for the respective upgrade.
+    # Without these, I can become overpowered in the game really quickly.
+    'false': 0
+    'true': 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items:
+    # Crypto Mine speed levels can only be found by other worlds, meaning that the mine will be faster when I get around to using it.
+    - CryptoLevel
+  start_inventory:
+    # Start with items that allow other upgrades to have an effect on the game.
+    CritChance1: 1 # Crit chance
+    PulseBolts: 1 # Pulse bolt
+    MovingPulser1: 1 # Second pulser
+    # So I don't have to move my mouse a lot in the late game, start with all pickup radius upgrades.
+    PickupRadius1: 5
+    # A useless menu item I should start with for convenience.
+    Milestones: 1
+  start_hints: []
+  start_location_hints: []
+  exclude_locations:
+    # Nodebuster has an excessive amount of locations, so a large majority of those that don't see much attention at all are excluded here. No more locations can be excluded, otherwise generation fails.
+    # Bosses past level 20, these are all extremely easy to beat given lots of upgrades
+    - Boss-21
+    - Boss-22
+    - Boss-23
+    - Boss-24
+    - Boss-25
+    # Milestones
+    - Reds500
+    - Reds2k
+    - Reds4k
+    - Reds6k
+    - Reds8k
+    - Reds10k
+    - Reds15k
+    - Reds20k
+    - Reds30k
+    - Reds50k
+    - Reds100k
+    - Blues10
+    - Blues100
+    - Blues200
+    - Blues300
+    - Blues500
+    - Blues800
+    - Blues1.2k
+    - Blues1.6k
+    - Blues2k
+    - Blues4k
+    - Blues8k
+    - Yellows5
+    - Yellows10
+    - Yellows15
+    # Crypto Mine speed levels past 16, these are trivial to get given lots of processors
+    - CryptoLevel-17
+    - CryptoLevel-18
+    - CryptoLevel-19
+    - CryptoLevel-20
+    - CryptoLevel-21
+    - CryptoLevel-22
+    - CryptoLevel-23
+    - CryptoLevel-24
+    - CryptoLevel-25
+    - CryptoLevel-26
+    - CryptoLevel-27
+    - CryptoLevel-28
+    - CryptoLevel-29
+    - CryptoLevel-30
+    - CryptoLevel-31
+    - CryptoLevel-32
+    - CryptoLevel-33
+    - CryptoLevel-34
+    - CryptoLevel-35
+    - CryptoLevel-36
+    # Infinity upgrades
+    - Infinity1-1
+    - Infinity2-1
+    - Infinity3-1
+    - Infinity4-1
+    - Infinity5-1
+    - Infinity6-1
+    - Infinity7-1
+    - Infinity8-1
+    - Infinity9-1
+    - Laboratory-1
+    - YellowSpawn2-1
+    # Release items action
+    - Virus Released
+  priority_locations: []
+  item_links: []
+  plando_items: []
