@@ -44,10 +44,10 @@ requires:
     # default: Fire breath.
     # random: Start with a random breath.
     # none: Start with no breath. Adds a starting check.
-    # Set to `none` to increase the variety of the APworld. This will likely need to be reverted after testing.
+    # I originally set this to `none` to increase the variety of the APworld, however, this results in most runs starting with me being unable to attack any enemies or complete any timed breath puzzles, so I have reverted this to `randomized`.
     default: 0
-    randomized: 0
-    none: 50
+    randomized: 50
+    none: 0
   randomize_swim:
     # Toggle randomizing Spyro's ability to Swim.
     # Enabled to increase the variety of the APworld.
@@ -88,8 +88,8 @@ requires:
   shop_prices_max:
     # The maximum price for items in the shop.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10000.
-    # Unchanged from the base configuration.
-    500: 50
+    # Doubled from the default of 500, due to Spyro: A Hero's Tail games tending to take some time.
+    1000: 50
   randomize_light_gem_door_costs:
     # Sets the cost of light gem doors.
     # default: No changes to cost.
@@ -107,8 +107,8 @@ requires:
   light_gem_door_cost_max:
     # Sets the maximum cost for light gem doors.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
-    # Only 35% of Light Gems maximum are required to open Light Gem doors.
-    35: 50
+    # Anywhere between 35% and 50% of Light Gems maximum are required to open Light Gem doors.
+    random-range-35-50: 50
   randomize_boss_lair_doors:
     # Sets the Dark Gem requirement of the Boss Lairs.
     # Note: The door to your goal boss will always be the most expensive of the 4.
@@ -127,8 +127,8 @@ requires:
   boss_lair_door_cost_max:
     # Sets the maximum cost for the boss lairs.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 40.
-    # Only 35% of Dark Gems maximum are required to open Dark Gem doors.
-    14: 50
+    # Anywhere between 35% and 50% of Dark Gems maximum are required to open Dark Gem doors.
+    random-range-14-20: 50
   misc_goal:
     # Set the goal condition.
     # Unchanged from the base configuration.
