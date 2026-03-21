@@ -2,7 +2,7 @@
 description: |-
   Jack5's Jigsaw player file
 
-  TODO: Add description
+  This Jigsaw player file increases the overall variety of jigsaw puzzles by randomising the number of pieces, piece type and rotation, image orientation and piece order. In general though, the number of pieces are increased while the difficulty of the puzzles is reduced. Puzzle pieces must be found in other worlds.
 game: Jigsaw
 requires:
   version: 0.6.7
@@ -26,8 +26,8 @@ Jigsaw:
     # Note that this game is more difficult than regular jigsaw puzzles, because you don't start with all pieces :)
     # Also make sure the pieces are not too small on your screen if you choose many.
     # You can define additional values between the minimum and maximum values. Minimum value is 4, maximum value is 2000.
-    # Increased from 50.
-    100: 50
+    # Increased from 50. Allow the number of pieces to range between 100 and 125.
+    random-range-100-125: 50
   grid_type_and_rotations:
     # The type of grid used for the jigsaw puzzle, along with the rotation options.
     # The "meme" options create really long or wide pieces in just one row or one column.
@@ -80,11 +80,11 @@ Jigsaw:
     # portrait: 0.8 x 1
     # more_landscape: 2 x 1
     # more_portrait: 0.5 x 1
-    # Unchanged from the base configuration.
-    square: 0
-    landscape: 50
+    # Give all landscape-like orientations an equal chance to be selected.
+    square: 33
+    landscape: 33
     portrait: 0
-    more_landscape: 0
+    more_landscape: 33
     more_portrait: 0
   which_image:
     # Only if you selected the landscape orientation option.
@@ -137,8 +137,8 @@ Jigsaw:
     # Of course this won't make a difference at the very end when few merges are left.
     # The number of checks out of logic will never be more than 10% of the number of pieces.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 200.
-    # Unchanged from the base configuration.
-    1: 50
+    # Increased this number from 1 to make the jigsaw puzzle quicker to put together.
+    2: 50
   #################################
   # Optional options: piece order #
   #################################
@@ -170,22 +170,21 @@ Jigsaw:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
     # Although most pieces should fall into the selected piece order type, allow some (or even potentially all) of them to be out of order.
     random-range-high-1-100: 50
-  # TODO: Do the same for the below two options as has been done for the above two
   piece_order:
     # This option affects the order in which you receive puzzle pieces.
     # random_order: pieces are added in random order with no extra constraints
     # every_piece_fits: every piece you receive, will be able to merge with another piece
     # least_merges_possible: you will receive pieces in an order that gives the least number of possible merges
-    # Unchanged from the base configuration.
+    # 2 preferred piece order options selected.
     random_order: 50
-    every_piece_fits: 0
+    every_piece_fits: 50
     least_merges_possible: 0
   strictness_piece_order:
     # This option determines how strictly the above piece order is followed.
     # 1 means it is barely followed, 100 means it is followed in the strictest way possible.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
-    # Unchanged from the base configuration.
-    100: 50
+    # Although most pieces should fall into the selected piece order, allow some (or even potentially all) of them to be out of order.
+    random-range-high-1-100: 50
   #######################################
   # Optional options: traps & deathlink #
   #######################################
@@ -253,9 +252,10 @@ Jigsaw:
   ###########################
   # Item & Location Options #
   ###########################
-  # Unchanged from the base configuration.
   local_items: []
-  non_local_items: []
+  non_local_items:
+    # More puzzle pieces must be found in other worlds.
+    - Puzzle Pieces
   start_inventory: {}
   start_hints: []
   start_location_hints: []
