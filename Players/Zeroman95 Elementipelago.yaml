@@ -15,13 +15,13 @@ Elementipelago:
     minimal: 0
 
   element_amount: # Changed to Half
-    50: 99
+    62: 99
 
   filler_amount: # Changed to Half
-    50: 99
+    25: 99
 
   intermediate_amount: # Changed to Half
-    50: 99
+    62: 99
 
   compounds_are_ingredients: # Unchanged
     'false': 50
