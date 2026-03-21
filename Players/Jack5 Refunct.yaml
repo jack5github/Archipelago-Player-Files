@@ -131,9 +131,11 @@ Refunct:
     all: 50
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
-    # Drowning is fun!
-    'false': 0
-    'true': 50
+    # Without the ability to drown myself due to Swim being enabled from the start, Death Link in this game is useless. In order for this to be rectified, two things ought to happen:
+    # 1. Swim becomes a progressive item with an oxygen timer.
+    # 2. Dying locks the player in place for a certain amount of time.
+    'false': 50
+    'true': 0
   ###########################
   # Item & Location Options #
   ###########################
@@ -181,33 +183,18 @@ Refunct:
   priority_locations: []
   item_links: []
   plando_items:
-    # 25 hard-to-reach platforms are forced to give grass. The rest of the grass is found in other worlds.
+    # 10 hard-to-reach platforms are forced to give grass. The rest of the grass is found in other worlds. This number cannot exceed 10, as it results in grass failing to be placed in the rest of the world.
     - items:
         Grass: true
       locations:
-        - Platform 3-2
-        - Platform 4-2
-        - Platform 6-1
         - Platform 6-2
         - Platform 8-10
         - Platform 9-6
         - Platform 10-2
-        - Platform 14-2
-        - Platform 17-2
-        - Platform 18-1
-        - Platform 18-3
         - Platform 19-5
-        - Platform 20-7
-        - Platform 21-5
-        - Platform 23-1
         - Platform 23-2
         - Platform 24-1
         - Platform 27-1
-        - Platform 27-8
-        - Platform 28-3
-        - Platform 28-8
         - Platform 28-18
-        - Platform 29-1
         - Platform 29-2
-        - Platform 30-11
       force: false
