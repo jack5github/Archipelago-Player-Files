@@ -2,7 +2,7 @@ name: Jack5Node{NUMBER}
 description: |-
   Jack5's Nodebuster player file
 
-  TODO: Add description
+  Nodebuster is effectively an idle game with an expansive tech tree that creates a large number of locations in an Archipelago run. This player file attempts to minimise the impact of the game while still ensuring it is fun to play. The inventory starts with a few upgrades so most acquired upgrades are useful, several locations are excluded, and several boss drops are placed where they should be in the vanilla game.
 game: Nodebuster
 requires:
   version: 0.6.7
@@ -34,9 +34,9 @@ Nodebuster:
   crypto:
     # Adds the 36 levels of the CryptoMine into the pool.
     # When you level up the crypto mine, instead of speeding up the crypto mine it will instead give you a randomized item from the pool.
-    # I'm allowing the CryptoMine to be levelled up by actions other than my own.
-    'false': 0
-    'true': 50
+    # Adding Crypto Level items to the pool causes the Crypto Mine to reach its maximum speed far faster than it should, and makes the Processors currency meaningless. For this reason, this option is disabled.
+    'false': 50
+    'true': 0
   milestone:
     # Adds the Milestones Rewards and Locations to the item pool.
     # Getting free currency from other worlds doesn't seem like a bad idea.
@@ -75,7 +75,7 @@ Nodebuster:
   start_hints: []
   start_location_hints: []
   exclude_locations:
-    # Nodebuster has an excessive amount of locations, so a large majority of those that don't see much attention at all are excluded here. No more locations can be excluded, otherwise generation fails.
+    # Nodebuster has an excessive amount of locations, so a large majority of those that don't see much attention at all are excluded here. No more locations (if including those commented-out) can be excluded, otherwise generation fails.
     # Bosses past level 20, these are all extremely easy to beat given lots of upgrades
     - Boss-21
     - Boss-22
@@ -108,27 +108,27 @@ Nodebuster:
     # - Yellows5
     # - Yellows10
     # - Yellows15
-    # Crypto Mine speed levels past 16, these are trivial to get given lots of processors
-    - CryptoLevel-17
-    - CryptoLevel-18
-    - CryptoLevel-19
-    - CryptoLevel-20
-    - CryptoLevel-21
-    - CryptoLevel-22
-    - CryptoLevel-23
-    - CryptoLevel-24
-    - CryptoLevel-25
-    - CryptoLevel-26
-    - CryptoLevel-27
-    - CryptoLevel-28
-    - CryptoLevel-29
-    - CryptoLevel-30
-    - CryptoLevel-31
-    - CryptoLevel-32
-    - CryptoLevel-33
-    - CryptoLevel-34
-    - CryptoLevel-35
-    - CryptoLevel-36
+    # Crypto Mine speed levels past 16, these are trivial to get given lots of Processors. These have been expunged because Crypto Mine randomisation is off.
+    # - CryptoLevel-17
+    # - CryptoLevel-18
+    # - CryptoLevel-19
+    # - CryptoLevel-20
+    # - CryptoLevel-21
+    # - CryptoLevel-22
+    # - CryptoLevel-23
+    # - CryptoLevel-24
+    # - CryptoLevel-25
+    # - CryptoLevel-26
+    # - CryptoLevel-27
+    # - CryptoLevel-28
+    # - CryptoLevel-29
+    # - CryptoLevel-30
+    # - CryptoLevel-31
+    # - CryptoLevel-32
+    # - CryptoLevel-33
+    # - CryptoLevel-34
+    # - CryptoLevel-35
+    # - CryptoLevel-36
     # Infinity upgrades
     - Infinity1-1
     - Infinity2-1
@@ -145,4 +145,19 @@ Nodebuster:
     - Virus Released
   priority_locations: []
   item_links: []
-  plando_items: []
+  plando_items:
+    # Every other defeated boss (ignoring those excluded) gives a Boss Drop item, to facilitate a more linear progression.
+    - items:
+        Boss Drop: true
+      locations:
+        - Boss-1
+        - Boss-3
+        - Boss-5
+        - Boss-7
+        - Boss-9
+        - Boss-11
+        - Boss-13
+        - Boss-15
+        - Boss-17
+        - Boss-19
+      force: false
