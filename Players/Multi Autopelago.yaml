@@ -2,7 +2,7 @@
 description: |-
   Multiplayer Autopelago player file by Jack5
 
-  TODO: Add description
+  This Autopelago instance is designed to work in a multiworld consisting of Jack5 and Zeroman95's Archipelago player files. Only two of the three zones are used, various custom messages have been added, and boss locations are made important to influence the progression of other worlds.
 game: Autopelago
 requires:
   version: 0.6.7
@@ -35,33 +35,33 @@ Autopelago:
     snakes_on_a_planet: 0
   enabled_buffs:
     # Enables various buffs that affect how the rat behaves. All are enabled by default.
-    # - **Well Fed:** Gets more done
-    # - **Lucky:** One free success
-    # - **Energized:** Moves faster
-    # - **Stylish:** Better RNG
     # - **Confident:** Ignore a trap
+    # - **Energized:** Moves faster
+    # - **Lucky:** One free success
     # - **Smart:** Next check is progression
+    # - **Stylish:** Better RNG
+    # - **Well Fed:** Gets more done
     # Unchanged from the base configuration.
     - Confident
-    - Stylish
     - Energized
     - Lucky
     - Smart
+    - Stylish
     - Well Fed
   enabled_traps:
     # Enables various traps that affect how the rat behaves. All are enabled by default.
-    # - **Upset Tummy:** Gets less done
-    # - **Unlucky:** Worse RNG
-    # - **Sluggish:** Moves slower
-    # - **Distracted:** Skip a "step"
-    # - **Startled:** Run towards start
     # - **Conspiratorial:** Next check is trap
-    # Unchanged from the base configuration.
+    # - **Distracted:** Skip a "step"
+    # - **Sluggish:** Moves slower
+    # - **Startled:** Run towards start
+    # - **Unlucky:** Worse RNG
+    # - **Upset Tummy:** Gets less done
+    # Certain traps are disabled to have the rat behave more predictably.
     - Conspiratorial
-    - Sluggish
-    - Unlucky
     - Distracted
+    # - Sluggish
     - Startled
+    - Unlucky
     - Upset Tummy
   msg_changed_target:
     # What messages the rat can say when a buff or trap is added to the queue of location checks to send before resuming its normal logic.
@@ -101,11 +101,24 @@ Autopelago:
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
     # Unchanged from the base configuration.
-    # TODO: Add custom messages
+    # Below are the default messages:
     - I don't have anything to do right now. Go team!
     - Hey, I'm completely stuck. But I still believe in you!
     - I've run out of things to do. How are you?
     - I'm out of things for now, gonna get a coffee. Anyone want something?
+    # And below are some custom messages:
+    - My tiny brain can't crunch any more numbers, I'm going to take a nap. # Archipeladoku
+    - I keep doing the same run and failing every time. Am I going insane? # Balatro
+    - My rival is blocking me from proceeding! I need help! # ChecksMate
+    - I'm not able to build a path to the next location. More items please! # Dracomino
+    - I could really do with a cosmic ray bit flip right about now... # Grapple Dog
+    - Everything is locked down! Can someone fetch me a key? # Keymaster's Keep
+    - The path ahead is too scary for me to traverse alone! # Luigi's Mansion
+    - The journey ahead is too treacherous, I'll just set up a picnic here. # PEAK
+    - There are no more platforms for me to walk on... a little help? # Refunct
+    - I'm not getting any more orders from my boss. Could you give me my next target? # R.E.P.O.
+    - My breath isn't strong enough to take down any more enemies! # Spyro: A Hero's Tail
+    - Even with as big of an army as I have, I can't take down this boss! # Totally Accurate Battle Simulator
   msg_remind_bk:
     # What messages the rat can say to occasionally remind the players that it has no further location checks in logic.
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
@@ -148,7 +161,30 @@ Autopelago:
   start_inventory: {}
   start_hints: []
   start_location_hints: []
-  exclude_locations: []
-  priority_locations: []
+  exclude_locations:
+    # As Secret Cache is the release location and all items will be released upon completion, especially undiscovered important ones, it should not contain anything important.
+    - Secret Cache
+  priority_locations:
+    # All boss locations (except Secret Cache, the release location) are set to include important items, making their completion a big deal. As in `AutopelagoDefinitions.yml`, these are listed in reverse chronological order.
+    - Rat Rap Battle
+    - Stack of Crates
+    - Binary Tree
+    - Room Full of Typewriters
+    - Trapeze
+    - Computer Ram
+    - Copyright Mouse
+    - Blue-Colored Screen Interface
+    - Broken-Down Bus
+    - Overweight Boulder
+    - Kart Races
+    - Daring Adventurer
+    - Computer Interface
+    - Captured Goldfish
+    - Bowling Ball Door
+    - Restaurant
+    - Pirate Bake Sale
+    - Angry Turtles
+    - Prawn Stars
+    - Basketball
   item_links: []
   plando_items: []
