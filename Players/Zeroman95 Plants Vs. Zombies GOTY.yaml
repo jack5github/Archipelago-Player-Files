@@ -1,10 +1,10 @@
 name: ZeromanPVZ{NUMBER}
 
-description: 'Zeroman95 Plants Vs. Zombies Game of the YEar YAML'
+description: 'Zeroman95 Plants Vs. Zombies Game of the Year YAML'
 
 game: Plants vs. Zombies
 requires:
-  version: 0.6.6
+  version: 0.6.7
 
 Plants vs. Zombies:
   progression_balancing: # Lowering Plants Vs. Zombies to 15 because there is so much to do in this game and I would rather not play it.
