@@ -218,17 +218,17 @@ Starcraft 2:
   challenge_locations: # Sets it so all bonus objectives have a 50% chance of being added.
     half_chance: 99
 
-  mastery_locations: # Not happening.
-    disabled: 99
+  mastery_locations: # Sets it so all bonus objectives have a 50% chance of being added.
+    half_chance: 99
 
-  basebust_locations: # Nope.
-    disabled: 99
+  basebust_locations: # Sets it so all bonus objectives have a 50% chance of being added.
+    half_chance: 99
 
-  speedrun_locations: # Absolutely not.
-    disabled: 99
+  speedrun_locations: # Sets it so all bonus objectives have a 50% chance of being added.
+    half_chance: 99
 
-  preventative_locations: # Nah.
-    disabled: 50
+  preventative_locations: # Sets it so all bonus objectives have a 50% chance of being added.
+    half_chance: 99
 
   filler_percentage: # Have 25% be filler at least.
     25: 99
