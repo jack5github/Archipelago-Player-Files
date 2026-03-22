@@ -6,7 +6,7 @@ game: Refunct
 requires:
   version: 0.6.7
   game:
-    Refunct: 0.8.3
+    Refunct: 0.9.0
 
 Refunct:
   progression_balancing: # Unchanged
@@ -48,6 +48,7 @@ Refunct:
   minigames_likeliness: # Unchanged (Minigames are off)
     Block Brawl Minigame: 4
     Button Galore Minigame: 1
+    Climb Minigames: 0
     OG Randomizer Minigame: 3
     Seeker Minigame: 2
     Vanilla Minigame: 3
