@@ -2,7 +2,7 @@
 description: |-
   Multiplayer Autopelago player file by Jack5
 
-  This Autopelago instance is designed to work in a multiworld consisting of Jack5 and Zeroman95's Archipelago player files. Only two of the three zones are used, various custom messages have been added, and boss locations are made important to influence the progression of other worlds.
+  This Autopelago instance is designed to work in a multiworld consisting of Jack5 and Zeroman95's Archipelago player files. Only two of the three zones are used, and various custom messages have been added.
 game: Autopelago
 requires:
   version: 0.6.7
@@ -164,27 +164,7 @@ Autopelago:
   exclude_locations:
     # As Secret Cache is the release location and all items will be released upon completion, especially undiscovered important ones, it should not contain anything important.
     - Secret Cache
-  priority_locations:
-    # All boss locations (except Secret Cache, the release location) are set to include important items, making their completion a big deal. As in `AutopelagoDefinitions.yml`, these are listed in reverse chronological order.
-    - Rat Rap Battle
-    - Stack of Crates
-    - Binary Tree
-    - Room Full of Typewriters
-    - Trapeze
-    - Computer Ram
-    - Copyright Mouse
-    - Blue-Colored Screen Interface
-    - Broken-Down Bus
-    - Overweight Boulder
-    - Kart Races
-    - Daring Adventurer
-    - Computer Interface
-    - Captured Goldfish
-    - Bowling Ball Door
-    - Restaurant
-    - Pirate Bake Sale
-    - Angry Turtles
-    - Prawn Stars
-    - Basketball
+  # I tried setting all boss locations (except Secret Cache, the release location) to include important items, making their completion a big deal. However, this backfired, as it resulted in a run where I had to babysit the rat to make sure it would go directly to the bosses and not do any other checks. For this reason, `priority_locations` is empty.
+  priority_locations: []
   item_links: []
   plando_items: []
