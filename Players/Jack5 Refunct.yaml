@@ -29,8 +29,8 @@ Refunct:
     # 0 means you don't need any grass at all and just need to find the final platform.
     # Note: choosing max grass and 100% required may lead to some FillErrors in solo games.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # Require at least all other world grass + ~1% in-world grass, and at most 95% of all grass.
-    random-range-81-95: 50
+    # Require 80% of all grass, equating to either all other-world grass, or including some in-world grass.
+    80: 50
   final_platform:
     # Sets which platform is the final platform that needs to be reached to win the game.
     # You can choose the following platforms:
