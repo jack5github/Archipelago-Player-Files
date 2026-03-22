@@ -6,6 +6,8 @@ description: |-
 game: Plants vs. Zombies
 requires:
   version: 0.6.6
+  game:
+    Plants vs. Zombies: 1.6.3
 Plants vs. Zombies:
   ################
   # Game Options #
