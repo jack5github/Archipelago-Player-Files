@@ -44,7 +44,7 @@ requires:
     # default: Fire breath.
     # random: Start with a random breath.
     # none: Start with no breath. Adds a starting check.
-    # I originally set this to `none` to increase the variety of the APworld, however, this results in most runs starting with me being unable to attack any enemies or complete any timed breath puzzles, so I have reverted this to `randomized`.
+    # I originally set this to `none` to increase the variety of the APworld, however, this results in most runs starting with me being unable to attack any enemies or complete any timed breath puzzles, so I have reverted this to `randomized`. This should NOT be set to `default`, as runs need some variety and always having Fire Breath from the start will get boring.
     default: 0
     randomized: 50
     none: 0
@@ -83,13 +83,13 @@ requires:
   shop_prices_min:
     # The minimum price for items in the shop.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10000.
-    # Unchanged from the base configuration.
+    # Unchanged from the old default (new default is 500).
     1: 50
   shop_prices_max:
     # The maximum price for items in the shop.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10000.
-    # Doubled from the default of 500, due to Spyro: A Hero's Tail games tending to take some time.
-    1000: 50
+    # 4x the old default of 500 (the new default is 5000), due to Spyro: A Hero's Tail games tending to take some time.
+    2000: 50
   randomize_light_gem_door_costs:
     # Sets the cost of light gem doors.
     # default: No changes to cost.
@@ -131,11 +131,11 @@ requires:
     random-range-14-20: 50
   misc_goal:
     # Set the goal condition.
-    # Unchanged from the base configuration.
-    gnorc: 0
-    ineptune: 0
-    red: 0
-    mechared: 50
+    # Mecha-Red is only accessible by travelling through the entirety of World 4, which is essentially one long linear trek, while the other bosses are accessible from the hubs of their respective worlds. For this reason, randomly choose one of the standard bosses to be the goal.
+    gnorc: 33
+    ineptune: 33
+    red: 33
+    mechared: 0
   misc_hint_minigame_rewards:
     # When talking to a mini game npc, hint out their rewards.
     # Unchanged from the base configuration.
@@ -182,9 +182,12 @@ requires:
   start_hints: []
   start_location_hints: []
   exclude_locations:
+    # TODO: Exclude all Blink minigames and World 4 sub-levels once location groups are implemented
     # This particular Blink minigame is extremely difficult. More Blink minigames may be excluded in the future.
     - 'Frostbite Village: Dragon Egg from Blink'
     - 'Frostbite Village: Light Gem from Blink'
+    # This particular thief is incredibly difficult to tackle, due to Spyro not being able to charge and jump at the same time, so exclude it.
+    - 'Magma Falls Bottom: Dragon Egg from thief behind breakable wall'
     # TODO: Remove all of the below once the shop is fixed and rebalanced
     # Exclude half of the shop items so that Sphere 1 does not wind up being gigantic.
     - 'Moneybags: Shop Item 28'
@@ -216,7 +219,6 @@ requires:
     - 'Moneybags: Shop Item 54'
     - 'Moneybags: Shop Item 55'
     - 'Moneybags: Shop Item 56'
-    # The 57th shop item has not appeared once before in my playthroughs, so I'm preventing anything important from appearing there.
     - 'Moneybags: Shop Item 57'
   priority_locations: []
   item_links: []
