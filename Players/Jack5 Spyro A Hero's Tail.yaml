@@ -141,6 +141,11 @@ requires:
     # Unchanged from the base configuration.
     'false': 0
     'true': 50
+  misc_hint_boss_rewards:
+    # Hint out the item for beating a boss.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
   misc_skip_cutscenes:
     # Enable a patch that skips realm intro cutscenes. USE WITH CAUTION, maybe have glitchy side-effects.
     # Unchanged from the base configuration.
@@ -152,11 +157,20 @@ requires:
     # Unchanged from the base configuration.
     'false': 0
     'true': 50
-  death_link:
-    # Enable Death Linking. <CURRENTLY DOES NOTHING>
-    # When this does work, I want to die.
+  misc_skip_elevators:
+    # Enable a patch to skip the long elevator waits to Cloudy Domain, Sunken Ruins and Magma Falls
+    # Unchanged from the base configuration.
     'false': 0
     'true': 50
+  death_link:
+    # Enable DeathLinking.
+    # disabled: Disabled.
+    # Shielded: The Butterfly Jar will protect you from a DeathLink, if you have it.
+    # Enabled: Enabled.
+    # "Hurt me, hurt me, torture me, assasinate me!"
+    disabled: 0
+    shielded: 0
+    enabled: 50
   ###########################
   # Item & Location Options #
   ###########################
