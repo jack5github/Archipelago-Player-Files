@@ -10,7 +10,7 @@ requires:
 
 Starcraft 2:
   progression_balancing: # Unchanged
-    50: 99
+    40: 99
 
   accessibility: # Unchanged
     full: 50
