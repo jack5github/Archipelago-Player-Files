@@ -2,7 +2,6 @@
 description: |-
   Zeroman95's Ratchet and Clank 3 Player file
 
-  This is the YAML file for Ratchet and Clank 3. Stay noted that the Ratchet and Clank 3 World is still in Alpha meaning it's still got unstable data and could break when used. Ratchet and Clank 3 is Zeroman95's most loved game of all time and this file will have the most challenge it can be to make it as difficult as possible to make it even more fun!
 game: Ratchet and Clank 3
 requires:
   version: 0.6.6
