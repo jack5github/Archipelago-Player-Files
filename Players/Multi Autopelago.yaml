@@ -13,8 +13,8 @@ Autopelago:
   # Game Options #
   ################
   progression_balancing:
-    # Unchanged from the base configuration.
-    normal: 50
+    # Disabled based on the recommendation of Gryphonlady: "Set the rat's progression balancing to 0 and see if that helps. Tends to slow down the rat's receipt of progression items so it is more likely to spend time clearing branches than speeding to goal."
+    0: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
