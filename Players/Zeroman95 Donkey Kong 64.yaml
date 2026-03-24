@@ -24,7 +24,7 @@ Donkey Kong 64:
     'true': 50
 
   goal_quantity: # Set amount of Blueprints needed from 20 to 40.
-    blueprints: 20-40
+    blueprints: 20
 
   pregiven_keys: # Unchanged
     0: 99
@@ -67,15 +67,15 @@ Donkey Kong 64:
 
   helm_door_item_count: # Random amount of items for both doors.
     bean: 1
-    blueprints: 1-40
-    company_coins: 1-2
-    crowns: 1-10
-    fairies: 1-20
-    golden_bananas: 1-201
-    keys: 1-8
-    medals: 1-40
-    pearls: 1-5
-    rainbow_coins: 1-8
+    blueprints: 20
+    company_coins: 1
+    crowns: 5
+    fairies: 10
+    golden_bananas: 100
+    keys: 4
+    medals: 20
+    pearls: 2
+    rainbow_coins: 4
 
   krool_phase_count: # Adds all Phases in the K. Rool. Fight.
     5: 99
