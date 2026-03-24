@@ -163,7 +163,7 @@ Donkey Kong 64:
     'true': 50
 
   maximum_snide: # All Blueprints have checks.
-    99: 99
+    40: 99
 
   shop_prices: # You think the Shops are going to be free?! No way.
     low: 99
