@@ -48,6 +48,7 @@ Refunct:
   minigames_likeliness: # Unchanged (Minigames are off)
     Block Brawl Minigame: 4
     Button Galore Minigame: 1
+    Block Blub Minigame: 0
     Climb Minigames: 0
     OG Randomizer Minigame: 3
     Seeker Minigame: 2
