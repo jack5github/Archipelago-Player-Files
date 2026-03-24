@@ -1,0 +1,560 @@
+﻿name: ZeromanDK64{NUMBER}
+
+description: Zeroman95s Donkey Kong 64 YAML
+
+game: Donkey Kong 64
+requires:
+  version: 0.6.7
+  game:
+    Donkey Kong 64: 1.5.0
+
+Donkey Kong 64:
+  progression_balancing: # Unchanged
+    50: 99
+
+  accessibility: # Unchanged
+    full: 50
+    minimal: 0
+
+  goal: # Set it so my Blueprints are required to reach K. Rool.
+    blueprints: 99
+
+  require_beating_krool: # Unchanged
+    'false': 0
+    'true': 50
+
+  goal_quantity: # Set amount of Blueprints needed from 20 to 40.
+    blueprints: 20-40
+
+  pregiven_keys: # Unchanged
+    0: 99
+
+  helm_phase_count: # All Rooms needed to clear Hideout Helm.
+    5: 99
+
+  crown_door_item: # This is for the first door after completing Hideout Helm. It makes the door be ANY Item in the game, I need that Item to open the door.
+    vanilla: 7
+    opened: 7
+    medium_random: 7
+    golden_bananas: 7
+    blueprints: 7
+    company_coins: 7
+    keys: 7
+    medals: 7
+    crowns: 7
+    fairies: 7
+    rainbow_coins: 7
+    bean: 7
+    pearls: 7
+    easy_random: 7
+    hard_random: 7
+
+  coin_door_item: # This is for the second door after completing Hideout Helm. It makes the door be ANY Item in the game, I need that Item to open the door.
+    vanilla: 7
+    opened: 7
+    medium_random: 7
+    golden_bananas: 7
+    blueprints: 7
+    keys: 7
+    medals: 7
+    crowns: 7
+    fairies: 7
+    rainbow_coins: 7
+    bean: 7
+    pearls: 7
+    easy_random: 7
+    hard_random: 7
+
+  helm_door_item_count: # Random amount of items for both doors.
+    bean: 1
+    blueprints: 1-40
+    company_coins: 1-2
+    crowns: 1-10
+    fairies: 1-20
+    golden_bananas: 1-201
+    keys: 1-8
+    medals: 1-40
+    pearls: 1-5
+    rainbow_coins: 1-8
+
+  krool_phase_count: # Adds all Phases in the K. Rool. Fight.
+    5: 99
+
+  krool_in_boss_pool: # Unchanged
+    'false': 50
+    'true': 0
+
+  randomize_blocker_required_amounts: # Unchanged
+    'false': 0
+    'true': 50
+
+  blocker_max: # Unchanged
+    64: 99
+
+  enable_chaos_blockers: # Unchanged
+    'false': 50
+    'true': 0
+
+  maximize_level8_blocker: # Unchanged
+    'false': 50
+    'true': 0
+
+  chaos_ratio: # Unchanged
+    32: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-100: 0 # random value between 1 and 100
+
+  level_blockers: # Unchanged
+    level_1: 0
+    level_2: 0
+    level_3: 0
+    level_4: 0
+    level_5: 0
+    level_6: 0
+    level_7: 0
+    level_8: 64
+
+  starting_kong_count: # Unchanged
+    1: 99
+
+  select_starting_kong: # Unchanged
+    donkey: 0
+    diddy: 0
+    lanky: 0
+    tiny: 0
+    chunky: 0
+    any: 50
+
+  starting_move_count: # Unchanged
+    0: 99
+
+  helm_key_lock: # Unchanged
+    'false': 0
+    'true': 50
+
+  climbing_shuffle: # Unchanged
+    'false': 50
+    'true': 0
+
+  shopowners_in_pool: # Unchanged
+    'false': 50
+    'true': 0
+
+  boulders_in_pool: # Unchanged
+    'false': 50
+    'true': 0
+
+  dropsanity: # Unchanged
+    'false': 50
+    'true': 0
+
+  hints_in_item_pool: # Unchanged
+    'false': 50
+    'true': 0
+
+  half_medals_in_pool: # Unchanged
+    'false': 50
+    'true': 0
+
+  snide_turnins_to_pool: # Unchanged
+    'false': 0
+    'true': 50
+
+  maximum_snide: # All Blueprints have checks.
+    99: 99
+
+  shop_prices: # You think the Shops are going to be free?! No way.
+    low: 99
+
+  smaller_shops: # Unchanged
+    'false': 0
+    'true': 50
+
+  enable_shared_shops: # Unchanged
+    'false': 50
+    'true': 0
+
+  shuffle_helm_level_order: # Unchanged
+    'false': 50
+    'true': 0
+
+  open_lobbies: # Unchanged
+    'false': 50
+    'true': 0
+
+  switchsanity: # Unchanged
+    'off': 50
+    helm_access: 0
+    all: 0
+
+  remove_barriers_selected: # Unchanged
+    [
+      'japes_coconut_gates',
+      'aztec_tunnel_door',
+      'aztec_5dtemple_switches',
+      'aztec_tiny_temple_ice',
+      'factory_testing_gate',
+      'factory_production_room',
+      'galleon_lighthouse_gate',
+      'galleon_seasick_ship',
+      'caves_igloo_pads',
+      'helm_star_gates',
+      'helm_punch_gates',
+    ]
+
+  loading_zone_rando: # Unchanged
+    'no': 50
+    'yes': 0
+
+  galleon_water_level: # Unchanged
+    raised: 50
+    lowered: 0
+
+  logic_type: # Unchanged
+    glitchless: 50
+    advanced_glitchless: 0
+    glitched: 0
+    minimal: 0
+
+  tricks_selected: # Unchanged
+    []
+
+  glitches_selected: # Unchanged
+    []
+
+  cbs_required_for_medal: # Unchanged
+    40: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-100: 0 # random value between 1 and 100
+
+  medal_distribution: # Unchanged
+    pre_selected: 50
+    easy_random: 0
+    medium_random: 0
+    hard_random: 0
+    progressive: 0
+
+  pearls_required_for_mermaid: # All pearls are checks.
+    5: 99
+
+  fairies_required_for_bfi: # Unchanged
+    4: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-20: 0 # random value between 1 and 20
+
+  jetpac_requirement: # Unchanged
+    9: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-40: 0 # random value between 1 and 40
+
+  puzzle_rando: # Unchanged
+    'off': 0
+    easy: 0
+    medium: 50
+    hard: 0
+    chaos: 0
+
+  shuffled_bonus_barrels: # Unchanged
+    [
+      'batty_barrel_bandit',
+      'big_bug_bash',
+      'busy_barrel_barrage',
+      'mad_maze_maul',
+      'minecart_mayhem',
+      'beaver_bother',
+      'teetering_turtle_trouble',
+      'stealthy_snoop',
+      'stash_snatch',
+      'splish_splash_salvage',
+      'speedy_swing_sortie',
+      'krazy_kong_klamour',
+      'searchlight_seek',
+      'kremling_kosh',
+      'peril_path_panic',
+      'helm_minigames',
+      'arenas',
+      'training_minigames',
+      'arcade',
+    ]
+
+  hard_minigames: # Unchanged
+    'false': 50
+    'true': 0
+
+  auto_complete_bonus_barrels: # Please, the Mini-Games are irritating.
+    'false': 0
+    'true': 50
+
+  helm_room_bonus_count: # Unchanged
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-2: 0 # random value between 0 and 2
+
+  alternate_minecart_mayhem: # Unchanged
+    'false': 50
+    'true': 0
+
+  hard_mode_selected: # Unchanged
+    []
+
+  harder_bosses: # Unchanged
+    []
+
+  mirror_mode: # Unchanged
+    'false': 50
+    'true': 0
+
+  enemies_selected: # Unchanged
+    [
+      'Krossbones',
+      'RoboKremling',
+      'MushroomMan',
+      'GreenDice',
+      'Ruler',
+      'BeaverBlue',
+      'GreenKlaptrap',
+      'LankyKasplat',
+      'ZingerLime',
+      'Ghost',
+      'DiddyKasplat',
+      'Bug',
+      'Gimpfish',
+      'PurpleKlaptrap',
+      'RedDice',
+      'ChunkyKasplat',
+      'TinyKasplat',
+      'ZingerRobo',
+      'SpiderSmall',
+      'DKKasplat',
+      'Kremling',
+      'DisableZKop',
+      'RedKlaptrap',
+      'Pufftup',
+      'ZingerCharger',
+      'GetOut',
+      'Kaboom',
+      'SirDomino',
+      'BeaverGold',
+      'Kosha',
+      'Shuri',
+      'Bat',
+      'FireballGlass',
+      'DisableTaggingKop',
+      'Klobber',
+      'Klump',
+      'GetOutKop',
+      'Kop',
+      'DisableAKop',
+    ]
+
+  hint_style: # Unchanged
+    'off': 0
+    no_woth: 50
+    woth: 0
+
+  shopkeeper_hints: # Unchanged
+    'false': 0
+    'true': 50
+
+  microhints: # Unchanged
+    'off': 0
+    some: 0
+    all: 50
+
+  junk_filler_weight: # Unchanged
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  banana_filler_weight: # Unchanged
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  crown_filler_weight: # Unchanged
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  fairy_filler_weight: # Unchanged
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  medal_filler_weight: # Unchanged
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  pearl_filler_weight: # Unchanged
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  rainbowcoin_filler_weight: # Unchanged
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+
+  trap_fill_percentage: # 25% of the pool is traps.
+    25: 99
+
+  bubble_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  slow_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  reverse_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  disable_a_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  disable_b_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  disable_c_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  disable_z_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  get_out_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  dry_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  flip_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  ice_floor_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  paper_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  slip_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  animal_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  rockfall_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  disabletag_trap_weight: # Unchanged
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  tag_link: # Unchanged
+    'false': 50
+    'true': 0
+
+  ring_link: # Unchanged
+    'false': 50
+    'true': 0
+
+  trap_link: # Unchanged
+    'false': 50
+    'true': 0
+
+  death_link: # Death Link on.
+    'false': 0
+    'true': 50
+
+  enable_cutscenes: # Unchanged
+    'false': 50
+    'true': 0
+
+  remove_bait_potions: # Unchanged
+    'false': 50
+    'true': 0
+
+  receive_notifications: # Unchanged
+    display_all_fast: 50
+    display_only_progression: 0
+    display_nothing: 0
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
