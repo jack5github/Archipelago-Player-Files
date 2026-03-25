@@ -165,8 +165,8 @@ Donkey Kong 64:
   maximum_snide: # All Blueprints have checks.
     40: 99
 
-  shop_prices: # You think the Shops are going to be free?! No way.
-    low: 99
+  shop_prices: # Turning on Shop Prices was a bad idea. They are now Free.
+    free: 99
 
   smaller_shops: # Unchanged
     'false': 0
