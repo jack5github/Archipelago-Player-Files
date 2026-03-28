@@ -6,70 +6,40 @@ game: Ratchet and Clank 3
 requires:
   version: 0.6.6
 Ratchet and Clank 3:
-  ###################
-  # Generic Options #
-  ###################
-  progression_balancing:
-    # I want my Items to be anywhere within the Multiworld. Setting the progression to disabled makes that happen.
+  progression_balancing: # GIVE IT TO ME. I LOVE THIS GAME WITH A PASSION THAT I BREAK IT ALL THE TIME.
     0: 99
-  accessibility:
-    # Set to minimal to limit planet locations and checks. Makes the game more challenging.
+
+  accessibility: # Set to minimal to limit planet locations and checks. Makes the game more challenging.
     full: 0
     minimal: 50
-  deathlink:
-    # Any players with "Death Link" who die in their game will
-    # cause all other players with this option enabled to also die
+
+  deathlink: # Kill me!
     'off': 0
     'on': 50
-  #####################
-  # RAC3 Game Options #
-  #####################
-  intro_skip:
-    # Determines whether the player should start on Veldin or Starship Phoenix.
-    # Disabled: The player starts on Veldin, then must complete Florana to reach the Starship Phoenix.
-    # Enabled: The player begins on the Starship Phoenix, Veldin is skipped and the player starts with the items that
-    # would have been placed on Veldin.
-    disabled: 0
-    enabled: 50
-  holostar_skip:
-    # How much of the linear sections of Holostar studios should get skipped?
-    # Start as Clank: Nothing is skipped, the planet behaves like normal.
-    # Start at Trailer: Skip the Clank section and begin as Ratchet by the trailer
+
+  intro_skip: # Intro Skip is disabled so that I can use my PAL Copy of the game.
+    disabled: 50
+    enabled: 0
+
+  holostar_skip: # Unchanged
     start_as_clank: 50
     start_at_trailer: 0
-  bolt_and_xp_multiplier:
-    # Determines what your base bolt and xp multiplier will be set to,
-    # recommended to use x8 if you're looking to do a sync.
-    # X1 is picked because buying Items is considered Junk Checks. Higher multiplier means more bolts and experience (Experience not included yet!)
-    x1: 50
+
+  bolt_and_xp_multiplier: # X1 is picked because buying Items is considered Junk Checks. Higher multiplier means more bolts and experience (Experience not included yet!)
+    x1: 99
     x2: 0
     x4: 0
     x8: 0
     x16: 0
-  one_hp_challenge:
-    # Game is too easy? Try this challenge mode where the player has only 1 HP!
-    # Each option toggles 1 HP for a specific character or vehicle.
-    # Ratchet: Ratchet has only 1 HP.
-    # Clank: Clank has only 1 HP.
-    # Vehicle: Vehicles have only 1 HP.
-    # Qwark: Qwark has only 1 HP.
-    # Giant Clank: Giant Clank has only 1 HP. This one is impossible as terror of talos will one hit you immediately
-    # If you feel like this is too hard for you, you can always toggle the challenge for a character using /one_hp [character name]
-    #
-    # 1 = Enabled, 0 = Disabled
+
+  one_hp_challenge: # Unchanged
     Clank: 0
     Giant Clank: 0
     Qwark: 0
     Ratchet: 0
     Vehicle: 0
-  #####################
-  # RAC3 Item Options #
-  #####################
-  starting_weapons:
-    # Determines which weapons you will be starting the game with,
-    # provide a count of the weapons you want to be picked between,
-    # two are selected to be placed on Veldin.
-    # Starting with the RY3NO makes the game very boring and unfair. Rest is fair play. Whatever weapon is ticked 0 means they will not be a Starting Weapon. 1 Does the opposite.
+
+  starting_weapons: # All weapons are switched on except for RY3NO.
     Agents of Doom: 1
     Annihilator: 1
     Bouncer: 1
@@ -90,235 +60,105 @@ Ratchet and Clank 3:
     Shock Blaster: 1
     Spitting Hydra: 1
     Suck Cannon: 1
-  # Determines whether weapon level-ups are progressive items or not.
-  # **Disable**: Weapon leveling and exp functions like in the vanilla game.
-  # **Enable**: Weapons level-up when it's progressive item is collected, weapon exp is disabled.
-  # Progressive items are disabled to have less weapons available and allow weapon experience. Progressive Weapons upgrade already progressed weapon.
-  enable_progressive_weapons:
+
+  enable_progressive_weapons: # Disabled because why.
     disable: 50
     enable: 0
-  armor_upgrade:
-    # Determines how many Progressive Armor items are included in the item pool.
-    # Set to 0 for No Armor.
-    # Set to 4 for all vanilla Armor to be available.
-    # Set above 4 to add extra Armor copies into the item pool.
-    # Collecting more than 4 Progressive Armor items will do nothing.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 8
+
+  armor_upgrade: # Unchanged
     4: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-0-8: 0 # random value between 0 and 8
-  clank_options:
-    # Determines how Clank and his packs appear in the world.
-    # Start with: Begin with Clank and all packs already collected.
-    # Shuffled as one: Clank is randomized in the pool, finding him will give access to both packs.
-    # Shuffled Independently: Each pack is an independent item, Heli-pack is required to glide.
-    # Shuffled Progressive: Two Progressive packs are added, the first one gives Heli-pack and the second gives Thruster.
-    # Warning: Using this option while starting on Veldin may result in a restrictive start for solo seeds!
-    start_with: 0
-    shuffled_as_one: 0
-    shuffled_independently: 50
-    shuffled_progressive: 0
-  traps_enabled:
-    # Determines whether trap items are included in the item pool.
-    # Disabled: No traps will be included in the item pool.
-    # Enabled: Traps will be included in the item pool.
+
+  clank_options: # Don't start with Clank and shuffle his Packs independently.
+    shuffled_independently: 99
+
+  traps_enabled: # Turn on da traps.
     disabled: 0
     enabled: 50
-  trap_weight:
-    # Sets the relative weights of trap items in the item pool.
-    # A higher value increases the likelihood of a particular trap to appear in the item pool.
-    # This option has no effect when traps are disabled.
+
+  trap_weight: # Unchanged
     1-Hit KO Trap: 2
     Invisible Trap: 2
     Item Lock Trap: 2
     No Ammo Trap: 2
     No Clank Trap: 2
     Wrench Only Trap: 2
-  filler_weight:
-    # Sets the relative weights of filler items in the item pool.
-    # A higher value increases the likelihood of a particular filler item to appear in the item pool.
-    # If progressive weapons are enabled, weapon xp automatically gets removed from the pool.
+
+  filler_weight: # More Player EXP less Bolts and Jackpot.
     Bolts: 1
     Jackpot: 1
-    Player EXP: 1
+    Player EXP: 10
     Weapon Level-Up: 5 # UNUSED NO PROGRESSIVE WEAPONS
-  #########################
-  # RAC3 Location Options #
-  #########################
-  weapon_vendors:
-    # Warning: Receiving weapons send out their associated vendor checks as well, it is recommended to keep
-    # this option disabled until it is fixed. Weapons are still randomized even with this option disabled.
-    #
-    # Determines whether weapon vendors are locations in the world.
-    # Disabled: No weapon vendors are locations.
-    # Enabled: Weapon vendors are added as locations.
+
+  weapon_vendors: # Unchanged
     disabled: 50
     enabled: 0
-  skill_points:
-    # Determines which skill points are locations in the world.
-    # Any Skill Points locked behind other locations such as Ranger Missions require those options to be enabled
-    # Simple locations are the following:
-    # - Aridia: Skillpoint: Go for hang time
-    # - Phoenix: Skillpoint: Beat Helga's best time
-    # - Phoenix: Skillpoint: Turn Up The Heat
-    # - Phoenix: Skillpoint: Monkeying around
-    # - Marcadia: Skillpoint: Reflect on how to score
-    # - Daxx: Skillpoint: Bugs to Birds
-    # - Annihilation Nation: Skillpoint: Lights, camera action!
-    # - Aquatos: Skillpoint: Search for sunken treasure
-    # - Tyhrranosis: Skillpoint: Be a Sharpshooter
-    # - Obani Gemini: Skillpoint: Get to the belt
-    # - Blackwater City: Skillpoint: Bash the party
-    # - Koros: Skillpoint: You break it, you win it
-    # - Metropolis: Skillpoint: 2002 was a good year in the city
-    # - Crash Site: Skillpoint: Suck it up!
-    # - Crash Site: Skillpoint: Aim High
-    # - Aridia: Skillpoint: Zap back at ya'
-    # - Hideout: Skillpoint: Break the Dan
-    # - Command Center: Skillpoint: Spread your germs
-    # Played the game hundreds of times. Every Skill Point is memorable. None makes Skill Points have no checks. Simple gives only the first 14 Skill points checks.
-    none: 0
-    simple: 0
-    all: 50
-  trophies:
-    # Determines which trophies are locations in the world.
-    # None: No trophies are locations.
-    # Collectables: Only the collectable trophies found on various planets are locations.
-    # Every Trophy: All special trophies that do not require NG+ are now also locations.
-    # Long Term Trophy: Skill Master is only included in the pool if all 30 skill points are in the world.
-    # I know where every single trophy is in the game. Means more work for me! Same as Skill points except Collectables means only the Statues of characters give checks.
-    none: 0
-    collectables: 0
-    every_trophy: 50
-  titanium_bolts:
-    # Determines whether Titanium Bolts are locations in the world.
-    # Disabled: No Titanium Bolts are locations.
-    # Enabled: Titanium Bolts are added as locations. Any Titanium bolts locked behind other locations such as
-    # Ranger Missions require those options to be enabled
-    # Titanium Bolts giving checks means more effort! Disabling removes checks.
+
+  skill_points: # I have played this game too much I know ALL Skill Points from the back of my head.
+    all: 99
+
+  trophies: # I have played this game too much I know ALL Trophies from the back of my head.
+    every_trophy: 99
+
+  titanium_bolts: # I have played this game too much I know ALL Titanium Bolts from the back of my head.
     disabled: 0
     enabled: 50
-  rangers:
-    # Determines whether Ranger Missions and anything that is located in or behind them is a location.
-    # None: Removes anything that is located in or behind a Ranger Mission from being a location.
-    # Story Missions: Story related Ranger Missions, and anything directly locked behind them, are added as locations.
-    # Story missions include: Marcadia, Blackwater City, and Aridia missions.
-    # Optional Missions: Ranger Missions that are optional in the main game, and anything directly locked behind them,
-    # are added as locations.
-    # Optional missions include: Tyhrranosis: Operation ISLAND STRIKE and Metropolis: Operation URBAN STORM missions
-    # All: Ranger Missions, and anything directly locked behind them, are added as locations.
-    # Any Skill Points or Titanium Bolts are added if their respective setting is enabled.
-    none: 0
-    story_missions: 0
-    optional_missions: 0
-    all: 50
-  vidcomics:
-    # Determines whether VidComics and anything that is located in or behind them is a location.
-    # Disabled: Removes anything that is located in or behind a VidComic from being a location.
-    # Enabled: VidComics, and anything directly locked behind them, are added as locations.
-    # Any Skill Points or Titanium Bolts are added if their respective setting is enabled.
+
+  rangers: # Heck yeah I want to help my ranger boys.
+    all: 99
+
+  vidcomics: # Unchanged
     disabled: 0
     enabled: 50
-  vr_challenges:
-    # Determines whether VR Challenges and anything that is located in or behind them is a location.
-    # Disabled: Removes anything that is located in or behind a VR Challenge from being a location.
-    # Enabled: VR Challenges, and anything directly locked behind them, are added as locations.
-    # Any Skill Points or Titanium Bolts are added if their respective setting is enabled.
-    # This option also includes the VR Training Challenge before Daxx and all of it's checks
+
+  vr_challenges: # Unchanged
     disabled: 0
     enabled: 50
-  arena:
-    # Determines whether Annihilation Nation challenges and anything that is located in or behind them is a location.
-    # None: Removes anything that is located in or behind an Annihilation Nation challenge from being a location.
-    # First Only: Annihilation Nation 1 challenges, and anything directly locked behind them, are added as locations.
-    # Second Only: Annihilation Nation 2 challenges, and anything directly locked behind them, are added as locations.
-    # All: All Annihilation Nation challenges, and anything directly locked behind them, are added as locations.
-    # Any Skill Points or Titanium Bolts are added if their respective setting is enabled.
+
+  arena: # Unchanged
     none: 0
     first_only: 0
     second_only: 0
     all: 50
-  sewer_crystals:
-    # Determines whether sewer crystals are locations in the world.
-    # None: No sewer crystals are locations.
-    # Every 20: Makes every 20 sewer crystals locations starting from 20 sewer crystals collected.
-    # Every 10: Makes every 10 sewer crystals locations starting from 10 sewer crystals collected.
-    # Every 5: Makes every 5 sewer crystals locations starting from 5 sewer crystals collected.
-    # All: All sewer crystals are locations.
-    # If set to anything other than none, this will also add the "Hit the motherload skillpoint" into the world
-    # when skill points are set to "every_skill_point".
+
+  sewer_crystals: # Set to all.
     none: 0
     every_20: 0
     every_10: 0
     every_5: 0
     all: 50
-  sewer_limitation:
-    # Determines the upper limit of the Sewer Crystal locations in the multiworld between 1 and 99.
-    # This option has no effect when sewer_crystals are disabled.
-    # Example: If set to 40 then you only need to collect up to 40 sewer crystals. Any more won't count as checks.
-    # The checks will appear in a way the player specified it in sewer_crystals.
-    # Setting this to 100 will also add "Hit the motherload" into the pool if skill_points are set to "all".
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 1
-    # Maximum value is 100
-    # Changed to Two, because Bolts are useless at the moment and collecting Sewer Crystals is a complete waste of time.
+
+  sewer_limitation: # This isn't changing until Bolts are useful properly.
     2: 99
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-1-100: 0 # random value between 1 and 100
-  nanotech_milestones:
-    # Determines whether nanotech milestones are locations in the world.
-    # None: No nanotech milestones are locations.
-    # Every 20: Makes every 20 nanotech milestones locations starting from nanotech level 20.
-    # Every 10: Makes every 10 nanotech milestones locations starting from nanotech level 20.
-    # Every 5: Makes every 5 nanotech milestones locations starting from nanotech level 15.
-    # All: All nanotech milestones are locations.
-    # I want every Nanotech increase to give something. Means more effort, but allows for more diversity compared to collecting Titanium Bolts and Trophies and Skill Points. The more higher the more checks.
+
+  nanotech_milestones: # I want every Nanotech increase to give something. Means more effort, but allows for more diversity compared to collecting Titanium Bolts and Trophies and Skill Points. The more higher the more checks.
     none: 0
     every_20: 0
     every_10: 0
     every_5: 0
     all: 50
-  nanotech_limitation:
-    # Determines the upper limit of the nanotech milestone locations in the multiworld between 11 and 100.
-    # Nanotech milestone checks start from nanotech level 11 and can go up to nanotech level 100.
-    # This option has no effect when nanotech_milestones are disabled.
-    # Example: If set to 40 then you only need to level up to nanotech level 40 as any higher won't count as checks.
-    # The checks will appear in a way the player specified it in nanotech_milestones.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 11
-    # Maximum value is 100
+
+  nanotech_limitation: # Unchanged
     100: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-11-100: 0 # random value between 11 and 100
-  #########################
-  # RAC3 Cosmetic Options #
-  #########################
-  ship_nose:
-    # Cosmetic:
-    # What Nose should you have on the ship?
+
+  ship_nose: # Randomly pick please.
     standard: 1
     split: 1
     scoop: 1
-  ship_wings:
-    # Cosmetic:
-    # What Wings should you have on the ship?
+
+  ship_wings: # Randomly pick please.
     standard: 1
     hi_lift: 1
     heavy_ordinance: 1
-  ship_skin:
-    # Cosmetic:
-    # What Skin should you have on the ship?
+
+  ship_skin: # Randomly pick please. Original Colour that you start with is removed.
     blargian_red: 0
     orxon_green: 1
     bogon_blue: 1
@@ -351,11 +191,8 @@ Ratchet and Clank 3:
     sasha_scarlet: 1
     florana_breeze: 1
     ozzy_kamikaze: 1
-  skin:
-    # Cosmetic:
-    # What Skin should Ratchet have?
-    # Remember to reload your save file after starting a new game to apply the skin!
-    # Alternatively, go to the Armor Vendor to reload the skin.
+
+  skin: # Randomly pick please. Default Ratchet is removed.
     default: 0
     old_school: 1
     snowman: 1
@@ -366,37 +203,16 @@ Ratchet and Clank 3:
     robo_rooster: 1
     trooper: 1
     robo: 1
-  ###########################
-  # Item & Location Options #
-  ###########################
-  exclude_locations:
-    # Prevent these locations from having an important item.
-    ['Unstable']
-  local_items:
-    # Forces these items to be in their native world.
-    []
-  non_local_items:
-    # Forces these items to be outside their native world.
-    []
-  start_inventory:
-    # Start with the specified amount of these items. Example: "Bomb: 1"
-    {}
-  start_inventory_from_pool:
-    # Start with the specified amount of these items and don't place them in the world. Example: "Bomb: 1"
-    # The game decides what the replacement items will be.
-    {}
-  start_hints:
-    # Start with these item's locations prefilled into the ``!hint`` command.
-    []
-  start_location_hints:
-    # Start with these locations and their item prefilled into the ``!hint`` command.
-    []
-  priority_locations:
-    # Prevent these locations from having an unimportant item.
-    []
-  item_links:
-    # Share part of your item pool with other players.
-    []
+
+  exclude_locations: ['Unstable']
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  start_hints: []
+  start_location_hints: []
+  priority_locations: []
+  item_links: []
   plando_items:
     # Generic items plando.
     # places the RY3NO right at the end of the game making it unusable and banned.
