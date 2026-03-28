@@ -49,10 +49,4 @@ Totally Accurate Battle Simulator:
   exclude_locations: []
   priority_locations: []
   item_links: []
-  plando_items:
-    # Present Elf is placed at end of Whatever final Campaign because Present Elf as a unit makes the game too easy.
-    - locations:
-        - Pit (Simulation-17)
-      items:
-        Present Elf: true
-      force: false
+  plando_items: []
