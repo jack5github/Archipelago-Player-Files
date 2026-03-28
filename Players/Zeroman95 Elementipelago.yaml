@@ -31,7 +31,7 @@ Elementipelago:
 
   non_local_items: []
 
-  start_inventory: {}
+  start_inventory: { 'Progressive Filter': 2 }
 
   start_hints: []
 
