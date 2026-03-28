@@ -1,35 +1,30 @@
 name: ZeromanTLOZ{NUMBER}
 
-description: |-
-  Zeroman95's YAML for The Legend of Zelda.
+description: Zeroman95s The Legend of Zelda YAML
 
-  Not a fan of many NES games, but this game I really enjoy running through. I had to decrease my Progression Balancing due to getting my best Sword the Magical Sword too early, allowing me to run through a good chunk of the game really quickly.
 game: The Legend of Zelda
 requires:
-  version: 0.6.6
+  version: 0.6.7
+  game:
+    The Legend of Zelda: 1.0.0
 
 The Legend of Zelda:
-  progression_balancing: # Changed back to 50 because I have messed with Progression for too long.
+  progression_balancing: # Unchanged
     50: 99
 
-  accessibility:
+  accessibility: # Unchanged
     full: 50
     minimal: 0
 
-  ExpandedPool:
+  ExpandedPool: # Unchanged
     'false': 0
     'true': 50
 
-  TriforceLocations:
-    vanilla: 0
-    dungeons: 0
-    anywhere: 50
+  TriforceLocations: # Put the Triforce Fragments anywhere in the Multiworld which is for some reason not enabled by default which would make it more fun.
+    anywhere: 99
 
-  StartingPosition:
-    safe: 0
-    unsafe: 0
-    dangerous: 0
-    very_dangerous: 50
+  StartingPosition: # I like to live dangerously; Puts my Sword ANYWHERE in my World or in other peoples worlds. (Three Swords: Sword, White Sword, Magical Sword)
+    very_dangerous: 99
 
   local_items: []
 
