@@ -49,11 +49,11 @@ Starcraft 2:
   mission_order: # Missions on a Grid is an incredible way to do it.
     grid: 99
 
-  maximum_campaign_size: # 18 Missions that way it is a 4x4 grid.
-    18: 99
+  maximum_campaign_size: # 11 Missions that way it is a 3x3 grid.
+    11: 99
 
-  enabled_campaigns: # The first three Campaigns are picked to put into the Grid.
-    ['Wings of Liberty', 'Prophecy', 'Heart of the Swarm', 'Legacy of the Void']
+  enabled_campaigns: # Let's just do one Campaign that one being WOL.
+    ['Wings of Liberty']
 
   enable_race_swap: # Unchanged
     disabled: 50
@@ -63,8 +63,8 @@ Starcraft 2:
     shuffle_all_non_vanilla: 0
 
   shuffle_no_build: # Make all Missions including No Build Missions to be random.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   key_mode: # Unchanged
     disabled: 50
@@ -87,9 +87,8 @@ Starcraft 2:
     'false': 50
     'true': 0
 
-  selected_races:
-    # Pick which factions' missions and items can be shuffled into the world.
-    ['Zerg', 'Protoss', 'Terran']
+  selected_races: # Since we are only doing WOL, so Terran only.
+    ['Terran']
 
   exclude_very_hard_missions: # Unchanged
     default: 50
@@ -212,23 +211,23 @@ Starcraft 2:
   vanilla_locations: # Unchanged
     enabled: 99
 
-  extra_locations: # Sets it so all bonus objectives have a 50% chance of being added.
-    half_chance: 99
+  extra_locations: # Enabled. Bring on the Checks.
+    enabled: 99
 
-  challenge_locations: # Sets it so all bonus objectives have a 50% chance of being added.
-    half_chance: 99
+  challenge_locations: # Enabled. Bring on the Checks.
+    enabled: 99
 
-  mastery_locations: # Sets it so all bonus objectives have a 50% chance of being added.
-    half_chance: 99
+  mastery_locations: # Enabled. Bring on the Checks.
+    enabled: 99
 
-  basebust_locations: # Sets it so all bonus objectives have a 50% chance of being added.
-    half_chance: 99
+  basebust_locations: # Enabled. Bring on the Checks.
+    enabled: 99
 
-  speedrun_locations: # Sets it so all bonus objectives have a 50% chance of being added.
-    half_chance: 99
+  speedrun_locations: # Enabled. Bring on the Checks.
+    enabled: 99
 
-  preventative_locations: # Sets it so all bonus objectives have a 50% chance of being added.
-    half_chance: 99
+  preventative_locations: # Enabled. Bring on the Checks.
+    enabled: 99
 
   filler_percentage: # Have 25% be filler at least.
     25: 99
