@@ -81,7 +81,7 @@ FNaFW:
 
   non_local_items: []
 
-  start_inventory: {}
+  start_inventory: { 'Find Characters': 1 }
 
   start_hints: []
 
