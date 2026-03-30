@@ -1,0 +1,133 @@
+﻿name: ZeromanPikmin2{NUMBER}
+
+description: Zeroman95s Pikmin 2 YAML
+
+game: Pikmin 2
+requires:
+  version: 0.6.7
+  game:
+    Pikmin 2: 0.7.1
+
+Pikmin 2:
+  progression_balancing: # Unchanged
+    50: 99
+
+  accessibility:
+    full: 50
+    minimal: 0
+
+  win_condition: # Unchanged
+    collect_louie: 50
+    collect_pokos: 0
+    collect_treasure: 0
+
+  poko_amount: # Unchanged
+    10000: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-26985: 0 # random value between 0 and 26985
+
+  treasure_amount: # Unchanged
+    201: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-201: 0 # random value between 1 and 201
+
+  debt: # Unchanged
+    10000: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-15000: 0 # random value between 1 and 15000
+
+  shuffle_caves: # Unchanged
+    no_shuffle: 0
+    keep_dream_den: 0
+    wistful_wild_lock: 0
+    full_shuffle: 50
+
+  cave_keys: # Allow the Caves to be locked up.
+    all_locked: 99
+
+  death_link: # Allows either a Captain to go unconscious or create a Pikmin Extinction.
+    full_random: 99
+
+  boss_rando: # Unchanged
+    vanilla: 0
+    shuffle: 0
+    full_random: 50
+
+  enemy_rando: # Unchanged
+    vanilla: 0
+    full_random: 50
+
+  boss_and_enemy_rando: # I did a test run and had a WHOLE Sublevel filled with Water Wraiths. Not letting this happen sadly.
+    'no': 50
+    'yes': 0
+
+  sublevel_shuffle: # Unchanged
+    vanilla: 0
+    shuffled: 50
+
+  onion_shuffle: # Unchanged
+    vanilla: 0
+    shuffle: 0
+    exclude_vanilla: 0
+    in_pool: 50
+
+  progressive_globes: # Unchanged
+    non_progressive: 50
+    progressive: 0
+
+  weapons_in_pool: # This is the weapons for the Final Boss. Adding the weapons to the pool allows you to weaken him, if all four weapons are found the Final Boss is basically good as dead.
+    'no': 0
+    'yes': 50
+
+  treasure_collection_checks: # Unchanged
+    'no': 50
+    'yes': 0
+
+  treasure_collection_start_value: # Unchanged
+    5: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-201: 0 # random value between 1 and 201
+
+  treasure_collection_end_value: # Unchanged
+    200: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-201: 0 # random value between 1 and 201
+
+  treasure_collection_interval: # Unchanged
+    5: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-201: 0 # random value between 1 and 201
+
+  poko_collection_checks: # Unchanged
+    'no': 50
+    'yes': 0
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
