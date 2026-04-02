@@ -4,7 +4,7 @@ description: Zeroman95s The Simpsons Hit and Run YAML
 
 game: The Simpsons Hit And Run
 requires:
-  version: 0.6.6
+  version: 0.6.7
 
 The Simpsons Hit And Run:
   progression_balancing: # This was originally on 0 when I first begun, BIG Mistake that was. So now it is at 50.

@@ -2,7 +2,7 @@ name: ZeromanTABS{NUMBER}
 description: Zeroman95's TAB Yaml
 game: Totally Accurate Battle Simulator
 requires:
-  version: 0.6.6
+  version: 0.6.7
   game:
     Totally Accurate Battle Simulator: 0.1.0
 Totally Accurate Battle Simulator:

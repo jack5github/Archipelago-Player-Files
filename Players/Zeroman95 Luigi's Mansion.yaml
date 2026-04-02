@@ -4,7 +4,7 @@ description: 'Zeroman95s Luigis Mansion YAML'
 
 game: Luigi's Mansion
 requires:
-  version: 0.6.6
+  version: 0.6.7
   game:
     Luigi's Mansion: 0.6.0
 

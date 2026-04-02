@@ -4,7 +4,7 @@ description: |-
 
 game: Ratchet and Clank 3
 requires:
-  version: 0.6.6
+  version: 0.6.7
 Ratchet and Clank 3:
   progression_balancing: # GIVE IT TO ME. I LOVE THIS GAME WITH A PASSION THAT I BREAK IT ALL THE TIME.
     0: 99
