@@ -31,19 +31,32 @@ Refunct:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Require 80% of all grass, equating to either all other-world grass, or including some in-world grass.
     80: 50
-  final_platform:
-    # Sets which platform is the final platform that needs to be reached to win the game.
-    # You can choose the following platforms:
+  goal:
+    # Sets which button or platform is the goal that needs to be reached to win the game.
+    # You can choose the following:
+    # - Button 31-1: the goal from the original, the golden button!
+    # - Button 1-1: the first button in the game.
+    # - random_known_button: a random button. The UI will show you which button it is.
+    # - random_unknown_button: a random button. The UI will NOT show you which button it is until pressed.
     # - Platform 1-5: right next to the starting platform
     # - Platform 21-1: easy to reach platform in Cluster 21 (bottom-left)
     # - Platform 29-2: epic high platform in Cluster 29 for which you need Cluster 25 and jumppads (top-left)
-    # - random_known: randomly chosen platform. The UI will show you which platform it is.
-    # - random_unknown: randomly chosen platform. The UI will NOT show you which platform it is until you jump on it. You can !hint Final Platform and it will tell you the location.
-    # I've decided to make this platform random, but I want to know which one it is.
+    # - random_known_platform: randomly chosen platform. The UI will show you which platform it is.
+    # - random_unknown_platform: randomly chosen platform. The UI will NOT show you which platform it is until you jump on it.
+    # - random_known: a random button or platform. The UI will show you which one it is.
+    # - random_unknown: a random button or platform. The UI will NOT show you which one it is.
+    # Note: if you choose an unknown goal, you can !hint Goal Location and it will tell you the location.
+    # I've decided to make this option random, but I want to know which location it is. I've made it an equal chance of it being either a button or a platform.
+    button_31_1: 0
+    button_1_1: 0
+    random_known_button: 50
+    random_unknown_button: 0
     platform_1_5: 0
     platform_21_1: 0
     platform_29_2: 0
-    random_known: 50
+    random_known_platform: 50
+    random_unknown_platform: 0
+    random_known: 0
     random_unknown: 0
   cubes:
     # Cubes are also location checks in the main gamemode! This option determines when you can collect cubes.
@@ -71,9 +84,8 @@ Refunct:
     # This options sets how many minigames are included in the game.
     # Set this to -1 if you want all minigames. Set this to 0 if you don't want any minigames.
     # The next option allows you to tweak how likely each minigame is to be included, but the default is probably OK!
-    # You can define additional values between the minimum and maximum values. Minimum value is -1, maximum value is 7.
-    # There should be a 50% chance of minigames occurring, and if they do, a random number of them.
-    0: 50
+    # You can define additional values between the minimum and maximum values. Minimum value is -1, maximum value is 9.
+    # I used to have there be a 50% chance of minigames occurring, and if they do, a random number of them, maxing out at the available number of minigames. I have since made this always happen, because playing Refunct by itself gets boring.
     random-range-1-7: 50
   nerf_minigame_checks:
     # Most minigames have a lot of checks (~37).
@@ -101,11 +113,11 @@ Refunct:
     # Seeker Minigame:
     # Adding this minigame will let you search for 10 platforms that are not grassified yet, once you unlock it.
     # You have all your abilities and jumping on empty platforms will give you checks.
-    Seeker Minigame: 1
+    Seeker Minigame: 3
     # Button Galore Minigame:
     # This minigame spawns you in a game with all plaforms already there.
     # And you just press every button that there is for a check.
-    Button Galore Minigame: 1
+    Button Galore Minigame: 3
     # OG Randomizer Minigame:
     # This is where it all started, you'll get to play the very first Refunct randomizer.
     # Hitting a button triggers a random platform to appear somewhere in the level, and it gives a check!
@@ -116,18 +128,26 @@ Refunct:
     # The more blocks you pick up in one go, the more points you get. Score points to get checks!
     # Hitting New Game will reshuffle the blocks and cubes but you will keep your points.
     # There is no guarantee cubes are reachable so reset as needed.
-    Block Brawl Minigame: 1
+    Block Brawl Minigame: 3
     # Climb Minigames:
     # There are three different Climb minigames that you can play when this option is selected; Line, Spiral and Chaos.
     # You will have to climb up 100 meters of randomly placed platforms, and you get checks for every 10 meters climbed.
     # Each minigame has a slightly different pattern of platform placements.
     # Each minigame is unlocked separately and they all have their own checks.
     # This gamemode might need some skill and patience (which is why they are off by default) :)
-    Climb Minigames: 1
+    # Each climb minigame has an equal chance of occurring.
+    Climb Chaos Minigame: 1
+    Climb Line Minigame: 1
+    Climb Spiral Minigame: 1
     # Block Blub Minigame:
     # This is the underwater version of Block Brawl!
     # This is much easier and shorter than Block Brawl, it still has four color of cubes, but only 32 checks in total.
-    Block Blub Minigame: 1
+    Block Blub Minigame: 3
+    # Refunct Mountain Minigame:
+    # The vanilla game, except there's no wall jump, ledge grab, lifts and pipes.
+    # Instead, there is a dash! Press the buttons for checks.
+    # PRESS E TO DASH, YOU (CURRENTLY) CANNOT REBIND THIS IN-GAME (which is why it's off by default)
+    Refunct Mountain Minigame: 0
   traps:
     # This option determines which traps are added to the game. 
     # Each trap is added twice and replaces a "flower" filler item, if there are enough flowers.
@@ -183,6 +203,7 @@ Refunct:
     - Cluster 28
     - Cluster 29
     - Cluster 30
+    - Cluster 31
     # Grass is one of the items required for game completion. I tried setting this as a local item, however this caused Refunct to contain primarily grass over other world items. Because of this, I am using `plando_items` to specify platforms with grass, while all others will be found in other worlds.
     - Grass
   start_inventory:
@@ -194,6 +215,7 @@ Refunct:
   priority_locations: []
   item_links: []
   plando_items:
+    # TODO: Replace some of these with buttons
     # 10 hard-to-reach platforms are forced to give grass. The rest of the grass is found in other worlds. This number should not exceed 10, as it results in grass failing to be placed in the rest of the world.
     - items:
         Grass: true
