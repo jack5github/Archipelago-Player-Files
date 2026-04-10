@@ -1,4 +1,5 @@
 {
+	"better-yaml.lineWidth": 0,
 	"yaml.extension.recommendations": false,
 	"yaml.format.printWidth": 88,
 	"yaml.format.singleQuote": true,
