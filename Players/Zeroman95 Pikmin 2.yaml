@@ -35,18 +35,18 @@ Pikmin 2:
     random-high: 0 # random value weighted towards higher values
     random-range-1-201: 0 # random value between 1 and 201
 
-  debt: # Unchanged
-    10000: 50
+  debt: # At default 10000 was way to early, I got so many treasures from another player that I could immediately clear the Debt and then go straight to the final boss.
+    15000: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-1-15000: 0 # random value between 1 and 15000
 
-  shuffle_caves: # Unchanged
+  shuffle_caves: # It was obvious that Dream Den should be in Wistful Wild to make the game last longer.
     no_shuffle: 0
-    keep_dream_den: 0
+    keep_dream_den: 50
     wistful_wild_lock: 0
-    full_shuffle: 50
+    full_shuffle: 0
 
   cave_keys: # Allow the Caves to be locked up.
     all_locked: 99
@@ -81,9 +81,9 @@ Pikmin 2:
     non_progressive: 50
     progressive: 0
 
-  weapons_in_pool: # This is the weapons for the Final Boss. Adding the weapons to the pool allows you to weaken him, if all four weapons are found the Final Boss is basically good as dead.
-    'no': 0
-    'yes': 50
+  weapons_in_pool: # Originally set to yes made the boss very much more easy; Setting it to no now will make it be as hard as it can be just like in the original.
+    'no': 50
+    'yes': 0
 
   treasure_collection_checks: # Unchanged
     'no': 50
@@ -110,11 +110,13 @@ Pikmin 2:
     random-high: 0 # random value weighted towards higher values
     random-range-1-201: 0 # random value between 1 and 201
 
-  poko_collection_checks: # Unchanged
-    'no': 50
-    'yes': 0
+  poko_collection_checks: # Turned on to allow extra checks and to put Yellow Onion at 100%.
+    'no': 0
+    'yes': 50
 
-  local_items: []
+  local_items: # These should be in my world so that I can goto new areas when I obtain these. I got these too early when they were non-local. In the normal game it usually requires over 100 Pikmin to carry one of these.
+    - Spherical Atlas
+    - Geographic Projection
 
   non_local_items: []
 
@@ -130,4 +132,18 @@ Pikmin 2:
 
   item_links: []
 
-  plando_items: []
+  plando_items: # Makes the Yellow Onion go to these locations thus needing to fight the Boss there to get it.
+    - items:
+        Yellow Onion: true
+      locations:
+        - WFG Five-man Napsack
+        - FC Repugnant Appendage
+        - CoS The Key
+        - BK Forged Courage
+        - GK Dream Material
+        - HoH Remembered Old Buddy
+        - SC Stellar Orb
+        - SR Amplified Amplifier
+        - SMGC Professional Noisemaker
+        - CoC Silencer
+      force: false
