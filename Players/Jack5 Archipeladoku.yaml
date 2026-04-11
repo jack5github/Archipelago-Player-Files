@@ -5,7 +5,7 @@ description: |-
   This Archipeladoku configuration subtly changes the generation options to ensure a relatively stable number of unlock locations. In order to achieve this, a 3x3 and similar board sizes are used. Other adjustments include the removal of emoji traps, and the increased chance of disco and tunnel vision traps for more challenging Sudoku games, especially when rapidly filling in numbers.
 game: Archipeladoku
 requires:
-  version: 0.6.6
+  version: 0.6.7
 Archipeladoku:
   ################
   # Game Options #
@@ -29,17 +29,13 @@ Archipeladoku:
   boards_per_cluster:
     # How many boards to put in each cluster of overlapping boards.
     # Recommended values are 1 (no grouping), 5, 8, 13, or 100 (group all).
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 1
-    # Maximum value is 100
-    # The grouping of boards only affects the sudoku gameplay superficially and does not affect the number of unlock locations, therefore it is set to randomly choose between groupings of 1 and 5. Higher groupings are not used as groupings bigger than 5 do not look good.
-    random-range-1-5: 50
-    no_grouping: 0
-    square_of_5: 0
-    square_of_8: 0
-    square_of_13: 0
-    group_all: 0
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # The grouping of boards only affects the sudoku gameplay superficially and does not affect the number of unlock locations. Higher groupings are not used as groupings bigger than 5 do not look good. This used to be set to `random-range-1-5`, but since the options are no longer numbers, I have to use either 1 or 5 instead.
+    '1': 50
+    '5': 50
+    '8': 0
+    '13': 0
+    '100': 0
   number_of_boards:
     # How many boards to generate. Maximum depend on block size:
     # - 4-9: 100 boards
@@ -54,11 +50,13 @@ Archipeladoku:
     # - Easy: Pointing pairs, box line reduction.
     # - Medium: Naked pairs/triples.
     # - Hard: Hidden pairs/triples.
-    # I am capable of solving sudoku puzzles with hidden pairs and triples.
+    # - Very Hard: X-Wing, Swordfish, Y-Wing.
+    # I am capable of solving sudoku puzzles with hidden pairs and triples. For now, have a 50-50 chance of getting a very hard sudoku puzzle.
     beginner: 0
     easy: 0
     medium: 0
     hard: 50
+    very_hard: 50
   progression:
     # How blocks are unlocked during the game.
     # - Fixed: Blocks are unlocked by progressive block items in a fixed order. Smoother progression.
@@ -66,6 +64,13 @@ Archipeladoku:
     # Randomise the order of unlocks as much as possible.
     fixed: 0
     shuffled: 50
+  duplicate_progression:
+    # Percent of progression items that should be duplicated.
+    # - For Fixed progression higher values may lead to progression being too fast and as such a lower value is recommended.
+    # - For Shuffled progression this can safely be set to 100% to make progression a bit faster. The blocks to duplicate are chosen randomly if not 100%, though each block can only be duplicated once.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    0: 50
   location_scouting:
     # How scouting of locations is handled.
     # - Auto: Locations are scouted automatically when fully revealed.
