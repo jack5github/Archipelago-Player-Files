@@ -1,4 +1,6 @@
 {
+	"better-yaml.documentOptions.version": "1.2",
+	"better-yaml.indentSeq": true,
 	"better-yaml.lineWidth": 0,
 	"yaml.extension.recommendations": false,
 	"yaml.format.printWidth": 88,
