@@ -2,12 +2,12 @@
 description: |-
   Multiplayer Autopelago player file by Jack5
 
-  This Autopelago instance is designed to work in a multiworld consisting of Jack5 and Zeroman95's Archipelago player files. Only two of the three zones are used, and various custom messages have been added.
+  This Autopelago instance is designed to work in a multiworld consisting of Jack5 and Zeroman95's Archipelago player files. Only two of the three zones are used, and Death Link has been enabled, plus various custom messages.
 game: Autopelago
 requires:
   version: 0.6.7
   game:
-    Autopelago: 0.11.0
+    Autopelago: 1.1.0
 Autopelago:
   ################
   # Game Options #
@@ -52,17 +52,66 @@ Autopelago:
     # Enables various traps that affect how the rat behaves. All are enabled by default.
     # - **Conspiratorial:** Next check is trap
     # - **Distracted:** Skip a "step"
+    # - **Poison:** Dies (Death Link)
     # - **Sluggish:** Moves slower
     # - **Startled:** Run towards start
     # - **Unlucky:** Worse RNG
     # - **Upset Tummy:** Gets less done
-    # Certain traps are disabled to have the rat behave more predictably.
+    # Certain traps are disabled to have the rat behave more predictably. Death Link is enabled.
     - Conspiratorial
     - Distracted
+    - Poison
     # - Sluggish
     - Startled
     - Unlucky
     - Upset Tummy
+  lactose_intolerant:
+    # Replaces all references to lactose-containing products with less offensive ones.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  ##################
+  # Death Settings #
+  ##################
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # I'M THE GIANT RAT, THAT MAKES ALL OF DA ROOLS!
+    'false': 0
+    'true': 50
+  death_delay_seconds:
+    # Has no effect if "Poison" traps are disabled. Otherwise:
+    # Sets the delay (in seconds) from a death trigger to when the rat actually "dies".
+    # Default: 5 (seconds)
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 60.
+    # Changed from the default to a range of values, making it possible to have a quick death in one run and a slow death in another.
+    random-range-2-8: 50
+  death_item_percentage:
+    # Has no effect if "Poison" traps are disabled. Otherwise:
+    # Controls what percentage of trap items added to the pool should be replaced by "poison" items. The percentage is taken from the items that are INTENDED to be traps, so you can disable all other traps and still get the same number of "poison" items as you would otherwise have.
+    # Specifically, items with "poison" auras are held back, and then this configured percentage of random trap items are replaced by copies of the items that were held back.
+    # Whole numbers only.
+    # Default: 2 (percent).
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Increased to a range around 5% to mimic the same death rate as The Witness.
+    random-range-3-8: 50
+  #############################
+  # Message Text Replacements #
+  #############################
+  msg_impending_doom:
+    # What messages the rat can say when it's about to die.
+    # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
+    # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
+    # Below are the default messages:
+    - I don't feel so good...
+    # And below are some custom messages:
+    - Shoot, I filled up my board! Sorry about this! # Dracomino
+    - Nooooooooo! My grapple hook sliiiiiiipped!! # Grapple Dog
+    - Ohhhh... that's it for me... good night... # Luigi's Mansion
+    - Uhhhhh, you're gonna hate me for this, but I might have just killed a whole bunch of innocent people... # OpenRCT2
+    - NOOOOOOOO I FELL ALL THE WAY DOWN AGAAAAAAIN!!! # PEAK
+    - Youch... that fall really hurt... I think all my legs are broken! # Portal 2
+    - Screw all this, you know what I am!? THE KING OF THE LOSERS, BABY!!! # R.E.P.O.
+    - Dammit, I don't have enough Nanotech for this! # Ratchet & Clank 3
   msg_changed_target:
     # What messages the rat can say when a buff or trap is added to the queue of location checks to send before resuming its normal logic.
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
@@ -82,6 +131,7 @@ Autopelago:
     - On my way to {LOCATION}, hopefully nothing spooky pops up... # Luigi's Mansion
     - The path to {LOCATION} has been built! I can't wait to give it a whirl! # OpenRCT2
     - Time to make the expedition up to {LOCATION}, I hope I have enough stamina. # PEAK
+    - My treasure tracker is going off, there's something at {LOCATION}, I've gotta check it out! # Pikmin 2
     - The plants in this region are telling me there's something at {LOCATION}... # Plants vs. Zombies
     - My rogue AI companion is saying I ought to go to {LOCATION} next. # Portal 2
     - Maybe there will be a fancy gadget in {LOCATION}? Only one way to find out! # Ratchet & Clank 3
@@ -100,7 +150,6 @@ Autopelago:
     # What messages the rat can say when it first sees that no further location checks are in logic.
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
-    # Unchanged from the base configuration.
     # Below are the default messages:
     - I don't have anything to do right now. Go team!
     - Hey, I'm completely stuck. But I still believe in you!
@@ -123,22 +172,40 @@ Autopelago:
     # What messages the rat can say to occasionally remind the players that it has no further location checks in logic.
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
-    # Unchanged from the base configuration.
-    # TODO: Add custom messages
-    - I don't have anything to do right now. Go team!
-    - Hey, I'm completely stuck. But I still believe in you!
-    - I've run out of things to do. How are you?
-    - I'm out of things for now, gonna get a coffee. Anyone want something?
+    # The default messages have been removed because they are exactly the same as `msg_enter_bk`. Instead, all of the below are custom messages:
+    - Hey, I hate to pester you, but EVERYTHING IS STILL BLOCKED BY STONE. HELP, PLEASE! # Archipeladoku
+    - OK, I'm actually going insane now. I can't take much more of this waiting! # Balatro
+    - Seriously, I'm getting owned by my rival here, I need assistance pronto! # ChecksMate
+    - Has anyone found any more golden bananas? Those are important for some reason. # Donkey Kong 64
+    - Uhhhh, hello? Still trapped down here. Could really use some help! # Dracomino
+    - '*sigh* Still waiting for that cosmic ray bit flip...' # Grapple Dog
+    - How can I be expected to get through any of this if I still have all these locked doors ahead of me? # Keymaster's Keep
+    - Still waiting for a key to drop. Come on, the flap is right there, just push one in! # Luigi's Mansion
+    - I'm going to level with you, there is no way I'm finishing this with the stamina I have right now. # PEAK
+    - How long do I have to wait for these platforms to show up? # Refunct
+    - Is my boss slacking off or what? Come on, give me something to do! # R.E.P.O.
+    - Ughh... my lungs... they have completely lost capacity... please... send... medical... aid... # Spyro: A Hero's Tail
+    - We must construct additional pylons in order for me to proceed! Hurry up! # Starcraft 2
+    - I'm sorry, but I can't send in my army right now, there just aren't enough forces! What do I look like, a murderer!? # Totally Accurate Battle Simulator
   msg_exit_bk:
     # What messages the rat can say after one or more location checks become in logic.
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
-    # Unchanged from the base configuration.
-    # TODO: Add custom messages
+    # Below are the default messages:
     - Yippee, that's just what I needed!
     - I'm back! I knew you could do it!
     - Sweet, I'm unblocked! Thanks!
     - Squeak-squeak, it's rattin' time!
+    # And below are some custom messages:
+    - Ohh, thank you! All the stone has been cleared away. I really needed that. # Archipeladoku
+    - Alright! With this new deck up my sleeve, I'll be able to get through this for sure! # Balatro
+    - There we go, thank you. Things have to be simpler around here for my tiny brain. # ChecksMate
+    - Phew, thanks! And I thought I was going to be stuck down there for ages. # Dracomino
+    - Woah, that bit flip actually happened? Cosmic rays are real!? LET'S GOOOOOOOOOOOOOO!!! # Grapple Dog
+    - Thank you! I really needed that! Who would've thought you would need random keys to get anywhere in this game! # Pikmin 2
+    - Oh, THERE'S the platform that I need to land on! Thank you! # Refunct
+    - Alright, I have my next mission! This ought to be worth a sizeable sum of money. # R.E.P.O.
+    - Ahhh, that's a relief! And I thought I was better off alone... # Starcraft 2
   msg_completed_goal:
     # What messages the rat can say to celebrate victory.
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
@@ -146,11 +213,6 @@ Autopelago:
     # Unchanged from the base configuration.
     # TODO: Add custom messages
     - Yeah, I did it! er... WE did it!
-  lactose_intolerant:
-    # Replaces all references to lactose-containing products with less offensive ones.
-    # Unchanged from the base configuration.
-    'false': 50
-    'true': 0
   ###########################
   # Item & Location Options #
   ###########################
