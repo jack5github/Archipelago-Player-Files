@@ -7,7 +7,7 @@ game: "Spyro: A Hero's Tail"
 requires:
   version: 0.6.7
   game:
-    "Spyro: A Hero's Tail": 0.3.0
+    "Spyro: A Hero's Tail": 1.0.3
 "Spyro: A Hero's Tail":
   ################
   # Game Options #
@@ -48,19 +48,20 @@ requires:
     default: 0
     randomized: 50
     none: 0
-  randomize_swim:
-    # Toggle randomizing Spyro's ability to Swim.
-    # Enabled to increase the variety of the APworld.
+  randomize_movement:
+    # Randomize the 3 movement abilities (Glide, Swim, Charge).
+    # If you don't want to randomize one of these, add it to your start inventory.
+    # Enabled to increase the variety of the APworld. Charge and Double Jump are absolute necessities in order for the game to not feel like a slog early on, so they are added to `start_inventory`.
     'false': 0
     'true': 50
-  randomize_glide:
-    # Toggle randomizing Spyro's ability to Glide.
-    # Enabled to increase the variety of the APworld.
-    'false': 0
-    'true': 50
-  randomize_charge:
-    # Toggle randomizing Spyro's ability to Charge.
-    # Charge and Double Jump are absolute necessities in order for the game to not feel like a slog early on.
+  randomize_fireworks:
+    # Adds Fireworks as a location check. Requires Fire Breath.
+    # Adding firework locations would increase the location count of Spyro: A Hero's Tail far too much.
+    'false': 50
+    'true': 0
+  key_rings:
+    # Enable region-specific key rings for locked chests.
+    # Lockpicks should be able to open any chest.
     'false': 50
     'true': 0
   randomize_shop_items:
@@ -68,18 +69,6 @@ requires:
     # Enabled to increase the variety of the APworld.
     'false': 0
     'true': 50
-  randomize_shop_prices:
-    # Sets Moneybags shop prices.
-    # NOTE: ``default`` currently does nothing.
-    # default: No changes to price. If ``Randomize Shop Items`` is enabled, this setting will automatically change to ``random``.
-    # random: Randomizes the price, defined by the range in **Minimum Shop Price** and **Maximum Shop Price**.
-    # random_low: Randomizes the price, with a bias towards a lower price.
-    # random_high: Randomizes the price, with a bias towards a higher price.
-    # Enabled to increase the variety of the APworld.
-    default: 0
-    randomized: 50
-    randomized_low: 0
-    randomized_high: 0
   shop_prices_min:
     # The minimum price for items in the shop.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10000.
@@ -129,6 +118,31 @@ requires:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 40.
     # Anywhere between 35% and 50% of Dark Gems maximum are required to open Dark Gem doors.
     random-range-14-20: 50
+  randomize_gadget_costs:
+    # Randomizes the cost of Ball, Invincibility and Supercharge gadgets.
+    # Set to 0 to leave as default cost.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # It is not clear how changing this value will affect the game and the dialogue subtitles, so it is being left at the default for now.
+    0: 50
+  realm_access:
+    # Set realm access mode.
+    # default: Vanilla behaviour
+    # always: Access any realm at any time
+    # shuffled: Shuffles access between the 4 bosses
+    # randomized: Shuffles access into the multiworld
+    # Prevent access to other realms unless their items are found in the multiworld.
+    always: 0
+    shuffled: 0
+    randomized: 50
+  starting_realm:
+    # Sets starting realm behaviour.
+    # randomized: Start in a random realm
+    # Randomly choose either Dragon Village or Coastal Remains. The other two realms should start locked, as there is not much that can be done in them with minimal abilities.
+    dragon_village: 50
+    coastal_remains: 50
+    frostbite_village: 0
+    stormy_beach: 0
+    randomized: 0
   misc_goal:
     # Set the goal condition.
     # Mecha-Red is only accessible by travelling through the entirety of World 4, which is essentially one long linear trek, while the other bosses are accessible from the hubs of their respective worlds. For this reason, randomly choose one of the standard bosses to be the goal.
@@ -151,12 +165,6 @@ requires:
     # Unchanged from the base configuration.
     'false': 50
     'true': 0
-  misc_allow_immediate_realm_access:
-    # Enable a patch to access all realms at any time, instead of having to beat the previous realms boss first.
-    # IT IS RECOMMENDED TO KEEP THIS ENABLED, disabling may cause a generation failure.
-    # Unchanged from the base configuration.
-    'false': 0
-    'true': 50
   misc_skip_elevators:
     # Enable a patch to skip the long elevator waits to Cloudy Domain, Sunken Ruins and Magma Falls
     # Unchanged from the base configuration.
@@ -178,16 +186,18 @@ requires:
   non_local_items: []
   start_inventory:
     # Charge and Double Jump are absolute necessities in order for the game to not feel like a slog early on.
+    Charge: 1
     Double Jump: 1
   start_hints: []
   start_location_hints: []
   exclude_locations:
-    # TODO: Exclude all Blink minigames and World 4 sub-levels once location groups are implemented
-    # This particular Blink minigame is extremely difficult. More Blink minigames may be excluded in the future.
-    - 'Frostbite Village: Dragon Egg from Blink'
-    - 'Frostbite Village: Light Gem from Blink'
+    # All Blink minigames drag on for too long, and sometimes they are extremely difficult, so all of them are excluded.
+    - Blink
     # This particular thief is incredibly difficult to tackle, due to Spyro not being able to charge and jump at the same time, so exclude it.
-    - 'Magma Falls Bottom: Dragon Egg from thief behind breakable wall'
+    - 'MFb: Dragon Egg from thief behind breakable wall'
+    # Everything beyond Magma Falls Bottom takes too long to reach, so these levels are excluded.
+    - Dark Mine
+    - Red's Laboratory
     # TODO: Remove all of the below once the shop is fixed and rebalanced
     # Exclude half of the shop items so that Sphere 1 does not wind up being gigantic.
     - 'Moneybags: Shop Item 28'
@@ -219,7 +229,6 @@ requires:
     - 'Moneybags: Shop Item 54'
     - 'Moneybags: Shop Item 55'
     - 'Moneybags: Shop Item 56'
-    - 'Moneybags: Shop Item 57'
   priority_locations: []
   item_links: []
   plando_items: []
