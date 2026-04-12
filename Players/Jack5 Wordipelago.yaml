@@ -1,0 +1,241 @@
+﻿name: Jack5Wordle{NUMBER}
+description: |-
+  Jack5's Wordipelago player file
+
+  TODO: Write description
+game: Wordipelago
+requires:
+  version: 0.6.6
+  game:
+    Wordipelago: 1.0.1
+Wordipelago:
+  ################
+  # Game Options #
+  ################
+  # Unchanged from the base configuration.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  #######################
+  # Starting Conditions #
+  #######################
+  starting_letters:
+    # How many letters you start the game with.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 26.
+    # Now that I understand that you don't have to spell real words in order to make guesses, this can be any value I want. I am going with a random range around the default of 4.
+    random-range-3-5: 50
+  starting_guesses:
+    # How many guesses you start the game with.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 6.
+    # Similarly to the above, I am going with a random range around the default of 2.
+    random-range-1-3: 50
+  additional_guesses:
+    # How many extra guesses are added to the item pool. You can not exceed 6 guesses in play
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
+    # Like with the previous options, I am going to make this a random range as well, however it should be relatively small, as the default is 0.
+    random-range-0-2: 50
+  starting_cooldown:
+    # How long (in seconds) the new round cooldown is at the start of the game.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 18000.
+    # The cooldown after failing to guess a word is very annoying, so I've reduced it by 50% for now.
+    60: 50
+  yellow_unlocked:
+    # Whether you start with yellow letters unlocked at the start of the game.
+    # Unchanged from the base configuration, as I don't quite understand what this option does and what its effect on the gameplay is.
+    'false': 50
+    'true': 0
+  early_yellow:
+    # Whether Yellow Letters is pushed to early locations.
+    # Unchanged from the base configuration, as I don't quite understand what this option does and what its effect on the gameplay is.
+    'false': 50
+    'true': 0
+  unused_letters_unlocked:
+    # Whether you start with keyboard letters fading out when discovered not to be in the current word.
+    # Unchanged from the base configuration, as I don't quite understand what this option does and what its effect on the gameplay is.
+    'false': 50
+    'true': 0
+  shuffle_typing:
+    # Whether typing on your physical keyboard mimics the layout of the game keyboard.
+    # none: Typing and on screen keyboard are not shuffled.
+    # onscreen: On screen keyboard is shuffled, typing remains unshuffled.
+    # querty: Typing and on screen keyboard are shuffled as if using a querty keyboard.
+    # azerty: Typing and on screen keyboard are shuffled as if using a azerty keyboard.
+    # dvorak: Typing and on screen keyboard are shuffled as if using a dvorak keyboard.
+    # Do not shuffle typing.
+    none: 50
+    onscreen: 0
+    querty: 0
+    azerty: 0
+    dvorak: 0
+  #########
+  # Goals #
+  #########
+  word_checks:
+    # How many words you have to get right to hit you goal
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
+    # Unchanged from the base configuration.
+    20: 50
+  word_streak_checks:
+    # How many words you have to get right in a row to hit you goal
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
+    # Unchanged from the base configuration.
+    10: 50
+  win_condition:
+    # What is needed to achieve victory, hitting the target for words, streaks or both.
+    # Unchanged from the base configuration.
+    words: 50
+    streak: 0
+    words_and_streak: 0
+  ##############
+  # Difficulty #
+  ##############
+  logic_difficulty:
+    # How restrictive the logic for checks is.
+    # easy: easy to get checks, guesses/vowels/yellow likely early.
+    # normal: easier to get checks, but still restrictive in some ways.
+    # hard: bare minimum required to achive checks.
+    # Unchanged from the base configuration.
+    very_easy: 0
+    easy: 0
+    normal: 50
+    hard: 0
+    very_hard: 0
+  point_shop_logic_level:
+    # When logic expects you to be able to buy shop items.
+    # one: Matches 1x green letter logic, point generation expected to be very low.
+    # two: Matches 2x green letter logic.
+    # three: Matches 3x green letter logic, default level, reasonable level of point generation.
+    # four: Matches 4x green letter logic.
+    # five: Matches 5x green letter logic, point generation expected to be much higher.
+    # Unchanged from the base configuration.
+    one: 0
+    two: 0
+    three: 50
+    four: 0
+    five: 0
+  word_weighting:
+    # How likely new words fit with the letters you have unlocked.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
+    # Unchanged from the base configuration, as I don't quite understand what this option does and what its effect on the gameplay is.
+    3: 50
+  #############
+  # Locations #
+  #############
+  minimum_point_shop_checks:
+    # How many items are present in the point shop.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 50.
+    # I like Wordipelago's shop, so I've increased the number of items in the shop from the default of 10. I think a random range hovering around 20 would be good.
+    random-range-15-25: 50
+  point_shop_check_price:
+    # How much AP items cost in the point shop.
+    # 0 for a random assortment (multiples of 100).
+    # If running a restrictive game, it is recommended to keep this low.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000
+    # Unchanged from the base configuration, as I don't quite understand what this option does and what its effect on the gameplay is.
+    300: 50
+  green_checks:
+    # How checks work for green letters in words.
+    # none: No checks for getting green letters.
+    # best: Checks for 1-5 correct letters in a word.
+    # composition: checks for every configuration of green letters.
+    # complete: Best and composition combined.
+    # Unchanged from the base configuration.
+    best: 0
+    composition: 0
+    complete: 50
+  yellow_checks:
+    # How checks work for yellow letters in words.
+    # none: No checks for getting yellow letters.
+    # composition: checks for every configuration of yellow letters.
+    # Unchanged from the base configuration.
+    none: 0
+    composition: 50
+  letter_checks:
+    # Which letters send checks for sucessfully being used in a word.
+    # none: No checks for using letters.
+    # vowels: Checks for using vowels.
+    # common: Checks for using vowels and common consonants.
+    # all: Checks for using all letters.
+    # Changed to `all`, as there is no reason to exclude vowels from letter checks.
+    vowels: 0
+    common: 0
+    all: 50
+  grass_sanity:
+    # Adds a check for spelling the word 'Grass'.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  key_words:
+    # Adds checks for spelling specified words. (max 20)
+    # Unchanged from the base configuration.
+    []
+  #########
+  # Items #
+  #########
+  time_reward_count:
+    # The number of new round cooldown reduction rewards in the pool.
+    # Multiply by time_reward_seconds for total reduction.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 30.
+    # The default of this option is 12. Refer to `starting_cooldown` for the starting amount of cooldown and use it to create evenly divided rewards that add up to the starting amount.
+    12: 50
+  time_reward_seconds:
+    # How many seconds each time reward decreases the new round cooldown by.
+    # Multiply by time_reward_count for total reduction.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 30.
+    # The default of this option is 10. Refer to `starting_cooldown` for the starting amount of cooldown and use it to create evenly divided rewards that add up to the starting amount.
+    5: 50
+  extra_time_reward_percent:
+    # What percentage of filler items will be replaced with an extra cooldown reduction.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Increased to 10, which is the default for other filler % options.
+    10: 50
+  shop_points_item_reward_percent:
+    # What percentage of filler items will be replaced with Shop Points.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    20: 50
+  shop_points_item_size:
+    # How many Shop Points are awarded with Shop Point filler items.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
+    # Unchanged from the base configuration.
+    100: 50
+  #########
+  # Traps #
+  #########
+  bad_guess_trap_percent:
+    # What percentage of filler items will be replaced with Bad Guess traps.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Increased to 10, which is the default for other filler % options.
+    10: 50
+  random_guess_trap_percent:
+    # What percentage of filler items will be replaced with Random Guess traps.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    10: 50
+  extra_cooldown_trap_percent:
+    # What percentage of filler items will be replaced with Extra Cooldown traps.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    10: 50
+  extra_cooldown_trap_size:
+    # How many second are added with the extra cooldown traps.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 300.
+    # Reduced from 15 due to cooldown being annoying in general.
+    10: 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items:
+    # Yellow and Unused Letters are critical progression items that ought to be found in other worlds.
+    - Yellow Letters
+    - Unused Letters
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
