@@ -38,8 +38,8 @@ Wordipelago:
   starting_cooldown:
     # How long (in seconds) the new round cooldown is at the start of the game.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 18000.
-    # The cooldown after failing to guess a word is very annoying, so I've reduced it by 50% for now.
-    60: 50
+    # The cooldown after failing to guess a word is very annoying, so I've reduced it by more than 50%.
+    45: 50
   yellow_unlocked:
     # Whether you start with yellow letters unlocked at the start of the game.
     # Unchanged from the base configuration, as I don't quite understand what this option does and what its effect on the gameplay is.
@@ -74,8 +74,8 @@ Wordipelago:
   word_checks:
     # How many words you have to get right to hit you goal
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
-    # Unchanged from the base configuration.
-    20: 50
+    # Reduced from 20, a more reasonable amount of time spent on the game.
+    5: 50
   word_streak_checks:
     # How many words you have to get right in a row to hit you goal
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
@@ -132,8 +132,8 @@ Wordipelago:
     # 0 for a random assortment (multiples of 100).
     # If running a restrictive game, it is recommended to keep this low.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000
-    # Unchanged from the base configuration, as I don't quite understand what this option does and what its effect on the gameplay is.
-    300: 50
+    # Reduced from 300, as it was too difficult to purchase the needed shop items when at its default.
+    250: 50
   green_checks:
     # How checks work for green letters in words.
     # none: No checks for getting green letters.
@@ -178,13 +178,13 @@ Wordipelago:
     # Multiply by time_reward_seconds for total reduction.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 30.
     # The default of this option is 12. Refer to `starting_cooldown` for the starting amount of cooldown and use it to create evenly divided rewards that add up to the starting amount.
-    12: 50
+    15: 50
   time_reward_seconds:
     # How many seconds each time reward decreases the new round cooldown by.
     # Multiply by time_reward_count for total reduction.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 30.
     # The default of this option is 10. Refer to `starting_cooldown` for the starting amount of cooldown and use it to create evenly divided rewards that add up to the starting amount.
-    5: 50
+    3: 50
   extra_time_reward_percent:
     # What percentage of filler items will be replaced with an extra cooldown reduction.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
@@ -228,11 +228,12 @@ Wordipelago:
   ###########################
   local_items: []
   non_local_items:
-    # Yellow and Unused Letters are critical progression items that ought to be found in other worlds.
+    # Yellow Letters is a critical progression item that ought to be found in other worlds.
     - Yellow Letters
-    - Unused Letters
   start_inventory: {}
-  start_inventory_from_pool: {}
+  start_inventory_from_pool:
+    # Start with the ability to see letters that don't appear in the word when guessed, a quality of life feature.
+    Unused Letters: 1
   start_hints: []
   start_location_hints: []
   exclude_locations: []
