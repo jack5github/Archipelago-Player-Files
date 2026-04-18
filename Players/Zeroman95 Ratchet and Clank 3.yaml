@@ -1,45 +1,50 @@
 ﻿name: ZeromanRAC3{NUMBER}
-description: |-
-  Zeroman95's Ratchet and Clank 3 Player file
+
+description: Zeroman95 Ratchet and Clank 3 YAML
 
 game: Ratchet and Clank 3
 requires:
   version: 0.6.7
+
 Ratchet and Clank 3:
-  progression_balancing: # GIVE IT TO ME. I LOVE THIS GAME WITH A PASSION THAT I BREAK IT ALL THE TIME.
+  progression_balancing:
+    # I play with RANDOM Location so no Progression please!
     0: 99
 
-  accessibility: # Set to minimal to limit planet locations and checks. Makes the game more challenging.
+  accessibility:
+    # Set to minimal to make Items required to beat the game be available only.
     full: 0
     minimal: 50
 
-  deathlink: # Kill me!
-    'off': 0
-    'on': 50
+  deathlink:
+    # Death will affect everyone.
+    'false': 0
+    'true': 50
 
-  intro_skip: # Intro Skip is disabled so that I can use my PAL Copy of the game.
-    disabled: 50
-    enabled: 0
+  intro_skip:
+    # Intro Skip can now be used with the PAL Version of the game. Absolutely please pass Veldin.
+    disabled: 0
+    enabled: 50
 
-  holostar_skip: # Unchanged
+  holostar_skip:
+    # Unchanged
     start_as_clank: 50
     start_at_trailer: 0
 
-  bolt_and_xp_multiplier: # X1 is picked because buying Items is considered Junk Checks. Higher multiplier means more bolts and experience (Experience not included yet!)
+  bolt_and_xp_multiplier:
+    # Set this to x1 for now, not sure if I will increase this or not. If so increase it to x2 because NewGame+ stuff is in this AP.
     x1: 99
-    x2: 0
-    x4: 0
-    x8: 0
-    x16: 0
 
-  one_hp_challenge: # Unchanged
+  one_hp_challenge:
+    # Unchanged
     Clank: 0
     Giant Clank: 0
     Qwark: 0
     Ratchet: 0
     Vehicle: 0
 
-  starting_weapons: # All weapons are switched on except for RY3NO.
+  starting_weapons:
+    # RY3NO is off because RY3NO is overpowered.
     Agents of Doom: 1
     Annihilator: 1
     Bouncer: 1
@@ -61,150 +66,174 @@ Ratchet and Clank 3:
     Spitting Hydra: 1
     Suck Cannon: 1
 
-  enable_progressive_weapons: # Disabled because why.
+  enable_progressive_weapons:
+    # Unchanged
     disable: 50
     enable: 0
 
-  armor_upgrade: # Unchanged
-    4: 50
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-0-8: 0 # random value between 0 and 8
+  armor_upgrade:
+    # Unchanged
+    4: 99
 
-  clank_options: # Don't start with Clank and shuffle his Packs independently.
+  clank_options:
+    # Set to put Heli-Pack and Thruster-Pack somewhere in the Pool. Meaning I won't have clank for a good portion of the game until then.
     shuffled_independently: 99
 
-  traps_enabled: # Turn on da traps.
+  traps_enabled:
+    # I play this game with a passion bring on the Traps.
     disabled: 0
     enabled: 50
 
-  trap_weight: # Unchanged
+  trap_weight:
+    # Unchanged
     1-Hit KO Trap: 2
+    Black Screen Trap: 2
     Invisible Trap: 2
     Item Lock Trap: 2
     No Ammo Trap: 2
     No Clank Trap: 2
     Wrench Only Trap: 2
 
-  filler_weight: # More Player EXP less Bolts and Jackpot.
-    Bolts: 1
-    Jackpot: 1
-    Player EXP: 10
-    Weapon Level-Up: 5 # UNUSED NO PROGRESSIVE WEAPONS
+  filler_weight:
+    # Bolts and Jackpot are finally useful. Turning those up and turning Player EXP down.
+    Bolts: 10
+    Jackpot: 10
+    Player EXP: 5
+    Weapon Level-Up: 0 # (5) UNUSED DISABLED PROGRESSIVE WEAPONS
 
-  weapon_vendors: # Unchanged
-    disabled: 50
-    enabled: 0
+  weapon_vendors:
+    # Unchanged
+    disabled: 0
+    enabled: 50
 
-  skill_points: # I have played this game too much I know ALL Skill Points from the back of my head.
+  armor_vendor:
+    # Unchanged
+    disabled: 0
+    enabled: 50
+
+  ship_vendor:
+    # Unchanged
+    disabled: 0
+    enabled: 50
+
+  scout_vendors:
+    # Feels good to share these Items as hints to other players so they know something is here.
+    Armor: 1
+    Ship: 1
+    Weapon: 1
+
+  skill_points:
+    # I play with all Skill Points on, I 100%'d this game so many times I have memorised EVERY Skill Point on the game.
     all: 99
 
-  trophies: # I have played this game too much I know ALL Trophies from the back of my head.
+  trophies:
+    # I have played this game so many times I know where every Trophy is and how to obtain them.
     every_trophy: 99
 
-  titanium_bolts: # I have played this game too much I know ALL Titanium Bolts from the back of my head.
+  titanium_bolts:
+    # Unchanged
     disabled: 0
     enabled: 50
 
-  rangers: # Heck yeah I want to help my ranger boys.
+  rangers:
+    # I will want all checks from Rangers.
     all: 99
 
-  vidcomics: # Unchanged
+  vidcomics:
+    # Unchanged
     disabled: 0
     enabled: 50
 
-  vr_challenges: # Unchanged
+  vr_challenges:
+    # Unchanged
     disabled: 0
     enabled: 50
 
-  arena: # Unchanged
-    none: 0
-    first_only: 0
-    second_only: 0
-    all: 50
+  arena:
+    # Unchanged
+    all: 99
 
-  sewer_crystals: # Set to all.
-    none: 0
-    every_20: 0
-    every_10: 0
-    every_5: 0
-    all: 50
+  sewer_crystals:
+    # All Sewer Crystals because now the Bolts in them are worth it.
+    all: 99
 
-  sewer_limitation: # This isn't changing until Bolts are useful properly.
-    2: 99
+  sewer_limitation:
+    # All Sewer Crystals are now checks.
+    101: 50
 
-  nanotech_milestones: # I want every Nanotech increase to give something. Means more effort, but allows for more diversity compared to collecting Titanium Bolts and Trophies and Skill Points. The more higher the more checks.
-    none: 0
-    every_20: 0
-    every_10: 0
-    every_5: 0
-    all: 50
+  nanotech_milestones:
+    # All Nanotech milestones give checks.
+    all: 99
 
-  nanotech_limitation: # Unchanged
+  nanotech_limitation:
+    # Unchanged
     100: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-11-100: 0 # random value between 11 and 100
 
-  ship_nose: # Randomly pick please.
-    standard: 1
-    split: 1
-    scoop: 1
+  ship_nose:
+    # Random Ship Nose.
+    standard: 33
+    split: 33
+    scoop: 33
 
-  ship_wings: # Randomly pick please.
-    standard: 1
-    hi_lift: 1
-    heavy_ordinance: 1
+  ship_wings:
+    # Random Ship Wings.
+    standard: 33
+    hi_lift: 33
+    heavy_ordinance: 33
 
-  ship_skin: # Randomly pick please. Original Colour that you start with is removed.
+  ship_skin:
+    # Allow random ship skin other then blargian red.
     blargian_red: 0
-    orxon_green: 1
-    bogon_blue: 1
-    insomniac_special: 1
-    dark_nebula: 1
-    dreks_black_heart: 1
-    space_storm: 1
-    lunar_eclipse: 1
-    plaidtastic: 1
-    supernova: 1
-    solar_wind: 1
-    clowner: 1
-    silent_strike: 1
-    lombax_orange: 1
-    neutron_star: 1
-    star_traveller: 1
-    hooked_on_onyx: 1
-    tyhrranoid_void: 1
-    zeldren_sunset: 1
-    ghost_pirate_purple: 1
-    qwark_green: 1
-    agent_orange: 1
-    helgas_hues: 1
-    ameboid_green: 1
-    pulsing_purple: 1
-    obani_orange: 1
-    low_rider: 1
-    black_hole: 1
-    sun_storm: 1
-    sasha_scarlet: 1
-    florana_breeze: 1
-    ozzy_kamikaze: 1
+    orxon_green: 3
+    bogon_blue: 3
+    insomniac_special: 3
+    dark_nebula: 3
+    dreks_black_heart: 3
+    space_storm: 3
+    lunar_eclipse: 3
+    plaidtastic: 3
+    supernova: 3
+    solar_wind: 3
+    clowner: 3
+    silent_strike: 3
+    lombax_orange: 3
+    neutron_star: 3
+    star_traveller: 3
+    hooked_on_onyx: 3
+    tyhrranoid_void: 3
+    zeldren_sunset: 3
+    ghost_pirate_purple: 3
+    qwark_green: 3
+    agent_orange: 3
+    helgas_hues: 3
+    ameboid_green: 3
+    pulsing_purple: 3
+    obani_orange: 3
+    low_rider: 3
+    black_hole: 3
+    sun_storm: 3
+    sasha_scarlet: 3
+    florana_breeze: 3
+    ozzy_kamikaze: 3
 
-  skin: # Randomly pick please. Default Ratchet is removed.
+  skin:
+    # Allow to pick random skin other then default Ratchet.
     default: 0
-    old_school: 1
-    snowman: 1
-    tuxedo: 1
-    buginoid: 1
-    brainius: 1
-    unused_robot: 1
-    robo_rooster: 1
-    trooper: 1
-    robo: 1
+    old_school: 12
+    snowman: 12
+    tuxedo: 12
+    buginoid: 12
+    brainius: 12
+    unused_robot: 12
+    robo_rooster: 12
+    trooper: 12
+    robo: 12
 
-  exclude_locations: ['Unstable']
+  exclude_locations: [ 'Unstable' ]
   local_items: []
   non_local_items: []
   start_inventory: {}
