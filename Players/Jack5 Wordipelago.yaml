@@ -74,19 +74,19 @@ Wordipelago:
   word_checks:
     # How many words you have to get right to hit you goal
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
-    # Reduced from 20, a more reasonable amount of time spent on the game.
-    5: 50
+    # Reduced from 20 and increased from 5. This gives a more reasonable amount of time spent on the game.
+    10: 50
   word_streak_checks:
     # How many words you have to get right in a row to hit you goal
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
-    # Unchanged from the base configuration.
-    10: 50
+    # A single 2-word streak is required in order to prove that the game is near completion.
+    2: 50
   win_condition:
     # What is needed to achieve victory, hitting the target for words, streaks or both.
-    # Unchanged from the base configuration.
-    words: 50
+    # Due to how easy it is to guess a lot of words, also require a streak.
+    words: 0
     streak: 0
-    words_and_streak: 0
+    words_and_streak: 50
   ##############
   # Difficulty #
   ##############
