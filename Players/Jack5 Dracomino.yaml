@@ -24,12 +24,6 @@ Dracomino:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 1000.
     # I reduced this to get the game within the range of 100-200 unlock locations, there being about 190 with this config.
     70: 50
-  starting_drop_method:
-    # How will shapes fall initially?
-    # Unchanged from the base configuration.
-    gravity: 50
-    soft_drop: 0
-    hard_drop: 0
   #################
   # Shape Options #
   #################
