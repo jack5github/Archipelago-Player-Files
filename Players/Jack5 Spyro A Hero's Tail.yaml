@@ -7,7 +7,7 @@ game: "Spyro: A Hero's Tail"
 requires:
   version: 0.6.7
   game:
-    "Spyro: A Hero's Tail": 1.0.3
+    "Spyro: A Hero's Tail": 1.0.7
 "Spyro: A Hero's Tail":
   ################
   # Game Options #
@@ -143,6 +143,11 @@ requires:
     frostbite_village: 0
     stormy_beach: 0
     randomized: 0
+  misc_easy_bosses:
+    # Toggle "easy" mode for bosses, making them take triple damage, shortening the fight considerably.
+    # Valid options: ["Gnasty Gnorc", "Ineptune", "Red", "Mecha-Red"]
+    # Fully disabled.
+    []
   misc_goal:
     # Set the goal condition.
     # Mecha-Red is only accessible by travelling through the entirety of World 4, which is essentially one long linear trek, while the other bosses are accessible from the hubs of their respective worlds. For this reason, randomly choose one of the standard bosses to be the goal.
@@ -161,7 +166,7 @@ requires:
     'false': 50
     'true': 0
   misc_skip_cutscenes:
-    # Enable a patch that skips realm intro cutscenes. USE WITH CAUTION, maybe have glitchy side-effects.
+    # Enable a patch that skips realm intro cutscenes. In rare cases, this may have glitchty side-effects.
     # Unchanged from the base configuration.
     'false': 50
     'true': 0
