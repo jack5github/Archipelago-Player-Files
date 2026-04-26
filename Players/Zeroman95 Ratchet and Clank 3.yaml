@@ -5,6 +5,8 @@ description: Zeroman95 Ratchet and Clank 3 YAML
 game: Ratchet and Clank 3
 requires:
   version: 0.6.7
+  game:
+    Ratchet and Clank 3: 0.5.3
 
 Ratchet and Clank 3:
   progression_balancing:
@@ -66,7 +68,7 @@ Ratchet and Clank 3:
     Spitting Hydra: 1
     Suck Cannon: 1
 
-  enable_progressive_weapons:
+  progressive_weapons:
     # Unchanged
     disable: 50
     enable: 0
@@ -74,6 +76,10 @@ Ratchet and Clank 3:
   armor_upgrade:
     # Unchanged
     4: 99
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-8: 0 # random value between 0 and 8
 
   clank_options:
     # Set to put Heli-Pack and Thruster-Pack somewhere in the Pool. Meaning I won't have clank for a good portion of the game until then.
@@ -86,19 +92,19 @@ Ratchet and Clank 3:
 
   trap_weight:
     # Unchanged
-    1-Hit KO Trap: 2
-    Black Screen Trap: 2
-    Invisible Trap: 2
-    Item Lock Trap: 2
-    No Ammo Trap: 2
-    No Clank Trap: 2
-    Wrench Only Trap: 2
+    1-Hit KO Trap: 1
+    Black Screen Trap: 1
+    Invisible Trap: 1
+    Item Lock Trap: 1
+    No Ammo Trap: 1
+    No Clank Trap: 1
+    Wrench Only Trap: 1
 
   filler_weight:
     # Bolts and Jackpot are finally useful. Turning those up and turning Player EXP down.
     Bolts: 10
     Jackpot: 10
-    Player EXP: 5
+    Nanotech EXP: 5
     Weapon Level-Up: 0 # (5) UNUSED DISABLED PROGRESSIVE WEAPONS
 
   weapon_vendors:
@@ -128,7 +134,7 @@ Ratchet and Clank 3:
 
   trophies:
     # I have played this game so many times I know where every Trophy is and how to obtain them.
-    every_trophy: 99
+    all: 99
 
   titanium_bolts:
     # Unchanged
@@ -136,8 +142,11 @@ Ratchet and Clank 3:
     enabled: 50
 
   rangers:
-    # I will want all checks from Rangers.
-    all: 99
+    # Unchanged
+    none: 0
+    story_missions: 0
+    optional_missions: 0
+    all: 50
 
   vidcomics:
     # Unchanged
@@ -151,7 +160,10 @@ Ratchet and Clank 3:
 
   arena:
     # Unchanged
-    all: 99
+    none: 0
+    first_only: 0
+    second_only: 0
+    all: 50
 
   sewer_crystals:
     # All Sewer Crystals because now the Bolts in them are worth it.
@@ -159,7 +171,7 @@ Ratchet and Clank 3:
 
   sewer_limitation:
     # All Sewer Crystals are now checks.
-    101: 50
+    101: 99
 
   nanotech_milestones:
     # All Nanotech milestones give checks.
@@ -220,7 +232,7 @@ Ratchet and Clank 3:
     florana_breeze: 3
     ozzy_kamikaze: 3
 
-  skin:
+  player_skin:
     # Allow to pick random skin other then default Ratchet.
     default: 0
     old_school: 12
@@ -234,14 +246,23 @@ Ratchet and Clank 3:
     robo: 12
 
   exclude_locations: [ 'Unstable' ]
+
   local_items: []
+
   non_local_items: []
+
   start_inventory: {}
+
   start_inventory_from_pool: {}
+
   start_hints: []
+
   start_location_hints: []
+
   priority_locations: []
+
   item_links: []
+
   plando_items:
     # Generic items plando.
     # places the RY3NO right at the end of the game making it unusable and banned.
