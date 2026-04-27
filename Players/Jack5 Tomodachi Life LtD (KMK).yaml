@@ -1,0 +1,342 @@
+name: Jack5Tomodachi{NUMBER}
+description: |-
+  Jack5's Tomodachi Life: Living the Dream (Keymaster's Keep) player file
+
+  With my intense passion for playing Tomodachi Life: Living the Dream, I've created a Keymaster's Keep player file that exclusively contains objectives for Tomodachi Life, so that I can focus on it alone as part of a more traditional Archipelago run. The goal is 'Magic Key Heist', and the trial count is 10 per area, rather than the standard 5 to 8.
+game: Keymaster's Keep
+requires:
+  version: 0.6.7
+Keymaster's Keep:
+  ################
+  # Game Options #
+  ################
+  # Unchanged from the base configuration.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  ################
+  # Goal Options #
+  ################
+  goal:
+    # Determines the victory condition.
+    # Keymasters Challenge: Retrieve X artifacts of resolve to unlock the Keymaster's challenge chamber and beat the ultimate challenge
+    # Magic Key Heist: Acquire X magic keys and escape the Keymaster's Keep
+    # Area Domination: Acquire conquest medallions by completing all trials in X% of keep areas and escape the Keymaster's Keep
+    # Magic Key Heist and Area Domination are the two possible goals in me and Zeroman95's shared Keymaster's Keep player file, but Area Domination won't work for Tomodachi Life: Living the Dream, so Magic Key Heist it is.
+    keymasters_challenge: 0
+    magic_key_heist: 50
+    area_domination: 0
+  artifacts_of_resolve_total:
+    # Determines how many Artifacts of Resolve are in the item pool.
+    # Only relevant if the selected goal is Keymaster's Challenge.
+    # You can define additional values between the minimum and maximum values. Minimum value is 3, maximum value is 25.
+    # Irrelevant as my goal is not Keymaster's Challenge.
+    5: 50
+  artifacts_of_resolve_required:
+    # Determines how many Artifacts of Resolve are required to unlock the Keymaster's challenge room.
+    # Only relevant if the selected goal is Keymaster's Challenge.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
+    # Irrelevant as my goal is not Keymaster's Challenge.
+    3: 50
+  conquest_medallions_percentage_required:
+    # Determines the percentage of Conquest Medallions required before escaping the Keymaster's Keep. Completing all trials in a keep awards a Conquest Medallion.
+    # Only relevant if the selected goal is Area Domination.
+    # Irrelevant as my goal is not Area Domination.
+    60: 50
+  magic_keys_required:
+    # Determines how many Magic Keys are required before escaping the Keymaster's Keep.
+    # Only relevant if the selected goal is Magic Key Heist.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 50.
+    # This is a legacy option that was being used when our goal was Magic Key Heist. This was reduced to roughly half of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has gone from 66% of the total magic keys to roughly 90%. It cannot be any lower than 10.
+    10: 50
+  ###########################
+  # Keep Generation Options #
+  ###########################
+  keep_areas:
+    # Determines how many areas are in the Keymaster's Keep.
+    # Each area will contain a new set of trials and most will be locked by one or more keys.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 100.
+    # Since this player file only uses one game as part of KMK generation, set the number of areas to the absolute minimum.
+    10: 50
+  magic_keys_total:
+    # Determines how many Magic Keys are in the item pool.
+    # The keys in that pool will be used to generate the lock combinations for areas in the Keymaster's Keep. They will also act as the amount of available keys to the player in the Magic Key Heist goal.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 50.
+    # It is not possible to reduce this value below 10, despite my desire to do so for this individual KMK.
+    10: 50
+  unlocked_areas:
+    # Determines how many areas are unlocked at the start of the game.
+    # The remaining areas will be locked by one or more keys.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Considering that the areas in this KMK will contain more trials, this is being reduced from the standard of 3.
+    2: 50
+  lock_magic_keys_minimum:
+    # Determines the minimum amount of Magic Keys that could be required to unlock an area.
+    # The amount of keys required to unlock an area will be a random number between this value and the maximum. Note that this option will be ignored for the first few areas to ensure the game is completable.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Unchanged from the base configuration.
+    1: 50
+  lock_magic_keys_maximum:
+    # Determines the maximum amount of Magic Keys that could be required to unlock an area.
+    # The amount of keys required to unlock an area will be a random number between the minimum and this value. Note that this option will be ignored for the first few areas to ensure the game is completable.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # As there are very few keeps, it would not make sense to have one be locked by 3 keys at once.
+    2: 50
+  area_trials_minimum:
+    # Determines the minimum amount of trials that could be in an area.
+    # The amount of trials in an area will be a random number between this value and the maximum, but might get adjusted upwards to hold the item pool size.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
+    # Force the number of trials in each area to be 12, meaning there will be 110 checks total (10 * 10 + 10). Any more would be too much of a challenge.
+    10: 50
+  area_trials_maximum:
+    # Determines the maximum amount of trials that could be in an area.
+    # The amount of trials in an area will be a random number between the minimum and this value, but might get adjusted upwards to hold the item pool size.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
+    # Force the number of trials in each area to be 10, meaning there will be 110 checks total (10 * 10 + 10). Any more would be too much of a challenge.
+    10: 50
+  shops_:
+    # If true, keep areas will have a chance to be replaced by a shop that will sell a handful of items.
+    # The presence of shops will add Unique Relics to the item pool, which will need to be found to purchase items.
+    # Yes, the option is named "shops_". Thank you, ALTTP!
+    # After trying out shops, it can confidently be said that they distract from the point of Keymaster's Keep, especially since it is not obvious that an unlocked area is a shop. The addition of shops also makes the effect of other options less clear.
+    'false': 50
+    'true': 0
+  shops_percentage_chance:
+    # Determines the percentage chance of a shop overriding a keep area when shops are enabled.
+    # A maximum of 10 shops can exist in the keep at once.
+    # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 50.
+    # Irrelevant as I am not playing with shops.
+    8: 50
+  shop_items_minimum:
+    # Determines the minimum amount of items that could be sold in a shop.
+    # The amount of items sold in a shop will be a random number between this value and the maximum.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Irrelevant as I am not playing with shops.
+    3: 50
+  shop_items_maximum:
+    # Determines the maximum amount of items that could be sold in a shop.
+    # The amount of items sold in a shop will be a random number between the minimum and this value.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Irrelevant as I am not playing with shops.
+    5: 50
+  shop_items_progression_percentage_chance:
+    # Determines the percentage chance of each item in a shop being a guaranteed progression item.
+    # Since items are purchased with unique relics, it is recommended to set this value on the higher side. Each unique relic will only be able to unlock a single item in the keep, so ideally, they are worth the trouble.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Irrelevant as I am not playing with shops.
+    100: 50
+  shop_hints:
+    # If true, upon discovering a shop, hints will be generated for the items sold in that shop.
+    # Irrelevant as I am not playing with shops.
+    'false': 50
+    'true': 0
+  ######################################
+  # Game / Objective Selection Options #
+  ######################################
+  include_adult_only_or_unrated_games:
+    # Determines if adult only or unrated games should be considered for the game pool.
+    # Can be a useful filter to adhere to the rules of certain communities.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  include_modern_console_games:
+    # Determines if modern console games should be considered for the game pool.
+    # Can be a useful filter to adhere to the rules of certain communities.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  include_difficult_objectives:
+    # Determines if difficult objectives should be considered.
+    # Enabling this option might yield objectives that some players will struggle or not be able to complete.
+    # There are no difficult objectives in Tomodachi Life: Living the Dream, so this can be left as false.
+    'false': 50
+    'true': 0
+  excluded_games_difficult_objectives:
+    # When 'include_difficult_objectives' is enabled, this option allows you to still exclude specific games.
+    # Only game names originally listed in 'game_selection' are accepted.
+    # If a game specified here only offers difficult objectives, this option will have no effect for it.
+    # List can be empty because `include_difficult_objectives` is false.
+    []
+  include_time_consuming_objectives:
+    # Determines if time-consuming objectives should be considered.
+    # Enabling this option might yield objectives that take much longer to complete (i.e. more than 1 hour).
+    # If enabled, you can still exclude specific games with the 'excluded_games_time_consuming_objectives' option.
+    # I want to allow Tomodachi Life: Living the Dream's time consuming objectives to appear.
+    'false': 0
+    'true': 50
+  excluded_games_time_consuming_objectives:
+    # When 'include_time_consuming_objectives' is enabled, this option allows you to still exclude specific games.
+    # Only game names originally listed in 'game_selection' are accepted.
+    # If a game specified here only offers time-consuming objectives, this option will have no effect for it.
+    # Added the game in question.
+    - 'Tomodachi Life: Living the Dream (SW)'
+  hints_reveal_objectives:
+    # Determines if Archipelago hints will provide information about a location's objective.
+    # Enabling this option will potentially spoil the game for an area and the objective that needs to be completed.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  game_medley_mode:
+    # If true, a percentage of keep areas will feature Game Medley as their game, with each trial sourced randomly from a separate, dedicated pool of games.
+    # Activating Game Medley Mode will disable optional game conditions for keep areas assigned to Game Medley.
+    # Disabled as this KMK only features one game.
+    'false': 50
+    'true': 0
+  game_medley_percentage_chance:
+    # Determines the percentage chance of a game medley being selected when Game Medley Mode is enabled.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Irrelevant as I am not playing with Game Medley.
+    5: 50
+  game_medley_game_selection:
+    # Defines the game pool that will be used to generate Game Medley trials.
+    # Only game names originally listed in 'game_selection' are accepted.
+    # You are allowed to place games that already appear in other selection options here.
+    # You are allowed to add the same game multiple times here. This will act as a weighted pool.
+    # If this is left empty, all games from other selection options will be used as a default.
+    # Irrelevant as I am not playing with Game Medley.
+    []
+  game_selection:
+    # Defines the game pool to select from.
+    # All supported games are listed. Remove the ones you don't own or want to play.
+    # You are allowed to add the same game multiple times here. This will act as a weighted pool.
+    # This is where the lone game being played is added.
+    - 'Tomodachi Life: Living the Dream (SW)'
+  game_selection_bag_size:
+    # Determines the size of the bag from which the weighted games in 'game_selection' and 'game_medley_game_selection' will be randomly selected.
+    # 0: No bag will be used and games may appear multiple times unbounded.
+    # 1: The bag will be filled with 1 of each game and will be drawn from randomly until it is empty, resulting in an even distribution of games. If the bag becomes empty, it will be refilled.
+    # 2+: The bag will initially be filled with the chosen number of each game, resulting in a slightly less even distribution of games where the maximum number of each game is the chosen number. Subsequent fills will revert to an even distribution. Similar logic applies for all other bag sizes.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5.
+    # Unchanged from the base configuration.
+    1: 50
+  game_selection_force_select:
+    # Forces certain games to become areas, selected and placed randomly from this list. This option does not affect shops or the Keymaster's challenge room. If more games than permitted areas are specified, this option will cause an error. 'game_selection_bag_size' will treat games added by this option as if they have been pre-drawn from their respective bags.
+    # You are allowed to add the same game multiple times here. This will cause that many instances of the game to appear as areas.
+    # Since only one game is present, this can be empty.
+    []
+  #########################################
+  # Tomodachi Life: Living the Dream (SW) #
+  #########################################
+  tomodachi_life_living_the_dream_weights:
+    # The weights to use for Tomodachi Life: Living the Dream objective types. The default weights include objectives that require a player to give specific Miis specific items, which would be undesirable for players that want to keep their Miis accurate. If this is the case, set all "named_mii_named_..." weights to 0 except "named_mii_named_food".
+    # I have disabled the inaccurate objectives according to the above instructions.
+    any_mii_named_clothing: 6
+    any_mii_named_exterior: 2
+    any_mii_named_food: 6
+    any_mii_named_interior: 4
+    any_mii_named_level_up_gift: 4
+    any_mii_named_treasure: 4
+    bonus: 20
+    named_mii_any_clothing: 3
+    named_mii_any_exterior: 1
+    named_mii_any_food: 3
+    named_mii_any_interior: 2
+    named_mii_any_level_up_gift: 2
+    named_mii_any_treasure: 2
+    named_mii_named_clothing: 0
+    named_mii_named_exterior: 0
+    named_mii_named_food: 3
+    named_mii_named_interior: 0
+    named_mii_named_level_up_gift: 0
+    named_mii_named_treasure: 0
+    place_building: 1
+    place_landscapes: 2
+    place_objects: 8
+  tomodachi_life_living_the_dream_trash:
+    # Whether to allow trash items ('Box of tissues' and 'Roll of toilet paper') to appear as part of Tomodachi Life objectives.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  tomodachi_life_living_the_dream_miis:
+    # The list of names of Miis living in a given copy of Tomodachi Life: Living the Dream, to use for objectives that require a specific Mii. If empty, specific Mii objectives will not appear. Defaults to ["a male Mii", "a female Mii", "a non-binary Mii"].
+    # Updated with all Miis currently living on the island.
+    - Jack5
+    - Karl
+    - Bizzy
+    - Pasionara
+    - Tipper
+    - Hmm
+    - Kasane Teto
+    - Gary B. Gone
+    - Buttercup
+    - Toad
+    - Cellist
+    - Pianist
+    - Clock
+    - Four
+    - Grapple Dog
+    - Wallace
+    - King Dedede
+    - Osaka
+    - Nerv
+    - Necky
+    - Ralsei
+    - Sans
+    - Bitsy
+    - Clarkson
+    - Coach
+    - Dart Monkey
+    - Dr. Kleiner
+    - ≡NA
+    - Faith
+    - Greg horse
+    - Jonathan Frisbee
+    - Lucas
+    - Luigi
+    - Mia Townsend
+    - Morby
+    - Mr. Tricks
+    - Nanalan
+    - Neco-Arc
+    - Robbie Rotten
+    - Stickman
+  tomodachi_life_living_the_dream_creations:
+    # The list of names of items created in the Studio Workshop (a.k.a. Palette House) to include as part of Tomodachi Life: Living the Dream objectives. Expects a dictionary where each value is a lists of strings. Supported keys are "food", "clothing", "treasures", "interiors", "exteriors", "objects" and "landscapes". Defaults to a dictionary with empty lists for each key.
+    # Updated with all creations currently on the island.
+    clothing:
+      - Necky's dress
+      - Tornado shirt
+      - Teto uniform
+      - BFB Logo T-shirt
+      - Tipper's uniform
+    exteriors:
+      - Dev Texture House
+    food:
+      - Bepsu
+      - BLoOD fOR the bLOoD GOd
+      - 5-Hour Energy
+      - Four Cake
+    interiors:
+      - LSD Red Faces
+    landscapes:
+      - Orange starfield
+    objects:
+      - Dev Texture Box
+    treasures:
+      - Bean
+      - Encyclopedia of Numbers
+      - My! Noid
+      - LSD Dream Emulator OST
+      - Jam2go album
+      - Guiness World Records
+      - Battle for Dream Island
+      - Steyr-Hahn M1912
+      - Vampire Survivors-like
+      - ASMO Guide
+      - Mario Reds
+      - Flying Disc
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # So far, all of these are unchanged from the base configuration.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
