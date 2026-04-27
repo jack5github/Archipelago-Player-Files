@@ -371,7 +371,7 @@ Keymaster's Keep:
   consumables_banned_types:
     # The list of consumable types banned from appearing. A consumable's types can be found in the `consumables()` method of the source code. "on_hint" and "on_shop" are banned by default, "on_hint" in order to get players used to the concept of consumables, and "on_shop" as it is uncommon for players of Keymaster's Keep to have shops enabled. To allow these conditional consumables to appear, set this to an empty list.
     # "on_hint" has been removed from the list to allow its consumables to appear.
-    ['on_shop']
+    [ 'on_shop' ]
   # consumables_custom:
   # A dictionary of custom content to add to the implementation. Currently accepts a list of consumables under the key `consumables`, which obey the `consumables_min_rarity`, `consumables_max_rarity` and `consumables_banned_types` options, each of which is expected to have the following keys:
   #     - `name` (str) - The name of the consumable.
@@ -608,11 +608,11 @@ Keymaster's Keep:
     # Defines the possible actions that could be required on a game in the backlog.
     # You can customize this list to your liking.
     # This list has been simplified as much as possible to focus exclusively on playing games as opposed to beating them.
-    ['Play']
+    [ 'Play' ]
   game_backlog_game_selection:
     # Defines which games are in the player's backlog.
     # Replace the placeholders with values of your own choosing.
-    # Included the vast majority of Jack5 and Zeroman95's unplayed Backloggery games. As most of this list is of Jack5's games, Zeroman95's unfinished games are now added to give better chances.
+    # Included are the vast majority of Jack5's Unplayed games and Zeroman95's Unplayed and Unfinished games.
     - Cakey's Twisted Bakery (Steam, Jack5)
     - Content Warning (Steam, Jack5)
     - Dead Island Riptide Definitive Edition (Steam, Jack5)
@@ -817,7 +817,8 @@ Keymaster's Keep:
     - Interstellaria (itch.io, Jack5)
     - 'Intra-System: Trust Issues (itch.io, Jack5)'
     - Isolation Story (itch.io, Jack5)
-    - It's Six Random Characters and a Single Floor Dungeon, That's the Whole Game (itch.io, Jack5)
+    - It's Six Random Characters and a Single Floor Dungeon, That's the Whole Game
+      (itch.io, Jack5)
     - Jabberwocky (itch.io, Jack5)
     - 'Jotun: Valhalla Edition (itch.io, Jack5)'
     - Jupitron Game Collection Vol.1 (itch.io, Jack5)
@@ -1067,442 +1068,334 @@ Keymaster's Keep:
     - Zombie Admin (itch.io, Jack5)
     - Zombusters (itch.io, Jack5)
     - METROID PRIME BLAST BALL (3DS, Jack5)
-    - 10 Second Ninja X (2016) (Steam, Zeroman95)
-    - 100% Orange Juice (2013) (Steam, Zeroman95)
-    - '1942: Joint Strike (2008) (Microsoft Xbox 360, Zeroman95)'
-    - 7 Wonders of the Ancient World (2009) (PC, Zeroman95)
-    - Advance Wars 1 + 2 Reboot Camp (2023) (Nintendo Switch, Zeroman95)
-    - 'Adventure Time: The Secret of the Nameless Kingdom (2014) (Nintendo 3DS, Zeroman95)'
-    - Aegis Defenders (2018) (Steam, Zeroman95)
-    - 'Age of Empires II: The Age of Kings (2001) (Sony PlayStation 2, Zeroman95)'
-    - Age of Empires II (2013) (Steam, Zeroman95)
-    - Age of Mythology Gold Edition (2003) (PC, Zeroman95)
-    - Alabama Smith in the Quest of Fate (2012) (PC, Zeroman95)
-    - Night in the Opera (2012) (PC, Zeroman95)
-    - Ampersat (2022) (Steam, Zeroman95)
-    - Angry Birds Rio (2012) (PC, Zeroman95)
-    - Angry Birds Seasons (2012) (PC, Zeroman95)
-    - Angry Birds Star Wars (2012) (PC, Zeroman95)
-    - Arcade Moonlander (2017) (Steam, Zeroman95)
-    - 'ARK: Survival Of The Fittest (2017) (Steam, Zeroman95)'
-    - Arkanoid - Eternal Battle (2022) (Steam, Zeroman95)
-    - 'Arma: Cold War Assault (2011) (Steam, Zeroman95)'
-    - 'Army Men: Land Sea Air (2000) (Sony PlayStation, Zeroman95)'
-    - Army Men RTS (2002) (Steam, Zeroman95)
-    - Art Academy (2010) (Nintendo DS, Zeroman95)
-    - BallisticNG (2018) (Steam, Zeroman95)
-    - Banana Hell (2020) (Steam, Zeroman95)
-    - 'Bang-On Balls: Chronicles (2023) (Steam, Zeroman95)'
-    - Barro GT (2022) (Steam, Zeroman95)
-    - Battle Nations (2014) (Steam, Zeroman95)
-    - 'Battle Of Britain II: Wings Of Victory (2006) (PC, Zeroman95)'
-    - Battlestar Galactica Deadlock (2017) (Steam, Zeroman95)
-    - Beholder (2016) (Steam, Zeroman95)
-    - Bejeweled 2 (2004) (PC, Zeroman95)
-    - Bejeweled 2 Deluxe (2006) (Steam, Zeroman95)
-    - Bejeweled 3 (2010) (PC, Zeroman95)
-    - Bejeweled 3 (2010) (Steam, Zeroman95)
-    - Feeding Frenzy 2 (2010) (Microsoft Xbox 360, Zeroman95)
-    - Zuma (2010) (Microsoft Xbox 360, Zeroman95)
-    - Besiege (2020) (Steam, Zeroman95)
-    - Beyond Good & Evil (2003) (PC, Zeroman95)
-    - Black Desert (2017) (Steam, Zeroman95)
-    - Blade Symphony (2014) (Steam, Zeroman95)
-    - Blood and Bacon (2016) (Steam, Zeroman95)
-    - Bloons TD 6 (2018) (Steam, Zeroman95)
-    - Borderlands 2 (2012) (Steam, Zeroman95)
-    - Bridge Constructor (2013) (Steam, Zeroman95)
-    - Bridge Constructor Portal (2017) (Steam, Zeroman95)
-    - Broken Armor (2016) (Steam, Zeroman95)
-    - Burger Shop (2007) (Steam, Zeroman95)
-    - Burnout (2001) (Sony PlayStation 2, Zeroman95)
-    - Burnout Revenge (2005) (Sony PlayStation 2, Zeroman95)
-    - Byte Lynx (2022) (Steam, Zeroman95)
-    - Cabela's Outdoor Adventures (2005) (Sony PlayStation 2, Zeroman95)
-    - Cakey's Twisted Bakery (2024) (Steam, Zeroman95)
-    - 'Call of Duty: Black Ops II (2012) (Sony PlayStation 3, Zeroman95)'
-    - 'Call of Duty: Black Ops (2010) (Sony PlayStation 3, Zeroman95)'
-    - 'Call of Duty: Black Ops (2010) (Steam, Zeroman95)'
-    - 'Call of Duty: Black Ops - Multiplayer (2010) (Steam, Zeroman95)'
-    - 'Call of Duty: Modern Warfare 2 (2009) (Sony PlayStation 3, Zeroman95)'
-    - Call of Duty Black Ops II (2012) (Nintendo Wii U, Zeroman95)
-    - Call of Juarez Gunslinger (2013) (Steam, Zeroman95)
-    - Caribbean Crashers (2024) (Steam, Zeroman95)
-    - Castle Break (2019) (Steam, Zeroman95)
-    - Castle Crashers (2012) (Steam, Zeroman95)
-    - CastleStorm (2013) (Steam, Zeroman95)
-    - Chibi-Robo! Zip Lash (2015) (Nintendo 3DS, Zeroman95)
-    - Chicken Invaders 2 (2016) (Steam, Zeroman95)
-    - Chuzzle (2005) (PC, Zeroman95)
-    - Chuzzle Deluxe (2006) (Steam, Zeroman95)
-    - Circuit Breakers (2015) (PC Steam, Zeroman95)
-    - Perfect Universe (2016) (PC Steam, Zeroman95)
-    - 'Command & Conquer: Red Alert 2 and Yuri s Revenge (2001) (Steam, Zeroman95)'
-    - 'Command & Conquer: Red Alert 3 (2008) (PC, Zeroman95)'
-    - 'Command & Conquer 3: Kane s Wrath (2008) (Microsoft Xbox 360, Zeroman95)'
-    - 'Command & Conquer 3: Kane s Wrath (2008) (PC, Zeroman95)'
-    - 'Command & Conquer 3: Kane s Wrath (2009) (Steam, Zeroman95)'
-    - 'Command & Conquer 3: Tiberium Wars (2007) (Steam, Zeroman95)'
-    - 'Command & Conquer 3: Tiberium Wars Kane Edition (2007) (PC, Zeroman95)'
-    - Command & Conquer 4 Tiberian Twilight (2010) (Steam, Zeroman95)
-    - 'Command & Conquer and the Covert Operations (1996) (Steam, Zeroman95)'
-    - Command & Conquer Generals (2003) (Steam, Zeroman95)
-    - Command & Conquer Generals Zero Hour (2003) (Steam, Zeroman95)
-    - Command & Conquer Red Alert 3 (2008) (Steam, Zeroman95)
-    - Command & Conquer Red Alert 3 Uprising (2009) (Steam, Zeroman95)
-    - Command & Conquer Red Alert, Counterstrike and The Aftermath (1997) (Steam, Zeroman95)
-    - Command & Conquer Remastered Collection (2020) (Steam, Zeroman95)
-    - Command & Conquer Renegade (2002) (Steam, Zeroman95)
-    - Command & Conquer Tiberian Sun and Firestorm (2000) (Steam, Zeroman95)
-    - Cooking Simulator (2020) (Nintendo Switch, Zeroman95)
-    - Core Keeper (2024) (Steam, Zeroman95)
-    - 'Counter-Strike: Condition Zero Deleted Scenes (2004) (Steam, Zeroman95)'
-    - Craft The World (2014) (Steam, Zeroman95)
-    - Crazy Machines 3 (2016) (Steam, Zeroman95)
-    - Crypt of the NecroDancer (2015) (Steam, Zeroman95)
-    - CRYPTARK (2017) (Steam, Zeroman95)
-    - Crysis 2 (2011) (Sony PlayStation 3, Zeroman95)
-    - Crystal Crisis (2019) (Steam, Zeroman95)
-    - Cuphead (2019) (Nintendo Switch, Zeroman95)
-    - Cursed Companions (2025) (Steam, Zeroman95)
-    - Dark Sector (2009) (Steam, Zeroman95)
-    - Dead Island Riptide Definitive Edition (2016) (Steam, Zeroman95)
-    - 'Dear Esther: Landmark Edition (2017) (Steam, Zeroman95)'
-    - Defendin' De Penguin (2010) (Nintendo Wii, Zeroman95)
-    - Desktop Dungeons (2023) (Steam, Zeroman95)
-    - Dicey Dungeons (2019) (Steam, Zeroman95)
-    - Dig Or Die (2018) (Steam, Zeroman95)
-    - 'Disney Hotshots: Buzz Lightyear of Star Command (2001) (PC, Zeroman95)'
-    - Disney Infinity (2013) (Sony PlayStation 3, Zeroman95)
-    - Disney Infinity 2.0 (2014) (Sony PlayStation 4, Zeroman95)
-    - Disney Infinity 2.0 (2014) (Nintendo Wii U, Zeroman95)
-    - Disney Infinity 3.0 (2015) (Sony PlayStation 4, Zeroman95)
-    - Distant Space 2 (2017) (Steam, Zeroman95)
-    - Divide by Sheep (2015) (Steam, Zeroman95)
-    - 'Doctor Who: Evacuation Earth (2010) (Nintendo DS, Zeroman95)'
-    - Donkey Kong 64 (1999) (Nintendo Wii U Nintendo 64, Zeroman95)
-    - 'Donkey Kong Country: Tropical Freeze (2018) (Nintendo Switch, Zeroman95)'
-    - 'Don t Starve (2013) (Steam, Zeroman95)'
-    - 'Dood s Big Adventure (2011) (Nintendo Wii, Zeroman95)'
-    - DOOM II (1994) (Steam, Zeroman95)
-    - 'DOOM 3: BFG Edition (2012) (Steam, Zeroman95)'
-    - 'DOOM 3: Resurrection of Evil (2005) (Steam, Zeroman95)'
-    - DOOM 3 (2004) (Steam, Zeroman95)
-    - DOOM 64 (2020) (Steam, Zeroman95)
-    - DOOM + DOOM II (1995) (Steam, Zeroman95)
-    - DRACOMATON (2023) (Steam, Zeroman95)
-    - Dragon Quest Builders 2 (2019) (Sony PlayStation 4, Zeroman95)
-    - Drones, The Human Condition (2016) (Steam, Zeroman95)
-    - Drop (2019) (Steam, Zeroman95)
-    - Duck Game (2015) (Zeroman95)
-    - Dungeon of the ENDLESS (2014) (Steam, Zeroman95)
-    - Dungeon Siege III (2011) (Sony PlayStation 3, Zeroman95)
-    - Dwarfs!? (2011) (Steam, Zeroman95)
-    - 'DX-Ball 2: 20th Anniversary Edition (2018) (Steam, Zeroman95)'
-    - Dystopia (2005) (Steam, Zeroman95)
-    - Embr (2021) (Steam, Zeroman95)
-    - ENDLESS Legend (2014) (Steam, Zeroman95)
-    - Endustry (2022) (Steam, Zeroman95)
-    - Eragon (2006) (Sony PlayStation 2, Zeroman95)
-    - Eragon (2006) (Nintendo Game Boy Advance, Zeroman95)
-    - Escape The Emerald Star (2011) (PC, Zeroman95)
-    - Facebreaker K.O. Party (2008) (Nintendo Wii, Zeroman95)
-    - Fantasy General II (2019) (Steam, Zeroman95)
-    - Farm Frenzy (2007) (Steam, Zeroman95)
-    - Fearless Fantasy (2014) (Steam, Zeroman95)
-    - 'Field of Glory II: Medieval (2021) (Steam, Zeroman95)'
-    - Field of Glory II (2017) (Steam, Zeroman95)
-    - Figment (2017) (Steam, Zeroman95)
-    - Finding Nemo (2003) (PC, Zeroman95)
-    - 'Fishdom: H2O Hidden Odyssey (2009) (PC, Zeroman95)'
-    - 'Fishdom: Seasons Under the Sea (2010) (PC, Zeroman95)'
-    - Flockers (2014) (PC, Zeroman95)
-    - Ford Racing 3 (2006) (PC, Zeroman95)
-    - Forts (2017) (Steam, Zeroman95)
-    - Founders' Fortune (2020) (Steam, Zeroman95)
-    - Fruit Ninja Kinect (2011) (Microsoft Xbox 360, Zeroman95)
-    - Futurama (2003) (Sony PlayStation 2, Zeroman95)
-    - Garfield Kart (2013) (Steam, Zeroman95)
-    - Garfield Kart - Furious Racing (2019) (Steam, Zeroman95)
-    - Gears of War Judgement (2013) (Microsoft Xbox 360, Zeroman95)
-    - GemCraft - Chasing Shadows (2015) (Steam, Zeroman95)
-    - Go Vacation (2011) (Nintendo Wii, Zeroman95)
-    - 'God of War: Ghost of Sparta (2010) (Sony PlayStation Portable, Zeroman95)'
-    - Golden Light (2022) (Steam, Zeroman95)
-    - Golf With Your Friends (2020) (Steam, Zeroman95)
-    - Goofy Gorillas (2023) (Steam, Zeroman95)
-    - 'Gran Turismo 3: A-Spec (2001) (Sony PlayStation 2, Zeroman95)'
-    - Gran Turismo 5 (2010) (Sony PlayStation 3, Zeroman95)
-    - Gran Turismo 6 (2013) (Sony PlayStation 3, Zeroman95)
-    - Grocery Store Simulator (2024) (Steam, Zeroman95)
-    - 'Ground Control II: Operation Exodus (2004) (Steam, Zeroman95)'
-    - Ground Control Anthology (2000) (Steam, Zeroman95)
-    - Guilty as Sock! (2025) (Steam, Zeroman95)
-    - 'Guitar Hero III: Legends of Rock (2008) (PC, Zeroman95)'
-    - Gunscape (2016) (Steam, Zeroman95)
-    - 'Half-Life: Blue Shift (2001) (Steam, Zeroman95)'
-    - 'Half-Life: Opposing Force (1999) (Steam, Zeroman95)'
-    - Half-Life 2 (2004) (Steam, Zeroman95)
-    - 'Half-Life 2: Episode One (2006) (Steam, Zeroman95)'
-    - 'Half-Life 2: Episode Two (2007) (Steam, Zeroman95)'
-    - Half-Life (1998) (Steam, Zeroman95)
-    - 'Halo: Combat Evolved (2002) (Microsoft Xbox, Zeroman95)'
-    - 'Halo Wars: Definitive Edition (2017) (Steam, Zeroman95)'
-    - Hand Simulator (2017) (Steam, Zeroman95)
-    - Happy Room (2016) (Steam, Zeroman95)
-    - Hard Rock Casino (2007) (Sony PlayStation 2, Zeroman95)
-    - Harry Potter and the Goblet of Fire (2005) (Sony PlayStation 2, Zeroman95)
-    - Harry Potter and the Order of the Phoenix (2007) (Sony PlayStation 2, Zeroman95)
-    - Harry Potter and the Prisoner of Azkaban (2004) (Sony PlayStation 2, Zeroman95)
-    - Hasbro Family Game Night (2008) (Nintendo Wii, Zeroman95)
-    - Holy Clash Cards (2024) (Steam, Zeroman95)
-    - 'Hot Wheels: MechaniX (2001) (PC, Zeroman95)'
-    - Hue (2016) (Steam, Zeroman95)
-    - Human Fall Flat (2016) (Steam, Zeroman95)
-    - Hydroneer (2020) (Steam, Zeroman95)
-    - Hylics (2015) (Steam, Zeroman95)
-    - 'I m on Observation Duty (2018) (Steam, Zeroman95)'
-    - Ice Station Z (2021) (Nintendo Switch, Zeroman95)
-    - IL-2 Sturmovik (2001) (PC, Zeroman95)
-    - Inazuma Eleven Go! Light (2015) (Nintendo 3DS, Zeroman95)
-    - Insaniquarium! Deluxe (2006) (Steam, Zeroman95)
-    - Ion Fury (2020) (PC, Zeroman95)
-    - Isle of Jura (2022) (Steam, Zeroman95)
-    - Jagged Alliance Gold (1994) (Steam, Zeroman95)
-    - 'Jak II: Renegade (2003) (Sony PlayStation 2, Zeroman95)'
-    - Jewel Quest II (2007) (PC, Zeroman95)
-    - 'Jewel Quest 5: The Sleepless Star (2010) (PC, Zeroman95)'
-    - Jewel Quest Heritage (2010) (PC, Zeroman95)
-    - 'Kao the Kangaroo: Round 2 (2019) (Steam, Zeroman95)'
-    - 'Kingdom: Classic (2015) (Steam, Zeroman95)'
-    - 'Kingdom Hearts: Birth by Sleep (2010) (Sony PlayStation Portable, Zeroman95)'
-    - Kingdom Hearts 2 (2006) (Sony PlayStation 2, Zeroman95)
-    - Kingdom Hearts III (2019) (Sony PlayStation 4, Zeroman95)
-    - Kingdom Hearts -HD 1.5 ReMIX- (2013) (Sony PlayStation 3, Zeroman95)
-    - Kingdom Hearts HD 2.8 - Final Chapter Prologue - (2017) (Sony PlayStation 4, Zeroman95)
-    - Kitchen Wars (2025) (Steam, Zeroman95)
-    - 'Knightfall: A Daring Journey (2022) (Steam, Zeroman95)'
-    - Kwirk (1990) (Nintendo Game Boy, Zeroman95)
-    - Lambda Wars (2014) (Steam, Zeroman95)
-    - Lara Croft and The Temple of Osiris (2014) (Steam, Zeroman95)
-    - Left 4 Dead (2008) (Steam, Zeroman95)
-    - 'Lego: Lord of the Rings (2012) (Sony PlayStation 3, Zeroman95)'
-    - 'Lego Batman: The Video Game (2008) (Nintendo Wii, Zeroman95)'
-    - Lemmings for Windows (1995) (PC, Zeroman95)
-    - Little Big Workshop (2019) (Steam, Zeroman95)
-    - Lords of the Fallen (2014) (Steam, Zeroman95)
-    - 'Luxor: Quest for the Afterlife (2009) (PC, Zeroman95)'
-    - Machinika Museum (2021) (Steam, Zeroman95)
-    - 'Magrunner: Dark Pulse (2013) (PC Steam, Zeroman95)'
-    - Mario Tennis Aces (2018) (Nintendo Switch, Zeroman95)
-    - MechAssault 2 (2005) (Microsoft Xbox, Zeroman95)
-    - Medieval Games (2009) (Nintendo Wii, Zeroman95)
-    - Arcade Airhockey & Bowling (2011) (Sony PlayStation Portable, Zeroman95)
-    - Archibald's Adventures (2011) (Sony PlayStation Portable, Zeroman95)
-    - BreakQuest (2011) (Sony PlayStation Portable, Zeroman95)
-    - Who's That Flying?! (2011) (Sony PlayStation Portable, Zeroman95)
-    - 'Megaman: Dr. Willy s Revenge (1992) (Nintendo Game Boy, Zeroman95)'
-    - Metal Fatigue (2000) (Steam, Zeroman95)
-    - 'Metro: Last Light Complete Edition (2019) (Steam, Zeroman95)'
-    - Metro 2033 Redux (2014) (Steam, Zeroman95)
-    - Microsoft Revenge of Arcade (1998) (PC, Zeroman95)
-    - Minecraft Dungeons (2020) (Nintendo Switch, Zeroman95)
-    - Minecraft Story Mode The Complete Adventure (2016) (PC, Zeroman95)
-    - Minecraft Xbox 360 Edition (2013) (Microsoft Xbox 360, Zeroman95)
-    - Mini Thief (2018) (Steam, Zeroman95)
-    - 'Monaco: What s Yours is Mine (2013) (Steam, Zeroman95)'
-    - Monster Hunter 4 Ultimate (2015) (Nintendo 3DS, Zeroman95)
-    - Moonbase Alpha (2010) (Steam, Zeroman95)
-    - Move or Die (2016) (Steam, Zeroman95)
-    - Mutant Mudds Deluxe (2013) (Steam, Zeroman95)
-    - Myst (2006) (Sony PlayStation Portable, Zeroman95)
-    - N++ (2016) (Steam, Zeroman95)
-    - Necesse (2019) (Steam, Zeroman95)
-    - 'Need for Speed: Carbon Own The City (2006) (Nintendo DS, Zeroman95)'
-    - 'Need For Speed: Hot Pursuit (2010) (Sony PlayStation 3, Zeroman95)'
-    - 'Need For Speed: The Run (2011) (Sony PlayStation 3, Zeroman95)'
-    - 'Need for Speed Most Wanted (2005) (Sony PlayStation 3, Zeroman95)'
-    - Need for Speed Undercover (2008) (Sony PlayStation 3, Zeroman95)
-    - Need for Speed Underground 2 (2003) (PC, Zeroman95)
-    - New Art Academy (2012) (Nintendo 3DS, Zeroman95)
-    - 'NEXT JUMP: Shmup Tactics (2017) (Steam, Zeroman95)'
-    - Nightmare Kart (2024) (Steam, Zeroman95)
-    - Ninja Stealth (2016) (Steam, Zeroman95)
-    - Nintendo Land (2012) (Nintendo Wii U, Zeroman95)
-    - 'No One Lives Forever 2: A Spy In H.A.R.M. S Way (2002) (PC, Zeroman95)'
-    - Nuclear Dawn (2011) (Steam, Zeroman95)
-    - OMORI (2020) (Steam, Zeroman95)
-    - Orcs Must Die! 3 (2021) (Steam, Zeroman95)
-    - Out There Somewhere (2016) (Steam, Zeroman95)
-    - Overcooked! (2016) (Steam, Zeroman95)
-    - Overcooked! Special Edition (2017) (Nintendo Switch, Zeroman95)
-    - Overcooked! 2 (2018) (Nintendo Switch, Zeroman95)
-    - Oxygen Not Included (2019) (Steam, Zeroman95)
-    - PAC-MAN CHAMPIONSHIP EDITION 2 (2016) (Steam, Zeroman95)
-    - Pankapu (2016) (Steam, Zeroman95)
-    - Papa's Freezeria Deluxe (2023) (Steam, Zeroman95)
-    - Papa's Pizzeria Deluxe (2024) (Steam, Zeroman95)
-    - Paper Mario Origami King (2020) (Nintendo Switch, Zeroman95)
-    - PAYDAY 2 (2013) (Steam, Zeroman95)
-    - PC Building Simulator (2019) (Steam, Zeroman95)
-    - Peggle Deluxe (2007) (Steam, Zeroman95)
-    - Peggle Extreme (2007) (Steam, Zeroman95)
-    - Peggle Nights (2008) (Steam, Zeroman95)
-    - Peggle Nights (2008) (PC, Zeroman95)
-    - Peggle (2007) (PC, Zeroman95)
-    - Bears & Bees (2004) (PC, Zeroman95)
-    - Phasmophobia (2020) (Steam, Zeroman95)
-    - 'Pinball: Revenge of Gator (1990) (Nintendo 3DS Nintendo Gameboy, Zeroman95)'
-    - Pirates Vikings & Knights II (2010) (Steam, Zeroman95)
-    - 'Pitfall: The Lost Expedition (2004) (Nintendo GameCube, Zeroman95)'
-    - Plants Vs. Zombies Game of the Year Edition (2010) (PC, Zeroman95)
-    - Playcraft (2023) (Steam, Zeroman95)
-    - Plunder Panic (2022) (Steam, Zeroman95)
-    - Pokemon Brilliant Diamond (2021) (Nintendo Switch, Zeroman95)
-    - Pokemon Gold Version (2000) (Nintendo 3DS Nintendo Game Boy Color, Zeroman95)
-    - Pokemon Leaf Green (2004) (Nintendo Game Boy Advance, Zeroman95)
-    - Portal Knights (2017) (Steam, Zeroman95)
-    - Press Any Button (2021) (Steam, Zeroman95)
-    - Puyo Puyo Tetris (2017) (Nintendo Switch, Zeroman95)
-    - Puzzle Kingdoms (2009) (Steam, Zeroman95)
-    - Puzzler World 2011 (2010) (Nintendo DS, Zeroman95)
-    - Puzzles & Dragons Z + Super Mario Bros. Edition (2015) (Nintendo 3DS, Zeroman95)
-    - Rayman 2 The Great Escape (1999) (PC, Zeroman95)
-    - Rayman Legends (2013) (Nintendo Wii U, Zeroman95)
-    - Rayman Origins (2012) (Steam, Zeroman95)
-    - Red Gate (2019) (Steam, Zeroman95)
-    - Reel Fishing Angler's Dream (2009) (Nintendo Wii, Zeroman95)
-    - Reignfall (2018) (Steam, Zeroman95)
-    - Rising World (2014) (Steam, Zeroman95)
-    - 'Rock of Ages 3: Make & Break (2020) (Steam, Zeroman95)'
-    - Roguelands (2015) (Steam, Zeroman95)
-    - Rollercoaster Tycoon 2 (2003) (PC, Zeroman95)
-    - Run Prop, Run! - Puropu Pursuit (2021) (Steam, Zeroman95)
-    - RunnerDot (2021) (Steam, Zeroman95)
-    - RV There Yet? (2025) (Steam, Zeroman95)
-    - Saints Row 2 (2009) (Stema, Zeroman95)
-    - Sam & Max Season One (2007) (PC, Zeroman95)
-    - Samba De Amigo (2008) (Nintendo Wii, Zeroman95)
-    - Sanctum 2 (2013) (Steam, Zeroman95)
-    - Scaler (2004) (Sony PlayStation 2, Zeroman95)
-    - Scribblenauts Unmasked (2013) (Nintendo 3DS, Zeroman95)
-    - SEGA Bass Fishing Duel (2002) (Sony PlayStation 2, Zeroman95)
-    - Sega Classics Collection (2005) (Sony PlayStation 2, Zeroman95)
-    - Sonic The Hedgehog 2 (2010) (Steam, Zeroman95)
-    - Serious Sam 2 (2005) (Steam, Zeroman95)
-    - Serious Sam (2002) (Microsoft Xbox, Zeroman95)
-    - Shade Silver (2024) (Steam, Zeroman95)
-    - ShellShock Live (2020) (Steam, Zeroman95)
-    - Showdown Bandit (2019) (Steam, Zeroman95)
-    - Shrek SuperSlam (2005) (Nintendo GameCube, Zeroman95)
-    - Shrek The Third (2007) (Nintendo DS, Zeroman95)
-    - Slime Rancher (2017) (Steam, Zeroman95)
-    - Smackdown VS Raw 2011 (2010) (Sony PlayStation 3, Zeroman95)
-    - 'Snack World: The Dungeon Crawl - Gold (2020) (Nintendo Switch, Zeroman95)'
-    - SOCOM II U.S. Navy SEALS (2004) (Sony PlayStation 2, Zeroman95)
-    - Sonic 3D Flickies' Island (1998) (PC, Zeroman95)
-    - Sonic All-Stars Racing Transformed Limited Edition (2012) (Microsoft Xbox 360, Zeroman95)
-    - 'Sonic Colours: Ultimate (2021) (Nintendo Switch, Zeroman95)'
-    - Sonic Colours (2010) (Nintendo Wii, Zeroman95)
-    - Sonic The Hedgehog 2 (1992) (Sega Mega Drive, Zeroman95)
-    - Sonic The Hedgehog (1991) (Sega Mega Drive, Zeroman95)
-    - Sonic Unleashed (2008) (Microsoft Xbox 360, Zeroman95)
-    - 'Space Crew: Legendary Edition (2020) (Steam, Zeroman95)'
-    - Space Engineers (2019) (Steam, Zeroman95)
-    - 'Space Pilgrim Episode II: Epsilon Indi (2016) (Steam, Zeroman95)'
-    - Speed Racer The Video Game (2008) (Nintendo Wii, Zeroman95)
-    - Spelunky (2013) (Steam, Zeroman95)
-    - Spider-Man 2 (2004) (Microsoft Xbox, Zeroman95)
-    - Spiral Knights (2011) (Steam, Zeroman95)
-    - 'Spongebob Squarepants: Battle for Bikini Bottom (2003) (Nintendo Game Boy Advance, Zeroman95)'
-    - 'Spongebob Squarepants: Lights, Camera, Pants! (2005) (PC, Zeroman95)'
-    - 'Star Wars: Demolition (2000) (Sony PlayStation, Zeroman95)'
-    - STAR WARS Galactic Battlegrounds Saga (2001) (Steam, Zeroman95)
-    - 'STAR WARS Knights of the Old Republic II: The Sith Lords (2005) (Steam, Zeroman95)'
-    - Steampunk Tower 2 (2018) (Steam, Zeroman95)
-    - Steamworld Dig (2013) (Steam, Zeroman95)
-    - SteamWorld Dig (2018) (Nintendo Switch, Zeroman95)
-    - 'Stellar Mess: The Princess Conundrum (2023) (Steam, Zeroman95)'
-    - Stuart Little 2 (2002) (Sony PlayStation, Zeroman95)
-    - Summoner (2001) (Sony PlayStation 2, Zeroman95)
-    - Super Collapse! 3 (2007) (Sony PlayStation Portable, Zeroman95)
-    - Super Mario 3D Land (2011) (Nintendo 3DS, Zeroman95)
-    - Super Mario Galaxy (2007) (Nintendo Wii, Zeroman95)
-    - Super Sanctum TD (2013) (Steam, Zeroman95)
-    - Super Smash Bros. for Wii U (2014) (Nintendo Wii U, Zeroman95)
-    - Supreme Commander (2007) (Steam, Zeroman95)
-    - Surviving Mars (2018) (Steam, Zeroman95)
-    - 'Sushi Striker: The Way of Sushido (2018) (Nintendo Switch, Zeroman95)'
-    - Sven Co-op (1999) (Steam, Zeroman95)
-    - 'T2: The Arcade Game (1991) (Sega Mega Drive, Zeroman95)'
-    - Tabletop Simulator (2015) (Steam, Zeroman95)
-    - Targeting Maths Lab 4 (2005) (PC, Zeroman95)
-    - Targeting Maths Lab 6 (2010) (PC, Zeroman95)
-    - Team Sonic Racing (2019) (Nintendo Switch, Zeroman95)
-    - Tell Me Why (2020) (Steam, Zeroman95)
-    - Terraria (2013) (Microsoft Xbox 360, Zeroman95)
-    - Terrascape (2024) (Steam, Zeroman95)
-    - TerraTech (2018) (Steam, Zeroman95)
-    - TGV Voyages Train Simulator (2016) (Steam, Zeroman95)
-    - 'The Binding of Issac: Rebirth (2014) (Steam, Zeroman95)'
-    - 'The Denpa Men 3: The Rise of Digitoll (2014) (Nintendo 3DS, Zeroman95)'
-    - 'The Elder Scrolls V: Skyrim (2011) (PC, Zeroman95)'
-    - 'The Escapists: Complete Edition (2018) (Nintendo Switch)'
-    - The Escapists 2 (2017) (Steam, Zeroman95)
-    - The Escapists (2015) (Steam, Zeroman95)
-    - The Forest (2018) (Steam, Zeroman95)
-    - The Greatest Penguin Heist of All Time (2021) (Steam, Zeroman95)
-    - The Gunstringer (2011) (Microsoft Xbox 360, Zeroman95)
-    - The Headliners (2025) (Steam, Zeroman95)
-    - The Last Airbender (2010) (Nintendo Wii, Zeroman95)
-    - 'The Legend of Zelda: The Wind Waker (2013) (Nintendo Wii U, Zeroman95)'
-    - 'The Legend of Zelda: Tri-Force Heroes (2015) (Nintendo 3DS, Zeroman95)'
-    - The LEGO NINJAGO Movie Video Game (2017) (Steam, Zeroman95)
-    - The Powder Toy (2024) (Steam, Zeroman95)
-    - The Search (2017) (Steam, Zeroman95)
-    - The Settlers IV Gold Edition (2002) (PC, Zeroman95)
-    - The Ship Singleplayer (2006) (Steam, Zeroman95)
-    - The Tale of a Common Man (2016) (Steam, Zeroman95)
-    - 'Ticket to Ride: First Journey (2017) (Steam, Zeroman95)'
-    - Tiny Little Farm (2024) (Nintendo Switch, Zeroman95)
-    - 'Tiny Tina s Assault on Dragon Keep: A Wonderlands One-shot Adventure (2021) (Steam, Zeroman95)'
-    - Titan Quest Anniversary Edition (2016) (Steam, Zeroman95)
-    - Titan Souls (2015) (Steam, Zeroman95)
-    - Tomb Raider (2013) (Steam, Zeroman95)
-    - 'Total War: SHOGUN 2 (2011) (Steam, Zeroman95)'
-    - 'Tracks: The Train Set Game (2019) (PC, Zeroman95)'
-    - 'Trapper s Delight (2018) (Steam, Zeroman95)'
-    - Trivia Tricks (2024) (Steam, Zeroman95)
-    - TY The Tasmanian Tiger HD (2020) (Nintendo Switch, Zeroman95)
-    - Ultimate Chicken Horse (2016) (Steam, Zeroman95)
-    - Ultimate Zombie Defense (2020) (Steam, Zeroman95)
-    - Vampire Survivors (2022) (Steam, Zeroman95)
-    - Wall-E (2008) (Nintendo DS, Zeroman95)
-    - War for the Overworld (2015) (PC, Zeroman95)
-    - 'Warhammer 40,000: Darktide (2022) (Steam, Zeroman95)'
-    - 'Warhammer 40,000: Dawn of War - Anniversary Edition (2006) (Steam, Zeroman95)'
-    - 'Warhammer 40,000: Dawn of War - Dark Crusade (2006) (Steam, Zeroman95)'
-    - 'Warhammer 40,000: Dawn of War - Soulstorm (2008) (Steam, Zeroman95)'
-    - 'Warhammer 40,000: Dawn of War - Winter Assault (2006) (Steam, Zeroman95)'
-    - Warhammer Underworlds - Shadespire Edition (2020) (Steam, Zeroman95)
-    - Warlords Battlecry III (2004) (PC, Zeroman95)
-    - Weapon of Choice (2015) (Steam, Zeroman95)
-    - What The Dub?! (2021) (Steam, Zeroman95)
-    - WHAT THE PAK?! (2024) (Steam, Zeroman95)
-    - Will Glow the Wisp (2017) (Steam, Zeroman95)
-    - WipeOut 2097 (1996) (Sony PlayStation, Zeroman95)
-    - 'Worms: Open Warfare 2 (2007) (Sony PlayStation Portable, Zeroman95)'
-    - Worms 2 (1997) (PC, Zeroman95)
-    - Worms Armageddon (1999) (Steam, Zeroman95)
-    - Worms World Party (2001) (Sony PlayStation, Zeroman95)
-    - Yet Another Zombie Defense HD (2017) (Steam, Zeroman95)
-    - Zapper One Wicked Cricket! (2003) (PC, Zeroman95)
-    - Zero-K (2018) (Steam, Zeroman95)
-    - Zombie Driver HD (2012) (Steam, Zeroman95)
-    - Zombie Night Terror (2016) (Steam, Zeroman95)
-    - Zombie Panic! Source (2007) (Steam, Zeroman95)
-    - Zuma (2003) (PC, Zeroman95)
-    - Zuma Deluxe (2006) (Steam, Zeroman95)
+    - 100% Orange Juice (Steam, 2013)
+    - "1942: Joint Strike (Xbox 360, 2008)"
+    - Advance Wars 1 + 2 Reboot Camp (Nintendo Switch, 2023)
+    - Age of Empires II (Steam, 2013)
+    - Age of Mythology Gold Edition (PC, 2003)
+    - Alabama Smith in the Quest of Fate (PC, 2012)
+    - Night in the Opera (PC, 2012)
+    - Angry Birds Rio (PC, 2012)
+    - Angry Birds Seasons (PC, 2012)
+    - Angry Birds Star Wars (PC, 2012)
+    - Arkanoid - Eternal Battle (Steam, 2022)
+    - Army Men RTS (Steam, 2002)
+    - BallisticNG (Steam, 2018)
+    - Battle Nations (Steam, 2014)
+    - "Battle Of Britain II: Wings Of Victory (PC, 2006)"
+    - Bejeweled 2 (PC, 2004)
+    - Bejeweled 2 Deluxe (Steam, 2006)
+    - Bejeweled 3 (PC, 2010)
+    - Bejeweled 3 (Steam, 2010)
+    - Feeding Frenzy 2 (Xbox 360, 2010)
+    - Zuma (Xbox 360, 2010)
+    - Besiege (Steam, 2020)
+    - Beyond Good & Evil (PC, 2003)
+    - Blood and Bacon (Steam, 2016)
+    - Bloons TD 6 (Steam, 2018)
+    - Borderlands 2 (Steam, 2012)
+    - Bridge Constructor (Steam, 2013)
+    - Bridge Constructor Portal (Steam, 2017)
+    - Broken Armor (Steam, 2016)
+    - Burger Shop (Steam, 2007)
+    - Burnout Revenge (PlayStation 2, 2005)
+    - Byte Lynx (Steam, 2022)
+    - Cabela's Outdoor Adventures (PlayStation 2, 2005)
+    - "Call of Duty: Black Ops II (PlayStation 3, 2012)"
+    - "Call of Duty: Black Ops (PlayStation 3, 2010)"
+    - "Call of Duty: Modern Warfare 2 (PlayStation 3, 2009)"
+    - Call of Duty Black Ops II (Nintendo Wii U, 2012)
+    - Call of Juarez Gunslinger (Steam, 2013)
+    - Castle Crashers (Steam, 2012)
+    - CastleStorm (Steam, 2013)
+    - Chibi-Robo! Zip Lash (Nintendo 3DS, 2015)
+    - Chicken Invaders 2 (Steam, 2016)
+    - Chuzzle (PC, 2005)
+    - Chuzzle Deluxe (Steam, 2006)
+    - Circuit Breakers (PC Steam, 2015)
+    - Perfect Universe (PC Steam, 2016)
+    - "Command & Conquer: Red Alert 2 and Yuri's Revenge (Steam, 2001)"
+    - "Command & Conquer: Red Alert 3 (PC, 2008)"
+    - "Command & Conquer 3: Kane s Wrath (Xbox 360, 2008)"
+    - "Command & Conquer 3: Kane s Wrath (PC, 2008)"
+    - "Command & Conquer 3: Kane s Wrath (Steam, 2009)"
+    - "Command & Conquer 3: Tiberium Wars (Steam, 2007)"
+    - "Command & Conquer 3: Tiberium Wars Kane Edition (PC, 2007)"
+    - Command & Conquer 4 Tiberian Twilight (Steam, 2010)
+    - Command & Conquer and the Covert Operations (Steam, 1996)
+    - Command & Conquer Generals (Steam, 2003)
+    - Command & Conquer Generals Zero Hour (Steam, 2003)
+    - Command & Conquer Red Alert 3 (Steam, 2008)
+    - Command & Conquer Red Alert 3 Uprising (Steam, 2009)
+    - Command & Conquer Red Alert, Counterstrike and The Aftermath (Steam, 1997)
+    - Command & Conquer Remastered Collection (Steam, 2020)
+    - Command & Conquer Renegade (Steam, 2002)
+    - Command & Conquer Tiberian Sun and Firestorm (Steam, 2000)
+    - Cooking Simulator (Nintendo Switch, 2020)
+    - Core Keeper (Steam, 2024)
+    - "Counter-Strike: Condition Zero Deleted Scenes (Steam, 2004)"
+    - Craft The World (Steam, 2014)
+    - Crazy Machines 3 (Steam, 2016)
+    - Crypt of the NecroDancer (Steam, 2015)
+    - Crysis 2 (PlayStation 3, 2011)
+    - Crystal Crisis (Steam, 2019)
+    - Cuphead (Nintendo Switch, 2019)
+    - Cursed Companions (Steam, 2025)
+    - Dark Sector (Steam, 2009)
+    - Dead Island Riptide Definitive Edition (Steam, 2016)
+    - Delivery & Beyond (Steam, 2026)
+    - Dicey Dungeons (Steam, 2019)
+    - Dig Or Die (Steam, 2018)
+    - "Disney Hotshots: Buzz Lightyear of Star Command (PC, 2001)"
+    - Disney Infinity (PlayStation 3, 2013)
+    - Disney Infinity 2.0 (PlayStation 4, 2014)
+    - Disney Infinity 2.0 (Nintendo Wii U, 2014)
+    - Disney Infinity 3.0 (PlayStation 4, 2015)
+    - Donkey Kong 64 (Nintendo Wii U, 1999)
+    - "Donkey Kong Country: Tropical Freeze (Nintendo Switch, 2018)"
+    - Don't Starve (Steam, 2013)
+    - DOOM II (Steam, 1994)
+    - "DOOM 3: BFG Edition (Steam, 2012)"
+    - "DOOM 3: Resurrection of Evil (Steam, 2005)"
+    - DOOM 3 (Steam, 2004)
+    - DOOM 64 (Steam, 2020)
+    - DOOM + DOOM II (Steam, 1995)
+    - Dragon Quest Builders 2 (PlayStation 4, 2019)
+    - Duck Game (Steam, 2015)
+    - Dungeon Keeper Gold (Steam, 2024)
+    - Dungeon Siege III (PlayStation 3, 2011)
+    - Dwarfs!? (Steam, 2011)
+    - "DX-Ball 2: 20th Anniversary Edition (Steam, 2018)"
+    - Embr (Steam, 2021)
+    - Eragon (Nintendo Gameboy Advance, 2006)
+    - Escape The Emerald Star (PC, 2011)
+    - Facebreaker K.O. Party (Nintendo Wii, 2008)
+    - Farm Frenzy (Steam, 2007)
+    - Finding Nemo (PC, 2003)
+    - "Fishdom: H2O Hidden Odyssey (PC, 2009)"
+    - "Fishdom: Seasons Under the Sea (PC, 2010)"
+    - Flockers (PC Steam, 2014)
+    - Ford Racing 3 (PC, 2006)
+    - Forts (Steam, 2017)
+    - Founders' Fortune (Steam, 2020)
+    - Fruit Ninja Kinect (Xbox 360, 2011)
+    - Futurama (PlayStation 2, 2003)
+    - Garfield Kart (Steam, 2013)
+    - Garfield Kart - Furious Racing (Steam, 2019)
+    - Gears of War Judgement (Xbox 360, 2013)
+    - GemCraft - Chasing Shadows (Steam, 2015)
+    - Go Vacation (Nintendo Wii, 2011)
+    - "God of War: Ghost of Sparta (PlayStation Portable, 2010)"
+    - Golf With Your Friends (Steam, 2020)
+    - Goofy Gorillas (Steam, 2023)
+    - Gran Turismo 5 (PlayStation 3, 2010)
+    - Gran Turismo 6 (PlayStation 3, 2013)
+    - Grocery Store Simulator (Steam, 2024)
+    - "Ground Control II: Operation Exodus (Steam, 2004)"
+    - Ground Control Anthology (Steam, 2000)
+    - Guilty as Sock! (Steam, 2025)
+    - "Guitar Hero III: Legends of Rock (PC, 2008)"
+    - Gunscape (Steam, 2016)
+    - "Half-Life: Blue Shift (Steam, 2001)"
+    - "Half-Life: Opposing Force (Steam, 1999)"
+    - Half-Life 2 (Steam, 2004)
+    - "Half-Life 2: Episode One (Steam, 2006)"
+    - "Half-Life 2: Episode Two (Steam, 2007)"
+    - Half-Life (Steam, 1998)
+    - "Halo: Combat Evolved (Xbox, 2002)"
+    - "Halo Wars: Definitive Edition (Steam, 2017)"
+    - Hand Simulator (Steam, 2017)
+    - Happy Room (Steam, 2016)
+    - Harry Potter and the Goblet of Fire (PlayStation 2, 2005)
+    - Harry Potter and the Order of the Phoenix (PlayStation 2, 2007)
+    - Harry Potter and the Prisoner of Azkaban (PlayStation 2, 2004)
+    - Hasbro Family Game Night (Nintendo Wii, 2008)
+    - "Heroes of Might and Magic II: The Succession Wars (PC, 1996)"
+    - "Hot Wheels: MechaniX (PC, 2001)"
+    - House Flipper (Steam, 2018)
+    - Human Fall Flat (Steam, 2016)
+    - Hydroneer (Steam, 2020)
+    - Hylics (Steam, 2015)
+    - I'm on Observation Duty (Steam, 2018)
+    - Ice Station Z (Nintendo Switch, 2021)
+    - IL-2 Sturmovik (PC, 2001)
+    - Insaniquarium! Deluxe (Steam, 2006)
+    - Ion Fury (PC Steam, 2020)
+    - "Jak II: Renegade (PlayStation 2, 2003)"
+    - Jewel Quest II (PC, 2007)
+    - "Jewel Quest 5: The Sleepless Star (PC, 2010)"
+    - Jewel Quest Heritage (PC, 2010)
+    - "Kao the Kangaroo: Round 2 (Steam, 2019)"
+    - "Kingdom: Classic (Steam, 2015)"
+    - "Kingdom Hearts: Birth by Sleep (PlayStation Portable, 2010)"
+    - Kingdom Hearts 2 (PlayStation 2, 2006)
+    - Kingdom Hearts III (PlayStation 4, 2019)
+    - Kingdom Hearts -HD 1.5 ReMIX- (PlayStation 3, 2013)
+    - Kingdom Hearts HD 2.8 - Final Chapter Prologue - (PlayStation 4, 2017)
+    - Kwirk (Nintendo Gameboy, 1990)
+    - Lambda Wars (Steam, 2014)
+    - Left 4 Dead (Steam, 2008)
+    - "Lego: Lord of the Rings (PlayStation 3, 2012)"
+    - "Lego Batman: The Video Game (Nintendo Wii, 2008)"
+    - Lemmings for Windows (PC, 1995)
+    - Little Big Workshop (Steam, 2019)
+    - "Luxor: Quest for the Afterlife (PC, 2009)"
+    - "Magrunner: Dark Pulse (PC Steam, 2013)"
+    - MechAssault 2 (Xbox, 2005)
+    - Arcade Airhockey & Bowling (PlayStation Portable, 2011)
+    - Archibald's Adventures (PlayStation Portable, 2011)
+    - BreakQuest (PlayStation Portable, 2011)
+    - Who's That Flying?! (PlayStation Portable, 2011)
+    - "Megaman: Dr. Willy's Revenge (Nintendo Gameboy, 1992)"
+    - Metal Fatigue (Steam, 2000)
+    - Microsoft Revenge of Arcade (PC, 1998)
+    - Minecraft Dungeons (Nintendo Switch, 2020)
+    - Minecraft Story Mode The Complete Adventure (PC, 2016)
+    - Minecraft Xbox 360 Edition (Xbox 360, 2013)
+    - "Monaco: What's Yours is Mine (Steam, 2013)"
+    - Moonbase Alpha (Steam, 2010)
+    - Move or Die (Steam, 2016)
+    - Mutant Mudds Deluxe (Steam, 2013)
+    - Myst (PlayStation Portable, 2006)
+    - N++ (Steam, 2016)
+    - Necesse (Steam, 2019)
+    - "Need For Speed: Hot Pursuit (PlayStation 3, 2010)"
+    - "Need For Speed: The Run (PlayStation 3, 2011)"
+    - Need for Speed Most Wanted (PlayStation 3, 2005)
+    - Need for Speed Undercover (PlayStation 3, 2008)
+    - Need for Speed Underground 2 (PC,  2003)
+    - Nintendo Land (Nintendo Wii U, 2012)
+    - "No One Lives Forever 2: A Spy In H.A.R.M.'S Way (PC, 2002)"
+    - Nuclear Dawn (Steam, 2011)
+    - OMORI (Steam, 2020)
+    - Orcs Must Die! 3 (Steam, 2021)
+    - Overcooked! (Steam, 2016)
+    - Oxygen Not Included (Steam, 2019)
+    - PAC-MAN CHAMPIONSHIP EDITION 2 (Steam, 2016)
+    - Pankapu (Steam, 2016)
+    - Papa's Freezeria Deluxe (Steam, 2023)
+    - Papa's Pizzeria Deluxe (Steam, 2024)
+    - PAYDAY 2 (Steam, 2013)
+    - PC Building Simulator (Steam, 2019)
+    - Peggle Deluxe (Steam, 2007)
+    - Peggle Extreme (Steam, 2007)
+    - Peggle Nights (Steam, 2008)
+    - Peggle Nights (PC, 2008)
+    - Peggle (PC, 2007)
+    - Bears & Bees (PC, 2004)
+    - Phasmophobia (Steam, 2020)
+    - "Pinball: Revenge of Gator (Nintendo 3DS Gameboy, 1990)"
+    - "Pitfall: The Lost Expedition (Nintendo GameCube, 2004)"
+    - Placid Plastic Duck Simulator (Steam, 2022)
+    - Plants Vs. Zombies Game of the Year Edition (PC, 2010)
+    - Pokemon Brilliant Diamond (Nintendo Switch, 2021)
+    - Pokemon Gold Version (Nintendo 3DS Gameboy Color, 2000)
+    - Pokemon Leaf Green (Nintendo Gameboy Advance, 2004)
+    - Portal Knights (Steam, 2017)
+    - Press Any Button (Steam, 2021)
+    - Puyo Puyo Tetris (Nintendo Switch, 2017)
+    - Puzzle Kingdoms (Steam, 2009)
+    - Rayman 2 The Great Escape (PC, 1999)
+    - Rayman Legends (Nintendo Wii U, 2013)
+    - Rayman Origins (Steam, 2012)
+    - Reel Fishing Angler's Dream (Nintendo Wii, 2009)
+    - Reignfall (Steam, 2018)
+    - Rising World (Steam, 2014)
+    - "Rock of Ages 3: Make & Break (Steam, 2020)"
+    - Roguelands (Steam, 2015)
+    - Rollercoaster Tycoon 2 (PC, 2003)
+    - RV There Yet? (Steam, 2025)
+    - Saints Row 2 (Steam, 2009)
+    - Sam & Max Season One (PC, 2007)
+    - Samba De Amigo (Nintendo Wii, 2008)
+    - Sanctum 2 (Steam, 2013)
+    - Scaler (PlayStation 2, 2004)
+    - Sonic The Hedgehog 2 (Steam, 2010)
+    - Serious Sam 2 (Steam, 2005)
+    - Serious Sam (Xbox, 2002)
+    - ShellShock Live (Steam, 2020)
+    - Showdown Bandit (Steam, 2019)
+    - Shrek SuperSlam (Nintendo GameCube, 2005)
+    - Shrek The Third (Nintendo DS, 2007)
+    - Slime Rancher (Steam, 2017)
+    - Smackdown VS Raw 2011 (PlayStation 3, 2010)
+    - "Snack World: The Dungeon Crawl - Gold (Nintendo Switch, 2020)"
+    - Sonic 3D Flickies' Island (PC, 1998)
+    - Sonic All-Stars Racing Transformed Limited Edition (Xbox 360, 2012)
+    - "Sonic Colours: Ultimate (Nintendo Switch, 2021)"
+    - Sonic Colours (Nintendo Wii, 2010)
+    - Sonic The Hedgehog 2 (Sega Mega Drive, 1992)
+    - Sonic Unleashed (Xbox 360, 2008)
+    - Space Engineers (Steam, 2019)
+    - Speed Racer The Video Game (Nintendo Wii, 2008)
+    - Spelunky (Steam, 2013)
+    - Spiral Knights (Steam, 2011)
+    - "Spongebob Squarepants: Battle for Bikini Bottom (Nintendo Gameboy Advance, 2003)"
+    - "Spongebob Squarepants: Lights, Camera, Pants! (PC, 2005)"
+    - STAR WARS Galactic Battlegrounds Saga (Steam, 2001)
+    - "STAR WARS Knights of the Old Republic II: The Sith Lords (Steam, 2005)"
+    - Steampunk Tower 2 (Steam, 2018)
+    - Steamworld Dig (Steam, 2013)
+    - SteamWorld Dig (Nintendo Switch, 2018)
+    - Stuart Little 2 (PlayStation, 2002)
+    - Super Collapse! 3 (PlayStation Portable, 2007)
+    - Super Mario 3D Land (Nintendo 3DS, 2011)
+    - Super Sanctum TD (Steam, 2013)
+    - Super Smash Bros. for Wii U (Nintendo Wii U, 2014)
+    - Supreme Commander (Steam, 2007)
+    - "Sushi Striker: The Way of Sushido (Nintendo Switch, 2018)"
+    - Sven Co-op (Steam, 1999)
+    - "T2: The Arcade Game (Sega Mega Drive, 1991)"
+    - Targeting Maths Lab 4 (PC, 2005)
+    - Targeting Maths Lab 6 (PC, 2010)
+    - Terraria (Xbox 360, 2013)
+    - Terrascape (Steam, 2024)
+    - TerraTech (Steam, 2018)
+    - "The Binding of Issac: Rebirth (Steam, 2014)"
+    - "The Denpa Men 3: The Rise of Digitoll (Nintendo 3DS, 2014)"
+    - "The Elder Scrolls V: Skyrim (PC, 2011)"
+    - "The Escapists: Complete Edition (Nintendo Switch, 2018)"
+    - The Escapists 2 (Steam, 2017)
+    - The Escapists (Steam, 2015)
+    - The Forest (Steam, 2018)
+    - The Greatest Penguin Heist of All Time (Steam, 2021)
+    - The Gunstringer (Xbox 360, 2011)
+    - The Headliners (Steam, 2025)
+    - "The Legend of Zelda: The Wind Waker (Nintendo Wii U, 2013)"
+    - The LEGO NINJAGO Movie Video Game (Steam, 2017)
+    - The Settlers IV Gold Edition (PC, 2002)
+    - The Ship Singleplayer (Steam, 2006)
+    - The Tale of a Common Man (Steam, 2016)
+    - Tiny Little Farm (Nintendo Switch, 2024)
+    - "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure (Steam,
+      2021)"
+    - "Tracks: The Train Set Game (PC Steam, 2019)"
+    - Trailmakers (Steam, 2019)
+    - "Trapper's Delight (Steam, 2018)"
+    - Trivia Tricks (Steam, 2024)
+    - TY The Tasmanian Tiger HD (Nintendo Switch, 2020)
+    - Ultimate Chicken Horse (Steam, 2016)
+    - Vampire Survivors (Steam, 2022)
+    - Wall-E (Nintendo DS, 2008)
+    - War for the Overworld (PC Steam, 2015)
+    - "Warhammer 40,000: Darktide (Steam, 2022)"
+    - "Warhammer 40,000: Dawn of War - Anniversary Edition (Steam, 2006)"
+    - "Warhammer 40,000: Dawn of War - Dark Crusade (Steam, 2006)"
+    - "Warhammer 40,000: Dawn of War - Soulstorm (Steam, 2008)"
+    - "Warhammer 40,000: Dawn of War - Winter Assault (Steam, 2006)"
+    - Warlords Battlecry III (PC, 2004)
+    - What The Dub?! (Steam, 2021)
+    - WipeOut 2097 (PlayStation, 1996)
+    - "Worms: Open Warfare 2 (PlayStation Portable, 2007)"
+    - Worms 2 (PC, 1997)
+    - Worms Armageddon (Steam, 1999)
+    - Worms W.M.D (Steam, 2016)
+    - Yet Another Zombie Defense HD (Steam, 2017)
+    - Zapper One Wicked Cricket! (PC, 2003)
+    - Zombie Driver HD (Steam, 2012)
+    - Zombie Night Terror (Steam, 2016)
+    - Zuma (PC, 2003)
+    - Zuma Deluxe (Steam, 2006)
 
   ##########################
   # Garry's Mod (PC + MOD) #
@@ -1820,7 +1713,7 @@ Keymaster's Keep:
   platinumquest_difficulties:
     # Indicates which PlatinumQuest difficulties the player wants to include when generating objectives.
     # Unchanged from the base configuration.
-    ['Tutorial', 'Beginner', 'Intermediate', 'Advanced', 'Expert', 'Bonus']
+    [ 'Tutorial', 'Beginner', 'Intermediate', 'Advanced', 'Expert', 'Bonus' ]
   ###############################
   # Portal (PC + PS3, SW, X360) #
   ###############################
@@ -1842,7 +1735,7 @@ Keymaster's Keep:
   sanctum_owned_dlcs:
     # The list of DLCs that are owned by the player, which controls which levels are available in Sanctum objectives in addition to `sanctum_level_weights`. Defaults to no DLC. Supported DLCs are "Map Pack 1", "Map Pack 2", "X-Mas Carnage" and "Yogscave".
     # Zeroman95 owns all DLCs.
-    ['Map Pack 1', 'Map Pack 2', 'X-Mas Carnage', 'Yogscave']
+    [ 'Map Pack 1', 'Map Pack 2', 'X-Mas Carnage', 'Yogscave' ]
   # sanctum_level_weights:
   # The weights to use for levels in Sanctum objectives that use them. Levels that belong to DLCs that are not included in `sanctum_owned_dlcs` will not appear.
   # As these are unchanged from the base configuration, they have been omitted in case the default weights change.
@@ -1868,10 +1761,10 @@ Keymaster's Keep:
     # Zeroman95 is a 3DS player.
     3ds: 50
     wiiu: 0
-  ########################
-  # Tomodachi Life (3DS) #
-  ########################
-  # tomodachi_life_weights:
+    ########################
+    # Tomodachi Life (3DS) #
+    ########################
+    # tomodachi_life_weights:
     # The weights to use for Tomodachi Life objective types.
     # Unchanged from the base configuration.
   tomodachi_life_region:
@@ -1890,10 +1783,10 @@ Keymaster's Keep:
     europe: 50
     japan: 0
     korea: 0
-  # tomodachi_life_special_characters:
+    # tomodachi_life_special_characters:
     # Whether to display the Japanese characters for Tomodachi Life items after their romanised names. Only applies if `tomodachi_life_region` is set to `japan`.
     # Unchanged from the base configuration.
-  # tomodachi_life_trash:
+    # tomodachi_life_trash:
     # Whether to allow trash items (e.g. Mouldy bread) to appear as part of Tomodachi Life objectives.
     # Unchanged from the base configuration.
   tomodachi_life_male_miis:
@@ -2008,7 +1901,7 @@ Keymaster's Keep:
   tower_unite_multiplayer_content:
     # Indicates what type of Multiplayer Content the player wants to include when generating objectives.
     # Unchanged from the base configuration.
-    ['PAEnabled', 'GWEnabled']
+    [ 'PAEnabled', 'GWEnabled' ]
   tower_unite_plaza_activities:
     # Indicates which Plaza Activities the player wants to include when generating objectives.
     # Unchanged from the base configuration.
