@@ -243,6 +243,16 @@ Keymaster's Keep:
     place_building: 1
     place_landscapes: 2
     place_objects: 8
+  tomodachi_life_living_the_dream_region:
+    # The region of the copy of Tomodachi Life: Living the Dream being played. Affects only the names of items. Only `north_america` and `europe` are implemented at the moment. If multiple names are not implemented for a given item in this implementation, either region's name may be used. Defaults to `north_america`.
+    # Set to `europe` as that is the region I am playing in.
+    north_america: 0
+    europe: 50
+  tomodachi_life_living_the_dream_skip_locked_items:
+    # Whether Tomodachi Life: Living the Dream objectives involving items should include a notice that allows them to be skipped if their items are not unlocked or owned by the player, depending on the item type. Defaults to true.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
   tomodachi_life_living_the_dream_trash:
     # Whether to allow trash items ('Box of tissues' and 'Roll of toilet paper') to appear as part of Tomodachi Life objectives.
     # Unchanged from the base configuration.
@@ -252,80 +262,152 @@ Keymaster's Keep:
     # The list of names of Miis living in a given copy of Tomodachi Life: Living the Dream, to use for objectives that require a specific Mii. If empty, specific Mii objectives will not appear. Defaults to ["a male Mii", "a female Mii", "a non-binary Mii"].
     # Updated with all Miis currently living on the island.
     - Jack5
+    - Race
     - Karl
     - Bizzy
     - Pasionara
     - Tipper
+    - Stickman
     - Hmm
     - Kasane Teto
+    - What
     - Gary B. Gone
-    - Buttercup
-    - Toad
+    - Jonathan Frisbee
+    - Semibot
+    - Bartender
+    - Singer
     - Cellist
     - Pianist
+    - Bitsy
+    - Booker
+    - Bowser
+    - Luigi
+    - Buttercup
+    - Toad
     - Clock
     - Four
+    - Dr. Kleiner
+    - ≡NA
+    - Fenneko
+    - Tadano
     - Grapple Dog
     - Wallace
+    - Honeydew
+    - Jack Black
     - King Dedede
     - Osaka
+    - Dedede Jr.
+    - Moon Child
+    - Snow Miser
+    - Mr. Tricks
+    - Sakura
+    - Neco-Arc
+    - Neco-Arc Chaos
     - Nerv
     - Necky
     - Ralsei
     - Sans
-    - Bitsy
+    - Space Dude
+    - Space Dette
     - Clarkson
     - Coach
+    - Dark Girl
     - Dart Monkey
-    - Dr. Kleiner
-    - ≡NA
     - Faith
     - Greg horse
-    - Jonathan Frisbee
+    - Inspector Gadget
+    - J. F. Kennedy
+    - Klonoa
     - Lucas
-    - Luigi
     - Mia Townsend
+    - Michelle Obama
     - Morby
-    - Mr. Tricks
     - Nanalan
-    - Neco-Arc
+    - Purple Guy
     - Robbie Rotten
-    - Stickman
   tomodachi_life_living_the_dream_creations:
     # The list of names of items created in the Studio Workshop (a.k.a. Palette House) to include as part of Tomodachi Life: Living the Dream objectives. Expects a dictionary where each value is a lists of strings. Supported keys are "food", "clothing", "treasures", "interiors", "exteriors", "objects" and "landscapes". Defaults to a dictionary with empty lists for each key.
     # Updated with all creations currently on the island.
     clothing:
+      - Purple Guy's uniform
+      - Klonoa's cap
+      - Race's top
+      - BFB Logo T-shirt
+      - Space Dette's dress
       - Necky's dress
       - Tornado shirt
       - Teto uniform
-      - BFB Logo T-shirt
       - Tipper's uniform
     exteriors:
-      - Dev Texture House
+      - dev texture house
+      - Eyeball's house
     food:
+      - pint of Guinness
+      - scout cookies
+      - lead
+      - Nanotech
+      - wumpa fruit
+      - hydrochloric acid
+      - bicarbonate soda
       - Bepsu
       - BLoOD fOR the bLOoD GOd
       - 5-Hour Energy
       - Four Cake
     interiors:
-      - LSD Red Faces
+      - white wall
+      - dev texture wall
+      - LSD red faces
     landscapes:
-      - Orange starfield
+      - pier concrete
+      - orange starfield
+      - Jazztronauts void
+      - corkboard wood
+      - scratched up stone
+      - parking asphalt
+      - nodraw texture
+      - Bean's Show grass
+      - garden grass
+      - hedge maze grass
     objects:
-      - Dev Texture Box
+      - Half-Life 2 roundabout base
+      - outdoor barbecue bricks
+      - skatepark railing
+      - skatepark wallplant wall
+      - skatepark grind box
+      - skatepark pyramid
+      - skatepark dome
+      - Nissan Cube
+      - SM64 sign
+      - dev texture box
+      - clip brush
     treasures:
+      - Guinness World Records book
+      - Jack5's sketch book
+      - Jimbo
+      - Archipelago pelly
+      - 8 Button
+      - Lifesign Scan
+      - missing texture
+      - soul orb
+      - Apex Predator
+      - Book of Bones
       - Bean
+      - diamond shovel
+      - iPod Classic
+      - flying disc
+      - Boo
+      - DON'T
+      - Death Stranding OST
+      - professional gambling book
       - Encyclopedia of Numbers
       - My! Noid
       - LSD Dream Emulator OST
       - Jam2go album
-      - Guiness World Records
       - Battle for Dream Island
       - Steyr-Hahn M1912
       - Vampire Survivors-like
       - ASMO Guide
       - Mario Reds
-      - Flying Disc
   ###########################
   # Item & Location Options #
   ###########################
