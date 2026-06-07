@@ -5,9 +5,9 @@ description: |-
   This R.E.P.O. configuration is mostly unchanged from the base configuration, but with a few modifications to reflect the playstyle of Jack5's Discord server. This player file has increased responsibility due to it generating around 270 unlock locations, and is intended to be played with others in multiplayer.
 game: R.E.P.O
 requires:
-  version: 0.6.6
+  version: 0.6.7
   game:
-    R.E.P.O: 0.3.0
+    R.E.P.O: 0.4.1
 R.E.P.O:
   ################
   # Game Options #
@@ -19,16 +19,10 @@ R.E.P.O:
     # Unchanged from the base configuration.
     full: 50
   pellys_required:
-    # Choose which Pellys will be required for victory
-    # Pellys are Archipelago statues that appear in-game and must be salvaged. Unchanged from the base configuration.
-    ['Gold Pelly', 'Standard Pelly', 'Glass Pelly']
-  pelly_spawning:
-    # Determines how Pellys are spawned
-    # True: Spawns all Pellys. All Pellys are locations.
-    # False: Only spawns Pellys chosen in 'Pellys Required'. Only spawned Pellys are Locations.
-    # Unchanged from the base configuration.
-    'false': 0
-    'true': 50
+    # Choose how many Pellys will be required for victory.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 12.
+    # Reduced by 1 to ensure the game can be completed without requiring literally every single Pelly.
+    11: 50
   level_quota:
     # Choose how many levels must be completed for your goal. This is in addition to gathering all Pellys.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 20.
@@ -70,6 +64,13 @@ R.E.P.O:
     # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
     # Unchanged from the base configuration.
     60: 50
+  shop_upgrade_logical:
+    # Choose how many shop how many shop upgrades will be potentially logically relevant.
+    # Items past this number will not have progression items.
+    # This number gets set to the Total Shop Upgrade Locations if its greater.
+    # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
+    # Unchanged from the base configuration.
+    60: 50
   starting_level_type:
     # Choose which level type to start with
     # Unchanged from the base configuration.
@@ -78,22 +79,31 @@ R.E.P.O:
     mcjannek_station: 0
     museum_of_human_art: 0
     random: 50
-  upgrade_item_weights:
-    # Choose the Weights for adding Upgrades to the Item Pool (death head battery does nothing in singleplayer)
+  filler_item_weights:
+    # Choose the Weights for adding Filler to the Item Pool (death head battery and map player count do nothing in singleplayer)
     # All non-commented weights are unchanged from the base configuration.
-    Crouch Rest Upgrade: 2
+    Audit Trap: 6
+    Crouch Rest Upgrade: 40
     # Death head upgrades are useless, for players can strategically speak while dead at just the right moments.
     Death Head Battery Upgrade: 0
-    Double Jump Upgrade: 2
-    Health Upgrade: 5
-    Map Player Count Upgrade: 1
-    Range Upgrade: 2
-    Sprint Speed Upgrade: 3
-    Stamina Upgrade: 5
-    Strength Upgrade: 3
-    Tumble Climb Upgrade: 2
-    Tumble Launch Upgrade: 2
-    Tumble Wings Upgrade: 2
+    Double Jump Upgrade: 20
+    Extra Monster Trap: 8
+    Health Upgrade: 40
+    Monster Lure Trap: 15
+    Progressive Moon Phase Trap: 3
+    Range Upgrade: 40
+    Small Health Pack: 20
+    Sprint Speed Upgrade: 30
+    Stamina Upgrade: 50
+    Strength Upgrade: 30
+    Tumble Climb Upgrade: 20
+    Tumble Launch Upgrade: 20
+    Tumble Wings Upgrade: 20
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # Unchanged from the base configuration. Dying in R.E.P.O. is literal hell.
+    'false': 50
+    'true': 0
   ###########################
   # Item & Location Options #
   ###########################
