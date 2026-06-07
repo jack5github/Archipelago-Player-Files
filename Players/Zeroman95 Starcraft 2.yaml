@@ -49,11 +49,11 @@ Starcraft 2:
   mission_order: # Missions on a Grid is an incredible way to do it.
     grid: 99
 
-  maximum_campaign_size: # 11 Missions that way it is a 3x3 grid.
-    11: 99
+  maximum_campaign_size: # All 29 Missions of Wings of Liberty
+    29: 99
 
-  enabled_campaigns: # Let's just do one Campaign that one being WOL.
-    ['Wings of Liberty']
+  enabled_campaigns: # Wings of Liberty and Prophecy
+    ['Wings of Liberty', 'Prophecy']
 
   enable_race_swap: # Unchanged
     disabled: 50
@@ -87,8 +87,8 @@ Starcraft 2:
     'false': 50
     'true': 0
 
-  selected_races: # Since we are only doing WOL, so Terran only.
-    ['Terran']
+  selected_races: # Since we are only doing WOL and P, select both Terran and Protoss
+    ['Terran', 'Protoss']
 
   exclude_very_hard_missions: # Unchanged
     default: 50
@@ -217,14 +217,14 @@ Starcraft 2:
   challenge_locations: # Enabled. Bring on the Checks.
     enabled: 99
 
-  mastery_locations: # Enabled. Bring on the Checks.
-    enabled: 99
+  mastery_locations: # Disabled due to being difficult.
+    disabled: 99
 
-  basebust_locations: # Enabled. Bring on the Checks.
-    enabled: 99
+  basebust_locations: # Disabled because that is boring.
+    disabled: 99
 
-  speedrun_locations: # Enabled. Bring on the Checks.
-    enabled: 99
+  speedrun_locations: # Disabled because I want to take my time.
+    disabled: 99
 
   preventative_locations: # Enabled. Bring on the Checks.
     enabled: 99
