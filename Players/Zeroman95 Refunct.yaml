@@ -1,4 +1,4 @@
-﻿name: ZeromanRefunct{NUMBER}
+﻿name: ZeromanRefunct{number}
 
 description: Zeroman95s Refunct YAML
 
@@ -6,58 +6,101 @@ game: Refunct
 requires:
   version: 0.6.7
   game:
-    Refunct: 0.9.0
+    Refunct: 1.2.2
 
 Refunct:
-  progression_balancing: # Unchanged
+  progression_balancing: # Increased by 10.
     60: 99
 
   accessibility: # Unchanged
     full: 50
     minimal: 0
 
-  amount_of_grass: # Set random amount of grass. Doesn't really matter.
+  amount_of_grass: # Sets a random amount of grass. I am not too worried about this.
     random-range-10-160: 99
 
-  required_grass_percentage: # Set whatever amount of grass is needed randomly.
+  required_grass_percentage: # Set whatever amount of grass is required.
     random-range-50-100: 99
 
-  final_platform: # This sets it so that I cannot know where my final platform is UNLESS I hint it with !hint final platform.
+  goal: # Random Button or Platform... or Cube?
+    button_31_1: 0
+    button_1_1: 0
+    random_known_button: 0
+    random_unknown_button: 0
+    platform_1_5: 0
+    platform_21_1: 0
+    platform_29_2: 0
+    random_known_platform: 0
+    random_unknown_platform: 0
+    random_known: 0
     random_unknown: 99
 
   cubes: # Unchanged
+    always: 0
     red_cubes_bag: 99
+    never: 0
 
   extra_cubes: # Unchanged
+    always: 0
+    red_cubes_bag: 0
     green_cubes_bag: 99
+    never: 0
 
-  number_of_minigames: # Set to 0 I don't want to do any minigames at all.
+  number_of_minigames: # No Mini-Games please.
     0: 99
 
-  nerf_minigame_checks: # Unchanged (Minigames are off)
+  nerf_minigame_checks: # Unchanged (Mini-Games are set to 0)
     'false': 50
     'true': 0
 
-  number_of_unlocks_per_minigame: # Unchanged (Minigames are off)
+  number_of_unlocks_per_minigame: # Unchanged (Mini-Games are set to 0)
     1: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-1-2: 0 # random value between 1 and 2
 
-  minigames_likeliness: # Unchanged (Minigames are off)
-    Block Brawl Minigame: 4
-    Button Galore Minigame: 1
-    Block Blub Minigame: 0
-    Climb Minigames: 0
-    OG Randomizer Minigame: 3
+  minigames_likeliness: # Unchanged (Mini-Games are set to 0)
+    Block Blub Minigame: 2
+    Block Brawl Minigame: 5
+    Button Galore Minigame: 2
+    Climb Chaos Minigame: 1
+    Climb Line Minigame: 1
+    Climb Narrow Minigame: 1
+    Climb Spiral Minigame: 1
+    Clique: 1
+    Funny Bridge Game Minigame: 1
+    OG Randomizer Minigame: 5
+    Rando Mountain Minigame: 5
+    Refunct Mountain Minigame: 2
     Seeker Minigame: 2
-    Vanilla Minigame: 3
+    Vanilla Minigame: 2
 
-  traps: # Add all traps.
+  traps: # Add all unique traps.
+    none: 0
+    pretty: 0
     all: 99
 
-  death_link: # Course death link should be on.
+  replace_flowers_by_traps: # 90% of all Flowers are traps.
+    90: 99
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range--100-100: 0 # random value between -100 and 100
+
+  rename_grass: # Unchanged
+    none: 50
+    english: 0
+    latin: 0
+    both: 0
+
+  rename_flowers: # All Flowers are differently named.
+    none: 0
+    english: 0
+    latin: 0
+    both: 99
+
+  death_link: # Death to all!
     'false': 0
     'true': 50
 
