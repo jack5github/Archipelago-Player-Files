@@ -64,13 +64,6 @@ R.E.P.O:
     # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
     # Unchanged from the base configuration.
     60: 50
-  shop_upgrade_logical:
-    # Choose how many shop how many shop upgrades will be potentially logically relevant.
-    # Items past this number will not have progression items.
-    # This number gets set to the Total Shop Upgrade Locations if its greater.
-    # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
-    # Unchanged from the base configuration.
-    60: 50
   starting_level_type:
     # Choose which level type to start with
     # Unchanged from the base configuration.

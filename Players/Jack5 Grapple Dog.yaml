@@ -6,6 +6,8 @@ description: |-
 game: Grapple Dog
 requires:
   version: 0.6.6
+  game:
+    Grapple Dog: 1.2.0
 Grapple Dog:
   progression_balancing:
     # Slightly increased in order to not get stuck as much.
@@ -100,6 +102,11 @@ Grapple Dog:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 250.
     # Changed to range from the default to a more acceptable near-100% requirement.
     random-range-220-240: 50
+  npc_sanity:
+    # WIP: Checks for chatting with NPCs
+    # Might as well enable this, even though it isn't complete.
+    'false': 0
+    'true': 50
   speedrunner_choice_multiplier:
     # How many times more levels are required for speedrunner checks to be in logic
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3.
@@ -168,10 +175,9 @@ Grapple Dog:
     - Features
     # The remaining Cosmic Gadgets (not handled by `plando_items`) should be found in other games.
     - Gadgets
-  start_inventory: {
+  start_inventory:
     # Attempting to play Grapple Dog without access to Wall Jump forces me to play Boomerang Bandit, which gets tiring when it is the start of every run, so I have made myself start with Wall Jump to try and allieviate this pressure.
-    "Wall Jump": 1
-  }
+    Wall Jump: 1
   start_hints: []
   start_location_hints: []
   exclude_locations:

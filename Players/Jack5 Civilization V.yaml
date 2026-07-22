@@ -5,9 +5,9 @@ description: |-
   This configuration for Sid Meier's Civilization V attempts to remedy the issues faced by locking away most of the game's features by keeping them stored locally, particularly eras and the ability to generate gold, which are the most troublesome things not to have. All traps are enabled for maximum carnage, but the chance is kept low due to their extreme consequences.
 game: Civilization V
 requires:
-  version: 0.6.6
+  version: 0.6.7
   game:
-    Civilization V: 0.9.8
+    Civilization V: 0.10.6
 Civilization V:
   ################
   # Game Options #
@@ -102,38 +102,159 @@ Civilization V:
     # Unchanged from the base configuration.
     'false': 50
     'true': 0
+  unit_sanity:
+    # Add most standard units to the location pool. This adds 66 units to the location pool in total.
+    # Units that will not be added:
+    # - Foreign Legion
+    # - Dromon (exclusive to Byzantium; does not replace a standard unit)
+    # - Any religious unit (Inquisitor and Missionary)
+    # - Any civilization-unique unit (they count as the unit they replace instead)
+    # - Any Great Person
+    # - Any Spaceship unit (SS Booster; SS Cockpit; SS Engine; and SS Stasis Chamber)
+    # This sounds crazy, but I'm not too sure about it being enabled all the time, so I'm making it a 50/50 chance.
+    'false': 50
+    'true': 50
+  settler_sanity:
+    # Adds Settlers to the item and location pools, with the amount being determined by the Settler Sanity Amount option.
+    # When enabled, Settlers can only be obtained as a progressive item. Training them counts as a location, up to the amount, after which they can no longer be trained. When receiving a Settler as an item, they spawn near the capital (or a different city if you happen to not have one).
+    # Enabling this option will remove the Settler from the Unit Sanity location pool, if it is enabled.
+    # Not being able to settle too many cities to block progression is a really good idea.
+    'false': 0
+    'true': 50
+  settler_sanity_amount:
+    # Number of Settlers to put in the item and location pools. Progression logic will expect you to be able to get the following number of Settlers per era:
+    # - Ancient: 1
+    # - Classical; Medieval; and Renaissance: 2
+    # - Industrial; Modern; and Atomic: 3
+    # - Information: 4
+    # Has no effect if Settler Sanity is not enabled.
+    # NOTE: The lower limit being 0 is not a mistake. If you want to be Venice as a different civilization, be my guest.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
+    # Unchanged from the base configuration.
+    10: 50
+  promotion_sanity:
+    # Add all earnable unit promotions (excl. Heal Instantly) to the item and location pools. This adds 83 promotions to the item and location pools in total.
+    # WARNING: This option can cause situations where you need to level up many units types to find logical progression.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  filler_item_weights:
+    # The weights of each filler item to be chosen when a filler item is required.
+    # Unchanged from the base configuration.
+    Bonus - All City Population +1: 4
+    Bonus - All City Population +2: 1
+    Bonus - All City-State Influence +15: 3
+    Bonus - All City-State Influence +30: 1
+    Bonus - All Unit Experience +15: 8
+    Bonus - All Unit Experience +35: 4
+    Bonus - All Unit Experience +80: 2
+    Bonus - All Unit Free Promotion: 2
+    Bonus - Culture +100: 11
+    Bonus - Culture +1000: 3
+    Bonus - Culture +250: 6
+    Bonus - Culture Per Turn For Free +50: 3
+    Bonus - Extra Happiness Per City +1: 5
+    Bonus - Extra Happiness Per City +2: 2
+    Bonus - Faith +125: 4
+    Bonus - Faith +50: 7
+    Bonus - Faith +500: 1
+    Bonus - Free Great Person: 1
+    Bonus - Free Policy: 2
+    Bonus - Free Tech: 1
+    Bonus - Free Unit: 3
+    Bonus - Free Worker: 5
+    Bonus - Gold +100: 10
+    Bonus - Gold +1000: 2
+    Bonus - Gold +250: 5
+    Bonus - Golden Age: 1
+    Bonus - New City Extra Population +1: 3
+    Bonus - New City Extra Population +2: 1
+    Bonus - Snack from Thes: 9
   enable_traps:
     # Add traps to the filler item pool.
     # There have to be some negative consequences, as every other game that is randomised has them.
     'false': 0
     'true': 50
-  trap_blacklist:
-    # Blacklist the given traps from being included in the filler item pool. Has no effect if traps are not enabled.
-    # Valid keys are:
-    # Trap - All City Population -1
-    # Trap - All City Population -2
-    # Trap - Culture
-    # Trap - Denounce
-    # Trap - Faith
-    # Trap - Gold
-    # Trap - Major Culture
-    # Trap - Major Faith
-    # Trap - Major Gold
-    # Trap - Minor Culture
-    # Trap - Minor Faith
-    # Trap - Minor Gold
-    # Trap - War
-    # Now that traps are not few and far between, I will be removing excessively damaging traps from the filler pool.
-    - Trap - All City Population -2
-    - Trap - Major Culture
-    - Trap - Major Faith
-    - Trap - Major Gold
-    - Trap - War
   trap_filler_chance:
     # The percent chance for a filler item to be a trap instead. Has no effect if traps are not enabled.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Increased to a random range that is acceptable for most APworlds in my runs.
     random-range-50-80: 50
+  trap_item_weights:
+    # The weights of each trap to be chosen when a trap item is required.
+    #
+    # Has no effect if traps are not enabled.
+    # I have removed excessively damaging traps from the filler pool.
+    Trap - All City Population -1: 5
+    Trap - All City Population -2: 0
+    Trap - All City-State Influence -15: 4
+    Trap - All City-State Influence -30: 0
+    Trap - Barbarians 1: 6
+    Trap - Barbarians 3: 0
+    Trap - Barbarians 6: 0
+    Trap - Culture -100: 15
+    Trap - Culture -250: 0
+    Trap - Culture -50: 25
+    Trap - Denounce: 2
+    Trap - Faith -125: 0
+    Trap - Faith -25: 25
+    Trap - Faith -50: 15
+    Trap - Gold -100: 15
+    Trap - Gold -250: 0
+    Trap - Gold -50: 25
+    Trap - Shuffle Units: 4
+    Trap - War: 0
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  death_link_trigger:
+    # What triggers a death link to be sent? Has no effect if death link is disabled.
+    # Possible triggers:
+    # - Unit killed: When any of your units gets killed.
+    # - City captured: When any of your cities gets captured.
+    # - Capital captured: When your capital gets captured.
+    # - Game lost: When you lose a game.
+    # Unchanged from the base configuration.
+    unit_killed: 0
+    city_captured: 0
+    capital_captured: 0
+    game_lost: 50
+  death_link_effect_weights:
+    # The weights of each death link to be chosen when a death link is received. Has no effect if death link is not enabled.
+    # Unchanged from the base configuration.
+    All Cities 1 Population: 0
+    All Cities 10 Population: 0
+    All Cities 20 Population: 0
+    All Cities 3 Population: 0
+    All Cities 40 Population: 0
+    All Cities 5 Population: 0
+    All Units 100% HP: 0
+    All Units 25% HP: 0
+    All Units 50% HP: 0
+    Barbarians 12: 0
+    Barbarians 3: 0
+    Barbarians 6: 0
+    Barbarians 9: 0
+    Declare War 1: 0
+    Declare War 3: 0
+    Declare War 5: 0
+    Denounce 1: 0
+    Denounce 3: 0
+    Denounce 5: 0
+    Lose All Cities Not Capital: 0
+    Lose Game: 0
+    Lose Random City: 0
+    Random City 1 Population: 0
+    Random City 10 Population: 0
+    Random City 20 Population: 0
+    Random City 3 Population: 0
+    Random City 40 Population: 0
+    Random City 5 Population: 0
+    Random Unit 100% HP: 0
+    Random Unit 25% HP: 1
+    Random Unit 50% HP: 0
   ###########################
   # Item & Location Options #
   ###########################

@@ -7,7 +7,7 @@ game: Refunct
 requires:
   version: 0.6.7
   game:
-    Refunct: 0.9.0
+    Refunct: 1.2.2
 Refunct:
   ################
   # Game Options #
@@ -138,6 +138,7 @@ Refunct:
     # Each climb minigame has an equal chance of occurring.
     Climb Chaos Minigame: 1
     Climb Line Minigame: 1
+    Climb Narrow Minigame: 1
     Climb Spiral Minigame: 1
     # Block Blub Minigame:
     # This is the underwater version of Block Brawl!
@@ -147,7 +148,24 @@ Refunct:
     # The vanilla game, except there's no wall jump, ledge grab, lifts and pipes.
     # Instead, there is a dash! Press the buttons for checks.
     # PRESS E TO DASH, YOU (CURRENTLY) CANNOT REBIND THIS IN-GAME (which is why it's off by default)
-    Refunct Mountain Minigame: 0
+    # Tip: use steam controller settings to map dash to a button of your choice.
+    Refunct Mountain Minigame: 0 # Disabled due to extra dash feature
+    # Rando Mountain Minigame:
+    # Randomized button order in a world with *only* jump and dash (no swim or anything else).
+    # Press the buttons for checks.
+    # PRESS E TO DASH, YOU (CURRENTLY) CANNOT REBIND THIS IN-GAME (which is why it's off by default)
+    # Tip: use steam controller settings to map dash to a button of your choice.
+    Rando Mountain Minigame: 0 # Disabled due to extra dash feature
+    # Funny Bridge Game Minigame:
+    # Based on the Glass Bridge game from Squid Game.
+    # Five pairs of platforms appear, but only one of each pair is real.
+    # Are you lucky enough to beat the game?
+    # This minigame has one check :)
+    Funny Bridge Game Minigame: 1
+    # Clique:
+    # Based on Archipelago game "Clique". Hard-mode!
+    # There is one free item in this minigame. Once the "button activation" item is found, you can press the button for another check.
+    Clique: 1
   traps:
     # This option determines which traps are added to the game. 
     # Each trap is added twice and replaces a "flower" filler item, if there are enough flowers.
@@ -160,6 +178,28 @@ Refunct:
     none: 0
     pretty: 0
     all: 50
+  replace_flowers_by_traps:
+    # This option determines what percentage of flowers are replaced by traps.
+    # You can use positive numbers (1 (1%) to 100 (100%)) to replace flowers by pretty traps only.
+    # You can use negative numbers (-1 (1%) to -100 (100%)) to replace flowers by all traps (including gameplay affecting ones).
+    # Example: -90 means that 90% of flowers are replaced by traps, and they can be pretty or gameplay affecting.
+    # You can define additional values between the minimum and maximum values. Minimum value is -100, maximum value is 100.
+    # Unchanged from the base configuration.
+    0: 50
+  rename_grass:
+    # This option changes "Grass" to names of actual grass types such as "Fine fescue" and "Kentucky bluegrass". You can choose between the English or the Latin names of the grass types.
+    # I do say, I love me some differently-named grass, Gromit!
+    none: 0
+    english: 50
+    latin: 0
+    both: 0
+  rename_flowers:
+    # This option changes "Flower" to names of actual flowers such as "Rose" and "Tulip". You can choose between the English or the Latin names of the flowers.
+    # Oi, come and smell the flowers, Gromit!
+    none: 0
+    english: 50
+    latin: 0
+    both: 0
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
     # Without the ability to drown myself due to Swim being enabled from the start, Death Link in this game is useless. In order for this to be rectified, two things ought to happen:

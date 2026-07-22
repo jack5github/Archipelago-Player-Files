@@ -7,7 +7,7 @@ game: Plants vs. Zombies
 requires:
   version: 0.6.7
   game:
-    Plants vs. Zombies: 1.6.3
+    Plants vs. Zombies: 1.9.0
 Plants vs. Zombies:
   ################
   # Game Options #
@@ -37,6 +37,26 @@ Plants vs. Zombies:
     # I am shocked that I somehow didn't have this enabled.
     'false': 0
     'true': 50
+  seed_link:
+    # All Plants vs. Zombies players in your MultiWorld that have enabled Seed Link will be able to trigger each other's matching seed packet cooldowns when placing a plant.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  lawn_link:
+    # All Plants vs. Zombies players in your MultiWorld that have enabled Lawn Link will be able to interact with each other's lawns.
+    # Seems like a pretty neat idea!
+    'false': 0
+    'true': 50
+  lawn_link_chances:
+    # Determines the likelihoods of Lawn Link effects as percentages out of 100.
+    # - add_plant: The percentage chance that a plant placed by another player will appear on your lawn, if that tile is free.
+    # - overwrite_plant: The percentage chance that a plant placed by another player will appear on your lawn, if that tile is not free. This results in the plant that was there being replaced.
+    # - remove_plant: The percentage chance that a plant lost by another player will result in the loss of a plant on your lawn, if a plant exists on your lawn in the same tile.
+    # This setting requires Lawn Link to be enabled.
+    # Unchanged from the base configuration.
+    add_plant: 15
+    overwrite_plant: 5
+    remove_plant: 15
   ################
   # Level Access #
   ################
@@ -134,6 +154,23 @@ Plants vs. Zombies:
     # Unchanged from the base configuration.
     'false': 0
     'true': 50
+  wavesanity_locations:
+    # Include additional locations for small waves.
+    # This may add a lot of filler items. Make sure to consider any other players in your MultiWorld before increasing this number.
+    # This number will be automatically increased if there aren't enough locations available to place all of your items.
+    # This number will be automatically decreased if there aren't enough levels enabled.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 2272.
+    # Unchanged from the base configuration.
+    0: 50
+  shop_behaviour:
+    # Determines how access is granted to Crazy Dave's shop.
+    # - off: Crazy Dave's shop will not be included.
+    # - normal: Finding the "Crazy Dave's Car Key" item will grant access to Crazy Dave's shop. "Twiddydinkies Restock" items will unlock new pages.
+    # - progressive: The first "Progressive Twiddydinkies" item you find will grant access to Crazy Dave's shop. Additional "Progressive Twiddydinkies" items will unlock new pages.
+    # Unchanged from the base configuration, as this is being handled using `start_inventory`.
+    'off': 0
+    normal: 50
+    progressive: 0
   shop_items:
     # How many items to include in Crazy Dave's shop.
     # You cannot access the shop until you obtain Crazy Dave's Car Keys.
@@ -232,18 +269,6 @@ Plants vs. Zombies:
     # Enabled, now that the `randomised_zombies` option has been adjusted.
     'false': 0
     'true': 50
-  zombie_randomised_modes:
-    # Determines which levels will have their Zombies randomised.
-    # This setting only matters if zombie_randomisation is set to true.
-    # If zombie_randomisation is set to false, this option will be ignored and no Zombies will be randomised.
-    # Any mode set to 1 will feature levels with randomised selection of Zombies.
-    # Any mode set to 0 will contain its usual Zombies from the original game.
-    # Unchanged from the base configuration.
-    Adventure: 1
-    Bonus Levels: 1
-    Cloudy Day: 0
-    Mini-games: 1
-    Survival: 1
   randomised_zombies:
     # Determines which Zombie types will be included in randomisation.
     # This setting only matters if zombie_randomisation is set to true.
@@ -252,7 +277,6 @@ Plants vs. Zombies:
     # Any Zombie type set to 0 will stay in its usual level(s) and will not be randomised to any others.
     # *Trash Can Zombie is forced to 0 if goty_compatability_mode is enabled.
     # https://plantsvszombies.wiki.gg/wiki/Zombies_(PvZ)
-    # Unchanged from the base configuration.
     # Zombie cannot be randomised
     # Flag Zombie cannot be randomised
     Conehead: 1
@@ -290,6 +314,29 @@ Plants vs. Zombies:
     GigaGargantuar: 0
     # Catapult Baseball Zombie cannot be randomised
     # Baseball Zombie cannot be randomised
+  zombie_randomised_modes:
+    # Determines which levels will have their Zombies randomised.
+    # This setting only matters if zombie_randomisation is set to true.
+    # If zombie_randomisation is set to false, this option will be ignored and no Zombies will be randomised.
+    # Any mode set to 1 will feature levels with randomised selection of Zombies.
+    # Any mode set to 0 will contain its usual Zombies from the original game.
+    # Unchanged from the base configuration.
+    Adventure: 1
+    Bonus Levels: 1
+    Cloudy Day: 0
+    Mini-games: 1
+    Survival: 1
+  zombie_weight_randomisation:
+    # Randomises the spawning weights for each zombie type. This affects how zombies are chosen to spawn in each level.
+    # As an extreme example, this could result in more Gargantuars spawning in a level than standard zombies.
+    # As such, this option is only recommended for somewhat experienced players.
+    # - off: Zombies will be spawned using their usual ratios.
+    # - randomise_once: One randomised set of weights will be generated and used across every level.
+    # - randomise_per_level: A different set of randomised weights will be generated for each level.
+    # Unchanged from the base configuration.
+    'off': 50
+    randomise_once: 0
+    randomise_per_level: 0
   plant_stat_randomisation:
     # Randomises the stats of each Plant in the game. 
     # This affects Sun Cost, Packet Refresh Time, Toughness, Firing Rate and Projectile Damage.
@@ -311,9 +358,32 @@ Plants vs. Zombies:
     # Unchanged from the base configuration.
     'false': 50
     'true': 0
+  plant_stat_randomisation_blacklist:
+    # Plants named here will avoid being affected by plant stat randomisation.
+    # For example, you may add "Sunflower" to ensure that Sunflower uses its default stats.
+    # This option only matters if plant_stat_randomisation is set to true.
+    # If plant_stat_randomisation is set to false then no plant stat randomisation will happen.
+    # Valid plant names are: "Peashooter", "Sunflower", "Cherry Bomb", "Wall-nut", "Potato Mine", "Snow Pea", "Chomper", "Repeater", "Puff-shroom", "Sun-shroom", "Fume-shroom", "Grave Buster", "Hypno-shroom", "Scaredy-shroom", "Ice-shroom", "Doom-shroom", "Lily Pad", "Squash", "Threepeater", "Tangle Kelp", "Jalapeno", "Spikeweed", "Torchwood", "Tall-nut", "Sea-shroom", "Plantern", "Cactus", "Blover", "Split Pea", "Starfruit", "Pumpkin", "Magnet-shroom", "Cabbage-pult", "Flower Pot", "Kernel-pult", "Coffee Bean", "Garlic", "Umbrella Leaf", "Marigold", "Melon-pult", "Gatling Pea", "Twin Sunflower", "Gloom-shroom", "Cattail", "Winter Melon", "Gold Magnet", "Spikerock", "Cob Cannon"
+    # Unchanged from the base configuration.
+    []
   ###################
   # Gameplay Tweaks #
   ###################
+  lock_conveyor_plants:
+    # If this option is enabled, then conveyor levels will be unable to serve you plants that you haven't yet unlocked.
+    # Non-standard levels have always seemed too easy, so this option is a great addition.
+    'false': 0
+    'true': 50
+  lock_vasebreaker_plants:
+    # If this option is enabled, then Vasebreaker will be unable to serve you plants that you haven't yet unlocked.
+    # Non-standard levels have always seemed too easy, so this option is a great addition.
+    'false': 0
+    'true': 50
+  lock_izombie_zombies:
+    # If this option is enabled, each zombie type in "I, Zombie" will be locked behind individual unlock items.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
   easy_upgrade_plants:
     # Allows you to place upgrade plants without requiring their base form.
     # For example, Gatling Pea could be placed straight onto the lawn without requiring a Repeater first.
@@ -339,6 +409,30 @@ Plants vs. Zombies:
     disabled: 50
     by_type: 0
     by_level: 0
+  costume_chances:
+    # Determines the odds out of 10000 that an easter egg costume is used whenever a plant or zombie appears.
+    # Retro Peashooter is exclusive to pre-ordered versions of the game.
+    # Zombies will always use their Chinese variants when playing on The Great Wall.
+    # Due to limitations in the game, you may see the wrong heads and arms pop off defeated zombies when using this feature.
+    # *These are all set to 0 if goty_compatability_mode is enabled.
+    # Unchanged from the base configuration.
+    Backup Dancer (Original): 300
+    Buckethead (China): 0
+    Bungee (China): 0
+    Cabbage-pult (PvZ2): 65
+    Conehead (China): 0
+    Conehead (Headcrab): 0
+    Conehead (Winter): 0
+    Flag (China): 0
+    Flower Pot (China): 0
+    Football (China): 0
+    Peashooter (Retro): 0
+    Peashooter (Winter): 0
+    Polevaulter (China): 0
+    Wall-nut (Winter): 0
+    Zombie (China): 0
+    Zombie (Retro): 0
+    Zombie (Winter): 0
   ###################
   # Item Generation #
   ###################
@@ -363,7 +457,7 @@ Plants vs. Zombies:
     5_sun_each: 50
     25_sun_each: 0
     50_sun_each: 0
-  maximum_sun_upgrade:
+  maximum_sun_upgrades:
     # Determines the maximum amount of additional Sun that "Additional Starting Sun" items can provide.
     # Increasing this number results in more "Additional Starting Sun" items being generated.
     # You can define additional values between the minimum and maximum values. Minimum value is 50, maximum value is 150.
@@ -381,6 +475,24 @@ Plants vs. Zombies:
     # Considering that there are other important filler items, and how difficult it is to place seed packets at high game speeds, this is being left at false.
     'false': 50
     'true': 0
+  zombie_freeze_filler:
+    # Determines whether to include "Instant Zombie Freeze" filler items.
+    # This item instantly freezes all zombies on the lawn.
+    # One of the filler items other than 'Random Seek Packet' that I am choosing to enable.
+    'false': 0
+    'true': 50
+  zombie_hypnosis_filler:
+    # Determines whether to include "Instant Zombie Hypnosis" filler items.
+    # This item instantly hypnotises all zombies on the lawn.
+    # One of the filler items other than 'Random Seek Packet' that I am choosing to enable.
+    'false': 0
+    'true': 50
+  sun_burst_filler:
+    # Determines whether to include "Sun Burst" filler items.
+    # This item causes a burst of 75-150 sun to appear.
+    # One of the filler items other than 'Random Seek Packet' that I am choosing to enable.
+    'false': 0
+    'true': 50
   starting_plants:
     # How many unique plants to begin the game with.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 49.
@@ -406,6 +518,25 @@ Plants vs. Zombies:
     # Enabled as I would like to be able to access the Tree of Wisdom.
     'false': 0
     'true': 50
+  progressive_sun_capacity_items:
+    # Restricts the amount of sun that can be held at once until enough "Progressive Sun Capacity" items are collected. 
+    # You will begin the game with the ability to hold a maximum of 150 sun at a time.
+    # Each "Progressive Sun Capacity" item you obtain doubles your current maximum.
+    # Sun capacity seems like a thing that's desperately neded for Plants vs. Zombies to feel truly randomised.
+    'false': 0
+    'true': 50
+  individual_tile_unlock_items:
+    # Locks planting on each individual lawn tile behind receiving a corresponding item.
+    # You will start the game with a random assortment of tiles unlocked.
+    # This can make the game much more difficult, especially when combined with other forms of randomisation.
+    # You may be expected to exploit lawn mowers and zombie spawning patterns in order to progress.
+    # - off: Tiles will not be locked behind items.
+    # - light: You will start with 5-6 tiles per row. All other tiles must be unlocked.
+    # - maximum: You will start with 1-2 tiles per row. All other tiles must be unlocked.
+    # Locked tiles seem really interesting, but I don't want them to be too restrictive, so I'm going with the `light` option.
+    'off': 0
+    light: 50
+    maximum: 0
   #########
   # Traps #
   #########
@@ -432,6 +563,42 @@ Plants vs. Zombies:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
     50: 50
+  zombie_shuffle_trap_weight:
+    # This trap causes zombies to change lanes.
+    # A higher number means that you are more likely to see the given trap. A value of 0 means the trap will not appear.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    50: 50
+  zombie_caffeine_trap_weight:
+    # This trap gives a speed boost to all zombies on the lawn.
+    # A higher number means that you are more likely to see the given trap. A value of 0 means the trap will not appear.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    50: 50
+  rv_trap_weight:
+    # This trap causes an RV to be thrown at your lawn, crushing some of your plants.
+    # A higher number means that you are more likely to see the given trap. A value of 0 means the trap will not appear.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    50: 50
+  crater_trap_weight:
+    # This trap adds three random craters to your lawn.
+    # A higher number means that you are more likely to see the given trap. A value of 0 means the trap will not appear.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    50: 50
+  lawn_flip_trap_weight:
+    # This trap flips your lawn - whatever was at the back, is now at the front, and vice versa.
+    # A higher number means that you are more likely to see the given trap. A value of 0 means the trap will not appear.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # This trap could seriously mess up whatever setup I have going, so I've disabled it.
+    0: 50
+  lawn_randomiser_trap_weight:
+    # This trap randomises your lawn - every active plant is transformed into a completely random one. If you're lucky, this could turn out to be a positive thing!
+    # A higher number means that you are more likely to see the given trap. A value of 0 means the trap will not appear.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # This trap could seriously mess up whatever setup I have going, so I've disabled it.
+    0: 50
   ###########################
   # Item & Location Options #
   ###########################

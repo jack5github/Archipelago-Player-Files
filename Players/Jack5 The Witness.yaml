@@ -5,7 +5,9 @@ description: |-
   This configuration for The Witness is meant to both streamline gameplay but keep the excitement of discovering new areas, so long as they are not tedious to complete. Of note is the ability to access the Caves early, with the central puzzle of that area rewarding a laser for its completion. The game can still be beaten simply by finding lasers in other games if it becomes too tedious. As The Witness is my most played game, this configuration also includes several properties that are randomised per run to keep the game interesting.
 game: The Witness
 requires:
-  version: 0.6.4
+  version: 0.6.7
+  game:
+    The Witness: 8.0.0
 The Witness:
   ################
   # Game Options #
@@ -96,7 +98,7 @@ The Witness:
     # Only relevant if the Victory Condition is "Panel Hunt".
     # Specify specific hunt panels you want for your panel hunt game.
     # Caves Lone Pillar has been added to this list because of its importance.
-    ['Caves Lone Pillar']
+    - Caves Lone Pillar
   #############
   # Locations #
   #############
@@ -272,7 +274,7 @@ The Witness:
     # - Swamp Long Bridge: Rotates the side you approach it from towards you, but also rotates the other side away
     # - Bunker Elevator: Makes the Bunker Elevator come to any floor that you approach it from, meaning it can be accessed from the roof immediately
     # Unchanged from the base configuration.
-    ['Quarry Elevator']
+    - Quarry Elevator
   death_link:
     # If on, whenever you fail a puzzle (with some exceptions), you and everyone who is also on Death Link dies.
     # The effect of a "death" in The Witness is a Bonk Trap.

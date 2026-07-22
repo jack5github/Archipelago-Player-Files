@@ -5,7 +5,7 @@ description: |-
   This Chess player file attempts to reduce the overall difficulty of the game, while also improving the randomisation to create a more natural yet Fairy piece-supporting experience. Chess pieces must be found in other worlds.
 game: ChecksMate
 requires:
-  version: 0.6.6
+  version: 0.6.7
 ChecksMate:
   ################
   # Game Options #
@@ -155,6 +155,16 @@ ChecksMate:
     any_pawn: 1
     any_fairy: 0
     any_classical: 1
+  fairy_chess_pawn_upgrades:
+    # Adds chances for stronger upgraded pieces to appear in your pawn rank, drawn from your pawn material budget.
+    # Off: No upgrades; only standard pawns.
+    # Pool: Upgraded pieces are added as one extra option in the random pawn pool. The generator guards against picking too many upgrades and leaving you short on overall pawn count.
+    # Max: Prefer upgrades whenever possible, falling back to a regular pawn when adding another upgrade would prevent reaching your earned pawn count.
+    # Unchanged from the base configuration.
+    # TODO: Try changing this
+    'off': 50
+    pool: 0
+    max: 0
   minor_piece_limit_by_type:
     # How many of any given type of minor piece you might play with. If set to 1, you will never start with more than 1 Knight, nor 1 Bishop, but you may have both 1 Knight and 1 Bishop. If set to 0, this setting is disabled.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 15.
