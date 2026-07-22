@@ -4,3 +4,6 @@ Players/Templates
 
 # Symbolic links
 Archipelago
+
+# MacOS
+.DS_Store
