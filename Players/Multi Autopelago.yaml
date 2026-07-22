@@ -7,7 +7,7 @@ game: Autopelago
 requires:
   version: 0.6.7
   game:
-    Autopelago: 1.1.0
+    Autopelago: 1.1.1
 Autopelago:
   ################
   # Game Options #

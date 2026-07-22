@@ -5,7 +5,7 @@ description: |-
   This configuration for Balatro intends to turn a game that is typically very grindy and difficult to beat into a more fun experience. All gameplay is limited to White Stake, with more of an emphasis being placed on finding Archipelago items in the shop, and beating decks as they are unlocked. Because of the easy difficulty, more decks need to be beaten for this game to be considered complete.
 game: Balatro
 requires:
-  version: 0.6.4
+  version: 0.6.7
 Balatro:
   ################
   # Game Options #
@@ -60,7 +60,7 @@ Balatro:
     # If no stake is specified or the stake specified is not in the playable stakes it will default to the highest playable one.
     # If your goal isn't 'Win with jokers on stake' or 'beat decks on stake', this setting can be ignored.
     # Irrelevant as my goal is 'Beat Decks'.
-    ['White Stake']
+    - White Stake
   include_decksMode:
     # Choose how the playable decks are determined:
     # all: All decks will be playable.

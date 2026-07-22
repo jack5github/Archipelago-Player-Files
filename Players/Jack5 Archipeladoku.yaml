@@ -16,6 +16,14 @@ Archipeladoku:
   accessibility:
     # Unchanged from the base configuration.
     full: 50
+  death_link:
+    # Enable Death Link. When a player with death link enabled dies all other players that also enabled it die as well. Archipeladoku can only receive death links, not send them. When a death link is received all non-given numbers will be cleared. This can also be toggled in the client from the Debug menu.
+    # Unchanged from the base configuration
+    'false': 50
+    'true': 0
+  #################
+  # Board Options #
+  #################
   block_size:
     # The size of a single block (and the width/height of each board).
     # I used to force 3x3 sudoku boards as a means of stabilising the number of unlock locations generated, however I have since made this select one of three acceptable board sizes.
@@ -25,11 +33,8 @@ Archipeladoku:
     '9': 33
     '12': 0
     '16': 0
-    random: 0
   boards_per_cluster:
-    # How many boards to put in each cluster of overlapping boards.
-    # Recommended values are 1 (no grouping), 5, 8, 13, or 100 (group all).
-    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # How many boards to put in each cluster of overlapping boards. 1 creates individual boards without clusters, 100 puts all boards into a single big cluster.
     # The grouping of boards only affects the sudoku gameplay superficially and does not affect the number of unlock locations. Higher groupings are not used as groupings bigger than 5 do not look good. This used to be set to `random-range-1-5`, but since the options are no longer numbers, I have to use either 1 or 5 instead.
     '1': 50
     '5': 50
@@ -64,6 +69,16 @@ Archipeladoku:
     # Randomise the order of unlocks as much as possible.
     fixed: 0
     shuffled: 50
+
+  bundle_size:
+    # How many blocks a single progression item unlocks at once.
+    # - A value of 1 disables bundling.
+    # - The value is clamped to the block size, so a bundle never unlocks more than a whole board's worth of blocks.
+    # - For Fixed progression each "Progressive Block" is worth this many unlocks.
+    # - For Shuffled progression each bundle is a "Block Bundle" item unlocking this many blocks.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 16.
+    # Unchanged from the base configuration.
+    1: 50
   duplicate_progression:
     # Percent of progression items that should be duplicated.
     # - For Fixed progression higher values may lead to progression being too fast and as such a lower value is recommended.
@@ -71,6 +86,10 @@ Archipeladoku:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
     0: 50
+  disabled_locations:
+    # Location types to remove entirely, reducing the number of locations and filler items. Valid values: blocks, rows, columns, boards. If disabling the requested types would leave too few locations for the progression items, some types are automatically re-enabled (a warning is logged). Higher bundle sizes allow disabling more, since they reduce the number of progression items.
+    # Unchanged from the base configuration.
+    []
   location_scouting:
     # How scouting of locations is handled.
     # - Auto: Locations are scouted automatically when fully revealed.
@@ -80,6 +99,9 @@ Archipeladoku:
     auto: 0
     manual: 0
     disabled: 50
+  ##################
+  # Filler Options #
+  ##################
   solve_selected_cell_ratio:
     # Ratio of Solve Selected Cell filler items to number of boards, in percent.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 5000.

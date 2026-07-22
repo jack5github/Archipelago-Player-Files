@@ -6,6 +6,8 @@ description: |-
 game: Keymaster's Keep
 requires:
   version: 0.6.7
+  game:
+    Keymaster's Keep: 2.1.5
 Keymaster's Keep:
   ################
   # Game Options #
@@ -39,17 +41,17 @@ Keymaster's Keep:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 25.
     # Irrelevant as my goal is not Keymaster's Challenge.
     3: 50
-  conquest_medallions_percentage_required:
-    # Determines the percentage of Conquest Medallions required before escaping the Keymaster's Keep. Completing all trials in a keep awards a Conquest Medallion.
-    # Only relevant if the selected goal is Area Domination.
-    # Irrelevant as my goal is not Area Domination.
-    60: 50
   magic_keys_required:
     # Determines how many Magic Keys are required before escaping the Keymaster's Keep.
     # Only relevant if the selected goal is Magic Key Heist.
     # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 50.
     # This is a legacy option that was being used when our goal was Magic Key Heist. This was reduced to roughly half of the default keep generation options in order to align with the chosen .py files and to be more manageable. This particular value has gone from 66% of the total magic keys to roughly 90%. It cannot be any lower than 10.
     10: 50
+  conquest_medallions_percentage_required:
+    # Determines the percentage of Conquest Medallions required before escaping the Keymaster's Keep. Completing all trials in a keep awards a Conquest Medallion.
+    # Only relevant if the selected goal is Area Domination.
+    # Irrelevant as my goal is not Area Domination.
+    60: 50
   ###########################
   # Keep Generation Options #
   ###########################
@@ -240,14 +242,9 @@ Keymaster's Keep:
     named_mii_named_interior: 0
     named_mii_named_level_up_gift: 0
     named_mii_named_treasure: 0
-    place_building: 1
+    place_facility: 1
     place_landscapes: 2
     place_objects: 8
-  tomodachi_life_living_the_dream_region:
-    # The region of the copy of Tomodachi Life: Living the Dream being played. Affects only the names of items. Only `north_america` and `europe` are implemented at the moment. If multiple names are not implemented for a given item in this implementation, either region's name may be used. Defaults to `north_america`.
-    # Set to `europe` as that is the region I am playing in.
-    north_america: 0
-    europe: 50
   tomodachi_life_living_the_dream_skip_locked_items:
     # Whether Tomodachi Life: Living the Dream objectives involving items should include a notice that allows them to be skipped if their items are not unlocked or owned by the player, depending on the item type. Defaults to true.
     # Unchanged from the base configuration.
@@ -309,6 +306,7 @@ Keymaster's Keep:
     - Sans
     - Space Dude
     - Space Dette
+    - Barney Calhoun
     - Clarkson
     - Coach
     - Dark Girl
@@ -328,19 +326,6 @@ Keymaster's Keep:
   tomodachi_life_living_the_dream_creations:
     # The list of names of items created in the Studio Workshop (a.k.a. Palette House) to include as part of Tomodachi Life: Living the Dream objectives. Expects a dictionary where each value is a lists of strings. Supported keys are "food", "clothing", "treasures", "interiors", "exteriors", "objects" and "landscapes". Defaults to a dictionary with empty lists for each key.
     # Updated with all creations currently on the island.
-    clothing:
-      - Purple Guy's uniform
-      - Klonoa's cap
-      - Race's top
-      - BFB Logo T-shirt
-      - Space Dette's dress
-      - Necky's dress
-      - Tornado shirt
-      - Teto uniform
-      - Tipper's uniform
-    exteriors:
-      - dev texture house
-      - Eyeball's house
     food:
       - pint of Guinness
       - scout cookies
@@ -353,34 +338,19 @@ Keymaster's Keep:
       - BLoOD fOR the bLOoD GOd
       - 5-Hour Energy
       - Four Cake
-    interiors:
-      - white wall
-      - dev texture wall
-      - LSD red faces
-    landscapes:
-      - pier concrete
-      - orange starfield
-      - Jazztronauts void
-      - corkboard wood
-      - scratched up stone
-      - parking asphalt
-      - nodraw texture
-      - Bean's Show grass
-      - garden grass
-      - hedge maze grass
-    objects:
-      - Half-Life 2 roundabout base
-      - outdoor barbecue bricks
-      - skatepark railing
-      - skatepark wallplant wall
-      - skatepark grind box
-      - skatepark pyramid
-      - skatepark dome
-      - Nissan Cube
-      - SM64 sign
-      - dev texture box
-      - clip brush
+    clothing:
+      - Purple Guy's uniform
+      - Klonoa's cap
+      - Race's top
+      - BFB Logo T-shirt
+      - Space Dette's dress
+      - Necky's dress
+      - Tornado shirt
+      - Teto uniform
+      - Tipper's uniform
     treasures:
+      - WarioWare D.I.Y.
+      - Vampire Survivors
       - Guinness World Records book
       - Jack5's sketch book
       - Jimbo
@@ -405,9 +375,38 @@ Keymaster's Keep:
       - Jam2go album
       - Battle for Dream Island
       - Steyr-Hahn M1912
-      - Vampire Survivors-like
       - ASMO Guide
       - Mario Reds
+    interiors:
+      - white wall
+      - dev texture wall
+      - LSD red faces
+    exteriors:
+      - dev texture house
+      - Eyeball's house
+    objects:
+      - Half-Life 2 roundabout base
+      - outdoor barbecue bricks
+      - skatepark railing
+      - skatepark wallplant wall
+      - skatepark grind box
+      - skatepark pyramid
+      - skatepark dome
+      - Nissan Cube
+      - SM64 sign
+      - dev texture box
+      - clip brush
+    landscapes:
+      - pier concrete
+      - orange starfield
+      - Jazztronauts void
+      - corkboard wood
+      - scratched up stone
+      - parking asphalt
+      - nodraw texture
+      - Bean's Show grass
+      - garden grass
+      - hedge maze grass
   ###########################
   # Item & Location Options #
   ###########################

@@ -7,7 +7,7 @@ game: "Spyro: A Hero's Tail"
 requires:
   version: 0.6.7
   game:
-    "Spyro: A Hero's Tail": 1.0.7
+    "Spyro: A Hero's Tail": 2.0.0
 "Spyro: A Hero's Tail":
   ################
   # Game Options #
@@ -19,162 +19,6 @@ requires:
     # Unchanged from the base configuration.
     full: 50
     minimal: 0
-  randomize_sgt_byrd_minigames:
-    # Toggle randomizing Sgt. Byrds mini game rewards.
-    # Unchanged from the base configuration.
-    'false': 0
-    'true': 50
-  randomize_blink_minigames:
-    # Toggle randomizing Blinks mini game rewards.
-    # Enabled to increase the variety of the APworld.
-    'false': 0
-    'true': 50
-  randomize_turret_minigames:
-    # Toggle randomizing Turret mini game rewards.
-    # Unchanged from the base configuration.
-    'false': 0
-    'true': 50
-  randomize_sparx_minigames:
-    # Toggle randomizing Sparxs mini game rewards.
-    # Unchanged from the base configuration.
-    'false': 0
-    'true': 50
-  randomize_breath:
-    # Determines which starting elemental breath you have.
-    # default: Fire breath.
-    # random: Start with a random breath.
-    # none: Start with no breath. Adds a starting check.
-    # I originally set this to `none` to increase the variety of the APworld, however, this results in most runs starting with me being unable to attack any enemies or complete any timed breath puzzles, so I have reverted this to `randomized`. This should NOT be set to `default`, as runs need some variety and always having Fire Breath from the start will get boring.
-    default: 0
-    randomized: 50
-    none: 0
-  randomize_movement:
-    # Randomize the 3 movement abilities (Glide, Swim, Charge).
-    # If you don't want to randomize one of these, add it to your start inventory.
-    # Enabled to increase the variety of the APworld. Charge and Double Jump are absolute necessities in order for the game to not feel like a slog early on, so they are added to `start_inventory`.
-    'false': 0
-    'true': 50
-  randomize_fireworks:
-    # Adds Fireworks as a location check. Requires Fire Breath.
-    # Adding firework locations would increase the location count of Spyro: A Hero's Tail far too much.
-    'false': 50
-    'true': 0
-  key_rings:
-    # Enable region-specific key rings for locked chests.
-    # Lockpicks should be able to open any chest.
-    'false': 50
-    'true': 0
-  randomize_shop_items:
-    # Randomize Moneybags shop items.
-    # Enabled to increase the variety of the APworld.
-    'false': 0
-    'true': 50
-  shop_prices_min:
-    # The minimum price for items in the shop.
-    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10000.
-    # Unchanged from the old default (new default is 500).
-    1: 50
-  shop_prices_max:
-    # The maximum price for items in the shop.
-    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10000.
-    # 4x the old default of 500 (the new default is 5000), due to Spyro: A Hero's Tail games tending to take some time.
-    2000: 50
-  randomize_light_gem_door_costs:
-    # Sets the cost of light gem doors.
-    # default: No changes to cost.
-    # randomized: Randomizes the cost, defined by the range in **Minimum Light Gem Door Cost** and **Maximum Light Gem Door Cost**.
-    # shuffle: Shuffles the existing prices (20, 45, 70 and 95).
-    # Set to `randomized` to increase the variety of the APworld. This will likely need to be reverted after testing.
-    default: 0
-    randomized: 50
-    shuffle: 0
-  light_gem_door_cost_min:
-    # Sets the minimum cost for light gem doors.
-    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
-    # Unchanged from the base configuration.
-    1: 50
-  light_gem_door_cost_max:
-    # Sets the maximum cost for light gem doors.
-    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
-    # Anywhere between 35% and 50% of Light Gems maximum are required to open Light Gem doors.
-    random-range-35-50: 50
-  randomize_boss_lair_doors:
-    # Sets the Dark Gem requirement of the Boss Lairs.
-    # Note: The door to your goal boss will always be the most expensive of the 4.
-    # default: No changes to cost.
-    # randomized: Randomizes the cost, between 1 and 40.
-    # shuffle: Shuffles the existing costs (10, 20, 30, 40)
-    # Set to `randomized` to increase the variety of the APworld. This will likely need to be reverted after testing.
-    default: 0
-    randomized: 50
-    shuffle: 0
-  boss_lair_door_cost_min:
-    # Sets the minimum cost for the boss lairs.
-    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 40.
-    # Unchanged from the base configuration.
-    1: 50
-  boss_lair_door_cost_max:
-    # Sets the maximum cost for the boss lairs.
-    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 40.
-    # Anywhere between 35% and 50% of Dark Gems maximum are required to open Dark Gem doors.
-    random-range-14-20: 50
-  randomize_gadget_costs:
-    # Randomizes the cost of Ball, Invincibility and Supercharge gadgets.
-    # Set to 0 to leave as default cost.
-    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # It is not clear how changing this value will affect the game and the dialogue subtitles, so it is being left at the default for now.
-    0: 50
-  realm_access:
-    # Set realm access mode.
-    # default: Vanilla behaviour
-    # always: Access any realm at any time
-    # shuffled: Shuffles access between the 4 bosses
-    # randomized: Shuffles access into the multiworld
-    # Prevent access to other realms unless their items are found in the multiworld.
-    always: 0
-    shuffled: 0
-    randomized: 50
-  starting_realm:
-    # Sets starting realm behaviour.
-    # randomized: Start in a random realm
-    # Randomly choose either Dragon Village or Coastal Remains. The other two realms should start locked, as there is not much that can be done in them with minimal abilities.
-    dragon_village: 50
-    coastal_remains: 50
-    frostbite_village: 0
-    stormy_beach: 0
-    randomized: 0
-  misc_easy_bosses:
-    # Toggle "easy" mode for bosses, making them take triple damage, shortening the fight considerably.
-    # Valid options: ["Gnasty Gnorc", "Ineptune", "Red", "Mecha-Red"]
-    # Fully disabled.
-    []
-  misc_goal:
-    # Set the goal condition.
-    # Mecha-Red is only accessible by travelling through the entirety of World 4, which is essentially one long linear trek, while the other bosses are accessible from the hubs of their respective worlds. For this reason, randomly choose one of the standard bosses to be the goal.
-    gnorc: 33
-    ineptune: 33
-    red: 33
-    mechared: 0
-  misc_hint_minigame_rewards:
-    # When talking to a mini game npc, hint out their rewards.
-    # Unchanged from the base configuration.
-    'false': 0
-    'true': 50
-  misc_hint_boss_rewards:
-    # Hint out the item for beating a boss.
-    # Unchanged from the base configuration.
-    'false': 50
-    'true': 0
-  misc_skip_cutscenes:
-    # Enable a patch that skips realm intro cutscenes. In rare cases, this may have glitchty side-effects.
-    # Unchanged from the base configuration.
-    'false': 50
-    'true': 0
-  misc_skip_elevators:
-    # Enable a patch to skip the long elevator waits to Cloudy Domain, Sunken Ruins and Magma Falls
-    # Unchanged from the base configuration.
-    'false': 0
-    'true': 50
   death_link:
     # Enable DeathLinking.
     # disabled: Disabled.
@@ -184,6 +28,232 @@ requires:
     disabled: 0
     shielded: 0
     enabled: 50
+  ###########################
+  # GOAL, CHECKS, AND ITEMS #
+  ###########################
+  goal:
+    # Determines your goal boss, or to require all 4 bosses.
+    # Mecha-Red is only accessible by travelling through the entirety of World 4, which is essentially one long linear trek, while the other bosses are accessible from the hubs of their respective worlds. For this reason, randomly choose one of the standard bosses to be the goal.
+    gnasty_gnorc: 33
+    ineptune: 33
+    red: 33
+    mecha_red: 0
+    all: 0
+  firework_checks:
+    # Whether to enable checks for flaming fireworks. Fire breath is required for surprisingly few things in this game, so enabling this helps make fire breath more important. This option adds +22 filler items.
+    # Adding firework locations would increase the location count of Spyro: A Hero's Tail far too much.
+    'false': 50
+    'true': 0
+  randomize_minigames:
+    # The list below contains which minigames will be given randomized rewards. If you would like a certain type of minigame to be guaranteed their vanilla Dragon Egg & Light Gem rewards, take them out of the list below.
+    # Valid options: ["Sgt. Byrd", "Blink", "Turret", "Sparx"]
+    # Unchanged from the base configuration. Enabled to increase the variety of the APworld.
+    - Sgt. Byrd
+    - Blink
+    - Turret
+    - Sparx
+  filler_items:
+    # Choose what will make up your filler item pool. The randomizer picks from your choices here at random, for every location which needs a filler item. There is always a minimum of 101 such locations.
+    # Dragon Eggs: Dragon Eggs are functionally useless in Archipelago, because the extras that they unlock are unlocked when you collect the in-game Dragon Eggs, regardless of what they were randomized into. Dragon Eggs given from minigames which are unrandomized (see randomize_minigames) are still given even if omitted here.
+    # Breath Bombs: random vanilla game bomb items. Only usable if you have that breath unlocked.
+    # Gem Packs: give a random amount of gems (400-600 or 800-1200 if you have double gems). It is strongly advised to remove these if you are using shop randomization, because gem logic does not account for gem packs. You would be collecting gems faster than logic expects, to varying degrees depending on how many gem packs get created.
+    # Generic: Empty items which do nothing, but have humorous names referencing characters or things in the series.
+    # There are 12 total (6 chosen each seed, or all 12 if this is the only filler), so these will likely make up the majority of your filler pool if enabled. This option is chosen automatically if the list is left empty.
+    # Valid options: ["Dragon Eggs", "Breath Bombs", "Gem Packs", "Generic"]
+    # Unchanged from the base configuration.
+    - Dragon Eggs
+    - Breath Bombs
+    - Gem Packs
+    - Generic
+  #################
+  # START OF GAME #
+  #################
+  starting_breath:
+    # All seeds start with a "Starter Check: Breath". This option decides whether it will get pre-filled with a breath of your choice, or a random other item from Archipelago (which could potentially still be a breath).
+    # fire/electric/water/ice: Start with that breath.
+    # none: Start with no breath.
+    # I originally set this to `none` to increase the variety of the APworld, however, this results in most runs starting with me being unable to attack any enemies or complete any timed breath puzzles, so I have reverted this to randomised. This should NOT be set to just `fire`, as runs need some variety and always having Fire Breath from the start will get boring.
+    fire: 50
+    electric: 50
+    water: 50
+    ice: 50
+    none: 0
+  randomize_movement:
+    # Whether to randomize the ability to glide, swim, and charge.
+    # If not randomized, your 3 movement starter checks will award these abilities.
+    # If you don't want to randomize a subset of these, add them to your start inventory.
+    # Enabled to increase the variety of the APworld. Charge and Double Jump are absolute necessities in order for the game to not feel like a slog early on, so they are added to `start_inventory`.
+    'false': 0
+    'true': 50
+  realm_access:
+    # Whether to allow access to all realms at all times or to shuffle realm "Access Card" items into the world.
+    # Setting this to 'always' removes the "Defeat <boss name>" checks, as they would normally reward realm access. You still will need to beat any goal-related bosses (and they will still reward their breath checks).
+    # Randomized realm access adds 1 filler item because Mecha-Red does not give a realm access card.
+    # Prevent access to other realms unless their items are found in the multiworld.
+    always: 0
+    randomized: 50
+  starting_realm:
+    # Determines which realm you will start in, or to have it randomly chosen.
+    # Randomly choose either Dragon Village or Coastal Remains. The other two realms should start locked, as there is not much that can be done in them with minimal abilities.
+    dragon_village: 50
+    coastal_remains: 50
+    frostbite_village: 0
+    stormy_beach: 0
+    randomized: 0
+  ########
+  # SHOP #
+  ########
+  shop_randomization:
+    # Determines whether to randomize Moneybags' shop. If not randomized, it will function identically to the vanilla game, with one difference. If you enable key rings, 14 unique key rings will replace lockpicks in the shop. 
+    # If the shop is randomized, vanilla game items will be replaced with items from Archipelago.
+    # Shop items will progressively unlock as you collect gems throughout the seed. Once a shop item is unlocked, you can redeem it for free. This approach has some behind-the-scenes benefits detailed in the project's GitHub README.
+    # This has a few consequences worth noting:
+    # a) Double Gems, if enabled, is permanent once received, as is the Butterfly Jar (it replenishes on death if depleted).
+    # b) There is no limit on how many lockpicks you can hold at once. Same with ammo for breath bombs.
+    # c) If key rings are enabled, the world will have 14 level-specific key rings, instead of 52 lockpicks.
+    # Item prices are determined by gem_collection below.
+    # Enabled to increase the variety of the APworld.
+    'false': 0
+    'true': 50
+  key_rings:
+    # This option enables level-specific key rings which will open all locked chests in that level.
+    # If your shop is randomized, and key rings are enabled: you will have 18 shop items, and 14 key rings will be placed randomly in the world.
+    # If your shop is randomized and key rings are disabled: you will have 56 shop items, and 52 lockpicks will be placed randomly in the world.
+    # If your shop is not randomized: key rings or lockpicks will be buyable in the shop depending on this option.
+    # Lockpicks should be able to open any chest.
+    'false': 50
+    'true': 0
+    # The below options have been removed since v2 of this APworld
+    # shop_prices_min:
+    # The minimum price for items in the shop.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10000.
+    # Unchanged from the old default (new default is 500).
+    # 1: 50
+    # shop_prices_max:
+    # The maximum price for items in the shop.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10000.
+    # 4x the old default of 500 (the new default is 5000), due to Spyro: A Hero's Tail games tending to take some time.
+    # 2000: 50
+  gem_collection:
+    # This option is only used if you have shop randomization on, and lets you limit how much of each area's gems you need to collect. For example, a value of 50 means logic will expect you to always collect approximately 50% of accessible gems. The amount you are expected to have is visible on the pause screen. ***Note that Blink minigames are separately decided below with blink_gems.***
+    # This option contributes to determining your shop item prices. Moneybags always offers your first shop item for free. Inflation has hit the Dragon Kingdom strong, and he thinks he'll get more customers in by offering a loss-leader.
+    # If you'd like to calculate shop prices yourself, the formula is below, or you can check in-game. For more info, see the project's README.
+    # ********************************
+    # FORMULA INFO (for the math nerds
+    # ********************************
+    # non_blink_gems = 122,429 * gem_collection%, rounded down
+    # blink_gems = 20,028 * blink_gems%, rounded down
+    # base_shop_price = (non_blink_gems + blink_gems) / (number of shop items - 1), rounded down
+    # Number of shop items is -1 because the first item is always free.
+    # All following prices are base_shop_price * n, for all n items, except the final item which is (non_blink_gems + blink_gems) which adds back in all rounding down.
+    # Example: 60 for gem_collection and 40 for blink_gems, on a seed with 18 shop items, would give prices of 4,792 -> 9,584 -> ... -> 81,468.
+    # ********************************
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # TODO: Change this after playing once to reflect the old shop price settings.
+    # Unchanged from the base configuration.
+    50: 50
+  blink_gems:
+    # This option is only used when the shop is randomized, and pairs with gem_collection. This option isolates Blink's minigame gems, because his contain more than the other types (Blink has 20,028, Sparx has 3,671, Sgt. Byrd has 8,281).
+    # This option works identically to gem_collection. For example, a 40 below means collecting 40% of Blink's minigame gems, which is 8,011. Set this option to 0 if you intend to skip Blink minigames, whether that be on principle,  from underground-air-a-phobia, or because you excluded enough Blink minigame locations to justify it.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    50: 50
+  double_gems:
+    # This option is only used if you have shop randomization on.
+    # The shop randomization functionality interacts awkwardly with Double Gems. Double Gems is NOT accounted for during generation logic, meaning if you were to receive Double Gems in a seed, you would begin collecting gems 2x faster than the seed is expecting. This is not a problem, per se, but can lead to you skipping ahead of the intended logic for the seed.
+    # To remedy this, you can choose to eliminate Double Gems from your item pool using this option. This keeps your gem collection stable throughout the seed and ensures you will stay following the intended logic for your seed.
+    # Disabled based on reading the above information.
+    disabled: 50
+    enabled: 0
+  #######################
+  # GATE & GADGET COSTS #
+  #######################
+  randomize_boss_lair_doors:
+    # Determines Dark Gem cost for each boss lair.
+    # Whichever boss is your goal (if not all bosses) will always be the most expensive.
+    # default: Each boss lair has their vanilla cost (10, 20, 30, 40).
+    # randomized: Randomly picks costs in the range defined by boss_lair_door_cost_min and boss_lair_door_cost_max.
+    # shuffle: Each boss lair has their vanilla cost shuffled with the others (10, 20, 30, 40).
+    # Set to `randomized` to increase the variety of the APworld. This will likely need to be reverted after testing.
+    default: 0
+    randomized: 50
+    shuffle: 0
+  boss_lair_door_cost_min:
+    # Minimum cost for boss lairs, if set to be random.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 40.
+    # Unchanged from the base configuration.
+    1: 50
+  boss_lair_door_cost_max:
+    # Maximum cost for boss lairs, if set to be random.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 40.
+    # Anywhere between 35% and 50% of Dark Gems maximum are required to open Dark Gem doors.
+    random-range-14-20: 50
+  randomize_light_gem_door_costs:
+    # Determines Light Gem door costs.
+    # default: Each door has their vanilla cost (20, 45, 70, 95).
+    # randomized: Randomly picks costs in the range defined by light_gem_door_cost_min and light_gem_door_cost_max.
+    # shuffle: Each door has their vanilla cost shuffled with the other
+    # Set to `randomized` to increase the variety of the APworld. This will likely need to be reverted after testing.
+    default: 0
+    randomized: 50
+    shuffle: 0
+  light_gem_door_cost_min:
+    # Minimum cost for light gem doors, if set to be random.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Unchanged from the base configuration.
+    1: 50
+  light_gem_door_cost_max:
+    # Maximum cost for light gem doors, if set to be random.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Anywhere between 35% and 50% of Light Gems maximum are required to open Light Gem doors.
+    random-range-35-50: 50
+  randomize_gadget_costs:
+    # Determines gadget costs.
+    # default: Each gadget has their vanilla cost (8, 24, 40).
+    # randomized: Randomly picks costs in the range defined by gadget_cost_min and gadget_cost_max.
+    # shuffle: Each door has their vanilla cost shuffled with the others (8, 24, 40).
+    # Set to `randomized` for more variety.
+    default: 0
+    randomized: 50
+    shuffle: 0
+  gadget_cost_min:
+    # Minimum cost for gadgets, if set to be random.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Unchanged from the base configuration.
+    8: 50
+  gadget_cost_max:
+    # Maximum cost for gadgets, if set to be random.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    40: 50
+  ###################
+  # QUALITY OF LIFE #
+  ###################
+  misc_hint_minigame_rewards:
+    # Whether to auto-hint a mini-game's reward when talking to its NPC.
+    # It is important to be able to see what a minigame is hiding.
+    'false': 0
+    'true': 50
+  misc_hint_boss_rewards:
+    # Whether to auto-hint a boss's reward(s) when their gate is opened.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  easy_bosses:
+    # Toggles 'easy mode' for each boss, making them take triple damage to shorten fights considerably.
+    # Valid options: ["Gnasty Gnorc", "Ineptune", "Red", "Mecha-Red"]
+    # Fully disabled.
+    []
+  skip_cutscenes:
+    # Enable skipping most cutscenes with the Y button.
+    # In rare cases, this may have glitchy side effects.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  skip_elevators:
+    # Enable a patch to skip the long elevator waits to Cloudy Domain, Sunken Ruins and Magma Falls
+    # Enabled in order to save time.
+    'false': 0
+    'true': 50
   ###########################
   # Item & Location Options #
   ###########################
