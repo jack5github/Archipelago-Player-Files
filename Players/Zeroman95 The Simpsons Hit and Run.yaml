@@ -2,137 +2,345 @@ name: ZeromanSHAR{NUMBER}
 
 description: Zeroman95s The Simpsons Hit and Run YAML
 
-game: The Simpsons Hit And Run
+game: Simpsons Hit and Run
 requires:
   version: 0.6.7
+  game:
+    Simpsons Hit and Run: 0.5.4
 
-The Simpsons Hit And Run:
-  progression_balancing: # This was originally on 0 when I first begun, BIG Mistake that was. So now it is at 50.
+Simpsons Hit and Run:
+  progression_balancing:
     50: 99
 
-  accessibility: # Unchanged
+  accessibility:
     full: 50
     minimal: 0
 
-  goal: # No way would I be doing ALL the Missions in the game; That is like 90% of the whole game.
-    goal_all_story_missions_complete: 99
+  Itchy_And_Scratchy_Ticket_Requirement:
+    # Goal is watching the Itchy and Scratchy film in the Lobby.
+    # You'll receive the Ticket when you complete the requirements chosen. UNCHANGED
+    missions_complete: 50
+    story_missions_complete: 0
+    final_mission_l7m7: 0
+    cars_collected: 0
 
-  levelsanity: # Set to levels because linear is boring.
-    linear: 0
-    levels: 50
+  Wasp_Amount:
+    70: 50 # UNCHANGED
 
-  startingcarshuffle: # Set to have a random car when starting.
+  Card_Amount:
+    25: 50 # UNCHANGED
+
+  Required_Mission_Levels:
+    # If the ticket requires missions or story missions, choose which level's missions are required.
+    # Missions in other levels may still unlock required items.
+    # Has no effect if the ticket doesn't require missions.
+    # Valid options are 1, 2, 3, 4, 5, 6, 7, or All. # UNCHANGED
+    ['All']
+
+  Car_Amount:
+    # If the ticket requires cars collected, choose the amount of cars required.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 10
+    # Maximum value is 81 # UNCHANGED
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-10-81: 0 # random value between 10 and 81
+
+  Lock_Levels:
+    # If enabled, levels are will be inaccessible to Free Roam until you receive their respective Level item. # UNCHANGED
     'false': 0
     'true': 50
 
-  shuffleattack: # Unchanged
+  Early_Level:
+    # If enabled, attempt to place at least one of your required levels in an early location. # UNCHANGED
+    'false': 0
+    'true': 50
+
+  Shuffle_Levels:
+    # Choose how you want Levels to be received.
+    # If shuffled, 6 Level X items will be shuffled into the item pool which will allow access to that level's missions
+    # Otherwise, 6 Progressive Level items will be shuffled into the item pool, allowing you to access levels in the vanilla order.
+    # Regardless of your choice, missions can be played in any order on an unlocked level. # UNCHANGED
+    'false': 0
+    'true': 50
+
+  Starting_Car_Shuffle:
+    # Choose whether to shuffle starting car between available cars from your starting level.
+    # If disabled, you'll always start with your starting level's default car. # UNCHANGED
+    'false': 0
+    'true': 50
+
+  Shuffle_Attack:
+    # Choose whether to add Attack to the pool for each character.
+    # Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None. # UNCHANGED
     ['All']
 
-  shufflejump: # Unchanged
+  Shuffle_Jump:
+    # Choose whether to add Jump to the pool for each character.
+    # Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None. # UNCHANGED
     ['All']
 
-  startjumplevel: # Pick how many Jumps I should start with randomly.
-    random-range-0-2: 99
+  Start_Jump_Level:
+    # Choose how many Progressive Jump items to start with for each character.
+    # Characters who aren't included in ShuffleJump will start with Progressive Jump Level 2.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 2 # UNCHANGED
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-2: 0 # random value between 0 and 2
 
-  shufflegagfinder: # Unchanged
+  Shuffle_Gagfinder:
+    # Choose whether to add a Gagfinder to the pool for each Character that will be required to
+    # unlock gags as that character. Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
+    # If None, gags will instead be locked until you receive their Level. # UNCHANGED
     ['All']
 
-  shufflecheckeredflags: # Unchanged
+  Shuffle_Checkered_Flags:
+    # Choose whether to add a Checkered Flag to the pool for each Character that will be required to
+    # unlock races as that character. Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
+    # If None, races will instead be locked until you receive their Level. # UNCHANGED
     ['All']
 
-  shuffleebrake: # Unchanged
+  Shuffle_EBrakes:
+    # Choose whether to shuffle ability to use the E-Brake for each character into the item pool.
+    # Characters not chosen will always be able to use the E-Brake.
+    # Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None. # UNCHANGED
     ['All']
 
-  shuffleforward: # Unchanged
+  Shuffle_Bumpers:
+    # Choose whether to shuffle Frink-o-Matic Wasp Bumpers into the item pool.
+    # Characters not chosen won't have a Wasp Bumper in the item pool and *WILL NOT* be able to break wasps with cars.
+    # Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None. # UNCHANGED
     ['None']
 
-  earlyforward: # Unchanged
+  Start_With_Bumpers:
+    # If true, add all enabled Wasp Bumpers to the start inventory.
+    # If you want more granular control of this, use the generic start inventory. # UNCHANGED
+    'false': 50
+    'true': 0
+
+  Shuffle_Forward:
+    # Choose whether to shuffle the ability to move forward or drive forward for each character into the item pool.
+    # Characters not chosen won't have a forward in the item pool and will always be able to move forward.
+    # Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None.
+    # **THIS COULD CREATE VERY DIFFICULT SEEDS** # UNCHANGED
+    ['None']
+
+  Early_Forward:
+    # If enabled and forward is shuffled, try to place each specified character's Forward item early.
+    # Valid options are Homer, Bart, Lisa, Marge, Apu, All, or None. Does nothing if the character's forward isn't shuffled. # UNCHANGED
     ['All']
 
-  EnableWaspPercent: # Unchanged
+  Shuffle_Cards:
+    # Randomize card locations. This option adds several possible locations for
+    # cards. There will still be 49 total cards with 7 in each level. # UNCHANGED
     'false': 0
     'true': 50
 
-  wasppercent: # Pick between 50 to 100 Wasps. So I am not here grinding checks forever.
-    random-range-50-100: 99
+  Mission_Locks:
+    # Add car requirements to a percentage of missions
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100 # UNCHANGED
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
 
-  EnableCardPercent: # Unchanged
+  Mission_Timers:
+    # Increase mission timers by the chosen percentage.
+    # For example, if a mission has a timer of 1:00 and the chosen value is 50, then the mission will have a timer of 1:30
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100 # UNCHANGED
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  Min_Shop_Price:
+    # The minimum cost of any item in Gil's Shop. If this is greater than the max shop price, then the max will be used instead.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 500 # UNCHANGED
+    100: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-500: 0 # random value between 0 and 500
+
+  Max_Shop_Price:
+    # The maximum cost of any item in Gil's Shop.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 500 # UNCHANGED
+    300: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-500: 0 # random value between 0 and 500
+
+  Shop_Scale_Modifier:
+    # The multiplier for shop costs per levels. For each level after L1, min and max will be multiplied by level number and this multiplier.
+    # L2 = Min/Max * Mod * 2, L3 = Min/Max * Mod * 3, etc.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 5 # UNCHANGED
+    2: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-5: 0 # random value between 1 and 5
+
+  Start_Wallet_Level:
+    # Choose how many Progressive Wallet Levels to start with.
+    # Level 1 shops are in logic with 1 level, level 2 with 2, etc.
+    # Your coin cap = MaxShopPrice * WalletLevel * ShopScaleMod and is unlimited at Wallet Level 7
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 7 # UNCHANGED
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-7: 0 # random value between 0 and 7
+
+  Shop_Hint_Policy:
+    # Choose the level of hints sent when speaking to Gil for the first time on a level
+    # All: Hint all items in Gil's shop
+    # OnlyProg: Only hint progression items in Gil's shop
+    # None: No shop hints will be created # UNCHANGED
+    all: 50
+    onlyprog: 0
+    none: 0
+
+  Extra_Hint_Policy:
+    # Place extra hints in various places. # UNCHANGED
     'false': 0
     'true': 50
 
-  cardpercent: # Happy to have less Cards required then Wasps.
-    random-range-10-100: 99
+  Filler_Wrench_Efficiency:
+    # Percentage damage a filler wrench item will repair your cars.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100 # UNCHANGED
+    10: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
 
-  shufflecards: # Unchanged
+  Filler_HitNRun_Reset_Efficiency:
+    # Percentage a filler Hit N Run Reset item will lower your Hit N Run meter.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100 # UNCHANGED
+    10: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  Shuffle_Traffic:
+    # Randomize traffic per level. Cars that are usually used as traffic in that level plus the starting car of the next level are unable to be chosen for their level. # UNCHANGED
     'false': 0
     'true': 50
 
-  cardlogic: # Cars are allowed to get Cards.
-    cars: 99
+  Traffic_Blacklist:
+    # Block cars from appearing as traffic. There must be at least 35 cars available to shuffle.
+    # If there are less than 5 cars available for any level after applying the blacklist, then traffic will not be shuffled. # UNCHANGED
+    []
 
-  wasplogic: # Adds a Item to the pool called Frink-o-Matic Wasp Bumper when this is obtained Cars will be allowed to destroy Wasp Cameras.
-    unlockable: 99
+  Filler_Traps:
+    # How many fillers will be replaced with traps. 0 means no additional traps, 100 means all fillers are traps.
+    # These traps are IN ADDITION to any enabled traps above, though it won't add trap types that have been disabled.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100 # UNCHANGED
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
 
-  missionlocks: # We'll give this a go.
-    random-range-25-50: 99
-
-  minprice: # Let's make Shop Pricing completely random.
-    random-range-0-500: 99
-
-  maxprice: # Let's make Shop Pricing completely random.
-    random-range-0-500: 99
-
-  shopscalemod: # Unchanged
-    2: 99
-
-  shophintpolicy: # Unchanged
-    all: 99
-
-  extrahintpolicy: # Unchanged
+  Enable_Eject_Traps:
+    # Whether to include Eject traps in the item pool.
     'false': 0
     'true': 50
 
-  shuffletraffic: # Unchanged
+  Enable_Duff_Traps:
+    # Whether to include Duff traps in the item pool.
     'false': 0
     'true': 50
 
-  filler_traps: # I always have all my games only have 25% of their filler be traps.
-    25: 99
-
-  eject: # Unchanged
+  Enable_Launch_Traps:
+    # Whether to include Launch traps in the item pool.
     'false': 0
     'true': 50
 
-  duff: # Unchanged
+  Enable_HitNRun_Traps:
+    # Whether to include Hit N Run traps in the item pool.
     'false': 0
     'true': 50
 
-  launch: # Unchanged
+  Enable_Traffic_Traps:
+    # Whether to include Traffic traps in the item pool.
     'false': 0
     'true': 50
 
-  hnr: # Unchanged
-    'false': 0
-    'true': 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items:
+    # Forces these items to be in their native world.
+    []
 
-  traffictrap: # Unchanged
-    'false': 0
-    'true': 50
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
 
-  local_items: []
+  start_inventory:
+    # Start with the specified amount of these items. Example: "Bomb: 1"
+    {}
 
-  non_local_items: []
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
 
-  start_inventory: {}
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
 
-  start_hints: []
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
 
-  start_location_hints: []
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
 
-  exclude_locations: []
+  item_links:
+    # Share part of your item pool with other players.
+    []
 
-  priority_locations: []
-
-  item_links: []
-
-  plando_items: []
+  plando_items:
+    # Generic items plando.
+    []
