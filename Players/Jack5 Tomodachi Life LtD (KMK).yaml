@@ -240,14 +240,9 @@ Keymaster's Keep:
     named_mii_named_interior: 0
     named_mii_named_level_up_gift: 0
     named_mii_named_treasure: 0
-    place_building: 1
+    place_facility: 1
     place_landscapes: 2
     place_objects: 8
-  tomodachi_life_living_the_dream_region:
-    # The region of the copy of Tomodachi Life: Living the Dream being played. Affects only the names of items. Only `north_america` and `europe` are implemented at the moment. If multiple names are not implemented for a given item in this implementation, either region's name may be used. Defaults to `north_america`.
-    # Set to `europe` as that is the region I am playing in.
-    north_america: 0
-    europe: 50
   tomodachi_life_living_the_dream_skip_locked_items:
     # Whether Tomodachi Life: Living the Dream objectives involving items should include a notice that allows them to be skipped if their items are not unlocked or owned by the player, depending on the item type. Defaults to true.
     # Unchanged from the base configuration.
@@ -309,6 +304,7 @@ Keymaster's Keep:
     - Sans
     - Space Dude
     - Space Dette
+    - Barney Calhoun
     - Clarkson
     - Coach
     - Dark Girl
@@ -328,19 +324,6 @@ Keymaster's Keep:
   tomodachi_life_living_the_dream_creations:
     # The list of names of items created in the Studio Workshop (a.k.a. Palette House) to include as part of Tomodachi Life: Living the Dream objectives. Expects a dictionary where each value is a lists of strings. Supported keys are "food", "clothing", "treasures", "interiors", "exteriors", "objects" and "landscapes". Defaults to a dictionary with empty lists for each key.
     # Updated with all creations currently on the island.
-    clothing:
-      - Purple Guy's uniform
-      - Klonoa's cap
-      - Race's top
-      - BFB Logo T-shirt
-      - Space Dette's dress
-      - Necky's dress
-      - Tornado shirt
-      - Teto uniform
-      - Tipper's uniform
-    exteriors:
-      - dev texture house
-      - Eyeball's house
     food:
       - pint of Guinness
       - scout cookies
@@ -353,34 +336,19 @@ Keymaster's Keep:
       - BLoOD fOR the bLOoD GOd
       - 5-Hour Energy
       - Four Cake
-    interiors:
-      - white wall
-      - dev texture wall
-      - LSD red faces
-    landscapes:
-      - pier concrete
-      - orange starfield
-      - Jazztronauts void
-      - corkboard wood
-      - scratched up stone
-      - parking asphalt
-      - nodraw texture
-      - Bean's Show grass
-      - garden grass
-      - hedge maze grass
-    objects:
-      - Half-Life 2 roundabout base
-      - outdoor barbecue bricks
-      - skatepark railing
-      - skatepark wallplant wall
-      - skatepark grind box
-      - skatepark pyramid
-      - skatepark dome
-      - Nissan Cube
-      - SM64 sign
-      - dev texture box
-      - clip brush
+    clothing:
+      - Purple Guy's uniform
+      - Klonoa's cap
+      - Race's top
+      - BFB Logo T-shirt
+      - Space Dette's dress
+      - Necky's dress
+      - Tornado shirt
+      - Teto uniform
+      - Tipper's uniform
     treasures:
+      - WarioWare D.I.Y.
+      - Vampire Survivors
       - Guinness World Records book
       - Jack5's sketch book
       - Jimbo
@@ -405,9 +373,38 @@ Keymaster's Keep:
       - Jam2go album
       - Battle for Dream Island
       - Steyr-Hahn M1912
-      - Vampire Survivors-like
       - ASMO Guide
       - Mario Reds
+    interiors:
+      - white wall
+      - dev texture wall
+      - LSD red faces
+    exteriors:
+      - dev texture house
+      - Eyeball's house
+    objects:
+      - Half-Life 2 roundabout base
+      - outdoor barbecue bricks
+      - skatepark railing
+      - skatepark wallplant wall
+      - skatepark grind box
+      - skatepark pyramid
+      - skatepark dome
+      - Nissan Cube
+      - SM64 sign
+      - dev texture box
+      - clip brush
+    landscapes:
+      - pier concrete
+      - orange starfield
+      - Jazztronauts void
+      - corkboard wood
+      - scratched up stone
+      - parking asphalt
+      - nodraw texture
+      - Bean's Show grass
+      - garden grass
+      - hedge maze grass
   ###########################
   # Item & Location Options #
   ###########################
