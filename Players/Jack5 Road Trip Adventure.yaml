@@ -1,0 +1,81 @@
+﻿name: Jack5RoadTrip{NUMBER}
+description: |-
+  Jack5's Road Trip Adventure player file
+
+  TODO: Add description
+game: Road Trip Adventure
+requires:
+  version: 0.6.7
+  game:
+    Road Trip Adventure: 0.1.0
+Road Trip Adventure:
+  ################
+  # Game Options #
+  ################
+  # Unchanged from the base configuration.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  area_unlock_mode:
+    # In RTA AP, in order to interact with anything in a town (enter houses, talk to cars, etc.), you must unlock the town first.
+    # In **Decorations** mode, you must obtain one of the garage decorations associated with that town to unlock it.
+    # Every town has 2. (A couple of towns lacking garage decorations use wallpapers instead.)
+    # In **Stamps** mode, 100 stamp items are added into the pool. Every 5 stamp items you get unlocks the next town.
+    # Unchanged from the base configuration to ensure variety.
+    decorations: 50
+    stamps: 0
+  remove_double_up_stamps:
+    # If using Decorations mode, enable this to combine NPC rewards and stamps that are received back-to-back into one location (e.g. Stamp 2, and many many others).
+    # Applies to roughly half of the stamps in the game.
+    # This cannot be enabled in Stamps mode, as it would bring the number of locations well below the number of items.
+    # Enabled to reduce the number of locations.
+    'false': 0
+    'true': 50
+  additional_progressive_part_tracks:
+    # Add additional progressive part tracks to the item pool. Defaults to 2, one for each of your teammates.
+    # These parts can also be used by you, or just sold for money at the Recycle Shop.
+    # Leaving this at 2 is recommended for Decorations mode.
+    # In Stamps mode, lowering this to 1 is worth considering. When set to 2 in Stamps mode, most cosmetic/filler items (horns, meters, etc.) will have to be removed from the item pool in order to make enough space. (If this is fine, leave at 2.)
+    # Setting to 0 is not recommended, as it makes finding part upgrades a bit rare.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 2.
+    # Unchanged from the base configuration due to using Decorations mode.
+    2: 50
+  prioritize_good_rewards_for_races:
+    # Set the percent chance that a race will be forced to have a Progression item. (Rolled separately for each race.)
+    # Before items are placed, a random number between 1 and 100 is rolled for each race.
+    # If the number is equal to or below the value selected here, the item will be guaranteed to be Progression.
+    # This provides more incentive to complete races, which require more skill and time than most stamps.
+    # Since this is rolled for *each* race, it is not a guarantee that a certain percentage of races will have Progression items - just that on average, they will.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    50: 50
+  prioritize_good_rewards_for_minigames:
+    # Set the percent chance that a minigame will be forced to have a progression item. (Rolled separately for each minigame.)
+    # Works the same way as the setting for races.
+    # Several minigames are not included due to lack of a meaningful challenge (notably Q's Rally, fishing, and the Figure 8 courses, since none of these have time limits).
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    25: 50
+  license_handling:
+    # Set how license items/locations should be handled.
+    # Standard: Licenses are awarded via Progressive License items found in the multiworld. License completions are locations.
+    # Vanilla: Force the license unlock items to be in their vanilla locations. (e.g. a Progressive License will always be found at Rank C completion, etc.)
+    # Remove: Start with all licenses. License completions are *not* locations.
+    # Unchanged from the base configuration.
+    standard: 50
+    vanilla: 0
+    remove: 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # Unchanged from the base configuration.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
