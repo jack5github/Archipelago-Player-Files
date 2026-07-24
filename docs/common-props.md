@@ -93,7 +93,7 @@ A list of dictionaries which define items that are shared with other player file
 
 (For examples of how `item_links` is used, refer to the [Archipelago Advanced YAML Guide](https://archipelago.gg/tutorial/Archipelago/advanced_settings_en#example).)
 
-- `name` - The name of the link. This should be a term that represents the items being shared (e.g. "Lasers", "Rods", etc.) but should not be too broad so as to overlap with an item or group name.
+- `name` - The name of the link, displayed in the Archipelago chat as the receiving player (limited to 16 characters). This should be a term that represents the items being shared (e.g. "Lasers", "Rods", etc.) but should not be too broad so as to overlap with an item or group name.
 - `item_pool` - A list of item or group names from the player file's world that should be shared among other player files with the link.
 - `local_items` - Item or group names from `item_pool` that are forced to be in the worlds of the player files with the link.
 - `replacement_item` - The name of the item that will stand in for vacant slots created by sharing items, or `null` to have the generator randomly pick a filler item.

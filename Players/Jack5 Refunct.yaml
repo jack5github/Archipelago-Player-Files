@@ -213,37 +213,7 @@ Refunct:
   local_items: []
   non_local_items:
     # Clusters are items that reveal platforms to turn into grass. These should be found in other worlds.
-    - Cluster 1
-    - Cluster 2
-    - Cluster 3
-    - Cluster 4
-    - Cluster 5
-    - Cluster 6
-    - Cluster 7
-    - Cluster 8
-    - Cluster 9
-    - Cluster 10
-    - Cluster 11
-    - Cluster 12
-    - Cluster 13
-    - Cluster 14
-    - Cluster 15
-    - Cluster 16
-    - Cluster 17
-    - Cluster 18
-    - Cluster 19
-    - Cluster 20
-    - Cluster 21
-    - Cluster 22
-    - Cluster 23
-    - Cluster 24
-    - Cluster 25
-    - Cluster 26
-    - Cluster 27
-    - Cluster 28
-    - Cluster 29
-    - Cluster 30
-    - Cluster 31
+    - Clusters
     # Grass is one of the items required for game completion. I tried setting this as a local item, however this caused Refunct to contain primarily grass over other world items. Because of this, I am using `plando_items` to specify platforms with grass, while all others will be found in other worlds.
     - Grass
   start_inventory:
@@ -253,7 +223,15 @@ Refunct:
   start_location_hints: []
   exclude_locations: []
   priority_locations: []
-  item_links: []
+  item_links:
+    # Share key resources between Refunct games when we play together.
+    - name: Refunct Grab Bag
+      item_pool:
+        - Abilities
+        - Clusters
+        - Cubes Bags
+      replacement_item: null
+      skip_if_solo: true
   plando_items:
     # TODO: Replace some of these with buttons
     # 10 hard-to-reach platforms are forced to give grass. The rest of the grass is found in other worlds. This number should not exceed 10, as it results in grass failing to be placed in the rest of the world.
