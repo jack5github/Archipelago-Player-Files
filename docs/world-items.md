@@ -39,15 +39,6 @@ For more information on the `item_links` and `plando_items` options, refer to **
 - *Rotations* - Unlocks the ability to rotate Tetris pieces. (Directly related to game completion.)
 - *Hold Slots* - Unlocks the ability to hold Tetris pieces.
 
-<!-- TODO: Add item groups for below game
-## FNAF World
-
-- Laser Switches
-- Tokens
-- Progressive Characters
-- Warps
--->
-
 ## Grapple Dog
 
 - *Cosmic Gadgets* - Gives one of four gadgets that are required to access the final boss. (Directly related to game completion.)
@@ -58,17 +49,6 @@ For more information on the `item_links` and `plando_items` options, refer to **
 ## Keymaster's Keep
 
 - *Magic Keys* - Gives access to new areas, revealing new trials to complete. (Directly related to game completion.)
-
-<!-- TODO: Add item groups for below game
-## The Legend of Zelda
-
-- Triforce Fragments
-- Swords
-- Bombs
-- Bow
-- Various other weapons
-- Junk items
--->
 
 ## Minecraft (Fabric)
 
@@ -109,30 +89,10 @@ For more information on the `item_links` and `plando_items` options, refer to **
 - *Items* - Spawns items in one's vicinity that, when picked up, often release another item.
 - *Traps* - Gives time-limited debuffs that hinder one's ability to play PEAK.
 
-<!-- TODO: Add item groups for below game
-## Pokémon Black & White
-
-- Poké Balls
-- Potions
-- Pokémon-held items
-- Badges
-- Junk items
--->
-
 ## Portal 2
 
 - *Puzzle Elements* - Unlocks puzzle elements that can be used to play Portal 2. (Directly related to game completion.)
 - *Cores* - Unlocks corrupted cores that can be used to beat Wheatley, the final boss. (Directly related to game completion.)
-
-<!-- TODO: Add item groups for below game
-## Ratchet & Clank 3
-
-- Infobots (Levels)
-- Weapons
-- Progressive Vid-Comics
-- Progressive Armour
-- Gadgets
--->
 
 ## R.E.P.O.
 
@@ -143,21 +103,6 @@ For more information on the `item_links` and `plando_items` options, refer to **
 ## Simon's Puzzle Collection
 
 - *Puzzles* - Unlocks the many randomly generated puzzles present in the game. (Directly related to game completion.)
-
-<!-- TODO: Add item groups for below game
-## The Simpsons: Hit & Run
-
-- Cars
-- Characters
-- Levels
-- Progressive abilities (attack, jump, e-brake, etc.)
--->
-
-<!-- TODO: Add item groups for below game
-## Totally Accurate Battle Simulator
-
-- Units
--->
 
 ## The Witness
 

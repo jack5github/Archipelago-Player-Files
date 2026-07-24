@@ -1,0 +1,385 @@
+﻿name: Jack5TS2{NUMBER}
+description: |-
+  Jack5's Toy Story 2: Buzz Lightyear to the Rescue player file
+
+  TODO: Add description
+game: Toy Story 2
+requires:
+  version: 0.6.7
+  game:
+    Toy Story 2: 2.1.1
+Toy Story 2:
+  ################
+  # Game Options #
+  ################
+  # Unchanged from the base configuration.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  ########
+  # Game #
+  ########
+  game_mode:
+    # How would you like to experience Toy Story 2?
+    # Open Mode has all of the levels at your disposal at the very start. Find the level unlocks to gain access to them!
+    # Linear Mode has you playing the game in order. Each area is fully unlocked after defeating a boss to allow you more options and to keep you from getting stuck. In this mode you have to fight every boss.
+    # Unchanged from the base configuration.
+    open: 50
+    linear: 0
+  skips:
+    # Determines the logic for certain checks.
+    # Easy is incredibly easy skips that anyone can do. They may require trial and error, but you won't have to try for too long.
+    # Hard is for the glitch hunters and rule breakers out there.
+    # Insane is for the most demanding tricks, on top of all Easy and Hard skips.
+    # Unchanged from the base configuration.
+    'off': 50
+    easy: 0
+    hard: 0
+    insane: 0
+  missing_toy_bundle_size:
+    # How the missing toys are RECEIVED.
+    # 1 = each toy arrives individually (five separate "Sheep" / "Soldier" / etc. items per level, the original behaviour).
+    # 5 = each level's toys arrive together as a single item (e.g. one "5 Sheep") that grants all five at once. The in-level toy CHECK locations are identical either way; only the received items change.
+    # Set to 5 so that when I see the missing toys in a level, I know that I am able to complete the missing toys objective for that level.
+    '1': 0
+    '5': 50
+  #######################
+  # Pizza Planet Tokens #
+  #######################
+  pizza_planet_token_pool:
+    # Determines how many Pizza Planet Tokens are in the item pool. Highly recommend adding more sanities the more tokens you add.
+    # You can define additional values between the minimum and maximum values. Minimum value is 30, maximum value is 99.
+    # Unchanged from the base configuration.
+    50: 50
+  #############
+  # Open Mode #
+  #############
+  starting_levels:
+    # NOTE: This does nothing if you didn't select Open Mode.
+    # How many levels would you like to start your game with?
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
+    # Unchanged from the base configuration.
+    1: 50
+  omit_airport_infiltration:
+    # NOTE: This does nothing if you didn't select Open Mode.
+    # Airport Infiltration has nothing going for it if you don't have Stomp. This makes it so you won't get it as a starting level.
+    # Enabled so that I always have something to do right from the start.
+    'false': 0
+    'true': 50
+  omit_elevator_hop:
+    # NOTE: This does nothing if you didn't select Open Mode.
+    # Elevator Hop has nothing going for it if you don't have Visor. This makes it so you won't get it as a starting level.
+    # Enabled so that I always have something to do right from the start.
+    'false': 0
+    'true': 50
+  goal_conditions:
+    # NOTE: This does nothing if you didn't select Open Mode.
+    # Determines what you need to save Woody.
+    # Defeating bosses feels like a necessary step in order to feel truly satisfied upon winning the game.
+    pizza_planet_tokens: 0
+    defeated_bosses: 0
+    level_unlock: 0
+    pizza_planet_tokens_and_defeated_bosses: 50
+    pizza_planet_tokens_and_level_unlock: 0
+    defeated_bosses_and_level_unlock: 0
+    pizza_planet_tokens_and_defeated_bosses_and_level_unlock: 0
+  final_showdown_token_gate:
+    # NOTE: This does nothing if you didn't select it as your game mode or goal condition.
+    # Determines how many Pizza Planet Tokens are needed for your goal. Selecting a higher number than your total pool will force the pool to a higher number.
+    # Note: a gate can never require more tokens than there are check locations to hold them. If it would, the gate is automatically lowered to fit so the seed still generates and stays winnable. The number of available locations depends on which sanities you enable, so turn on more sanities (Coinsanity, Lifesanity, Batterysanity, etc.) if you want higher gates to stick.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 99.
+    # Unchanged from the base configuration.
+    20: 50
+  defeated_bosses_required:
+    # NOTE: This does nothing if you didn't select it as your game mode or goal condition.
+    # Determines how many bosses you have to defeat to reach your goal.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 4.
+    # Reduced from 4 to be more in line with the experience of playing Spyro: A Hero's Tail.
+    3: 50
+  ###############
+  # Linear Mode #
+  ###############
+  # NOTE: These do nothing if you didn't select Linear Mode.
+  # Selecting a higher number than your total pool will force the pool to a higher number.
+  # Note: a gate can never require more tokens than there are check locations to hold them. If it would, the gate is automatically lowered to fit so the seed still generates and stays winnable. The number of available locations depends on which sanities you enable, so turn on more sanities (Coinsanity, Lifesanity, Batterysanity, etc.) if you want higher gates to stick.
+  bombs_away_token_gate:
+    # Determines how many Pizza Planet Tokens are needed to fight Bombs Away!
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 20.
+    # Unchanged from the base configuration.
+    1: 50
+  slime_time_token_gate:
+    # Determines how many Pizza Planet Tokens are needed to fight Slime Time.
+    # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 40.
+    # Unchanged from the base configuration.
+    5: 50
+  toy_barn_encounter_token_gate:
+    # Determines how many Pizza Planet Tokens are needed to fight Toy Barn Encounter.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 60.
+    # Unchanged from the base configuration.
+    10: 50
+  evil_emperor_zurg_token_gate:
+    # Determines how many Pizza Planet Tokens are needed to fight The Evil Emperor Zurg.
+    # You can define additional values between the minimum and maximum values. Minimum value is 15, maximum value is 80.
+    # Unchanged from the base configuration.
+    15: 50
+  linear_final_showdown_token_gate:
+    # Determines how many Pizza Planet Tokens are needed for your goal.
+    # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 99.
+    # Unchanged from the base configuration.
+    20: 50
+  ##########
+  # Sanity #
+  ##########
+  movesanity:
+    # Movesanity shuffles every single thing Buzz can do into the item pool, which means you START WITH NO MOVES and must find them as checks -- including Double Jump, Ledge Grab, and Pole Climb.
+    # Because almost every location needs those basic moves, you MUST pair this with other sanities (lifesanity, batterysanity, green_laser_sanity, rexsanity, hint_block_sanity, coinsanity) and/or more starting_levels so there are enough no-move locations at the start to place your first moves. If your settings are too sparse (e.g. Movesanity with no other sanities and a single starting level), generation will stop and tell you to enable more sanities or pick a LITE option.
+    # Movesanity LITE (Weapons) only shuffles Buzz's attack abilities: Laser, Spin, Stomp, and Visor. You still start with all movement moves.
+    # Movesanity LITE (Traversal) only shuffles Buzz's movement abilities: Double Jump, Pole Climb, Ledge Grab, Pole Vault, Push, and Rope Sliding. You still start with all attack abilities.
+    # Based on what the experience of playing this game is like upon entering the first level, Laser is a must and Double Jump is needed to prevent generation failures, so they have been added to the `start_inventory` options, while everything else will be fully randomised.
+    'off': 0
+    'on': 50
+    lite_weapons: 0
+    lite_traversal: 0
+  coinsanity:
+    # Coins send checks! They aren't individually id'd, it's based on the amount you gather in one go through a level. Keep that in mind when selecting your bundle amounts. You'll be gathering the same coins a lot. Your coins are also items that are sent to you based on your Coinsanity Received Bundle Size as well. Make Hamm proud and get him some coins!
+    # There are only about ~146 locations in the game without coinsanity. This has been enabled to bring that number closer to the ~250 goal.
+    'false': 0
+    'true': 50
+  coinsanity_checks_bundle_size:
+    # If Coinsanity is not turned on, this does nothing. Choose the amount coins needed per level to send checks.
+    # There are 10 levels with <= 100 coins each, and with a bundle size of 10, this amounts to <= 100 extra locations. The true final location amount is closer to ~234.
+    '1': 0
+    '5': 0
+    '10': 50
+    '15': 0
+    '20': 0
+    '25': 0
+    all: 0
+  coinsanity_received_bundle_size:
+    # If Coinsanity is not turned on, this does nothing. Choose the amount coins received.
+    # This needs to be increased from 5 so that there are enough empty slots to place the required items and have enough room left over for filler items when playing singleplayer. 10 is the absolute minimum to ensure successful generation, but doesn't leave enough room for filler items. At 20, 5 items are required in order to be able to collect all coins in a level.
+    '1': 0
+    '5': 0
+    '10': 0
+    '15': 0
+    '20': 50
+    '25': 0
+    '50': 0
+  lifesanity:
+    # All lives are checks now! That means lives will no longer grant you a life, but a check instead! They also don't respawn so play carefully!
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  batterysanity:
+    # All batteries are checks now! Batteries will still give health, but they won't respawn.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  green_laser_sanity:
+    # Green Lasers are checks now! But just like the other sanities, these won't respawn. Use them wisely!
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  rexsanity:
+    # Hey Buzz! Need a hint? Talking to Rex now gives checks!
+    # Enabled in order to increase the number of checks and prevent failing generation due to `movesanity` being set to `on`.
+    'false': 0
+    'true': 50
+  hint_block_sanity:
+    # Hints? Who needs them? I'd rather get a useful item! This turns all hint blocks into checks!
+    # Enabled in order to increase the number of checks and prevent failing generation due to `movesanity` being set to `on`.
+    'false': 0
+    'true': 50
+  ####################
+  # Traps and Filler #
+  ####################
+  filler_replaced_with_traps:
+    # Determines the percentage of filler items that will be replaced with traps.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Using the same random range as PEAK and Plants vs. Zombies, tested for my async runs with Zeroman95.
+    random-range-50-80: 50
+  cutscene_trap_weight:
+    # Hope you like Toy Story 2, because you're gonna be watching it a lot!
+    # Unchanged from the base configuration.
+    'off': 0
+    low: 50
+    medium: 0
+    high: 0
+  narrow_vision_trap_weight:
+    # I can't see! I can't see!
+    # Increased to `medium` to reduce the effectiveness of `cutscene_trap_weight`.
+    'off': 0
+    low: 0
+    medium: 50
+    high: 0
+  damage_buzz_trap_weight:
+    # Ouch!
+    # Increased to `medium` to reduce the effectiveness of `cutscene_trap_weight`.
+    'off': 0
+    low: 0
+    medium: 50
+    high: 0
+  freeze_buzz_trap_weight:
+    # Buzz must have run out of batteries!
+    # Increased to `medium` to reduce the effectiveness of `cutscene_trap_weight`.
+    'off': 0
+    low: 0
+    medium: 50
+    high: 0
+  invincible_enemies_trap_weight:
+    # I swear I hit him!
+    # Disabled as this would be more infuriating than fun.
+    'off': 50
+    low: 0
+    medium: 0
+    high: 0
+  dizzy_buzz_trap_weight:
+    # I don't feel so good...
+    # Increased to `medium` to reduce the effectiveness of `cutscene_trap_weight`.
+    'off': 0
+    low: 0
+    medium: 50
+    high: 0
+  one_life_filler_weight:
+    # How often 1 Life appears among the filler items.
+    # Unchanged from the base configuration.
+    'off': 0
+    low: 50
+    medium: 0
+    high: 0
+  extra_battery_filler_weight:
+    # How often Extra Battery appears among the filler items.
+    # Unchanged from the base configuration.
+    'off': 0
+    low: 0
+    medium: 50
+    high: 0
+  invincible_buzz_filler_weight:
+    # How often Invincible Buzz appears among the filler items.
+    # Grants Buzz 15 seconds of invincibility. Can't touch this!
+    # Unchanged from the base configuration.
+    'off': 0
+    low: 50
+    medium: 0
+    high: 0
+  determination_filler_weight:
+    # How often "Determination to Save Woody" appears among the filler items. It does absolutely nothing when received — pure flavor filler. Set to 'off' if you'd rather never see it. Defaults high so seeds heavy on useful filler get diluted with something that gives no advantage.
+    # Unchanged from the base configuration.
+    'off': 0
+    low: 0
+    medium: 0
+    high: 50
+  local_filler:
+    # Force THIS slot's own dynamic filler (1 Life, Extra Battery, Invincible Buzz, Determination to Save Woody) to be placed in your own world instead of being sent to other players. Handy when this game produces a lot of filler and you'd rather find more of it yourself, or when sharing a multiworld with games that have far fewer locations. Traps are unaffected and still travel normally.
+    # Unchanged from the base configuration, as filler items sound more useful when I discover them in real-time.
+    'false': 0
+    'true': 50
+  #######
+  # QOL #
+  #######
+  skip_cutscenes:
+    # Sets all the cutscene flags to 'watched' when starting the game. This does not bypass the Cutscene Trap.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  disable_falling_animation:
+    # Makes it so Buzz always lands on his feet!
+    # Having experienced the falling animation for myself, I definitely could do without it.
+    'false': 0
+    'true': 50
+  auto_save:
+    # Auto saves your game to slot 10 every time you go to the map. Highly recommend turning this on if you're worried about game overs. They'll send you back to the title screen...
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  disc_launcher_fill_pockets:
+    # When you pick up Disc Launchers they will now go to the maximum you can hold!
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  start_every_level_with_full_health:
+    # I feel like this should have been in the vanilla game!
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  never_game_over:
+    # No longer forces the game to reset on game over. Instead if you're one hit away with no lives, you're booted back to the map with 5 lives. Highly recommended for Coinsanity!
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  on_screen_item_feed:
+    # Show Archipelago item activity on-screen (top-left) in BizHawk.
+    # Off shows nothing. Sent shows checks you send out. Received shows items you get. Both shows everything. Pressing Select will cycle this feature's modes.
+    # Unchanged from the base configuration.
+    'off': 0
+    sent: 0
+    received: 0
+    both: 50
+  ####################
+  # Music Randomizer #
+  ####################
+  music_randomizer_mode:
+    # Normal: Randomizes the game's music one to one! Note, minigame, miniboss, title screen, and map aren't randomized.
+    # Chaos: You never know what you're going to get! You could be listening to the Game Over music on loop for all I know!
+    # Oops All Bangers: What's your favorite song? What if you heard that for every single level in the game?
+    # Unchanged from the base configuration.
+    'off': 50
+    normal: 0
+    chaos: 0
+    oops_all_bangers: 0
+  oops_all_bangers_song:
+    # Better choose wisely, you're gonna be hearing this for a while.
+    # Unchanged from the base configuration.
+    andys_house: 0
+    andys_neighborhood: 0
+    bombs_away: 0
+    construction_yard: 0
+    alleys_and_gullies: 0
+    slime_time: 0
+    als_toy_barn: 0
+    als_space_land: 0
+    toy_barn_encounter: 0
+    elevator_hop: 0
+    als_penthouse: 0
+    the_evil_emperor_zurg: 0
+    airport_infiltration: 0
+    tarmac_trouble: 0
+    prospector_showdown: 0
+    miniboss_theme: 0
+    minigame_theme: 0
+    game_over: 0
+    credits: 0
+    youve_got_a_friend_in_me: 50
+    title_screen: 0
+    level_complete: 0
+  skip_song:
+    # Man this song sucks. Wouldn't it be nice if you could skip it? Well now you can! If you're in a level, you can hold Triangle and press L2 and R2 to change the song! Unless you're in Oops All Bangers Mode. You dug your grave and now you have to lay in it.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  ##############
+  # Death Link #
+  ##############
+  death_link:
+    # If Buzz dies you kill everyone else that has Death Link on and vice versa. Highly recommended to turn on Auto Save if you play with Death Link.
+    # Enabled just to test the waters, may turn this off if it hurts too much.
+    'false': 0
+    'true': 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items: []
+  start_inventory:
+    # See `movesanity`.
+    Progressive Laser: 1
+  start_inventory_from_pool:
+    # See `movesanity`.
+    Double Jump: 1
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []

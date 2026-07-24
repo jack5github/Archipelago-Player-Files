@@ -143,9 +143,16 @@ Autopelago:
     # What messages the rat can say when it first realizes that it can complete its goal.
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
-    # Unchanged from the base configuration.
-    # TODO: Add custom messages
+    # Below are the default messages:
     - That's it! I have everything I need! The goal is in sight!
+    # And below are some custom messages:
+    - I'm gonna love you, Secret Cache! I'm running like the wind, soon this run will give in! # Bloons TD 6
+    - This is the end! Time for the obligatory and unsatisfyingly easy final check! # Grapple Dog
+    - This is it, I can see the peak! Hold on, my wife and kids, 'cause here I come! # PEAK
+    - No moron is going to stand in my way now! Time to send this run to the moon! # Portal 2
+    - All this working for the Taxman has me beat! I'm finally putting an end to this, and he can't stop me! # R.E.P.O.
+    - With all your lasers, I have become death, destroyer of worlds. This run is surely over. # The Witness
+    - Booyah! We've been rolling straight Yahtzees and now it's time for the final check! # Yacht Dice
   msg_enter_bk:
     # What messages the rat can say when it first sees that no further location checks are in logic.
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
@@ -210,9 +217,15 @@ Autopelago:
     # What messages the rat can say to celebrate victory.
     # Specify the message itself, or with an optional weight to have that message appear more often (default weight is 1).
     # If you want to disable rat chat, then you're in the wrong place. Do that from the settings menu in the game client itself.
-    # Unchanged from the base configuration.
-    # TODO: Add custom messages
+    # Below are the default messages:
     - Yeah, I did it! er... WE did it!
+    # And below are some custom messages:
+    - Rats, we're rats, we're the rats! We pray at night, we stalk at night, we're the rats! # Autopelago
+    - And there you go everybody... Ace of Fours! The best hand. # Balatro / Portal 2
+    - It's ours at last... world domination. And we didn't even have to bring out the nuclear weapons! # Civilization V
+    - All those Tetris pieces... all those blue triangles... it's all come to this. Good job guys. # Dracomino
+    - Phew! It never felt so good to unleash our virus and start the next epidemic! # Nodebuster
+    - Aaahh... sweet, sweet relief. Whelp, time to touch grass! # Refunct
   ###########################
   # Item & Location Options #
   ###########################

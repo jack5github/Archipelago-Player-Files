@@ -28,7 +28,7 @@ Keymaster's Keep:
     # Area Domination: Acquire conquest medallions by completing all trials in X% of keep areas and escape the Keymaster's Keep
     # Rather than having the entire run hinge on a final challenge (which we've never played) or require a certain number of keys, require a certain number of areas to be completed.
     # Jack5 and Zeroman95 have played Keymaster's Keep many times, and their preferred goals are Magic Key Heist and Area Domination. Because there is a time and a place for both, and they are equally good when compared to each other, there is a random chance that either will be selected. The Keymaster's Challenge is not desired due to the game hinging on a single area.
-    keymasters_challenge: 0 # TODO: Play this
+    keymasters_challenge: 0
     magic_key_heist: 50
     area_domination: 50
   artifacts_of_resolve_total:

@@ -160,10 +160,9 @@ ChecksMate:
     # Off: No upgrades; only standard pawns.
     # Pool: Upgraded pieces are added as one extra option in the random pawn pool. The generator guards against picking too many upgrades and leaving you short on overall pawn count.
     # Max: Prefer upgrades whenever possible, falling back to a regular pawn when adding another upgrade would prevent reaching your earned pawn count.
-    # Unchanged from the base configuration.
-    # TODO: Try changing this
+    # Set to be a 50/50 chance, as I'm not too sure about how this might play out in-game and would prefer the variety.
     'off': 50
-    pool: 0
+    pool: 50
     max: 0
   minor_piece_limit_by_type:
     # How many of any given type of minor piece you might play with. If set to 1, you will never start with more than 1 Knight, nor 1 Bishop, but you may have both 1 Knight and 1 Bishop. If set to 0, this setting is disabled.

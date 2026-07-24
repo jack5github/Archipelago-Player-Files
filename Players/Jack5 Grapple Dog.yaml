@@ -2,7 +2,7 @@
 description: |-
   Jack5's Grapple Dog player file
 
-  TODO: Add description
+  Grapple Dog is a game with very restrictive progression, so this player file has been engineered to ensure that the progression is more natural as a casual player while still being mostly random. There are more levels available from the start, certain movement abilities are randomised while others aren't, and the only requirement is to beat the final boss. This does have the side effect of creating a lot of useless 'Gem' items.
 game: Grapple Dog
 requires:
   version: 0.6.6
