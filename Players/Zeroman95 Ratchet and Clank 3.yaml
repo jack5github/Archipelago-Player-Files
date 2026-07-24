@@ -34,8 +34,8 @@ Ratchet and Clank 3:
     start_at_trailer: 0
 
   bolt_and_xp_multiplier:
-    # Set this to x1 for now, not sure if I will increase this or not. If so increase it to x2 because NewGame+ stuff is in this AP.
-    x1: 99
+    # Increased to 2x to balance Bolts filler item
+    x2: 99
 
   one_hp_challenge:
     # Unchanged
@@ -101,11 +101,11 @@ Ratchet and Clank 3:
     Wrench Only Trap: 1
 
   filler_weight:
-    # Bolts and Jackpot are finally useful. Turning those up and turning Player EXP down.
-    Bolts: 10
+    # Turning off Bolts but adding Weapon Level-Up
+    Bolts: 0
     Jackpot: 10
     Nanotech EXP: 5
-    Weapon Level-Up: 0 # (5) UNUSED DISABLED PROGRESSIVE WEAPONS
+    Weapon Level-Up: 5
 
   weapon_vendors:
     # Unchanged
@@ -245,7 +245,7 @@ Ratchet and Clank 3:
     trooper: 12
     robo: 12
 
-  exclude_locations: [ 'Unstable' ]
+  exclude_locations: ['Unstable']
 
   local_items: []
 
