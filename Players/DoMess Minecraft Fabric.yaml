@@ -77,10 +77,10 @@ Minecraft Fabric:
     # both_bosses - Goal when the Ender Dragon and Wither is defeated
     # advancements_only - Goal when you collect a certain amount of Advancements and/or Items
     # ruby_hunt - Goal when a certain amount of rubies are collected (McGuffin hunt)
-    ender_dragon: 50
+    ender_dragon: 0
     wither: 0
     both_bosses: 0
-    advancements_and_items_only: 0
+    advancements_and_items_only: 50
     ruby_hunt: 0
 
   advancements_required_for_goal:
@@ -92,7 +92,8 @@ Minecraft Fabric:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 120
-    25: 50
+    ## DoMess: v1.1: changed default from 25:50 >>> 30:40
+    30: 40
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
@@ -147,8 +148,9 @@ Minecraft Fabric:
   #####################
   itemsanity:
     # Enables "Itemsanity" which causes items obtainable in Survival to be checks
-    'false': 0
-    'true': 50
+    ## DoMess: v1.1: changed default from true to false 
+    'false': 50
+    'true': 0
 
   items_required_for_goal:
     # Determines the number of Items needed in order to beat the game! You will need to gather this many unique items in
@@ -162,7 +164,8 @@ Minecraft Fabric:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 1142
-    0: 50
+    ## DoMess: v1.1: changed default 0:50 >>> 5:25 # note: not active unless itemsanity is on, which might return in future
+    5: 25
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
@@ -175,7 +178,8 @@ Minecraft Fabric:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 98
-    90: 50
+    ## DoMess: v1.1: changed default 90:50 >>> 95:90
+    95: 90
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
@@ -197,8 +201,19 @@ Minecraft Fabric:
     #     Slabs - Slabs (such as Oak Slabs, Stone Slabs, etc.)
     #     Stairs - Stairs (such as Oak Stairs, Stone Stairs, etc.)
     #     Walls - Walls, Fences, and Fence Gates (Oak Fence, Stone Wall, etc.)
-    ##     DoMess: removed flowers from the default
-    [ 'Mob Heads', 'Trims', 'Rare Ores', 'Discs', 'Netherite Gear', 'Sherds' ]
+    ##     DoMess: v1.1: readded flowers, and everything
+    # [ 'Discs', 'Dyed Items', 'Flowers', 'Rare Ores', 'Mob Heads', 'Netherite Gear', 'Trims', 'Sherds', 'Slabs', 'Stairs', 'Walls' ]
+    - Discs
+    - Dyed Items
+    - Flowers
+    - Rare Ores
+    - Mob Heads
+    - Netherite Gear
+    - Trims
+    - Sherds
+    - Slabs
+    - Stairs
+    - Walls
 
   empty_fill_percentage:
     # Replaces a certain amount of Non-Trap Junk Items with Items that do nothing.
@@ -207,7 +222,8 @@ Minecraft Fabric:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 100
-    25: 50
+    ## DoMess: v1.1: changed default 25:50 >>> 50:75
+    50: 75
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
@@ -216,6 +232,10 @@ Minecraft Fabric:
   ######################
   # Difficulty Options #
   ######################
+
+  ## DoMess: v1.1: before these requirements were customised a little to not need everything,
+  #                now they will need everything
+
   required_before_nether:
     # Makes it so certain Items are required in Logic before Nether Access
     #
@@ -228,7 +248,7 @@ Minecraft Fabric:
     #     "Jump"
     #     "Sprint"
     #     "Beds"
-    [ 'Iron Weapons', 'Jump', 'Bow' ]
+    [ 'Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds' ]
 
   required_before_bosses:
     # Makes it so certain Items are required in Logic before you need
@@ -243,7 +263,7 @@ Minecraft Fabric:
     #     "Jump"
     #     "Sprint"
     #     "Beds"
-    [ 'Iron Weapons', 'Bow', 'Sprint', 'Jump', 'Beds', 'Iron Armor' ]
+    [ 'Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds' ]
 
   required_before_raids:
     # Makes it so certain Items are required in Logic before you need
@@ -258,7 +278,7 @@ Minecraft Fabric:
     #     "Jump"
     #     "Sprint"
     #     "Beds"
-    [ 'Iron Weapons', 'Jump', 'Sprint', 'Iron Weapons', 'Iron Armor' ]
+    [ 'Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds' ]
 
   keep_inventory:
     # Prevents you from dropping your items when you die!
@@ -276,7 +296,8 @@ Minecraft Fabric:
     #     "Jump" - Removes the ability to jump, and adds Jumping to the Item pool.
     #     "Sprint" - Removes the ability to run, and adds Sprint to the Item pool.
     #     "Swim" - Removes the ability to enter water, and adds Swim to the Item pool.
-    [ 'Chests' ]
+    ## DoMess: v1.1: Removed chests, added Sprint & Swim
+    [ 'Sprint', 'Swim' ]
 
   time_saving_options:
     # Decrease Wait times or Increase likelihood for various events that can occur in the game
@@ -297,7 +318,8 @@ Minecraft Fabric:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 100
-    20: 50
+    ## DoMess: v1.1: changed default 20:50 >>> 0:25
+    0: 25
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
@@ -305,79 +327,90 @@ Minecraft Fabric:
 
   reverse_controls_trap_weight:
     # Likelihood of a receiving a trap which causes WASD, Shift, Jump, Break, and Place to Swap for a short duration
-    none: 0
-    low: 0
-    medium: 50
+    ## DoMess: v1.1: default changed from medium >>> none or low
+    none: 50
+    low: 50
+    medium: 0
     high: 0
 
   inverted_mouse_trap_weight:
     # Likelihood of a receiving a trap which causes the Mouse to Invert for a short duration
+    ## DoMess: v1.1: default changed from medium >>> low or medium
     none: 0
-    low: 0
+    low: 50
     medium: 50
     high: 0
 
   ice_trap_weight:
     # Likelihood of a receiving a trap which causes all blocks to become slippery for a short duration
+    ## DoMess: v1.1: default changed from medium >>> medium or high
     none: 0
     low: 0
     medium: 50
-    high: 0
+    high: 50
 
   random_effect_trap_weight:
     # Likelihood of a receiving a trap which applies a random Negative Status Effect
+    ## DoMess: v1.1: default changed from medium >>> medium or high
     none: 0
     low: 0
     medium: 50
-    high: 0
+    high: 50
 
   stun_trap_weight:
     # Likelihood of a receiving a trap that temporarily stops movement of the player
+    ## DoMess: v1.1: default changed from medium >>> high
     none: 0
     low: 0
-    medium: 50
-    high: 0
+    medium: 0
+    high: 50
 
   tnt_trap_weight:
     # Likelihood of a receiving a trap that spawns a block of lit TNT on the player's position
-    none: 0
+    ## DoMess: v1.1: changed default from medium to none
+    none: 50
     low: 0
-    medium: 50
+    medium: 0
     high: 0
 
   teleport_trap_weight:
     # Likelihood of a receiving a trap that Teleports the player similar to Chorus Fruit
+    ## DoMess: v1.1: changed default from medium >>> medium or high
     none: 0
     low: 0
     medium: 50
-    high: 0
+    high: 50
 
   bee_trap_weight:
     # Likelihood of a receiving a trap that Spawns 6 angry bees near the player
+    ## DoMess: v1.1: default changed from medium >>> low or medium
     none: 0
-    low: 0
+    low: 50
     medium: 50
     high: 0
 
   literature_trap_weight:
     # Likelihood of a receiving a trap that Opens Literature Pop-Ups
+    ## DoMess: v1.1: default changed from medium >>> medium or high
     none: 0
     low: 0
     medium: 50
-    high: 0
+    high: 50
 
   ######################
   # World Link Options #
   ######################
   deathlink_enabled:
     # Enable DeathLink
-    'false': 50
-    'true': 0
+    ## DoMess: v1.1: Enabled DeathLink
+    'false': 0
+    'true': 50
 
   traplink_enabled:
     # Enable TrapLink
-    'false': 50
-    'true': 0
+    ## DoMess: v1.1: Enabled TrapLink
+    'false': 0
+    'true': 50
 
   ###############
   # Mod Support #
@@ -396,11 +429,27 @@ Minecraft Fabric:
   ###########################
   local_items:
     # Forces these items to be in their native world.
-    []
+    ## DoMess: v1.1:
+    # - Added Tools, Weapons, Smelting, Armor
+    - "Progressive Tools"
+    - "Progressive Weapons"
+    - "Progressive Smelting"
+    - "Progressive Armor"
 
   non_local_items:
     # Forces these items to be outside their native world.
-    []
+    ## DoMess: v1.1:
+    # - Added Sleeping
+    # - Added Other Crafting Stations
+    # - Added Bucket, Flint & Steel, Resource Compacting
+    # - Added Sprint, Swim
+    - "Sleeping"
+    - "Other Crafting Stations"
+    - "Bucket Recipes"
+    - "Flint and Steel Recipes"
+    - "Resource Compacting Recipes"
+    - "Sprint"
+    - "Swim"
 
   start_inventory:
     # Start with the specified amount of these items. Example: "Bomb: 1"
@@ -408,15 +457,111 @@ Minecraft Fabric:
 
   start_hints:
     # Start with these item's locations prefilled into the ``!hint`` command.
-    []
+    ## DoMess: v1.1:
+    # - Added Tools, Weapons, Smelting, Armor
+    # - Added Sleeping
+    # - Added Other Crafting Stations
+    # - Added Bucket, Flint & Steel, Resource Compacting
+    - "Progressive Tools"
+    - "Progressive Weapons"
+    - "Progressive Smelting"
+    - "Progressive Armor"
+    - "Other Crafting Stations"
+    - "Bucket Recipes"
+    - "Flint and Steel Recipes"
+    - "Resource Compacting Recipes"
 
   start_location_hints:
     # Start with these locations and their item prefilled into the ``!hint`` command.
-    []
+    ## DoMess: v1.1:
+    # - Added Sleeping, Sprint, Swim
+    - "Sleeping"
+    - "Sprint"
+    - "Swim"
 
   exclude_locations:
     # Prevent these locations from having an important item.
-    []
+    ## DoMess: v1.1: 
+    # - Excluded End Advancements
+    # - Excluded some Nether Advancements
+    # - Excluded some Adventure Advancements
+    # - Excluded some Husbandry Advancements
+    # - Excluded Minecraft -> Stronghold related advancements
+
+    # Minecraft
+    - "Eye Spy"
+    - "The End?"
+
+    # Nether Dimension
+    - "A Furious Cocktail" # have all 17 potion effects, no
+    - "How Did We Get Here?" # have all 34 status effects, no no no
+    - "Bring Home the Beacon" # need ore blocks + nether star +> wither
+    - "Beaconator" # even worse than above
+    - "Hot Tourist Destinations" # visit all biomes
+    - "Cover Me in Debris" # full netherite
+    - "Uneasy Alliance" # bring ghast to overworld, then kill it
+    - "Subspace Bubble" # travel 875 blocks in the nether, then portal into the overworld
+    - "Feels Like Home" # travel 50 blocks on a Strider in the Nether
+
+    # End Dimension
+    - "Free the End"
+    - "The Next Generation"
+    - "Great View From Up Here"
+    - "The City at the End of the Game"
+    - "Remote Getaway"
+    - "The End... Again..."
+    - "Sky's the Limit"
+    - "You Need a Mint"
+
+    # Adventure
+    - "Smithing with Style" # Apply these smithing templates at least once: Spire, Snout, Rib, Ward, Silence, Vex, Tide, Wayfinder
+    - "Very Very Frightening" # Strike a villager with lightning
+    - "Surge Protector" # very specific conditions requiring a villager
+    # - "Careful Restoration" # build a decorated pot with 4 pottery sherds
+    - "It Spreads" # Kill a mob near a skulk catalyst
+    # - "Caves & Cliffs" # Fall from world height, and survive at world floor Y = -59
+    - "Two Birds, One Arrow" # kill 2 phantoms with a piercing arrow, no
+    - "Arbalistic" # kill 5 unique mobs with 1 crossbow shot, no
+    - "Sneak 100" # deep dark sneak near those blocks with ears
+    - "Monsters Hunted" # kill 41 unique hostile mobs
+    # - "Is It a Bird?" # look at a parrot through spyglass
+    - "Postmortal" # use an undying totem to cheat death
+    - "Adventuring Time" # explore every biome
+    - "Is It a Plane?" # look at the Ender Dragon through spyglass
+    - "Sound of Music" # play music in a jukebox while in the Meadows biome
+    # - "The Power of Books" # read the power signal of a Chiseled Bookshelf with a Comparator
+    # - "Is It a Balloon?" # Look at a ghast through a spyglass
+    - "Crafting a New Look" # Craft a trimmed armor at a Smithing Table
+    # - "A Throwaway Joke" # Hit a mob with a thrown trident
+    # - "Sticky Situation" # Collide on a vertical side of a honey block while falling.
+    # - "Ol' Betsy" # Shoot a crossbow
+
+    # Husbandry
+    - "You've Got a Friend in Me" # allay
+    - "With Our Powers Combined!" # all 3 froglight blocks in inventory
+    - "Whatever Floats Your Goat!" # boat + goat = fun! no, not really
+    # - "Best Friends Forever"
+    # - "Glow and Behold!"
+    - "When the Squad Hops into Town" # get all frog variants on a leash, can be individually done
+    # - "Fishy Business" # go fishing! just catch a fish
+    - "Two by Two" # Breed all the animals! all 26 of them!!!
+    # - "Tactical Fishing" # Catch a fish, using a Water Bucket
+    - "Little Sniffs" # Feed Torchflower Seeds to a Snifflet (baby Sniffer) 
+    - "Total Beelocation" # move a beehive with 3 or more bees inside
+    - "Bukkit Bukkit" # use a water bucket on a tadpole
+    # - "Wax Off" # scrape wax off a copper block
+    - "Smells Interesting" # obtain a Sniffer Egg
+    - "Serious Dedication" # have a Netherite Hoe in inventory
+    - "Planting the Past" # plant any sniffer seed
+    # - "A Seedy Place" # Plant a seed
+    # - "The Cutest Predator" # catch an axolotol with a Water Bucket
+    - "Birthday Song" # allay drops cake at a noteblock
+    # - "Wax On" # apply honeycomb to a Copper block
+    - "A Balanced Diet" # eat all 40 things avaliable
+    # - "Bee Our Guest" # collect honey without angering the bees
+    - "The Healing Power of Friendship!" # axolotol fights for you and wins
+    # - "The Parrots and the Bats" # breed 2 animals together, once
+    - "A Complete Catalogue" # tame all cat variants
 
   priority_locations:
     # Prevent these locations from having an unimportant item.
