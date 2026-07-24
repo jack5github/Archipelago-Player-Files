@@ -118,6 +118,14 @@ Refunct:
 
   priority_locations: []
 
-  item_links: []
+  item_links:
+    # Added from Jack5 Refunct YAML
+    - name: Refunct Grab Bag
+      item_pool:
+        - Abilities
+        - Clusters
+        - Cubes Bags
+      replacement_item: null
+      skip_if_solo: true
 
   plando_items: []
