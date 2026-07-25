@@ -1,0 +1,19 @@
+# Tried Games
+
+This document lists the Archipelago games that we have tried setting up or playing for ourselves, but found in some way to be unenjoyable. *Italics indicate potential reconsideration.*
+
+## Jack5
+
+- **Baba Is You** - The game itself is already very difficult enough due to its puzzle solutions being very obtuse. Add on top of that strict Archipelago logic rules that are prone to failing generation, and you have a recipe for a bad game.
+- **Bloons TD 6** - This APworld is all about beating maps on different difficulties to unlock new items, which takes far too much time even without Archipelago. The game is also highly sensitive to being modded, so I'd rather not.
+- **CartogrAP** - This game can be described as most like FNAF World, except there are no RPG battles and every walkable tile counts as a location. This has the unfortunate side effect of producing ~1000 locations, which is far too much given our preference for ~300 location APworlds. *If the game is updated with an option to reduce this count, I will reconsider playing it.*
+- **Dark Cloud** - Does not support Linux. *Will reconsider when Linux support is added.*
+- **Dicey Dungeons** - This is already a hard enough game on its own, throwing difficult enemies at you when you're already having a hard time. Also, I have been unhappy with the way the APworld has been developed, and I don't think it will be fixed even if it were to be fully stable and feature-complete.
+- **Elementipelago** - This is a Doodle God clone, however it lacks one thing that makes Doodle God enjoyable, that being that the chemical compound names make sense. It is theoretically possible to make this so by forking the game and adding a local Ollama AI, however with my lacking experience in coding and the general sentiment towards AI, I don't think this is a smart move right now. *I will hold onto my player file for it regardless.*
+- **Funi Raccoon Game** - A really promising looking APworld, but the game is simply too expensive. *Still want it though.*
+- **Garry's Mod (apAdventure)** - This APworld is highly dependent on the map configs it is provided. At the time of writing, it only comes with 6 map groups, which max out at ~50 locations. *Will reconsider when more map groups are added, official or otherwise.*
+- **JS Paint** - With the way that my hands are, it's not a smart idea for me to play this game that involves a lot of drawing with the mouse, not to mention the game feels buggy too.
+- **Lego Star Wars** - There is FAR TOO MUCH content in this APworld for me to get any reasonable amount of progress in it.
+- **Minecraft Fabric** - I have a strange relationship with Minecraft where I like the concept of it, but find the survival and crafting aspects of it to be frustrating, to the point where I cannot play it for more than a few days at a time. Even with this APworld's advancement (mission) focus which I do like, it is simply too hard for me to stay motivated when playing Minecraft. *Holding onto this one for reference.*
+- **SULFUR** - This game is a roguelike FPS. Although the idea of it is enticing, I was hoping that the APworld would make the late-game more of a power trip, but it sadly doesn't and doesn't plan to either, making this nothing more than a slog.
+- **wikipelago** - This is essentially Wikipedia: The Game but as an APworld. There is barely any content in it, and the game itself is rather buggy.
