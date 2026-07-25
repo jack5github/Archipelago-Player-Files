@@ -78,20 +78,22 @@ Terraria:
     # Primordial Wyrm and Boss Rush are accessible relatively early, so consider "Items" or
     # "Locations" accessibility to avoid getting stuck on the goal.
     mechanical_bosses: 50
-    calamitas_clone: 0
     plantera: 0
     golem: 0
     empress_of_light: 0
     lunatic_cultist: 0
-    astrum_deus: 0
     moon_lord: 0
+    boss_rush: 0
+
+    # Calamity Mod
+    calamitas_clone: 0
+    astrum_deus: 0
     providence_the_profaned_goddess: 0
     devourer_of_gods: 0
     yharon_dragon_of_rebirth: 0
     zenith: 0
     calamity_final_bosses: 0
     primordial_wyrm: 0
-    boss_rush: 0
 
   early_achievements:
     # Adds checks upon collecting early Pre-Hardmode achievements. Adds many sphere 1 checks.
@@ -117,8 +119,7 @@ Terraria:
   fill_extra_checks_with:
     # Applies if you have achievements enabled. "Useful Items" helps to make the early game less grindy.
     # Items are rewarded to all players in your Terraria world.
-    ## DoMess: changed default from 0:50 >>> 50:50
-    coins: 50
+    coins: 0
     useful_items: 50
 
   death_link:
