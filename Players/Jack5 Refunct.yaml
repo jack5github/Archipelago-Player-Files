@@ -233,7 +233,6 @@ Refunct:
       replacement_item: null
       skip_if_solo: true
   plando_items:
-    # TODO: Replace some of these with buttons
     # 10 hard-to-reach platforms are forced to give grass. The rest of the grass is found in other worlds. This number should not exceed 10, as it results in grass failing to be placed in the rest of the world.
     - items:
         Grass: true

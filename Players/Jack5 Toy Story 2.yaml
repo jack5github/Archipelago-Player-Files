@@ -236,10 +236,10 @@ Toy Story 2:
     high: 0
   dizzy_buzz_trap_weight:
     # I don't feel so good...
-    # Increased to `medium` to reduce the effectiveness of `cutscene_trap_weight`.
-    'off': 0
+    # Disabled because all this does is freeze Buzz for 1 second.
+    'off': 50
     low: 0
-    medium: 50
+    medium: 0
     high: 0
   one_life_filler_weight:
     # How often 1 Life appears among the filler items.

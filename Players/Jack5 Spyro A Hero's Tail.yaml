@@ -138,16 +138,16 @@ requires:
     # This option is only used if you have shop randomization on, and lets you limit how much of each area's gems you need to collect. For example, a value of 50 means logic will expect you to always collect approximately 50% of accessible gems. The amount you are expected to have is visible on the pause screen. ***Note that Blink minigames are separately decided below with blink_gems.***
     # This option contributes to determining your shop item prices. Moneybags always offers your first shop item for free. Inflation has hit the Dragon Kingdom strong, and he thinks he'll get more customers in by offering a loss-leader.
     # If you'd like to calculate shop prices yourself, the formula is below, or you can check in-game. For more info, see the project's README.
-    # ********************************
-    # FORMULA INFO (for the math nerds
-    # ********************************
+    # *********************************
+    # FORMULA INFO (for the math nerds)
+    # *********************************
     # non_blink_gems = 122,429 * gem_collection%, rounded down
     # blink_gems = 20,028 * blink_gems%, rounded down
     # base_shop_price = (non_blink_gems + blink_gems) / (number of shop items - 1), rounded down
     # Number of shop items is -1 because the first item is always free.
     # All following prices are base_shop_price * n, for all n items, except the final item which is (non_blink_gems + blink_gems) which adds back in all rounding down.
     # Example: 60 for gem_collection and 40 for blink_gems, on a seed with 18 shop items, would give prices of 4,792 -> 9,584 -> ... -> 81,468.
-    # ********************************
+    # *********************************
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
     # TODO: Change this after playing once to reflect the old shop price settings.
     # Unchanged from the base configuration.
