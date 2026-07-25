@@ -46,14 +46,14 @@ Refunct:
     green_cubes_bag: 99
     never: 0
 
-  number_of_minigames: # No Mini-Games please.
-    0: 99
+  number_of_minigames: # Set same as Jack5 Refunct YAML
+    random-range-1-7: 99
 
-  nerf_minigame_checks: # Unchanged (Mini-Games are set to 0)
-    'false': 50
-    'true': 0
+  nerf_minigame_checks: # Turned on to reduce amount of important checks in Minigames
+    'false': 0
+    'true': 50
 
-  number_of_unlocks_per_minigame: # Unchanged (Mini-Games are set to 0)
+  number_of_unlocks_per_minigame: # Unchanged
     1: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
@@ -61,20 +61,20 @@ Refunct:
     random-range-1-2: 0 # random value between 1 and 2
 
   minigames_likeliness: # Unchanged (Mini-Games are set to 0)
-    Block Blub Minigame: 2
-    Block Brawl Minigame: 5
-    Button Galore Minigame: 2
+    Block Blub Minigame: 1
+    Block Brawl Minigame: 0
+    Button Galore Minigame: 1
     Climb Chaos Minigame: 1
-    Climb Line Minigame: 1
-    Climb Narrow Minigame: 1
+    Climb Line Minigame: 0
+    Climb Narrow Minigame: 0
     Climb Spiral Minigame: 1
-    Clique: 1
-    Funny Bridge Game Minigame: 1
-    OG Randomizer Minigame: 5
-    Rando Mountain Minigame: 5
-    Refunct Mountain Minigame: 2
-    Seeker Minigame: 2
-    Vanilla Minigame: 2
+    Clique: 0
+    Funny Bridge Game Minigame: 0
+    OG Randomizer Minigame: 1
+    Rando Mountain Minigame: 0
+    Refunct Mountain Minigame: 0
+    Seeker Minigame: 1
+    Vanilla Minigame: 1
 
   traps: # Add all unique traps.
     none: 0
