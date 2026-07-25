@@ -168,9 +168,9 @@ Toy Story 2:
     '50': 0
   lifesanity:
     # All lives are checks now! That means lives will no longer grant you a life, but a check instead! They also don't respawn so play carefully!
-    # Unchanged from the base configuration.
-    'false': 50
-    'true': 0
+    # Considering that lives are meaningless given `never_game_over` is enabled, it makes more sense for these to be checks in order to add to the total number of locations.
+    'false': 0
+    'true': 50
   batterysanity:
     # All batteries are checks now! Batteries will still give health, but they won't respawn.
     # Unchanged from the base configuration.
