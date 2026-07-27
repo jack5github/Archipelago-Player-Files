@@ -89,8 +89,8 @@ Toy Story 2:
     # Determines how many Pizza Planet Tokens are needed for your goal. Selecting a higher number than your total pool will force the pool to a higher number.
     # Note: a gate can never require more tokens than there are check locations to hold them. If it would, the gate is automatically lowered to fit so the seed still generates and stays winnable. The number of available locations depends on which sanities you enable, so turn on more sanities (Coinsanity, Lifesanity, Batterysanity, etc.) if you want higher gates to stick.
     # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 99.
-    # Unchanged from the base configuration.
-    20: 50
+    # Increased from 20 to reflect how many I actually collected in my first run with this game (33).
+    30: 50
   defeated_bosses_required:
     # NOTE: This does nothing if you didn't select it as your game mode or goal condition.
     # Determines how many bosses you have to defeat to reach your goal.
@@ -215,10 +215,10 @@ Toy Story 2:
     high: 0
   damage_buzz_trap_weight:
     # Ouch!
-    # Increased to `medium` to reduce the effectiveness of `cutscene_trap_weight`.
-    'off': 0
+    # Disabled as this has barely any effect.
+    'off': 50
     low: 0
-    medium: 50
+    medium: 0
     high: 0
   freeze_buzz_trap_weight:
     # Buzz must have run out of batteries!
@@ -379,7 +379,12 @@ Toy Story 2:
     Double Jump: 1
   start_hints: []
   start_location_hints: []
-  exclude_locations: []
+  exclude_locations:
+    # These particular NPC pickups are very difficult to reach given the struggling performance of the game, so I'm preventing anything important from appearing when you get them.
+    - Airport Infiltration - Passenger Tike - Scaffolding
+    - Construction Yard - Worker Tike - Boss Arena
+    # Elevator Hop is really hard to find all the coins in, so I am excluding the final coin check in it to give me some breathing room.
+    - Elevator Hop - Coin Bundle 7
   priority_locations: []
   item_links: []
   plando_items: []
