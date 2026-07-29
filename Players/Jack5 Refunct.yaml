@@ -46,17 +46,17 @@ Refunct:
     # - random_known: a random button or platform. The UI will show you which one it is.
     # - random_unknown: a random button or platform. The UI will NOT show you which one it is.
     # Note: if you choose an unknown goal, you can !hint Goal Location and it will tell you the location.
-    # I've decided to make this option random, but I want to know which location it is. I've made it an equal chance of it being either a button or a platform.
+    # I've decided to make this option random, but I want to know which location it is. Since I want an equal chance of it being either a button or a platform, I am selecting `random_known` only.
     button_31_1: 0
     button_1_1: 0
-    random_known_button: 50
+    random_known_button: 0
     random_unknown_button: 0
     platform_1_5: 0
     platform_21_1: 0
     platform_29_2: 0
-    random_known_platform: 50
+    random_known_platform: 0
     random_unknown_platform: 0
-    random_known: 0
+    random_known: 50
     random_unknown: 0
   cubes:
     # Cubes are also location checks in the main gamemode! This option determines when you can collect cubes.
@@ -85,15 +85,16 @@ Refunct:
     # Set this to -1 if you want all minigames. Set this to 0 if you don't want any minigames.
     # The next option allows you to tweak how likely each minigame is to be included, but the default is probably OK!
     # You can define additional values between the minimum and maximum values. Minimum value is -1, maximum value is 9.
-    # I used to have there be a 50% chance of minigames occurring, and if they do, a random number of them, maxing out at the available number of minigames. I have since made this always happen, because playing Refunct by itself gets boring.
-    random-range-1-7: 50
+    # I used to have there be a 50% chance of minigames occurring, and if they do, a random number of them, maxing out at the available number of minigames. I have since made this always happen, because playing Refunct by itself gets boring. There are roughly 5 minigames that are possible to be picked. In 80% of cases, I want to pick a small minority of them. The remaining 20% picks all of them.
+    -1: 20
+    random-range-1-2: 80
   nerf_minigame_checks:
     # Most minigames have a lot of checks (~37).
     # If this option is *on*, flowers will be forced into the minigames, so that only 10 items per minigame are not necessarily flowers.
     # With the option *off*, all items in the minigames are actual checks.
-    # Greatly reduce the potentially important check count of minigames.
-    'false': 0
-    'true': 50
+    # Now that I have lowered the total number of possible minigames, it doesn't feel right to nerf their checks.
+    'false': 50
+    'true': 0
   number_of_unlocks_per_minigame:
     # Each minigame needs to be unlocked first by finding its unlock item in the main game.
     # This option sets how many unlock items of each minigame are there in the main game.
@@ -113,11 +114,11 @@ Refunct:
     # Seeker Minigame:
     # Adding this minigame will let you search for 10 platforms that are not grassified yet, once you unlock it.
     # You have all your abilities and jumping on empty platforms will give you checks.
-    Seeker Minigame: 3
+    Seeker Minigame: 3 # It is relatively quick to find the 10 white platforms.
     # Button Galore Minigame:
     # This minigame spawns you in a game with all plaforms already there.
     # And you just press every button that there is for a check.
-    Button Galore Minigame: 3
+    Button Galore Minigame: 2 # It is not as quick to find all the buttons.
     # OG Randomizer Minigame:
     # This is where it all started, you'll get to play the very first Refunct randomizer.
     # Hitting a button triggers a random platform to appear somewhere in the level, and it gives a check!
@@ -128,44 +129,43 @@ Refunct:
     # The more blocks you pick up in one go, the more points you get. Score points to get checks!
     # Hitting New Game will reshuffle the blocks and cubes but you will keep your points.
     # There is no guarantee cubes are reachable so reset as needed.
-    Block Brawl Minigame: 3
+    Block Brawl Minigame: 1 # This is a very difficult minigame, so it is weighted low.
     # Climb Minigames:
     # There are three different Climb minigames that you can play when this option is selected; Line, Spiral and Chaos.
     # You will have to climb up 100 meters of randomly placed platforms, and you get checks for every 10 meters climbed.
     # Each minigame has a slightly different pattern of platform placements.
     # Each minigame is unlocked separately and they all have their own checks.
     # This gamemode might need some skill and patience (which is why they are off by default) :)
-    # Each climb minigame has an equal chance of occurring.
-    Climb Chaos Minigame: 1
-    Climb Line Minigame: 1
-    Climb Narrow Minigame: 1
-    Climb Spiral Minigame: 1
+    Climb Chaos Minigame: 0 # Disabled due to requiring extremely difficult wall jump ledge grabs.
+    Climb Line Minigame: 0 # Disabled due to requiring extremely difficult wall jump ledge grabs.
+    Climb Narrow Minigame: 3 # It is relatively quick to walk all the tightropes.
+    Climb Spiral Minigame: 0 # Disabled due to requiring extremely difficult wall jump ledge grabs.
     # Block Blub Minigame:
     # This is the underwater version of Block Brawl!
     # This is much easier and shorter than Block Brawl, it still has four color of cubes, but only 32 checks in total.
-    Block Blub Minigame: 3
+    Block Blub Minigame: 0 # Disabled due to it being not immediately obvious where to find cubes, and also being entirely about swimming, which is boring.
     # Refunct Mountain Minigame:
     # The vanilla game, except there's no wall jump, ledge grab, lifts and pipes.
     # Instead, there is a dash! Press the buttons for checks.
     # PRESS E TO DASH, YOU (CURRENTLY) CANNOT REBIND THIS IN-GAME (which is why it's off by default)
     # Tip: use steam controller settings to map dash to a button of your choice.
-    Refunct Mountain Minigame: 0 # Disabled due to extra dash feature
+    Refunct Mountain Minigame: 0 # Disabled due to extra dash feature.
     # Rando Mountain Minigame:
     # Randomized button order in a world with *only* jump and dash (no swim or anything else).
     # Press the buttons for checks.
     # PRESS E TO DASH, YOU (CURRENTLY) CANNOT REBIND THIS IN-GAME (which is why it's off by default)
     # Tip: use steam controller settings to map dash to a button of your choice.
-    Rando Mountain Minigame: 0 # Disabled due to extra dash feature
+    Rando Mountain Minigame: 0 # Disabled due to extra dash feature.
     # Funny Bridge Game Minigame:
     # Based on the Glass Bridge game from Squid Game.
     # Five pairs of platforms appear, but only one of each pair is real.
     # Are you lucky enough to beat the game?
     # This minigame has one check :)
-    Funny Bridge Game Minigame: 1
+    Funny Bridge Game Minigame: 3 # It is relatively quick to play Squid Game.
     # Clique:
     # Based on Archipelago game "Clique". Hard-mode!
     # There is one free item in this minigame. Once the "button activation" item is found, you can press the button for another check.
-    Clique: 1
+    Clique: 0 # Disabled due to being boring.
   traps:
     # This option determines which traps are added to the game. 
     # Each trap is added twice and replaces a "flower" filler item, if there are enough flowers.
@@ -175,6 +175,7 @@ Refunct:
     # "all" adds pretty traps and also adds gameplay affecting traps that last for 30 seconds:
     # Slo-mo, Fast-mo, Blurrrrgh.
     # Oh you know I want as much pain as possible.
+    # TODO: Change this to only non-visual traps when the APworld updates.
     none: 0
     pretty: 0
     all: 50
