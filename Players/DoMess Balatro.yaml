@@ -183,7 +183,7 @@ Balatro:
     # This will make those stakes playable and remove the other ones from the game.
     # (Also make sure to capitalize the first letters, it's case sensitive.)
     # This option is only considered if playable Stakes is set to choose.
-    [ 'White Stake', 'Red Stake' ]
+    [ 'White Stake' ]
 
   include_stakesNumber:
     # Specify how many randomly selected stakes will be playable.
