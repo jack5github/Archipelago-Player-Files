@@ -38,7 +38,7 @@ Balatro:
   # Game Options
   progression_balancing:
     # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    # 
+    #
     # A lower setting means more getting stuck. A higher setting means less getting stuck.
     #
     # You can define additional values between the minimum and maximum values.
@@ -53,9 +53,9 @@ Balatro:
 
   accessibility:
     # Set rules for reachability of your items/locations.
-    # 
+    #
     # **Full:** ensure everything can be reached and acquired.
-    # 
+    #
     # **Minimal:** ensure what is needed to reach your goal can be acquired.
     full: 50
     minimal: 0
@@ -127,7 +127,7 @@ Balatro:
     # The required stake for your goal.
     # If no stake is specified or the stake specified is not in the playable stakes it will default to the highest playable one.
     # If your goal isn't 'Win with jokers on stake' or 'beat decks on stake', this setting can be ignored.
-    ['White Stake']
+    [ 'White Stake' ]
 
   include_decksMode:
     # Choose how the playable decks are determined:
@@ -141,7 +141,7 @@ Balatro:
   include_deckChoice:
     # Select which decks will be playable in the game. 
     # This option is only considered if Playable Decks is set to choose.
-    ['Red Deck', 'Blue Deck', 'Yellow Deck', 'Green Deck', 'Black Deck', 'Magic Deck', 'Nebula Deck', 'Ghost Deck', 'Abandoned Deck', 'Checkered Deck', 'Zodiac Deck', 'Painted Deck', 'Anaglyph Deck', 'Plasma Deck', 'Erratic Deck']
+    [ 'Red Deck', 'Blue Deck', 'Yellow Deck', 'Green Deck', 'Black Deck', 'Magic Deck', 'Nebula Deck', 'Ghost Deck', 'Abandoned Deck', 'Checkered Deck', 'Zodiac Deck', 'Painted Deck', 'Anaglyph Deck', 'Plasma Deck', 'Erratic Deck' ]
 
   include_deckNumber:
     # Specify how many randomly selected decks will be playable.
@@ -183,7 +183,7 @@ Balatro:
     # This will make those stakes playable and remove the other ones from the game.
     # (Also make sure to capitalize the first letters, it's case sensitive.)
     # This option is only considered if playable Stakes is set to choose.
-    ['White Stake', 'Red Stake']
+    [ 'White Stake', 'Red Stake' ]
 
   include_stakesNumber:
     # Specify how many randomly selected stakes will be playable.
@@ -236,7 +236,7 @@ Balatro:
     # must include the "Archipelago Tarot". Here is a list of all Tarot cards https://balatrogame.fandom.com/wiki/Tarot_Cards.
     # The Syntax of this is the following: ['The Fool;The Magician;The High Priestess;The Empress;The Emperor', ...] where the bundles are separated by the commas.
     # Make sure to use the right symbols.
-    ['The Fool;The Magician;The High Priestess;The Empress;The Emperor', 'The Hierophant;The Lovers', 'The Chariot;Justice;The Hermit;The Wheel of Fortune;Strength;Death', 'The Hanged Man;Temperance;The Devil;The Tower;The Star', 'The Moon;The Sun;Judgement;The World']
+    [ 'The Fool;The Magician;The High Priestess;The Empress;The Emperor', 'The Hierophant;The Lovers', 'The Chariot;Justice;The Hermit;The Wheel of Fortune;Strength;Death', 'The Hanged Man;Temperance;The Devil;The Tower;The Star', 'The Moon;The Sun;Judgement;The World' ]
 
   planet_bundle:
     # Instead of making every planet card an individual item, you have the option to put them all in one bundle, 
@@ -288,15 +288,15 @@ Balatro:
   filler_jokers:
     # Which Jokers are supposed to be filler (every Joker not in this list will be considered a progressive item)
     # Be careful with this option if your goal is "Unlock Jokers" 
-    # 
+    #
     # Valid Jokers:
     #     "Abstract Joker"
     #     "Acrobat"
     #     "Ancient Joker" 
     #     "....."
-    # 
+    #
     #     for a full list go to https://balatrogame.fandom.com/wiki/Category:Jokers
-    # 
+    #
     # Example: ['Abstract Joker', 'Acrobat', 'Ancient Joker']
     []
 
@@ -414,4 +414,23 @@ Balatro:
 
   item_links:
     # Share part of your item pool with other players.
-    []
+    # Copied from `Jack5 Balatro.yaml`
+    - name: Balatro Decks
+      item_pool:
+        - Red Deck
+        - Blue Deck
+        - Yellow Deck
+        - Green Deck
+        - Black Deck
+        - Magic Deck
+        - Nebula Deck
+        - Ghost Deck
+        - Abandoned Deck
+        - Checkered Deck
+        - Zodiac Deck
+        - Painted Deck
+        - Anaglyph Deck
+        - Plasma Deck
+        - Erratic Deck
+      replacement_item: null
+      skip_if_solo: true

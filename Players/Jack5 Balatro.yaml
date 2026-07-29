@@ -288,7 +288,27 @@ Balatro:
   start_location_hints: []
   exclude_locations: []
   priority_locations: []
-  item_links: []
+  item_links:
+    # Added so me and DoMess unlock our decks at the same time.
+    - name: Balatro Decks
+      item_pool:
+        - Red Deck
+        - Blue Deck
+        - Yellow Deck
+        - Green Deck
+        - Black Deck
+        - Magic Deck
+        - Nebula Deck
+        - Ghost Deck
+        - Abandoned Deck
+        - Checkered Deck
+        - Zodiac Deck
+        - Painted Deck
+        - Anaglyph Deck
+        - Plasma Deck
+        - Erratic Deck
+      replacement_item: null
+      skip_if_solo: true
   plando_items: []
   ################
   # Enabled Mods #
