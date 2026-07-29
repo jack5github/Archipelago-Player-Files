@@ -394,7 +394,9 @@ Balatro:
 
   start_inventory:
     # Start with these items.
-    {}
+    Archipelago Belt: 1
+    Archipelago Tarot: 1
+    Archipelago Spectral: 1
 
   start_hints:
     # Start with these item's locations prefilled into the ``!hint`` command.
