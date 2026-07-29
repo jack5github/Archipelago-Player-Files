@@ -1,0 +1,53 @@
+﻿name: Jack5Element{NUMBER}
+description: |-
+  Jack5's Elementipelago player file
+
+  Elementipelago is an Archipelago game that is attempting to be like Doodle God, though in its base form, it uses random names and icons for all of the elements, which is not very enjoyable. I have personally created AI integration for this game, which makes it slightly more enjoyable to play. This player file makes extra adjustments, including reducing the total number of elements and receiving Progressive Filter items as early as possible (without starting with them immediately).
+game: Elementipelago
+requires:
+  version: 0.6.6
+Elementipelago:
+  ################
+  # Game Options #
+  ################
+  # Unchanged from the base configuration.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  # Reduced slightly from Zeroman95's preferred count (50 for each).
+  element_amount:
+    # How many elements are received from Archipelago?
+    # You can define additional values between the minimum and maximum values. Minimum value is 4, maximum value is 1000.
+    45: 50
+  filler_amount:
+    # How many items are to be produced extra for filler in Archipelago?
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
+    45: 50
+  intermediate_amount:
+    # How many items do you want that aren't included in archipelago directly?
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 1000.
+    45: 50
+  compounds_are_ingredients:
+    # Can Compounds (locations) be used as ingredients in recipes as well?
+    # When this is turned on, it is possible for compounds, which inherit their name from the locations they come from, to appear in the left sidebar as ingredients. The problem arises when two locations with the same name become compounds (for example, progressive items which appear multiple times), making it harder to distinguish between them. With AI-generated names, this is no longer a problem, so I am turning this back on.
+    'false': 0
+    'true': 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items:
+    # Progressive Filter is one of the most needed items in the game for quality-of-life reasons, as it tells you what elements you are able to merge together. This plando forces the 2 Progressive Filters to be in a different world within the first Archipelago sphere, meaning I obtain them earlier.
+    - items:
+        Progressive Filter: true
+      world: true
+      location: early_locations
+      force: false
