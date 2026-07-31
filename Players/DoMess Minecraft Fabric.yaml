@@ -107,7 +107,7 @@ Minecraft Fabric:
     #     "Hard" - Disables Locations that're Hard
     #     "Exploration" - Disables Locations that might require Exploration
     #     "Unreasonable" - Disables Location's that're EXTREMELY Hard
-    [ 'Exploration', 'Unreasonable', 'Hard' ]
+    ['Exploration', 'Unreasonable', 'Hard']
 
   percentage_of_rubies_needed:
     # The Percentage of Rubies that need to be collected to Goal for Ruby Hunt.
@@ -145,7 +145,7 @@ Minecraft Fabric:
   #####################
   itemsanity:
     # Enables "Itemsanity" which causes items obtainable in Survival to be checks
-    ## DoMess: v1.1: changed default from true to false 
+    ## DoMess: v1.1: changed default from true to false
     'false': 50
     'true': 0
 
@@ -161,7 +161,7 @@ Minecraft Fabric:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 1142
-    ## DoMess: v1.1: enabled random, 5 - 25 
+    ## DoMess: v1.1: enabled random, 5 - 25
     # note: not active unless itemsanity is on, which might return in future
     0: 50
     random-range-5-25: 50 # random value between 0 and 1142
@@ -237,7 +237,7 @@ Minecraft Fabric:
     #     "Jump"
     #     "Sprint"
     #     "Beds"
-    [ 'Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds' ]
+    ['Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds']
 
   required_before_bosses:
     # Makes it so certain Items are required in Logic before you need
@@ -252,7 +252,7 @@ Minecraft Fabric:
     #     "Jump"
     #     "Sprint"
     #     "Beds"
-    [ 'Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds' ]
+    ['Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds']
 
   required_before_raids:
     # Makes it so certain Items are required in Logic before you need
@@ -267,7 +267,7 @@ Minecraft Fabric:
     #     "Jump"
     #     "Sprint"
     #     "Beds"
-    [ 'Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds' ]
+    ['Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds']
 
   keep_inventory:
     # Prevents you from dropping your items when you die!
@@ -286,7 +286,7 @@ Minecraft Fabric:
     #     "Sprint" - Removes the ability to run, and adds Sprint to the Item pool.
     #     "Swim" - Removes the ability to enter water, and adds Swim to the Item pool.
     ## DoMess: v1.1: Removed chests, added Sprint & Swim
-    [ 'Sprint', 'Swim' ]
+    ['Sprint', 'Swim']
 
   time_saving_options:
     # Decrease Wait times or Increase likelihood for various events that can occur in the game
@@ -296,7 +296,7 @@ Minecraft Fabric:
     #     "Rabbits Foot" - Increases the 10% Chance for Rabbit's Foot to drop to 50%
     #     "Drowned Items" - Increases the Chance for a Drowned to drop the items they're holding to 100%
     #     "Copper Oxidation" - Increases the Chance for Copper Blocks to attempt to Oxidize from 5% to 55%
-    [ 'Rabbits Foot', 'Wither Skulls', 'Drowned Items', 'Copper Oxidation' ]
+    ['Rabbits Foot', 'Wither Skulls', 'Drowned Items', 'Copper Oxidation']
 
   #################
   # Traps Options #
@@ -411,7 +411,7 @@ Minecraft Fabric:
     # You can add a mod by putting its Mod ID here.
     #
     # For a list of supported Mods, refer to here: https://modded.wiki/w/Fabric_Archipelago_Mod:Mod_Support
-    [ 'minecraft' ]
+    ['minecraft']
 
   ###########################
   # Item & Location Options #
@@ -420,10 +420,10 @@ Minecraft Fabric:
     # Forces these items to be in their native world.
     ## DoMess: v1.1:
     # - Added Tools, Weapons, Smelting, Armor
-    - "Progressive Tools"
-    - "Progressive Weapons"
-    - "Progressive Smelting"
-    - "Progressive Armor"
+    - 'Progressive Tools'
+    - 'Progressive Weapons'
+    - 'Progressive Smelting'
+    - 'Progressive Armor'
 
   non_local_items:
     # Forces these items to be outside their native world.
@@ -432,13 +432,13 @@ Minecraft Fabric:
     # - Added Other Crafting Stations
     # - Added Bucket, Flint & Steel, Resource Compacting
     # - Added Sprint, Swim
-    - "Sleeping"
-    - "Other Crafting Stations"
-    - "Bucket Recipes"
-    - "Flint and Steel Recipes"
-    - "Resource Compacting Recipes"
-    - "Sprint"
-    - "Swim"
+    - 'Sleeping'
+    - 'Other Crafting Stations'
+    - 'Bucket Recipes'
+    - 'Flint and Steel Recipes'
+    - 'Resource Compacting Recipes'
+    - 'Sprint'
+    - 'Swim'
 
   start_inventory:
     # Start with the specified amount of these items. Example: "Bomb: 1"
@@ -451,26 +451,26 @@ Minecraft Fabric:
     # - Added Sleeping
     # - Added Other Crafting Stations
     # - Added Bucket, Flint & Steel, Resource Compacting
-    - "Progressive Tools"
-    - "Progressive Weapons"
-    - "Progressive Smelting"
-    - "Progressive Armor"
-    - "Other Crafting Stations"
-    - "Bucket Recipes"
-    - "Flint and Steel Recipes"
-    - "Resource Compacting Recipes"
+    # - Added Sleeping, Sprint, Swim
+    - 'Progressive Tools'
+    - 'Progressive Weapons'
+    - 'Progressive Smelting'
+    - 'Progressive Armor'
+    - 'Other Crafting Stations'
+    - 'Bucket Recipes'
+    - 'Flint and Steel Recipes'
+    - 'Resource Compacting Recipes'
+    - 'Sleeping'
+    - 'Sprint'
+    - 'Swim'
 
   start_location_hints:
     # Start with these locations and their item prefilled into the ``!hint`` command.
-    ## DoMess: v1.1:
-    # - Added Sleeping, Sprint, Swim
-    - "Sleeping"
-    - "Sprint"
-    - "Swim"
+    []
 
   exclude_locations:
     # Prevent these locations from having an important item.
-    ## DoMess: v1.1: 
+    ## DoMess: v1.1:
     # - Excluded End Advancements
     # - Excluded some Nether Advancements
     # - Excluded some Adventure Advancements
@@ -478,132 +478,132 @@ Minecraft Fabric:
     # - Excluded Minecraft -> Stronghold related advancements
 
     # Minecraft
-    - "Eye Spy"
-    - "The End?"
+    - 'Eye Spy'
+    - 'The End?'
 
     # Nether Dimension
-    - "A Furious Cocktail" # have all 17 potion effects, no
-    - "How Did We Get Here?" # have all 34 status effects, no no no
-    - "Bring Home the Beacon" # need ore blocks + nether star +> wither
-    - "Beaconator" # even worse than above
-    - "Hot Tourist Destinations" # visit all biomes
-    - "Cover Me in Debris" # full netherite
-    - "Uneasy Alliance" # bring ghast to overworld, then kill it
-    - "Subspace Bubble" # travel 875 blocks in the nether, then portal into the overworld
-    - "Feels Like Home" # travel 50 blocks on a Strider in the Nether
+    - 'A Furious Cocktail' # have all 17 potion effects, no
+    - 'How Did We Get Here?' # have all 34 status effects, no no no
+    - 'Bring Home the Beacon' # need ore blocks + nether star +> wither
+    - 'Beaconator' # even worse than above
+    - 'Hot Tourist Destinations' # visit all biomes
+    - 'Cover Me in Debris' # full netherite
+    - 'Uneasy Alliance' # bring ghast to overworld, then kill it
+    - 'Subspace Bubble' # travel 875 blocks in the nether, then portal into the overworld
+    - 'Feels Like Home' # travel 50 blocks on a Strider in the Nether
 
     # End Dimension
-    - "Free the End"
-    - "The Next Generation"
-    - "Great View From Up Here"
-    - "The City at the End of the Game"
-    - "Remote Getaway"
-    - "The End... Again..."
+    - 'Free the End'
+    - 'The Next Generation'
+    - 'Great View From Up Here'
+    - 'The City at the End of the Game'
+    - 'Remote Getaway'
+    - 'The End... Again...'
     - "Sky's the Limit"
-    - "You Need a Mint"
+    - 'You Need a Mint'
 
     # Adventure
-    - "Smithing with Style" # Apply these smithing templates at least once: Spire, Snout, Rib, Ward, Silence, Vex, Tide, Wayfinder
-    - "Very Very Frightening" # Strike a villager with lightning
-    - "Surge Protector" # very specific conditions requiring a villager
+    - 'Smithing with Style' # Apply these smithing templates at least once: Spire, Snout, Rib, Ward, Silence, Vex, Tide, Wayfinder
+    - 'Very Very Frightening' # Strike a villager with lightning
+    - 'Surge Protector' # very specific conditions requiring a villager
     # - "Careful Restoration" # build a decorated pot with 4 pottery sherds
-    - "It Spreads" # Kill a mob near a skulk catalyst
+    - 'It Spreads' # Kill a mob near a skulk catalyst
     # - "Caves & Cliffs" # Fall from world height, and survive at world floor Y = -59
-    - "Two Birds, One Arrow" # kill 2 phantoms with a piercing arrow, no
-    - "Arbalistic" # kill 5 unique mobs with 1 crossbow shot, no
-    - "Sneak 100" # deep dark sneak near those blocks with ears
-    - "Monsters Hunted" # kill 41 unique hostile mobs
+    - 'Two Birds, One Arrow' # kill 2 phantoms with a piercing arrow, no
+    - 'Arbalistic' # kill 5 unique mobs with 1 crossbow shot, no
+    - 'Sneak 100' # deep dark sneak near those blocks with ears
+    - 'Monsters Hunted' # kill 41 unique hostile mobs
     # - "Is It a Bird?" # look at a parrot through spyglass
-    - "Postmortal" # use an undying totem to cheat death
-    - "Adventuring Time" # explore every biome
-    - "Is It a Plane?" # look at the Ender Dragon through spyglass
-    - "Sound of Music" # play music in a jukebox while in the Meadows biome
+    - 'Postmortal' # use an undying totem to cheat death
+    - 'Adventuring Time' # explore every biome
+    - 'Is It a Plane?' # look at the Ender Dragon through spyglass
+    - 'Sound of Music' # play music in a jukebox while in the Meadows biome
     # - "The Power of Books" # read the power signal of a Chiseled Bookshelf with a Comparator
     # - "Is It a Balloon?" # Look at a ghast through a spyglass
-    - "Crafting a New Look" # Craft a trimmed armor at a Smithing Table
+    - 'Crafting a New Look' # Craft a trimmed armor at a Smithing Table
     # - "A Throwaway Joke" # Hit a mob with a thrown trident
     # - "Sticky Situation" # Collide on a vertical side of a honey block while falling.
     # - "Ol' Betsy" # Shoot a crossbow
 
     # Husbandry
     - "You've Got a Friend in Me" # allay
-    - "With Our Powers Combined!" # all 3 froglight blocks in inventory
-    - "Whatever Floats Your Goat!" # boat + goat = fun! no, not really
+    - 'With Our Powers Combined!' # all 3 froglight blocks in inventory
+    - 'Whatever Floats Your Goat!' # boat + goat = fun! no, not really
     # - "Best Friends Forever"
     # - "Glow and Behold!"
-    - "When the Squad Hops into Town" # get all frog variants on a leash, can be individually done
+    - 'When the Squad Hops into Town' # get all frog variants on a leash, can be individually done
     # - "Fishy Business" # go fishing! just catch a fish
-    - "Two by Two" # Breed all the animals! all 26 of them!!!
+    - 'Two by Two' # Breed all the animals! all 26 of them!!!
     # - "Tactical Fishing" # Catch a fish, using a Water Bucket
-    - "Little Sniffs" # Feed Torchflower Seeds to a Snifflet (baby Sniffer) 
-    - "Total Beelocation" # move a beehive with 3 or more bees inside
-    - "Bukkit Bukkit" # use a water bucket on a tadpole
+    - 'Little Sniffs' # Feed Torchflower Seeds to a Snifflet (baby Sniffer)
+    - 'Total Beelocation' # move a beehive with 3 or more bees inside
+    - 'Bukkit Bukkit' # use a water bucket on a tadpole
     # - "Wax Off" # scrape wax off a copper block
-    - "Smells Interesting" # obtain a Sniffer Egg
-    - "Serious Dedication" # have a Netherite Hoe in inventory
-    - "Planting the Past" # plant any sniffer seed
+    - 'Smells Interesting' # obtain a Sniffer Egg
+    - 'Serious Dedication' # have a Netherite Hoe in inventory
+    - 'Planting the Past' # plant any sniffer seed
     # - "A Seedy Place" # Plant a seed
     # - "The Cutest Predator" # catch an axolotol with a Water Bucket
-    - "Birthday Song" # allay drops cake at a noteblock
+    - 'Birthday Song' # allay drops cake at a noteblock
     # - "Wax On" # apply honeycomb to a Copper block
-    - "A Balanced Diet" # eat all 40 things avaliable
+    - 'A Balanced Diet' # eat all 40 things avaliable
     # - "Bee Our Guest" # collect honey without angering the bees
-    - "The Healing Power of Friendship!" # axolotol fights for you and wins
+    - 'The Healing Power of Friendship!' # axolotol fights for you and wins
     # - "The Parrots and the Bats" # breed 2 animals together, once
-    - "A Complete Catalogue" # tame all cat variants
+    - 'A Complete Catalogue' # tame all cat variants
 
   priority_locations:
     # Prevent these locations from having an unimportant item.
-    - "Arrow (Itemsanity)"
-    - "Bow (Itemsanity)"
-    - "Bucket (Itemsanity)"
-    - "Coal (Itemsanity)"
-    - "Chest (Itemsanity)"
-    - "Clock (Itemsanity)"
-    - "Coal Ore (Itemsanity)"
-    - "Cobblestone (Itemsanity)"
-    - "Compass (Itemsanity)"
-    - "Crafting Table (Itemsanity)"
-    - "Diamond (Itemsanity)"
-    - "Diamond Boots (Itemsanity)"
-    - "Diamond Chestplate (Itemsanity)"
-    - "Diamond Helmet (Itemsanity)"
-    - "Diamond Leggings (Itemsanity)"
-    - "Diamond Ore (Itemsanity)"
-    - "Diamond Pickaxe (Itemsanity)"
-    - "Diamond Sword (Itemsanity)"
-    - "Dirt (Itemsanity)"
-    - "Feather (Itemsanity)"
-    - "Flint and Steel (Itemsanity)"
-    - "Furnace (Itemsanity)"
-    - "Gold Ingot (Itemsanity)"
-    - "Gold Ore (Itemsanity)"
-    - "Gravel (Itemsanity)"
-    - "Iron Axe (Itemsanity)"
-    - "Iron Boots (Itemsanity)"
-    - "Iron Chestplate (Itemsanity)"
-    - "Iron Helmet (Itemsanity)"
-    - "Iron Ingot (Itemsanity)"
-    - "Iron Leggings (Itemsanity)"
-    - "Iron Ore (Itemsanity)"
-    - "Iron Pickaxe (Itemsanity)"
-    - "Iron Sword (Itemsanity)"
-    - "Lava Bucket (Itemsanity)"
-    - "Map (Itemsanity)"
-    - "Minecart (Itemsanity)"
-    - "Obsidian (Itemsanity)"
-    - "Redstone Ore (Itemsanity)"
-    - "Sand (Itemsanity)"
-    - "Shears (Itemsanity)"
-    - "Stick (Itemsanity)"
-    - "String (Itemsanity)"
-    - "Stone Axe (Itemsanity)"
-    - "Stone Pickaxe (Itemsanity)"
-    - "Stone Sword (Itemsanity)"
-    - "Sugar Cane (Itemsanity)"
-    - "Torch (Itemsanity)"
-    - "Water Bucket (Itemsanity)"
-    - "Wooden Pickaxe (Itemsanity)"
+    - 'Arrow (Itemsanity)'
+    - 'Bow (Itemsanity)'
+    - 'Bucket (Itemsanity)'
+    - 'Coal (Itemsanity)'
+    - 'Chest (Itemsanity)'
+    - 'Clock (Itemsanity)'
+    - 'Coal Ore (Itemsanity)'
+    - 'Cobblestone (Itemsanity)'
+    - 'Compass (Itemsanity)'
+    - 'Crafting Table (Itemsanity)'
+    - 'Diamond (Itemsanity)'
+    - 'Diamond Boots (Itemsanity)'
+    - 'Diamond Chestplate (Itemsanity)'
+    - 'Diamond Helmet (Itemsanity)'
+    - 'Diamond Leggings (Itemsanity)'
+    - 'Diamond Ore (Itemsanity)'
+    - 'Diamond Pickaxe (Itemsanity)'
+    - 'Diamond Sword (Itemsanity)'
+    - 'Dirt (Itemsanity)'
+    - 'Feather (Itemsanity)'
+    - 'Flint and Steel (Itemsanity)'
+    - 'Furnace (Itemsanity)'
+    - 'Gold Ingot (Itemsanity)'
+    - 'Gold Ore (Itemsanity)'
+    - 'Gravel (Itemsanity)'
+    - 'Iron Axe (Itemsanity)'
+    - 'Iron Boots (Itemsanity)'
+    - 'Iron Chestplate (Itemsanity)'
+    - 'Iron Helmet (Itemsanity)'
+    - 'Iron Ingot (Itemsanity)'
+    - 'Iron Leggings (Itemsanity)'
+    - 'Iron Ore (Itemsanity)'
+    - 'Iron Pickaxe (Itemsanity)'
+    - 'Iron Sword (Itemsanity)'
+    - 'Lava Bucket (Itemsanity)'
+    - 'Map (Itemsanity)'
+    - 'Minecart (Itemsanity)'
+    - 'Obsidian (Itemsanity)'
+    - 'Redstone Ore (Itemsanity)'
+    - 'Sand (Itemsanity)'
+    - 'Shears (Itemsanity)'
+    - 'Stick (Itemsanity)'
+    - 'String (Itemsanity)'
+    - 'Stone Axe (Itemsanity)'
+    - 'Stone Pickaxe (Itemsanity)'
+    - 'Stone Sword (Itemsanity)'
+    - 'Sugar Cane (Itemsanity)'
+    - 'Torch (Itemsanity)'
+    - 'Water Bucket (Itemsanity)'
+    - 'Wooden Pickaxe (Itemsanity)'
 
   item_links:
     # Share part of your item pool with other players.
