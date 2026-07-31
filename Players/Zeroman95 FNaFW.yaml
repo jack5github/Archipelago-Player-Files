@@ -7,8 +7,8 @@ requires:
   version: 0.6.7
 
 FNaFW:
-  progression_balancing: # UNCHANGED
-    50: 50
+  progression_balancing: # Dropped to 40 due to how fast I got checks
+    40: 50
 
   accessibility: # UNCHANGED
     full: 50
