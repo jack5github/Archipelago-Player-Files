@@ -68,12 +68,13 @@ Balatro:
     #     Beat Decks on Stake: Win with the specified amount of Decks on the specified Stake (or harder)
     #     Win with Jokers on Stake: Win with the specified amount of Jokers on the specified Stake (or harder)
     #     Unique Wins: Win with the specified amount of unique combinations of Decks and Stakes
-    beat_decks: 50
+    ## DoMess: changed beat_decks to beat_unique_decks, because the locations already req. you to beat unique decks anyways
+    beat_decks: 0
     unlock_jokers: 0
     beat_ante: 0
     beat_decks_on_stake: 0
     win_with_jokers_on_stake: 0
-    beat_unique_decks: 0
+    beat_unique_decks: 50
 
   ante_win_goal:
     # If your goal is 'beat ante,' specify the ante you need to beat.
@@ -82,7 +83,8 @@ Balatro:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 38
-    12: 50
+    ## DoMess: lowered from 12 to 10
+    10: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -94,7 +96,8 @@ Balatro:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 15
-    4: 50
+    ## DoMess: Lowered default from 4 to 3
+    3: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -106,7 +109,8 @@ Balatro:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 1
     # Maximum value is 120
-    4: 50
+    ## Domess: Lowered default from 4 to 3
+    3: 50
     random: 0
     random-low: 0
     random-high: 0
@@ -141,6 +145,7 @@ Balatro:
   include_deckChoice:
     # Select which decks will be playable in the game. 
     # This option is only considered if Playable Decks is set to choose.
+    ## TODO: Maybe remove some of these decks for next round.
     [ 'Red Deck', 'Blue Deck', 'Yellow Deck', 'Green Deck', 'Black Deck', 'Magic Deck', 'Nebula Deck', 'Ghost Deck', 'Abandoned Deck', 'Checkered Deck', 'Zodiac Deck', 'Painted Deck', 'Anaglyph Deck', 'Plasma Deck', 'Erratic Deck' ]
 
   include_deckNumber:
@@ -307,10 +312,11 @@ Balatro:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 300
-    100: 50
-    random: 0
+    ## DoMess: changed default 100:50 >>> 25:50, enabled random 0-50
+    25: 50
+    random: 50
     random-low: 0
-    random-high: 0
+    random-high: 50
 
   permanent_filler:
     # The amount of permanent filler items (like "+1 Hand Size") that is going to be generated.
