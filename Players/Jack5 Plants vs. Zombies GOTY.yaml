@@ -32,6 +32,11 @@ Plants vs. Zombies:
     # I will have this set to true for now, but if the game proves to be too difficult, I will disable it.
     'false': 0
     'true': 50
+  ring_link:
+    # Enables Ring Link for Sun.
+    # I'm going to turn this on in the event that Zeroman95 turns this on himself.
+    'false': 0
+    'true': 50
   energy_link:
     # Adds an "Energy Link" button, allowing you to deposit and withdraw money via Energy Link.
     # I am shocked that I somehow didn't have this enabled.
