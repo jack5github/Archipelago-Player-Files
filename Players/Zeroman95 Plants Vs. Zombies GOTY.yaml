@@ -5,102 +5,157 @@ description: 'Zeroman95s Plants Vs. Zombies Game of the Year YAML'
 game: Plants vs. Zombies
 requires:
   version: 0.6.7
+  game:
+    Plants vs. Zombies: 1.9.0
 
 Plants vs. Zombies:
-  progression_balancing: # Lowering Plants Vs. Zombies to 15 because there is so much to do in this game and I would rather not play it.
-    15: 99
+  progression_balancing: # UNCHANGED
+    50: 50
 
-  accessibility:
-    full: 99
+  accessibility: # UNCHANGED
+    full: 50
+    minimal: 0
 
-  goty_compatability_mode:
+  goty_compatability_mode: # Using GOTY not Replanted
     'false': 0
     'true': 50
 
-  death_link:
+  death_link: # The Zombies ate your brains! - NOOOOOOOOOOOOOOOOO!
     'false': 0
     'true': 50
 
-  energy_link:
+  ring_link: # UNCHANGED
+    'false': 50
+    'true': 0
+
+  energy_link: # Will have it on for certain games
     'false': 0
     'true': 50
 
-  adventure_mode_progression:
+  seed_link: # UNCHANGED
+    'false': 50
+    'true': 0
+
+  lawn_link: # UNCHANGED
+    'false': 50
+    'true': 0
+
+  lawn_link_chances: # UNCHANGED
+    add_plant: 15
+    overwrite_plant: 5
+    remove_plant: 15
+
+  adventure_mode_progression: # Random level progression
     level_items: 99
 
-  minigame_levels:
+  minigame_levels: # Random minigame progression
     level_items: 99
 
-  puzzle_levels:
+  puzzle_levels: # Random puzzle progression
     level_items: 99
 
-  survival_levels:
+  survival_levels: # Random survival progression
     level_items: 99
 
-  cloudy_day_levels:
-    'off': 99
+  cloudy_day_levels: # UNCHANGED (Off by default because of GOTY Compatibility)
+    'off': 50
+    vanilla: 0
+    randomised_order: 0
+    open: 0
+    level_items: 0
 
-  bonus_levels:
-    'off': 99
+  bonus_levels: # UNCHANGED (Off by default because of GOTY Compatibility)
+    'off': 50
+    vanilla: 0
+    level_items: 0
 
-  china_level:
-    'off': 99
+  china_level: # UNCHANGED (Off by default because of GOTY Compatibility)
+    'off': 50
+    vanilla: 0
+    item: 0
 
-  huge_wave_locations:
+  huge_wave_locations: # UNCHANGED
     'false': 0
     'true': 50
 
-  shop_items:
-    64: 99
+  wavesanity_locations: # UNCHANGED (Might change this in the future)
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-2272: 0 # random value between 0 and 2272
 
-  adventure_levels_goal:
-    random-range-0-24: 99
+  shop_behaviour: # UNCHANGED
+    'off': 0
+    normal: 50
+    progressive: 0
 
-  adventure_areas_goal:
-    0: 99
+  shop_items: # Max out the amount of Items that can be in the Shop
+    96: 99
 
-  minigame_levels_goal:
-    random-high: 99
+  adventure_levels_goal: # Picks between 10 to 30 levels that are required to be cleared
+    random-range-10-30: 99
+
+  adventure_areas_goal: # 1 Area in the whole Adventure MUST be fully cleared to count
+    1: 99
+
+  minigame_levels_goal: # Picks between 5 to 10 minigames that are required to be cleared
+    random-range-5-10: 99
 
   puzzle_levels_goal:
-    random-high: 99
+    random-range-8-12: 99 # Picks between 8 to 12 puzzles that are required to be cleared
 
-  survival_levels_goal:
-    random-high: 99
+  survival_levels_goal: # Picks between 1 to 5 survival levels that are required to be cleared
+    random-range-1-5: 99
 
-  cloudy_day_levels_goal:
-    0: 99
-
-  bonus_levels_goal:
-    0: 99
-
-  total_levels_goal:
+  cloudy_day_levels_goal: # UNCHANGED
     0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-12: 0 # random value between 0 and 12
 
-  taco_hunt_items:
-    0: 99
+  bonus_levels_goal: # UNCHANGED
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-10: 0 # random value between 0 and 10
 
-  taco_hunt_percentage:
-    100: 99
+  total_levels_goal: # UNCHANGED
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-120: 0 # random value between 0 and 120
 
-  fast_goal:
+  taco_hunt_items: # UNCHANGED
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-30: 0 # random value between 0 and 30
+
+  taco_hunt_percentage: # UNCHANGED
+    100: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-100: 0 # random value between 1 and 100
+
+  fast_goal: # Forced on due to Level Items
     'false': 0
     'true': 50
 
-  conveyor_randomisation:
+  conveyor_randomisation: # Randomize conveyor levels
     'false': 0
     'true': 50
 
-  zombie_randomisation:
+  zombie_randomisation: # Randomize zombies on every level
     'false': 0
     'true': 50
 
-  zombie_randomised_modes:
-    Adventure: 1
-    Mini-games: 1
-    Survival: 0
-
-  randomised_zombies:
+  randomised_zombies: # All on except TrashCan due to playing with GOTY
     Balloon: 1
     Buckethead: 1
     Bungee: 1
@@ -128,84 +183,201 @@ Plants vs. Zombies:
     WallnutHead: 1
     Zomboni: 1
 
-  plant_stat_randomisation:
-    'false': 50
-    'true': 0
+  zombie_randomised_modes: # UNCHANGED (Removed certain ones due to Replanted only using them)
+    Adventure: 1
+    Mini-games: 1
 
-  maintain_vanilla_projectile_strength:
-    'false': 50
-    'true': 0
+  zombie_weight_randomisation: # Sets amount of zombie type to spawn per level
+    randomise_per_level: 99
 
-  easy_upgrade_plants:
+  plant_stat_randomisation: # This is cool actually, every plant has unique random stats so it's not the same game every time (EXAMPLE: Getting Melon Pult and keep using it and nothing else because it's the best one)
     'false': 0
     'true': 50
 
-  imitater_behaviour:
-    normal: 0
-    open: 50
+  maintain_vanilla_projectile_strength: # I will only turn this off if I dislike it
+    'false': 0
+    'true': 50
 
-  disable_storm_flashes:
+  plant_stat_randomisation_blacklist: # UNCHANGED (Might add some plants here if things get bad)
+    []
+
+  lock_conveyor_plants: # WHAT! This is an awesome setting; This means I MUST have the plants required to even make Conveyor plants show up
+    'false': 0
+    'true': 50
+
+  lock_vasebreaker_plants: # Just like with lock_conveyor_plants this is awesome
+    'false': 50
+    'true': 0
+
+  lock_izombie_zombies: # THIS IS SO COOL!!!!
+    'false': 0
+    'true': 50
+
+  easy_upgrade_plants: # Always have this on saves so much time
+    'false': 0
+    'true': 50
+
+  imitater_behaviour: # UNCHANGED
+    normal: 50
+    open: 0
+
+  disable_storm_flashes: # Pick which one you want
     'false': 50
     'true': 50
 
-  music_shuffle:
+  music_shuffle: # UNCHANGED
     disabled: 50
     by_type: 0
     by_level: 0
 
-  zen_garden_items:
+  costume_chances: # All Set to 0 due to limitations and are all Replanted exclusive
+    Backup Dancer (Original): 0
+    Buckethead (China): 0
+    Bungee (China): 0
+    Cabbage-pult (PvZ2): 0
+    Conehead (China): 0
+    Conehead (Headcrab): 0
+    Conehead (Winter): 0
+    Flag (China): 0
+    Flower Pot (China): 0
+    Football (China): 0
+    Peashooter (Retro): 0
+    Peashooter (Winter): 0
+    Polevaulter (China): 0
+    Wall-nut (Winter): 0
+    Zombie (China): 0
+    Zombie (Retro): 0
+    Zombie (Winter): 0
+
+  zen_garden_items: # UNCHANGED
     'false': 0
     'true': 50
 
-  starting_sun_upgrades:
-    'off': 0
+  starting_sun_upgrades: # Whenever I get a starting sun upgrade I start with 5 extra sun
     5_sun_each: 99
-    25_sun_each: 0
-    50_sun_each: 0
 
-  maximum_sun_upgrade:
-    50: 99
+  maximum_sun_upgrades: # UNCHANGED
+    50: 50
     random: 0
-    random-low: 0
-    random-high: 0
-    random-range-50-150: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-50-150: 0 # random value between 50 and 150
 
-  mower_reward_upgrades:
+  mower_reward_upgrades: # Helps the grind a bit more
     5: 99
 
-  random_seed_filler:
+  random_seed_filler: # Sure, when I am playing with others this could be helpful
     'false': 0
     'true': 50
 
-  starting_plants:
-    1: 99
+  zombie_freeze_filler: # Sounds pretty useful
+    'false': 0
+    'true': 50
 
-  starting_seed_slots:
+  zombie_hypnosis_filler: # This sounds like a fun filler
+    'false': 0
+    'true': 50
+
+  sun_burst_filler: # Could save a run if I get one
+    'false': 0
+    'true': 50
+
+  starting_plants: # UNCHANGED
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-49: 0 # random value between 1 and 49
+
+  starting_seed_slots: # You usually start with 6 seed slots, but I want to start with only 3
     3: 99
 
-  early_sunflower:
+  early_sunflower: # UNCHANGED
     'false': 50
     'true': 0
 
-  early_shovel:
+  early_shovel: # UNCHANGED
     'false': 50
     'true': 0
 
-  early_zen_garden:
+  early_zen_garden: # This does not effect the game that much, but it helps with extra grinding for money
+    'false': 0
+    'true': 50
+
+  progressive_sun_capacity_items: # UNCHANGED
     'false': 50
     'true': 0
 
-  trap_percentage:
-    random-high: 99
+  individual_tile_unlock_items: # UNCHANGED
+    'off': 50
+    light: 0
+    maximum: 0
 
-  mower_deploy_trap_weight:
-    random: 99
+  trap_percentage: # Half is traps and the other half is filler items
+    50: 99
 
-  seed_packet_cooldown_trap_weight:
-    0: 99
+  mower_deploy_trap_weight: # UNCHANGED
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
 
-  zombie_ambush_trap_weight:
-    random: 99
+  seed_packet_cooldown_trap_weight: # UNCHANGED
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  zombie_ambush_trap_weight: # UNCHANGED
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  zombie_shuffle_trap_weight: # UNCHANGED
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  zombie_caffeine_trap_weight: # UNCHANGED
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  rv_trap_weight: # UNCHANGED
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  crater_trap_weight: # UNCHANGED
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  lawn_flip_trap_weight: # UNCHANGED
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  lawn_randomiser_trap_weight: # UNCHANGED
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
 
   local_items: []
 
