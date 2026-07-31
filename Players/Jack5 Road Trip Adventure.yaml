@@ -69,13 +69,51 @@ Road Trip Adventure:
   ###########################
   # Item & Location Options #
   ###########################
-  # Unchanged from the base configuration.
   local_items: []
   non_local_items: []
-  start_inventory: {}
+  start_inventory:
+    # I want to start with one of each of the steering and braking upgrades, as driving around the Road Trip Adventure open world is a lot harder when I have absolutely no upgrades at all.
+    Progressive Brakes: 1
+    Progressive Steering: 1
+    # Also start with the first billboard, so that I can earn money just by driving through the world right from the start.
+    Billboard - Coffee Shop: 1
   start_hints: []
   start_location_hints: []
-  exclude_locations: []
+  exclude_locations:
+    # The below stamps require you to visit all the houses in specific areas. There is no in-game tracker nor AP tracker for what houses you have visited, therefore it doesn't make sense to lock AP items behind these.
+    - Stamp 1 # Peach Town
+    - Stamp 10 # Fuji City
+    - Stamp 23 # Sandpolis
+    - Stamp 52 # Chestnut Canyon
+    - Stamp 60 # White Mountain
+    - Stamp 72 # Papaya Island
+    - Stamp 85 # Cloud Hill
+    - Stamp 91 # Mushroom Road
+    # The below stamps are time trial versions of prior stamps, and are excluded due to their potential difficulty given how hard it is to come by certain items.
+    - Stamp 15 # Fuji City Treasure Maze (3:00)
+    - Stamp 22 # Fuji City Highway Race (0:50)
+    - Stamp 28 # Sandpolis Drag Race (0:08)
+    - Stamp 56 # Chestnut Canyon Volcano Course (1:10)
+    - Stamp 58 # Chestnut Canyon Rock Climbing (2:00)
+    - Stamp 76 # Papaya Island Obstacle Course (2:00)
+    # This stamp is an 8-step process that has you driving all around the map talking to NPCs in order to deliver a magazine. Like the above, there is no in-game tracker nor AP tracker for what NPCs you have talked to, and I don't want all this effort to be required for a critical item.
+    - Stamp 7
+    # Like the stamp above this one, this one is a fetch quest that requires you to find 7 gemstones throughout the world. Same old story of there being no in-game nor AP tracker, so this stamp too is excluded.
+    - Stamp 9
+    # This stamp is a 3-part (maybe 4-part) process that involves travelling all across the map to perform various actions and talk to a few NPCs. Excluded due to being time consuming.
+    - Stamp 41
+    # The mother of all fetch quests, this stamp requires collecting all 100 ChoroQ coins. Ain't no way in hell I'm doing that.
+    - Stamp 46
+    # Stamp 50 and 51 both require extreme attention to detail when it comes to NPC chatter within My City.
+    - Stamp 50
+    - Stamp 51
+    # An 8-part fetch quest all over some suspicion of ghosts in the Road Trip Adventure world.
+    - Stamp 63
+    # This one involves going back and forth between two NPCs in two very far-removed locations.
+    - Stamp 71
+    # The picture-taking version of Stamp 46. Not a chance in the world of me completing this.
+    - Stamp 96
+    # TODO: Exclude particularly expensive Shop Purchases
   priority_locations: []
   item_links: []
   plando_items: []
