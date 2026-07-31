@@ -41,8 +41,8 @@ Balatro:
     # If your goal is 'beat Decks' or 'beat decks on stake', specify the number of wins you need to beat.
     # If your goal isn't "beat decks" or "beat decks on stake", you can ignore this setting.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 15.
-    # The default goal of 4 always seemed quite daunting and sluggish, but now that I have actually tested it with my new config, it is fine. Even though I only have access to a single stake, DO NOT CHANGE THIS FROM 4.
-    4: 50
+    # The default goal of 4 always seems just a tad bit daunting and sluggish. There are times when 4 is acceptable and when it is not. For that reason, I've set this option to randomly be either 3 or 4.
+    random-range-3-4: 50
   unique_deck_win_goal:
     # If your goal is 'beat unique decks', specify the number of unique decks you need to beat
     # This setting can be ignored if your goal isn't "beat unique decks".
