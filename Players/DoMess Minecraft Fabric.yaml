@@ -92,12 +92,9 @@ Minecraft Fabric:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 120
-    ## DoMess: v1.1: changed default from 25:50 >>> 30:40
-    30: 40
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-0-120: 0 # random value between 0 and 120
+    ## DoMess: v1.1: enabled random, 20 - 40
+    25: 50
+    random-range-low-20-40: 50 # random value between 0 and 120
 
   excluded_locations:
     # Determines Blacklisted Locations in the Randomizer
@@ -164,12 +161,10 @@ Minecraft Fabric:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 1142
-    ## DoMess: v1.1: changed default 0:50 >>> 5:25 # note: not active unless itemsanity is on, which might return in future
-    5: 25
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-0-1142: 0 # random value between 0 and 1142
+    ## DoMess: v1.1: enabled random, 5 - 25 
+    # note: not active unless itemsanity is on, which might return in future
+    0: 50
+    random-range-5-25: 50 # random value between 0 and 1142
 
   itemsanity_local_fill:
     # The Percentage of Itemsanity Checks that should only contain items from your world
@@ -179,11 +174,8 @@ Minecraft Fabric:
     # Minimum value is 0
     # Maximum value is 98
     ## DoMess: v1.1: changed default 90:50 >>> 95:90
-    95: 90
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-0-98: 0 # random value between 0 and 98
+    90: 50
+    random-range-90-95: 50 # random value between 0 and 98
 
   excluded_from_itemsanity:
     # Determines certain Items that shouldn't appear in Itemsanity
@@ -222,12 +214,9 @@ Minecraft Fabric:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 100
-    ## DoMess: v1.1: changed default 25:50 >>> 50:75
-    50: 75
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-0-100: 0 # random value between 0 and 100
+    ## DoMess: v1.1: changed default 25:50 >>> 50:50, enabled random 50 - 75, weighted higher
+    50: 50
+    random-range-high-50-75: 50 # random value between 0 and 100
 
   ######################
   # Difficulty Options #
@@ -318,12 +307,12 @@ Minecraft Fabric:
     # You can define additional values between the minimum and maximum values.
     # Minimum value is 0
     # Maximum value is 100
-    ## DoMess: v1.1: changed default 20:50 >>> 0:25
-    0: 25
+    ## DoMess: v1.1: changed default 20:50 >>> 10:50, enabled random 0 - 25
+    10: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
-    random-range-0-100: 0 # random value between 0 and 100
+    random-range-0-25: 50 # random value between 0 and 100
 
   reverse_controls_trap_weight:
     # Likelihood of a receiving a trap which causes WASD, Shift, Jump, Break, and Place to Swap for a short duration

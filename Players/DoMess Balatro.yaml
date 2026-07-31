@@ -316,7 +316,8 @@ Balatro:
     25: 50
     random: 50
     random-low: 0
-    random-high: 50
+    random-high: 0
+    random-range-0-50: 50
 
   permanent_filler:
     # The amount of permanent filler items (like "+1 Hand Size") that is going to be generated.
