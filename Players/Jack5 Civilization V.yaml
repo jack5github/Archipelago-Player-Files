@@ -7,7 +7,7 @@ game: Civilization V
 requires:
   version: 0.6.7
   game:
-    Civilization V: 0.10.6
+    Civilization V: 0.10.7
 Civilization V:
   ################
   # Game Options #
@@ -18,6 +18,9 @@ Civilization V:
   accessibility:
     # Keep the run focused on reaching the goal, don't indulge too much in other content.
     minimal: 50
+  #########
+  # Logic #
+  #########
   victory_goal_logic:
     # Which victory should be achievable before the game is considered beatable?
     # Note that this solely affects progression logic. You can still beat the game earlier than expected or pursue a different victory if you so choose.
@@ -43,6 +46,9 @@ Civilization V:
     # Do not require ocean travel to win.
     'false': 50
     'true': 0
+  ###################
+  # Quality of Life #
+  ###################
   policy_cost_modifier:
     # Multiplies the base cost of adopting social policies with the given percentage.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
@@ -79,6 +85,18 @@ Civilization V:
     # Changed to `true` in order to reflect the standard behaviour of the game.
     'false': 0
     'true': 50
+  super_palace:
+    # Replaces the default Palace with a version that has much higher yields:
+    # - Gold/Science/Production: 3 -> 15
+    # - Culture: 1 -> 5
+    # - Happiness/Faith/Food: 0 -> 5
+    # This makes the early game easier without your usual base technologies.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  ############
+  # Sanities #
+  ############
   building_sanity:
     # Add most standard buildings to the location pool. This adds 53 buildings to the location pool in total.
     # Buildings that will not be added:
@@ -138,6 +156,9 @@ Civilization V:
     # Unchanged from the base configuration.
     'false': 50
     'true': 0
+  ################
+  # Filler Items #
+  ################
   filler_item_weights:
     # The weights of each filler item to be chosen when a filler item is required.
     # Unchanged from the base configuration.
@@ -204,6 +225,9 @@ Civilization V:
     Trap - Gold -50: 25
     Trap - Shuffle Units: 4
     Trap - War: 0
+  ##############
+  # Death Link #
+  ##############
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
     # Unchanged from the base configuration.

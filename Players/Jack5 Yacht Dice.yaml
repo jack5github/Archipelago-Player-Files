@@ -1,13 +1,13 @@
 ﻿name: Jack5Yahtzee{NUMBER}
 description: |-
-  Jack5's Yacht Dice player file
+  Jack5's Yacht Dice Bliss player file
 
   This Yacht Dice configuration is aimed at making the simple game of Yahtzee more varied, difficult and exciting for Archipelago runs. The number of dice and rolls are randomised, as are the categories that can be scored in. Extra dice and rolls must be found in other games, while categories are discovered while playing, ensuring that any time playing this game is a chaotic experience.
 game: Yacht Dice
 requires:
   version: 0.6.6
   game:
-    Yacht Dice: 2.1.4
+    Yacht Dice: 2.3.3
 Yacht Dice:
   ################
   # Game Options #
@@ -20,15 +20,18 @@ Yacht Dice:
     full: 50
   game_difficulty:
     # Difficulty. This option determines how difficult the scores are to achieve.
-    # Easy: for beginners. No luck required, just roll the dice and have fun. Lower final goal.
-    # Medium: intended difficulty. If you play smart, you will finish the game without any trouble.
-    # Hard: you will need to play smart and be lucky.
-    # Extreme: really hard mode, which requires many brain wrinkles and insane luck. NOT RECOMMENDED FOR MULTIWORLDS.
+    # The difficulties are ordered from easiest to hardest.
+    # Please try the difficulty to see if it is feasible and fun.
+    # Best way to test is to see if you can beat the score in logic when all items are unlocked.
+    # I DO NOT RECOMMEND OUTRAGEOUS AND IMPOSSIBLE FOR MULTIWORLDS
     # Unchanged from the base configuration.
     easy: 0
     medium: 50
     hard: 0
     extreme: 0
+    insane: 0
+    outrageous: 0
+    impossible: 0
   score_for_last_check:
     # The items in the item pool will always allow you to reach a score of 1000.
     # By default, the last check is also at a score of 1000.
@@ -70,22 +73,81 @@ Yacht Dice:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 5.
     # Unchanged from the base configuration.
     4: 50
-  alternative_categories:
-    # There are 16 default categories, but there are also 16 alternative categories.
-    # These alternative categories can be randomly selected to replace the default categories.
-    # They are a little strange, but can give a fun new experience.
-    # In the game, you can hover over categories to check what they do.
-    # This option determines the number of alternative categories in your game.
-    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 16.
+  ##############
+  # Categories #
+  ##############
+  total_number_of_categories:
+    # Number of categories in the game. Note if the list of allowed categories is smaller, there will be fewer categories.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 16.
+    # Unchanged from the base configuration.
+    16: 50
+  allowed_normal_categories:
+    # Normal categories that are allowed to appear.
+    # Unchanged from the base configuration.
+    - Category Ones
+    - Category Twos
+    - Category Threes
+    - Category Fours
+    - Category Fives
+    - Category Sixes
+    - Category Choice
+    - Category Inverse Choice
+    - Category Pair
+    - Category Three of a Kind
+    - Category Four of a Kind
+    - Category Tiny Straight
+    - Category Small Straight
+    - Category Large Straight
+    - Category Full House
+    - Category Yacht
+  allowed_alternative_categories:
+    # Alternative categories that are allowed to appear.
+    # Unchanged from the base configuration.
+    - Category Distincts
+    - Category Two times Ones
+    - Category Half of Sixes
+    - Category Twos and Threes
+    - Category Sum of Odds
+    - Category Sum of Evens
+    - Category Double Threes and Fours
+    - Category Quadruple Ones and Twos
+    - Category Micro Straight
+    - Category Three Odds
+    - Category 1-2-1 Consecutive
+    - Category Three Distinct Dice
+    - Category Two Pair
+    - Category 2-1-2 Consecutive
+    - Category Five Distinct Dice
+    - Category 4&5 Full House
+    - Category Pair SUM
+    - Category Three of a Kind SUM
+    - Category Four of a Kind SUM
+    - Category Tiny Straight SUM
+    - Category Small Straight SUM
+    - Category Large Straight SUM
+    - Category Full House SUM
+    - Category Yacht SUM
+    - Category Micro Straight SUM
+    - Category 1-2-1 Consecutive SUM
+    - Category Two Pair SUM
+    - Category 2-1-2 Consecutive SUM
+  percentage_alternative_categories:
+    # How likely alternative categories are to appear. 0 means no chance, 100 means only alternative categories.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Fully randomise all categories for a non-standard Yahtzee experience.
-    random-range-0-16: 50
-  allow_manual_input:
-    # If allowed, players can roll IRL dice and input them manually into the game.
-    # By sending "manual" in the chat, an input field appears where you can type your dice rolls.
-    # Of course, we cannot check anymore if the player is playing fair.
-    # I will not be using real-life dice.
-    yes_allow: 0
-    no_dont_allow: 50
+    random-range-0-100: 50
+  allowed_starting_categories:
+    # Set of categories that may appear as starting categories.
+    # Leave this empty to have randomly selected starting categories.
+    # If this list is smaller than the number of starting categories you want, random categories are added as starting.
+    # The default is ['Category Choice', 'Category Double Threes and Fours', 'Category Inverse Choice', 'Category Quadruple Ones and Twos'], but for maximum variety, I have made this empty.
+    []
+  number_of_starting_categories:
+    # Number of categories from the list of allowed starting categories that you start your game with.
+    # Note that you may start with more dice or rolls if the starting categories are really bad or require many dice.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 16.
+    # Randomly choose between the default (2) and double the default (4).
+    random-range-2-4: 50
   ###########################
   # Extra progression items #
   ###########################
@@ -120,6 +182,13 @@ Yacht Dice:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
     50: 50
+  double_category_calculation:
+    # This option determines how the score of a category is calculated when it appears multiple times.
+    # double: the multiplier is doubled each time the category is obtained.
+    # increment: the multiplier is increased by 1 each time the category is obtained.
+    # Unchanged from the base configuration.
+    double: 50
+    increment: 0
   weight_of_points:
     # Are you tired of rolling dice countless times and tallying up points one by one, all by yourself?
     # Worry not, as this option will simply add some points items to the item pool!
@@ -129,8 +198,7 @@ Yacht Dice:
     # Unchanged from the base configuration.
     20: 50
   points_size:
-    # If you choose to add points to the item pool, you can choose to have many small points,
-    # medium-size points, a few larger points, or a mix of them.
+    # If you choose to add points to the item pool, you can choose to have many small points, medium-size points, a few larger points, or a mix of them.
     # Unchanged from the base configuration.
     small: 0
     medium: 50
@@ -183,6 +251,43 @@ Yacht Dice:
     a_yacht_dice_odyssey: 0
     a_rollin_rhyme_adventure: 0
     random_story: 50
+  ########
+  # Misc #
+  ########
+  include_scores:
+    # Scores in this set will always be included.
+    # Note that if you put many scores here, there will be many filler items too.
+    # You can put numbers 1 up to (including) 1000. Note that scores above last check don't count.
+    # You can also set this option to just ['Everything'], this adds all possible scores to the pool (up to last check).
+    # Note: only the 10 lowest entries in your list are considered ('Everything' adds all scores anyway though).
+    # Unchanged from the base configuration.
+    - '1'
+  maximum_rng_in_itempool:
+    # When you add many or all scores in the above option, the item pool will be filled with many filler "RNG" items.
+    # This option determines the maximum number of filler items in the item pool and possibly put in other worlds.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
+    # Unchanged from the base configuration.
+    50: 50
+  allow_manual_input:
+    # If allowed, players can roll IRL dice and input them manually into the game.
+    # By sending "manual" in the chat, an input field appears where you can type your dice rolls.
+    # Of course, we cannot check anymore if the player is playing fair.
+    # I will not be using real-life dice.
+    yes_allow: 0
+    no_dont_allow: 50
+  receive_death_link_toggle:
+    # With this option on, your current game will be reset when someone else in the multiworld dies.
+    # Fine by me! I need to torture myself more.
+    'false': 0
+    'true': 50
+  send_death_link_toggle:
+    # With this option on, other players with deathlink will die when you put a "0" in one of the categories.
+    # Instead of putting a 0, you can just reset your game and the other players will be fine.
+    # So, this deathlink is very much preventable if you pay attention not to put a 0.
+    # When you put a 0, your own game will be reset as well.
+    # Using a score of 0 on categories is a very common strategy in Yahtzee, so it does not make sense to trigger Death Link when this happens.
+    'false': 50
+    'true': 0
   ###########################
   # Item & Location Options #
   ###########################
