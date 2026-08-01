@@ -6,8 +6,9 @@ description: |-
 game: Road Trip Adventure
 requires:
   version: 0.6.7
-  game:
-    Road Trip Adventure: 0.1.0
+  # Game version temporarily removed in order to support my unofficial patches to the APworld.
+  # game:
+  #   Road Trip Adventure: 0.1.0
 Road Trip Adventure:
   ################
   # Game Options #
@@ -72,12 +73,18 @@ Road Trip Adventure:
   local_items: []
   non_local_items: []
   start_inventory:
-    # I want to start with one of each of the steering and braking upgrades, as driving around the Road Trip Adventure open world is a lot harder when I have absolutely no upgrades at all.
+    # I want to start with the steering and braking upgrades, as driving around the open world is a lot harder when I have absolutely no upgrades at all.
     Progressive Brakes: 1
-    Progressive Steering: 1
-    # Also start with the first billboard, so that I can earn money just by driving through the world right from the start.
+    # After testing, I found that 1 steering upgrade was not enough, so I've added another.
+    Progressive Steering: 2
+    # Also start with the first billboard, so that I can earn money just by driving through the world right from the start. This means that I don't have to exclude Shop Purchases.
     Billboard - Coffee Shop: 1
-  start_hints: []
+  start_hints:
+    # Area Unlocks are incredibly important items that should be hinted from the start, so that everyone knows what to do in order to progress Road Trip Adventure.
+    - Area Unlocks
+    # Similarly, I also want to get Progressive Licenses earlier, because then I can spend more time racing as opposed to driving through the open world.
+    - Progressive License
+  # Getting location hints is a great way of looking into minigames to figure out if they are even worth playing. This is what Spyro: A Hero's Tail does. Unfortunately, there are so many minigames in Road Trip Adventure that if I were to put them all here, the hint list would be completely cluttered and it would be very difficult to use the Universal Tracker. Therefore, leave this empty.
   start_location_hints: []
   exclude_locations:
     # The below stamps require you to visit all the houses in specific areas. There is no in-game tracker nor AP tracker for what houses you have visited, therefore it doesn't make sense to lock AP items behind these.
@@ -97,23 +104,47 @@ Road Trip Adventure:
     - Stamp 58 # Chestnut Canyon Rock Climbing (2:00)
     - Stamp 76 # Papaya Island Obstacle Course (2:00)
     # This stamp is an 8-step process that has you driving all around the map talking to NPCs in order to deliver a magazine. Like the above, there is no in-game tracker nor AP tracker for what NPCs you have talked to, and I don't want all this effort to be required for a critical item.
+    - Trade Quest
     - Stamp 7
+    - Body Q150 # Extra reward
+    - Body Q150 / Stamp 7 # Doubled-up name
     # Like the stamp above this one, this one is a fetch quest that requires you to find 7 gemstones throughout the world. Same old story of there being no in-game nor AP tracker, so this stamp too is excluded.
+    - Gemstones
     - Stamp 9
+    - Body Q087 # Extra reward
+    - Body Q087 / Stamp 9 # Doubled-up name
     # This stamp is a 3-part (maybe 4-part) process that involves travelling all across the map to perform various actions and talk to a few NPCs. Excluded due to being time consuming.
     - Stamp 41
-    # The mother of all fetch quests, this stamp requires collecting all 100 ChoroQ coins. Ain't no way in hell I'm doing that.
+    - Flower Pattern # Extra reward
+    - Flower Pattern / Stamp 41 # Doubled-up name
+    # There is currently a bug with Stamp 44 where if you get it while also collecting Stamp 43, it doesn't come through. Excluded because of that.
+    - Stamp 44
+    - Space Meter # Extra reward
+    - Space Meter / Stamp 44 # Doubled-up name
+    # The mother of all fetch quests, this stamp requires collecting all 100 ChoroQ coins. Ain't no way in hell I'm doing that. I'm also excluding some of the Coine Rewards that require an extreme number of ChoroQ coins to collect.
     - Stamp 46
+    - Coine Reward 9 (Metal Pad)
+    - Coine Reward 10 (Hyper MAX)
+    - Coine Reward 10 (Hyper MAX) / Stamp 46 # Doubled-up name
     # Stamp 50 and 51 both require extreme attention to detail when it comes to NPC chatter within My City.
     - Stamp 50
     - Stamp 51
     # An 8-part fetch quest all over some suspicion of ghosts in the Road Trip Adventure world.
     - Stamp 63
+    - Body Q037 # Extra reward
+    - Body Q037 / Stamp 63 # Doubled-up name
     # This one involves going back and forth between two NPCs in two very far-removed locations.
     - Stamp 71
+    - Body Q082 # Extra reward
+    - Body Q082 / Stamp 71 # Doubled-up name
     # The picture-taking version of Stamp 46. Not a chance in the world of me completing this.
     - Stamp 96
-    # TODO: Exclude particularly expensive Shop Purchases
   priority_locations: []
   item_links: []
-  plando_items: []
+  plando_items:
+    # In order to have any luck finding ChoroQ coins, I need to have the Coin Radar at some point during the start of a run. This plando ensures that it will appear within the first sphere in a different world.
+    - items:
+        Coin Radar: true
+      world: true
+      location: early_locations
+      force: false
