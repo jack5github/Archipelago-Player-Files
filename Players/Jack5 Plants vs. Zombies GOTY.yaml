@@ -34,9 +34,9 @@ Plants vs. Zombies:
     'true': 50
   ring_link:
     # Enables Ring Link for Sun.
-    # I'm going to turn this on in the event that Zeroman95 turns this on himself.
-    'false': 0
-    'true': 50
+    # Sharing sun in Plants vs. Zombies is a double-edged sword. On one hand, it can allow for an incredibly broken strategy where one person plays Beghouled and the other person cheeses a difficult mission. On the other hand, it makes playing missions at the same time really difficult, because nobody can get the sun they need. For that reason, this is set to a 71% chance, so that in the event that there are two players with this setting the way it is, the total chance of Ring Link occurring between them is 50%.
+    'false': 29
+    'true': 71
   energy_link:
     # Adds an "Energy Link" button, allowing you to deposit and withdraw money via Energy Link.
     # I am shocked that I somehow didn't have this enabled.
@@ -58,10 +58,10 @@ Plants vs. Zombies:
     # - overwrite_plant: The percentage chance that a plant placed by another player will appear on your lawn, if that tile is not free. This results in the plant that was there being replaced.
     # - remove_plant: The percentage chance that a plant lost by another player will result in the loss of a plant on your lawn, if a plant exists on your lawn in the same tile.
     # This setting requires Lawn Link to be enabled.
-    # Unchanged from the base configuration.
-    add_plant: 15
-    overwrite_plant: 5
-    remove_plant: 15
+    # The percentages of these events have been changed based on how it felt for three people to use Lawn Link at once.
+    add_plant: 20 # Increased from 15%
+    overwrite_plant: 0 # Decreased from 5%
+    remove_plant: 10 # Decreased from 15%
   ################
   # Level Access #
   ################
@@ -184,9 +184,10 @@ Plants vs. Zombies:
     # A value of 0 disables the shop entirely.
     # A value of 64 has eight pages.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 64.
-    # I find grinding for money in Plants vs. Zombies to be a very unsatisfying experience, therefore I am keeping the number of shop items relatively low.
-    16: 33 # 2 pages
+    # I find grinding for money in Plants vs. Zombies to be an unsatisfying experience, however it is necessary when other players have lots of shop pages of their own. In order to keep up with them, my shop needs to have a large yet still random number of pages. 2 pages is too low, yet 6 pages seems excessive.
     24: 33 # 3 pages
+    32: 33 # 4 pages
+    40: 33 # 5 pages
   ########
   # Goal #
   ########
@@ -376,9 +377,9 @@ Plants vs. Zombies:
   ###################
   lock_conveyor_plants:
     # If this option is enabled, then conveyor levels will be unable to serve you plants that you haven't yet unlocked.
-    # Non-standard levels have always seemed too easy, so this option is a great addition.
-    'false': 0
-    'true': 50
+    # I tried having this option set to 'true', but a bug occurred where the run thought I could complete both Wall-nut Bowling minigames with only the default Wall-nut, even though I had randomised zombies that made this impossible. I also think that it's just really unsatisfying to be unable to use powerful Wall-nuts from the start in these conveyor levels.
+    'false': 50
+    'true': 0
   lock_vasebreaker_plants:
     # If this option is enabled, then Vasebreaker will be unable to serve you plants that you haven't yet unlocked.
     # Non-standard levels have always seemed too easy, so this option is a great addition.
@@ -633,6 +634,8 @@ Plants vs. Zombies:
     - 'Mini-games: Last Stand (Flag #4)'
     - 'Mini-games: Last Stand (Clear)'
     - 'Mini-games: ZomBotany 2 (Clear)'
+    # Beghouled Twist is the harder and more annoying version of Beghouled.
+    - 'Mini-games: Beghouled Twist (Clear)'
   priority_locations: []
   item_links:
     # This item link contains all of the key unlockable items in Plants vs. Zombies. Tile unlocks are not included to ensure everybody's lawn looks different, and who knows, it may be possible for other players to use `lawn_link` to place plants on inaccessible tiles.
