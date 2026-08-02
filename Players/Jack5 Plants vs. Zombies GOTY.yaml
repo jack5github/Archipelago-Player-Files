@@ -386,9 +386,9 @@ Plants vs. Zombies:
     'true': 50
   lock_izombie_zombies:
     # If this option is enabled, each zombie type in "I, Zombie" will be locked behind individual unlock items.
-    # Unchanged from the base configuration.
-    'false': 50
-    'true': 0
+    # Now that something has been added to `item_links`, it feels appropriate to enable this.
+    'false': 0
+    'true': 50
   easy_upgrade_plants:
     # Allows you to place upgrade plants without requiring their base form.
     # For example, Gatling Pea could be placed straight onto the lawn without requiring a Repeater first.
@@ -634,5 +634,37 @@ Plants vs. Zombies:
     - 'Mini-games: Last Stand (Clear)'
     - 'Mini-games: ZomBotany 2 (Clear)'
   priority_locations: []
-  item_links: []
+  item_links:
+    # This item link contains all of the key unlockable items in Plants vs. Zombies. Tile unlocks are not included to ensure everybody's lawn looks different, and who knows, it may be possible for other players to use `lawn_link` to place plants on inaccessible tiles.
+    - name: PvZ Item Packets
+      item_pool:
+        # Item groups
+        - Level
+        - Plant
+        - Mini-games
+        - Puzzle
+        # Progressive items
+        - Progressive Shovel
+        - Progressive Sun Capacity
+        # Plants (`lock_conveyor_plants` and `lock_vasebreaker_plants`)
+        - Explode-o-nut (Wall-nut Bowling)
+        - Giant Wall-nut (Wall-nut Bowling)
+        - Backwards Repeater (Vasebreaker)
+        # I, Zombie zombies (`lock_izombie_zombies`)
+        - Zombie (I, Zombie)
+        - Conehead Zombie (I, Zombie)
+        - Buckethead Zombie (I, Zombie)
+        - Football Zombie (I, Zombie)
+        - Screen Door Zombie (I, Zombie)
+        - Digger Zombie (I, Zombie)
+        - Ladder Zombie (I, Zombie)
+        - Bungee Zombie (I, Zombie)
+        - Balloon Zombie (I, Zombie)
+        - Pole Vaulting Zombie (I, Zombie)
+        - Imp (I, Zombie)
+        - Gargantuar (I, Zombie)
+        - Dancing Zombie (I, Zombie)
+      replacement_item: null
+      skip_if_solo: true
+  plando_locations:
   plando_items: []
