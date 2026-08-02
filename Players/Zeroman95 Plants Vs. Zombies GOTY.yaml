@@ -425,5 +425,5 @@ Plants vs. Zombies:
         - Dancing Zombie (I, Zombie)
       replacement_item: null
       skip_if_solo: true
-      plando_locations:
-      plando_items: []
+  plando_locations: []
+  plando_items: []

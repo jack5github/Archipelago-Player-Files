@@ -343,7 +343,7 @@ Plants vs. Zombies:
     randomise_once: 0
     randomise_per_level: 0
   plant_stat_randomisation:
-    # Randomises the stats of each Plant in the game. 
+    # Randomises the stats of each Plant in the game.
     # This affects Sun Cost, Packet Refresh Time, Toughness, Firing Rate and Projectile Damage.
     # Plants should remain relatively balanced while still providing variety.
     # While this affects the majority of levels in the game, it doesn't affect Puzzle levels or certain Mini-game levels.
@@ -524,7 +524,7 @@ Plants vs. Zombies:
     'false': 0
     'true': 50
   progressive_sun_capacity_items:
-    # Restricts the amount of sun that can be held at once until enough "Progressive Sun Capacity" items are collected. 
+    # Restricts the amount of sun that can be held at once until enough "Progressive Sun Capacity" items are collected.
     # You will begin the game with the ability to hold a maximum of 150 sun at a time.
     # Each "Progressive Sun Capacity" item you obtain doubles your current maximum.
     # Sun capacity seems like a thing that's desperately neded for Plants vs. Zombies to feel truly randomised.
@@ -666,5 +666,5 @@ Plants vs. Zombies:
         - Dancing Zombie (I, Zombie)
       replacement_item: null
       skip_if_solo: true
-  plando_locations:
+  plando_locations: []
   plando_items: []
