@@ -24,9 +24,9 @@ Plants vs. Zombies:
     'false': 0
     'true': 50
 
-  ring_link: # UNCHANGED
-    'false': 50
-    'true': 0
+  ring_link: # Turned on for other PVZ Games
+    'false': 0
+    'true': 50
 
   energy_link: # Will have it on for certain games
     'false': 0
@@ -36,9 +36,9 @@ Plants vs. Zombies:
     'false': 50
     'true': 0
 
-  lawn_link: # UNCHANGED
-    'false': 50
-    'true': 0
+  lawn_link: # Turned on for other PVZ Games
+    'false': 0
+    'true': 50
 
   lawn_link_chances: # UNCHANGED
     add_plant: 15
@@ -206,8 +206,8 @@ Plants vs. Zombies:
     'true': 50
 
   lock_vasebreaker_plants: # Just like with lock_conveyor_plants this is awesome
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
 
   lock_izombie_zombies: # THIS IS SO COOL!!!!
     'false': 0
@@ -308,9 +308,9 @@ Plants vs. Zombies:
     'false': 50
     'true': 0
 
-  individual_tile_unlock_items: # UNCHANGED
-    'off': 50
-    light: 0
+  individual_tile_unlock_items: # Makes all Tiles be individual unlocked placements
+    'off': 0
+    light: 50
     maximum: 0
 
   trap_percentage: # Half is traps and the other half is filler items
@@ -393,6 +393,37 @@ Plants vs. Zombies:
 
   priority_locations: []
 
-  item_links: []
-
-  plando_items: []
+  item_links:
+    # Copied from Jack5 Plants vs. Zombies GOTY YAML
+    - name: PvZ Item Packets
+      item_pool:
+        # Item groups
+        - Level
+        - Plant
+        - Mini-games
+        - Puzzle
+        # Progressive items
+        - Progressive Shovel
+        - Progressive Sun Capacity
+        # Plants (`lock_conveyor_plants` and `lock_vasebreaker_plants`)
+        - Explode-o-nut (Wall-nut Bowling)
+        - Giant Wall-nut (Wall-nut Bowling)
+        - Backwards Repeater (Vasebreaker)
+        # I, Zombie zombies (`lock_izombie_zombies`)
+        - Zombie (I, Zombie)
+        - Conehead Zombie (I, Zombie)
+        - Buckethead Zombie (I, Zombie)
+        - Football Zombie (I, Zombie)
+        - Screen Door Zombie (I, Zombie)
+        - Digger Zombie (I, Zombie)
+        - Ladder Zombie (I, Zombie)
+        - Bungee Zombie (I, Zombie)
+        - Balloon Zombie (I, Zombie)
+        - Pole Vaulting Zombie (I, Zombie)
+        - Imp (I, Zombie)
+        - Gargantuar (I, Zombie)
+        - Dancing Zombie (I, Zombie)
+      replacement_item: null
+      skip_if_solo: true
+      plando_locations:
+      plando_items: []
