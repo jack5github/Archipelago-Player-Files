@@ -3,12 +3,12 @@ description: |-
   Jack5's Yacht Dice Bliss player file
 
   This Yacht Dice configuration is aimed at making the simple game of Yahtzee more varied, difficult and exciting for Archipelago runs. The number of dice and rolls are randomised, as are the categories that can be scored in. Extra dice and rolls must be found in other games, while categories are discovered while playing, ensuring that any time playing this game is a chaotic experience.
-game: Yacht Dice
+game: Yacht Dice Bliss
 requires:
   version: 0.6.6
   game:
-    Yacht Dice: 2.3.3
-Yacht Dice:
+    Yacht Dice Bliss: 2.3.4
+Yacht Dice Bliss:
   ################
   # Game Options #
   ################
