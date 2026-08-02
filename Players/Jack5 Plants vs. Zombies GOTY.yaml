@@ -539,8 +539,8 @@ Plants vs. Zombies:
     # - off: Tiles will not be locked behind items.
     # - light: You will start with 5-6 tiles per row. All other tiles must be unlocked.
     # - maximum: You will start with 1-2 tiles per row. All other tiles must be unlocked.
-    # Locked tiles seem really interesting, but I don't want them to be too restrictive, so I'm going with the `light` option.
-    'off': 0
+    # Locked tiles are really interesting, but I don't want them to be too restrictive nor in every run, so I'm going with the `light` option, and a 50% chance at that.
+    'off': 50
     light: 50
     maximum: 0
   #########
