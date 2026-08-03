@@ -44,8 +44,8 @@ Yacht Dice Bliss:
     # This option determines what score you need to reach to finish the game.
     # It cannot be higher than the score for the last check (if it is, this option is changed automatically).
     # You can define additional values between the minimum and maximum values. Minimum value is 500, maximum value is 1000.
-    # Increased slightly from 777 to raise the overall difficulty. Based on personal testing, this likely should not exceed 850.
-    800: 50
+    # Increased slightly from 777 to raise the overall difficulty. Based on personal testing, this likely should not exceed 850. I played this solo and got around 900, so I think the initial constraints of 800-850 seems fine.
+    random-range-800-850: 50
   minimal_number_of_dice_and_rolls:
     # The minimal number of dice and rolls in the pool.
     # These are guaranteed, unlike the later items.
@@ -83,54 +83,60 @@ Yacht Dice Bliss:
     16: 50
   allowed_normal_categories:
     # Normal categories that are allowed to appear.
-    # Unchanged from the base configuration.
-    - Category Ones
-    - Category Twos
-    - Category Threes
-    - Category Fours
-    - Category Fives
-    - Category Sixes
-    - Category Choice
-    - Category Inverse Choice
-    - Category Pair
-    - Category Three of a Kind
-    - Category Four of a Kind
-    - Category Tiny Straight
-    - Category Small Straight
-    - Category Large Straight
-    - Category Full House
-    - Category Yacht
+    # Unchanged from the base configuration, as there are only 16 categories and no more can be banned.
+    - Category Ones # ⚀
+    - Category Twos # ⚁
+    - Category Threes # ⚂
+    - Category Fours # ⚃
+    - Category Fives # ⚄
+    - Category Sixes # ⚅
+    - Category Choice # Any
+    - Category Inverse Choice # Max - Any
+    - Category Pair # ⚅⚅ (fixed score)
+    - Category Three of a Kind # ⚅⚅⚅ (fixed score)
+    - Category Four of a Kind # ⚅⚅⚅⚅ (fixed score)
+    - Category Tiny Straight # ⚃⚄⚅ (fixed score)
+    - Category Small Straight # ⚂⚃⚄⚅ (fixed score)
+    - Category Large Straight # ⚁⚂⚃⚄⚅ (fixed score)
+    - Category Full House # ⚄⚄⚅⚅⚅ (fixed score)
+    - Category Yacht # ⚅⚅⚅⚅⚅ (fixed score)
   allowed_alternative_categories:
     # Alternative categories that are allowed to appear.
-    # Unchanged from the base configuration.
-    - Category Distincts
-    - Category Two times Ones
-    - Category Half of Sixes
-    - Category Twos and Threes
-    - Category Sum of Odds
-    - Category Sum of Evens
-    - Category Double Threes and Fours
-    - Category Quadruple Ones and Twos
-    - Category Micro Straight
-    - Category Three Odds
-    - Category 1-2-1 Consecutive
-    - Category Three Distinct Dice
-    - Category Two Pair
-    - Category 2-1-2 Consecutive
-    - Category Five Distinct Dice
-    - Category 4&5 Full House
-    - Category Pair SUM
-    - Category Three of a Kind SUM
-    - Category Four of a Kind SUM
-    - Category Tiny Straight SUM
-    - Category Small Straight SUM
-    - Category Large Straight SUM
-    - Category Full House SUM
-    - Category Yacht SUM
-    - Category Micro Straight SUM
-    - Category 1-2-1 Consecutive SUM
-    - Category Two Pair SUM
-    - Category 2-1-2 Consecutive SUM
+    # Categories can be banned until there are only 16 left. Of the below categories:
+    # - Distincts is banned as it's just plain bad.
+    # - Two times Ones is banned as it's a lot of effort for a low score.
+    # - Consecutive categories are banned as they are too confusing.
+    # - 4&5 Full House is banned as it's too restrictive.
+    # - SUM categories for 4 dice or more are banned as they don't produce as much score compared to their normal counterparts.
+    # ---
+    # - Category Distincts # 1 for every unique number
+    # - Category Two times Ones # ⚀ × 2
+    - Category Half of Sixes # ⚅ ÷ 2
+    - Category Twos and Threes # ⚁ or ⚂
+    - Category Sum of Odds # ⚀ or ⚂ or ⚄
+    - Category Sum of Evens # ⚁ or ⚃ or ⚅
+    - Category Double Threes and Fours # (⚂ or ⚃) × 2
+    - Category Quadruple Ones and Twos # (⚀ or ⚁) × 4
+    - Category Micro Straight # ⚄⚅ (fixed score)
+    - Category Three Odds # ⚄⚄⚄
+    # - Category 1-2-1 Consecutive # ⚃⚄⚅⚄ (fixed score)
+    - Category Three Distinct Dice # ⚃⚄⚅
+    - Category Two Pair # ⚄⚄⚅⚅ (fixed score)
+    # - Category 2-1-2 Consecutive # ⚃⚃⚅⚄⚅ (fixed score)
+    - Category Five Distinct Dice # ⚁⚂⚃⚄⚅
+    - Category 4&5 Full House # ⚃⚃⚄⚄⚄
+    - Category Pair SUM # ⚅⚅
+    - Category Three of a Kind SUM # ⚅⚅⚅
+    # - Category Four of a Kind SUM # ⚅⚅⚅⚅
+    - Category Tiny Straight SUM # ⚃⚄⚅
+    # - Category Small Straight SUM # ⚂⚃⚄⚅
+    # - Category Large Straight SUM # ⚁⚂⚃⚄⚅
+    # - Category Full House SUM # ⚄⚄⚅⚅⚅
+    # - Category Yacht SUM # ⚅⚅⚅⚅⚅
+    - Category Micro Straight SUM # ⚄⚅
+    # - Category 1-2-1 Consecutive SUM # ⚃⚄⚅⚄
+    # - Category Two Pair SUM # ⚄⚄⚅⚅
+    # - Category 2-1-2 Consecutive SUM # ⚃⚃⚅⚄⚅
   percentage_alternative_categories:
     # How likely alternative categories are to appear. 0 means no chance, 100 means only alternative categories.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
@@ -140,8 +146,17 @@ Yacht Dice Bliss:
     # Set of categories that may appear as starting categories.
     # Leave this empty to have randomly selected starting categories.
     # If this list is smaller than the number of starting categories you want, random categories are added as starting.
-    # The default is ['Category Choice', 'Category Double Threes and Fours', 'Category Inverse Choice', 'Category Quadruple Ones and Twos'], but for maximum variety, I have made this empty.
-    []
+    # The starting categories should be those that are easy to get a high score for given that you aren't able to reroll and are limited to 2 dice.
+    # Normal starting categories:
+    - Category Sixes
+    - Category Choice
+    - Category Inverse Choice
+    - Category Pair
+    # Alternative starting categories:
+    - Category Sum of Odds
+    - Category Sum of Evens
+    - Category Double Threes and Fours
+    - Category Micro Straight
   number_of_starting_categories:
     # Number of categories from the list of allowed starting categories that you start your game with.
     # Note that you may start with more dice or rolls if the starting categories are really bad or require many dice.
