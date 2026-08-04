@@ -28,8 +28,8 @@ Wordipelago:
   starting_guesses:
     # How many guesses you start the game with.
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 6.
-    # Similarly to the above, I am going with a random range around the default of 2.
-    random-range-1-3: 50
+    # Similarly to the above, I am going with a random range around the default of 2. Starting with only a single guess makes the game all about chance, which is completely unfair.
+    random-range-2-3: 50
   additional_guesses:
     # How many extra guesses are added to the item pool. You can not exceed 6 guesses in play
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
@@ -168,8 +168,27 @@ Wordipelago:
     'true': 0
   key_words:
     # Adds checks for spelling specified words. (max 20)
-    # Unchanged from the base configuration.
-    []
+    # Various words that do not re-use letters have been added to this list.
+    - BLADE
+    - BRAID
+    - CLOUD
+    - CRAZY
+    - FORZA
+    - JACKS
+    - KUBOS
+    - LIARS
+    - MAJOR
+    - MARIO
+    - PARTY
+    - PLANT
+    - QUAKE
+    - SPYRO
+    - STEAM
+    - TAILS
+    - TOWER
+    - UNITE
+    - WAVES
+    - WORMS
   #########
   # Items #
   #########
@@ -239,4 +258,10 @@ Wordipelago:
   exclude_locations: []
   priority_locations: []
   item_links: []
-  plando_items: []
+  plando_items:
+    # In addition to `non_local_items`, force Yellow Letters to appear in a sphere 1 location.
+    - items:
+        Yellow Letters: true
+      world: true
+      location: early_locations
+      force: false
