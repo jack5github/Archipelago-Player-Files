@@ -6,23 +6,23 @@ game: Refunct
 requires:
   version: 0.6.7
   game:
-    Refunct: 1.2.2
+    Refunct: 1.3.2
 
 Refunct:
   progression_balancing: # Increased by 10.
     60: 99
 
-  accessibility: # Unchanged
+  accessibility: # UNCHANGED
     full: 50
     minimal: 0
 
-  amount_of_grass: # Sets a random amount of grass. I am not too worried about this.
+  amount_of_grass: # Sets random amount of Grass.
     random-range-10-160: 99
 
-  required_grass_percentage: # Set whatever amount of grass is required.
+  required_grass_percentage: # Set whatever amount of Grass is required to beat the game.
     random-range-50-100: 99
 
-  goal: # Random Button or Platform... or Cube?
+  goal: # Random Button, Platform or Cube.
     button_31_1: 0
     button_1_1: 0
     random_known_button: 0
@@ -35,72 +35,69 @@ Refunct:
     random_known: 0
     random_unknown: 99
 
-  cubes: # Unchanged
+  cubes: # UNCHANGED
     always: 0
-    red_cubes_bag: 99
+    red_cubes_bag: 50
     never: 0
 
-  extra_cubes: # Unchanged
+  extra_cubes: # UNCHANGED
     always: 0
     red_cubes_bag: 0
-    green_cubes_bag: 99
+    green_cubes_bag: 50
     never: 0
 
   number_of_minigames: # Set same as Jack5 Refunct YAML
-    random-range-1-7: 99
+    random-range--1-7: 99
 
-  nerf_minigame_checks: # Turned on to reduce amount of important checks in Minigames
-    'false': 0
-    'true': 50
+  nerf_minigame_checks: # UNCHANGED
+    'false': 50
+    'true': 0
 
-  number_of_unlocks_per_minigame: # Unchanged
+  number_of_unlocks_per_minigame: # UNCHANGED
     1: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-1-2: 0 # random value between 1 and 2
 
-  minigames_likeliness: # Unchanged (Mini-Games are set to 0)
-    Block Blub Minigame: 1
+  minigames_likeliness: # Removed certain Minigames because they are stupid.
+    Block Blub Minigame: 2
     Block Brawl Minigame: 0
-    Button Galore Minigame: 1
+    Button Galore Minigame: 2
     Climb Chaos Minigame: 1
     Climb Line Minigame: 0
     Climb Narrow Minigame: 0
     Climb Spiral Minigame: 1
     Clique: 0
     Funny Bridge Game Minigame: 0
-    OG Randomizer Minigame: 1
+    OG Randomizer Minigame: 5
     Rando Mountain Minigame: 0
     Refunct Mountain Minigame: 0
-    Seeker Minigame: 1
-    Vanilla Minigame: 1
+    Seeker Minigame: 2
+    Vanilla Minigame: 2
 
-  traps: # Add all unique traps.
-    none: 0
-    pretty: 0
-    all: 99
+  see_other_players: # Lets challenge my PC.
+    100: 99
 
-  replace_flowers_by_traps: # 90% of all Flowers are traps.
-    90: 99
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range--100-100: 0 # random value between -100 and 100
+  effects_and_traps: # Increase Traps that effect the game instead of changing the Sky.
+    Effect - Dark skies: 1
+    Effect - Hurricane: 1
+    Effect - No skylight: 1
+    Effect - Red sky: 1
+    Effect - Starry sky: 1
+    Trap - Ascend: 3
+    Trap - Blurrrgh: 3
+    Trap - Depthless: 3
+    Trap - Fast-mo: 3
+    Trap - Slo-mo: 3
 
-  rename_grass: # Unchanged
-    none: 50
-    english: 0
-    latin: 0
-    both: 0
-
-  rename_flowers: # All Flowers are differently named.
-    none: 0
-    english: 0
-    latin: 0
+  rename_grass: # Random Grass names that I won't even know.
     both: 99
 
-  death_link: # Death to all!
+  rename_flowers: # Same as renamed grass.
+    both: 99
+
+  death_link: # DEATH TO ALL!
     'false': 0
     'true': 50
 
@@ -118,14 +115,6 @@ Refunct:
 
   priority_locations: []
 
-  item_links:
-    # Added from Jack5 Refunct YAML
-    - name: Refunct Grab Bag
-      item_pool:
-        - Abilities
-        - Clusters
-        - Cubes Bags
-      replacement_item: null
-      skip_if_solo: true
+  item_links: []
 
   plando_items: []
