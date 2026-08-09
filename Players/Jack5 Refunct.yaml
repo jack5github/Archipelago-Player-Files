@@ -7,7 +7,7 @@ game: Refunct
 requires:
   version: 0.6.7
   game:
-    Refunct: 1.2.2
+    Refunct: 1.3.2
 Refunct:
   ################
   # Game Options #
@@ -166,27 +166,26 @@ Refunct:
     # Based on Archipelago game "Clique". Hard-mode!
     # There is one free item in this minigame. Once the "button activation" item is found, you can press the button for another check.
     Clique: 0 # Disabled due to being boring.
-  traps:
-    # This option determines which traps are added to the game. 
-    # Each trap is added twice and replaces a "flower" filler item, if there are enough flowers.
-    # "none" adds no traps at all.
-    # "pretty" adds pretty traps that visually change the game for 60 seconds:
-    # Dark skies, No skylight, Disco sky, Starry sky, Red sky, Hurricane
-    # "all" adds pretty traps and also adds gameplay affecting traps that last for 30 seconds:
-    # Slo-mo, Fast-mo, Blurrrrgh.
-    # Oh you know I want as much pain as possible.
-    # TODO: Change this to only non-visual traps when the APworld updates.
-    none: 0
-    pretty: 0
-    all: 50
-  replace_flowers_by_traps:
-    # This option determines what percentage of flowers are replaced by traps.
-    # You can use positive numbers (1 (1%) to 100 (100%)) to replace flowers by pretty traps only.
-    # You can use negative numbers (-1 (1%) to -100 (100%)) to replace flowers by all traps (including gameplay affecting ones).
-    # Example: -90 means that 90% of flowers are replaced by traps, and they can be pretty or gameplay affecting.
-    # You can define additional values between the minimum and maximum values. Minimum value is -100, maximum value is 100.
-    # Unchanged from the base configuration.
-    0: 50
+  see_other_players:
+    # When other players have this on too, you can see them walking around in your world! This option is the number of other players you can see. 0 means it is off. You can probably just pick a large number, but the game might lag if you pick too many. Don't worry, you can change this setting in-game too!
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Enabled, set to 4 for now, as I don't imagine that I will see that many more Refunct AP players in my Discord group.
+    4: 50
+  effects_and_traps:
+    # Refunct has many effect- and trap items. This option will replace flowers by them. This option determines the amount each of them is added.
+    # An effect is usually just a pretty visual effect.
+    # A trap will affect the gameplay a bit more. Don't worry if you put too many.
+    # The amount of each effect has been reduced from 3, as these are purely visual. Conversely, the amount of each trap has been increased from 1, with less impactful traps getting higher weights.
+    Effect - Dark skies: 2
+    Effect - Hurricane: 2
+    Effect - No skylight: 2
+    Effect - Red sky: 2
+    Effect - Starry sky: 2
+    Trap - Ascend: 2
+    Trap - Blurrrgh: 6
+    Trap - Depthless: 4
+    Trap - Fast-mo: 4
+    Trap - Slo-mo: 2
   rename_grass:
     # This option changes "Grass" to names of actual grass types such as "Fine fescue" and "Kentucky bluegrass". You can choose between the English or the Latin names of the grass types.
     # I do say, I love me some differently-named grass, Gromit!
@@ -203,11 +202,11 @@ Refunct:
     both: 0
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
-    # Without the ability to drown myself due to Swim being enabled from the start, Death Link in this game is useless. In order for this to be rectified, two things ought to happen:
+    # Without the ability to drown myself due to Swim being enabled from the start, I cannot send Death Link. However, I am still able to receive it, so I'm enabling this option. In order for me to be able to send Death Link, two things ought to happen:
     # 1. Swim becomes a progressive item with an oxygen timer.
     # 2. Dying locks the player in place for a certain amount of time.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
   ###########################
   # Item & Location Options #
   ###########################
