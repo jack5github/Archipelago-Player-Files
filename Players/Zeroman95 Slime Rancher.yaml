@@ -1,0 +1,154 @@
+﻿name: ZeromanSR{NUMBER}
+
+description: Zeroman95s Slime Rancher YAML
+
+game: Slime Rancher
+requires:
+  version: 0.6.7
+  game:
+    Slime Rancher: 0.3.2
+
+Slime Rancher:
+  progression_balancing: # UNCHANGED
+    50: 99
+
+  accessibility: # UNCHANGED
+    full: 50
+    minimal: 0
+
+  goal_type: # UNCHANGED
+    notes: 50 # notes = read all notes
+    7zee: 0 # 7Zee = buy all 7Zee ranks
+    credits: 0 # credits = get to the end credits
+    mail: 0 # mail = mcguffin hunt, Casey's Letters
+
+  mail_count: # UNCHANGED
+    8: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-8-20: 0 # random value between 8 and 20
+
+  start_with_dry_reef: # UNCHANGED
+    # Start with the Dry Reef unlocked
+    'false': 0
+    'true': 50
+
+  enable_stylish_dlc_treasure_pods: # UNCHANGED (DON'T HAVE)
+    # Whether the Secret Style DLC Treasure Pods are locations in the pool.
+    #
+    #         This will add approximately 17 checks
+    #
+    #         note: THIS WILL NOT GIVE YOU DLC
+    # YOU MUST __***OWN***__ THE DLC
+    'false': 50
+    'true': 0
+
+  treasure_cracker_checks: # All 3 levels of Treasure Crackers will have checks
+    3: 99
+
+  include_7z: # UNCHANGED
+    # Include unlockables behind 7z as checks
+    # estimated to appear in sphere 2 and above
+    #
+    # This will add 54 checks
+    'false': 50
+    'true': 0
+
+  plortsanity: # Adds everyone including Gold
+    all: 99
+
+  fix_market_rates: # UNCHANGED
+    # Overrides the default market behavior:
+    # instead of https://slimerancher.fandom.com/wiki/Plort_Market_(Slime_Rancher)
+    # it will make all plort prices 150% base value, base value listed in the above link
+    'false': 0
+    'true': 50
+
+  start_with_drone: # Too early to have drones
+    'false': 50
+    'true': 0
+
+  trap_percent: # Always 50% or higher
+    50: 99
+
+  include_ogden: # UNCHANGED
+    # Include Ogden's Retreat
+    #
+    # This will add 10 checks
+    'false': 50
+    'true': 0
+
+  include_mochi: # UNCHANGED
+    # Include Mochi's Manor
+    #
+    # This will add 7 checks
+    'false': 50
+    'true': 0
+
+  include_viktor: # UNCHANGED
+    # Include Viktor's Workshop
+    #
+    # This will add 13 checks
+    'false': 50
+    'true': 0
+
+  postgame: # UNCHANGED
+    # Include Post-Credit Locations, i.e. Item Vaults
+    #
+    # This will add 42 checks
+    'false': 50
+    'true': 0
+
+  easy_skips: # UNCHANGED
+    # Enable Skips that many new players end up finding on their first playthrough
+    'false': 50
+    'true': 0
+
+  precise_movement: # UNCHANGED
+    # Enable Skips that require tighter movement than average
+    'false': 50
+    'true': 0
+
+  dangerous_skips: # UNCHANGED
+    # Enable Skips that have a high chance of taking damage or getting killed
+    'false': 50
+    'true': 0
+
+  obscure_locations: # UNCHANGED
+    # Enable Skips that abuse the terrain, usually in unintuitive ways
+    'false': 50
+    'true': 0
+
+  largo_jumps: # UNCHANGED
+    # Enable Skips where you jump off a largo midair
+    'false': 50
+    'true': 0
+
+  jetpack_boosts: # UNCHANGED
+    # Enable Skips where you use the ability to get rid of jetpack's startup times through careful jumping, allowing for more energy conservation
+    'false': 50
+    'true': 0
+
+  market_logic: # UNCHANGED
+    # Enable Logic tied to early trading when opening slime gates
+    'false': 50
+    'true': 0
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
