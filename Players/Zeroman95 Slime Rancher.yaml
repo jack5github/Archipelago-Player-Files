@@ -147,7 +147,7 @@ Slime Rancher:
 
   exclude_locations: []
 
-  priority_locations: []
+  priority_locations: ['Sell a Gold Plort']
 
   item_links: []
 
