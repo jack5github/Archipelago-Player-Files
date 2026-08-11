@@ -22,3 +22,7 @@ This document lists the Archipelago games that we have tried setting up or playi
 - **Vampire Survivors** - This game is one of my all-time favourites to play both in single and multiplayer. The important caveat is that it uses an online server to synchronise the game, and the Archipelago mod would compromise this, not to mention that it doesn't inherently support multiplayer.
 - **Watery Words** - Looks ugly and plays similarly.
 - **Wikipelago** - This is essentially Wikipedia: The Game but as an APworld. There is barely any content in it, and the game itself is rather buggy.
+
+## Zeroman95
+
+- **Donkey Kong 64** - It's cool to see AP for Donkey Kong 64, problem is that this game is LONG and by the time you played for a few hours you feel like you want to play something else and will barely get around 20-30 Checks minimum. Sadly I am not nostalgia for DK64, but I am with Ratchet 3.
