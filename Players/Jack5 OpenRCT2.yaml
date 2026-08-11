@@ -18,11 +18,6 @@ OpenRCT2:
   accessibility:
     # Unchanged from the base configuration.
     full: 50
-  ignore_ride_stat_changes:
-    # Disables changes to base ride stats. If enabled, rides will always behave like they do in the base game.
-    # Unchanged from the base configuration.
-    'false': 50
-    'true': 0
   death_link:
     # If you die, everybody dies, and vise versa!
     # This manifests itself in exploding rides. Somebody dying will cause a random ride to crash, and building rides badly will cause others to die. There's a 20 second timer between deathlink events.
@@ -226,6 +221,16 @@ OpenRCT2:
     # Unchanged from the base configuration.
     'false': 0
     'true': 50
+  land_price:
+    # Sets the base price of land. Setting this to 201 will keep the default land price in the scenario, which will then be randomized based on randomization range. Monopoly mode overrides this setting.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 201.
+    # Unchanged from the base configuration.
+    201: 50
+  construction_rights_price:
+    # Sets the base price of construction rights. Setting this to 201 will keep the default construction rights price in the scenario, which will then be randomized based on randomization range. Monopoly mode overrides this setting.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 201.
+    # Unchanged from the base configuration.
+    201: 50
   preferred_intensity:
     # Choose a preferred intensity for your guests. Less intense will limit guests to a maximum of 4 intensity, and more intense will limit guests to a minimum of 8 intensity in most circumstances. Normal is highly recommended for most players! Seriously, unless you really know what you are doing and want the (likely very tedious) challenge, you shouldn't change this.
     # Unchanged from the base configuration.
@@ -241,6 +246,11 @@ OpenRCT2:
     frequent: 0
     very_frequent: 0
     extremely_frequent: 0
+  ignore_ride_stat_changes:
+    # Disables changes to base ride stats. If enabled, rides will always behave like they do in the base game.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
   ################
   # Goal Options #
   ################
@@ -280,6 +290,11 @@ OpenRCT2:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
     # For all of these goal options, I have made them range randomly between their default and 10% less. This option has the possibility of being even lower, as building lots of roller coasters is more of an annoyance than a challenge.
     random-range-3-5: 50
+  include_stalls:
+    # Select whether shops and stalls should elligible to be included in the required rides list for completion.
+    # Unchanged from the base configuration. This may need to be turned off in the future in order to ensure enough roller coasters are built.
+    'false': 0
+    'true': 50
   park_rating_objective:
     # If enabled, choose the minimum park rating needed to beat the scenario.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 999.
@@ -342,6 +357,39 @@ OpenRCT2:
   ################
   # Shop Options #
   ################
+  balance_guest_counts:
+    # Attempts to balance the minimum guest requirements to the ride they're attached to. Low throughput rides like Spiral Slides will tend towards the minimum, while high throughput rides like roller coasters will tend towards the maximum.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  visibility:
+    # Choose how much the unlock shop displays.
+    # "Nothing" tells you nothing about the item you'll purchase.
+    # Progression tells you what class of item (Normal, Progression, Useful Trap) you're sending.
+    # Recipient tells you who will receive the item, but not what they'll receive.
+    # Progression Recipient tells you both the class of item and who receives it.
+    # Full tells you what you're buying and who receives it.
+    # I once changed this from Recipient to Nothing as no other games in my multiworlds have automatic hinting, however I've decided to give Recipient a try, because often I end up purchasing traps for games in progress.
+    nothing: 0
+    progression: 0
+    recipient: 50
+    progression_recipient: 0
+    full: 0
+  selected_awards:
+    # Choose what types (if any) of awards will have checks behind them.
+    # Negative awards will always reward a trap item, even if they're otherwise disabled!
+    # All Awards will have a check behind every award in the game.
+    # Positive will only place a check behind awards with positive attributes.
+    # None will not place checks behind awards.
+    # When I play RCT2, I don't think about getting awards, so it is better to just remove those checks.
+    all: 0
+    positive: 0
+    none: 50
+  exclude_safest_park:
+    # Exclude the Safest Park Award from having a check. This may be useful depending on deathlink settings.
+    # In a multiworld, having this set to true is a must!
+    'false': 0
+    'true': 50
   shop_minimum_excitement:
     # If the shop determines you need a ride with a minimum excitement, this value will be the lowest it can ask for.
     # If this value is higher than the maximum, the generator will assume it is a mistake and set it to 0.
@@ -395,39 +443,41 @@ OpenRCT2:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1000.
     # Unchanged from the base configuration.
     400: 50
-  balance_guest_counts:
-    # Attempts to balance the minimum guest requirements to the ride they're attached to. Low throughput rides like Spiral Slides will tend towards the minimum, while high throughput rides like roller coasters will tend towards the maximum.
+  shop_maximum_roller_coasters:
+    # When the shop requires multiple roller coasters, sets the maximum it can ask for. The default is the reccomended value.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
     # Unchanged from the base configuration.
-    'false': 0
-    'true': 50
-  visibility:
-    # Choose how much the unlock shop displays.
-    # "Nothing" tells you nothing about the item you'll purchase.
-    # Progression tells you what class of item (Normal, Progression, Useful Trap) you're sending.
-    # Recipient tells you who will receive the item, but not what they'll receive.
-    # Progression Recipient tells you both the class of item and who receives it.
-    # Full tells you what you're buying and who receives it.
-    # I once changed this from Recipient to Nothing as no other games in my multiworlds have automatic hinting, however I've decided to give Recipient a try, because often I end up purchasing traps for games in progress.
-    nothing: 0
-    progression: 0
-    recipient: 50
-    progression_recipient: 0
-    full: 0
-  awards:
-    # Choose what types (if any) of awards will have checks behind them.
-    # Negative awards will always reward a trap item, even if they're otherwise disabled!
-    # All Awards will have a check behind every award in the game.
-    # Positive will only place a check behind awards with positive attributes.
-    # None will not place checks behind awards.
-    # When I play RCT2, I don't think about getting awards, so it is better to just remove those checks.
-    all: 0
-    positive: 0
-    none: 50
-  exclude_safest_park:
-    # Exclude the Safest Park Award from having a check. This may be useful depending on deathlink settings.
-    # In a multiworld, having this set to true is a must!
-    'false': 0
-    'true': 50
+    3: 50
+  shop_maximum_tracked_rides:
+    # When the shop requires multiple tracked rides, sets the maximum it can ask for. The default is the reccomended value.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
+    # Unchanged from the base configuration.
+    4: 50
+  shop_maximum_specific_rides_early:
+    # When the shop requires a specific, trackless ride early in the game, sets the maximum it can ask for. The default is the reccomended value.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
+    # Unchanged from the base configuration.
+    3: 50
+  shop_maximum_specific_rides:
+    # When the shop requires a specific, trackless ride later in the game, sets the maximum it can ask for. The default is the reccomended value.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
+    # Unchanged from the base configuration.
+    7: 50
+  shop_maximum_transport_water_rides:
+    # When the shop requires transport rides, water rides and unwieldy roller coasters, sets the maximum it can ask for. The default is the reccomended value.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
+    # Unchanged from the base configuration.
+    3: 50
+  shop_maximum_stalls:
+    # When the shop requires shops and stalls, sets the maximum it can ask for. The default is the reccomended value.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
+    # Unchanged from the base configuration.
+    10: 50
+  shop_maximum_other_rides:
+    # When the shop requires other rides and categories (mostly flat rides), sets the maximum it can ask for. The default is the reccomended value.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 10.
+    # Unchanged from the base configuration.
+    10: 50
   #######################
   # Item & Trap Options #
   #######################
@@ -455,26 +505,46 @@ OpenRCT2:
     # By default, every game starts with a single skip to ignore a shop requirement. This will add additional skips to be found in the item pool.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     7: 50
+  land_discounts:
+    # Adds Land Discounts to the pool. 0 means no discounts will be included in the pool. More discounts will make individual discounts easier to find, but less effective. Monopoly mode will raise the minimum to 20.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 50.
+    # Unchanged from the base configuration.
+    0: 50
+  construction_rights_discounts:
+    # Adds Construction Rights Discounts to the pool. 0 means no discounts will be included in the pool. More discounts will make individual discounts easier to find, but less effective. Monopoly mode will raise the minimum to 20.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 50.
+    # Unchanged from the base configuration.
+    0: 50
   furry_convention_traps:
     # When found, instantly hosts a furry convention in your park! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Adjusted from 5 to equate to the standard trap count of 20. Requires firing all newly spawned Entertainers by solving a quiz, rather than excessive mouse clicking.
-    6: 50
+    5: 50
   bathroom_traps:
     # When found, instantly maxes out the bathroom stat of every guest! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Adjusted from 5 to equate to the standard trap count of 20.
-    6: 50
+    5: 50
   spam_traps:
     # When found, spams ads all over the screen! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Adjusted from 5 to equate to the standard trap count of 20.
-    6: 50
+    5: 50
   loan_shark_traps:
     # When found, increases your loan! Adding traps will increase the total number of items in the world.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
     # Adjusted from 5 to equate to the standard trap count of 20. This specific trap has been reduced in quantity because of the strain it puts on the game.
-    3: 50
+    2: 50
+  food_poisoning_traps:
+    # When found, gives everybody with food in the park Norovirus! Adding traps will increase the total number of items in the world.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 20.
+    # Adjusted from 5 to equate to the standard trap count of 20.
+    5: 50
+  trap_link:
+    # When your friends recieve a trap, you get it too! Of course the same is true the other direction. Works with compatible games.
+    # Enabled, even though I'm unlikely to play with others that also play OpenRCT2.
+    'false': 0
+    'true': 50
   all_rides_and_scenery_base:
     # Adds every ride and scenery pack in the base game to the item pool. This will make for a significantly longer scenario.
     # Unchanged from the base configuration.
