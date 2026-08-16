@@ -1,0 +1,94 @@
+﻿name: Jack5Wario{NUMBER}
+description: |-
+  Jack5's WarioWare, Inc. - Mega Microgame$! player file
+game: WarioWare, Inc. - Mega Microgame$!
+requires:
+  version: 0.6.7
+  game:
+    WarioWare, Inc. - Mega Microgame$!: 1.0.0
+WarioWare, Inc. - Mega Microgame$!:
+  ################
+  # Game Options #
+  ################
+  # Unchanged from the base configuration.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  included_stages:
+    # Which stages will be added in the location pool. Introduction stage is unlocked by default and can't be toggled off.
+    # Unchanged from the base configuration.
+    - Jimmy
+    - Dribble
+    - Mona
+    - 9-Volt
+    - Remix 1
+    - Orbulon
+    - Dr. Crygor
+    - Kat
+    - Remix 2
+    - Wario
+    - Easy
+    - Thrilling
+    - Hard
+    - Total Boss
+    - Sheriff Stage
+    - Dr. Wario
+    - Fly Swatter
+    - Pyoro
+    - Pyoro 2
+    - Jump Forever
+    - Paper Plane Stage
+    - Skating Board
+  microgame_unlock:
+    # How are microgames unlocked.
+    # * Bundles: Character bundles are added into the pool which unlocks the corresponding set of games
+    # * Individual: Unlocks for individual microgames are added into the pool
+    # Unchanged from the base configuration.
+    bundles: 50
+    individual: 0
+  flowers:
+    # How many medals are placed in the item pool. Flowers are used to allow you to goal the game which is done by selecting the credits level.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 50.
+    # Unchanged from the base configuration.
+    30: 50
+  flowers_required:
+    # Percentage of medals required to finish the game. Result is floored with a minimum of 1.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    75: 50
+  microgame_flowers:
+    # Enable getting flowers (Hi-Scores) in microgames as valid locations. By default every microgame has a location when getting 5 or more score points.
+    # Enabled, as without this, there aren't that many locations.
+    'false': 0
+    'true': 50
+  microgame_count:
+    # How many microgames will be considered locations. Selected at random.
+    # Unselected microgames will not be unlocked. At least 4 microgames will be forced per group and the selection will remain relatively equal across groups.
+    # You can define additional values between the minimum and maximum values. Minimum value is 18, maximum value is 213.
+    # Increased from 36 to bring the total number of locations to ~150.
+    42: 50
+  stage_hi_scores:
+    # Enables additional Hi-Score locations for character games. These WILL require playing the game again after beating it! May be a nuisance.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_from_pool:
+    # Start with a single microgame bundle so that I don't have to play the full Introduction game every time.
+    Introduction Microgame Bundle: 1
+  start_hints: []
+  start_location_hints: []
+  exclude_locations:
+    # Exclude all Introduction game locations so they never contain anything important.
+    - Introduction - Clear
+    - Introduction - 10 Points
+    - Introduction - 15 Points
+    - Introduction - 20 Points
+  priority_locations: []
+  item_links: []
+  plando_items: []
