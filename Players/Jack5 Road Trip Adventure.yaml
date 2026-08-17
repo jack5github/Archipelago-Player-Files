@@ -6,9 +6,8 @@ description: |-
 game: Road Trip Adventure
 requires:
   version: 0.6.7
-  # Game version temporarily removed in order to support my unofficial patches to the APworld.
-  # game:
-  #   Road Trip Adventure: 0.1.0
+  game:
+    Road Trip Adventure: 0.2.0
 Road Trip Adventure:
   ################
   # Game Options #
@@ -67,6 +66,23 @@ Road Trip Adventure:
     standard: 50
     vanilla: 0
     remove: 0
+  parts_cost_modifier:
+    # Set a percentage modifier for the cost of parts. If set to 0, all parts will be free.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged from the base configuration.
+    100: 50
+  parts_cost_maximum:
+    # Set the maximum cost for a part. This maximum is applied *after* the percentage modifier above.
+    # If set to -1 (default), no maximum will be applied.
+    # If set to 0, all parts will be free.
+    # You can define additional values between the minimum and maximum values. Minimum value is -1, maximum value is 200000.
+    # Unchanged from the base configuration.
+    -1: 50
+  auto_unlock_warps:
+    # Automatically unlock the ability to warp to a town's Q's Factory when you gain access to it.
+    # Enabled to reduce the amount of time I need to spend driving.
+    'false': 0
+    'true': 50
   ###########################
   # Item & Location Options #
   ###########################
