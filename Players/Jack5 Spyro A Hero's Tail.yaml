@@ -191,7 +191,6 @@ requires:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
     # Unchanged from the base configuration.
     75: 50
-
   non_blink_enemies:
     # This option is used when both shop_randomization and gem_logic are enabled. It lets you decide what percentage of gems from enemies you want to be expected to collect. This only applies to enemies when playing as Spyro or Hunter.
     # Gem logic assumes you will kill every enemy exactly once. This is nearly impossible to do accurately, since enemies respawn on death or reloads, and you likely won't be able to kill every enemy you come across on first visit. This option was introduced to mitigate this issue.

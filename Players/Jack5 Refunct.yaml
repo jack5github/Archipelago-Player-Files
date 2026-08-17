@@ -7,7 +7,7 @@ game: Refunct
 requires:
   version: 0.6.7
   game:
-    Refunct: 1.3.2
+    Refunct: 1.4.0
 Refunct:
   ################
   # Game Options #
@@ -176,16 +176,18 @@ Refunct:
     # An effect is usually just a pretty visual effect.
     # A trap will affect the gameplay a bit more. Don't worry if you put too many.
     # The amount of each effect has been reduced from 3, as these are purely visual. Conversely, the amount of each trap has been increased from 1, with less impactful traps getting higher weights.
-    Effect - Dark skies: 2
-    Effect - Hurricane: 2
-    Effect - No skylight: 2
-    Effect - Red sky: 2
-    Effect - Starry sky: 2
-    Trap - Ascend: 2
-    Trap - Blurrrgh: 6
-    Trap - Depthless: 4
-    Trap - Fast-mo: 4
-    Trap - Slo-mo: 2
+    # Effects
+    Dark Skies: 2
+    Hurricane: 2
+    No Skylight: 2
+    Red Sky: 2
+    Starry Sky: 2
+    # Traps
+    Ascend Trap: 2
+    Blurrrgh Trap: 6
+    Depthless Trap: 4
+    Fast-mo Trap: 4
+    Slo-mo Trap: 2
   rename_grass:
     # This option changes "Grass" to names of actual grass types such as "Fine fescue" and "Kentucky bluegrass". You can choose between the English or the Latin names of the grass types.
     # I do say, I love me some differently-named grass, Gromit!
