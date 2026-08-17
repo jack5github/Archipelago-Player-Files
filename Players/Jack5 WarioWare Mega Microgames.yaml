@@ -89,6 +89,22 @@ WarioWare, Inc. - Mega Microgame$!:
     - Introduction - 10 Points
     - Introduction - 15 Points
     - Introduction - 20 Points
+    # Other locations are excluded based on their difficulty.
+    # Games
+    - Fly Swatter - 20 Points # Button-mashing
+    - Fly Swatter - 35 Points # Button-mashing
+    - Fly Swatter - 50 Points # Button-mashing
+    - Thrilling - 6 Points # One life
+    - Thrilling - 8 Points # One life
+    - Thrilling - 10 Points # One life
+    # Introduction microgames
+    - Saving Face - Flower # Reaction-based
+    - Mug Shot - Flower # Reaction-based
+    # Mona microgames
+    - Sloppy Salon - Clear # Button-mashing
+    - Sloppy Salon - Flower # Button-mashing
+    # Wario microgames
+    - Wario Kendo - Flower # Reaction-based
   priority_locations: []
   item_links: []
   plando_items: []
