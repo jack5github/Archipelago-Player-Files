@@ -94,6 +94,9 @@ FNaFW:
       'Nightmarionne',
       'Coffee',
       'Purpleguy',
+      'Halloween Land: Enter',
+      'Dusting Fields: Warp Unlock',
+      'Geist Lair: Enter',
     ]
 
   priority_locations: ['Fazbear Hills: Pearl'] # Makes Pearl be an important location
