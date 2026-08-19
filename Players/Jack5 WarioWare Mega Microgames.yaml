@@ -94,15 +94,21 @@ WarioWare, Inc. - Mega Microgame$!:
     - Fly Swatter - 20 Points # Button-mashing
     - Fly Swatter - 35 Points # Button-mashing
     - Fly Swatter - 50 Points # Button-mashing
+    - Total Boss - 4 Points # Reaction-based
+    - Total Boss - 5 Points # Reaction-based
     - Thrilling - 6 Points # One life
     - Thrilling - 8 Points # One life
     - Thrilling - 10 Points # One life
     # Introduction microgames
     - Saving Face - Flower # Reaction-based
     - Mug Shot - Flower # Reaction-based
+    # Jimmy microgames
+    - Batter Up - Flower # Reaction-based
     # Mona microgames
     - Sloppy Salon - Clear # Button-mashing
     - Sloppy Salon - Flower # Button-mashing
+    # Dr. Crygor microgames
+    - Funky Fountain - Flower # Reaction-based
     # Wario microgames
     - Wario Kendo - Flower # Reaction-based
   priority_locations: []
