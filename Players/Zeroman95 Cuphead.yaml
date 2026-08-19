@@ -28,16 +28,10 @@ Cuphead:
     'false': 50
     'true': 0
 
-  mode: # UNCHANGED
-    # Set the mode of the randomizer which includes goal.
-    # NOTE: If DLC is not enabled, picking DLC modes will pick a random mode from the base game instead.
-    beat_devil: 50
-    collect_contracts: 0
-    buy_out_shop: 0
-    dlc_beat_saltbaker: 0
-    dlc_beat_both: 0
-    dlc_collect_ingredients: 0
-    dlc_collect_both: 0
+  mode: # Chooses one random goal for me.
+    beat_devil: 33
+    collect_contracts: 33
+    buy_out_shop: 33
 
   expert_mode: # UNCHANGED
     # Set the boss difficulty to expert.
@@ -88,18 +82,8 @@ Cuphead:
     random-high: 0 # random value weighted towards higher values
     random-range-3-17: 0 # random value between 3 and 17
 
-  start_maxhealth: # UNCHANGED
-    # Set starting max health.
-    # NOTE: Health cannot be any higher than 9, so health charms would be less useful at higher health amounts.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 1
-    # Maximum value is 4
-    3: 50
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-1-4: 0 # random value between 1 and 4
+  start_maxhealth: # Have a little extra health so I am not playing this game forever.
+    4: 99
 
   start_maxhealth_p2: # UNCHANGED
     # Set starting max health for Player 2. Set to 0 to use Player 1's max health.
@@ -210,11 +194,9 @@ Cuphead:
     'false': 50
     'true': 0
 
-  boss_grade_checks: # UNCHANGED
-    # Enable grade checks for Boss Levels.
-    # NOTE: S Grade option will be treated as A+ Grade if Expert Mode is disabled.
-    disabled: 0
-    a_minus_grade: 50
+  boss_grade_checks: # Disabling Grade checks for bosses, because some of them are super super difficult.
+    disabled: 1
+    a_minus_grade: 0
     a_grade: 0
     a_plus_grade: 0
     s_grade: 0
