@@ -7,7 +7,7 @@ game: Toy Story 2
 requires:
   version: 0.6.7
   game:
-    Toy Story 2: 2.1.1
+    Toy Story 2: 2.2.0
 Toy Story 2:
   ################
   # Game Options #
@@ -166,6 +166,12 @@ Toy Story 2:
     '20': 50
     '25': 0
     '50': 0
+  hamm_fifty_coin_checks:
+    # Whether handing Hamm 50 coins in a level sends a check.
+    # Turn this off if you would rather not farm 50 coins per level. This has no effect on Coinsanity itself - coins still send checks and are still sent to you exactly the same way. It only removes the ten "Hamm's 50 Coins Token" checks. With them gone the coins you receive have nothing left to unlock, so every Coin Bundle item becomes filler.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
   lifesanity:
     # All lives are checks now! That means lives will no longer grant you a life, but a check instead! They also don't respawn so play carefully!
     # Considering that lives are meaningless given `never_game_over` is enabled, it makes more sense for these to be checks in order to add to the total number of locations.
