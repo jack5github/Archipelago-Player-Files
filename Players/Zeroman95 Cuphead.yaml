@@ -107,11 +107,8 @@ Cuphead:
     'false': 0
     'true': 50
 
-  level_placements: # UNCHANGED
-    # Define which levels will be placed in which spots when shuffling the levels.
-    # Note: Some levels cannot be shuffled, and some levels cannot be placed in specific spots.
-    # Key: original, Value: new
-    {}
+  level_placements: # KEEP THE CLOWN IN THE ORIGINAL SPOT.
+    'Carnival Kerfuffle': 'Carnival Kerfuffle'
 
   freemove_isles: # UNCHANGED
     # Allow all the levels on each island to be freely accessible without completing a previous level first.
