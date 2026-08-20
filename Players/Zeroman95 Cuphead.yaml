@@ -9,8 +9,8 @@ requires:
     Cuphead: 0.2.20020715
 
 Cuphead:
-  progression_balancing: # UNCHANGED
-    50: 99
+  progression_balancing: # Lowered a little so that I don't play too often.
+    40: 99
 
   accessibility: # UNCHANGED
     full: 50
