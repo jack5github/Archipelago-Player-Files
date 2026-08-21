@@ -61,9 +61,9 @@ Slime Rancher:
     'false': 0
     'true': 50
 
-  start_with_drone: # Too early to have drones.
-    'false': 50
-    'true': 0
+  start_with_drone: # Realized that this actually GIVES a Drone to my Gadget inventory NOT the Schematic.
+    'false': 0
+    'true': 50
 
   trap_percent: # Always 50% or higher
     50: 99
