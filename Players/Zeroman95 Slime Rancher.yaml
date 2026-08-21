@@ -16,11 +16,11 @@ Slime Rancher:
     full: 50
     minimal: 0
 
-  goal_type: # UNCHANGED
-    notes: 50 # notes = read all notes
-    7zee: 0 # 7Zee = buy all 7Zee ranks
-    credits: 0 # credits = get to the end credits
-    mail: 0 # mail = mcguffin hunt, Casey's Letters
+  goal_type: # Pick between reading all 30 Notes or buying all 28 levels of 7Zee.
+    notes: 50
+    7zee: 50
+    credits: 0
+    mail: 0
 
   mail_count: # UNCHANGED
     8: 50
@@ -47,13 +47,9 @@ Slime Rancher:
   treasure_cracker_checks: # All 3 levels of Treasure Crackers will have checks
     3: 99
 
-  include_7z: # UNCHANGED
-    # Include unlockables behind 7z as checks
-    # estimated to appear in sphere 2 and above
-    #
-    # This will add 54 checks
-    'false': 50
-    'true': 0
+  include_7z: # Turning this on. Gives me a reason to keep playing Slime Rancher even after all unique checks are collected. 1,326,500 newbucks is needed to collect all 57 Checks.
+    'false': 0
+    'true': 50
 
   plortsanity: # Adds everyone including Gold
     all: 99
@@ -65,7 +61,7 @@ Slime Rancher:
     'false': 0
     'true': 50
 
-  start_with_drone: # Too early to have drones
+  start_with_drone: # Too early to have drones.
     'false': 50
     'true': 0
 
@@ -147,7 +143,8 @@ Slime Rancher:
 
   exclude_locations: []
 
-  priority_locations: ['Sell a Gold Plort']
+  priority_locations: # Makes Gold Plort SUPER IMPORTANT. Meaning I MUST get a Gold Plort for an important check.
+    ['Sell a Gold Plort']
 
   item_links: []
 
