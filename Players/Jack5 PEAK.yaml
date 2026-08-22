@@ -5,7 +5,7 @@ description: |-
   This PEAK configuration makes a multitude of changes in order for it to have the same responsibility as other player files. The number of Ascents required has been reduced to just 1, progressive stamina has been enabled and Energy Link functionality has been turned on. In addition, a variety of traps have been disabled, with the overall chance of them occurring being increased.
 game: PEAK
 requires:
-  version: 0.6.6
+  version: 0.6.7
 PEAK:
   ################
   # Game Options #
@@ -17,17 +17,17 @@ PEAK:
     # PEAK having minimal accessibility seems to have no effect on the gameplay, so I've chosen for both options to be equally likely.
     full: 50
     minimal: 50
+  ###################
+  # General Options #
+  ###################
   goal:
-    # Determines the goal of the seed
-    # Reach Peak: Reach the peak on the specified ascent level
-    # Complete All Badges: Collect the specified number of badges
-    # 24 Karat Badge: Toss the Ancient Idol into The Kiln's lava.
-    # Peak and Badges: Reach the peak on the specified ascent level and collect the specified number of badges
-    # I'm not the kind of person to be able to get a ton of badges in a short period of time, so I'm going to focus on reaching the Peak only.
-    reach_peak: 50
-    complete_all_badges: 0
-    24_karat_badge: 0
-    peak_and_badges: 0
+    # The goals of the seed. Every selected goal must be completed.
+    # Reach Peak: Reach the peak on the ascent level specified by Required Ascent Count
+    # Collect Badges: Collect the number of badges specified by Required Badge Count
+    # 24 Karat Badge: Toss the Ancient Idol into The Kiln's lava
+    # Free The Soul: Free the Scoutmaster's soul in Nadir
+    # I'm not the kind of person to be able to get a ton of badges in a short period of time, so I'm going to focus on reaching the Peak only (not including freeing the Scoutmaster).
+    - Reach Peak
   ascent_count:
     # The ascent level required to complete the Reach Peak goal (0-7)
     # Higher ascents add more difficulty modifiers and challenges
@@ -40,23 +40,14 @@ PEAK:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 54.
     # Irrelevant as my goal is not to collect all badges.
     20: 50
-  progressive_stamina:
-    # Enable progressive stamina bars
-    # Players start with 25% stamina and unlock 25% more with each upgrade until reaching 100%
-    # I have chosen to enable this in order to have a worse start, as is typical in Archipelago runs.
-    'false': 0
-    'true': 50
-  additional_stamina_bars:
-    # Enable 4 additional stamina bars beyond the base 100%
-    # Allows players to reach up to 200% total stamina (requires Progressive Stamina to be enabled)
-    # I tried a run with this enabled, but it made the game too easy, as Progressive Endurance can also be found which divides stamina usage by up to 2.
-    'false': 50
-    'true': 0
+  #################
+  # Item Settings #
+  #################
   item_sanity:
-    # When enabled, items must be unlocked via Archipelago before they appear in the loot pool.
-    # "Acquire X" checks require the corresponding unlock item first.
-    # When disabled, all items are always available in the loot pool.
-    # "Acquire X" checks still exist but only require biome access.
+    # Controls whether items need to be unlocked before they can appear in loot pools.
+    # When enabled, each item type has a corresponding "Unlock" item in the Archipelago pool. You must receive that unlock before the item can spawn in-game. "Acquire" checks also require having the unlock item.
+    # When disabled, all items are available from the start. "Acquire" checks only require biome access.
+    # This option works independently from Loot Sanity - Item Sanity controls the unlock gating, while Loot Sanity controls which pools the items get shuffled into.
     # I've played this APworld both with and without itemsanity before this option was added. I've made it a 50-50 toggle for now.
     'false': 50
     'true': 50
@@ -82,68 +73,54 @@ PEAK:
     # I've played this APworld both with and without a logical Scout Statue before this option was added. I've made it a 50-50 toggle for now.
     'false': 50
     'true': 50
-  disable_multiplayer_badges:
-    # Exclude multiplayer-only badge checks. These badges are normally earned by cooperating with other players.
-    # These badges include:
-    #     Ultimate Badge
-    #     Clutch Badge
-    #     Participation Badge
-    #     Emergency Preparedness Badge
-    #     First Aid Badge
-    #     Resourcefulness Badge
-    #     Disaster Response Badge
-    #     Applied Esoterica Badge
-    #     Needlepoint Badge
-    # My PEAK game shouldn't hinge on needing to play with others. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+  scout_amulet_sanity:
+    # When enabled, the four Scout amulets (Tenacity, Generosity, Ambition, Initiative) and Scout's Honor take part in Item Sanity and Loot Sanity like any other item: their Unlock items join the pool and Loot Sanity may redistribute them.
+    # When disabled they spawn exactly as they do in vanilla, and their Acquire checks only require reaching the biome they are normally found in.
+    # Their Acquire checks exist either way.
+    # As these items are necessary for achieving the goal of the run, and completing one ascent of the mountain is already a challenge enough, all Scout amulets are always available.
     'false': 50
     'true': 0
-  disable_hard_badges:
-    # Exclude somewhat hard badge checks. These badges include:
-    #     Speed Climber Badge
-    #     Lone Wolf Badge
-    #     Balloon Badge
-    #     Bing Bong Badge
-    #     Competitive Eating Badge
-    # While I COULD do these, I really shouldn't. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+  tracker_item_spawning:
+    # When enabled, clicking an unlocked item in the in-game tracker spawns it in front of you (with a cooldown). When disabled, the tracker is display-only.
+    # Unchanged from the base configuration.
     'false': 50
     'true': 0
-  disable_biome_badges:
-    # Exclude biome exclusive badge checks. These will not remove the badges involved with completing the biomes.
-    # These badges include:
-    #     Astronomy Badge
-    #     Bundled Up Badge
-    #     Undead Encounter Badge
-    #     Mycoacrobatics Badge
-    #     Web Security Badge
-    #     Cool Cucumber Badge
-    #     Daredevil Badge
-    #     Megaentomology Badge
-    #     Tread Lightly Badge
-    #     Advanced Mycology Badge
-    # My PEAK game shouldn't hinge on needing to wait for certain biomes to be in the rotation. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+  ###########
+  # Stamina #
+  ###########
+  progressive_stamina:
+    # Enable progressive stamina bars
+    # Players start with 25% stamina and unlock 25% more with each upgrade until reaching 100%
+    # I have chosen to enable this in order to have a worse start, as is typical in Archipelago runs.
+    'false': 0
+    'true': 50
+  additional_stamina_bars:
+    # Enable 4 additional stamina bars beyond the base 100%
+    # Allows players to reach up to 200% total stamina (requires Progressive Stamina to be enabled)
+    # I tried a run with this enabled, but it made the game too easy, as Progressive Endurance can also be found which divides stamina usage by up to 2.
     'false': 50
     'true': 0
+  #####################
+  # Multiplayer Links #
+  #####################
   ring_link:
     # When enabled, ring pickups are shared among all players with Ring Link enabled
     # For PEAK; rings are stamina. Consuming food will send Rings to other players with Ring Link enabled. Poisonous food will send negative rings.
-    # Every time a new item is collected, PEAK freezes in order for Archipelago to send the event. If Ring Link is enabled, PEAK will freeze every time any food is consumed. This quickly becomes annoying, and since we aren't playing any other games that use Ring Link, I have chosen to disable it.
-    'false': 50
-    'true': 0
+    # Before v0.6.1, every time a new item was collected, PEAK would freeze in order for Archipelago to send the event. If Ring Link was enabled, PEAK would freeze every time any food was consumed. This quickly became annoying, and since we weren't playing any other games that used Ring Link, I chose to disable it. Now that v0.6.1 is out, I've re-enabled it.
+    'false': 0
+    'true': 50
   hard_ring_link:
-    # When enabled, ring pickups are shared among all players with Hard Ring Link enabled
-    # Similar to Ring Link, but instead of sending rings when consuming food, rings are sent from certain actions and events.
+    # When enabled, ring pickups are shared among all players with Hard Ring Link enabled. Similar to Ring Link, but instead of sending rings when consuming food, rings are sent from certain actions and events.
     # Unchanged from the base configuration.
     'false': 50
     'true': 0
   energy_link:
-    # When enabled, allows sending and receiving energy from a shared server pool
-    # Players can contribute stamina to help others in need
+    # When enabled, allows sending and receiving energy from a shared server pool. Players can contribute stamina to help others in need
     # Enabled in case we use Energy Link in other games.
     'false': 0
     'true': 50
   trap_link:
-    # When enabled, traps you receive are also sent to other players with Trap Link enabled.
-    # You will also receive any linked traps from other players with Trap Link enabled, if you have a weight above "none" set for that trap.
+    # When enabled, traps you receive are also sent to other players with Trap Link enabled. You will also receive any linked traps from other players with Trap Link enabled, if you have a weight above "none" set for that trap.
     # Enabled in case we use Trap Link in other games.
     'false': 0
     'true': 50
@@ -152,11 +129,29 @@ PEAK:
     # This is not widely supported by most APworlds, and it also just sounds awful, so I have chosen to disable it.
     'false': 50
     'true': 0
+  damage_link:
+    # When enabled, taking Injury damage sends a Damage Link to other games with Damage Link enabled. Receiving a Damage Link applies Injury to all players in the lobby.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  damage_link_group:
+    # Damage Link only applies to players with an identical Group name. Games that don't support the Group option count as having an empty group name.
+    # Unchanged from the base configuration.
+    '': 50
+  knockback_link:
+    # When enabled, strong knockback taken by any player is sent to other games with Knockback Link enabled. Receiving a Knockback Link knocks back all players in the lobby.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
     # YOUR BODIES WILL NEVER BE FOUND.
     'false': 0
     'true': 50
+  death_link_group:
+    # Death Link only applies to players with an identical Group name. Games that don't support the Group option count as having an empty group name.
+    # Unchanged from the base configuration.
+    '': 50
   death_link_behavior:
     # Determines what happens when a Death Link is received
     # Kill Random Player: A random player in your lobby will be killed
@@ -171,6 +166,9 @@ PEAK:
     # Death Link has to happen often, does it not?
     any_player_dies: 50
     all_players_dead: 0
+  #########
+  # Traps #
+  #########
   trap_percentage:
     # Replace a percentage of junk items in the item pool with random traps
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
@@ -358,6 +356,13 @@ PEAK:
     low: 0
     medium: 0
     high: 0
+  turn_to_stone_trap_weight:
+    # Likelihood of receiving a trap which slowly turns a player to stone
+    # Considering there is no clear way to undo stonification, leave this off.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
   fear_trap_weight:
     # Likelihood of receiving a spooky trap
     # JUMPSCARE!
@@ -463,6 +468,135 @@ PEAK:
     low: 0
     medium: 0
     high: 0
+  frog_trap_weight:
+    # Likelihood of receiving a trap which spawns a frog that drags players around with its tongue
+    # Frogs anywhere other than the Gloom biome would be a nightmare to deal with.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  ghost_trap_weight:
+    # Likelihood of receiving a trap which spawns a ghost that hunts a player
+    # Same rationale as the Scoutmaster trap.
+    none: 0
+    low: 50
+    medium: 0
+    high: 0
+  rain_trap_weight:
+    # Likelihood of receiving a trap which makes it rain for a while
+    # Unchanged from the base configuration.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  poison_cloud_trap_weight:
+    # Likelihood of receiving a trap which pops a poisonous pink cloud on a player
+    # Unchanged from the base configuration.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  frost_cloud_trap_weight:
+    # Likelihood of receiving a trap which pops a freezing frost cloud on a player
+    # Unchanged from the base configuration.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  sleep_trap_weight:
+    # Likelihood of receiving a trap which pops a drowsy purple cloud on a player
+    # Unchanged from the base configuration.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  well_done_trap_weight:
+    # Likelihood of receiving a trap which cooks every item players are carrying
+    # Depending on the items being carried, this could be devastating for each player, so its likelihood is reduced.
+    none: 0
+    low: 50
+    medium: 0
+    high: 0
+  instant_crystal_trap_weight:
+    # Likelihood of receiving a trap which instantly petrifies a random player
+    # What, and instantly reduce completion likelihood by 25-100%? No thanks!
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  curse_trap_weight:
+    # Likelihood of receiving a trap which pops a black curse cloud on a player
+    # Curse does not expire over time, so this is disabled.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  cursed_ball_trap_weight:
+    # Likelihood of receiving a trap which pops a black curse cloud with a heavy blast on a player
+    # Curse does not expire over time, so this is disabled.
+    none: 50
+    low: 0
+    medium: 0
+    high: 0
+  storm_trap_weight:
+    # Likelihood of receiving a trap which unleashes a full wind and rain storm for a while
+    # Unchanged from the base configuration.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  skeleton_trap_weight:
+    # Likelihood of receiving a trap which permanently turns a random player into a living skeleton
+    # RATTLE ME BONES!
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+  ##################
+  # Badge Settings #
+  ##################
+  disable_multiplayer_badges:
+    # Exclude multiplayer-only badge checks. These badges are normally earned by cooperating with other players.
+    # These badges include:
+    #     Ultimate Badge
+    #     Clutch Badge
+    #     Participation Badge
+    #     Emergency Preparedness Badge
+    #     First Aid Badge
+    #     Resourcefulness Badge
+    #     Disaster Response Badge
+    #     Applied Esoterica Badge
+    #     Needlepoint Badge
+    #     Happy Camper Badge
+    # My PEAK game shouldn't hinge on needing to play with others. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+    'false': 50
+    'true': 0
+  disable_hard_badges:
+    # Exclude somewhat hard badge checks. These badges include:
+    #     Speed Climber Badge
+    #     Lone Wolf Badge
+    #     Balloon Badge
+    #     Bing Bong Badge
+    #     Competitive Eating Badge
+    # While I COULD do these, I really shouldn't. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+    'false': 50
+    'true': 0
+  disable_biome_badges:
+    # Exclude biome exclusive badge checks. These will not remove the badges involved with completing the biomes.
+    # These badges include:
+    #     Astronomy Badge
+    #     Bundled Up Badge
+    #     Undead Encounter Badge
+    #     Mycoacrobatics Badge
+    #     Web Security Badge
+    #     Cool Cucumber Badge
+    #     Daredevil Badge
+    #     Megaentomology Badge
+    #     Tread Lightly Badge
+    #     Advanced Mycology Badge
+    # My PEAK game shouldn't hinge on needing to wait for certain biomes to be in the rotation. Rather than badges being disabled here, they are disabled in `excluded_locations`.
+    'false': 50
+    'true': 0
   ###########################
   # Item & Location Options #
   ###########################
@@ -472,8 +606,9 @@ PEAK:
     - Progressive Endurance
     - Progressive Stamina Bar
   start_inventory:
-    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. There are 6 of these, 4 of which are for each biome after the Shore (excluding the Peak), the other 2 being basically filler items.
+    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. There are 6 of these, 4 of which are for each biome after the Shore (excluding the Peak), the other 2 being basically filler items. Scoutmaster's Soul is also included so Nadir can be accessed immediately.
     Progressive Mountain: 6
+    Scoutmaster's Soul: 1
   start_hints: []
   start_location_hints: []
   exclude_locations:
@@ -527,6 +662,12 @@ PEAK:
     - Toxicology Badge # Unlikely
     - Ultimate Badge # Multiplayer
     - Undead Encounter Badge # Difficult
+    # Basketball locations are not something that I'm interested in executing, because I just want to play the game.
+    - Score 1 basket
+    - Score 3 baskets
+    - Score 5 baskets
+    - Score 7 baskets
+    - Score 10 baskets
   priority_locations: []
   item_links: []
   plando_items: []
