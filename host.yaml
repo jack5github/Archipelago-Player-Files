@@ -83,6 +83,13 @@ generator:
   spoiler: 3
   # Create encrypted race roms and flag games as race mode
   race: 0
+  # Feature from https://github.com/ArchipelagoMW/Archipelago/pull/4644
+  # Percentage value from 0-100. If set to a non-zero value, slots with fewer locations will have more progression filled into them. This can help balance the experience of a multiworld by making all seeds feel worth playing.
+  # 0 means that each location across the whole multiworld has the same chance to receive a progression item.
+  # 100 means that each slot will have the same number of progression items in it, regardless of location count.
+  # Values between 0 and 100 linearly interpolate between the two.
+  # Increased from the default of 20% to be more resilient against games with drastically different location counts.
+  progression_equalization: 55
   # List of options that can be plando'd. Can be combined, for example "bosses, items"
   # Available options: bosses, items, texts, connections
   # We want to allow items to be manually placed.
