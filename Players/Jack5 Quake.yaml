@@ -1,0 +1,252 @@
+﻿name: Jack5Quake{NUMBER}
+description: |-
+  Jack5's Quake player file
+
+  TODO: Add description
+game: Quake 1
+requires:
+  version: 0.6.7
+Quake 1:
+  ################
+  # Game Options #
+  ################
+  # Unchanged from the base configuration.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  difficulty:
+    # Randomizer difficulty. Higher levels offer less resources and worse items in the pool.
+    # Unchanged from the base configuration.
+    easy: 0
+    medium: 50
+    hard: 0
+    extreme: 0
+  logic_difficulty:
+    # Trick difficulty for logic. Higher levels require harder tricks such precise Rocket/Grenade Jumps and airstrafes.
+    # Reduced to Easy so I don't have to remember any tricks.
+    easy: 50
+    medium: 0
+    hard: 0
+    extreme: 0
+  skill_level:
+    # In-Game difficulty. Primarily affects number of Enemies spawned.
+    # Unchanged from the base configuration.
+    easy: 0
+    medium: 50
+    hard: 0
+    nightmare: 0
+  basegame:
+    # Pick which game/expansion to play.
+    # Selected all expansions I have access to to have an equal chance of being selected.
+    quake: 33
+    hipnotic: 33
+    rogue: 33
+    mg1: 0
+    dopa: 0
+  unlock_abilities:
+    # Unlock Jumping, Diving, Running, Rocket/Grenade Jumps as items.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  damage_remover_abilities:
+    # Unlock the ability to not get hurt when doing rocket/grenade jumps.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  unlock_interact:
+    # Unlock using buttons, shooting switches and opening doors as items.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  area_maps:
+    # Select if full game maps are available in the in-game map view.
+    # Unchanged from the base configuration.
+    none: 0
+    unlockable: 0
+    start_with: 50
+  goal:
+    # Choose the goal of the game.
+    # Changed from `all` to reflect the normal goal state of other Archipelago games.
+    beat_all_bosses: 50
+    beat_all_levels: 0
+    collect_all_secrets: 0
+    all: 0
+  goal_percentage:
+    # Percentage of chosen goals that need to be reached to win the game.
+    # You can define additional values between the minimum and maximum values. Minimum value is 25, maximum value is 100.
+    # Unchanged from the base configuration.
+    100: 50
+  included_locations_preset:
+    # Presets for included locations.
+    # Iconic includes all keys, weapons, sigils, armor and powerups.
+    # Balanced adds 25 % ammo + health.
+    # Dense adds 50% ammo + health.
+    # All adds 100% ammo + health.
+    # Use the custom option if you want to make use of CustomIncludedLocations.
+    # Unchanged from the base configuration.
+    iconic: 0
+    balanced: 50
+    dense: 0
+    all: 0
+    custom: 0
+  include_mp_items:
+    # Set if included locations should also contain multiplayer item spawns.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  custom_included_locations:
+    # A list of itemnames that will be replaced with AP locations.
+    # The number after the itemname is the percentage of items of that type, which will get turned into AP locations.
+    # Quake 1 Items: ["item_armor1", "item_armor2", "item_armorInv", "weapon_lightning", "weapon_nailgun", "weapon_supernailgun", "weapon_supershotgun", "weapon_grenadelauncher", "weapon_rocketlauncher", "item_health (Small Medkit)", "item_health (Large Medkit)", "item_health (Megahealth)", "item_cells", "item_rockets", "item_shells", "item_spikes", "item_artifact_envirosuit", "item_artifact_invisibility", "item_artifact_invulnerability", "item_artifact_super_damage", "item_key1", "item_key2", "item_sigil"]
+    # Hipnotic Items: ["item_artifact_empathy_shields", "item_hornofconjuring", "item_artifact_wetsuit", "weapon_laser_gun", "weapon_mjolnir", "weapon_proximity_gun"]
+    # Rogue Items: ["item_sphere", "item_random_powerup", "item_powerup_belt", "item_powerup_shield", "item_flag", "item_flag_team1", "item_flag_team2", "item_lava_spikes", "item_multi_rockets", "item_plasma"]
+    # Unchanged from the base configuration.
+    item_armor1: 100
+    item_armor2: 100
+    item_armorInv: 100
+    item_artifact_empathy_shields: 100
+    item_artifact_envirosuit: 100
+    item_artifact_invisibility: 100
+    item_artifact_invulnerability: 100
+    item_artifact_super_damage: 100
+    item_artifact_wetsuit: 100
+    item_cells: 100
+    item_flag: 100
+    item_flag_team1: 100
+    item_flag_team2: 100
+    item_health (Large Medkit): 100
+    item_health (Megahealth): 100
+    item_health (Small Medkit): 100
+    item_hornofconjuring: 100
+    item_key1: 100
+    item_key2: 100
+    item_lava_spikes: 100
+    item_multi_rockets: 100
+    item_plasma: 100
+    item_powerup_belt: 100
+    item_powerup_shield: 100
+    item_random_powerup: 100
+    item_rockets: 100
+    item_shells: 100
+    item_sigil: 100
+    item_sphere: 100
+    item_spikes: 100
+    item_weapon: 100
+    weapon_grenadelauncher: 100
+    weapon_laser_gun: 100
+    weapon_lightning: 100
+    weapon_mjolnir: 100
+    weapon_nailgun: 100
+    weapon_proximity_gun: 100
+    weapon_rocketlauncher: 100
+    weapon_supernailgun: 100
+    weapon_supershotgun: 100
+  include_secrets:
+    # Include secret areas into the location pool. This only has an effect if they are not already included as goal locations.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  include_allkills:
+    # Includes all kills per level in the location pool.
+    # Killing all enemies seems like a reasonable goal for Quake.
+    'false': 0
+    'true': 50
+  episode1:
+    # Include Episode 1 in the randomizer.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  episode2:
+    # Include Episode 2 in the randomizer.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  episode3:
+    # Include Episode 3 in the randomizer.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  episode4:
+    # Include Episode 4 in the randomizer.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  episode5:
+    # Include Episode 5 in the randomizer.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  include_hub:
+    # Include the Hub Level in the randomizer.
+    # After getting this in a test run, I've found that having access to this level does nothing, so I'm disabling it.
+    'false': 50
+    'true': 0
+  include_end:
+    # Include the End Level in the randomizer.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  level_count:
+    # Number of maps that should be included in the shuffle. Maps are picked from the enabled episodes. If this count exceeds the maximum number of levels in those episodes, all of them will be included.
+    # You can define additional values between the minimum and maximum values. Minimum value is 3, maximum value is 32.
+    # Unchanged from the base configuration.
+    9: 50
+  shuffle_starting_levels:
+    # If enabled will pick levels unlocked by default at random instead of the first of each episode.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  starting_level_count:
+    # The number of levels that are unlocked from the start.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 32.
+    # Unchanged from the base configuration.
+    1: 50
+  progressive_weapons:
+    # Replace weapon unlocks and ammunition capacity upgrades with progressive versions. This greatly increases access to weapons to your world.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  progressive_inventories:
+    # Replace Inventory unlocks and their capacity upgrades with progressive versions. This increases access to their abilities in your world.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  trap_percentage:
+    # Percentage of filler items that should be traps.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 90.
+    # Increased from 10% to the random range that is in use in my other APworlds.
+    random-range-50-80: 50
+  traps_as_progressive:
+    # Traps show up as progressive items in-game.
+    # Disabled to match other Archipelago games.
+    'false': 50
+    'true': 0
+  shell_recharge:
+    # Recharges 1 shell (ammo) every second. QoL to make the early game less painful on harder difficulties.
+    # Enabled so that I don't have to hunt for ammo.
+    'false': 0
+    'true': 50
+  powerup_recharge:
+    # Recharges 1 of each powerup every 60 seconds. This is incredibly overpowered, only use it if you struggle with the game.
+    # Unchanged from the base configuration.
+    'false': 50
+    'true': 0
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # QUAD DAMAGE!!!!
+    'false': 0
+    'true': 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
