@@ -133,10 +133,6 @@ Road Trip Adventure:
     - Stamp 41
     - Flower Pattern # Extra reward
     - Flower Pattern / Stamp 41 # Doubled-up name
-    # There is currently a bug with Stamp 44 where if you get it while also collecting Stamp 43, it doesn't come through. Excluded because of that.
-    - Stamp 44
-    - Space Meter # Extra reward
-    - Space Meter / Stamp 44 # Doubled-up name
     # The mother of all fetch quests, this stamp requires collecting all 100 ChoroQ coins. Ain't no way in hell I'm doing that. I'm also excluding some of the Coine Rewards that require an extreme number of ChoroQ coins to collect.
     - Stamp 46
     - Coine Reward 9 (Metal Pad)
