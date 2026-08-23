@@ -7,7 +7,7 @@ game: Refunct
 requires:
   version: 0.6.7
   game:
-    Refunct: 1.4.0
+    Refunct: 1.5.0
 Refunct:
   ################
   # Game Options #
@@ -85,9 +85,9 @@ Refunct:
     # Set this to -1 if you want all minigames. Set this to 0 if you don't want any minigames.
     # The next option allows you to tweak how likely each minigame is to be included, but the default is probably OK!
     # You can define additional values between the minimum and maximum values. Minimum value is -1, maximum value is 9.
-    # I used to have there be a 50% chance of minigames occurring, and if they do, a random number of them, maxing out at the available number of minigames. I have since made this always happen, because playing Refunct by itself gets boring. There are roughly 5 minigames that are possible to be picked. In 80% of cases, I want to pick a small minority of them. The remaining 20% picks all of them.
+    # I used to have there be a 50% chance of minigames occurring, and if they do, a random number of them, maxing out at the available number of minigames. I have since made this always happen, because playing Refunct by itself gets boring. There are roughly 5 minigames that are possible to be picked. In 80% of cases, I want to pick a small minority of them (one will always be a custom map). The remaining 20% picks all of them.
     -1: 20
-    random-range-1-2: 80
+    random-range-1-3: 80
   nerf_minigame_checks:
     # Most minigames have a lot of checks (~37).
     # If this option is *on*, flowers will be forced into the minigames, so that only 10 items per minigame are not necessarily flowers.
@@ -166,6 +166,9 @@ Refunct:
     # Based on Archipelago game "Clique". Hard-mode!
     # There is one free item in this minigame. Once the "button activation" item is found, you can press the button for another check.
     Clique: 0 # Disabled due to being boring.
+    # Custom Minigame:
+    # You can now play custom maps as part of archipelago! Every button you press is a check. Download *any* custom map you want, you can find them pinned in the archipelago-refunct post/thread. Put the custom map in the correct folder (open the mod, press CTRL+SHIFT+M, "Open Maps Folder"). And then when starting the minigame, choose the map you want to play!
+    Custom Minigame: 1000000000000000000 # Force a custom map to appear.
   see_other_players:
     # When other players have this on too, you can see them walking around in your world! This option is the number of other players you can see. 0 means it is off. You can probably just pick a large number, but the game might lag if you pick too many. Don't worry, you can change this setting in-game too!
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
@@ -175,18 +178,18 @@ Refunct:
     # Refunct has many effect- and trap items. This option will replace flowers by them. This option determines the amount each of them is added.
     # An effect is usually just a pretty visual effect.
     # A trap will affect the gameplay a bit more. Don't worry if you put too many.
-    # The amount of each effect has been reduced from 3, as these are purely visual. Conversely, the amount of each trap has been increased from 1, with less impactful traps getting higher weights.
+    # The amount of each effect is generally lower than traps, as they are purely visual. Traps that are fun to play with get higher amounts.
     # Effects
-    Dark Skies: 2
+    Dark Skies: 3
     Hurricane: 2
-    No Skylight: 2
-    Red Sky: 2
+    No Skylight: 1
+    Red Sky: 0
     Starry Sky: 2
     # Traps
-    Ascend Trap: 2
+    Ascend Trap: 5
     Blurrrgh Trap: 6
     Depthless Trap: 4
-    Fast-mo Trap: 4
+    Fast-mo Trap: 7
     Slo-mo Trap: 2
   rename_grass:
     # This option changes "Grass" to names of actual grass types such as "Fine fescue" and "Kentucky bluegrass". You can choose between the English or the Latin names of the grass types.
