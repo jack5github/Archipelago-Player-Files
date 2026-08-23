@@ -34,7 +34,7 @@ game: Minecraft Fabric
 requires:
   version: 0.6.7 # Version of Archipelago required for this yaml to work as expected.
   game:
-    Minecraft Fabric: 1.1.2 # Version of the world required for this yaml to work as expected.
+    Minecraft Fabric: 1.2.0 # Version of the world required for this yaml to work as expected.
 
 Minecraft Fabric:
   ################
@@ -107,7 +107,7 @@ Minecraft Fabric:
     #     "Hard" - Disables Locations that're Hard
     #     "Exploration" - Disables Locations that might require Exploration
     #     "Unreasonable" - Disables Location's that're EXTREMELY Hard
-    ['Exploration', 'Unreasonable', 'Hard']
+    [ 'Exploration', 'Unreasonable', 'Hard' ]
 
   percentage_of_rubies_needed:
     # The Percentage of Rubies that need to be collected to Goal for Ruby Hunt.
@@ -145,9 +145,9 @@ Minecraft Fabric:
   #####################
   itemsanity:
     # Enables "Itemsanity" which causes items obtainable in Survival to be checks
-    ## DoMess: v1.1: changed default from true to false
-    'false': 50
-    'true': 0
+    ## DoMess: v1.2: changed default from false to true
+    'false': 0
+    'true': 50
 
   items_required_for_goal:
     # Determines the number of Items needed in order to beat the game! You will need to gather this many unique items in
@@ -162,8 +162,8 @@ Minecraft Fabric:
     # Minimum value is 0
     # Maximum value is 1142
     ## DoMess: v1.1: enabled random, 5 - 25
-    # note: not active unless itemsanity is on, which might return in future
-    0: 50
+    ## DoMess: v1.2: changed 0: 50 >>> 9: 50
+    9: 50
     random-range-5-25: 50 # random value between 0 and 1142
 
   itemsanity_local_fill:
@@ -237,7 +237,7 @@ Minecraft Fabric:
     #     "Jump"
     #     "Sprint"
     #     "Beds"
-    ['Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds']
+    [ 'Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds' ]
 
   required_before_bosses:
     # Makes it so certain Items are required in Logic before you need
@@ -252,7 +252,7 @@ Minecraft Fabric:
     #     "Jump"
     #     "Sprint"
     #     "Beds"
-    ['Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds']
+    [ 'Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds' ]
 
   required_before_raids:
     # Makes it so certain Items are required in Logic before you need
@@ -267,7 +267,7 @@ Minecraft Fabric:
     #     "Jump"
     #     "Sprint"
     #     "Beds"
-    ['Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds']
+    [ 'Iron Weapons', 'Iron Armor', 'Bow', 'Jump', 'Sprint', 'Beds' ]
 
   keep_inventory:
     # Prevents you from dropping your items when you die!
@@ -286,7 +286,7 @@ Minecraft Fabric:
     #     "Sprint" - Removes the ability to run, and adds Sprint to the Item pool.
     #     "Swim" - Removes the ability to enter water, and adds Swim to the Item pool.
     ## DoMess: v1.1: Removed chests, added Sprint & Swim
-    ['Sprint', 'Swim']
+    [ 'Sprint', 'Swim' ]
 
   time_saving_options:
     # Decrease Wait times or Increase likelihood for various events that can occur in the game
@@ -296,7 +296,25 @@ Minecraft Fabric:
     #     "Rabbits Foot" - Increases the 10% Chance for Rabbit's Foot to drop to 50%
     #     "Drowned Items" - Increases the Chance for a Drowned to drop the items they're holding to 100%
     #     "Copper Oxidation" - Increases the Chance for Copper Blocks to attempt to Oxidize from 5% to 55%
-    ['Rabbits Foot', 'Wither Skulls', 'Drowned Items', 'Copper Oxidation']
+    [ 'Rabbits Foot', 'Wither Skulls', 'Drowned Items', 'Copper Oxidation' ]
+
+  logic_difficulty_options:
+    # Changes the logical requirements of certain locations to make progression easier
+    #
+    # Options:
+    #     "Natures Compass Logic" - Locks exploration checks that depend on rare biomes behind the ability
+    #     to locate that biome with Nature's Compass (Requires Nature's Compass Mod)
+    #     "Explorers Compass Logic" - Locks exploration checks that depend on rare structures behind the ability
+    #     to locate that structure with Explorer's Compass (Requires Explorer's Compass Mod)
+    #     "Movement Before Exploration" - Requires Jump, Sprint, Swim for checks that require exploration
+    #     "Sleeping Before Exploration" - Requires Sleeping for checks that require exploration
+    #     "Meteorology" - Requires the Totem of Meteorology (a custom item that allows manual weather setting) for
+    #     checks that require thunder
+    - 'Natures Compass Logic'
+    - 'Explorers Compass Logic'
+    - 'Movement Before Exploration'
+    - 'Sleeping Before Exploration'
+    - 'Meteorology'
 
   #################
   # Traps Options #
@@ -411,7 +429,7 @@ Minecraft Fabric:
     # You can add a mod by putting its Mod ID here.
     #
     # For a list of supported Mods, refer to here: https://modded.wiki/w/Fabric_Archipelago_Mod:Mod_Support
-    ['minecraft']
+    [ 'minecraft', 'create' ]
 
   ###########################
   # Item & Location Options #
