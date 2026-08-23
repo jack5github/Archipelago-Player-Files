@@ -141,7 +141,12 @@ Slime Rancher:
 
   start_location_hints: []
 
-  exclude_locations: []
+  exclude_locations: # Treasure Cracker locations are excluded because you need to make ONE for lv.1 to appear, THIRTY for lv.2 to appear and FIFTY Gadgets to get to lv.3.
+    [
+      'Buy Personal Upgrade (Treasure Cracker lv.1)',
+      'Buy Personal Upgrade (Treasure Cracker lv.2)',
+      'Buy Personal Upgrade (Treasure Cracker lv.3)',
+    ]
 
   priority_locations: # Makes Gold Plort SUPER IMPORTANT. Meaning I MUST get a Gold Plort for an important check.
     ['Sell a Gold Plort']
