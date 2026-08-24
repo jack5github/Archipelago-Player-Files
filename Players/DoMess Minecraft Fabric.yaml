@@ -93,8 +93,9 @@ Minecraft Fabric:
     # Minimum value is 0
     # Maximum value is 120
     ## DoMess: v1.1: enabled random, 20 - 40
-    25: 50
-    random-range-low-20-40: 50 # random value between 0 and 120
+    ## DoMess: v1.3: 33: 50, 25 - 50 (inflated because of Create Mod)
+    33: 50
+    random-range-low-25-50: 50 # random value between 0 and 120
 
   excluded_locations:
     # Determines Blacklisted Locations in the Randomizer
@@ -163,8 +164,9 @@ Minecraft Fabric:
     # Maximum value is 1142
     ## DoMess: v1.1: enabled random, 5 - 25
     ## DoMess: v1.2: changed 0: 50 >>> 9: 50
-    9: 50
-    random-range-5-25: 50 # random value between 0 and 1142
+    ## DoMess: v1.3: inflated values as how it works is that any Itemsanity item counts towards the goal | 67, 100 - 250
+    67: 50
+    random-range-100-250: 50 # random value between 0 and 1142
 
   itemsanity_local_fill:
     # The Percentage of Itemsanity Checks that should only contain items from your world
