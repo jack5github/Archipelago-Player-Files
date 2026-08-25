@@ -1,0 +1,90 @@
+﻿name: ZeromanLibrarian{NUMBER}
+
+description: Zeroman95s Librarian Tidy Up the Arcane Library YAML
+
+game: Librarian Tidy Up the Arcane Library
+requires:
+  version: 0.6.7
+  game:
+    Librarian Tidy Up the Arcane Library: 2.0.3
+
+Librarian Tidy Up the Arcane Library:
+  progression_balancing: # UNCHANGED
+    normal: 50
+
+  accessibility: # UNCHANGED
+    full: 50
+    minimal: 0
+
+  goal: # UNCHANGED
+    full: 50
+    custom: 0
+    floor_1: 0
+    floor_2: 0
+
+  unlock_mode: # Each Book Series is an item in the pool. All Shelves are unlocked.
+    individual_series_unlocks: 99
+
+  custom_goal_row_count: # UNCHANGED
+    200: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-400: 0 # random value between 1 and 400
+
+  custom_goal_book_count: # UNCHANGED
+    1500: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-3072: 0 # random value between 1 and 3072
+
+  spare_book_item_percent: # Don't need it.
+    0: 99
+
+  spare_shelf_items: # UNCHANGED
+    0: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-3: 0 # random value between 0 and 3
+
+  starting_series_count: # Reduced to 5 instead of having 10 series at the start.
+    5: 50
+
+  series_per_unlock: # UNCHANGED (individual_series_unlocks is on)
+    5: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-3-10: 0 # random value between 3 and 10
+
+  book_visibility: # UNCHANGED
+    hidden: 50
+    stacks: 0
+
+  local_filler: # Spread it everywhere isn't that what an AP even does??
+    'false': 50
+    'true': 0
+
+  only_unward_shelfable_books: # UNCHANGED
+    'false': 0
+    'true': 50
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
