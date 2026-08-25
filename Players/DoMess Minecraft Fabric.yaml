@@ -177,7 +177,7 @@ Minecraft Fabric:
     # Maximum value is 98
     ## DoMess: v1.1: changed default 90:50 >>> 95:90
     90: 50
-    random-range-90-95: 50 # random value between 0 and 98
+    random-range-90-95: 50 # random value between 0 and 95
 
   excluded_from_itemsanity:
     # Determines certain Items that shouldn't appear in Itemsanity
@@ -438,20 +438,7 @@ Minecraft Fabric:
   ###########################
   local_items:
     # Forces these items to be in their native world.
-    ## DoMess: v1.1:
-    # - Added Tools, Weapons, Smelting, Armor
-    - 'Progressive Tools'
-    - 'Progressive Weapons'
-    - 'Progressive Smelting'
-    - 'Progressive Armor'
-
-  non_local_items:
-    # Forces these items to be outside their native world.
-    ## DoMess: v1.1:
-    # - Added Sleeping
-    # - Added Other Crafting Stations
-    # - Added Bucket, Flint & Steel, Resource Compacting
-    # - Added Sprint, Swim
+    ## DoMess: v1.3: Swapped non_local_items & local_items  
     - 'Sleeping'
     - 'Other Crafting Stations'
     - 'Bucket Recipes'
@@ -459,6 +446,14 @@ Minecraft Fabric:
     - 'Resource Compacting Recipes'
     - 'Sprint'
     - 'Swim'
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    ## DoMess: v1.3: Swapped non_local_items & local_items  
+    - 'Progressive Tools'
+    - 'Progressive Weapons'
+    - 'Progressive Smelting'
+    - 'Progressive Armor'
 
   start_inventory:
     # Start with the specified amount of these items. Example: "Bomb: 1"
