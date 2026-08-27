@@ -4,7 +4,7 @@ The `maps/` folder within this folder contains a collection of custom maps for R
 
 ## Usage
 
-In Refunct, press `Ctrl+Shift+M` and select `Open Maps Folder`. Copy the contents of `maps/` into the opened folder. You may also copy `Refunct_Organised` into the same folder and use it as a base for creating new levels, but you must remember to remove it before starting a run (for when random map selection becomes a YAML option).
+In Refunct, press `Ctrl+Shift+M` and select `Open Maps Folder`. Copy the contents of `maps/` into the opened folder. You may also copy `Refunct_Organised (FIXED)` into the same folder and use it as a base for creating new levels, but you must remember to remove it before starting a run (for when random map selection becomes a YAML option).
 
 ## Notes
 
