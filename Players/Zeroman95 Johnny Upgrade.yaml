@@ -1,0 +1,137 @@
+﻿name: ZeromanJohnnyUpgrade{NUMBER}
+
+description: Zeroman95s Johnny Upgrade YAML
+
+game: Johnny Upgrade
+requires:
+  version: 0.6.7
+
+Johnny Upgrade:
+  progression_balancing: # UNCHANGED
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-99: 0 # random value between 0 and 99
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility: # UNCHANGED
+    # Set rules for reachability of your items/locations.
+    #
+    # **Full:** ensure everything can be reached and acquired.
+    #
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  coinsanity: # UNCHANGED
+    # Adds a location check for every collectible coin on the map (246 checks).
+    #
+    # ON: each coin is an Archipelago check and grants no local cash when collected. Cash comes
+    # from received Coin Bundle items and passive income instead.
+    #
+    # OFF: the coins are not checks, so they keep their normal vanilla payout and top up your cash
+    # exactly as they always did (on top of Coin Bundles and passive income).
+    'false': 0
+    'true': 50
+
+  enemysanity: # UNCHANGED
+    # Adds a location check for destroying each killable hazard on the map (9 checks).
+    #
+    # That is the 6 patrolling "robot" enemies plus the 3 floating bombs. The 2 saws are not
+    # included because they cannot be destroyed at all -- killEnemy() only has branches for
+    # e.robot, e.bomb and e.boss, so a saw simply absorbs the shot.
+    #
+    # All 9 require shooting. A robot can only ever die to a bullet. A bomb can also be set off by
+    # walking into it, but that does not count as the check -- destroying one with your body just
+    # clears it for the rest of that round (it is back next run). Both send their check from
+    # killEnemy(), which is only reached from the bullet collision loop.
+    #
+    # Robots and bombs are NOT removed from the map once checked, unlike collected coins -- they are
+    # hazards as well as checks, and deleting them would make the map progressively easier than the
+    # one the logic was derived from.
+    'false': 0
+    'true': 50
+
+  damage_boosts_in_logic: # UNCHANGED
+    # Allow routes that require deliberately taking a hit to get past a hazard.
+    #
+    # Taking damage grants 60 frames of invulnerability (killSprite sets sprt.inv = 60), which is
+    # enough to run straight through an enemy that otherwise cannot be passed. One spot on the map
+    # genuinely needs this: the floor robot under the low ceiling near the boss door has 200px of
+    # clearance above it, and the player plus the robot need 210px, so it can neither be jumped nor
+    # walked through.
+    #
+    # Any route relying on this needs at least 2 hearts (1 Progressive Energy) so the hit is not
+    # fatal. Turning this off removes every such route from logic; the solver confirms every
+    # location also has a gun-based alternative (shoot the robot -- killRobot deletes it
+    # permanently), so nothing becomes unreachable, but expect Progressive Ammo to become much more
+    # load-bearing.
+    'false': 0
+    'true': 50
+
+  recoil_boosts_in_logic: # UNCHANGED
+    # Allow routes that use the laser gun's recoil as a movement tech.
+    #
+    # shoot() sets your horizontal speed to 8 in the direction OPPOSITE your facing, replacing
+    # whatever it was. Below about Speed 4 that is faster than you can run, so turning around and
+    # firing is a genuine speed boost -- but it needs a frame-perfect turnaround, which is not
+    # something to expect of a first-time player.
+    #
+    # Off by default. The solver found this only opens ~40 shortcuts across the map, and every
+    # location it touches is reachable without it, so enabling this simply gives the generator
+    # cheaper alternatives rather than unlocking anything new.
+    'false': 50
+    'true': 0
+
+  knockback_boosts_in_logic: # UNCHANGED
+    # Allow routes that use damage knockback to launch across gaps (a BLJ-style trick).
+    #
+    # killSprite sets your horizontal speed to 43.2 away from whatever hit you -- roughly four
+    # times max run speed. Turning around on the hit so "away" points where you want to go throws
+    # you across gaps that are otherwise out of reach. It is frame-perfect and quite advanced.
+    #
+    # This is SEPARATE from Damage Boosts In Logic: that one is about tanking a hit for the
+    # invulnerability frames to walk through an enemy, which stays available either way. This is
+    # specifically about weaponising the knockback velocity for distance.
+    #
+    # Off by default. It is by far the bigger of the two techs -- roughly 1,300 shortcuts across
+    # 187 locations -- but again, nothing depends on it exclusively.
+    'false': 50
+    'true': 0
+
+  passive_income_seconds: # Give a coin per second. Helps to not be stuck with Shops.
+    1: 99
+
+  passive_income_amount: # UNCHANGED
+    # Cash granted per passive income tick (see Passive Income Seconds Per Tick).
+    #
+    # Higher values grant cash faster.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 10
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-10: 0 # random value between 1 and 10
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
