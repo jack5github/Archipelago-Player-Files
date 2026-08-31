@@ -6,29 +6,29 @@ game: Pikmin 2
 requires:
   version: 0.6.7
   game:
-    Pikmin 2: 0.7.1
+    Pikmin 2: 0.8.1
 
 Pikmin 2:
-  progression_balancing: # Unchanged
+  progression_balancing: # UNCHANGED
     50: 99
 
-  accessibility:
+  accessibility: # UNCHANGED
     full: 50
     minimal: 0
 
-  win_condition: # Unchanged
+  win_condition: # UNCHANGED
     collect_louie: 50
     collect_pokos: 0
     collect_treasure: 0
 
-  poko_amount: # Unchanged
+  poko_amount: # UNCHANGED
     10000: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-0-26985: 0 # random value between 0 and 26985
 
-  treasure_amount: # Unchanged
+  treasure_amount: # UNCHANGED
     201: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
@@ -54,7 +54,7 @@ Pikmin 2:
   death_link: # Allows either a Captain to go unconscious or create a Pikmin Extinction.
     full_random: 99
 
-  boss_rando: # Unchanged
+  boss_rando: # Bosses are randomly chosen for each location.
     vanilla: 0
     shuffle: 0
     full_random: 50
@@ -63,60 +63,85 @@ Pikmin 2:
     vanilla: 0
     full_random: 50
 
-  boss_and_enemy_rando: # I did a test run and had a WHOLE Sublevel filled with Water Wraiths. Not letting this happen sadly.
+  boss_and_enemy_rando: # I did a test run and had a WHOLE Sublevel filled with Water Wraiths. Not letting this happen sadly. UNCHANGED
     'no': 50
     'yes': 0
 
-  sublevel_shuffle: # Unchanged
+  boss_enemy_rando_locations: # UNCHANGED
+    caves_only: 0
+    overworld_only: 0
+    both: 50
+
+  sublevel_shuffle: # Shuffles the sublevels around meaning a Boss level could be in between or at the start.
     vanilla: 0
     shuffled: 50
 
-  onion_shuffle: # Unchanged
+  onion_shuffle: # Puts all the onions in a pool, but makes sure to pick one for the start.
     vanilla: 0
     shuffle: 0
     exclude_vanilla: 0
     in_pool: 50
 
-  progressive_globes: # Unchanged
+  progressive_globes: # UNCHANGED
     non_progressive: 50
     progressive: 0
 
-  weapons_in_pool: # Originally set to yes made the boss very much more easy; Setting it to no now will make it be as hard as it can be just like in the original.
+  weapons_in_pool: # UNCHANGED
     'no': 50
     'yes': 0
 
-  treasure_collection_checks: # Unchanged
+  treasure_collection_checks: # UNCHANGED
     'no': 50
     'yes': 0
 
-  treasure_collection_start_value: # Unchanged
+  treasure_collection_start_value: # UNCHANGED
     5: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-1-201: 0 # random value between 1 and 201
 
-  treasure_collection_end_value: # Unchanged
+  treasure_collection_end_value: # UNCHANGED
     200: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-1-201: 0 # random value between 1 and 201
 
-  treasure_collection_interval: # Unchanged
+  treasure_collection_interval: # UNCHANGED
     5: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-1-201: 0 # random value between 1 and 201
 
-  poko_collection_checks: # Turned on to allow extra checks and to put Yellow Onion at 100%.
+  poko_collection_checks: # Extra useful to have checks.
     'no': 0
     'yes': 50
 
-  local_items: # These should be in my world so that I can goto new areas when I obtain these. I got these too early when they were non-local. In the normal game it usually requires over 100 Pikmin to carry one of these.
-    - Spherical Atlas
-    - Geographic Projection
+  filler_item_weights: # Ok this is cool, but I probably wouldn't mind the Sprays being more filler instead of Pikmin.
+    Blue Pikmin: 12
+    Purple Pikmin: 12
+    Red Pikmin: 12
+    Ultra-Bitter Spray: 19
+    Ultra-Spicy Spray: 19
+    White Pikmin: 12
+    Yellow Pikmin: 12
+
+  filler_pikmin_amount: # UNCHANGED
+    15: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-1000: 0 # random value between 1 and 1000
+
+  filler_pikmin_leaves: # Makes all Filler Pikmin pick a random type of leaf.
+    leaf: 0
+    bud: 0
+    flower: 0
+    full_random: 50
+
+  local_items: []
 
   non_local_items: []
 
@@ -132,18 +157,4 @@ Pikmin 2:
 
   item_links: []
 
-  plando_items: # Makes the Yellow Onion go to these locations thus needing to fight the Boss there to get it.
-    - items:
-        Yellow Onion: true
-      locations:
-        - WFG Five-man Napsack
-        - FC Repugnant Appendage
-        - CoS The Key
-        - BK Forged Courage
-        - GK Dream Material
-        - HoH Remembered Old Buddy
-        - SC Stellar Orb
-        - SR Amplified Amplifier
-        - SMGC Professional Noisemaker
-        - CoC Silencer
-      force: false
+  plando_items: []
