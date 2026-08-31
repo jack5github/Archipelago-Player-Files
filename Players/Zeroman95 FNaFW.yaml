@@ -8,7 +8,7 @@ requires:
 
 FNaFW:
   progression_balancing: # Dropped to 40 due to how fast I got checks
-    40: 50
+    40: 99
 
   accessibility: # UNCHANGED
     full: 50
@@ -24,15 +24,15 @@ FNaFW:
   initial_characters: # True Random and no Halloween is not working for me, so it is now swapped to limited_random
     limited_random: 99
 
-  vanilla_halloween: # No
-    'false': 50
-    'true': 0
-
-  vanilla_lasers: # Lasers get added to the Pool for progress
+  vanilla_halloween: # UNCHANGED
     'false': 0
     'true': 50
 
-  vanilla_pearl: # Pearl is in Pool and Pearl in the Fish Minigame is a check
+  vanilla_lasers: # Realized these puts the lasers in the original location if set to True. UNCHANGED
+    'false': 50
+    'true': 0
+
+  vanilla_pearl: # UNCHANGED
     'false': 50
     'true': 0
 
@@ -52,7 +52,7 @@ FNaFW:
     'false': 0
     'true': 50
 
-  progressive_bytes: # UNCHANGED
+  progressive_bytes: # Random bytes are obtained
     'false': 50
     'true': 0
 
