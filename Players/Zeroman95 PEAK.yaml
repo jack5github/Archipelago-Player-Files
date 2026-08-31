@@ -1,6 +1,6 @@
 ﻿name: ZeromanPEAK{NUMBER}
-description: |-
-  Zeroman95's PEAK YAML File
+
+description: Zeroman95s PEAK YAML File
 
 game: PEAK
 requires:
@@ -10,376 +10,459 @@ PEAK:
   progression_balancing:
     random-range-50-80: 99 # set to random-range-50-80 to give better items and to make the game go quicker.
 
-  accessibility:
-    full: 99 # Unchanged
+  accessibility: # UNCHANGED
+    full: 50
+    minimal: 0
 
-  goal:
-    reach_peak: 99 # Never done all Badges, never did karat; Not doing both Peak and Badges at the same time.
-    complete_all_badges: 0
-    24_karat_badge: 0
-    peak_and_badges: 0
+  goals: # UNCHANGED
+    # The goals of the seed. Every selected goal must be completed.
+    #
+    # Reach Peak: Reach the peak on the ascent level specified by Required Ascent Count
+    #
+    # Collect Badges: Collect the number of badges specified by Required Badge Count
+    #
+    # 24 Karat Badge: Toss the Ancient Idol into The Kiln's lava
+    #
+    # Free The Soul: Free the Scoutmaster's soul in [REDACTED]
+    ['Reach Peak']
 
-  ascent_count:
+  ascent_count: # No Ascents required
     0: 99
 
-  badge_count:
-    20: 99 # UNCHANGED NOT USING.
+  badge_count: # UNCHANGED NOT USING.
+    20: 50
     random: 0
-    random-low: 0
-    random-high: 0
-    random-range-1-54: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-1-54: 0 # random value between 1 and 54
 
-  progressive_stamina:
+  item_sanity: # Send it.
     'false': 0
-    'true': 50 # Makes game more difficult, but challenging.
+    'true': 50
 
-  additional_stamina_bars:
-    'false': 50 # Changed to false because I completed the game basically before I reached 100% Stamina
+  loot_sanity: # All locations to find loot are random.
+    none: 0
+    luggage: 0
+    trees_and_bushes: 0
+    all: 99
+
+  logical_scout_statue: # Huh, neato.
+    'false': 0
+    'true': 50
+
+  scout_amulet_sanity: # Yep.
+    'false': 0
+    'true': 50
+
+  tracker_item_spawning: # WHAT.
+    'false': 0
+    'true': 50
+
+  progressive_stamina: # Gives the game more logical locations.
+    'false': 0
+    'true': 50
+
+  additional_stamina_bars: # Helps when you want to end the game early.
+    'false': 0
+    'true': 50
+
+  ring_link: # UNCHANGED
+    'false': 50
     'true': 0
 
-  ring_link:
-    'false': 50 # Unchanged
+  hard_ring_link: # UNCHANGED
+    'false': 50
     'true': 0
 
-  hard_ring_link:
-    'false': 50 # Unchanged
-    'true': 0
-
-  energy_link:
+  energy_link: # Helps certain games.
     'false': 0
-    'true': 50 # Fun, and Dynamite.
+    'true': 50
 
-  trap_link:
+  trap_link: # Why not!?
     'false': 0
-    'true': 50 # Turned on because Jack5 PEAK has it enabled.
+    'true': 50
 
-  death_link:
+  breath_link: # Interesting...
     'false': 0
-    'true': 50 # Turned on because Jack5 PEAK has it enabled.
+    'true': 50
 
-  death_link_behavior:
+  damage_link: # Wow so many links.
+    'false': 0
+    'true': 50
+
+  damage_link_group: # UNCHANGED
+    '': 50
+
+  knockback_link: # Another one.
+    'false': 0
+    'true': 50
+
+  death_link: # It's an Archipelago tradition to have Death Link on.
+    'false': 0
+    'true': 50
+
+  death_link_group: # UNCHANGED
+    '': 50
+
+  death_link_behavior: # Random killed player according to Jack5 is really brutal.
     kill_random_player: 0
-    reset_to_last_checkpoint: 99 # Kill Random Player is too BRUTAL.
+    reset_to_last_checkpoint: 99
 
-  death_link_send_behavior:
+  death_link_send_behavior: # Death Link sending only happens when the game is over.
     any_player_dies: 0
-    all_players_dead: 99 # Only works when the Game is over.
+    all_players_dead: 99
 
-  trap_percentage:
-    random-high: 99 # I have this set the same for Ratchet 3 and Hit and Run, but this might be too much so maybe turn it down next time.
+  trap_percentage: # Random percentage of traps. Pretty certain Ratchet 3 is set the same way.
+    random-high: 99
 
-  instant_death_trap_weight:
-    # This sounds like Torture. So no.
-    none: 50
-    low: 0
-    medium: 0
-    high: 0
+  instant_death_trap_weight: # Too deadly.
+    none: 99
 
-  items_to_bombs_weight:
+  items_to_bombs_weight: # UNCHANGED
     # Likelihood of receiving a trap which drops the currently held item and replaces it with Dynamite
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  pokemon_trivia_trap_weight:
-    # NO TRIVIA ON THE MOUNTAIN.
-    none: 50
-    low: 0
-    medium: 0
-    high: 0
+  pokemon_trivia_trap_weight: # Sod off.
+    none: 99
 
-  blackout_trap_weight:
-    # Unchanged
+  blackout_trap_weight: # UNCHANGED
+    # Likelihood of receiving a trap which blacks out the player's screen temporarily
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  spawn_bee_swarm_weight:
-    # Unchanged
+  spawn_bee_swarm_weight: # UNCHANGED
+    # Likelihood of receiving a trap which spawns a swarm of bees
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  banana_peel_trap_weight:
-    # Unchanged
+  banana_peel_trap_weight: # UNChANGED
+    # Likelihood of receiving a trap which spawns a berrynana peel in front of a player
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  minor_poison_trap_weight:
-    # Unchanged
+  minor_poison_trap_weight: # UNCHANGED
+    # Likelihood of receiving a trap which applies a weak Poison Affliction to a player
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  poison_trap_weight:
-    # Unchanged
+  poison_trap_weight: # UNCHANGED
+    # Likelihood of receiving a trap which applies a Poison Affliction to a player
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  deadly_poison_trap_weight:
-    # Set to low, might be too dangerous to be on Medium.
+  deadly_poison_trap_weight: # UNCHANGED
+    # Likelihood of receiving a trap which applies a strong Poison Affliction to a player
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  tornado_trap_weight: # Set to low.
     none: 0
     low: 50
     medium: 0
     high: 0
 
-  tornado_trap_weight:
-    # Set to low.
-    none: 0
-    low: 50
-    medium: 0
-    high: 0
-
-  swap_trap_weight:
-    # Set to NONE. Because I am the only one.
-    none: 50
-    low: 0
-    medium: 0
-    high: 0
-
-  nap_time_trap_weight:
-    # Unchanged
+  swap_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  hungry_hungry_camper_trap_weight:
-    # Unchanged
+  nap_time_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  balloon_trap_weight:
-    # Unchanged
+  hungry_hungry_camper_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  slip_trap_weight:
-    # Unchanged
+  balloon_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  freeze_trap_weight:
-    # Unchanged
+  slip_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  cold_trap_weight:
-    # Unchanged
+  freeze_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  hot_trap_weight:
-    # Unchanged
+  cold_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  injury_trap_weight:
-    # Set to low.
+  hot_trap_weight: # UNCHANGED
     none: 0
-    low: 50
-    medium: 0
+    low: 0
+    medium: 50
     high: 0
 
-  cactus_ball_trap_weight:
-    # Set to High, GIVE ME ALL THE CACTUS BALLS!
+  injury_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  cactus_ball_trap_weight: # I enjoy the Cactus Ball traps.
     none: 0
     low: 0
     medium: 0
     high: 50
 
-  yeet_trap_weight:
-    # Unchanged
+  yeet_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  tumbleweed_trap_weight:
-    # Unchanged
+  tumbleweed_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  zombie_horde_trap_weight:
-    # Changed to low.
-    none: 0
-    low: 50
-    medium: 0
-    high: 0
-
-  gust_trap_weight:
-    # Unchanged
+  zombie_horde_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  mandrake_trap_weight:
-    # Unchanged
+  gust_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  fungal_infection_trap_weight:
-    # Unchanged
+  mandrake_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  fear_trap_weight:
-    # Unchanged
+  fungal_infection_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  scoutmaster_trap_weight:
-    # Unchanged
+  turn_to_stone_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  zoom_trap_weight:
-    # Unchanged
+  fear_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  screen_flip_trap_weight:
-    # Unchanged
+  scoutmaster_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  drop_everything_trap_weight:
-    # Unchanged
+  zoom_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  pixel_trap_weight:
-    # Unchanged
+  screen_flip_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  eruption_trap_weight:
-    # Unchanged
+  drop_everything_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  beetle_horde_trap_weight:
-    # Unchanged
+  pixel_trap_weight: # UNCHANGED
     none: 0
     low: 0
     medium: 50
     high: 0
 
-  custom_trivia_trap_weight:
-    # Set to None.
+  eruption_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  beetle_horde_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  custom_trivia_trap_weight: # This requires custom questions to be made. So none.
     none: 50
     low: 0
     medium: 0
     high: 0
 
-  disable_multiplayer_badges:
-    # Unchanged
-    'false': 50
-    'true': 0
+  pokemon_count_trap_weight: # Weirdly this sounds like fun.
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
 
-  disable_hard_badges:
-    # Set to True for checks.
+  inverted_mouse_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  stamina_drain_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  chaos_control_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  emergency_rescue_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  explosion_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  frog_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  ghost_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  rain_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  poison_cloud_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  frost_cloud_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  sleep_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  well_done_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  instant_crystal_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  curse_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  cursed_ball_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  storm_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  skeleton_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  disable_multiplayer_badges: # Nope.
     'false': 0
     'true': 50
 
-  disable_biome_badges:
-    # Unchanged
-    'false': 50
-    'true': 0
+  disable_hard_badges: # Set to true to not have these badges.
+    'false': 0
+    'true': 50
+
+  disable_biome_badges: # Same as above.
+    'false': 0
+    'true': 50
 
   local_items: []
 
   non_local_items: []
 
-  start_inventory:
-    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. There are 6 of these, 4 of which are for each biome after the Shore (excluding the Peak), the other 2 being basically filler items.
-    Progressive Mountain: 6
+  start_inventory: {}
 
   start_hints: []
 
   start_location_hints: []
 
-  exclude_locations:
-    # Several badges are not likely to get, or are made obsolete by the act of completing a summit, so they shouldn't contain any important unlocks.
-    - 24 Karat Badge # Difficult
-    - Advanced Mycology Badge # Unlikely
-    - Animal Serenading Badge # Unlikely
-    - Applied Esoterica Badge # Multiplayer
-    - Astronomy Badge # Unlikely
-    - Balloon Badge # Endgame
-    - Bing Bong Badge # Endgame
-    - Bookworm Badge # Unlikely
-    - Bouldering Badge # Unlikely
-    - Bundled Up Badge # Difficult
-    - Calcium Intake Badge # Unlikely
-    - Clutch Badge # Multiplayer
-    - Competitive Eating Badge # Difficult
-    - Cool Cucumber Badge # Difficult
-    - Cryptogastronomy Badge # Difficult
-    - Daredevil Badge # Unlikely
-    - Disaster Response Badge # Multiplayer
-    - Emergency Preparedness Badge # Multiplayer
-    - First Aid Badge # Multiplayer
-    - Foraging Badge # Unlikely
-    - Gourmand Badge # Difficult
-    - Happy Camper Badge # Multiplayer
-    # - Hasty Badge # Endgame (not in implementation)
-    - High Altitude Badge # Unlikely
-    - Knot Tying Badge # Unlikely
-    - Leave No Trace Badge # Endgame
-    - Lone Wolf Badge # Endgame
-    - Megaentomology Badge # Unlikely
-    - Mycoacrobatics Badge # Difficult
-    - Mycology Badge # Difficult
-    - Naturalist Badge # Endgame
-    - Needlepoint Badge # Difficult
-    - Participation Badge # Multiplayer
-    - Survivalist Badge # Endgame
-    - Tread Lightly Badge # Difficult
-    - Toxicology Badge # Unlikely
-    - Ultimate Badge # Multiplayer
-    - Undead Encounter Badge # Difficult
+  exclude_locations: []
 
   priority_locations: []
 
