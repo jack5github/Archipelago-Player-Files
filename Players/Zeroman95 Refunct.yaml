@@ -6,11 +6,11 @@ game: Refunct
 requires:
   version: 0.6.7
   game:
-    Refunct: 1.4.0
+    Refunct: 1.5.1
 
 Refunct:
-  progression_balancing: # Increased by 10.
-    60: 99
+  progression_balancing: # UNCHANGED
+    50: 99
 
   accessibility: # UNCHANGED
     full: 50
