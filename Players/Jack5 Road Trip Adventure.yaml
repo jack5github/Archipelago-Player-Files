@@ -17,6 +17,7 @@ Road Trip Adventure:
     normal: 50
   accessibility:
     full: 50
+  # TODO: When a new goal condition is added to simply complete all Q's Factory races rather than to become the president, switch to that goal
   area_unlock_mode:
     # In RTA AP, in order to interact with anything in a town (enter houses, talk to cars, etc.), you must unlock the town first.
     # In **Decorations** mode, you must obtain one of the garage decorations associated with that town to unlock it.
@@ -93,13 +94,19 @@ Road Trip Adventure:
     Progressive Brakes: 1
     # After testing, I found that 1 steering upgrade was not enough, so I've added another.
     Progressive Steering: 2
-    # Also start with the first billboard, so that I can earn money just by driving through the world right from the start. This means that I don't have to exclude Shop Purchases.
+    # Also start with all billboards, so that I can earn money just by driving through the world right from the start without needing to worry what locations I have unlocked.
     Billboard - Coffee Shop: 1
+    Billboard - Noodle Shop: 1
+    Billboard - Cake Shop: 1
+    Billboard - Wool Shop: 1
+    Billboard - Coconut Shop: 1
   start_hints:
     # Area Unlocks are incredibly important items that should be hinted from the start, so that everyone knows what to do in order to progress Road Trip Adventure.
     - Area Unlocks
     # Similarly, I also want to get Progressive Licenses earlier, because then I can spend more time racing as opposed to driving through the open world.
     - Progressive License
+    # The Jet Turbine is a crazy late-game item that makes it possible to build up extreme speed along straights even without good parts. It is also an absolute requirement for the golf minigame.
+    - Jet Turbine
   # Getting location hints is a great way of looking into minigames to figure out if they are even worth playing. This is what Spyro: A Hero's Tail does. Unfortunately, there are so many minigames in Road Trip Adventure that if I were to put them all here, the hint list would be completely cluttered and it would be very difficult to use the Universal Tracker. Therefore, leave this empty.
   start_location_hints: []
   exclude_locations:
@@ -124,11 +131,19 @@ Road Trip Adventure:
     - Stamp 7
     - Body Q150 # Extra reward
     - Body Q150 / Stamp 7 # Doubled-up name
-    # Like the stamp above this one, this one is a fetch quest that requires you to find 7 gemstones throughout the world. Same old story of there being no in-game nor AP tracker, so this stamp too is excluded.
-    - Gemstones
+    # Like the stamp above this one, Stamp 9 is a fetch quest that requires you to find 7 gemstones throughout the world. Same old story of there being no in-game nor AP tracker, so this stamp and all the gemstones are excluded (except Emerald and Amethyst which are easy to find around White Mountain).
+    - Blue Sapphire
+    - Ruby
+    - Topaz
+    - Black Opal
+    - Moonstone
     - Stamp 9
     - Body Q087 # Extra reward
     - Body Q087 / Stamp 9 # Doubled-up name
+    # Stamp 16 is a drag-then-stop race that Archipelago logic expects that you are able to beat when that straight-up isn't possible.
+    - Stamp 16
+    # The Fountain Pen is an object that is only able to be reached by driving up the ruined temple, and it is in logic before my car is able to climb up the stairs.
+    - Fountain Pen
     # This stamp is a 3-part (maybe 4-part) process that involves travelling all across the map to perform various actions and talk to a few NPCs. Excluded due to being time consuming.
     - Stamp 41
     - Flower Pattern # Extra reward
@@ -138,6 +153,12 @@ Road Trip Adventure:
     - Coine Reward 9 (Metal Pad)
     - Coine Reward 10 (Hyper MAX)
     - Coine Reward 10 (Hyper MAX) / Stamp 46 # Doubled-up name
+    # Stamp 48 is the Rally, an extremely long sprint that goes all over the map and requires specific tyres for each region.
+    - Stamp 48
+    - Body Q089 # Extra reward
+    - Body Q089 / Stamp 48 # Doubled-up name
+    # Stamp 49 is the Endurance Race, an extremely long circuit that lasts for 10 laps.
+    - Stamp 49
     # Stamp 50 and 51 both require extreme attention to detail when it comes to NPC chatter within My City.
     - Stamp 50
     - Stamp 51
@@ -149,8 +170,24 @@ Road Trip Adventure:
     - Stamp 71
     - Body Q082 # Extra reward
     - Body Q082 / Stamp 71 # Doubled-up name
+    # Stamp 80 requires that an NPC named Shirley is present in the vacant house in Papaya Island, but I don't know what the conditions are to spawn her.
+    - Stamp 80
+    # Stamp 90 is an impossible jump that requires flying from a cramped space with invisible walls everywhere. It also apparently requires 60-100 tries to make it.
+    - Stamp 90
+    - Rainbow Meter # Extra reward
+    - Rainbow Meter / Stamp 90 # Doubled-up name
     # The picture-taking version of Stamp 46. Not a chance in the world of me completing this.
     - Stamp 96
+    # Stamp 100 is the World Grand Prix and the race against the President. This 7-race championship requires that I and my two other party members have the best possible parts and get high places in each race, to the point that any failure to do so is an extreme penalty. This is also the normal win condition of Road Trip Adventure, which is absolutely insane.
+    - Stamp 100
+    # I just don't know where to find this, and it being an early check infuriates me to no end.
+    - Police Light
+    # The following shop purchases are too expensive and require lots of grinding to obtain.
+    - Shop Purchase - Black MAX Engine
+    - Shop Purchase - RS Magnum Engine
+    - Shop Purchase - Flight Wing
+    # The Super A License requires that I win every single race, which I may not have done and can't easily backtrack to redo.
+    - Super A License Obtained
   priority_locations: []
   item_links: []
   plando_items:
