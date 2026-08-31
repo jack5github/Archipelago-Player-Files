@@ -6,47 +6,61 @@ game: Ratchet and Clank 3
 requires:
   version: 0.6.7
   game:
-    Ratchet and Clank 3: 0.5.3
+    Ratchet and Clank 3: 0.6.0
 
 Ratchet and Clank 3:
-  progression_balancing:
-    # I play with RANDOM Location so no Progression please!
+  progression_balancing: # I play with no progression! Ratchet and Clank 3 is more fun without it.
     0: 99
 
-  accessibility:
-    # Set to minimal to make Items required to beat the game be available only.
-    full: 0
-    minimal: 50
+  accessibility: # UNCHANGED
+    full: 50
+    minimal: 0
 
-  deathlink:
-    # Death will affect everyone.
+  deathlink: # Death will affect everyone.
     'false': 0
     'true': 50
 
-  intro_skip:
-    # Intro Skip can now be used with the PAL Version of the game. Absolutely please pass Veldin.
-    disabled: 0
-    enabled: 50
+  shortcuts: # UNCHANGED
+    Aquatos Shuttle: 0
+    Command Center Dropship: 0
+    Daxx Teleporter: 0
+    Draco Teleporter: 0
+    Florana Drawbridge: 0
+    Hideout Taxi: 0
+    Hideout Teleporter: 0
+    Holostar Skip Clank: 0
+    Holostar Teleporter: 0
+    Marcadia Dropship: 0
+    Metropolis Dropship: 0
+    Metropolis Taxi: 0
+    Obani Teleporter: 0
+    Tyhrranosis Dropship: 0
+    Tyhrranosis Skip Intro: 0
+    Veldin Skip: 1
 
-  holostar_skip:
-    # Unchanged
-    start_as_clank: 50
-    start_at_trailer: 0
+  speedups: # UNCHANGED
+    Bolt Crank: 0
+    Hacker: 0
+    Halo Jumps: 0
+    Refractor: 0
+    Tyhrraguise: 0
 
-  bolt_and_xp_multiplier:
-    # Increased to 2x to balance Bolts filler item
+  bolt_and_xp_multiplier: # Turn on New Game plus multiplier
     x2: 99
 
-  one_hp_challenge:
-    # Unchanged
+  one_hp_challenge: # UNCHANGED
     Clank: 0
     Giant Clank: 0
     Qwark: 0
     Ratchet: 0
     Vehicle: 0
 
-  starting_weapons:
-    # RY3NO is off because RY3NO is overpowered.
+  ngplus_start: # Give me New Game Plus.
+    disabled: 0
+    enabled: 0
+    enabled_with_multiplier: 99
+
+  starting_weapons: # RY3NO is set to 0 because it is too overpowered.
     Agents of Doom: 1
     Annihilator: 1
     Bouncer: 1
@@ -68,137 +82,139 @@ Ratchet and Clank 3:
     Spitting Hydra: 1
     Suck Cannon: 1
 
-  progressive_weapons:
-    # Unchanged
-    disable: 50
-    enable: 0
+  ngplus_items: # RY3NO gets put into Multi-World. When a weapon gets to V5, the V8 versions become available as checks in the Vendor.
+    disabled: 0
+    enabled: 50
 
-  armor_upgrade:
-    # Unchanged
-    4: 99
+  progressive_weapons: # UNCHANGED
+    disable: 50
+    manual_leveling: 0
+    automatic_leveling: 0
+
+  armor_upgrade: # UNCHANGED
+    4: 50
     random: 0
     random-low: 0 # random value weighted towards lower values
     random-high: 0 # random value weighted towards higher values
     random-range-0-8: 0 # random value between 0 and 8
 
-  clank_options:
-    # Set to put Heli-Pack and Thruster-Pack somewhere in the Pool. Meaning I won't have clank for a good portion of the game until then.
+  clank_options: # Puts Heli-Pack and Thruster-Pack as a Item in the pool. Meaning Clank won't be collected for a long time.
+    start_with: 50
+    shuffled_as_one: 0
     shuffled_independently: 99
+    shuffled_progressive: 0
 
-  traps_enabled:
-    # I play this game with a passion bring on the Traps.
+  traps_enabled: # Bring on the traps!
     disabled: 0
     enabled: 50
 
-  trap_weight:
-    # Unchanged
+  trap_weight: # UNCHANGED
     1-Hit KO Trap: 1
     Black Screen Trap: 1
+    Gadgetron Debt Trap: 1
     Invisible Trap: 1
     Item Lock Trap: 1
     No Ammo Trap: 1
     No Clank Trap: 1
     Wrench Only Trap: 1
 
-  filler_weight:
-    # Turning off Bolts but adding Weapon Level-Up
-    Bolts: 0
-    Jackpot: 10
+  filler_weight: # Lowered bolt filler.
+    Bolts: 1
+    Jackpot: 5
     Nanotech EXP: 5
     Weapon Level-Up: 5
 
-  weapon_vendors:
-    # Unchanged
+  weapon_vendors: # UNCHANGED
     disabled: 0
     enabled: 50
 
-  armor_vendor:
-    # Unchanged
+  ngplus_vendors: # Makes all NGPlus items, checks.
     disabled: 0
     enabled: 50
 
-  ship_vendor:
-    # Unchanged
+  armor_vendor: # UNCHANGED
     disabled: 0
     enabled: 50
 
-  scout_vendors:
-    # Feels good to share these Items as hints to other players so they know something is here.
+  ship_vendor: # UNCHANGED
+    disabled: 0
+    enabled: 50
+
+  scout_vendors: # When I seek items, it gives Hints to share to other players to know certain locations.
     Armor: 1
     Ship: 1
     Weapon: 1
 
-  skill_points:
-    # I play with all Skill Points on, I 100%'d this game so many times I have memorised EVERY Skill Point on the game.
-    all: 99
+  skill_points: # I have played this game so many times. All Skill Points I can get.
+    none: 0
+    simple: 0
+    all: 50
 
-  trophies:
-    # I have played this game so many times I know where every Trophy is and how to obtain them.
-    all: 99
+  trophies: # Same as Skill Points above.
+    none: 0
+    collectables: 0
+    all: 50
 
-  titanium_bolts:
-    # Unchanged
+  titanium_bolts: # UNCHANGED
     disabled: 0
     enabled: 50
 
-  rangers:
-    # Unchanged
+  weapon_level_locations: # Why the hell not?
+    disable: 0
+    v5: 0
+    all: 50
+
+  rangers: # UNCHANGED
     none: 0
     story_missions: 0
     optional_missions: 0
     all: 50
 
-  vidcomics:
-    # Unchanged
+  vidcomics: # UNCHANGED
     disabled: 0
     enabled: 50
 
-  vr_challenges:
-    # Unchanged
+  vr_challenges: # UNCHANGED
     disabled: 0
     enabled: 50
 
-  arena:
-    # Unchanged
+  arena: # UNCHANGED
     none: 0
     first_only: 0
     second_only: 0
     all: 50
 
-  sewer_crystals:
-    # All Sewer Crystals because now the Bolts in them are worth it.
-    all: 99
+  sewer_crystals: # In the first few versions of the RAC3 AP, this wasn't worth it; But now it is thanks to the Vendors doing something.
+    none: 0
+    every_20: 0
+    every_10: 0
+    every_5: 0
+    all: 50
 
-  sewer_limitation:
-    # All Sewer Crystals are now checks.
+  sewer_limitation: # All Sewer Crystals are checks.
     101: 99
 
-  nanotech_milestones:
-    # All Nanotech milestones give checks.
+  nanotech_milestones: # All nanotech gives checks.
+    none: 0
+    every_20: 0
+    every_10: 0
+    every_5: 0
     all: 99
 
-  nanotech_limitation:
-    # Unchanged
-    100: 50
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-11-100: 0 # random value between 11 and 100
+  nanotech_limitation: # All 200 Nanotech increases give checks.
+    200: 99
 
-  ship_nose:
-    # Random Ship Nose.
+  ship_nose: # Random Ship Nose.
     standard: 33
     split: 33
     scoop: 33
 
-  ship_wings:
-    # Random Ship Wings.
+  ship_wings: # Random Ship Wings.
     standard: 33
     hi_lift: 33
     heavy_ordinance: 33
 
-  ship_skin:
-    # Allow random ship skin other then blargian red.
+  ship_skin: # Allow random ship skin other then blargian red.
     blargian_red: 0
     orxon_green: 3
     bogon_blue: 3
@@ -232,8 +248,7 @@ Ratchet and Clank 3:
     florana_breeze: 3
     ozzy_kamikaze: 3
 
-  player_skin:
-    # Allow to pick random skin other then default Ratchet.
+  player_skin: # Allow to pick random skin other then default Ratchet.
     default: 0
     old_school: 12
     snowman: 12
@@ -244,6 +259,14 @@ Ratchet and Clank 3:
     robo_rooster: 12
     trooper: 12
     robo: 12
+
+  helpdesk: # Helpdesk can stay disabled.
+    disabled: 50
+    enabled: 0
+
+  vendor_access: # UNCHANGED
+    visit: 50
+    infobot: 0
 
   exclude_locations: ['Unstable']
 
