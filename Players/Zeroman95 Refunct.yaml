@@ -6,7 +6,7 @@ game: Refunct
 requires:
   version: 0.6.7
   game:
-    Refunct: 1.3.2
+    Refunct: 1.4.0
 
 Refunct:
   progression_balancing: # Increased by 10.
@@ -80,21 +80,27 @@ Refunct:
     100: 99
 
   effects_and_traps: # Increase Traps that effect the game instead of changing the Sky.
-    Effect - Dark skies: 1
-    Effect - Hurricane: 1
-    Effect - No skylight: 1
-    Effect - Red sky: 1
-    Effect - Starry sky: 1
-    Trap - Ascend: 3
-    Trap - Blurrrgh: 3
-    Trap - Depthless: 3
-    Trap - Fast-mo: 3
-    Trap - Slo-mo: 3
+    Ascend Trap: 3
+    Blurrrgh Trap: 3
+    Dark Skies: 1
+    Depthless Trap: 3
+    Fast-mo Trap: 3
+    Hurricane: 1
+    No Skylight: 1
+    Red Sky: 1
+    Slo-mo Trap: 3
+    Starry Sky: 1
 
   rename_grass: # Random Grass names that I won't even know.
+    none: 0
+    english: 0
+    latin: 0
     both: 99
 
   rename_flowers: # Same as renamed grass.
+    none: 0
+    english: 0
+    latin: 0
     both: 99
 
   death_link: # DEATH TO ALL!
