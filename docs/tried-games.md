@@ -29,3 +29,9 @@ This document lists the Archipelago games that we have tried setting up or playi
 ## Zeroman95
 
 - **Donkey Kong 64** - It's cool to see AP for Donkey Kong 64, problem is that this game is LONG and by the time you played for a few hours you feel like you want to play something else and will barely get around 20-30 Checks minimum. Sadly I am not nostalgia for DK64, but I am with Ratchet 3.
+
+- **Luigi's Mansion** - Love this game, although I think it's fair if I don't play it anymore because I just do not own this game legit.
+
+- **Pikmin 2** - Technically own the Wii Version, but this uses the GameCube Version which I do not own.
+
+- **The Legend of Zelda (Zelda 1)** - I don't even own an NES nor a copy of Zelda 1.
