@@ -1,0 +1,101 @@
+﻿name: Jack5SDC{NUMBER}
+description: |-
+  Jack5's Sonic Dreams Collection player file
+
+  TODO: Add description
+game: Sonic Dreams Collection
+requires:
+  version: 0.6.7
+  game:
+    Sonic Dreams Collection: 0.4.0
+Sonic Dreams Collection:
+  ################
+  # Game Options #
+  ################
+  # Unchanged from the base configuration.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  mrs_full_story:
+    # Adds a few extra locations in My Roommate Sonic, capturing the full story.
+    # This is enabled in order to give My Roommate Sonic more locations and thus more of a reason to exist in the context of an AP run.
+    'false': 0
+    'true': 50
+  smm_sanity:
+    # Adds multiple checks to various tasks in Sonic Movie Maker (Photosanity/Foodsanity/Birthsanity).
+    # Enabled to maximise checks for this game. Particular disliked checks can instead be added to `exclude_locations`.
+    'false': 0
+    'true': 50
+  smm_eggysanity:
+    # Adds checks to hidden Eggy NPCs in Sonic Movie Maker.
+    # Enabled to maximise checks for this game.
+    'false': 0
+    'true': 50
+  eo_eggysanity:
+    # Adds checks to hidden Eggy NPCs in Eggman Origin.
+    # Disabled, because hunting for Eggys in Eggman Origin is really frustrating and boring.
+    'false': 50
+    'true': 0
+  ascensions_to_goal:
+    # The amount of Ascensions needed to goal. This will increase the amount of items and locations in the pool (7 items and 8 locations per ascension).
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Unchanged from the base configuration.
+    1: 50
+  junk_percentage:
+    # Percentage of non-required Robust Worms to be converted to junk items.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Reduced from the default 50% to a very small percentage, since the worms are very important progression items and all of them need to be acquired to win. This has not been tested, so it may need to be increased later.
+    random-range-2-5: 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations:
+    # This egg is in the Prom scenario of Sonic Movie Maker, and requires spamming of the spacebar to reach MASTER.
+    - Sonic Movie Maker - Bring the Fake Fruit to MASTER
+    # This egg is in the Hotel scenario of Sonic Movie Maker, and requires excessive use of the mouse scroll wheel to reach.
+    - Sonic Movie Maker - Moon Egg
+    # This egg is in the Roommates (DLC) scenario of Sonic Movie Maker, yet despite both the remote and the egg being fully visible, they do nothing when brought together.
+    - Sonic Movie Maker - Bring a Remote to TV Egg
+    # == The below locations are unlocked too quickly, one after another, and so they are excluded so other locations in the same area can be prioritised.
+    # === Make My Sonic cameras
+    - Make My Sonic - Profile Camera
+    - Make My Sonic - Behind Camera
+    - Make My Sonic - Upper Side Camera
+    - Make My Sonic - Front Camera
+    - Make My Sonic - Default Camera
+    # === My Roommate Sonic story events
+    - My Roommate Sonic - I Don't Believe You
+    - My Roommate Sonic - Respond to Texts
+    - My Roommate Sonic - Knock It Off
+    - My Roommate Sonic - Remote
+    - My Roommate Sonic - Move In
+    # === Sonic Move Maker Prom backdrops (other than Lightsaber war)
+    - Sonic Movie Maker - Scenario 2 Emerald Green Zone
+    - Sonic Movie Maker - Scenario 2 Brick In The Wall
+    - Sonic Movie Maker - Scenario 2 Lecture Hall
+    - Sonic Movie Maker - Scenario 2 Winter House
+    - Sonic Movie Maker - Scenario 2 Sailor's Paradise
+    - Sonic Movie Maker - Scenario 2 Making A Big Entrance
+    - Sonic Movie Maker - Scenario 2 Ice Cream Fun
+    - Sonic Movie Maker - Scenario 2 Sonic Dreams Collection
+    - Sonic Movie Maker - Scenario 2 A Fantasy Island
+    - Sonic Movie Maker - Scenario 2 Jazz Pattern
+    # === Eggman Origin worms
+    - Eggman Origin - Account 1 Worm 1
+    - Eggman Origin - Account 1 Worm 2
+    - Eggman Origin - Account 1 Worm 3
+    - Eggman Origin - Account 1 Worm 4
+    - Eggman Origin - Account 1 Worm 5
+    - Eggman Origin - Account 1 Worm 6
+  priority_locations:
+    # Pivotal locations in Sonic Dreams Collection where it makes the most sense, above all other locations, to put important items.
+    - Make My Sonic - Account 1 Upload
+    - My Roommate Sonic - Dreamcast Off
+  item_links: []
+  plando_items: []
