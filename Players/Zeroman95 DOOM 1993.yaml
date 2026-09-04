@@ -1,0 +1,148 @@
+﻿name: ZeromanDOOM93{NUMBER}
+
+description: Zeroman95s DOOM 1993 YAML
+
+game: DOOM 1993
+requires:
+  version: 0.6.7
+
+DOOM 1993:
+  progression_balancing: # UNCHANGED
+    50: 99
+
+  accessibility: # UNCHANGED
+    full: 50
+    minimal: 0
+
+  goal: # Reach E1M8, E2M8, E3M8. Beat the Bosses in there to Goal.
+    complete_all_levels: 0
+    complete_boss_levels: 99
+
+  difficulty: # UNCHANGED
+    easy: 0
+    medium: 50
+    hard: 0
+    nightmare: 0
+
+  random_monsters: # Picks random insane monsters for every level in the game. It makes sure it is possible though.
+    random_chaotic: 99
+
+  random_pickups: # Picks random pickups such as health, ammo. Balances it out to not be too crazy.
+    random_balanced: 99
+
+  random_music: # UNCHANGED
+    vanilla: 50
+    shuffle_selected: 0
+    shuffle_game: 0
+
+  flip_levels: # UNCHANGED
+    # Flip levels on one axis.
+    # vanilla: No flipping
+    # flipped: All levels are flipped
+    # randomly_flipped: Random levels are flipped
+    vanilla: 50
+    flipped: 0
+    randomly_flipped: 0
+
+  allow_death_logic: # You can reset any level at any time. So this isn't too bad to deal with.
+    'false': 0
+    'true': 50
+
+  pro: # UNCHANGED
+    # Include difficult tricks into rules. Mostly employed by speed runners.
+    # i.e.: Leaps across to a locked area, trigger a switch behind a window at the right angle, etc.
+    'false': 50
+    'true': 0
+
+  start_with_computer_area_maps: # Please. I would rather not look at every wall to find the one item I am looking for.
+    'false': 0
+    'true': 50
+
+  death_link: # The only thing they fear... Is you.
+    'false': 0
+    'true': 50
+
+  reset_level_on_death: # UNCHANGED (Might consider turning this on)
+    # When dying, levels are reset and monsters respawned. But inventory and checks are kept.
+    # Turning this setting off is considered easy mode. Good for new players that don't know the levels well.
+    'false': 0
+    'true': 50
+
+  episode1: # UNCHANGED
+    # Knee-Deep in the Dead.
+    # If none of the episodes are chosen, Episode 1 will be chosen by default.
+    'false': 0
+    'true': 50
+
+  episode2: # UNCHANGED
+    # The Shores of Hell.
+    # If none of the episodes are chosen, Episode 1 will be chosen by default.
+    'false': 0
+    'true': 50
+
+  episode3: # UNCHANGED
+    # Inferno.
+    # If none of the episodes are chosen, Episode 1 will be chosen by default.
+    'false': 0
+    'true': 50
+
+  episode4: # UNCHANGED
+    # Thy Flesh Consumed.
+    # If none of the episodes are chosen, Episode 1 will be chosen by default.
+    'false': 50
+    'true': 0
+
+  split_backpack: # This sounds cool. Turn it on.
+    'false': 0
+    'true': 50
+
+  backpack_count: # UNCHANGED
+    1: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-10: 0 # random value between 0 and 10
+
+  max_ammo_bullets: # Picks a middle amount of Max Ammo for bullets.
+    random-range-middle-200-999: 99
+
+  max_ammo_shells: # Picks a middle amount of Max Ammo for shells.
+    random-range-middle-50-999: 99
+
+  max_ammo_rockets: # Picks a middle amount of Max Ammo for rockets.
+    random-range-middle-50-999: 99
+
+  max_ammo_energy_cells: # Picks a middle amount of Max Ammo for cells.
+    random-range-middle-300-999: 99
+
+  added_ammo_bullets: # Picks a middle amount of Added Ammo for bullets.
+    random-range-middle-200-999: 99
+
+  added_ammo_shells: # Picks a middle amount of Added Ammo for shells.
+    random-range-middle-50-999: 99
+
+  added_ammo_rockets: # Picks a middle amount of Added Ammo for rockets.
+    random-range-middle-50-999: 99
+
+  added_ammo_energy_cells: # Picks a middle amount of Added Ammo for cells.
+    random-range-middle-300-999: 99
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_inventory_from_pool: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
