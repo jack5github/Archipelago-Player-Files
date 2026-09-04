@@ -38,10 +38,10 @@ Quake 1:
     nightmare: 0
   basegame:
     # Pick which game/expansion to play.
-    # Selected all expansions I have access to to have an equal chance of being selected.
-    quake: 33
-    hipnotic: 33
-    rogue: 33
+    # Selected the expansions I have access to to have an equal chance of being selected. Disabled Rogue because it contains really difficult enemies (like those in Episode 4, e.g. Spawn and Wrath).
+    quake: 50
+    hipnotic: 50
+    rogue: 0
     mg1: 0
     dopa: 0
   unlock_abilities:
@@ -67,9 +67,9 @@ Quake 1:
     start_with: 50
   goal:
     # Choose the goal of the game.
-    # Changed from `all` to reflect the normal goal state of other Archipelago games.
-    beat_all_bosses: 50
-    beat_all_levels: 0
+    # Changed from `all` to reflect the normal goal state of other Archipelago games. At first I had this set to `beat_all_bosses`, but one time while testing I got the Hipnotic expansion and was able to kill the only boss while it was trapped inside a non-opening door.
+    beat_all_bosses: 0
+    beat_all_levels: 50
     collect_all_secrets: 0
     all: 0
   goal_percentage:
@@ -92,9 +92,9 @@ Quake 1:
     custom: 0
   include_mp_items:
     # Set if included locations should also contain multiplayer item spawns.
-    # Unchanged from the base configuration.
-    'false': 50
-    'true': 0
+    # Since removing Episode 4 from the pool drops the location count down from ~240 to ~200, multiplayer items are being added to increase what is available for me to pick up at any given time.
+    'false': 0
+    'true': 50
   custom_included_locations:
     # A list of itemnames that will be replaced with AP locations.
     # The number after the itemname is the percentage of items of that type, which will get turned into AP locations.
@@ -169,9 +169,9 @@ Quake 1:
     'true': 50
   episode4:
     # Include Episode 4 in the randomizer.
-    # Unchanged from the base configuration.
-    'false': 0
-    'true': 50
+    # The enemies in Episode 4 freak me out and are really difficult to kill, so I'm disabling this.
+    'false': 50
+    'true': 0
   episode5:
     # Include Episode 5 in the randomizer.
     # Unchanged from the base configuration.
@@ -243,7 +243,11 @@ Quake 1:
   local_items: []
   non_local_items: []
   start_inventory: {}
-  start_inventory_from_pool: {}
+  start_inventory_from_pool:
+    # Being unable to jump from the start of the game is really frustrating.
+    Jump: 1
+    # The stock shotgun in Quake is really weak, and I don't want to have to struggle to kill enemies.
+    Progressive Super Shotgun: 1
   start_hints: []
   start_location_hints: []
   exclude_locations: []
