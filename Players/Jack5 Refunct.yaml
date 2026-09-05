@@ -7,7 +7,7 @@ game: Refunct
 requires:
   version: 0.6.7
   game:
-    Refunct: 1.5.0
+    Refunct: 1.6.0
 Refunct:
   ################
   # Game Options #
@@ -169,6 +169,9 @@ Refunct:
     # Custom Minigame:
     # You can now play custom maps as part of archipelago! Every button you press is a check. Download *any* custom map you want, you can find them pinned in the archipelago-refunct post/thread. Put the custom map in the correct folder (open the mod, press CTRL+SHIFT+M, "Open Maps Folder"). And then when starting the minigame, choose the map you want to play!
     Custom Minigame: 1000000000000000000 # Force a custom map to appear.
+    # Defunct Minigame:
+    # All the platforms are there already, pressing buttons sinks them. Goal: sink the entire game D:
+    Defunct Minigame: 2 # It is not as quick to play the whole vanilla game.
   see_other_players:
     # When other players have this on too, you can see them walking around in your world! This option is the number of other players you can see. 0 means it is off. You can probably just pick a large number, but the game might lag if you pick too many. Don't worry, you can change this setting in-game too!
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
