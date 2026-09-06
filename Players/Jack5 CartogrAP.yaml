@@ -2,12 +2,12 @@
 description: |-
   Jack5's CartogrAP player file
 
-  CartogrAP is a tile-based exploration game that is similar to the overworld of FNAF World. It has an abnormally high number of locations, specifically featuring (at minimum) 1000 cells that must be individually walked to, and as such, is not enjoyable to play in a solo context without aggressive changes. This player file attempts to implement those changes to minimise the amount of walking and backtracking standard Archipelago randomisation necessitates. This is done mainly by forcing cells to be within their own regions or in other worlds. Also, grindy locations (fishing and treasure hunting) are excluded, meaning it is not necessary to purchase fishing upgrades from the shop, making Money items more valuable.
+  CartogrAP is a tile-based exploration game that is similar to the overworld of FNAF World. It has an abnormally high number of locations, specifically featuring (at minimum) 500 cells that must be individually walked to, and as such, is not enjoyable to play in a solo context without aggressive changes. This player file attempts to implement those changes to minimise the amount of walking and backtracking standard Archipelago randomisation necessitates. This is done mainly by forcing cells to be within their own regions or in other worlds. Also, grindy locations (fishing and treasure hunting) are excluded, meaning it is not necessary to purchase fishing upgrades from the shop, making Money items more valuable.
 game: CartogrAP
 requires:
   version: 0.6.7
   game:
-    CartogrAP: 1.0.0
+    CartogrAP: 1.3.0
 CartogrAP:
   ################
   # Game Options #
@@ -23,9 +23,13 @@ CartogrAP:
   ########
   cell_count:
     # How many cells to generate?
-    # Unchanged from the base configuration.
-    '1000': 50
+    # Reduced from the default of 750 (originally 1000) to the lowest possible cell count in order to minimise the pain of backtracking.
+    '500': 50
+    '750': 0
+    '1000': 0
+    '1250': 0
     '1500': 0
+    '1750': 0
     '2000': 0
   ###########################
   # Item & Location Options #
@@ -58,13 +62,9 @@ CartogrAP:
     - Sky Cell Treasure Hunt Quest
   priority_locations:
     # TODO: Use group name once location groups are added to the game
-    # Treasure chests need to be progression items, otherwise they feel lackluster. Note that 'X Cell Region Chest' locations cannot be in here, because they cause generation to fail.
-    - Plain Cell Unlocked Chest 1
-    - Forest Cell Unlocked Chest 1
-    - Bog Cell Unlocked Chest 1
-    - Ocean Cell Unlocked Chest 1
-    - Cave Cell Unlocked Chest 1
-    - Sky Cell Unlocked Chest 1
+    # Treasure chests need to be progression items, otherwise they feel lackluster. Regarding these, the following restrictions apply:
+    # - 'X Cell Region Chest' locations cannot be progression-only, because they are used to check whether the game is complete, and cause generation to fail if set as such.
+    # - 'X Cell Unlocked Chest 1' locations cannot be progression-only due to the low cell count, causing generation to fail if set as such.
     - Plain Cell Unlocked Chest 2
     - Forest Cell Unlocked Chest 2
     - Bog Cell Unlocked Chest 2
@@ -83,7 +83,7 @@ CartogrAP:
     - Ocean Cell Unlocked Chest 4
     - Cave Cell Unlocked Chest 4
     - Sky Cell Unlocked Chest 4
-    # Quests (except Treasure Hunt quests) are important milestones that deserve to be important locations.
+    # Quests (except Treasure Hunt quests) are important milestones that deserve to be important locations. The only exception to this is the 'Sky Cell Shortest Path Quest', because it is easy to cheese by dying at the start of the quest.
     - Plain Cell Speedrun Quest
     - Forest Cell Speedrun Quest
     - Bog Cell Speedrun Quest
@@ -95,18 +95,17 @@ CartogrAP:
     - Bog Cell Shortest Path Quest
     - Ocean Cell Shortest Path Quest
     - Cave Cell Shortest Path Quest
-    - Sky Cell Shortest Path Quest
   item_links: []
   plando_items:
-    # There are 88 Plain Cells and 79 of each of the other cell types. This plando consists of two changes:
-    # - A small minority of cells (10) from each region (totalling 60) are forced to be found in other players' worlds. This reduces the responsibility of the game by ~10%. (`non_local_items` cannot be used as it would conflict with `plando_items`.)
-    # - The remaining majorities of cells (78 + (69 * 5) = 423) are forced to be found in their respective regions. This reduces the amount of backtracking that needs to be done when playing the game.
+    # With 500 cells, there are 38 Plain Cells and 40 of each of the other cell types. This plando consists of two changes:
+    # - A small minority of cells (5) from each region (totalling 30) are forced to be found in other players' worlds. This reduces the responsibility of the game by ~15%. (`non_local_items` cannot be used as it would conflict with `plando_items`.)
+    # - The remaining majorities of cells (33 + (35 * 5) = 208) are forced to be found in their respective regions. This reduces the amount of backtracking that needs to be done when playing the game.
     - items:
-        Plain Cell: 10
+        Plain Cell: 5
       world: true
       force: false
     - items:
-        Plain Cell: 78
+        Plain Cell: 33
       locations:
         - 'Plain Cell #1'
         - 'Plain Cell #2'
@@ -208,113 +207,13 @@ CartogrAP:
         - 'Plain Cell #98'
         - 'Plain Cell #99'
         - 'Plain Cell #100'
-        - 'Plain Cell #101'
-        - 'Plain Cell #102'
-        - 'Plain Cell #103'
-        - 'Plain Cell #104'
-        - 'Plain Cell #105'
-        - 'Plain Cell #106'
-        - 'Plain Cell #107'
-        - 'Plain Cell #108'
-        - 'Plain Cell #109'
-        - 'Plain Cell #110'
-        - 'Plain Cell #111'
-        - 'Plain Cell #112'
-        - 'Plain Cell #113'
-        - 'Plain Cell #114'
-        - 'Plain Cell #115'
-        - 'Plain Cell #116'
-        - 'Plain Cell #117'
-        - 'Plain Cell #118'
-        - 'Plain Cell #119'
-        - 'Plain Cell #120'
-        - 'Plain Cell #121'
-        - 'Plain Cell #122'
-        - 'Plain Cell #123'
-        - 'Plain Cell #124'
-        - 'Plain Cell #125'
-        - 'Plain Cell #126'
-        - 'Plain Cell #127'
-        - 'Plain Cell #128'
-        - 'Plain Cell #129'
-        - 'Plain Cell #130'
-        - 'Plain Cell #131'
-        - 'Plain Cell #132'
-        - 'Plain Cell #133'
-        - 'Plain Cell #134'
-        - 'Plain Cell #135'
-        - 'Plain Cell #136'
-        - 'Plain Cell #137'
-        - 'Plain Cell #138'
-        - 'Plain Cell #139'
-        - 'Plain Cell #140'
-        - 'Plain Cell #141'
-        - 'Plain Cell #142'
-        - 'Plain Cell #143'
-        - 'Plain Cell #144'
-        - 'Plain Cell #145'
-        - 'Plain Cell #146'
-        - 'Plain Cell #147'
-        - 'Plain Cell #148'
-        - 'Plain Cell #149'
-        - 'Plain Cell #150'
-        - 'Plain Cell #151'
-        - 'Plain Cell #152'
-        - 'Plain Cell #153'
-        - 'Plain Cell #154'
-        - 'Plain Cell #155'
-        - 'Plain Cell #156'
-        - 'Plain Cell #157'
-        - 'Plain Cell #158'
-        - 'Plain Cell #159'
-        - 'Plain Cell #160'
-        - 'Plain Cell #161'
-        - 'Plain Cell #162'
-        - 'Plain Cell #163'
-        - 'Plain Cell #164'
-        - 'Plain Cell #165'
-        - 'Plain Cell #166'
-        - 'Plain Cell #167'
-        - 'Plain Cell #168'
-        - 'Plain Cell #169'
-        - 'Plain Cell #170'
-        - 'Plain Cell #171'
-        - 'Plain Cell #172'
-        - 'Plain Cell #173'
-        - 'Plain Cell #174'
-        - 'Plain Cell #175'
-        - 'Plain Cell #176'
-        - 'Plain Cell #177'
-        - 'Plain Cell #178'
-        - 'Plain Cell #179'
-        - 'Plain Cell #180'
-        - 'Plain Cell #181'
-        - 'Plain Cell #182'
-        - 'Plain Cell #183'
-        - 'Plain Cell #184'
-        - 'Plain Cell #185'
-        - 'Plain Cell #186'
-        - 'Plain Cell #187'
-        - 'Plain Cell #188'
-        - 'Plain Cell #189'
-        - 'Plain Cell #190'
-        - 'Plain Cell #191'
-        - 'Plain Cell #192'
-        - 'Plain Cell #193'
-        - 'Plain Cell #194'
-        - 'Plain Cell #195'
-        - 'Plain Cell #196'
-        - 'Plain Cell #197'
-        - 'Plain Cell #198'
-        - 'Plain Cell #199'
-        - 'Plain Cell #200'
       force: false
     - items:
-        Forest Cell: 10
+        Forest Cell: 5
       world: true
       force: false
     - items:
-        Forest Cell: 69
+        Forest Cell: 30
       locations:
         - 'Forest Cell #1'
         - 'Forest Cell #2'
@@ -396,93 +295,13 @@ CartogrAP:
         - 'Forest Cell #78'
         - 'Forest Cell #79'
         - 'Forest Cell #80'
-        - 'Forest Cell #81'
-        - 'Forest Cell #82'
-        - 'Forest Cell #83'
-        - 'Forest Cell #84'
-        - 'Forest Cell #85'
-        - 'Forest Cell #86'
-        - 'Forest Cell #87'
-        - 'Forest Cell #88'
-        - 'Forest Cell #89'
-        - 'Forest Cell #90'
-        - 'Forest Cell #91'
-        - 'Forest Cell #92'
-        - 'Forest Cell #93'
-        - 'Forest Cell #94'
-        - 'Forest Cell #95'
-        - 'Forest Cell #96'
-        - 'Forest Cell #97'
-        - 'Forest Cell #98'
-        - 'Forest Cell #99'
-        - 'Forest Cell #100'
-        - 'Forest Cell #101'
-        - 'Forest Cell #102'
-        - 'Forest Cell #103'
-        - 'Forest Cell #104'
-        - 'Forest Cell #105'
-        - 'Forest Cell #106'
-        - 'Forest Cell #107'
-        - 'Forest Cell #108'
-        - 'Forest Cell #109'
-        - 'Forest Cell #110'
-        - 'Forest Cell #111'
-        - 'Forest Cell #112'
-        - 'Forest Cell #113'
-        - 'Forest Cell #114'
-        - 'Forest Cell #115'
-        - 'Forest Cell #116'
-        - 'Forest Cell #117'
-        - 'Forest Cell #118'
-        - 'Forest Cell #119'
-        - 'Forest Cell #120'
-        - 'Forest Cell #121'
-        - 'Forest Cell #122'
-        - 'Forest Cell #123'
-        - 'Forest Cell #124'
-        - 'Forest Cell #125'
-        - 'Forest Cell #126'
-        - 'Forest Cell #127'
-        - 'Forest Cell #128'
-        - 'Forest Cell #129'
-        - 'Forest Cell #130'
-        - 'Forest Cell #131'
-        - 'Forest Cell #132'
-        - 'Forest Cell #133'
-        - 'Forest Cell #134'
-        - 'Forest Cell #135'
-        - 'Forest Cell #136'
-        - 'Forest Cell #137'
-        - 'Forest Cell #138'
-        - 'Forest Cell #139'
-        - 'Forest Cell #140'
-        - 'Forest Cell #141'
-        - 'Forest Cell #142'
-        - 'Forest Cell #143'
-        - 'Forest Cell #144'
-        - 'Forest Cell #145'
-        - 'Forest Cell #146'
-        - 'Forest Cell #147'
-        - 'Forest Cell #148'
-        - 'Forest Cell #149'
-        - 'Forest Cell #150'
-        - 'Forest Cell #151'
-        - 'Forest Cell #152'
-        - 'Forest Cell #153'
-        - 'Forest Cell #154'
-        - 'Forest Cell #155'
-        - 'Forest Cell #156'
-        - 'Forest Cell #157'
-        - 'Forest Cell #158'
-        - 'Forest Cell #159'
-        - 'Forest Cell #160'
       force: false
     - items:
-        Bog Cell: 10
+        Bog Cell: 5
       world: true
       force: false
     - items:
-        Bog Cell: 69
+        Bog Cell: 30
       locations:
         - 'Bog Cell #1'
         - 'Bog Cell #2'
@@ -564,93 +383,13 @@ CartogrAP:
         - 'Bog Cell #78'
         - 'Bog Cell #79'
         - 'Bog Cell #80'
-        - 'Bog Cell #81'
-        - 'Bog Cell #82'
-        - 'Bog Cell #83'
-        - 'Bog Cell #84'
-        - 'Bog Cell #85'
-        - 'Bog Cell #86'
-        - 'Bog Cell #87'
-        - 'Bog Cell #88'
-        - 'Bog Cell #89'
-        - 'Bog Cell #90'
-        - 'Bog Cell #91'
-        - 'Bog Cell #92'
-        - 'Bog Cell #93'
-        - 'Bog Cell #94'
-        - 'Bog Cell #95'
-        - 'Bog Cell #96'
-        - 'Bog Cell #97'
-        - 'Bog Cell #98'
-        - 'Bog Cell #99'
-        - 'Bog Cell #100'
-        - 'Bog Cell #101'
-        - 'Bog Cell #102'
-        - 'Bog Cell #103'
-        - 'Bog Cell #104'
-        - 'Bog Cell #105'
-        - 'Bog Cell #106'
-        - 'Bog Cell #107'
-        - 'Bog Cell #108'
-        - 'Bog Cell #109'
-        - 'Bog Cell #110'
-        - 'Bog Cell #111'
-        - 'Bog Cell #112'
-        - 'Bog Cell #113'
-        - 'Bog Cell #114'
-        - 'Bog Cell #115'
-        - 'Bog Cell #116'
-        - 'Bog Cell #117'
-        - 'Bog Cell #118'
-        - 'Bog Cell #119'
-        - 'Bog Cell #120'
-        - 'Bog Cell #121'
-        - 'Bog Cell #122'
-        - 'Bog Cell #123'
-        - 'Bog Cell #124'
-        - 'Bog Cell #125'
-        - 'Bog Cell #126'
-        - 'Bog Cell #127'
-        - 'Bog Cell #128'
-        - 'Bog Cell #129'
-        - 'Bog Cell #130'
-        - 'Bog Cell #131'
-        - 'Bog Cell #132'
-        - 'Bog Cell #133'
-        - 'Bog Cell #134'
-        - 'Bog Cell #135'
-        - 'Bog Cell #136'
-        - 'Bog Cell #137'
-        - 'Bog Cell #138'
-        - 'Bog Cell #139'
-        - 'Bog Cell #140'
-        - 'Bog Cell #141'
-        - 'Bog Cell #142'
-        - 'Bog Cell #143'
-        - 'Bog Cell #144'
-        - 'Bog Cell #145'
-        - 'Bog Cell #146'
-        - 'Bog Cell #147'
-        - 'Bog Cell #148'
-        - 'Bog Cell #149'
-        - 'Bog Cell #150'
-        - 'Bog Cell #151'
-        - 'Bog Cell #152'
-        - 'Bog Cell #153'
-        - 'Bog Cell #154'
-        - 'Bog Cell #155'
-        - 'Bog Cell #156'
-        - 'Bog Cell #157'
-        - 'Bog Cell #158'
-        - 'Bog Cell #159'
-        - 'Bog Cell #160'
       force: false
     - items:
-        Ocean Cell: 10
+        Ocean Cell: 5
       world: true
       force: false
     - items:
-        Ocean Cell: 69
+        Ocean Cell: 30
       locations:
         - 'Ocean Cell #1'
         - 'Ocean Cell #2'
@@ -732,93 +471,13 @@ CartogrAP:
         - 'Ocean Cell #78'
         - 'Ocean Cell #79'
         - 'Ocean Cell #80'
-        - 'Ocean Cell #81'
-        - 'Ocean Cell #82'
-        - 'Ocean Cell #83'
-        - 'Ocean Cell #84'
-        - 'Ocean Cell #85'
-        - 'Ocean Cell #86'
-        - 'Ocean Cell #87'
-        - 'Ocean Cell #88'
-        - 'Ocean Cell #89'
-        - 'Ocean Cell #90'
-        - 'Ocean Cell #91'
-        - 'Ocean Cell #92'
-        - 'Ocean Cell #93'
-        - 'Ocean Cell #94'
-        - 'Ocean Cell #95'
-        - 'Ocean Cell #96'
-        - 'Ocean Cell #97'
-        - 'Ocean Cell #98'
-        - 'Ocean Cell #99'
-        - 'Ocean Cell #100'
-        - 'Ocean Cell #101'
-        - 'Ocean Cell #102'
-        - 'Ocean Cell #103'
-        - 'Ocean Cell #104'
-        - 'Ocean Cell #105'
-        - 'Ocean Cell #106'
-        - 'Ocean Cell #107'
-        - 'Ocean Cell #108'
-        - 'Ocean Cell #109'
-        - 'Ocean Cell #110'
-        - 'Ocean Cell #111'
-        - 'Ocean Cell #112'
-        - 'Ocean Cell #113'
-        - 'Ocean Cell #114'
-        - 'Ocean Cell #115'
-        - 'Ocean Cell #116'
-        - 'Ocean Cell #117'
-        - 'Ocean Cell #118'
-        - 'Ocean Cell #119'
-        - 'Ocean Cell #120'
-        - 'Ocean Cell #121'
-        - 'Ocean Cell #122'
-        - 'Ocean Cell #123'
-        - 'Ocean Cell #124'
-        - 'Ocean Cell #125'
-        - 'Ocean Cell #126'
-        - 'Ocean Cell #127'
-        - 'Ocean Cell #128'
-        - 'Ocean Cell #129'
-        - 'Ocean Cell #130'
-        - 'Ocean Cell #131'
-        - 'Ocean Cell #132'
-        - 'Ocean Cell #133'
-        - 'Ocean Cell #134'
-        - 'Ocean Cell #135'
-        - 'Ocean Cell #136'
-        - 'Ocean Cell #137'
-        - 'Ocean Cell #138'
-        - 'Ocean Cell #139'
-        - 'Ocean Cell #140'
-        - 'Ocean Cell #141'
-        - 'Ocean Cell #142'
-        - 'Ocean Cell #143'
-        - 'Ocean Cell #144'
-        - 'Ocean Cell #145'
-        - 'Ocean Cell #146'
-        - 'Ocean Cell #147'
-        - 'Ocean Cell #148'
-        - 'Ocean Cell #149'
-        - 'Ocean Cell #150'
-        - 'Ocean Cell #151'
-        - 'Ocean Cell #152'
-        - 'Ocean Cell #153'
-        - 'Ocean Cell #154'
-        - 'Ocean Cell #155'
-        - 'Ocean Cell #156'
-        - 'Ocean Cell #157'
-        - 'Ocean Cell #158'
-        - 'Ocean Cell #159'
-        - 'Ocean Cell #160'
       force: false
     - items:
-        Cave Cell: 10
+        Cave Cell: 5
       world: true
       force: false
     - items:
-        Cave Cell: 69
+        Cave Cell: 30
       locations:
         - 'Cave Cell #1'
         - 'Cave Cell #2'
@@ -900,93 +559,13 @@ CartogrAP:
         - 'Cave Cell #78'
         - 'Cave Cell #79'
         - 'Cave Cell #80'
-        - 'Cave Cell #81'
-        - 'Cave Cell #82'
-        - 'Cave Cell #83'
-        - 'Cave Cell #84'
-        - 'Cave Cell #85'
-        - 'Cave Cell #86'
-        - 'Cave Cell #87'
-        - 'Cave Cell #88'
-        - 'Cave Cell #89'
-        - 'Cave Cell #90'
-        - 'Cave Cell #91'
-        - 'Cave Cell #92'
-        - 'Cave Cell #93'
-        - 'Cave Cell #94'
-        - 'Cave Cell #95'
-        - 'Cave Cell #96'
-        - 'Cave Cell #97'
-        - 'Cave Cell #98'
-        - 'Cave Cell #99'
-        - 'Cave Cell #100'
-        - 'Cave Cell #101'
-        - 'Cave Cell #102'
-        - 'Cave Cell #103'
-        - 'Cave Cell #104'
-        - 'Cave Cell #105'
-        - 'Cave Cell #106'
-        - 'Cave Cell #107'
-        - 'Cave Cell #108'
-        - 'Cave Cell #109'
-        - 'Cave Cell #110'
-        - 'Cave Cell #111'
-        - 'Cave Cell #112'
-        - 'Cave Cell #113'
-        - 'Cave Cell #114'
-        - 'Cave Cell #115'
-        - 'Cave Cell #116'
-        - 'Cave Cell #117'
-        - 'Cave Cell #118'
-        - 'Cave Cell #119'
-        - 'Cave Cell #120'
-        - 'Cave Cell #121'
-        - 'Cave Cell #122'
-        - 'Cave Cell #123'
-        - 'Cave Cell #124'
-        - 'Cave Cell #125'
-        - 'Cave Cell #126'
-        - 'Cave Cell #127'
-        - 'Cave Cell #128'
-        - 'Cave Cell #129'
-        - 'Cave Cell #130'
-        - 'Cave Cell #131'
-        - 'Cave Cell #132'
-        - 'Cave Cell #133'
-        - 'Cave Cell #134'
-        - 'Cave Cell #135'
-        - 'Cave Cell #136'
-        - 'Cave Cell #137'
-        - 'Cave Cell #138'
-        - 'Cave Cell #139'
-        - 'Cave Cell #140'
-        - 'Cave Cell #141'
-        - 'Cave Cell #142'
-        - 'Cave Cell #143'
-        - 'Cave Cell #144'
-        - 'Cave Cell #145'
-        - 'Cave Cell #146'
-        - 'Cave Cell #147'
-        - 'Cave Cell #148'
-        - 'Cave Cell #149'
-        - 'Cave Cell #150'
-        - 'Cave Cell #151'
-        - 'Cave Cell #152'
-        - 'Cave Cell #153'
-        - 'Cave Cell #154'
-        - 'Cave Cell #155'
-        - 'Cave Cell #156'
-        - 'Cave Cell #157'
-        - 'Cave Cell #158'
-        - 'Cave Cell #159'
-        - 'Cave Cell #160'
       force: false
     - items:
-        Sky Cell: 10
+        Sky Cell: 5
       world: true
       force: false
     - items:
-        Sky Cell: 69
+        Sky Cell: 30
       locations:
         - 'Sky Cell #1'
         - 'Sky Cell #2'
@@ -1068,84 +647,4 @@ CartogrAP:
         - 'Sky Cell #78'
         - 'Sky Cell #79'
         - 'Sky Cell #80'
-        - 'Sky Cell #81'
-        - 'Sky Cell #82'
-        - 'Sky Cell #83'
-        - 'Sky Cell #84'
-        - 'Sky Cell #85'
-        - 'Sky Cell #86'
-        - 'Sky Cell #87'
-        - 'Sky Cell #88'
-        - 'Sky Cell #89'
-        - 'Sky Cell #90'
-        - 'Sky Cell #91'
-        - 'Sky Cell #92'
-        - 'Sky Cell #93'
-        - 'Sky Cell #94'
-        - 'Sky Cell #95'
-        - 'Sky Cell #96'
-        - 'Sky Cell #97'
-        - 'Sky Cell #98'
-        - 'Sky Cell #99'
-        - 'Sky Cell #100'
-        - 'Sky Cell #101'
-        - 'Sky Cell #102'
-        - 'Sky Cell #103'
-        - 'Sky Cell #104'
-        - 'Sky Cell #105'
-        - 'Sky Cell #106'
-        - 'Sky Cell #107'
-        - 'Sky Cell #108'
-        - 'Sky Cell #109'
-        - 'Sky Cell #110'
-        - 'Sky Cell #111'
-        - 'Sky Cell #112'
-        - 'Sky Cell #113'
-        - 'Sky Cell #114'
-        - 'Sky Cell #115'
-        - 'Sky Cell #116'
-        - 'Sky Cell #117'
-        - 'Sky Cell #118'
-        - 'Sky Cell #119'
-        - 'Sky Cell #120'
-        - 'Sky Cell #121'
-        - 'Sky Cell #122'
-        - 'Sky Cell #123'
-        - 'Sky Cell #124'
-        - 'Sky Cell #125'
-        - 'Sky Cell #126'
-        - 'Sky Cell #127'
-        - 'Sky Cell #128'
-        - 'Sky Cell #129'
-        - 'Sky Cell #130'
-        - 'Sky Cell #131'
-        - 'Sky Cell #132'
-        - 'Sky Cell #133'
-        - 'Sky Cell #134'
-        - 'Sky Cell #135'
-        - 'Sky Cell #136'
-        - 'Sky Cell #137'
-        - 'Sky Cell #138'
-        - 'Sky Cell #139'
-        - 'Sky Cell #140'
-        - 'Sky Cell #141'
-        - 'Sky Cell #142'
-        - 'Sky Cell #143'
-        - 'Sky Cell #144'
-        - 'Sky Cell #145'
-        - 'Sky Cell #146'
-        - 'Sky Cell #147'
-        - 'Sky Cell #148'
-        - 'Sky Cell #149'
-        - 'Sky Cell #150'
-        - 'Sky Cell #151'
-        - 'Sky Cell #152'
-        - 'Sky Cell #153'
-        - 'Sky Cell #154'
-        - 'Sky Cell #155'
-        - 'Sky Cell #156'
-        - 'Sky Cell #157'
-        - 'Sky Cell #158'
-        - 'Sky Cell #159'
-        - 'Sky Cell #160'
       force: false
