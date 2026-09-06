@@ -95,7 +95,17 @@ CartogrAP:
     - Bog Cell Shortest Path Quest
     - Ocean Cell Shortest Path Quest
     - Cave Cell Shortest Path Quest
-  item_links: []
+  item_links:
+    # Unlock biomes at the same time as other players with this link.
+    - name: CartogrAP Biomes
+      item_pool:
+        - Axe
+        - Fishing Boat
+        - Ladder
+        - Lantern
+        - Wellies
+      replacement_item: null
+      skip_if_solo: true
   plando_items:
     # With 500 cells, there are 38 Plain Cells and 40 of each of the other cell types. This plando consists of two changes:
     # - A small minority of cells (5) from each region (totalling 30) are forced to be found in other players' worlds. This reduces the responsibility of the game by ~15%. (`non_local_items` cannot be used as it would conflict with `plando_items`.)

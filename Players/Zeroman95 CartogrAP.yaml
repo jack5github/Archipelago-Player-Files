@@ -9,14 +9,17 @@ requires:
     CartogrAP: 1.3.0
 
 CartogrAP:
-  progression_balancing: # UNCHANGED
+  progression_balancing:
+    # UNCHANGED
     50: 99
 
-  accessibility: # UNCHANGED
+  accessibility:
+    # UNCHANGED
     full: 50
     minimal: 0
 
-  cell_count: # UNCHANGED
+  cell_count:
+    # UNCHANGED
     '500': 0
     '750': 50
     '1000': 0
@@ -39,6 +42,16 @@ CartogrAP:
 
   priority_locations: []
 
-  item_links: []
+  item_links:
+    # Copied from `Jack5 CartogrAP.yaml`
+    - name: CartogrAP Biomes
+      item_pool:
+        - Axe
+        - Fishing Boat
+        - Ladder
+        - Lantern
+        - Wellies
+      replacement_item: null
+      skip_if_solo: true
 
   plando_items: []
