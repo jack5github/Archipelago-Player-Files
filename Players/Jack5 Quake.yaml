@@ -92,9 +92,9 @@ Quake 1:
     custom: 0
   include_mp_items:
     # Set if included locations should also contain multiplayer item spawns.
-    # Since removing Episode 4 from the pool drops the location count down from ~240 to ~200, multiplayer items are being added to increase what is available for me to pick up at any given time.
-    'false': 0
-    'true': 50
+    # Since removing Episode 4 from the pool dropped the location count down from ~240 to ~200, I added multiplayer item spawns to increase the number of locations available for me to pick up. However, when using the new Archipelago option `progressive_equalization`, the number of locations is not so much a factor anymore, so what ended up happening is that individual areas in Quake contained far too many locations that are unlocked too quickly, leading to a game that was stuck often. For this reason, I am keeping this option disabled.
+    'false': 50
+    'true': 0
   custom_included_locations:
     # A list of itemnames that will be replaced with AP locations.
     # The number after the itemname is the percentage of items of that type, which will get turned into AP locations.
@@ -149,9 +149,9 @@ Quake 1:
     'true': 0
   include_allkills:
     # Includes all kills per level in the location pool.
-    # Killing all enemies seems like a reasonable goal for Quake.
-    'false': 0
-    'true': 50
+    # Killing all enemies seemed like a reasonable goal for Quake, however, there are bugs with detecting when all enemies are dead, as well as there being enemies that are hidden within secret areas, so I am keeping this disabled.
+    'false': 50
+    'true': 0
   episode1:
     # Include Episode 1 in the randomizer.
     # Unchanged from the base configuration.
