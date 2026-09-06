@@ -10,7 +10,7 @@ requires:
 
 Librarian Tidy Up the Arcane Library:
   progression_balancing: # UNCHANGED
-    normal: 50
+    40: 50
 
   accessibility: # UNCHANGED
     full: 50
