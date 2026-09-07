@@ -2,7 +2,9 @@
 description: |-
   Jack5's PEAK player file
 
-  This PEAK configuration makes a multitude of changes in order for it to have the same responsibility as other player files. The number of Ascents required has been reduced to just 1, progressive stamina has been enabled and Energy Link functionality has been turned on. In addition, a variety of traps have been disabled, with the overall chance of them occurring being increased.
+  This PEAK configuration makes a multitude of changes in order for it to have the same responsibility as other player files. The number of Ascents required has been reduced to just 1, progressive stamina has been enabled and Energy Link functionality has been turned on. In addition, a variety of traps have been disabled, with the overall chance of them occurring being increased. This player file may need editing before use:
+  - To play with items spawning in front of players, `item_sanity` must be false.
+  - To play with other people in-game, given any of them don't have the PEAK Archipelago mod, `progressive_stamina` (other players' stamina is unaffected) and `energy_link` (Energy Link model is not tangible for other players) must be false.
 game: PEAK
 requires:
   version: 0.6.7
@@ -48,8 +50,15 @@ PEAK:
     # When enabled, each item type has a corresponding "Unlock" item in the Archipelago pool. You must receive that unlock before the item can spawn in-game. "Acquire" checks also require having the unlock item.
     # When disabled, all items are available from the start. "Acquire" checks only require biome access.
     # This option works independently from Loot Sanity - Item Sanity controls the unlock gating, while Loot Sanity controls which pools the items get shuffled into.
-    # I've played this APworld both with and without itemsanity before this option was added. I've made it a 50-50 toggle for now.
+    # I've played this APworld both with and without itemsanity before this option was added. I've made it a 50-50 toggle for now. This has a direct effect on `item_spawns`' activation.
     'false': 50
+    'true': 50
+  item_spawns:
+    # Only used when Item Sanity is disabled. Adds one copy of every item that has an Acquire check to the item pool as a useful item. Receiving one spawns that item in front of you.
+    # Items that are also sent as filler (berries, snacks, Bing Bong, etc.) are guaranteed one copy but stay classified as filler. Items that exist as traps (Scorpion, Mandrake, Dynamite) and Scout's Honor are excluded.
+    # Has no effect when Item Sanity is enabled.
+    # Always enabled, as this is the best feature of the PEAK APworld.
+    'false': 0
     'true': 50
   loot_sanity:
     # Controls which loot pools have their contents shuffled with all available items.
@@ -540,10 +549,10 @@ PEAK:
     high: 0
   storm_trap_weight:
     # Likelihood of receiving a trap which unleashes a full wind and rain storm for a while
-    # Unchanged from the base configuration.
-    none: 0
+    # This trap is not compatible with multiplayer when playing with others that don't have the mod installed. For the host, the storm never appears, but for all other players, the storm appears and only disappears after an extremely long time.
+    none: 50
     low: 0
-    medium: 50
+    medium: 0
     high: 0
   skeleton_trap_weight:
     # Likelihood of receiving a trap which permanently turns a random player into a living skeleton
@@ -606,9 +615,8 @@ PEAK:
     - Progressive Endurance
     - Progressive Stamina Bar
   start_inventory:
-    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. There are 6 of these, 4 of which are for each biome after the Shore (excluding the Peak), the other 2 being basically filler items. Scoutmaster's Soul is also included so Nadir can be accessed immediately.
+    # Without Progressive Mountain, lighting a campfire will not advance to the next biome. There are 6 of these, 4 of which are for each biome after the Shore (excluding the Peak), the other 2 being basically filler items.
     Progressive Mountain: 6
-    Scoutmaster's Soul: 1
   start_hints: []
   start_location_hints: []
   exclude_locations:
@@ -623,6 +631,11 @@ PEAK:
     - Acquire Guidebook
     - Acquire Lantern
     - Open 1 luggage
+    # The below locations never happen during my normal PEAK gameplay, so they shouldn't contain any important unlocks.
+    - Acquire Ancient Idol
+    # The below locations are endgame locations, so they shouldn't contain any important unlocks.
+    - Acquire Strange Gem
+    - Acquire Scout's Honor
     # Several badges are not likely to get, or are made obsolete by the act of completing a summit, so they shouldn't contain any important unlocks.
     - 24 Karat Badge # Difficult
     - Advanced Mycology Badge # Unlikely
@@ -630,6 +643,7 @@ PEAK:
     - Applied Esoterica Badge # Multiplayer
     - Astronomy Badge # Unlikely
     - Balloon Badge # Endgame
+    - Bellringer Badge # Difficult
     - Bing Bong Badge # Endgame
     - Bookworm Badge # Unlikely
     - Bouldering Badge # Unlikely
@@ -642,21 +656,26 @@ PEAK:
     - Daredevil Badge # Unlikely
     - Disaster Response Badge # Multiplayer
     - Emergency Preparedness Badge # Multiplayer
+    - Exorcist Badge # Unlikely
     - First Aid Badge # Multiplayer
     - Foraging Badge # Unlikely
     - Gourmand Badge # Difficult
+    - Hang Gliding Badge # Difficult
     - Happy Camper Badge # Multiplayer
     # - Hasty Badge # Endgame (not in implementation)
     # - High Altitude Badge # Unlikely (not in implementation)
     - Knot Tying Badge # Unlikely
+    - Last Resort Badge # Multiplayer
     - Leave No Trace Badge # Endgame
     - Lone Wolf Badge # Endgame
+    - Medieval History Badge # Endgame
     - Megaentomology Badge # Unlikely
     - Mycoacrobatics Badge # Difficult
     - Mycology Badge # Difficult
     - Naturalist Badge # Endgame
     - Needlepoint Badge # Difficult
     - Participation Badge # Multiplayer
+    - Rule Zero Badge # Endgame
     - Survivalist Badge # Endgame
     - Tread Lightly Badge # Difficult
     - Toxicology Badge # Unlikely
