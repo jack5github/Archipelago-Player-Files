@@ -6,7 +6,7 @@ game: Cuphead
 requires:
   version: 0.6.7
   game:
-    Cuphead: 0.2.20020715
+    Cuphead: 0.2.20021010
 
 Cuphead:
   progression_balancing: # Lowered a little so that I don't play too often.
@@ -38,10 +38,8 @@ Cuphead:
     'false': 50
     'true': 0
 
-  start_weapon: # UNCHANGED
-    # Choose weapon to start with.
-    # NOTE: If DLC is not enabled, picking DLC weapons will pick a random base game weapon instead.
-    random_weapon: 50
+  start_weapon: # This will probably ruin me for this next run, but let's start with no weapon.
+    random_weapon: 0
     peashooter: 0
     spread: 0
     chaser: 0
@@ -51,7 +49,7 @@ Cuphead:
     dlc_crackshot: 0
     dlc_converge: 0
     dlc_twistup: 0
-    none: 0
+    none: 50
 
   weapon_mode: # Makes EX Attacks for weapons be a seperate item in the pool.
     ex_separate: 99
