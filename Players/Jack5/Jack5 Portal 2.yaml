@@ -135,11 +135,11 @@ Portal 2:
   ###########################
   local_items: []
   non_local_items: []
-  start_inventory:
+  start_inventory: {}
+  start_inventory_from_pool:
     # Lasers and Laser Relays are already items that can be unlocked during a run. It doesn't make sense for catchers to be an item too, as this makes it take much longer to be able to use lasers in general. In addition to this, starting out with only one portal makes the majority of Portal 2 impossible to play, and if not given early, can result in Portal 2 being unplayable for the entire run.
     Laser Catchers: 1
     Upgraded Portal Gun: 1
-  start_inventory_from_pool: {}
   start_hints: []
   start_location_hints: []
   exclude_locations:
