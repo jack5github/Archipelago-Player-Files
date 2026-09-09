@@ -1,0 +1,151 @@
+﻿name: ZeromanPortalTwo{NUMBER}
+
+description: Zeroman95s Portal 2 YAML
+
+game: Portal 2
+requires:
+  version: 0.6.7
+  game:
+    Portal 2: 0.8.0
+
+Portal 2:
+  progression_balancing: # UNCHANGED
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-99: 0 # random value between 0 and 99
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility: # UNCHANGED
+    full: 50
+    minimal: 0
+
+  death_link: # RIP Chell
+    'false': 0
+    'true': 50
+
+  game_mode: # Just like Jack5Portal2 Chaotic is the best way to play.
+    normal: 0
+    chaotic: 50
+    open_world: 0
+
+  early_playability_percentage: # Same as Jack5Portal2.
+    60: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-60-100: 0 # random value between 60 and 100
+
+  logic_difficulty: # UNCHANGED
+    normal: 50
+    speedrunner: 0
+
+  remove_locations: # UNCHANGED
+    []
+
+  cutscene_levels: # UNCHANGED
+    'false': 50
+    'true': 0
+
+  wheatley_monitors: # Destroying one earns a check.
+    'false': 0
+    'true': 50
+
+  ratman_dens: # I'm going to get lost with this one.
+    'false': 0
+    'true': 50
+
+  vitrified_doors: # Same with Ratman Dens
+    'false': 0
+    'true': 50
+
+  trap_fill_percentage: # Make it interesting, Junk checks don't do anything.
+    80: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  motion_blur_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  fizzle_portal_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  butter_fingers_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  cube_confetti_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  slippery_floor_trap_weight: # UNCHANGED
+    none: 0
+    low: 0
+    medium: 50
+    high: 0
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_inventory_from_pool:
+    Upgraded Portal Gun: 1
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: # If an important item from another world is here, this means Portal 2 HAS to be beaten to collect this.
+    - Finale 4 Completion
+
+  priority_locations: []
+
+  item_links:
+    # Share Portal 2 puzzle elements between player files.
+    - name: Portal2 Elements
+      item_pool:
+        - Portal Gun
+        - Upgraded Portal Gun
+        - PotatOS
+        - Weighted Cubes
+        - Redirection Cubes
+        - Spherical Cubes
+        - Antique Cubes
+        - Buttons
+        - Antique Buttons
+        - Floor Buttons
+        - Antique Floor Buttons
+        - Cube Buttons
+        - Ball Buttons
+        - Frankenturrets
+        - Three Gels
+        - Blue Gel
+        - Orange Gel
+        - White Gel
+        - Lasers
+        - Aerial Faith Plates
+        - Excursion Funnels
+        - Hard Light Bridges
+        - Laser Relays
+        - Laser Catchers
+        - Turrets
+      replacement_item: null
+      skip_if_solo: true
+
+  plando_items: []
