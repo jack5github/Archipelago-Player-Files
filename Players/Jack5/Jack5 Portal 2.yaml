@@ -7,14 +7,14 @@ game: Portal 2
 requires:
   version: 0.6.7
   game:
-    Portal 2: 0.7.2
+    Portal 2: 0.8.0
 Portal 2:
   ################
   # Game Options #
   ################
   progression_balancing:
-    # Unchanged from the base configuration.
-    normal: 50
+    # Played this with Zeroman95 on Johnny Upgrade, and I felt like I had too much responsibility because of how long it took me to get checks, so I'm adjusting the balancing to be harder (not too hard though, because Johnny Upgrade unlocks checks way too fast).
+    45: 50
   accessibility:
     # Unchanged from the base configuration.
     full: 50
@@ -93,8 +93,8 @@ Portal 2:
   trap_fill_percentage:
     # Replace a percentage of junk items in the item pool with random traps
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
-    # The default is to have no traps at all. As Portal 2 is played in short, sporadic bursts, this needs to be a high number. I have tried 20%, and it isn't enough.
-    30: 50
+    # The default is to have no traps at all. As Portal 2 is played in short, sporadic bursts, this needs to be a high number. I have tried 20% and 30%, and these aren't enough, so I'm not using my default percentage of between 50% and 80%.
+    random-range-50-80: 50
   motion_blur_trap_weight:
     # Likelihood of receiving a trap which makes it a little hard to see
     # Unchanged from the base configuration.
