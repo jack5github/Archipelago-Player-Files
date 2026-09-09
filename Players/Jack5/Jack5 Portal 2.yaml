@@ -148,5 +148,35 @@ Portal 2:
   priority_locations:
     # Ensure this chamber (Chapter 8) is expected to be played, as it is a map that requires a lot of items to progress, ensuring a more complete playthrough of Portal 2.
     - Laser Catapult Completion
-  item_links: []
+  item_links:
+    # Share Portal 2 puzzle elements between player files.
+    - name: Portal2 Elements
+      item_pool:
+        - Portal Gun
+        - Upgraded Portal Gun
+        - PotatOS
+        - Weighted Cubes
+        - Redirection Cubes
+        - Spherical Cubes
+        - Antique Cubes
+        - Buttons
+        - Antique Buttons
+        - Floor Buttons
+        - Antique Floor Buttons
+        - Cube Buttons
+        - Ball Buttons
+        - Frankenturrets
+        - Three Gels
+        - Blue Gel
+        - Orange Gel
+        - White Gel
+        - Lasers
+        - Aerial Faith Plates
+        - Excursion Funnels
+        - Hard Light Bridges
+        - Laser Relays
+        - Laser Catchers
+        - Turrets
+      replacement_item: null
+      skip_if_solo: true
   plando_items: []
