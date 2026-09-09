@@ -120,7 +120,6 @@ Portal 2:
     # Share Portal 2 puzzle elements between player files.
     - name: Portal2 Elements
       item_pool:
-        - Portal Gun
         - Upgraded Portal Gun
         - PotatOS
         - Weighted Cubes
@@ -131,10 +130,7 @@ Portal 2:
         - Antique Buttons
         - Floor Buttons
         - Antique Floor Buttons
-        - Cube Buttons
-        - Ball Buttons
         - Frankenturrets
-        - Three Gels
         - Blue Gel
         - Orange Gel
         - White Gel
