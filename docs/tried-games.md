@@ -6,7 +6,7 @@ This document lists the Archipelago games that we have tried setting up or playi
 
 - **Baba Is You** - The game itself is already very difficult enough due to its puzzle solutions being very obtuse. Add on top of that strict Archipelago logic rules that are prone to failing generation, and you have a recipe for a bad game.
 - **Bloons TD 6** - This APworld is all about beating maps on different difficulties to unlock new items, which takes far too much time even without Archipelago. The game is also highly sensitive to being modded, so I'd rather not.
-- **CartogrAP** - This game can be described as most like FNAF World, except there are no RPG battles and every walkable tile counts as a location. This has the unfortunate side effect of producing ~1000 locations, which is far too much given our preference for ~300 location APworlds. *If the game is updated with an option to reduce this count, I will reconsider playing it.*
+- **Celeste 64** - This is an incredibly difficult 3D platformer that not only requires a controller and lots of walking, but it also has a problem where the logic thinks that several early locations can be reached even without Air Dash, when that is not the case.
 - **Celeste Classic** - This is a very small platformer game with only ~50 locations and barely any randomisation besides teleporting to various points in the game and disabling certain items.
 - **Cyber Hook** - The mod for this APworld uses MelonLoader, which is annoying as hell to use, and it also requires copying the entire game to a different directory, another thing I'd rather avoid doing.
 - **Dark Cloud** - Does not support Linux. *Will reconsider when Linux support is added.*
@@ -29,9 +29,6 @@ This document lists the Archipelago games that we have tried setting up or playi
 ## Zeroman95
 
 - **Donkey Kong 64** - It's cool to see AP for Donkey Kong 64, problem is that this game is LONG and by the time you played for a few hours you feel like you want to play something else and will barely get around 20-30 Checks minimum. Sadly I am not nostalgia for DK64, but I am with Ratchet 3.
-
-- **Luigi's Mansion** - Love this game, although I think it's fair if I don't play it anymore because I just do not own this game legit.
-
-- **Pikmin 2** - Technically own the Wii Version, but this uses the GameCube Version which I do not own.
-
 - **The Legend of Zelda (Zelda 1)** - I don't even own an NES nor a copy of Zelda 1.
+- **Luigi's Mansion** - Love this game, although I think it's fair if I don't play it anymore because I just do not own this game legit.
+- **Pikmin 2** - Technically own the Wii Version, but this uses the GameCube Version which I do not own.
