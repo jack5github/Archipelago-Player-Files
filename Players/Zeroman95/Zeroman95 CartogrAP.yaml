@@ -6,12 +6,12 @@ game: CartogrAP
 requires:
   version: 0.6.7
   game:
-    CartogrAP: 1.3.0
+    CartogrAP: 1.3.1
 
 CartogrAP:
   progression_balancing:
-    # UNCHANGED
-    50: 99
+    # Decreased by 10 due to the amount of checks.
+    40: 99
 
   accessibility:
     # UNCHANGED
