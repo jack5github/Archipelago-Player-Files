@@ -1,0 +1,98 @@
+﻿name: Jack5Factori{NUMBER}
+description: |-
+  Jack5's Word Factori player file
+
+  TODO: Add description
+game: Word Factori
+requires:
+  version: 0.6.7
+  game:
+    Word Factori: 1.5.0
+Word Factori:
+  ################
+  # Game Options #
+  ################
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  goal:
+    # Choose how the client reports victory.
+    # Unchanged from the base configuration.
+    campaign_count: 50
+    final_factory: 0
+  campaign_count:
+    # Campaign checks required when Goal is Campaign Count.
+    # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 30.
+    # Unchanged from the base configuration.
+    25: 50
+  custom_level_set:
+    # Choose the curated custom levels assembled into this seed.
+    # Changed to `core_campaign` as an experiment.
+    core_campaign: 50
+    discovery_labs: 0
+  recipe_checks:
+    # Add checks for discovering validated letter recipes.
+    # Unchanged from the base configuration.
+    'false': 0
+    'true': 50
+  type_a_word_checks:
+    # Add checks for filling seed-selected Type-a-Word orders.
+    # Enabled to add more checks.
+    'false': 0
+    'true': 50
+  type_a_word_count:
+    # Number of Type-a-Word orders to add.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 20.
+    # Select a random number of custom words around the default of 5.
+    random-range-3-8: 50
+  type_a_word_words:
+    # Words from which this seed selects Type-a-Word orders.
+    # Added various words from Archipelago game names.
+    - BALATRO
+    - CARTOGRAP
+    - CHECKSMATE
+    - ELEMENT
+    - GRAPPLEDOG
+    - JIGSAW
+    - KEYMASTER
+    - MINECRAFT
+    - NODEBUSTER
+    - OPENRCT
+    - PEAK
+    - PORTAL
+    - PVZGOTY
+    - QUAKE
+    - RATCHET
+    - RATGAME
+    - REFUNCT
+    - REPO
+    - ROADTRIP
+    - SONICDREAMS
+    - SPYROHERO
+    - SUDOKU
+    - TERRARIA
+    - TETRIS
+    - TOYSTORY
+    - WARIOWARE
+    - WITNESS
+    - WORDLE
+    - YAHTZEE
+  progressive_machines:
+    # Machine upgrades allow 1, 2, 3, 4, then unlimited placed machines per family.
+    # Enabled to add more items.
+    'false': 0
+    'true': 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
