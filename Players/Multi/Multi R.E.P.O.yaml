@@ -75,10 +75,9 @@ R.E.P.O:
   filler_item_weights:
     # Choose the Weights for adding Filler to the Item Pool (death head battery and map player count do nothing in singleplayer)
     # All non-commented weights are unchanged from the base configuration.
-    Audit Trap: 6
+    Audit Trap: 3 # Annoying, as it sets money close to $0. Reduced from 6.
     Crouch Rest Upgrade: 40
-    # Death head upgrades are useless, for players can strategically speak while dead at just the right moments.
-    Death Head Battery Upgrade: 0
+    Death Head Battery Upgrade: 0 # Useless, players can strategically speak while dead at the right moments.
     Double Jump Upgrade: 20
     Extra Monster Trap: 8
     Health Upgrade: 40
