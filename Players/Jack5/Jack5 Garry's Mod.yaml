@@ -1,0 +1,156 @@
+﻿name: Jack5Gmod{NUMBER}
+description: |-
+  Jack5's Garry's Mod (apAdventure) player file
+
+  TODO: Write description
+game: GMod - apAdventure
+requires:
+  version: 0.6.7
+GMod - apAdventure:
+  ################
+  # Game Options #
+  ################
+  # Unchanged from the base configuration.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  mcguffin_count:
+    # Currently, the main goal of apAdventure is to collect all McGuffin items. This setting controls how many of these items will exist in the item pool.
+    # If this is set to a higher number than the amount of free space in the item pool the generator will only place as many as it can fit.
+    # Unchanged from the base configuration.
+    # TODO: Move some of these McGuffins into `plando_items`
+    5
+  skill:
+    # Sets the internal "skill" variable, which is mainly used for difficulty settings in the Half-Life games.
+    # In Half-Life: Source, enemies will gain more health and deal more damage at higher skill settings.
+    # In Half-Life 2, enemies will deal more damage at higher difficulties and ammo gain from pickups is reduced.
+    # Players will also deal less damage against enemies from both games at higher difficulties. (This may not be intended behavior for HL1 enemies, but this is how GMod handles it.)
+    # Outside of Half-Life, lua coders and map makers are also able to check what this value is set to and have their code/maps behave differently depending on it, but this is not very common.
+    # Unchanged from the base configuration.
+    easy: 0
+    normal: 50
+    hard: 0
+  bhop:
+    # GMods Sandbox gamemode (which this gamemode derives from internally) normally clamps the players movement speed when they jump off the ground to prevent Bunnyhopping.
+    # Choosing "never" maintains this behavior, "item" removes it after receiving an item and "always" will disable it from the start. The latter two options also provide an autohop.
+    # Set as an item to increase the variety of this APworld.
+    never: 0
+    item: 50
+    always: 0
+  bhop_logic:
+    # Determines how hard Bunnyhops are allowed to be before they are considered out of logic.
+    # This difficulty rating is oriented around Momentum Mods tier system, with 1 being the easiest and 10 being the hardest. Although unlike Momentum Mod, apAdventure allows fractional values for more granularity.
+    # Setting this to 0, lower or any other value that can not be converted into a number puts all BHops out of logic. Ignored if bhop is set to "never".
+    # Unchanged from the base configuration.
+    0
+  surf_logic:
+    # Determines how hard Surfs are allowed to be before they are considered out of logic.
+    # This difficulty rating is oriented around Momentum Mods tier system, with 1 being the easiest and 10 being the hardest. Although unlike Momentum Mod, apAdventure allows fractional values for more granularity.
+    # Setting this to 0, lower or any other value that can not be converted into a number puts all Surfs out of logic.
+    # Unchanged from the base configuration.
+    0
+  config_groups:
+    # Config Groups to use for generation.
+    # Map Configs are used by apAdventure to tell the generator what the maps the player wants to play on contain and where the gamemode should place exits, locations and whatever else the config creator wants to include in their Config.
+    # Configs are organized into groups so maps related to each other (such as maps from the same chapter in HL2) can be grouped together and share certain settings.
+    # Not all configs are enabled by default. If you want to see what configs are available, you can use the "apAdventure - Generate Map Index" tool in your launcher to get a list of all available config groups and the maps in them.
+    # Below are the default map configs provided by apAdventure:
+    - orange_hub
+    - canals_walk
+    - coast_walk
+    - lost_coast
+    - nova_prospekt
+    - ravenholm
+    # TODO: Verify the below instructions are correct
+    # No custom map configs are included in this player file just yet. These are loaded from `Archipelago/gmod_apadv/logic/`, which should be a symbolic link to `steam/steamapps/common/GarrysMod/garrysmod/data/apadventure/logic/` or a similar custom folder in `addons/` (in this folder, note that if anything in `../cfg/` changes, `cfg/` is expected to change also).
+  config_cherrypick:
+    # This option allows you to cherrypick single maps from a Config Group.
+    # Check the options guide for more information on how this option works.
+    # Unchanged from the base configuration.
+    {}
+  config_blacklist:
+    # This option allows you to pick maps from a Config Group that should not be added to your run.
+    # The defaults for this setting contain some maps that don't play very well in this mode, but still had configs made for them for the sake of covering all maps.
+    # Blacklisting maps that have not actually been added through the previous options should not cause problems.
+    # Check the options guide for more information on how this option works.
+    # Unchanged from the base configuration.
+    hls_unforeseen_consequences:
+      - c1a1g
+    nova_prospekt:
+      - d2_prison_06
+    ravenholm:
+      - d1_town_02a
+      - d1_town_04
+  start_group:
+    # What group your starting map should be picked from. Normally, your starting map is picked at random from all maps that have starting points set, but this option lets you set a filter for a certain group. An empty string (the default setting) disables the filter.
+    # This option mainly exists for cases where the same map exists in multiple groups, you probably won't have to set this.
+    # Unchanged from the base configuration.
+    '': 50
+  start_map:
+    # The name of your starting map. Functions similarly to the start_group setting, but filters after the map name instead. Looks for the file name of the map. (ap_orange, gm_construct, etc., without extensions)
+    # Currently, apAdventure only includes a single starting map, so you won't have to set this option unless you have made your own configs with starting points.
+    # Unchanged from the base configuration.
+    '': 50
+  start_region:
+    # If your selected starting map has start points placed in multiple regions, you can use this setting to chose what region you want to start in.
+    # The starting map included with apAdventure does not have multiple starting regions, so you can ignore this option unless you have made your own configs with multiple starting regions.
+    # Unchanged from the base configuration.
+    '': 50
+  item_sets:
+    # Item Sets to use for generation.
+    # Similarly to Map Configs, Items related to each other are grouped together in Item Sets.
+    # Not all Item Sets are enabled by default. If you want to see what sets are available, you can use the "apAdventure - Generate Item Index" tool in your launcher to get a list of all available item sets and the items in them.
+    # The Generator will automatically check which of the items chosen are relevant to progression and remove items that are not logically required if there is not enough space for them. This process is not perfect though, the generator just checks if the item can fullfill any logic rule, but it doesn't check if there is another item that could also satisfy that rule, so if multiple items exist that can pass the same conditions the generator will keep all of then, even if the run could be beaten with only one of them.
+    # Bad item sets have been removed.
+    - generic_filler
+    # - funny # All this item set contains is voice lines from Half-Life 2, which I don't find funny in isolation.
+    - hl2weps
+  item_cherrypick:
+    # This option allows you to cherrypick single items from an Item Set.
+    # Check the options guide for more information on how this option works.
+    # Unchanged from the base configuration.
+    {}
+  item_blacklist:
+    # This option allows you to blacklist single items from an Item Set.
+    # Check the options guide for more information on how this option works.
+    # Unchanged from the base configuration.
+    {}
+  start_item_groups:
+    # What types of starting items you want.
+    # Items may be marked as being part of a certain start item group. You can enter the name of one of these groups here to be granted one item of each type. You will also always be granted a starting melee weapon.
+    # Currently, the available item types are "Pistol","Shotgun","Magnum","SMG" and "Grenade". Custom item sets may also add their own types.
+    # Unchanged from the base configuration.
+    - Pistol
+  ammo_merge:
+    # This option allows ammo types to be merged together.
+    # Whenever the player gains or loses ammo for a merged type, all merged types will also be set to the same amount, and whenever ammunition of a merged type is available logically, the generator will also consider all merged types to be available.
+    # This feature mainly exists for Half-Life: Source, which uses separate ammo types from HL2. Note that not all HL2 ammo types have a HL:S counterpart.
+    # A list of all of GMods default ammo types can be found here: https://wiki.facepunch.com/gmod/Default_Ammo_Types
+    # Alternatively, apAdventure also provides a console command called "apadventure_dump_ammotypes" that will dump the names of all currently existing ammo types, which can be used to figure out the names of ammo types that have been added by addons.
+    # Unchanged from the base configuration.
+    - [ 'Pistol', '9mmRound' ]
+    - [ 'Buckshot', 'BuckshotHL1' ]
+    - [ '357', '357Round' ]
+    - [ 'Grenade', 'GrenadeHL1' ]
+    - [ 'SMG1_Grenade', 'MP5_Grenade' ]
+    - [ 'RPG_Round', 'RPG_Rocket' ]
+  generate_puml:
+    # Generates a PlantUML Diagram showing all of the worlds regions and locations, which may be helpful for debugging configs you've made.
+    # This is an interesting feature, and it lets me see how I can get from one location to another, so I've turned it on.
+    'false': 0
+    'true': 50
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # Unchanged from the base configuration.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
