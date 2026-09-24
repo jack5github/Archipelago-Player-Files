@@ -32,3 +32,4 @@ This document lists the Archipelago games that we have tried setting up or playi
 - **The Legend of Zelda (Zelda 1)** - I don't even own an NES nor a copy of Zelda 1.
 - **Luigi's Mansion** - Love this game, although I think it's fair if I don't play it anymore because I just do not own this game legit.
 - **Pikmin 2** - Technically own the Wii Version, but this uses the GameCube Version which I do not own.
+- **Stick Ranger** - I have not played this game in nearly TWELVE (12) Years. It is awesome to see it again after all this time. However I forgot how grindy as heck this game can be. Because specific enemies drop certain items and it becomes a game of chance to even obtain said items. It also does not help that you need XP and the correct classes to be any good at the game. So I wish I could play the AP of this but it is just too much.
