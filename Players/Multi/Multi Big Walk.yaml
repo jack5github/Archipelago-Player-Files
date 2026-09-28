@@ -1,0 +1,113 @@
+﻿name: MultiBigWalk{NUMBER}
+description: |-
+  Multiplayer Big Walk player file by Jack5
+
+  Jack5 was involved in the idea development of the Big Walk APworld, and his notes can be found at https://docs.google.com/document/d/1T5QBFIr71wFKN-EDTNV8827-H6aXTLw-UT3azjbWGHs/edit. The world is still in the very early stages of development, so there is still some ways to go before it is complete. Regardless, it seems like the perfect way to breathe more life into Big Walk, the best truly co-operative game we have ever played (even if it ostracises the people in our group that would rather cause chaos).
+game: Big Walk
+requires:
+  version: 0.6.7
+Big Walk:
+  ################
+  # Game Options #
+  ################
+  # Unchanged.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  ########
+  # Goal #
+  ########
+  goal:
+    # What you need to do to win. No goal can be done solo.
+    # - big_wall: break the bell inside the Big Wall. Needs the Big Wall Door.
+    # - big_goodbye: complete the Silent Gauntlet, behind the Big Wall. Needs the Big Wall Door. Saying farewell afterwards is up to you.
+    # - big_game: reach the secret ending behind the Spawn Secret Door. Needs that item, and nothing else: the sphere that normally seals it until you have finished the game is gone from the start.
+    # - big_collection: place a number of gourds in the towers' slots (see Gourds Required).
+    # While there are no safeguards in place to make sure Big Walk is played to a sufficient degree, `big_collection` will be our goal.
+    big_wall: 0
+    big_goodbye: 0
+    big_game: 0
+    big_collection: 50
+  gourds_required:
+    # Only relevant if the Goal is "big_collection".
+    # How many gourds must be placed in the towers' slots to win.
+    # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 45.
+    # Reduced from 30 for testing purposes, increased from 10 to last for approximately 2 game nights per run.
+    15: 50
+  #############
+  # Locations #
+  #############
+  gourd_slot_checks:
+    # Checks for placing gourds in the towers' slots, counted across all towers together.
+    # - off: no checks for placing gourds.
+    # - every_5: a check every 5 gourds.
+    # - every_gourd: a check for every gourd.
+    # You know we gotta check every gourd.
+    none: 0
+    every_5: 0
+    every_gourd: 50
+  #########
+  # Radio #
+  #########
+  radio_checks:
+    # If on, switching on each of the seven radio stations is a check.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  shuffle_radio_music:
+    # If on, each station's music is an item, and a station stays silent until its music is found.
+    # - On: switching a station on is still a check, but its music only plays once its Radio Music item arrives. 7 items, replacing filler.
+    # - Off: vanilla, a station plays as soon as it is switched on.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  ########
+  # Keys #
+  ########
+  start_with_drawbridge_open:
+    # Start with the Drawbridge open instead of finding it in the multiworld.
+    # - Doors at the hub will be opened on start no matter what.
+    # - The tutorial key deposit stays a check either way.
+    # Unchanged.
+    'false': 50
+    'true': 0
+  #########
+  # Doors #
+  #########
+  lock_arch_doors:
+    # Which of the hub's three arch doors start closed. Each closed door opens when its own item is found.
+    # - all: all three. You leave the starting area through the Drawbridge or the First Arch Door, and one of the two is always found early.
+    # - far: the Left and Right Arch Doors; the first one opens as usual.
+    # - far_left: only the Left Arch Door, towards Sports Creek.
+    # - far_right: only the Right Arch Door.
+    # - disabled: all three are open from the start.
+    # The Left and Right doors are shortcuts: without them the whole island is still reachable, the long way round.
+    # Without the First Arch Door, it will take a very long time to get to the middle part of the island, so it is unlocked from the start.
+    all: 0
+    far: 50
+    far_left: 0
+    far_right: 0
+    disabled: 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  start_hints:
+    # The Arch Doors and the Map Room are critical areas to gain access to, because they make traversing the world of Big Walk much faster, therefore, they have been added to both `start_hints` and `plando_items`.
+    - Arch Doors
+    - Map Room
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items:
+    # The Arch Doors and the Map Room are critical areas to gain access to, because they make traversing the world of Big Walk much faster, therefore, they have been added to both `start_hints` and `plando_items`.
+    - items:
+        Arch Doors: true
+        Map Room: true
+      location: early_locations
+      force: false
