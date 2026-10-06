@@ -35,9 +35,9 @@ Big Walk:
     # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 45.
     # Reduced from 30 for testing purposes, increased from 10 to last for approximately 2 game nights per run.
     15: 50
-  #############
-  # Locations #
-  #############
+  ##########
+  # Sanity #
+  ##########
   gourd_slot_checks:
     # Checks for placing gourds in the towers' slots, counted across all towers together.
     # - off: no checks for placing gourds.
@@ -47,11 +47,8 @@ Big Walk:
     none: 0
     every_5: 0
     every_gourd: 50
-  #########
-  # Radio #
-  #########
   radio_checks:
-    # If on, switching on each of the seven radio stations is a check.
+    # Switching on each of the seven radio stations is a check.
     # Unchanged.
     'false': 0
     'true': 50
@@ -62,33 +59,201 @@ Big Walk:
     # Unchanged.
     'false': 0
     'true': 50
-  ########
-  # Keys #
-  ########
+  #########
+  # Logic #
+  #########
   start_with_drawbridge_open:
-    # Start with the Drawbridge open instead of finding it in the multiworld.
-    # - Doors at the hub will be opened on start no matter what.
-    # - The tutorial key deposit stays a check either way.
+    # If on, you start with the Drawbridge open instead of finding it in the multiworld.
+    # - The hub's arch doors follow Start With Arch Doors Open, not this.
+    # - The Drawbridge Key Deposit stays a check either way.
     # Unchanged.
     'false': 50
     'true': 0
-  #########
-  # Doors #
-  #########
-  lock_arch_doors:
-    # Which of the hub's three arch doors start closed. Each closed door opens when its own item is found.
-    # - all: all three. You leave the starting area through the Drawbridge or the First Arch Door, and one of the two is always found early.
-    # - far: the Left and Right Arch Doors; the first one opens as usual.
-    # - far_left: only the Left Arch Door, towards Sports Creek.
-    # - far_right: only the Right Arch Door.
-    # - disabled: all three are open from the start.
-    # The Left and Right doors are shortcuts: without them the whole island is still reachable, the long way round.
-    # Without the First Arch Door, it will take a very long time to get to the middle part of the island, so it is unlocked from the start.
-    all: 0
-    far: 50
-    far_left: 0
-    far_right: 0
-    disabled: 0
+  open_black_tower:
+    # The Black Tower's door is open from the start, instead of waiting for the five monuments.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  start_with_arch_doors_open:
+    # The hub's arch doors open from the start; the others are items to find.
+    # - First Arch Door: closed, it makes a real early game.
+    # - Left and Right Arch Doors: shortcuts; the island stays reachable without them.
+    # Unchanged.
+    [ 'First Arch Door' ]
+  require_arch_doors:
+    # What lies past a closed Left or Right Arch Door needs that door in logic, so you are never sent the shortcut after the walk.
+    # - Left: the Yellow, Blue and Black towers, the Green Dome. Never the chapel: the end of the game needs only the Big Wall Door.
+    # - Right: the Green Tower, past the chairlift, the purple gourds.
+    # The doors are shortcuts, not walls: the island can be walked round them. But until a door arrives, what lies past it is out of logic: its checks are never expected of you, and a tracker shows them, and the goal, as out of reach even once you have walked there.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  gauntlet_mode:
+    # What the Silent Gauntlet is, behind the Big Wall.
+    # - vanilla: nothing changes, and it has no checks. Holding the stairway buttons together opens the way up, as in the game.
+    # - locked_stages: the stairway buttons are gone and each stage's way up is an item. Solving a stage's puzzle is a check and still opens the wall inside the stage, but you only leave it with that stage's item. 7 checks, 7 items.
+    # Whatever the goal. With Big Goodbye the seven items are needed to win. With another goal the Gauntlet is extra: its checks sit behind the chapel, so with the usual accessibility (full) the Black Monolith Key and the seven items are always findable, but the goal itself asks for none of them.
+    # Unchanged.
+    vanilla: 50
+    locked_stages: 0
+  gauntlet_stage_items:
+    # With Gauntlet Mode locked_stages, what the seven stage items are.
+    # - progressive: seven Progressive Gauntlet Doors; each one opens the next stage up.
+    # - individual: one item per stage, Gauntlet Stage 1 Door to Stage 7 Door, found in any order.
+    # Unchanged.
+    progressive: 50
+    individual: 0
+  gauntlet_puzzles_required:
+    # With Gauntlet Mode locked_stages: whether a stage's puzzle has to be solved to leave the stage.
+    # - On: solving the puzzle opens the wall inside the stage and is a check; the stage's item opens the stairway. You leave a stage by doing both.
+    # - Off: the stage's item opens the wall and the stairway at once. You may do the puzzles in any order, or none: with all seven items you can walk straight to the top. The puzzles are still checks.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  lock_gauntlet_needs:
+    # With Lock Puzzle Needs: whether the parts of the seven stages' puzzles in the Silent Gauntlet are items too, in either Gauntlet Mode.
+    # - On: the buttons, panels and so on inside the Gauntlet's stages are not on the map until their item arrives, and the Big Goodbye goal, which means finishing the Gauntlet, asks for them. With Gauntlet Mode locked_stages the stages' checks ask for them too. The finale and the entrance are left alone.
+    # - Off: the Gauntlet's parts stay on the map and nothing is asked for them.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  gauntlet_stages_local:
+    # With Gauntlet Mode locked_stages: keep the seven stage items in your own world, so that a stage is never held up by another game's item.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  lock_puzzle_needs:
+    # What puzzles are built from (buttons, panels, speakers, timers...) are items to find first.
+    # The parts missing are hidden in the world; Start With Puzzle Needs lists those you already have.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  start_with_puzzle_needs:
+    # Which puzzle needs you already have when Lock Puzzle Needs is on. Every need not listed is an item to find.
+    # Needs: buttons, sync_buttons, icon_panels, drawing_panels, pose_panels, sound_panels, point_panels, speakers, lights, teapots, timed_tomato, golf_ball, big_head, ink_viewer, counter, coordinates_computer, eggs.
+    # Unchanged.
+    []
+  start_with_random_puzzle_need:
+    # With Lock Puzzle Needs on, start with one random need, so that at least one of the tutorial's puzzles is doable from the first minute. Nothing is added if Start With Puzzle Needs already allows one.
+    # The tutorial's puzzles need buttons or synchronized buttons, so it is one of those two. Turning this off is only possible when Start With Puzzle Needs lists one of them: a seed with nothing to do at the start cannot be generated.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  #######
+  # QoL #
+  #######
+  hint_keys:
+    # Whether the server tells you, from the first minute, where the seven big keys are in the multiworld.
+    # - off: nothing is hinted.
+    # - from_start: the seven Big Key items are hinted at the start, as if they were listed in Start Hints. Anything you list there stays.
+    # Unchanged.
+    'off': 50
+    from_start: 0
+  teleport_buttons:
+    # Buttons in the hub that teleport you to the Red, Green, Blue, Yellow and Black towers and the Silent Gauntlet.
+    # - off: none.
+    # - free: all there from the start.
+    # - with_towers: once the place has been opened on foot (the tower's button, the chapel's).
+    # - items: the same, and each also needs its Teleporter item (6 items).
+    # Changed from `off` to `with_towers` to reduce traversal time but maintain logical accessibility.
+    'off': 0
+    free: 0
+    with_towers: 50
+    items: 0
+  teleport_back_to_hub:
+    # With Teleport Buttons, a button back to the hub in each destination.
+    # Changed from `false` to `true` to reduce traversal time but maintain logical accessibility.
+    'false': 0
+    'true': 50
+  tower_resync_stations:
+    # A resync station in each of the five towers: a button that brings your gourds, keys and gadgets lying around back in front of it. The hub's station is always there.
+    # Unchanged.
+    'false': 50
+    'true': 0
+  guests_can_resync:
+    # The guests may use the resync stations too. Off, only the host can.
+    # Unchanged.
+    'false': 50
+    'true': 0
+  ##############
+  # Puzzle QoL #
+  ##############
+  cabin_fever_time:
+    # The wait of the Cabin Fever puzzle (5 minutes in the game). Mod only; it changes no logic.
+    # - vanilla: the game's own wait.
+    # - reduced: down to `cabin_fever_seconds_min`, never longer than the game's.
+    # - random_between: a time between `cabin_fever_seconds_min` and `cabin_fever_seconds_max`, drawn once when the world is made, so it is the same for every player.
+    # - fixed: exactly `cabin_fever_seconds` seconds, even longer than the game's.
+    # Set to `random_between` for maximum variety.
+    vanilla: 0
+    reduced: 0
+    random_between: 50
+    fixed: 0
+  cabin_fever_seconds_min:
+    # The shortest wait of the Cabin Fever puzzle, in seconds: what `reduced` brings it down to, and the low end of `random_between`.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 300.
+    # A totally random number of seconds, even as low as 1 second.
+    1: 50
+  cabin_fever_seconds_max:
+    # The longest wait of the Cabin Fever puzzle, in seconds: the high end of `random_between`.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3600.
+    # A totally random number of seconds, up to 10 minutes.
+    600: 50
+  cabin_fever_seconds:
+    # The wait of the Cabin Fever puzzle, in seconds, when it is `fixed`.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3600.
+    # Unchanged.
+    120: 50
+  cabin_fever_help:
+    # A hidden button in the Cabin Fever room that takes ten seconds off the wait each time it is pressed. Mod only.
+    # Unchanged.
+    'false': 50
+    'true': 0
+  cabin_fever_long_time:
+    # The wait of the Cabin Fever Long puzzle (30 minutes in the game). Mod only; it changes no logic.
+    # - vanilla: the game's own wait.
+    # - reduced: down to `cabin_fever_long_seconds_min`, never longer than the game's.
+    # - random_between: a time between `cabin_fever_long_seconds_min` and `cabin_fever_long_seconds_max`, drawn once when the world is made, so it is the same for every player.
+    # - fixed: exactly `cabin_fever_long_seconds` seconds, even longer than the game's.
+    # Set to `random_between` for maximum variety.
+    vanilla: 0
+    reduced: 0
+    random_between: 50
+    fixed: 0
+  cabin_fever_long_seconds_min:
+    # The shortest wait of the Cabin Fever Long puzzle, in seconds: what `reduced` brings it down to, and the low end of `random_between`.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1800.
+    # A totally random number of seconds, as low as 10 minutes.
+    600: 50
+  cabin_fever_long_seconds_max:
+    # The longest wait of the Cabin Fever Long puzzle, in seconds: the high end of `random_between`.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3600.
+    # A totally random number of seconds, up to 1 hour.
+    3600: 50
+  cabin_fever_long_seconds:
+    # The wait of the Cabin Fever Long puzzle, in seconds, when it is `fixed`.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3600.
+    # Unchanged.
+    600: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-3600: 0 # random value between 0 and 3600
+  cabin_fever_long_help:
+    # A hidden button in the Cabin Fever Long room that takes ten seconds off the wait each time it is pressed. Mod only.
+    # Considering that this is an exceptionally long wait, it is probably best to have this enabled.
+    'false': 0
+    'true': 50
+  tile_thief:
+    # A button beside the Tile Thief puzzle that makes peg tiles in front of it.
+    # - vanilla: no button.
+    # - easy: the tiles the puzzle expects.
+    # - chaos: one tile of every kind the puzzle draws from; the answer is still yours to find.
+    # With Lock Puzzle Needs, it waits for the panels Tile Thief is built from.
+    # Set to `chaos`, as `easy` is too easy and `vanilla` requires too much walking.
+    vanilla: 0
+    easy: 0
+    chaos: 50
   ###########################
   # Item & Location Options #
   ###########################
@@ -97,7 +262,7 @@ Big Walk:
   start_inventory: {}
   start_inventory_from_pool: {}
   start_hints:
-    # The Arch Doors and the Map Room are critical areas to gain access to, because they make traversing the world of Big Walk much faster, therefore, they have been added to both `start_hints` and `plando_items`.
+    # The Arch Doors and the Map Room are critical areas to gain access to, because they make traversing the world of Big Walk much faster, therefore, they have been added here.
     - Arch Doors
     - Map Room
   start_location_hints: []
@@ -105,9 +270,8 @@ Big Walk:
   priority_locations: []
   item_links: []
   plando_items:
-    # The Arch Doors and the Map Room are critical areas to gain access to, because they make traversing the world of Big Walk much faster, therefore, they have been added to both `start_hints` and `plando_items`.
+    # Now that whatever is behind the Arch Doors is considered out of logic as long as the doors are not open, they don't need to be in early locations, but the Map room definitely does.
     - items:
-        Arch Doors: true
         Map Room: true
       location: early_locations
       force: false
