@@ -1,0 +1,98 @@
+﻿name: Jack5Scrokk{NUMBER}
+description: |-
+  Jack5's Scrokkpelago player file
+
+  TODO: Add description
+game: Scrokkpelago
+requires:
+  version: 0.6.7
+  game:
+    Scrokkpelago: 0.0.2
+Scrokkpelago:
+  ################
+  # Game Options #
+  ################
+  # Unchanged.
+  progression_balancing:
+    normal: 50
+  accessibility:
+    full: 50
+  check_every_card:
+    # Using a card in a hand for the first time becomes a check.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  plus_one_joker:
+    # Adds a Joker item which acts as a spacer tile, allowing you to space out hands, to the item pool.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  score_threshold_count:
+    # Number of score threshold checks to generate. Each score threshold is 500 points
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 8.
+    # At first I set this as 8, but you only get ~2261 points with almost all of the tiles, so I've reduced it to 3 (1 less than `goal_score`).
+    3: 50
+  check_every_hand:
+    # Adds a check for successfully completing each poker hand type.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  starting_tiles:
+    # Number of random unique cards given to the player at the start.
+    # You can define additional values between the minimum and maximum values. Minimum value is 2, maximum value is 52.
+    # Unchanged.
+    2: 50
+  start_with_nothing:
+    # UNSTABLE: If this is enabled there will be nothing to do in Scrokkle at the start without finding tiles in other games. If playing Scrokkpelago alone or without other games that don't have checks available from the start, world gen will fail as there would be no way to find anything.
+    # Unchanged.
+    'false': 50
+    'true': 0
+  tiles_per_threshold:
+    # Determines how many tiles are needed in logic for each 500 point score threshold if using score thresholds.
+    # Setting this too low could create an impossible seed so do not change it if you're not sure.
+    # The logic does not guarantee that the tiles can be scored together so too low and it will have a good chance of creating something impossible.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 52.
+    # Unchanged.
+    15: 50
+  clear_board_weight:
+    # Weight for Clear Board Trap items in the filler pool.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Disabled, as this sounds like an awful trap.
+    0: 50
+  progression_hint_weight:
+    # Weight for Progression Hint Token items in the filler pool.
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0, maximum value is 100.
+    # Unchanged.
+    50: 50
+  goal:
+    # Determines the game's victory condition.
+    # Score: Reach the selected score threshold.
+    # Every Tile: Collect all 52 cards and use them all without busting.
+    # Changed to `score` in order to goal at 2000 points.
+    score: 50
+    every_tile: 0
+  goal_score:
+    # Determines the score required for the Score goal.
+    # The value represents 500 points. For example, 8 means 4,000 points.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 8.
+    # Set to 4 for a goal of 2000 points (checks are defined by `score_threshold_count`).
+    4: 50
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    # Unchanged.
+    'false': 50
+    'true': 0
+  ###########################
+  # Item & Location Options #
+  ###########################
+  # Unchanged.
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  plando_items: []
