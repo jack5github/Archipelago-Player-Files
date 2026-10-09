@@ -1,0 +1,297 @@
+﻿name: ZeromanRAC3{NUMBER}
+
+description: Zeroman95 Ratchet and Clank 3 YAML
+
+game: Ratchet and Clank 3
+requires:
+  version: 0.6.7
+  game:
+    Ratchet and Clank 3: 0.6.0
+
+Ratchet and Clank 3:
+  progression_balancing: # I play with no progression! Ratchet and Clank 3 is more fun without it.
+    0: 99
+
+  accessibility: # UNCHANGED
+    full: 50
+    minimal: 0
+
+  deathlink: # Death will affect everyone.
+    'false': 0
+    'true': 50
+
+  shortcuts: # UNCHANGED
+    Aquatos Shuttle: 0
+    Command Center Dropship: 0
+    Daxx Teleporter: 0
+    Draco Teleporter: 0
+    Florana Drawbridge: 0
+    Hideout Taxi: 0
+    Hideout Teleporter: 0
+    Holostar Skip Clank: 0
+    Holostar Teleporter: 0
+    Marcadia Dropship: 0
+    Metropolis Dropship: 0
+    Metropolis Taxi: 0
+    Obani Teleporter: 0
+    Tyhrranosis Dropship: 0
+    Tyhrranosis Skip Intro: 0
+    Veldin Skip: 1
+
+  speedups: # UNCHANGED
+    Bolt Crank: 0
+    Hacker: 0
+    Halo Jumps: 0
+    Refractor: 0
+    Tyhrraguise: 0
+
+  bolt_and_xp_multiplier: # Turn on New Game plus multiplier
+    x2: 99
+
+  one_hp_challenge: # UNCHANGED
+    Clank: 0
+    Giant Clank: 0
+    Qwark: 0
+    Ratchet: 0
+    Vehicle: 0
+
+  ngplus_start: # Give me New Game Plus.
+    disabled: 0
+    enabled: 0
+    enabled_with_multiplier: 99
+
+  starting_weapons: # RY3NO is set to 0 because it is too overpowered.
+    Agents of Doom: 1
+    Annihilator: 1
+    Bouncer: 1
+    Disc Blade Gun: 1
+    Flux Rifle: 1
+    Holo Shield Glove: 1
+    Infector: 1
+    Lava Gun: 1
+    Miniturret Glove: 1
+    N60 Storm: 1
+    Nitro Launcher: 1
+    Plasma Coil: 1
+    Plasma Whip: 1
+    Qwack-O-Ray: 1
+    RY3N0: 0
+    Rift Inducer: 1
+    Shield Charger: 1
+    Shock Blaster: 1
+    Spitting Hydra: 1
+    Suck Cannon: 1
+
+  ngplus_items: # RY3NO gets put into Multi-World. When a weapon gets to V5, the V8 versions become available as checks in the Vendor.
+    disabled: 0
+    enabled: 50
+
+  progressive_weapons: # UNCHANGED
+    disable: 50
+    manual_leveling: 0
+    automatic_leveling: 0
+
+  armor_upgrade: # UNCHANGED
+    4: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-8: 0 # random value between 0 and 8
+
+  clank_options: # Puts Heli-Pack and Thruster-Pack as a Item in the pool. Meaning Clank won't be collected for a long time.
+    start_with: 50
+    shuffled_as_one: 0
+    shuffled_independently: 99
+    shuffled_progressive: 0
+
+  traps_enabled: # Bring on the traps!
+    disabled: 0
+    enabled: 50
+
+  trap_weight: # UNCHANGED
+    1-Hit KO Trap: 1
+    Black Screen Trap: 1
+    Gadgetron Debt Trap: 1
+    Invisible Trap: 1
+    Item Lock Trap: 1
+    No Ammo Trap: 1
+    No Clank Trap: 1
+    Wrench Only Trap: 1
+
+  filler_weight: # Lowered bolt filler.
+    Bolts: 1
+    Jackpot: 5
+    Nanotech EXP: 5
+    Weapon Level-Up: 5
+
+  weapon_vendors: # UNCHANGED
+    disabled: 0
+    enabled: 50
+
+  ngplus_vendors: # Makes all NGPlus items, checks.
+    disabled: 0
+    enabled: 50
+
+  armor_vendor: # UNCHANGED
+    disabled: 0
+    enabled: 50
+
+  ship_vendor: # UNCHANGED
+    disabled: 0
+    enabled: 50
+
+  scout_vendors: # When I seek items, it gives Hints to share to other players to know certain locations.
+    Armor: 1
+    Ship: 1
+    Weapon: 1
+
+  skill_points: # I have played this game so many times. All Skill Points I can get.
+    none: 0
+    simple: 0
+    all: 50
+
+  trophies: # Same as Skill Points above.
+    none: 0
+    collectables: 0
+    all: 50
+
+  titanium_bolts: # UNCHANGED
+    disabled: 0
+    enabled: 50
+
+  weapon_level_locations: # Why the hell not?
+    disable: 0
+    v5: 0
+    all: 50
+
+  rangers: # UNCHANGED
+    none: 0
+    story_missions: 0
+    optional_missions: 0
+    all: 50
+
+  vidcomics: # UNCHANGED
+    disabled: 0
+    enabled: 50
+
+  vr_challenges: # UNCHANGED
+    disabled: 0
+    enabled: 50
+
+  arena: # UNCHANGED
+    none: 0
+    first_only: 0
+    second_only: 0
+    all: 50
+
+  sewer_crystals: # In the first few versions of the RAC3 AP, this wasn't worth it; But now it is thanks to the Vendors doing something.
+    none: 0
+    every_20: 0
+    every_10: 0
+    every_5: 0
+    all: 50
+
+  sewer_limitation: # All Sewer Crystals are checks.
+    101: 99
+
+  nanotech_milestones: # All nanotech gives checks.
+    none: 0
+    every_20: 0
+    every_10: 0
+    every_5: 0
+    all: 99
+
+  nanotech_limitation: # All 200 Nanotech increases give checks.
+    200: 99
+
+  ship_nose: # Random Ship Nose.
+    standard: 33
+    split: 33
+    scoop: 33
+
+  ship_wings: # Random Ship Wings.
+    standard: 33
+    hi_lift: 33
+    heavy_ordinance: 33
+
+  ship_skin: # Allow random ship skin other then blargian red.
+    blargian_red: 0
+    orxon_green: 3
+    bogon_blue: 3
+    insomniac_special: 3
+    dark_nebula: 3
+    dreks_black_heart: 3
+    space_storm: 3
+    lunar_eclipse: 3
+    plaidtastic: 3
+    supernova: 3
+    solar_wind: 3
+    clowner: 3
+    silent_strike: 3
+    lombax_orange: 3
+    neutron_star: 3
+    star_traveller: 3
+    hooked_on_onyx: 3
+    tyhrranoid_void: 3
+    zeldren_sunset: 3
+    ghost_pirate_purple: 3
+    qwark_green: 3
+    agent_orange: 3
+    helgas_hues: 3
+    ameboid_green: 3
+    pulsing_purple: 3
+    obani_orange: 3
+    low_rider: 3
+    black_hole: 3
+    sun_storm: 3
+    sasha_scarlet: 3
+    florana_breeze: 3
+    ozzy_kamikaze: 3
+
+  player_skin: # Allow to pick random skin other then default Ratchet.
+    default: 0
+    old_school: 12
+    snowman: 12
+    tuxedo: 12
+    buginoid: 12
+    brainius: 12
+    unused_robot: 12
+    robo_rooster: 12
+    trooper: 12
+    robo: 12
+
+  helpdesk: # Helpdesk can stay disabled.
+    disabled: 50
+    enabled: 0
+
+  vendor_access: # UNCHANGED
+    visit: 50
+    infobot: 0
+
+  exclude_locations: ['Unstable']
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_inventory_from_pool: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items:
+    # Generic items plando.
+    # places the RY3NO right at the end of the game making it unusable and banned.
+    - locations:
+        - 'Command Center: Dr. Nefarious Defeated!'
+        - 'Command Center: Biobliterator Defeated!'
+      items:
+        RY3N0: true
+      force: false
