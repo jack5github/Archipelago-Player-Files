@@ -1,0 +1,78 @@
+﻿name: ZeromanTwiddyGems{NUMBER}
+
+description: Zeroman95s Twiddly Gems YAML
+
+game: Twiddly Gems
+requires:
+  version: 0.6.8
+  game:
+    Twiddly Gems: 0.1.1
+
+Twiddly Gems:
+  progression_balancing: # UNCHANGED
+    50: 99
+
+  accessibility: # UNCHANGED
+    full: 50
+    minimal: 0
+
+  goal: # UNCHANGED
+    clear_last_level: 0
+    clear_every_level: 50
+    gold_on_last_level: 0
+    gold_on_every_level: 0
+
+  ap_gems: # This is to make up for excluding Silver and Gold Scores.
+    3: 99
+
+  ap_gem_odds: # UNCHANGED
+    100: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-50-200: 0 # random value between 50 and 200
+
+  inventory_items: # Picks random amount of Items to get in the game.
+    random-range-10-20: 99
+
+  progressive_levels: # UNCHANGED
+    'false': 0
+    'true': 50
+
+  spare_unlocks: # UNCHANGED
+    20: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  exclude_gold_and_silver: # Another two AP Gems are in each level now to exclude the very hard Silver and Gold Scores.
+    'false': 0
+    'true': 50
+
+  trap_percent: # Same percentage as Spare Unlocks.
+    20: 100
+
+  inventory_item_chance: # UNCHANGED
+    cross_clear: 50
+    rainbow: 50
+    rocket: 50
+    rocket_cluster: 50
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
