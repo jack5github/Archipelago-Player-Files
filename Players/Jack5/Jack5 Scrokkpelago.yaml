@@ -31,7 +31,7 @@ Scrokkpelago:
     # Number of score threshold checks to generate. Each score threshold is 500 points
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 8.
     # At first I set this as 8, but you only get ~2261 points with almost all of the tiles, so I've reduced it to 3 (1 less than `goal_score`).
-    3: 50
+    4: 50
   check_every_hand:
     # Adds a check for successfully completing each poker hand type.
     # Unchanged.
