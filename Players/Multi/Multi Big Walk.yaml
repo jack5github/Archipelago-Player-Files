@@ -6,6 +6,8 @@ description: |-
 game: Big Walk
 requires:
   version: 0.6.7
+  game:
+    Big Walk: 0.5.0
 Big Walk:
   ################
   # Game Options #
@@ -29,16 +31,78 @@ Big Walk:
     big_goodbye: 0
     big_game: 0
     big_collection: 50
+  objectives:
+    # What a seed asks for besides its Goal, in any order: the Goal (the ending) is then won once every objective listed is done too. Empty (the default): the Goal alone, as before. With Random Objectives, a few of these are drawn instead.
+    # - big_collection: place a number of gourds in the towers' slots (see Gourds Required).
+    # - big_keys: place a number of big keys in their plinths, the drawbridge's included (see Keys Required).
+    # - big_radio: switch on a number of radio stations (see Radio Stations Required; needs Radio Sanity).
+    # - big_towers: complete a number of towers (see Towers Required; needs Tower Mode in_order or by_item).
+    # - big_climb: stand on the highest point of the island.
+    # - big_fiesta (also read as big_club): the party on the beach, a radio plugged into the big speakers with a music playing. Needs a Radio, and with Shuffle Radio Music one of the stations, which become progression.
+    # The endings (big_wall, big_goodbye, big_game) are not listed here: they are the Goal.
+    # Added objectives related to travelling to a specific point to this list.
+    - big_climb
+    - big_fiesta
+  random_objectives:
+    # Draws this many objectives at random, from the Objectives listed or, if none are, from all of those the other options allow. 0 (the default): the Objectives listed are all asked for, none drawn.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 6.
+    # Pick one of the available random objectives.
+    1: 50
+  lock_endings_until_objectives:
+    # With Objectives: the ending's entry point (the chapel's bell, the Gauntlet's bell door, the secret room's printer) stays shut on every screen until the other objectives are done, so an ending, which plays once per save, is never played too early. Off: nothing is shut, and the ending can be played in any order.
+    # Unchanged.
+    'false': 50
+    'true': 0
   gourds_required:
-    # Only relevant if the Goal is "big_collection".
+    # Only relevant if the Goal, or the Objectives, hold "big_collection".
     # How many gourds must be placed in the towers' slots to win.
     # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 45.
-    # Reduced from 30 for testing purposes, increased from 10 to last for approximately 2 game nights per run.
-    15: 50
+    # Was reduced from 30 for testing purposes, but has been restored back to 30. Each 7 gourds is approximately a single day of sustained gameplay (without outside intervention), so this will approximately last us one week. Additionally, at 15 or lower, gourd deposit boxes are often not required in order to beat the game.
+    30: 50
+  keys_required:
+    # Only relevant if the Objectives hold "big_keys".
+    # How many big keys must be placed in their plinths, the drawbridge's and the six towers'.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 7.
+    # Unchanged.
+    7: 50
+  radio_stations_required:
+    # Only relevant if the Objectives hold "big_radio".
+    # How many radio stations must be switched on. Needs Radio Sanity, whose checks are the stations.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 7.
+    # Unchanged.
+    7: 50
+  towers_required:
+    # Only relevant if the Objectives hold "big_towers" (which needs Tower Mode in_order or by_item).
+    # How many towers must be completed, a tower being complete when its monument is full, in the seed's order.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 7.
+    # Unchanged.
+    7: 50
+  everyone_gathers:
+    # Big Climb and Big Fiesta count their ten seconds only while every player is there: at the island's highest point for the climb, near the big speakers on the beach for the party (the default). Off: one player is enough.
+    # Everyone gathering together to achieve the objective is a hard requirement.
+    'false': 0
+    'true': 50
+  ##########
+  # Towers #
+  ##########
+  tower_mode:
+    # How the towers' monuments open for the gourds.
+    # - all_open: every monument takes gourds from the start, in any order. The way it has always been.
+    # - in_order: one monument at a time, in an order the seed draws: the next opens once the one before is full, and a monument that is not the next refuses gourds, and its tower's button stays still.
+    # - by_item: the same order, and the next monument also waits for a Progressive Monument item, the first monument being open from the start.
+    # Set to `by_item` for total randomisation.
+    all_open: 0
+    in_order: 0
+    by_item: 50
+  first_tower_open:
+    # With Tower Mode by_item: the first monument takes gourds from the start (the default). Off: it waits for a Progressive Monument like the others, and the seed starts with no monument open. Needs by_item: nothing could open the first monument in in_order.
+    # No towers should start open, all should be earned through items.
+    'false': 50
+    'true': 0
   ##########
   # Sanity #
   ##########
-  gourd_slot_checks:
+  gourd_sanity:
     # Checks for placing gourds in the towers' slots, counted across all towers together.
     # - off: no checks for placing gourds.
     # - every_5: a check every 5 gourds.
@@ -47,7 +111,7 @@ Big Walk:
     none: 0
     every_5: 0
     every_gourd: 50
-  radio_checks:
+  radio_sanity:
     # Switching on each of the seven radio stations is a check.
     # Unchanged.
     'false': 0
@@ -56,6 +120,23 @@ Big Walk:
     # If on, each station's music is an item, and a station stays silent until its music is found.
     # - On: switching a station on is still a check, but its music only plays once its Radio Music item arrives. 7 items, replacing filler.
     # - Off: vanilla, a station plays as soon as it is switched on.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  pack_sanity:
+    # The island's backpacks, belts and gourd carton (12 in all) as checks.
+    # - on: picking each one up for the first time is a check (12 locations); the pack then disappears from the map, so the packs a player can wear are still the items of the pool.
+    # - off: as in the game, free to take on the map, and no location.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  firework_sanity:
+    # Firing each of the eight firework launchers (the button at its foot) for the first time is a check: 8 locations.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  flare_gun_sanity:
+    # Picking up each of the island's four flare guns for the first time is a check: 4 locations. The four flare guns are then items in the pool (how many of each: `island_object_limits`; with `random_colors`, painted from the seed's colors). Off: the flare guns stay on the island and none is an item. The Rainbow Flare Gun is an item either way (`island_object_limits`).
     # Unchanged.
     'false': 0
     'true': 50
@@ -79,7 +160,7 @@ Big Walk:
     # - First Arch Door: closed, it makes a real early game.
     # - Left and Right Arch Doors: shortcuts; the island stays reachable without them.
     # Unchanged.
-    [ 'First Arch Door' ]
+    - First Arch Door
   require_arch_doors:
     # What lies past a closed Left or Right Arch Door needs that door in logic, so you are never sent the shortcut after the walk.
     # - Left: the Yellow, Blue and Black towers, the Green Dome. Never the chapel: the end of the game needs only the Big Wall Door.
@@ -139,6 +220,185 @@ Big Walk:
     # Unchanged.
     'false': 0
     'true': 50
+  #############
+  # Item Pool #
+  #############
+  backpacks_in_pool:
+    # How many Backpacks the item pool holds. Each one takes the place of a filler item; a pool without that much room holds fewer.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 8.
+    # Four backpacks for four players.
+    4: 50
+  belts_in_pool:
+    # How many Belts the item pool holds. Each one takes the place of a filler item; a pool without that much room holds fewer.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 8.
+    # Four belts for four players.
+    4: 50
+  gourd_cartons_in_pool:
+    # How many Gourd Cartons the item pool holds. Each one takes the place of a filler item; a pool without that much room holds fewer.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 4.
+    # Unchanged.
+    1: 50
+  island_object_limits:
+    # The most of each of the island's objects the pool holds; 0 leaves one out. Once every object is at its limit, the rest of the filler is bonuses (`bonus_weights`).
+    # - Most objects are random filler, drawn up to their limit. They are props the item feed names and that land beside you, with no effect and nothing in logic: none is ever needed.
+    # - The Walkie-Talkie is one of them, and 8 is not a lot to ask of the pool: 8 is how many the island itself has, so it is the most the filler can ever hold of them, and a seed that does not draw them all just makes more bonuses (traps and bonuses replace part of the filler as well). Lower it, or take it to 0, for a pool with fewer of them.
+    # - The four flare guns (`Flare Gun`, `Blue Flare Gun`, `Green Flare Gun`, `Yellow Flare Gun`) are not random filler: with `flare_gun_sanity` the pool holds exactly this many of each, and without it none. The `Rainbow Flare Gun` is always in the pool, this many times (0 leaves it out).
+    # - Backpacks, belts and gourd cartons are set apart: `backpacks_in_pool` and the like.
+    # Unchanged.
+    Binoculars: 3
+    Blue Flare Gun: 1
+    Compass: 3
+    Flare Gun: 1
+    Folding Map: 2
+    Green Flare Gun: 1
+    Lamp: 2
+    Laser: 3
+    Megaphone: 3
+    Radio: 3
+    Rainbow Flare Gun: 1
+    Scanner: 3
+    Torch: 3
+    Walkie-Talkie: 8
+    Yellow Flare Gun: 1
+  ####################
+  # Colors and Names #
+  ####################
+  random_colors:
+    # The island's buoys (their body, halo and light) and flare guns (and their shots) take colors drawn for the seed, between five and ten of them, the same on every player's screen. It paints objects of the map only: never the players, the gourds or the keys. Off: the game's own colors. The Rainbow Flare Gun, whose shots run through every color, is not affected by it.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  gourd_name:
+    # Renames the gourds for the run (24 characters max), everywhere: clients, hints, spoiler, overlay. Letters, digits and spaces, with ' - _ . , ! ? & + : ; ( ) @; anything else is dropped. All Big Walk slots must use the same name, and it can't be another item's or group's name; otherwise it stays "Gourd".
+    Baby: 33
+    Boid: 67
+  #####################
+  # Traps and Bonuses #
+  #####################
+  trap_fill_percentage:
+    # Percentage of filler items replaced by traps. A trap hits every player of the session, for `trap_duration` seconds when it lasts. Which traps, and how often each: `trap_weights`.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Using the Jack5 The Witness trap percent.
+    random-range-50-80: 50
+  trap_weights:
+    # How often each trap comes, against the others. 0 takes a trap out of the pool.
+    # - Big Drop: everyone drops what they hold.
+    # - Big Throw (hard): everyone throws what they hold, after a five-second wind-up.
+    # - Big Trip (hard): everyone is sent somewhere else on the map, each to a different place.
+    # - Big Meeting (hard): everyone is sent next to one player drawn at random.
+    # - Big Night: the clock fast-forwards to midnight, and runs on from there.
+    # - Big Sleep (hard): for `trap_duration` seconds, everyone falls asleep where they stand for two seconds, then wakes for five, again and again.
+    # - Big Load (hard): every pack worn comes off, and what it holds falls out.
+    # - Big Mask (hard): for `trap_duration` seconds, everyone wears the blindfold helmet of the blindfold puzzles, and nobody can take it off; a player already wearing a mask is spared.
+    # - Big Flare: a flare gun shot lands on every player, in the Archipelago colors. Each player can hide it on their own screen (Settings > Archipelago > Gentle effects).
+    # The weights are adjusted as below.
+    Big Drop: 10
+    Big Flare: 5 # Reduced frequency due to potential loudness and graphics problems.
+    Big Load: 10
+    Big Mask: 10
+    Big Meeting: 10
+    Big Night: 10
+    Big Sleep: 10
+    Big Throw: 10
+    Big Trip: 0 # Disabled due to being too similar to death link.
+  hard_traps:
+    # Lets the hard traps into the pool: those that cost time or progress (Big Throw, Big Trip, Big Meeting, Big Sleep, Big Load, Big Mask). Off keeps only the standard ones.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  bonus_fill_percentage:
+    # Percentage of filler items replaced by bonuses, a boost for every player. Which bonuses, and how often each: `bonus_weights`.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    25: 50
+  bonus_weights:
+    # How often each bonus comes, against the others. 0 takes a bonus out of the pool.
+    # - Big Speed: everyone walks and runs faster for `trap_duration` seconds.
+    # - Big Jump: everyone jumps higher for `trap_duration` seconds.
+    # - Big Day: the clock fast-forwards to noon, and runs on from there.
+    # Unchanged.
+    Big Day: 10
+    Big Jump: 10
+    Big Speed: 10
+  trap_duration:
+    # How long Big Speed, Big Jump, Big Sleep and Big Mask last, in seconds.
+    # You can define additional values between the minimum and maximum values. Minimum value is 10, maximum value is 120.
+    # Unchanged.
+    20: 50
+  traps_spare_the_gauntlet:
+    # Big Trip and Big Meeting leave alone the players inside the Silent Gauntlet, and Big Meeting never sends anyone into it.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  trap_link:
+    # TrapLink: a trap received in one game plays in every game that has it on (the "TrapLink" tag).
+    # With it on, every trap of this world's item pool that reaches you is also sent to the other games, and a trap sent by another game plays here: as the Big Walk trap of the same name when it is one, otherwise as the nearest one by its name (a freeze is Big Sleep, a bomb is Big Flare, ...), and as one drawn from the DeathLink roulette (`death_link_trap_weights`) when none comes near. Bonuses are never sent. A trap that comes from a DeathLink (`death_link_effect: roulette`) or from another game's TrapLink is not sent on, so none loops.
+    # Enabled for the hell of it.
+    'false': 0
+    'true': 50
+  #############
+  # DeathLink #
+  #############
+  death_link:
+    # DeathLink: a death in one game is a death in every game that has it on.
+    # - off: nothing sent, nothing received. The host can also switch DeathLink off for a session, and replace the amnesty, in the game's Settings > Archipelago, whatever the YAML says.
+    # - send: Big Walk sends one when something in `death_link_triggers` happens, and ignores those it receives.
+    # - receive: Big Walk plays `death_link_effect` when one arrives, and sends none.
+    # - both: both.
+    # All Death Link events are enabled.
+    'off': 0
+    send: 0
+    receive: 0
+    both: 50
+  death_link_triggers:
+    # What sends a DeathLink, with `death_link` on send or both.
+    # - puzzle_failed: a puzzle failed, as the game itself tells it: a wrong tile validated, buttons pressed out of order, a count gone wrong, a timer run out.
+    # - big_fall: a player falls far enough to land dazed. Not by default. A daze a received DeathLink causes (`death_link_effect: knockout`) sends nothing back.
+    # Unchanged.
+    - puzzle_failed
+  death_link_amnesty:
+    # How many triggers (failed puzzles, big falls) are forgiven before one sends a DeathLink: 0 sends on the first.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 10.
+    # No amnesty. If you fail a puzzle (which doesn't happen often), you death link.
+    0: 50
+  death_link_effect:
+    # What a DeathLink received does, with `death_link` on receive or both.
+    # - knockout: everyone drops what they hold, takes off their backpacks and belts (their contents fall out), and is dazed as after a big fall.
+    # - drop: everyone drops what they hold.
+    # - roulette: a trap drawn at random, by `death_link_trap_weights`.
+    # SPIN THE WHEEL!
+    drop: 0
+    roulette: 50
+    knockout: 0
+  death_link_trap_weights:
+    # The traps the DeathLink roulette draws from, and how often each, against the others; 0 leaves one out. Apart from `trap_weights`, which is the item pool's.
+    # The weights are adjusted below.
+    Big Drop: 0 # Not a significant enough trap for death link.
+    Big Flare: 0 # Not a significant enough trap for death link.
+    Big Load: 10
+    Big Mask: 10
+    Big Meeting: 0 # Not a significant enough trap for death link.
+    Big Night: 10
+    Big Sleep: 0 # Not a significant enough trap for death link.
+    Big Throw: 10
+    Big Trip: 5 # Reduced frequency due to how extreme the punishment is.
+  death_link_roulette_hard_traps:
+    # Lets the roulette draw the hard traps (Big Throw, Big Trip, Big Meeting, Big Sleep, Big Load, Big Mask). Off keeps them out of it.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  death_link_trap_on_send:
+    # With `death_link` on send or both: when Big Walk sends a DeathLink, its own players take the effect of a death too (`death_link_effect`, on `death_link_target`). Normally a game only receives the link of the others' deaths; this makes the one who dies pay for it as well. Nothing happens with `death_link` on receive or off: nothing is sent.
+    # MAXIMUM PAIN!
+    'false': 0
+    'true': 50
+  death_link_target:
+    # Who a DeathLink received hits, with `death_link` on receive or both.
+    # - everyone: every player of the session.
+    # - one_player: one player only, the one hit the fewest times so far this session (ties at random), as received items go to the player given the fewest.
+    # With `death_link_effect: roulette`, the traps that need several players or hit the whole session are left out of the draw, whatever `death_link_trap_weights` says: Big Meeting (it gathers everyone around one player) and Big Night (the clock is the same for everyone). The other traps play on the one player: Big Drop, Big Throw, Big Trip, Big Sleep, Big Load, Big Mask and Big Flare.
+    # Don't torture everybody all the time.
+    everyone: 0
+    one_player: 50
   #######
   # QoL #
   #######
@@ -149,6 +409,21 @@ Big Walk:
     # Unchanged.
     'off': 50
     from_start: 0
+  hint_discovered_key_locations:
+    # When a tower is reached (its opening button pressed), hint what sits at its key cuts and its key deposit, so a player who walks up to a tower learns what is waiting there. Free, like the hints at the start.
+    # Enabled, so we don't waste our time at towers that don't matter.
+    'false': 0
+    'true': 50
+  hint_discovered_deposit_boxes:
+    # With Tower Mode in_order or by_item: when a tower is reached, hint the gourd deposit checks that sit in its monument (the gourds placed there, counted from the towers before it). Free, like the hints at the start. Without a tower order the deposits belong to no tower, and nothing is hinted.
+    # Enabled, so we don't waste our time at towers that don't matter.
+    'false': 0
+    'true': 50
+  tower_sanity:
+    # A check for reaching each of the seven towers: the Red, Green, Blue, Yellow and Black ones when the tower's opening button is pressed (the two buttons at the top of the Black Tower held together), the drawbridge and the Green Dome when a player gets there.
+    # Unchanged.
+    'false': 0
+    'true': 50
   teleport_buttons:
     # Buttons in the hub that teleport you to the Red, Green, Blue, Yellow and Black towers and the Silent Gauntlet.
     # - off: none.
@@ -178,72 +453,26 @@ Big Walk:
   ##############
   # Puzzle QoL #
   ##############
-  cabin_fever_time:
-    # The wait of the Cabin Fever puzzle (5 minutes in the game). Mod only; it changes no logic.
-    # - vanilla: the game's own wait.
-    # - reduced: down to `cabin_fever_seconds_min`, never longer than the game's.
-    # - random_between: a time between `cabin_fever_seconds_min` and `cabin_fever_seconds_max`, drawn once when the world is made, so it is the same for every player.
-    # - fixed: exactly `cabin_fever_seconds` seconds, even longer than the game's.
-    # Set to `random_between` for maximum variety.
-    vanilla: 0
-    reduced: 0
-    random_between: 50
-    fixed: 0
-  cabin_fever_seconds_min:
-    # The shortest wait of the Cabin Fever puzzle, in seconds: what `reduced` brings it down to, and the low end of `random_between`.
-    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 300.
-    # A totally random number of seconds, even as low as 1 second.
-    1: 50
-  cabin_fever_seconds_max:
-    # The longest wait of the Cabin Fever puzzle, in seconds: the high end of `random_between`.
-    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3600.
-    # A totally random number of seconds, up to 10 minutes.
-    600: 50
   cabin_fever_seconds:
-    # The wait of the Cabin Fever puzzle, in seconds, when it is `fixed`.
+    # The wait of the Cabin Fever puzzle, in seconds; 300 (5 minutes) is the game's own. Mod only; it changes no logic. For a wait drawn once per seed, Archipelago's own `random-range-60-300`.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3600.
-    # Unchanged.
-    120: 50
+    # Set to anywhere between 1 second and 10 minutes.
+    random-range-1-600: 50
   cabin_fever_help:
     # A hidden button in the Cabin Fever room that takes ten seconds off the wait each time it is pressed. Mod only.
     # Unchanged.
     'false': 50
     'true': 0
-  cabin_fever_long_time:
-    # The wait of the Cabin Fever Long puzzle (30 minutes in the game). Mod only; it changes no logic.
-    # - vanilla: the game's own wait.
-    # - reduced: down to `cabin_fever_long_seconds_min`, never longer than the game's.
-    # - random_between: a time between `cabin_fever_long_seconds_min` and `cabin_fever_long_seconds_max`, drawn once when the world is made, so it is the same for every player.
-    # - fixed: exactly `cabin_fever_long_seconds` seconds, even longer than the game's.
-    # Set to `random_between` for maximum variety.
-    vanilla: 0
-    reduced: 0
-    random_between: 50
-    fixed: 0
-  cabin_fever_long_seconds_min:
-    # The shortest wait of the Cabin Fever Long puzzle, in seconds: what `reduced` brings it down to, and the low end of `random_between`.
-    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 1800.
-    # A totally random number of seconds, as low as 10 minutes.
-    600: 50
-  cabin_fever_long_seconds_max:
-    # The longest wait of the Cabin Fever Long puzzle, in seconds: the high end of `random_between`.
-    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3600.
-    # A totally random number of seconds, up to 1 hour.
-    3600: 50
   cabin_fever_long_seconds:
-    # The wait of the Cabin Fever Long puzzle, in seconds, when it is `fixed`.
+    # The wait of the Cabin Fever Long puzzle, in seconds; 1800 (30 minutes) is the game's own. Mod only; it changes no logic. For a wait drawn once per seed, `random-range-300-1800`.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3600.
-    # Unchanged.
-    600: 50
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-0-3600: 0 # random value between 0 and 3600
+    # Set to anywhere between 10 minutes and 1 hour.
+    random-range-600-3600: 50
   cabin_fever_long_help:
     # A hidden button in the Cabin Fever Long room that takes ten seconds off the wait each time it is pressed. Mod only.
-    # Considering that this is an exceptionally long wait, it is probably best to have this enabled.
-    'false': 0
-    'true': 50
+    # Unchanged. WE WILL WAIT THE WHOLE AMOUNT OF TIME AND NOTHING CAN BE DONE ABOUT THIS.
+    'false': 50
+    'true': 0
   tile_thief:
     # A button beside the Tile Thief puzzle that makes peg tiles in front of it.
     # - vanilla: no button.
