@@ -7,7 +7,7 @@ game: R.E.P.O
 requires:
   version: 0.6.7
   game:
-    R.E.P.O: 0.4.1
+    R.E.P.O: 0.4.4
 R.E.P.O:
   ################
   # Game Options #
@@ -50,8 +50,8 @@ R.E.P.O:
   shop_stock:
     # Choose how many Archipelago Shop Items are unlocked with each Progressive Shop Stock.
     # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 50.
-    # Unchanged from the base configuration.
-    10: 50
+    # Reduced from 10 to permit regular upgrades to appear in the shop.
+    4: 50
   shop_upgrade_total:
     # Choose how many Archipelago Items show up in the Upgrades section of the Shop
     # You can define additional values between the minimum and maximum values. Minimum value is 20, maximum value is 100.
@@ -82,7 +82,7 @@ R.E.P.O:
     Extra Monster Trap: 8
     Health Upgrade: 40
     Monster Lure Trap: 15
-    Progressive Moon Phase Trap: 3
+    Progressive Moon Phase Trap: 2
     Range Upgrade: 40
     Small Health Pack: 20
     Sprint Speed Upgrade: 30
@@ -91,6 +91,11 @@ R.E.P.O:
     Tumble Climb Upgrade: 20
     Tumble Launch Upgrade: 20
     Tumble Wings Upgrade: 20
+  audit_trap_money_lost:
+    # The percentage of the player's money that an Audit Trap will take when triggered.
+    # You can define additional values between the minimum and maximum values. Minimum value is 5, maximum value is 100.
+    # Reduced from 33% due to how annoying this trap is.
+    25: 50
   death_link:
     # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
     # Unchanged from the base configuration. Dying in R.E.P.O. is literal hell.
