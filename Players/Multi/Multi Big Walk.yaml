@@ -7,7 +7,7 @@ game: Big Walk
 requires:
   version: 0.6.7
   game:
-    Big Walk: 0.5.0
+    Big Walk: 0.7.0
 Big Walk:
   ################
   # Game Options #
@@ -37,6 +37,9 @@ Big Walk:
     # - big_keys: place a number of big keys in their plinths, the drawbridge's included (see Keys Required).
     # - big_radio: switch on a number of radio stations (see Radio Stations Required; needs Radio Sanity).
     # - big_towers: complete a number of towers (see Towers Required; needs Tower Mode in_order or by_item).
+    # - big_lights: switch on a share of the island's lights, each at least once (see Lights Required). Without Light Sanity the lamps count, with no check of their own.
+    # - big_objects: pick up a share of the island's objects (see Objects Required; needs Object Sanity).
+    # - big_body: get back a share of the body's abilities (see Body Required; needs Lock Abilities).
     # - big_climb: stand on the highest point of the island.
     # - big_fiesta (also read as big_club): the party on the beach, a radio plugged into the big speakers with a music playing. Needs a Radio, and with Shuffle Radio Music one of the stations, which become progression.
     # The endings (big_wall, big_goodbye, big_game) are not listed here: they are the Goal.
@@ -48,11 +51,16 @@ Big Walk:
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 6.
     # Pick one of the available random objectives.
     1: 50
+  everyone_gathers:
+    # Big Climb and Big Fiesta count their ten seconds only while every player is there: at the island's highest point for the climb, near the big speakers on the beach for the party (the default). Off: one player is enough.
+    # Everyone gathering together to achieve the objective is a hard requirement.
+    'false': 0
+    'true': 50
   lock_endings_until_objectives:
-    # With Objectives: the ending's entry point (the chapel's bell, the Gauntlet's bell door, the secret room's printer) stays shut on every screen until the other objectives are done, so an ending, which plays once per save, is never played too early. Off: nothing is shut, and the ending can be played in any order.
+    # With Objectives: the ending's entry point (the chapel's bell, the Gauntlet's bell door, the secret room's printer) stays shut on every screen until the other objectives are done, so an ending, which plays once per save, is never played too early. On by default (0.6). Off: nothing is shut, and the ending can be played in any order.
     # Unchanged.
-    'false': 50
-    'true': 0
+    'false': 0
+    'true': 50
   gourds_required:
     # Only relevant if the Goal, or the Objectives, hold "big_collection".
     # How many gourds must be placed in the towers' slots to win.
@@ -77,11 +85,24 @@ Big Walk:
     # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 7.
     # Unchanged.
     7: 50
-  everyone_gathers:
-    # Big Climb and Big Fiesta count their ten seconds only while every player is there: at the island's highest point for the climb, near the big speakers on the beach for the party (the default). Off: one player is enough.
-    # Everyone gathering together to achieve the objective is a hard requirement.
-    'false': 0
-    'true': 50
+  lights_required:
+    # Only relevant if the Objectives hold "big_lights".
+    # The share of the island's lights (those Light Sanity counts, or the lamps without it) that must have been switched on at least once, in percent.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Unchanged.
+    50: 50
+  objects_required:
+    # Only relevant if the Objectives hold "big_objects".
+    # The share of Object Sanity's checks (each object with every, each kind with first_pickup) that must be sent, in percent.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Unchanged.
+    50: 50
+  body_required:
+    # Only relevant if the Objectives hold "big_body".
+    # The share of the ability items (Legs, Seat, the arms, Throwing, Carrying; not Running) that must have been received, in percent.
+    # You can define additional values between the minimum and maximum values. Minimum value is 1, maximum value is 100.
+    # Unchanged.
+    100: 50
   ##########
   # Towers #
   ##########
@@ -140,6 +161,77 @@ Big Walk:
     # Unchanged.
     'false': 0
     'true': 50
+  tower_sanity:
+    # A check for reaching each of the seven towers: the Red, Green, Blue, Yellow and Black ones when the tower's opening button is pressed (the two buttons at the top of the Black Tower held together), the drawbridge and the Green Dome when a player gets there.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  monument_sanity:
+    # A check for each monument filled to its last slot: the Drawbridge's, the five towers' and the Green Dome's. Linear Towers puts each tower's key there. On by default.
+    # Disabled in order to prevent potential failures in logic.
+    'false': 50
+    'true': 0
+  cut_key_sanity:
+    # The 25 cuts of the big keys.
+    # - on: each cut is a check.
+    # - junk: each cut is a check that holds only filler.
+    # - off: no check for the cuts.
+    # Unchanged.
+    'on': 50
+    junk: 0
+    'off': 0
+  object_sanity:
+    # The island's gadgets (walkie-talkies, radios, megaphones, binoculars, lasers, torches, scanners, clocks, the compass, the map, the cowbells) stay on the map, and picking them up sends checks.
+    # - off: no check, and the gadgets the pool holds are taken off the map as before.
+    # - first_pickup: the first one of each kind picked up (16 checks by default); the objects stay.
+    # - every: each one, the first time it is picked up (144 checks by default); it then leaves the map, like a pack.
+    # Changed to `first_pickup`.
+    'off': 0
+    first_pickup: 50
+    every: 0
+  object_sanity_kinds:
+    # Which kinds of gadget Object Sanity counts. A kind left out is no check, and it leaves the island while Object Sanity is on.
+    # Kinds: walkie_talkie, radio, megaphone, binoculars, laser, torch, scanner, clock, compass, map, cowbell, lamp, paintbrush. The paintbrushes are left out by default, and they never leave the island (the Salon needs them). A lamp left out stays where it is (puzzles use them). With Light Sanity on, the lamps are never counted here: switching them on is their check.
+    # Unchanged.
+    - map
+    - cowbell
+    - torch
+    - clock
+    - walkie_talkie
+    - laser
+    - lamp
+    - radio
+    - megaphone
+    - scanner
+    - compass
+    - binoculars
+  object_sanity_items:
+    # What Object Sanity's checks may hold.
+    # - any: anything, from any world.
+    # - local: only this world's own items, of those nothing needs (filler, traps, useful ones).
+    # - junk: only filler, never anything a world needs.
+    # Unchanged.
+    any: 50
+    local: 0
+    junk: 0
+  light_sanity:
+    # A check the first time each light of the island is switched on. The puzzles' own lights are not counted.
+    # - off: no check.
+    # - lamps: the lamps (the ones Object Sanity knows, on their pedestals, in the towers, in the tutorial).
+    # - lamps_and_switches: the lamps, and the wall switches of the Doof Chamber, the salons, the tutorial, the train and its stops.
+    # Set to `lamps`. Tracking switches as well would make it extremely difficult to complete this world.
+    'off': 0
+    lamps: 50
+    lamps_and_switches: 0
+  light_sanity_items:
+    # What Light Sanity's checks may hold.
+    # - any: anything, from any world.
+    # - local: only this world's own items, of those nothing needs (filler, traps, useful ones).
+    # - junk: only filler, never anything a world needs.
+    # Although it may be annoying to hunt down a specific light, the names are not difficult to understand and the Map Room will help out significantly.
+    any: 50
+    local: 0
+    junk: 0
   #########
   # Logic #
   #########
@@ -150,11 +242,11 @@ Big Walk:
     # Unchanged.
     'false': 50
     'true': 0
-  open_black_tower:
-    # The Black Tower's door is open from the start, instead of waiting for the five monuments.
+  start_with_map_room_open:
+    # If on, you start with the Map Room open instead of finding it in the multiworld. The Red Funnel Tower Key Deposit stays a check either way.
     # Unchanged.
-    'false': 0
-    'true': 50
+    'false': 50
+    'true': 0
   start_with_arch_doors_open:
     # The hub's arch doors open from the start; the others are items to find.
     # - First Arch Door: closed, it makes a real early game.
@@ -169,6 +261,37 @@ Big Walk:
     # Unchanged.
     'false': 0
     'true': 50
+  open_black_tower:
+    # The Black Tower's door is open from the start, instead of waiting for the five monuments.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  lock_puzzle_needs:
+    # What puzzles are built from (buttons, panels, speakers, timers...) are items to find first.
+    # The parts missing are hidden in the world; Start With Puzzle Needs lists those you already have.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  start_with_puzzle_needs:
+    # Which puzzle needs you already have when Lock Puzzle Needs is on. Every need not listed is an item to find.
+    # Needs: buttons, sync_buttons, icon_panels, drawing_panels, pose_panels, sound_panels, point_panels, speakers, lights, teapots, timed_tomato, golf_ball, big_head, ink_viewer, counter, coordinates_computer, eggs.
+    # Unchanged.
+    []
+  start_with_random_puzzle_need:
+    # With Lock Puzzle Needs on, start with one random need, so that at least one of the tutorial's puzzles is doable from the first minute. Nothing is added if Start With Puzzle Needs already allows one.
+    # The tutorial's puzzles need buttons or synchronized buttons, so it is one of those two. Turning this off is only possible when Start With Puzzle Needs lists one of them: a seed with nothing to do at the start cannot be generated.
+    # Unchanged.
+    'false': 0
+    'true': 50
+  include_big_game_puzzles:
+    # The seven purple gourds' puzzles, past the chairlift.
+    # - from_start: checks, and shown on the map from the start.
+    # - when_unlocked: checks, but as in the game: not on the map, and in logic only once the ending is reached.
+    # - disabled: not checks at all.
+    # Unchanged.
+    from_start: 50
+    when_unlocked: 0
+    disabled: 0
   gauntlet_mode:
     # What the Silent Gauntlet is, behind the Big Wall.
     # - vanilla: nothing changes, and it has no checks. Holding the stairway buttons together opens the way up, as in the game.
@@ -203,23 +326,50 @@ Big Walk:
     # Unchanged.
     'false': 0
     'true': 50
-  lock_puzzle_needs:
-    # What puzzles are built from (buttons, panels, speakers, timers...) are items to find first.
-    # The parts missing are hidden in the world; Start With Puzzle Needs lists those you already have.
+  ######################
+  # Vanilla Behaviours #
+  ######################
+  linear_keys:
+    # If on, a big key placed in its tower opens what it opens in the game (the drawbridge, the Map Room, the chairlift, the train, the tunnels, the Big Wall Door, the Spawn Secret Door) instead of that being an item to find. The key deposits stay checks; each one holds its own door.
     # Unchanged.
+    'false': 50
+    'true': 0
+  linear_arch_doors:
+    # If on, the hub's three arch doors are as in the game: no items, each opened by its push button on its far side (the First Arch Door's outside the hub; the Left one coming from the train or the Green Dome, the Right one from the tunnels). The way out of the starting zone is then the Drawbridge. Start With Arch Doors Open and Require Arch Doors have nothing to do.
+    # Unchanged.
+    'false': 50
+    'true': 0
+  linear_towers:
+    # If on, filling a tower's monument gives its key, as in the game, instead of the key being an item to find. The key still arrives as an item, beside the player, the moment the monument is full. The "Monument Full" checks exist with it, Monument Sanity or not.
+    # Unlike the other linear settings, this one feels the most useful, because it would be annoying to go hunting for a particular colour key cutter.
     'false': 0
     'true': 50
-  start_with_puzzle_needs:
-    # Which puzzle needs you already have when Lock Puzzle Needs is on. Every need not listed is an item to find.
-    # Needs: buttons, sync_buttons, icon_panels, drawing_panels, pose_panels, sound_panels, point_panels, speakers, lights, teapots, timed_tomato, golf_ball, big_head, ink_viewer, counter, coordinates_computer, eggs.
+  linear_puzzles:
+    # If on, every puzzle holds a gourd, as in the game, instead of anything from the multiworld (not the seven purple ones past the chairlift, which stay checks like any other). The gourd still arrives as an item, beside the player.
     # Unchanged.
+    'false': 50
+    'true': 0
+  ####################
+  # Movement Locking #
+  ####################
+  lock_abilities:
+    # The players' bodies behind items, received by every player at once. Legs: jumping and crouching, needed to leave the starting zone. Seat: sitting on a chair or on the floor. A Progressive Arm: raising it, then pointing, then extending it sideways. The gesture puzzles ask for them. Throwing and Carrying (another player) are items too, and Running with Lock Running.
+    # - disabled: every ability from the start.
+    # - handed: three Progressive Left Arm and three Progressive Right Arm.
+    # - ambidextrous: three Progressive Arms, both arms at once.
+    # Enabled for maximum chaos, but `ambidextrous` because we already have enough experience with how annoying it is to get things for only one side of the body in R.E.P.O.
+    disabled: 0
+    handed: 0
+    ambidextrous: 50
+  start_with_abilities:
+    # Which abilities you already have when Lock Abilities is on: their items are handed over at once, and leave the pool. Every ability not listed is an item to find.
+    # Abilities: legs, seat, arms, throwing, carrying. Running has its own option, Lock Running.
     []
-  start_with_random_puzzle_need:
-    # With Lock Puzzle Needs on, start with one random need, so that at least one of the tutorial's puzzles is doable from the first minute. Nothing is added if Start With Puzzle Needs already allows one.
-    # The tutorial's puzzles need buttons or synchronized buttons, so it is one of those two. Turning this off is only possible when Start With Puzzle Needs lists one of them: a seed with nothing to do at the start cannot be generated.
+  lock_running:
+    # With Lock Abilities on, running is an item too (Running). No place asks for it: the island is only slower to cross until it arrives.
     # Unchanged.
-    'false': 0
-    'true': 50
+    'false': 50
+    'true': 0
   #############
   # Item Pool #
   #############
@@ -270,8 +420,8 @@ Big Walk:
     'true': 50
   gourd_name:
     # Renames the gourds for the run (24 characters max), everywhere: clients, hints, spoiler, overlay. Letters, digits and spaces, with ' - _ . , ! ? & + : ; ( ) @; anything else is dropped. All Big Walk slots must use the same name, and it can't be another item's or group's name; otherwise it stays "Gourd".
-    Baby: 33
-    Boid: 67
+    # Set to 'Boid' because that's what we call them.
+    Boid: 50
   #####################
   # Traps and Bonuses #
   #####################
@@ -292,14 +442,29 @@ Big Walk:
     # - Big Mask (hard): for `trap_duration` seconds, everyone wears the blindfold helmet of the blindfold puzzles, and nobody can take it off; a player already wearing a mask is spared.
     # - Big Flare: a flare gun shot lands on every player, in the Archipelago colors. Each player can hide it on their own screen (Settings > Archipelago > Gentle effects).
     # The weights are adjusted as below.
+    Big Air: 0 # Temporarily disabled, no description in player file.
+    Big Arms: 0 # Temporarily disabled, no description in player file.
+    Big Brain: 0 # Temporarily disabled, no description in player file.
+    Big Break: 0 # Temporarily disabled, no description in player file.
+    Big Brother: 0 # Temporarily disabled, no description in player file.
     Big Drop: 10
     Big Flare: 5 # Reduced frequency due to potential loudness and graphics problems.
+    Big Ghost: 0 # Temporarily disabled, no description in player file.
+    Big Goggles: 0 # Temporarily disabled, no description in player file.
+    Big Head: 0 # Temporarily disabled, no description in player file.
     Big Load: 10
     Big Mask: 10
     Big Meeting: 10
     Big Night: 10
+    Big Paint: 0 # Temporarily disabled, no description in player file.
+    Big Pixels: 0 # Temporarily disabled, no description in player file.
+    Big Reset: 0 # Temporarily disabled, no description in player file.
+    Big Silence: 0 # Temporarily disabled, no description in player file.
     Big Sleep: 10
+    Big Slide: 0 # Temporarily disabled, no description in player file.
+    Big Smell: 0 # Temporarily disabled, no description in player file.
     Big Throw: 10
+    Big Time: 0 # Temporarily disabled, no description in player file.
     Big Trip: 0 # Disabled due to being too similar to death link.
   hard_traps:
     # Lets the hard traps into the pool: those that cost time or progress (Big Throw, Big Trip, Big Meeting, Big Sleep, Big Load, Big Mask). Off keeps only the standard ones.
@@ -372,14 +537,29 @@ Big Walk:
   death_link_trap_weights:
     # The traps the DeathLink roulette draws from, and how often each, against the others; 0 leaves one out. Apart from `trap_weights`, which is the item pool's.
     # The weights are adjusted below.
+    Big Air: 0 # Temporarily disabled, no description in player file.
+    Big Arms: 0 # Temporarily disabled, no description in player file.
+    Big Brain: 0 # Temporarily disabled, no description in player file.
+    Big Break: 0 # Temporarily disabled, no description in player file.
+    Big Brother: 0 # Temporarily disabled, no description in player file.
     Big Drop: 0 # Not a significant enough trap for death link.
     Big Flare: 0 # Not a significant enough trap for death link.
+    Big Ghost: 0 # Temporarily disabled, no description in player file.
+    Big Goggles: 0 # Temporarily disabled, no description in player file.
+    Big Head: 0 # Temporarily disabled, no description in player file.
     Big Load: 10
     Big Mask: 10
     Big Meeting: 0 # Not a significant enough trap for death link.
     Big Night: 10
+    Big Paint: 0 # Temporarily disabled, no description in player file.
+    Big Pixels: 0 # Temporarily disabled, no description in player file.
+    Big Reset: 0 # Temporarily disabled, no description in player file.
+    Big Silence: 0 # Temporarily disabled, no description in player file.
     Big Sleep: 0 # Not a significant enough trap for death link.
+    Big Slide: 0 # Temporarily disabled, no description in player file.
+    Big Smell: 0 # Temporarily disabled, no description in player file.
     Big Throw: 10
+    Big Time: 0 # Temporarily disabled, no description in player file.
     Big Trip: 5 # Reduced frequency due to how extreme the punishment is.
   death_link_roulette_hard_traps:
     # Lets the roulette draw the hard traps (Big Throw, Big Trip, Big Meeting, Big Sleep, Big Load, Big Mask). Off keeps them out of it.
@@ -419,11 +599,25 @@ Big Walk:
     # Enabled, so we don't waste our time at towers that don't matter.
     'false': 0
     'true': 50
-  tower_sanity:
-    # A check for reaching each of the seven towers: the Red, Green, Blue, Yellow and Black ones when the tower's opening button is pressed (the two buttons at the top of the Black Tower held together), the drawbridge and the Green Dome when a player gets there.
+  hint_board:
+    # The centre sign of the hub's notice board shows your hint points and the cost of a hint, and lists the hints you asked for that are not found yet. Write an item's name on it to ask for a hint (it costs points, as `!hint`). Mod only.
     # Unchanged.
     'false': 0
     'true': 50
+  tracker_board:
+    # The right sign of the hub's notice board counts the checks you can do now, in logic, against those not done yet, and names a few of them: those a hint points to first, then those that hold a progression item. Mod only.
+    # Unchanged.
+    'false': 50
+    'true': 0
+  map_tracker:
+    # The big map of the Map Room tracks the seed: every check stands on it (puzzles, objects, lamps, switches, fireworks, radio stations, towers...), a small copy of its object on a pin, and leaves it once done. Mod only.
+    # - off: the game's map.
+    # - in_logic: only the checks you can do now.
+    # - all: every check not done, those out of logic greyed.
+    # Set to `in_logic`, because trying to navigate by name will be too much of a challenge.
+    'off': 0
+    in_logic: 50
+    all: 0
   teleport_buttons:
     # Buttons in the hub that teleport you to the Red, Green, Blue, Yellow and Black towers and the Silent Gauntlet.
     # - off: none.
@@ -453,6 +647,11 @@ Big Walk:
   ##############
   # Puzzle QoL #
   ##############
+  fast_golf:
+    # The golf ball (the cannonball of the golf puzzles) is no longer too heavy, and is carried like any object.
+    # This is a needed convenience option considering one of the golf puzzles is extremely long.
+    'false': 0
+    'true': 50
   cabin_fever_seconds:
     # The wait of the Cabin Fever puzzle, in seconds; 300 (5 minutes) is the game's own. Mod only; it changes no logic. For a wait drawn once per seed, Archipelago's own `random-range-60-300`.
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3600.
@@ -460,6 +659,11 @@ Big Walk:
     random-range-1-600: 50
   cabin_fever_help:
     # A hidden button in the Cabin Fever room that takes ten seconds off the wait each time it is pressed. Mod only.
+    # Unchanged.
+    'false': 50
+    'true': 0
+  cabin_fever_hide_timer:
+    # The Cabin Fever room's dial hides the time left: "??:??" while the wait runs, with now and then a digit flashing. The game's sound still plays over the last ten seconds. Mod only.
     # Unchanged.
     'false': 50
     'true': 0
@@ -471,6 +675,11 @@ Big Walk:
   cabin_fever_long_help:
     # A hidden button in the Cabin Fever Long room that takes ten seconds off the wait each time it is pressed. Mod only.
     # Unchanged. WE WILL WAIT THE WHOLE AMOUNT OF TIME AND NOTHING CAN BE DONE ABOUT THIS.
+    'false': 50
+    'true': 0
+  cabin_fever_long_hide_timer:
+    # The Cabin Fever Long room's dial hides the time left: "??:??" while the wait runs, with now and then a digit flashing. The game's sound still plays over the last ten seconds. Mod only.
+    # Unchanged.
     'false': 50
     'true': 0
   tile_thief:
@@ -494,13 +703,11 @@ Big Walk:
     # The Arch Doors and the Map Room are critical areas to gain access to, because they make traversing the world of Big Walk much faster, therefore, they have been added here.
     - Arch Doors
     - Map Room
+    # Abilities are critical progression items needed to communicate, so they should be hinted immediately as well. The same should not apply for 'Puzzle Needs'; although those are even more critical, their hints should be earnt, not given out for free.
+    - Abilities
   start_location_hints: []
   exclude_locations: []
   priority_locations: []
   item_links: []
-  plando_items:
-    # Now that whatever is behind the Arch Doors is considered out of logic as long as the doors are not open, they don't need to be in early locations, but the Map room definitely does.
-    - items:
-        Map Room: true
-      location: early_locations
-      force: false
+  # 'Map Room' used to be here, but it resulted in it being accessible from picking up a tutorial item, which makes it redundant.
+  plando_items: []
