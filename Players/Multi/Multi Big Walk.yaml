@@ -7,7 +7,7 @@ game: Big Walk
 requires:
   version: 0.6.7
   game:
-    Big Walk: 0.7.0
+    Big Walk: 1.0.1
 Big Walk:
   ################
   # Game Options #
@@ -167,10 +167,10 @@ Big Walk:
     'false': 0
     'true': 50
   monument_sanity:
-    # A check for each monument filled to its last slot: the Drawbridge's, the five towers' and the Green Dome's. Linear Towers puts each tower's key there. On by default.
-    # Disabled in order to prevent potential failures in logic.
-    'false': 50
-    'true': 0
+    # A check for each monument filled to its last slot: the Drawbridge's, the five towers' and the Green Dome's. Linear Towers all_deposit_boxes puts each tower's key there; with one_deposit_box the key has a check of its own (the "Monument Key"), and these stay free for anything. On by default.
+    # Enabled because `linear_towers` is also enabled.
+    'false': 0
+    'true': 50
   cut_key_sanity:
     # The 25 cuts of the big keys.
     # - on: each cut is a check.
@@ -214,6 +214,11 @@ Big Walk:
     any: 50
     local: 0
     junk: 0
+  object_sanity_junk_percentage:
+    # With `object_sanity_items: any`, the share of Object Sanity's checks, drawn at random, that hold only junk (filler or a trap). The rest may hold anything. 100 is `junk`; 0 lets every check hold anything.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged.
+    75: 50
   light_sanity:
     # A check the first time each light of the island is switched on. The puzzles' own lights are not counted.
     # - off: no check.
@@ -232,6 +237,29 @@ Big Walk:
     any: 50
     local: 0
     junk: 0
+  light_sanity_junk_percentage:
+    # With `light_sanity_items: any`, the share of Light Sanity's checks, drawn at random, that hold only junk (filler or a trap). The rest may hold anything. 100 is `junk`; 0 lets every check hold anything.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged.
+    75: 50
+  zone_locks:
+    # The island's lamps and gadgets locked by zone, the zone of the nearest of the four coloured towers: 8 items, `Red Zone Lamps`, `Red Zone Gadgets` and so on for green, blue and yellow. Only with Object Sanity or Light Sanity on, for what they count.
+    # - Gadgets: a zone's gadgets are off the map until its item arrives.
+    # - Lamps and light switches: they stay usable, but they are out of logic until the item arrives (lighting one early still sends its check).
+    # The tutorial's, the Map Room's, the chairlift's, the tunnels' and the train's keep the lock they have.
+    # Unchanged.
+    'false': 50
+    'true': 0
+  start_with_zone_locks:
+    # With Zone Locks on, the zones you already have.
+    # Keys: red_lamps, red_gadgets, green_lamps, green_gadgets, blue_lamps, blue_gadgets, yellow_lamps, yellow_gadgets.
+    # Unchanged.
+    []
+  zone_locks_local:
+    # With Zone Locks on, keep the zone items in your own world.
+    # Enabled.
+    'false': 0
+    'true': 50
   #########
   # Logic #
   #########
@@ -340,10 +368,14 @@ Big Walk:
     'false': 50
     'true': 0
   linear_towers:
-    # If on, filling a tower's monument gives its key, as in the game, instead of the key being an item to find. The key still arrives as an item, beside the player, the moment the monument is full. The "Monument Full" checks exist with it, Monument Sanity or not.
-    # Unlike the other linear settings, this one feels the most useful, because it would be annoying to go hunting for a particular colour key cutter.
+    # Whether a tower's monument gives its key, as in the game, instead of the key being an item to find. The key still arrives as an item, beside the player.
+    # - off: the keys are items of the multiworld.
+    # - all_deposit_boxes: the key comes the moment the monument is full. The "Monument Full" checks exist with it, Monument Sanity or not.
+    # - one_deposit_box: the key comes once the monument holds a number of gourds drawn for each tower, between one and full (the "Monument Key" location).
+    # Unlike the other linear settings, this one feels the most useful, because it would be annoying to go hunting for a particular colour key cutter. Set to `one_deposit_box` to rely on the element of surprise.
     'false': 0
-    'true': 50
+    all_deposit_boxes: 0
+    one_deposit_box: 50
   linear_puzzles:
     # If on, every puzzle holds a gourd, as in the game, instead of anything from the multiworld (not the seven purple ones past the chairlift, which stay checks like any other). The gourd still arrives as an item, beside the player.
     # Unchanged.
@@ -422,6 +454,76 @@ Big Walk:
     # Renames the gourds for the run (24 characters max), everywhere: clients, hints, spoiler, overlay. Letters, digits and spaces, with ' - _ . , ! ? & + : ; ( ) @; anything else is dropped. All Big Walk slots must use the same name, and it can't be another item's or group's name; otherwise it stays "Gourd".
     # Set to 'Boid' because that's what we call them.
     Boid: 50
+  ################
+  # Custom Tiles #
+  ################
+  custom_tiles:
+    # The nine basic peg tiles (the triangle, the asterisk, the G...) drawn for the seed among the game's own and the community's drawings (CC BY 4.0, by Jack5, Don Chalant, GameFraek and Kensufox). A tile only changes what it shows: every puzzle, every display and every player's screen follows, and the puzzles ask for the same tiles.
+    # - off: the game's tiles.
+    # - matching_games: the drawings of the games in the multiworld (Celeste, Zelda, Minecraft...) and Archipelago's own (pelly, in every multiworld) join the game's tiles, and nine are drawn among them.
+    # - matching_first: the same drawings, every one shown first (nine drawn among them if more); the game's tiles take the places left.
+    # - all: nine drawn among every tile.
+    # - custom_only: nine drawn among the drawings alone: none of the game's basic tiles stays.
+    # How often each one is drawn: Custom Tile Weights; tiles you want for sure: Custom Tile Choices.
+    # `all` so my desired tiles appear and only those.
+    'off': 0
+    matching_games: 0
+    all: 50
+    custom_only: 0
+    matching_first: 0
+  custom_tile_choices:
+    # With Custom Tiles on, the tiles you want for sure, whatever the mode and the weights: nine at most (with more, nine are drawn among them). The rest is drawn as usual. Names: see Custom Tile Weights. For example [pokeball, heart, cat].
+    # Unchanged.
+    []
+  custom_tile_weights:
+    # With Custom Tiles, how often each tile is drawn, against the others. 0 leaves a tile out (a basic tile left out still shows where fewer than nine remain to draw from).
+    # All weights are 1 by default. They have been changed to 0 for tiles I do not like.
+    # The game's tiles: triangle, asterisk, diagonal_line, G, dot_and_line, vertical_ellipsis, S, spiral, e.
+    triangle: 0
+    asterisk: 1
+    diagonal_line: 0
+    G: 0
+    dot_and_line: 0
+    vertical_ellipsis: 1
+    S: 0
+    spiral: 1
+    e: 0
+    # The drawings: pelly, jack, strawberry, triforce, semibot, star, smile, five, arrow, sword_in_stone, lodo, stones_above_banner, pokeball, tree, creeper, sigil, chicken, planets, monster, joker, rune, knight, blob_with_legs, gear, hat, heart, tunic, portal, cat.
+    pelly: 1
+    jack: 1
+    strawberry: 0
+    triforce: 1
+    semibot: 1
+    star: 1
+    smile: 0
+    five: 1
+    arrow: 1
+    sword_in_stone: 0
+    lodo: 0
+    stones_above_banner: 0
+    pokeball: 1
+    tree: 1
+    creeper: 1
+    sigil: 1
+    chicken: 1
+    planets: 1
+    monster: 0
+    joker: 0
+    rune: 0
+    knight: 1
+    blob_with_legs: 0
+    gear: 1
+    hat: 1
+    heart: 1
+    tunic: 0
+    portal: 1
+    cat: 0
+  custom_drawings:
+    # The community's scribbles for the drawing panels (the Poet's and the Pontiff's puzzles): each one takes the place of one of the game's 45 scribbles, drawn for the seed. Like the custom tiles, only what a tile shows changes.
+    # None are in this version yet: until some are added, on and off play alike. How to add one: the README of the mod's mod/assets/tiles folder.
+    # Unchanged.
+    'false': 50
+    'true': 0
   #####################
   # Traps and Bonuses #
   #####################
@@ -432,39 +534,55 @@ Big Walk:
     random-range-50-80: 50
   trap_weights:
     # How often each trap comes, against the others. 0 takes a trap out of the pool.
+    # - Big Air (hard): a timed tomato ticks in every player's hands, then everyone shoots up into the air (stopping under a ceiling).
+    # - Big Arms: for `trap_duration` seconds, the players' hands grow (seen on the others).
+    # - Big Brain: for `trap_duration` seconds, the other players' heads are a lit lamp.
+    # - Big Break: a folding chair appears under every player, who is sat on it.
+    # - Big Brother: for `trap_duration` seconds, every player is small: body, view and collisions.
     # - Big Drop: everyone drops what they hold.
-    # - Big Throw (hard): everyone throws what they hold, after a five-second wind-up.
-    # - Big Trip (hard): everyone is sent somewhere else on the map, each to a different place.
-    # - Big Meeting (hard): everyone is sent next to one player drawn at random.
-    # - Big Night: the clock fast-forwards to midnight, and runs on from there.
-    # - Big Sleep (hard): for `trap_duration` seconds, everyone falls asleep where they stand for two seconds, then wakes for five, again and again.
+    # - Big Flare: a flare gun shot lands on every player, in the Archipelago colors. Each player can hide it on their own screen (Settings > Archipelago > Gentle effects).
+    # - Big Ghost: for `trap_duration` seconds, every player is white, as in the Silent Gauntlet (the color, not the silence).
+    # - Big Goggles: for `trap_duration` seconds, the field of view narrows.
+    # - Big Head: for `trap_duration` seconds, the other players' heads grow.
     # - Big Load (hard): every pack worn comes off, and what it holds falls out.
     # - Big Mask (hard): for `trap_duration` seconds, everyone wears the blindfold helmet of the blindfold puzzles, and nobody can take it off; a player already wearing a mask is spared.
-    # - Big Flare: a flare gun shot lands on every player, in the Archipelago colors. Each player can hide it on their own screen (Settings > Archipelago > Gentle effects).
+    # - Big Meeting (hard): everyone is sent next to one player drawn at random.
+    # - Big Night: the clock fast-forwards to midnight, and runs on from there.
+    # - Big Paint: for `trap_duration` seconds, the players swap colors (two swap, more go round).
+    # - Big Pixels: for `trap_duration` seconds, the island turns to big square pixels.
+    # - Big Reset (hard): the puzzle still holding its gourd nearest to each group of players starts again (its room's door shuts and opens).
+    # - Big Silence: for `trap_duration` seconds, every player is muted, and the mute key cannot lift it.
+    # - Big Sleep (hard): for `trap_duration` seconds, everyone falls asleep where they stand for two seconds, then wakes for five, again and again.
+    # - Big Slide: for `trap_duration` seconds, the ground is slippery: starting, stopping and turning slide.
+    # - Big Smell: for `trap_duration` seconds, every player gives off a green gas and the players are pushed apart.
+    # - Big Throw (hard): everyone throws what they hold, after a five-second wind-up.
+    # - Big Time: every player gets a clock to keep, showing the real time of their own computer.
+    # - Big Trip (hard): everyone is sent somewhere else on the map, each to a different place.
+    # Gentle effects also spares Big Goggles, Big Pixels, Big Smell's gas and Big Brain's light.
     # The weights are adjusted as below.
-    Big Air: 0 # Temporarily disabled, no description in player file.
-    Big Arms: 0 # Temporarily disabled, no description in player file.
-    Big Brain: 0 # Temporarily disabled, no description in player file.
-    Big Break: 0 # Temporarily disabled, no description in player file.
-    Big Brother: 0 # Temporarily disabled, no description in player file.
+    Big Air: 0 # Disabled due to being too similar to death link.
+    Big Arms: 10
+    Big Brain: 10
+    Big Break: 10
+    Big Brother: 10
     Big Drop: 10
     Big Flare: 5 # Reduced frequency due to potential loudness and graphics problems.
-    Big Ghost: 0 # Temporarily disabled, no description in player file.
-    Big Goggles: 0 # Temporarily disabled, no description in player file.
-    Big Head: 0 # Temporarily disabled, no description in player file.
+    Big Ghost: 10
+    Big Goggles: 10
+    Big Head: 10
     Big Load: 10
     Big Mask: 10
     Big Meeting: 10
     Big Night: 10
-    Big Paint: 0 # Temporarily disabled, no description in player file.
-    Big Pixels: 0 # Temporarily disabled, no description in player file.
-    Big Reset: 0 # Temporarily disabled, no description in player file.
-    Big Silence: 0 # Temporarily disabled, no description in player file.
+    Big Paint: 10
+    Big Pixels: 10
+    Big Reset: 0 # Disabled due to being too similar to death link.
+    Big Silence: 10
     Big Sleep: 10
-    Big Slide: 0 # Temporarily disabled, no description in player file.
-    Big Smell: 0 # Temporarily disabled, no description in player file.
+    Big Slide: 10
+    Big Smell: 5 # Reduced frequency due to potential loudness and graphics problems.
     Big Throw: 10
-    Big Time: 0 # Temporarily disabled, no description in player file.
+    Big Time: 10
     Big Trip: 0 # Disabled due to being too similar to death link.
   hard_traps:
     # Lets the hard traps into the pool: those that cost time or progress (Big Throw, Big Trip, Big Meeting, Big Sleep, Big Load, Big Mask). Off keeps only the standard ones.
@@ -537,29 +655,29 @@ Big Walk:
   death_link_trap_weights:
     # The traps the DeathLink roulette draws from, and how often each, against the others; 0 leaves one out. Apart from `trap_weights`, which is the item pool's.
     # The weights are adjusted below.
-    Big Air: 0 # Temporarily disabled, no description in player file.
-    Big Arms: 0 # Temporarily disabled, no description in player file.
-    Big Brain: 0 # Temporarily disabled, no description in player file.
-    Big Break: 0 # Temporarily disabled, no description in player file.
-    Big Brother: 0 # Temporarily disabled, no description in player file.
+    Big Air: 10
+    Big Arms: 0 # Not a significant enough trap for death link.
+    Big Brain: 0 # Not a significant enough trap for death link.
+    Big Break: 0 # Not a significant enough trap for death link.
+    Big Brother: 0 # Not a significant enough trap for death link.
     Big Drop: 0 # Not a significant enough trap for death link.
     Big Flare: 0 # Not a significant enough trap for death link.
-    Big Ghost: 0 # Temporarily disabled, no description in player file.
-    Big Goggles: 0 # Temporarily disabled, no description in player file.
-    Big Head: 0 # Temporarily disabled, no description in player file.
+    Big Ghost: 0 # Not a significant enough trap for death link.
+    Big Goggles: 0 # Not a significant enough trap for death link.
+    Big Head: 0 # Not a significant enough trap for death link.
     Big Load: 10
     Big Mask: 10
     Big Meeting: 0 # Not a significant enough trap for death link.
     Big Night: 10
-    Big Paint: 0 # Temporarily disabled, no description in player file.
-    Big Pixels: 0 # Temporarily disabled, no description in player file.
-    Big Reset: 0 # Temporarily disabled, no description in player file.
-    Big Silence: 0 # Temporarily disabled, no description in player file.
+    Big Paint: 0 # Not a significant enough trap for death link.
+    Big Pixels: 0 # Not a significant enough trap for death link.
+    Big Reset: 10
+    Big Silence: 0 # Not a significant enough trap for death link.
     Big Sleep: 0 # Not a significant enough trap for death link.
-    Big Slide: 0 # Temporarily disabled, no description in player file.
-    Big Smell: 0 # Temporarily disabled, no description in player file.
+    Big Slide: 0 # Not a significant enough trap for death link.
+    Big Smell: 0 # Not a significant enough trap for death link.
     Big Throw: 10
-    Big Time: 0 # Temporarily disabled, no description in player file.
+    Big Time: 0 # Not a significant enough trap for death link.
     Big Trip: 5 # Reduced frequency due to how extreme the punishment is.
   death_link_roulette_hard_traps:
     # Lets the roulette draw the hard traps (Big Throw, Big Trip, Big Meeting, Big Sleep, Big Load, Big Mask). Off keeps them out of it.
@@ -576,9 +694,9 @@ Big Walk:
     # - everyone: every player of the session.
     # - one_player: one player only, the one hit the fewest times so far this session (ties at random), as received items go to the player given the fewest.
     # With `death_link_effect: roulette`, the traps that need several players or hit the whole session are left out of the draw, whatever `death_link_trap_weights` says: Big Meeting (it gathers everyone around one player) and Big Night (the clock is the same for everyone). The other traps play on the one player: Big Drop, Big Throw, Big Trip, Big Sleep, Big Load, Big Mask and Big Flare.
-    # Don't torture everybody all the time.
-    everyone: 0
-    one_player: 50
+    # Unchanged.
+    everyone: 50
+    one_player: 0
   #######
   # QoL #
   #######
