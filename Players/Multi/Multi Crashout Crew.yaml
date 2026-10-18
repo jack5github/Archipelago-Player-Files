@@ -20,8 +20,8 @@ Crashout Crew:
   two_order_contracts:
     # How many contracts with two orders should be included
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3.0.
-    # Unchanged.
-    3: 50
+    # Reduced from 3 due to 2-object contracts feeling samey.
+    2: 50
   three_order_contracts:
     # How many contracts with three orders should be included
     # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 3.0.
@@ -37,7 +37,9 @@ Crashout Crew:
   ###########################
   local_items: []
   non_local_items: []
-  start_inventory: {}
+  start_inventory:
+    # It is confusing to play Crashout Crew with one less carry capacity to start with, so begin with the base carry capacity.
+    Base Strength Upgrade: 1
   start_hints: []
   start_location_hints: []
   exclude_locations: []
