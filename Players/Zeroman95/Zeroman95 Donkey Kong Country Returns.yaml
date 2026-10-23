@@ -1,0 +1,359 @@
+﻿name: ZeromanDKCR{NUMBER}
+
+description: Zeroman95s Donkey Kong Country Returns YAML
+
+game: Donkey Kong Country Returns
+requires:
+  version: 0.6.8
+  game:
+    Donkey Kong Country Returns: 0.2.0
+
+Donkey Kong Country Returns:
+  progression_balancing: # UNCHANGED
+    normal: 50 # equivalent to 50
+
+  accessibility: # UNCHANGED
+    full: 50
+    minimal: 0
+
+  goal: # UNCHANGED
+    # Required end goal to beat the game.
+    # Tiki Tong Terror: defeat the end boss in 8-B
+    # Golden Temple: clear the golden temple
+    # All K Level: clear every K Level
+    tiki_tong_terror: 50
+
+  time_attack_medal: # Added Silver. Not Shiny Gold, not that addicted to this game.
+    ['Bronze', 'Silver']
+
+  level_clear_type: # Includes all Clear Types.
+    ['Full']
+
+  sunset_shore_key: # UNCHANGED
+    # When enabled, adds the Jungle Shop Key for the level Sunset Shore as a location.
+    'false': 0
+    'true': 50
+
+  blowhole_bound_key: # UNCHANGED
+    # Randomizes the Beach Shop Key for the level Blowhole Bound.
+    'false': 0
+    'true': 50
+
+  damp_dungeon_key: # UNCHANGED
+    # Randomizes the Ruins Shop Key for the level Damp Dungeon.
+    'false': 0
+    'true': 50
+
+  mole_patrol_key: # UNCHANGED
+    # Randomizes the Cave Shop Key for the level Mole Patrol.
+    'false': 0
+    'true': 50
+
+  springy_spores_key: # UNCHANGED
+    # Randomizes the Forest Shop Key for the level Springy Spores.
+    'false': 0
+    'true': 50
+
+  precarious_plateau_key: # UNCHANGED
+    # Randomizes the Cliff Shop Key for the level Precarious Plateau.
+    'false': 0
+    'true': 50
+
+  handy_hazards_key: # UNCHANGED
+    # Randomizes the Factory Shop Key for the level Handy Hazards.
+    'false': 0
+    'true': 50
+
+  smokey_peak_key: # UNCHANGED
+    # Randomizes the Volcano Shop Key for the level Smokey Peak.
+    'false': 0
+    'true': 50
+
+  world_puzzle_piece_bundle: # By collecting all Jigsaws it gives a check.
+    'false': 0
+    'true': 50
+
+  world_kong_bundle: # By collecting all Kong Letters it gives a check.
+    'false': 0
+    'true': 50
+
+  world_cleared: # By clearing all levels it gives a check.
+    'false': 0
+    'true': 50
+
+  world_cleared_mirror: # By clearing all levels in mirror gives a check.
+    'false': 0
+    'true': 50
+
+  world_cleared_time_attack: # By finshing all levels at least on Silver gives a check.
+    'false': 0
+    'true': 50
+
+  puzzle_piece_amount: # UNCHANGED
+    # Amount of puzzle pieces in generation.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 350
+    300: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-350: 0 # random value between 0 and 350
+
+  puzzle_pieces: # Puzzle Pieces are now locations.
+    'false': 0
+    'true': 50
+
+  jungle_boss_access: # UNCHANGED
+    # Sets the percentage of total Puzzle Pieces needed to gain access to the Boss in the Jungle.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    5: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  beach_boss_access: # UNCHANGED
+    # Sets the percentage of total Puzzle Pieces needed to gain access to the Boss in the Beach.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  ruins_boss_access: # UNCHANGED
+    # Sets the percentage of total Puzzle Pieces needed to gain access to the Boss in the Ruins.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    20: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  cave_boss_access: # UNCHANGED
+    # Sets the percentage of total Puzzle Pieces needed to gain access to the Boss in the Cave.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    35: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  forest_boss_access: # UNCHANGED
+    # Sets the percentage of total Puzzle Pieces needed to gain access to the Boss in the Forest.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    50: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  cliff_boss_access: # UNCHANGED
+    # Sets the percentage of total Puzzle Pieces needed to gain access to the Boss in the Cliff.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    65: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  factory_boss_access: # UNCHANGED
+    # Sets the percentage of total Puzzle Pieces needed to gain access to the Boss in the Factory.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    80: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  volcano_boss_access: # UNCHANGED
+    # Sets the percentage of total Puzzle Pieces needed to gain access to the Boss in the Volcano.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    95: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-100: 0 # random value between 0 and 100
+
+  kong_letter: # Kong Letters are now locations.
+    'false': 0
+    'true': 50
+
+  k_level: # Kong Temple levels are now part of the Generation.
+    'false': 0
+    'true': 50
+
+  jungle_k_level_access: # UNCHANGED
+    # Sets the amount of total Kong Letters, from the respective World, needed to gain access to the K Level in the Jungle.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 24
+    12: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-24: 0 # random value between 0 and 24
+
+  beach_k_level_access: # UNCHANGED
+    # Sets the amount of total Kong Letters, from the respective World, needed to gain access to the K Level in the Beach.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 28
+    14: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-28: 0 # random value between 0 and 28
+
+  ruins_k_level_access: # UNCHANGED
+    # Sets the amount of total Kong Letters, from the respective World, needed to gain access to the K Level in the Ruins.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 24
+    12: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-24: 0 # random value between 0 and 24
+
+  cave_k_level_access: # UNCHANGED
+    # Sets the amount of total Kong Letters, from the respective World, needed to gain access to the K Level in the Cave.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 20
+    10: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-20: 0 # random value between 0 and 20
+
+  forest_k_level_access: # UNCHANGED
+    # Sets the amount of total Kong Letters, from the respective World, needed to gain access to the K Level in the Forest.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 32
+    16: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-32: 0 # random value between 0 and 32
+
+  cliff_k_level_access: # UNCHANGED
+    # Sets the amount of total Kong Letters, from the respective World, needed to gain access to the K Level in the Cliff.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 32
+    16: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-32: 0 # random value between 0 and 32
+
+  factory_k_level_access: # UNCHANGED
+    # Sets the amount of total Kong Letters, from the respective World, needed to gain access to the K Level in the Factory.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 28
+    14: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-28: 0 # random value between 0 and 28
+
+  volcano_k_level_access: # UNCHANGED
+    # Sets the amount of total Kong Letters, from the respective World, needed to gain access to the K Level in the Volcano.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 28
+    14: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-28: 0 # random value between 0 and 28
+
+  smog_clear: # UNCHANGED
+    # When enabled, requires to beat 7-1 to clear the smog covering the Factory world to move through it.
+    # If disabled, DK will be able to traverse the Factory world even with the smog present.
+    'false': 0
+    'true': 50
+
+  lift_off_launch: # UNCHANGED
+    # When enabled, requires to beat 7-R to access Feather Fiend.
+    # If disabled, DK will be able to access Feather Fiend without the need to beat 7-R.
+    'false': 0
+    'true': 50
+
+  factory_buttons: # UNCHANGED
+    # Amount of Factory Buttons that are required to access 7-R.
+    # Choosing 0 will disable this option and make 7-R always available.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 15
+    3: 50
+    random: 0
+    random-low: 0 # random value weighted towards lower values
+    random-high: 0 # random value weighted towards higher values
+    random-range-0-15: 0 # random value between 0 and 15
+
+  squawks: # UNCHANGED
+    # Adds Squawks as an item which will enable Squawks as a permanent helper.
+    # Disabling this option makes Squawks available from the start.
+    # Squawks can be toggled in the Client as soon as he is available.
+    'false': 50
+    'true': 0
+
+  mirror_mode_shards: # Set to 0, adds Mirror Mode as an Item in the pool.
+    0: 99
+
+  local_items: []
+
+  non_local_items: []
+
+  start_inventory: {}
+
+  start_hints: []
+
+  start_location_hints: []
+
+  exclude_locations: []
+
+  priority_locations: []
+
+  item_links: []
+
+  plando_items: []
