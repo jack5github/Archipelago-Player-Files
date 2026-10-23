@@ -282,7 +282,7 @@ Ratchet and Clank 3:
 
   start_location_hints: []
 
-  priority_locations: []
+  priority_locations: ['New Game Plus: Gadgetron Vendor - 3,000,000']
 
   item_links: []
 
