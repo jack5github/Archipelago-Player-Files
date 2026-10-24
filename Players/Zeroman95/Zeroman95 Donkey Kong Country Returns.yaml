@@ -23,11 +23,11 @@ Donkey Kong Country Returns:
     # All K Level: clear every K Level
     tiki_tong_terror: 50
 
-  time_attack_medal: # Added Silver. Not Shiny Gold, not that addicted to this game.
-    ['Bronze', 'Silver']
+  time_attack_medal: # No Time Attack
+    []
 
-  level_clear_type: # Includes all Clear Types.
-    ['Full']
+  level_clear_type: # UNCHANGED
+    ['Normal']
 
   sunset_shore_key: # UNCHANGED
     # When enabled, adds the Jungle Shop Key for the level Sunset Shore as a location.
