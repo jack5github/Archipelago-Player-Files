@@ -7,7 +7,7 @@ game: Big Walk
 requires:
   version: 0.6.7
   game:
-    Big Walk: 1.0.1
+    Big Walk: 1.0.2
 Big Walk:
   ################
   # Game Options #
@@ -45,6 +45,7 @@ Big Walk:
     # The endings (big_wall, big_goodbye, big_game) are not listed here: they are the Goal.
     # Added objectives related to travelling to a specific point to this list.
     - big_climb
+    - big_doof
     - big_fiesta
   random_objectives:
     # Draws this many objectives at random, from the Objectives listed or, if none are, from all of those the other options allow. 0 (the default): the Objectives listed are all asked for, none drawn.
@@ -129,7 +130,7 @@ Big Walk:
     # - every_5: a check every 5 gourds.
     # - every_gourd: a check for every gourd.
     # You know we gotta check every gourd.
-    none: 0
+    'off': 0
     every_5: 0
     every_gourd: 50
   radio_sanity:
@@ -147,20 +148,29 @@ Big Walk:
   pack_sanity:
     # The island's backpacks, belts and gourd carton (12 in all) as checks.
     # - on: picking each one up for the first time is a check (12 locations); the pack then disappears from the map, so the packs a player can wear are still the items of the pool.
+    # - junk: the same checks, holding only filler or a trap.
+    # - vanilla: each pack is a check that gives itself: it stays in the hands of whoever picked it up, and no other location gives a pack (backpacks_in_pool, belts_in_pool and gourd_cartons_in_pool do nothing).
     # - off: as in the game, free to take on the map, and no location.
     # Unchanged.
-    'false': 0
-    'true': 50
+    'off': 0
+    'on': 50
+    junk: 0
+    vanilla: 0
   firework_sanity:
     # Firing each of the eight firework launchers (the button at its foot) for the first time is a check: 8 locations.
     # Unchanged.
     'false': 0
     'true': 50
   flare_gun_sanity:
-    # Picking up each of the island's four flare guns for the first time is a check: 4 locations. The four flare guns are then items in the pool (how many of each: `island_object_limits`; with `random_colors`, painted from the seed's colors). Off: the flare guns stay on the island and none is an item. The Rainbow Flare Gun is an item either way (`island_object_limits`).
+    # The island's four flare guns as checks.
+    # - on: picking up each one for the first time is a check (4 locations). The four flare guns are then items in the pool (how many of each: `island_object_limits`; with `random_colors`, painted from the seed's colors).
+    # - junk: the same, the four checks holding only filler or a trap.
+    # - off: the flare guns stay on the island and none is an item.
+    # The Rainbow Flare Gun is an item either way (`island_object_limits`).
     # Unchanged.
-    'false': 0
-    'true': 50
+    'off': 0
+    'on': 50
+    junk: 0
   tower_sanity:
     # A check for reaching each of the seven towers: the Red, Green, Blue, Yellow and Black ones when the tower's opening button is pressed (the two buttons at the top of the Black Tower held together), the drawbridge and the Green Dome when a player gets there.
     # Unchanged.
@@ -524,6 +534,12 @@ Big Walk:
     # Unchanged.
     'false': 50
     'true': 0
+  mirrored_poses:
+    # The pose panels (Indoor Semaphore, Optical Telegraph, Charades Rooms) drawn for the seed among the game's nine poses and the mirrors of the four that are not symmetric: one arm up and one level, one up and one down, and so on, the other way round. A mirror can be there beside its own pose: tell left from right. Only what a panel shows changes; the puzzles work as before.
+    # How often each mirror is drawn, against a game pose (100 = as often). 0, the default: the game's poses.
+    # You can define additional values between the minimum and maximum values. Minimum value is 0, maximum value is 100.
+    # Unchanged.
+    0: 50
   #####################
   # Traps and Bonuses #
   #####################
