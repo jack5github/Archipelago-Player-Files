@@ -7,7 +7,7 @@ game: Big Walk
 requires:
   version: 0.6.7
   game:
-    Big Walk: 1.0.2
+    Big Walk: 1.0.4
 Big Walk:
   ################
   # Game Options #
@@ -412,6 +412,11 @@ Big Walk:
     # Unchanged.
     'false': 50
     'true': 0
+  rides_require_seat:
+    # With Lock Abilities on, the chairlift and the train are seats like the others: you cannot sit on them before Seat arrives, and the logic asks for Seat to use them. Off, they are never locked.
+    # It makes logical sense for Seat to be required to use rides.
+    'false': 0
+    'true': 50
   #############
   # Item Pool #
   #############
