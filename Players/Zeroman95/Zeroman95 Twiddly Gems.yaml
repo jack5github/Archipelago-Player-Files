@@ -1,4 +1,4 @@
-﻿name: ZeromanTG{NUMBER}
+﻿name: ZeromanTG{NUMBER} Change
 
 description: Zeroman95s Twiddly Gems YAML
 
@@ -6,7 +6,7 @@ game: Twiddly Gems
 requires:
   version: 0.6.8
   game:
-    Twiddly Gems: 0.1.1
+    Twiddly Gems: 0.1.2
 
 Twiddly Gems:
   progression_balancing: # UNCHANGED
