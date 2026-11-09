@@ -1,12 +1,12 @@
-name: ZeromanSHAR{NUMBER}
+name: ZeromanSHAR{NUMBER} Change
 
 description: Zeroman95s The Simpsons Hit and Run YAML
 
 game: Simpsons Hit and Run
 requires:
-  version: 0.6.7
+  version: 0.6.8
   game:
-    Simpsons Hit and Run: 0.5.4
+    Simpsons Hit and Run: 0.5.5
 
 Simpsons Hit and Run:
   progression_balancing:
