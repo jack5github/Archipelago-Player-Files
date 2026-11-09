@@ -4,9 +4,9 @@ description: Zeroman95s Refunct YAML
 
 game: Refunct
 requires:
-  version: 0.6.7
+  version: 0.6.8
   game:
-    Refunct: 1.5.1
+    Refunct: 1.8.0
 
 Refunct:
   progression_balancing: # UNCHANGED
@@ -22,17 +22,7 @@ Refunct:
   required_grass_percentage: # Set whatever amount of Grass is required to beat the game.
     random-range-50-100: 99
 
-  goal: # Random Button, Platform or Cube.
-    button_31_1: 0
-    button_1_1: 0
-    random_known_button: 0
-    random_unknown_button: 0
-    platform_1_5: 0
-    platform_21_1: 0
-    platform_29_2: 0
-    random_known_platform: 0
-    random_unknown_platform: 0
-    random_known: 0
+  goal: # Random Button, Platform or Cube and we don't even know.
     random_unknown: 99
 
   cubes: # UNCHANGED
@@ -46,7 +36,7 @@ Refunct:
     green_cubes_bag: 50
     never: 0
 
-  number_of_minigames: # Set same as Jack5 Refunct YAML
+  number_of_minigames: # Set same as Jack5 Refunct YAML.
     random-range--1-7: 99
 
   nerf_minigame_checks: # UNCHANGED
@@ -69,17 +59,21 @@ Refunct:
     Climb Narrow Minigame: 0
     Climb Spiral Minigame: 1
     Clique: 0
+    Custom Minigame: 1
+    Defunct Minigame: 2
+    Defunct Rando Minigame: 4
     Funny Bridge Game Minigame: 0
     OG Randomizer Minigame: 5
     Rando Mountain Minigame: 0
     Refunct Mountain Minigame: 0
+    Relocate Minigame: 2
     Seeker Minigame: 2
     Vanilla Minigame: 2
 
-  see_other_players: # Lets challenge my PC.
+  see_other_players: # Show them all!
     100: 99
 
-  effects_and_traps: # Increase Traps that effect the game instead of changing the Sky.
+  effects_and_traps: # Make the more challenging traps show more then environmental changes.
     Ascend Trap: 3
     Blurrrgh Trap: 3
     Dark Skies: 1
@@ -91,13 +85,13 @@ Refunct:
     Slo-mo Trap: 3
     Starry Sky: 1
 
-  rename_grass: # Random Grass names that I won't even know.
+  rename_grass: # Random Grass names.
     none: 0
     english: 0
     latin: 0
     both: 99
 
-  rename_flowers: # Same as renamed grass.
+  rename_flowers: # Same as renamed Grass.
     none: 0
     english: 0
     latin: 0
