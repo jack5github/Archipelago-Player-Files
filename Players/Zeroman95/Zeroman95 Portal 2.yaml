@@ -1,12 +1,12 @@
-﻿name: ZeromanPortalTwo{NUMBER}
+﻿name: ZeromanPortalTwo{NUMBER} Change
 
 description: Zeroman95s Portal 2 YAML
 
 game: Portal 2
 requires:
-  version: 0.6.7
+  version: 0.6.8
   game:
-    Portal 2: 0.8.0
+    Portal 2: 0.8.2
 
 Portal 2:
   progression_balancing: # UNCHANGED
