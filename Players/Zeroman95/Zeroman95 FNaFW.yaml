@@ -1,34 +1,34 @@
 ﻿name: ZeromanFNaFW{NUMBER}
 
-description: 'Zeroman95s FNaF WORLD Yaml'
+description: Zeroman95s FNaF World YAML
 
 game: FNaFW
 requires:
-  version: 0.6.7
+  version: 0.6.8
 
 FNaFW:
-  progression_balancing: # Dropped to 40 due to how fast I got checks
+  progression_balancing: # Lowered to reduce check speed.
     40: 99
 
   accessibility: # UNCHANGED
     full: 50
     minimal: 0
 
-  ending_goal: # Removed Update 2 Goals to only have Update 1 Goals
+  ending_goal: # Pick random base game goal.
     scott: 20
     clock: 20
     fourth_glitch: 20
     universe_end: 20
     chipper: 20
 
-  initial_characters: # True Random and no Halloween is not working for me, so it is now swapped to limited_random
-    limited_random: 99
+  initial_characters: # Apparently this should be working now.
+    true_random_no_halloween: 99
 
   vanilla_halloween: # UNCHANGED
     'false': 0
     'true': 50
 
-  vanilla_lasers: # Realized these puts the lasers in the original location if set to True. UNCHANGED
+  vanilla_lasers: # UNCHANGED
     'false': 50
     'true': 0
 
@@ -36,43 +36,49 @@ FNaFW:
     'false': 50
     'true': 0
 
-  hard_logic: # UNCHANGED
+  logic_diff: # UNCHANGED
+    easy: 0
+    normal: 50
+    hard: 0
+    insane: 0
+
+  cheap_shop: # Tokens in the pool are around a lot so this doesn't do much.
     'false': 50
     'true': 0
 
-  cheap_shop: # I get plenty of Tokens as Items in the pool anyway so this does not matter
-    'false': 50
-    'true': 0
-
-  require_find_char: # This Setting is stupid and should be changed
-    'false': 50
-    'true': 0
-
-  progressive_anims: # UNCHANGED
+  require_find_char: # UNCHANGED
     'false': 0
     'true': 50
 
-  progressive_bytes: # Random bytes are obtained
+  progressive_anims: # Keeps the game fair.
+    'false': 0
+    'true': 50
+
+  progressive_bytes: # UNCHANGED
     'false': 50
     'true': 0
 
-  progressive_chips: # Random chips are obtained
+  progressive_chips: # UNCHANGED
     'false': 50
     'true': 0
 
-  area_warping: # Makes all Areas ingame be an Item that is required to teleport there or even go there normally
+  progressive_areas: # UNCHANGED
+    'false': 50
+    'true': 0
+
+  area_warping: # Makes all areas require an item to unlock.
     always: 99
 
-  fazcoin_chests: # UNCHANGED
-    3: 50
-    random: 0
-    random-low: 0 # random value weighted towards lower values
-    random-high: 0 # random value weighted towards higher values
-    random-range-1-3: 0 # random value between 1 and 3
+  fazcoin_chests: # Picks random amount of Chests to be checks for each area.
+    random-range-3-5: 99
 
-  halloween_minigame: # Nope do not want to do Update 2
+  halloween_minigame: # I do not want to play the Minigames.
     'false': 50
     'true': 0
+
+  death_link: # Oh it's back. Awesome.
+    'false': 0
+    'true': 50
 
   local_items: []
 
@@ -84,7 +90,7 @@ FNaFW:
 
   start_location_hints: []
 
-  exclude_locations: # Excludes Halloween Character locations
+  exclude_locations: # Excludes Minigames and Update 2 locations.
     [
       'Jack-O-Bonnie',
       'Jack-O-Chica',
