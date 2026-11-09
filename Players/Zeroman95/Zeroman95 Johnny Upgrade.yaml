@@ -4,7 +4,7 @@ description: Zeroman95s Johnny Upgrade YAML
 
 game: Johnny Upgrade
 requires:
-  version: 0.6.7
+  version: 0.6.8
 
 Johnny Upgrade:
   progression_balancing: # UNCHANGED
