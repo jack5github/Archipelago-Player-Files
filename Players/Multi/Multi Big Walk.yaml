@@ -7,7 +7,7 @@ game: Big Walk
 requires:
   version: 0.6.7
   game:
-    Big Walk: 1.0.4
+    Big Walk: 1.0.11
 Big Walk:
   ################
   # Game Options #
@@ -270,6 +270,14 @@ Big Walk:
     # Enabled.
     'false': 0
     'true': 50
+  tunnel_sanity:
+    # The tunnels open door by door: the Tunnels item gives way to 5 items, `Red Tunnel Door`, `Green Tunnel Door`, `Blue Tunnel Door`, `Yellow Tunnel Door` and `Purple Tunnel`.
+    # - Each colored door opens the tunnels' outlet by its tower; you get in through any door you have.
+    # - The Purple Tunnel opens the purple hole past the chairlift, the way to the seven purple puzzles.
+    # Off with Linear Keys, where the Yellow key opens every door at once, as in the game.
+    # Enabled for maximum variety.
+    'false': 0
+    'true': 50
   #########
   # Logic #
   #########
@@ -383,7 +391,7 @@ Big Walk:
     # - all_deposit_boxes: the key comes the moment the monument is full. The "Monument Full" checks exist with it, Monument Sanity or not.
     # - one_deposit_box: the key comes once the monument holds a number of gourds drawn for each tower, between one and full (the "Monument Key" location).
     # Unlike the other linear settings, this one feels the most useful, because it would be annoying to go hunting for a particular colour key cutter. Set to `one_deposit_box` to rely on the element of surprise.
-    'false': 0
+    'off': 0
     all_deposit_boxes: 0
     one_deposit_box: 50
   linear_puzzles:
@@ -408,10 +416,15 @@ Big Walk:
     # Abilities: legs, seat, arms, throwing, carrying. Running has its own option, Lock Running.
     []
   lock_running:
-    # With Lock Abilities on, running is an item too (Running). No place asks for it: the island is only slower to cross until it arrives.
+    # With Lock Abilities on, running can be an item too (Running). No place asks for it: the island is only slower to cross until it arrives.
+    # - off: you run from the start.
+    # - anywhere: Running is an item, anywhere in the multiworld.
+    # - early: Running is an item, placed among the first checks anyone can reach (in a solo seed, your own).
+    # true and false still work: true is anywhere, false is off.
     # Unchanged.
-    'false': 50
-    'true': 0
+    'off': 50
+    anywhere: 0
+    early: 0
   rides_require_seat:
     # With Lock Abilities on, the chairlift and the train are seats like the others: you cannot sit on them before Seat arrives, and the logic asks for Seat to use them. Off, they are never locked.
     # It makes logical sense for Seat to be required to use rides.
@@ -616,10 +629,12 @@ Big Walk:
     25: 50
   bonus_weights:
     # How often each bonus comes, against the others. 0 takes a bonus out of the pool.
-    # - Big Speed: everyone walks and runs faster for `trap_duration` seconds.
-    # - Big Jump: everyone jumps higher for `trap_duration` seconds.
+    # - Big Confetti: a burst or two of confetti around every player, with the sound of a puzzle won. Filler, not a boost.
     # - Big Day: the clock fast-forwards to noon, and runs on from there.
+    # - Big Jump: everyone jumps higher for `trap_duration` seconds.
+    # - Big Speed: everyone walks and runs faster for `trap_duration` seconds.
     # Unchanged.
+    Big Confetti: 5 # Reduced frequency due to potential loudness and graphics problems.
     Big Day: 10
     Big Jump: 10
     Big Speed: 10
